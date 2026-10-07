@@ -1,0 +1,99 @@
+{
+  "title": "Untitled showreel",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "hook", "label": "Hook", "minBars": 2, "maxBars": 2, "priority": 1,
+      "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "reveal" },
+        { "beat": 2, "from": "start", "sfx": "pop x3" },
+        { "beat": 0, "from": "end", "sfx": "riser dur=1bar" }
+      ]
+    },
+    {
+      "id": "brand", "label": "Brand", "minBars": 1, "maxBars": 3, "priority": 2,
+      "inBeats": 3, "outBeats": 1, "in": "flash", "music": "drop",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "shimmer" },
+        { "beat": 0.5, "from": "start", "sfx": "tick x8" },
+        { "beat": 2, "from": "start", "sfx": "chime" }
+      ]
+    },
+    {
+      "id": "problem", "label": "Problem", "minBars": 1, "maxBars": 5, "priority": 1, "optional": true,
+      "inBeats": 3, "outBeats": 1, "in": "blobWipe", "inParams": { "x": 960, "y": 600 }, "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "bloop" },
+        { "beat": 1, "from": "start", "sfx": "pop x3" },
+        { "beat": 0, "from": "holdBar", "sfx": "tick", "every": 4 }
+      ]
+    },
+    {
+      "id": "proof", "label": "Proof", "minBars": 2, "maxBars": 5, "priority": 1,
+      "inBeats": 5, "outBeats": 1, "in": "whip", "inParams": { "dir": "left" }, "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "whip" },
+        { "beat": 2, "from": "start", "sfx": "stamp" },
+        { "beat": 3, "from": "start", "sfx": "stamp" },
+        { "beat": 4, "from": "start", "sfx": "confirm" },
+        { "beat": 0, "from": "holdBar", "sfx": "stamp", "every": 4 }
+      ]
+    },
+    {
+      "id": "how", "label": "How it works", "minBars": 2, "maxBars": 5, "priority": 3, "optional": true,
+      "inBeats": 4, "outBeats": 1, "in": "match", "inParams": { "fade": 0.25 }, "inFallback": "flash", "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "air" },
+        { "beat": 1, "from": "start", "sfx": "drawon dur=2" },
+        { "beat": 0, "from": "holdBeat", "sfx": "blip", "every": 2 }
+      ]
+    },
+    {
+      "id": "detail", "label": "Detail", "minBars": 2, "maxBars": 5, "priority": 4, "optional": true,
+      "inBeats": 4, "outBeats": 1, "in": "flash", "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "pulse" },
+        { "beat": 1, "from": "start", "sfx": "count dur=2" }
+      ]
+    },
+    {
+      "id": "climax", "label": "Climax", "minBars": 2, "maxBars": 5, "priority": 1, "dark": true,
+      "inBeats": 6, "outBeats": 2, "in": "glitch", "inParams": { "amount": 1 }, "music": "breakdown",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "glitch dur=0.3s" },
+        { "beat": 2, "from": "start", "sfx": "keytap dur=1 fast" },
+        { "beat": 4, "from": "start", "sfx": "riser dur=1bar" },
+        { "beat": 4, "from": "start", "sfx": "impact:big" },
+        { "beat": 0, "from": "end", "sfx": "swell" }
+      ]
+    },
+    {
+      "id": "finale", "label": "Finale", "minBars": 2, "maxBars": 5, "priority": 1,
+      "inBeats": 6, "outBeats": 0, "in": "flash", "music": "outro",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "sting" },
+        { "beat": 2, "from": "start", "sfx": "pop x4" },
+        { "beat": 3, "from": "start", "sfx": "chime" }
+      ]
+    }
+  ],
+  "cuts": {
+    "15": {
+      "seconds": 15, "round": "down", "label": "15 s", "narration": false,
+      "exclude": ["problem", "how", "detail"],
+      "scenes": {
+        "hook": { "bars": 1, "inBeats": 3, "outBeats": 1 },
+        "brand": { "bars": 1 },
+        "proof": { "minBars": 1, "inBeats": 3 },
+        "climax": { "minBars": 1, "inBeats": 3, "outBeats": 1 },
+        "finale": { "minBars": 1, "inBeats": 4 }
+      }
+    },
+    "30": { "seconds": 30, "label": "30 s" },
+    "60": { "seconds": 60, "label": "60 s" }
+  }
+}

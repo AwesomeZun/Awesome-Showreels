@@ -1,0 +1,21 @@
+{
+  "title": "spark-bench",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "matrix", "label": "Attention at 64k", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "cut", "music": "intro", "cues": [{"beat": 0, "from": "start", "sfx": "pulse"}, {"beat": 1, "from": "start", "sfx": "tick:6 gap=0.06s soft"}, {"beat": 3.5, "from": "start", "sfx": "bwoop"}, {"beat": 3.5, "from": "start", "sfx": "count dur=1.5 soft"}, {"beat": 5, "from": "start", "sfx": "blip step=2"}]},
+    {"id": "problem", "label": "Hard to compare", "minBars": 2, "maxBars": 2, "priority": 2, "optional": true, "inBeats": 7, "outBeats": 1, "in": "match", "inParams": {"fade": 0.4}, "inFallback": "cut", "music": "groove", "cues": [{"beat": 0.25, "from": "start", "sfx": "glitch dur=1 density=0.4 soft"}, {"beat": 1.5, "from": "start", "sfx": "lock"}, {"beat": 2, "from": "start", "sfx": "lock"}, {"beat": 2.5, "from": "start", "sfx": "lock"}, {"beat": 3, "from": "start", "sfx": "lock"}, {"beat": 3.5, "from": "start", "sfx": "confirm"}]},
+    {"id": "cli", "label": "One command", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 11, "outBeats": 1, "in": "glitch", "inParams": {"amount": 0.9}, "music": "groove", "cues": [{"beat": 1.29, "from": "start", "sfx": "keytap:1 terminal soft"}, {"beat": 3, "from": "start", "sfx": "enter"}, {"beat": 3.65, "from": "start", "sfx": "blips:3.2 density=0.55 soft"}, {"beat": 7.75, "from": "start", "sfx": "zoom"}, {"beat": 8.25, "from": "start", "sfx": "lock big"}]},
+    {"id": "results", "label": "Throughput vs dense", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 1, "in": "zoomInto", "inFallback": "glitch", "music": "breakdown", "cues": [{"beat": 0, "from": "start", "sfx": "drawon dur=2"}, {"beat": 2, "from": "start", "sfx": "pop:4 gap=0.25b soft"}, {"beat": 0, "from": "holdBar", "sfx": "pulse", "every": 4}]},
+    {"id": "scaling", "label": "Why the gain grows", "minBars": 2, "maxBars": 5, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "glitch", "inParams": {"amount": 0.6}, "music": "groove", "cues": [{"beat": 0, "from": "start", "sfx": "drawon dur=2"}, {"beat": 2.5, "from": "start", "sfx": "count dur=1.5 soft"}, {"beat": 4, "from": "start", "sfx": "pop:4 gap=0.25b soft"}, {"beat": 0, "from": "holdBar", "sfx": "pulse", "every": 4}]},
+    {"id": "repeats", "label": "Five seeded repeats", "minBars": 2, "maxBars": 5, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "breakdown", "cues": [{"beat": 0, "from": "start", "sfx": "lock"}, {"beat": 1, "from": "start", "sfx": "tick:5 gap=0.5b"}, {"beat": 3.75, "from": "start", "sfx": "lock"}, {"beat": 4.25, "from": "start", "sfx": "confirm"}, {"beat": 0, "from": "holdBar", "sfx": "blip", "every": 4}]},
+    {"id": "impact", "label": "4.1× at 64k", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 1, "in": "impact", "inParams": {"zoom": 0.08, "shake": 18, "flash": 0.4}, "music": "drop", "cues": [{"beat": 0, "from": "start", "sfx": "impact:big"}, {"beat": 1.25, "from": "start", "sfx": "count dur=1.75"}, {"beat": 0, "from": "holdBar", "sfx": "slam", "every": 4, "count": 1}, {"beat": 4, "from": "holdBar", "sfx": "pop:3 gap=0.25b"}]},
+    {"id": "logo", "label": "spark-bench", "minBars": 1, "maxBars": 3, "priority": 2, "inBeats": 4, "outBeats": 0, "in": "cut", "music": "outro", "cues": [{"beat": 0.25, "from": "start", "sfx": "sparkle dur=2 soft"}, {"beat": 2.5, "from": "start", "sfx": "chime"}, {"beat": 0.25, "from": "holdBar", "sfx": "keytap:1.3 terminal soft"}, {"beat": 1.85, "from": "holdBar", "sfx": "keytap:1.3 terminal soft"}]}
+  ],
+  "cuts": {"15": {"bars": 8, "label": "15 s", "exclude": ["scaling", "repeats"]}, "30": {"bars": 16, "label": "30 s", "exclude": ["scaling", "repeats"]}, "60": {"bars": 32, "label": "60 s", "scenes": {"cli": {"maxBars": 5}, "results": {"maxBars": 5}, "impact": {"maxBars": 4}, "logo": {"maxBars": 4}}}},
+  "hud": {"look": "frame", "label": "SPARK-BENCH", "url": "DEMO DATA · FICTIONAL PROJECT"},
+  "captions": {"enabled": false},
+  "audio": {"transitionSfx": true}
+}

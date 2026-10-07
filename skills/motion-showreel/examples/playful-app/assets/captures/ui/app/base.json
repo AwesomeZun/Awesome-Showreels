@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "empty feed under the animated layers",
+ "file": "base.png",
+ "kind": "screen",
+ "px": [
+  1236,
+  2484
+ ],
+ "dpr": 3,
+ "sha1": "eee1ddcd8212",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 412,
+  "h": 828
+ },
+ "screen": {
+  "x": 0,
+  "y": 44,
+  "w": 412,
+  "h": 828
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:14.286Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

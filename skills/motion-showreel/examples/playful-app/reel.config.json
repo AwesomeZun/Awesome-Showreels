@@ -1,0 +1,19 @@
+{
+  "title": "Mochi Notes",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Too many thoughts?", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 1, "in": "cut", "music": "intro", "cues": [{"beat": 0.25, "from": "start", "sfx": "swish"}, {"beat": 0.25, "from": "start", "sfx": "pop x2 gap=0.5"}, {"beat": 0.5, "from": "start", "sfx": "tick x12 gap=0.125"}, {"beat": 0, "from": "holdBar", "sfx": "pop", "every": 4}]},
+    {"id": "brand", "label": "Meet Mochi", "minBars": 1, "maxBars": 2, "priority": 2, "inBeats": 3, "outBeats": 1, "in": "blobWipe", "inParams": {"x": 960, "y": 760, "edge": "#FF8FAF"}, "music": "drop", "cues": [{"beat": 0, "from": "start", "sfx": "bloop"}, {"beat": 0.75, "from": "start", "sfx": "chime"}, {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=1", "every": 4}, {"beat": 0, "from": "outStart", "sfx": "pop"}]},
+    {"id": "app", "label": "Jot it down. Mochi tidies up!", "minBars": 3, "maxBars": 5, "priority": 1, "inBeats": 10, "outBeats": 1, "in": "match", "music": "groove", "cues": [{"beat": 0, "from": "start", "sfx": "drawon dur=1.3"}, {"beat": 1.5, "from": "start", "sfx": "keytap dur=2.8"}, {"beat": 4.5, "from": "start", "sfx": "send"}, {"beat": 5.25, "from": "start", "sfx": "ding x4 gap=0.75"}, {"beat": 8, "from": "start", "sfx": "confirm"}, {"beat": 9, "from": "start", "sfx": "pop x4"}, {"beat": 0, "from": "holdBar", "sfx": "click"}, {"beat": 0.25, "from": "holdBar", "sfx": "ding"}, {"beat": 4, "from": "holdBar", "sfx": "notify"}]},
+    {"id": "flavors", "label": "Pick a flavor!", "minBars": 2, "maxBars": 3, "priority": 2, "optional": true, "inBeats": 6, "outBeats": 1, "in": "zoomInto", "inFallback": "whip", "inParams": {"dir": "left"}, "music": "drop", "cues": [{"beat": 0.25, "from": "start", "sfx": "pop x4 gap=0.5"}, {"beat": 2.5, "from": "start", "sfx": "chime"}, {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=1", "every": 4}]},
+    {"id": "nudge", "label": "Gentle nudges", "minBars": 2, "maxBars": 5, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "breakdown", "cues": [{"beat": 0.5, "from": "start", "sfx": "pop"}, {"beat": 1.75, "from": "start", "sfx": "bloop"}, {"beat": 2, "from": "start", "sfx": "ding x2 gap=0.5"}, {"beat": 2.5, "from": "start", "sfx": "tick x4 gap=0.25"}, {"beat": 0, "from": "holdBar", "sfx": "ding", "every": 4}]},
+    {"id": "private", "label": "Yours only", "minBars": 2, "maxBars": 5, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "blobWipe", "inParams": {"x": 1240, "y": 560, "edge": "#FF8FAF"}, "music": "drop", "cues": [{"beat": 0, "from": "start", "sfx": "swish"}, {"beat": 1, "from": "start", "sfx": "bloop"}, {"beat": 2, "from": "start", "sfx": "pop"}, {"beat": 2.25, "from": "start", "sfx": "pop"}, {"beat": 3, "from": "start", "sfx": "pop"}, {"beat": 0, "from": "holdBar", "sfx": "chime", "every": 4}]},
+    {"id": "finale", "label": "Mochi Notes", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "blobWipe", "inParams": {"x": 1340, "y": 560, "edge": "#FF8FAF"}, "music": "outro", "cues": [{"beat": 0.25, "from": "start", "sfx": "pop x4"}, {"beat": 1, "from": "start", "sfx": "sting"}, {"beat": 3.5, "from": "start", "sfx": "sparkle dur=1.5"}, {"beat": 0, "from": "holdBar", "sfx": "chime", "every": 8}]}
+  ],
+  "cuts": {"short": {"seconds": 15, "round": "down", "label": "short", "narration": false, "exclude": ["flavors", "nudge", "private"], "scenes": {"hook": {"bars": 1}}}, "30": {"seconds": 30, "label": "30 s", "exclude": ["nudge", "private"]}, "60": {"seconds": 60, "label": "60 s", "scenes": {"brand": {"maxBars": 3}, "app": {"maxBars": 6}, "flavors": {"maxBars": 5}, "finale": {"maxBars": 4}}}},
+  "poster": 3.0,
+  "captions": {"enabled": false}
+}

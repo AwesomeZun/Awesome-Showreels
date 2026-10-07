@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the same card after the tick",
+ "selector": ".msg.mochi:has(.result)",
+ "file": "result_checked.png",
+ "kind": "element",
+ "px": [
+  1236,
+  957
+ ],
+ "dpr": 3,
+ "sha1": "480498c09ff5",
+ "rect": {
+  "x": 0,
+  "y": 334.28,
+  "w": 412,
+  "h": 319
+ },
+ "screen": {
+  "x": 0,
+  "y": 378.28,
+  "w": 412,
+  "h": 319
+ },
+ "page": {
+  "x": 0,
+  "y": 334.28,
+  "w": 412,
+  "h": 319
+ },
+ "element": {
+  "x": 16,
+  "y": 28,
+  "w": 380,
+  "h": 263
+ },
+ "pad": 28,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(70, 48, 61)",
+ "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+ "text": "✨ Tidy note\nErrands, calls & ideas\nOat milk\nCall Mom\nFri 3:00 PM\nPastel calendar\n#errands\n#family\n#ideas",
+ "alpha": true,
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:11.409Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

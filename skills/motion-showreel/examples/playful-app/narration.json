@@ -1,0 +1,38 @@
+{
+  "lang": "en-US",
+  "voice": "Puck",
+  "style": "[bright, playful]",
+  "model": "gemini-3.8-flash-tts",
+  "lexicon": {},
+  "captions": {
+    "enabled": true,
+    "maxChars": 64
+  },
+  "lines": [
+    {
+      "scene": "hook",
+      "text": "Too many thoughts?",
+      "visual": "paper scraps pile up around the question"
+    },
+    {
+      "scene": "brand",
+      "text": "Meet Mochi Notes!",
+      "visual": "Mochi springs up, wordmark pops in"
+    },
+    {
+      "scene": "app",
+      "text": "Jot it down. Mochi tidies it into to-dos, reminders and tags.",
+      "visual": "real app: the note types in, the tidy card steps, chips fly out"
+    },
+    {
+      "scene": "flavors",
+      "text": "Pick a flavor!",
+      "visual": "four themed phones, four Mochis"
+    },
+    {
+      "scene": "finale",
+      "text": "Jot it down. Mochi tidies up!",
+      "visual": "the lineup bounces under the wordmark"
+    }
+  ]
+}

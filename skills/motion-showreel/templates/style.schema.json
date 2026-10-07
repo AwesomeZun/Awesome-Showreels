@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "style.schema.json",
+  "title": "motion-showreel style spec (P/style.json)",
+  "description": "The tone & manner of ONE reel, derived from its source material (never picked from presets). Written as a draft by tools/extract_style.py, refined by Claude, consumed by the runtime (env.style / env.palette), scenes, timing (sound.bpm), audio (sound.*), narration (narration.*) and capture (terminal.*). Pixel values assume a 1920x1080 frame. Unknown top-level keys are allowed for forward compatibility; consumers must ignore keys they do not know.",
+  "type": "object",
+  "required": ["source", "mood", "rationale", "palette", "fonts", "type", "layout", "motion", "post", "sound", "narration"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "description": "Provenance of this file. Set draft to false once the spec has been reviewed; extract_style.py then never overwrites it without --force.",
+      "properties": {
+        "generator": { "type": "string" },
+        "draft": { "type": "boolean" },
+        "evidence": { "type": "string", "description": "Path (relative to P) of the extraction log, normally build/style-extract.json; rationale strings cite its evidence ids (E1, E2, ...)." },
+        "purpose": { "type": "string", "description": "launch | pitch | paper | docs | tool | brand | portfolio | demo | explainer | general" },
+        "audience": { "type": "string" },
+        "title": { "type": "string" },
+        "hints": { "type": "object", "description": "User hints given to the extractor (purpose, audience, lang, theme, narration)." }
+      }
+    },
+    "source": {
+      "type": "array",
+      "minItems": 1,
+      "description": "What the style was derived from. Paths are relative to P (or ~-relative); never absolute user paths.",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "anyOf": [{ "required": ["path"] }, { "required": ["url"] }],
+        "properties": {
+          "path": { "type": "string" },
+          "url": { "type": "string" },
+          "kind": { "enum": ["readme", "markdown", "paper", "slides", "website", "repo", "images", "brand-guide", "other"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "mood": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": { "type": "string" },
+      "description": "3-6 mood words that every scene should honour (e.g. playful, pastel, bouncy / precise, calm, credible)."
+    },
+    "rationale": {
+      "type": "object",
+      "description": "One or two sentences per decision group, each pointing back to evidence in the material (evidence ids, file names, measured values).",
+      "required": ["palette", "type", "motion", "sound", "narration", "visuals"],
+      "properties": {
+        "palette": { "type": "string" },
+        "type": { "type": "string" },
+        "motion": { "type": "string" },
+        "sound": { "type": "string" },
+        "narration": { "type": "string" },
+        "visuals": { "type": "string" }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "description": "Colour roles as #RRGGBB. Contrast targets on bg: ink >= 7:1, ink2 >= 4.5:1, muted >= 4.5:1 (text roles), ok/warn/deny >= 3:1; line is decoration only. accent may be a fill colour below 3:1; use accentInk for text in the accent hue. Extra keys must also be #RRGGBB.",
+      "required": ["bg", "bg2", "surface", "ink", "ink2", "muted", "accent", "accent2", "accent3", "ok", "warn", "deny"],
+      "properties": {
+        "bg": { "$ref": "#/$defs/hex", "description": "Stage background (largest area)." },
+        "bg2": { "$ref": "#/$defs/hex", "description": "Second background: gradient end, alternate scene, sunken band." },
+        "surface": { "$ref": "#/$defs/hex", "description": "Cards, panels, chips, phone screens." },
+        "ink": { "$ref": "#/$defs/hex", "description": "Primary text and strokes." },
+        "ink2": { "$ref": "#/$defs/hex", "description": "Secondary text." },
+        "muted": { "$ref": "#/$defs/hex", "description": "Labels, meta lines and disclaimers: small text, >= 4.5:1 on bg (use line for rules and grids)." },
+        "accent": { "$ref": "#/$defs/hex", "description": "Brand/hero colour (fills, glows, highlights)." },
+        "accent2": { "$ref": "#/$defs/hex" },
+        "accent3": { "$ref": "#/$defs/hex" },
+        "ok": { "$ref": "#/$defs/hex", "description": "Allowed / success / positive data." },
+        "warn": { "$ref": "#/$defs/hex" },
+        "deny": { "$ref": "#/$defs/hex", "description": "Blocked / error / negative data. Never rely on ok vs deny colour alone (pair with icons or words)." },
+        "accentInk": { "$ref": "#/$defs/hex", "description": "Optional: accent hue adjusted to >= 4.5:1 on bg, for text." },
+        "onAccent": { "$ref": "#/$defs/hex", "description": "Optional: text colour on accent fills (>= 4.5:1 on accent)." },
+        "line": { "$ref": "#/$defs/hex", "description": "Optional: hairlines, borders, dividers." }
+      },
+      "additionalProperties": { "$ref": "#/$defs/hex" }
+    },
+    "paletteAlt": {
+      "type": "object",
+      "description": "Optional: the opposite-theme palette (same roles) for scenes whose reel.config entry sets dark: true on a light reel, or dark: false on a dark reel. Measured from the material's other scheme when it has one (dark slides, prefers-color-scheme), else a sibling theme (e.g. Catppuccin Latte for Mocha), else derived.",
+      "required": ["theme", "bg", "bg2", "surface", "ink", "ink2", "muted", "accent", "accent2", "accent3", "ok", "warn", "deny"],
+      "properties": {
+        "theme": { "enum": ["light", "dark"] }
+      },
+      "additionalProperties": { "$ref": "#/$defs/hex" }
+    },
+    "fonts": {
+      "type": "object",
+      "description": "CSS font-family stacks usable in canvas ctx.font and CSS. Put the material's own family first, then installed alternatives, then a generic family. Quote names that contain spaces.",
+      "required": ["display", "sans", "serif", "mono", "cjk"],
+      "properties": {
+        "display": { "$ref": "#/$defs/fontStack", "description": "Headlines, logo-like titles, giant kinetic words." },
+        "sans": { "$ref": "#/$defs/fontStack", "description": "Body copy, UI labels, captions (Latin)." },
+        "serif": { "$ref": "#/$defs/fontStack" },
+        "mono": { "$ref": "#/$defs/fontStack", "description": "Code, terminal lines, HUD labels, numbers in tables." },
+        "cjk": { "$ref": "#/$defs/fontStack", "description": "Korean/Japanese/Chinese text; matches narration.lang when it is a CJK language." },
+        "files": {
+          "type": "array",
+          "description": "Font files the runtime loads and build.mjs subsets/embeds. Paths are relative to P (e.g. assets/fonts/Inter.woff2). Only list files whose licence allows embedding.",
+          "items": {
+            "type": "object",
+            "required": ["family", "path"],
+            "properties": {
+              "family": { "type": "string" },
+              "path": { "type": "string" },
+              "weight": { "type": ["string", "integer"], "description": "400, 700 or a variable range like '100 900'." },
+              "style": { "enum": ["normal", "italic"] }
+            }
+          }
+        }
+      }
+    },
+    "type": {
+      "type": "object",
+      "required": ["scale", "displayWeight", "bodyWeight", "tracking"],
+      "properties": {
+        "scale": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "type": "number", "minimum": 8, "maximum": 480 },
+          "description": "Ascending font sizes in px at 1080p (modular scale). Body copy should not go below the third step; disclaimers may use the first."
+        },
+        "displayWeight": { "$ref": "#/$defs/weight" },
+        "bodyWeight": { "$ref": "#/$defs/weight" },
+        "tracking": { "type": "number", "minimum": -0.15, "maximum": 0.15, "description": "Headline letter-spacing in em (engine track(): |v| <= 0.15 is em, larger values are px)." },
+        "trackingLabel": { "type": "number", "minimum": 0, "maximum": 0.15, "description": "Optional: letter-spacing in em for small uppercase labels, HUD tags and credits." }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "required": ["theme", "margin", "grid", "hud", "captions"],
+      "properties": {
+        "theme": { "enum": ["light", "dark"], "description": "Dominant stage. Scenes may still go dark for a climax (reel.config scenes[].dark)." },
+        "margin": { "type": "number", "minimum": 0, "maximum": 400, "description": "Safe margin in px at 1080p." },
+        "grid": { "type": "integer", "minimum": 1, "maximum": 24, "description": "Layout columns." },
+        "gutter": { "type": "number", "minimum": 0, "description": "Optional: column gutter in px." },
+        "baseline": { "type": "number", "minimum": 1, "description": "Optional: baseline grid step in px." },
+        "hud": { "type": "boolean", "description": "Show HUD chrome (project tag, step bar, scene tag)." },
+        "captions": {
+          "type": "object",
+          "required": ["enabled"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "font": { "$ref": "#/$defs/fontStack" },
+            "size": { "type": "number", "minimum": 12, "maximum": 120 },
+            "fg": { "$ref": "#/$defs/cssColor" },
+            "bg": { "$ref": "#/$defs/cssColor", "description": "Plate colour, may carry alpha (rgba())." },
+            "y": { "type": "number", "description": "Vertical centre of the caption block: <= 1 is a fraction of the frame height, otherwise px at 1080p." }
+          }
+        },
+        "radius": { "type": "number", "minimum": 0, "maximum": 80, "description": "Optional: corner radius for cards/chips in px at 1080p." }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "required": ["pace", "spring", "overshoot", "ease", "transitions", "characters", "dataViz", "visualSources"],
+      "properties": {
+        "pace": { "enum": ["calm", "medium", "energetic"], "description": "On-screen pace at the reel's BPM. Longer cuts never slow it down; they add bars." },
+        "spring": {
+          "type": "object",
+          "required": ["f", "z"],
+          "description": "Defaults for engine spring(t, f, z): f = frequency in Hz, z = damping ratio (lower = bouncier).",
+          "properties": {
+            "f": { "type": "number", "exclusiveMinimum": 0, "maximum": 8 },
+            "z": { "type": "number", "exclusiveMinimum": 0, "maximum": 1.5 }
+          }
+        },
+        "overshoot": { "type": "number", "minimum": 0, "maximum": 4, "description": "Back-easing overshoot s (0 = none, 1.70158 = classic outBack)." },
+        "ease": { "enum": ["lin", "inQ", "outQ", "ioQ", "inC", "outC", "ioC", "outQuint", "ioQuint", "inExpo", "outExpo", "ioExpo", "outBack", "inBack"], "description": "Default entrance ease (engine Ease names)." },
+        "transitions": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": { "enum": ["cut", "blobWipe", "zoomInto", "whip", "glitch", "flash", "strobe", "match", "impact", "portalFlash"] },
+          "description": "Preferred compositor transitions, best first. Keep flashes <= 3 per second."
+        },
+        "characters": { "type": "boolean", "description": "Mascot/character cutouts carry part of the story." },
+        "dataViz": { "type": "boolean", "description": "Real data (counters, charts, point clouds) carries part of the story." },
+        "visualSources": {
+          "type": "array",
+          "uniqueItems": true,
+          "contains": { "const": "vector" },
+          "items": { "enum": ["vector", "mascot-cutouts", "app-ui", "terminal", "cli", "pdf-figures", "web-shots", "photos"] },
+          "description": "Kinds of imagery to produce. 'vector' (code-drawn 2D) is always present; add others only when they serve the story."
+        },
+        "typeReveal": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "enum": ["kinetic", "kineticPop", "revealLine", "scramble", "typing"] },
+          "description": "Optional: preferred text reveals, best first (engine helpers kinetic, kinetic with pop, revealLine, scramble, typing caret)."
+        }
+      }
+    },
+    "post": {
+      "type": "object",
+      "required": ["grain", "vignette", "bloom"],
+      "properties": {
+        "grain": { "type": "number", "minimum": 0, "maximum": 0.3, "description": "Overlay film-grain alpha (0.02-0.08 typical)." },
+        "vignette": {
+          "type": "object",
+          "required": ["a", "color"],
+          "properties": {
+            "a": { "type": "number", "minimum": 0, "maximum": 1 },
+            "color": { "$ref": "#/$defs/hex" }
+          }
+        },
+        "bloom": { "type": "number", "minimum": 0, "maximum": 1, "description": "Glow strength for neon accents (0 on light stages)." }
+      }
+    },
+    "sound": {
+      "type": "object",
+      "required": ["bpm", "key", "mode", "preset", "instruments", "drums", "sfx", "energy"],
+      "properties": {
+        "bpm": { "type": "number", "minimum": 50, "maximum": 200, "description": "Tempo of every cut (reel.config bpm may override)." },
+        "key": { "enum": ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"] },
+        "mode": { "enum": ["major", "minor", "dorian", "mixolydian", "lydian", "phrygian", "aeolian", "ionian", "locrian"], "description": "extract_style.py writes major or minor; audio/arrange.py also plays the church modes." },
+        "preset": { "enum": ["bright-pop", "dark-synth", "ambient", "corporate", "lofi", "cinematic-lite"], "description": "Instrument family for audio/synth.py (a sound palette, not a visual style)." },
+        "instruments": { "type": "array", "items": { "type": "string" }, "description": "audio/synth.py instrument names (python3 audio/synth.py list): pad strings piano epiano pluck arp marimba bell glass saw-pluck bass saw-bass sub stab lead kick clap snare rim hats shaker toms crackle. Include at least one bed (pad, strings, epiano or piano)." },
+        "drums": { "enum": ["none", "light", "full"] },
+        "sfx": { "enum": ["glassy", "digital", "organic", "minimal"] },
+        "energy": {
+          "description": "0..1 per music part. extract_style.py writes the object form.",
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "intro": { "$ref": "#/$defs/unit" },
+                "groove": { "$ref": "#/$defs/unit" },
+                "breakdown": { "$ref": "#/$defs/unit" },
+                "drop": { "$ref": "#/$defs/unit" },
+                "outro": { "$ref": "#/$defs/unit" }
+              },
+              "additionalProperties": false
+            },
+            { "type": "array", "items": { "$ref": "#/$defs/unit" }, "minItems": 5, "maxItems": 5, "description": "[intro, groove, breakdown, drop, outro]" }
+          ]
+        }
+      }
+    },
+    "narration": {
+      "type": "object",
+      "required": ["recommended", "voice", "styleTag", "lang"],
+      "properties": {
+        "recommended": { "type": "boolean", "description": "Whether a narrated cut serves this material (explainers, papers, docs). The user decides; captions follow narration." },
+        "voice": { "type": "string", "description": "Gemini prebuilt voice name (Puck, Kore, Charon, Aoede, Fenrir, Laomedeia, Achird, Sulafat, Iapetus, Sadaltager, Schedar, Algieba, Achernar, ...)." },
+        "styleTag": { "type": "string", "pattern": "^\\[[^\\[\\]]+\\]$", "description": "Bracket audio tag that shapes delivery without being read aloud, e.g. [fast, energetic]." },
+        "lang": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$", "description": "BCP-47 (ko-KR, en-US, ja-JP); compare by primary subtag." }
+      }
+    },
+    "terminal": {
+      "type": "object",
+      "description": "Optional: palette for terminal/CLI captures (runtime/term.js). Present when the material names or ships a terminal theme, or plans terminal/cli visuals.",
+      "required": ["bg", "fg", "ansi"],
+      "properties": {
+        "theme": { "type": "string", "description": "Theme name (catppuccin-mocha, dracula, ...) or 'derived'." },
+        "bg": { "$ref": "#/$defs/hex" },
+        "fg": { "$ref": "#/$defs/hex" },
+        "ansi": { "type": "array", "minItems": 16, "maxItems": 16, "items": { "$ref": "#/$defs/hex" }, "description": "ANSI 0-15: black red green yellow blue magenta cyan white, then the bright variants." },
+        "source": { "type": "string" }
+      }
+    },
+    "swatches": {
+      "type": "array",
+      "description": "Optional: measured colours of the material (merged across sources), for decoration beyond the roles.",
+      "items": {
+        "type": "object",
+        "required": ["hex"],
+        "properties": {
+          "hex": { "$ref": "#/$defs/hex" },
+          "share": { "$ref": "#/$defs/unit" },
+          "role": { "type": "string" },
+          "from": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "review": {
+      "type": "array",
+      "description": "Fields that need human/Claude judgment, with the reason and the extractor's confidence.",
+      "items": {
+        "type": "object",
+        "required": ["field", "reason"],
+        "properties": {
+          "field": { "type": "string" },
+          "reason": { "type": "string" },
+          "confidence": { "$ref": "#/$defs/unit" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cssColor": { "type": "string", "minLength": 3, "description": "Any CSS colour (hex, rgb(), rgba(), hsl())." },
+    "fontStack": { "type": "string", "minLength": 1, "description": "CSS font-family list ending with a generic family, e.g. \"Inter\", \"Helvetica Neue\", sans-serif." },
+    "weight": { "type": "integer", "minimum": 100, "maximum": 950 },
+    "unit": { "type": "number", "minimum": 0, "maximum": 1 }
+  }
+}

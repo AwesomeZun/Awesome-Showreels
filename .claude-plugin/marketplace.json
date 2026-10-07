@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "awesome-showreels",
+  "description": "Awesome Showreels: the motion-showreel skill for Claude Code",
+  "owner": {
+    "name": "AwesomeZun",
+    "email": "sjkang89@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "awesome-showreels",
+      "version": "1.0.0",
+      "description": "Premium 2D motion-graphics showreels from any source material: tone & manner derived from the source, real captures, Vision + OpenCV cutouts, beat-synced music, optional Gemini narration, any length at the same BPM. MP4 + single-file HTML.",
+      "author": {
+        "name": "AwesomeZun",
+        "email": "sjkang89@gmail.com",
+        "github": "AwesomeZun"
+      },
+      "source": "./",
+      "category": "creative",
+      "keywords": ["showreel", "motion-graphics", "video", "sizzle-reel", "demo-video", "animation", "canvas", "tts", "skill"],
+      "homepage": "https://github.com/AwesomeZun/Awesome-Showreels"
+    }
+  ]
+}

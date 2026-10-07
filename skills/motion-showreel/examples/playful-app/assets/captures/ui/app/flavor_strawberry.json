@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "full screen after the tick (default flavor)",
+ "file": "flavor_strawberry.png",
+ "kind": "screen",
+ "px": [
+  1236,
+  2484
+ ],
+ "dpr": 3,
+ "sha1": "e7445d54f8be",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 412,
+  "h": 828
+ },
+ "screen": {
+  "x": 0,
+  "y": 44,
+  "w": 412,
+  "h": 828
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:11.496Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

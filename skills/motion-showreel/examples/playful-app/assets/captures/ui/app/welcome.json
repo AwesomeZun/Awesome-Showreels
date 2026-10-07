@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "first screen as the app shows it",
+ "file": "welcome.png",
+ "kind": "screen",
+ "px": [
+  1236,
+  2484
+ ],
+ "dpr": 3,
+ "sha1": "48c973f81442",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 412,
+  "h": 828
+ },
+ "screen": {
+  "x": 0,
+  "y": 44,
+  "w": 412,
+  "h": 828
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:04.129Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

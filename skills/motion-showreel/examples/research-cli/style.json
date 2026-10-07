@@ -1,0 +1,339 @@
+{
+  "$schema": "../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "tool",
+    "audience": "developers and researchers",
+    "title": "spark-bench",
+    "reviewed": "Draft from extract_style.py, reviewed by hand: see rationale; the extraction log is style-extract.md."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "terse research-tool README: abstract with citations, install, usage, results table (demo data), method, BibTeX"
+    },
+    {
+      "path": "source/docs/index.html",
+      "kind": "website",
+      "notes": "docs site landing page (dark only): hero, Figure 1 block mask, results table, method steps"
+    },
+    {
+      "path": "source/docs/theme.css",
+      "kind": "website",
+      "notes": "docs site theme: 12 colour tokens --sb-*, font tokens, @font-face for the shipped OFL fonts"
+    },
+    {
+      "path": "source/spark_bench/cli.py",
+      "kind": "repo",
+      "notes": "the CLI the reel captures with tools/capture_cli.py (replays results/demo-run.json)"
+    },
+    {
+      "path": "source/results/demo-run.json",
+      "kind": "other",
+      "notes": "the demo run: every number on screen is computed from its repeats (DEMO DATA)"
+    }
+  ],
+  "mood": [
+    "technical",
+    "data-driven",
+    "cool",
+    "precise",
+    "nocturnal"
+  ],
+  "rationale": {
+    "palette": "Dark theme: the docs site is dark only (color-scheme: dark, theme-color #0A0E17) [E3, E7, E17]. Every role is an authored token from docs/theme.css [E7]: bg --sb-bg #0A0E17, bg2 --sb-bg-subtle #0E1422, surface --sb-surface #131B2B, line --sb-border #22304A, ink --sb-text #E8EEF7, ink2 --sb-text-muted #9AA8BF, accent --sb-primary #2FE4F0 (the spark kernel), accent2 --sb-secondary #8B7CFF (block-sparse in the results table), accent3 --sb-tertiary #FFB547 (global blocks in Figure 1), ok/warn/deny --sb-success/--sb-warning/--sb-danger. muted is not a token: the draft's neutral #6C7079 was replaced by #6E7C94, the same blue-grey hue as ink2, at 4.57:1 on bg. Contrast on bg: ink 16.55:1, ink2 8.02:1, muted 4.57:1, accent 12.39:1. ok and deny are close for deutan viewers: the reel never signals by colour alone (▲ and words). paletteAlt is derived and unused (every scene is dark); its muted is lifted to 4.5:1 like every text role.",
+    "type": "The docs page sets Space Grotesk for headings and body and JetBrains Mono for code [E4, E5, E6]; both ship in source/docs/fonts as variable OFL-1.1 files [E14, E15], so fonts.files embeds them (the draft listed the variable font's default instance name, Space Grotesk Light, as the display family; fixed to the family). Heading/body ratio 5.85 → modular step 1.38; displayWeight 700 as the docs' h1/h2; bodyWeight 400; headline tracking -0.015 em (the docs h1 uses -0.03 em at 76 px); labels tracked 0.142 em like the docs' mono kicker (0.18 em).",
+    "motion": "Energy 0.43: no '!', emoji or marketing words, 129 numbers/1k and 7 citations/1k [E1] → medium pace, but the copy is calm and formal: the reel opens calm and builds to one impact (the 4.1× result). playful 0.00, technical 0.89, serious 0.50 → heavily damped spring (f 2.2, z 0.84), almost no overshoot (0.15), outExpo: precise, not bouncy. Transitions from the tone scores: glitch 0.74 (terminal tool on a dark stage), match 0.70, zoomInto 0.66, cut 0.41, impact 0.32 (numbers that land).",
+    "sound": "dark-synth scored 0.80 (next ambient 0.43): dark 1, technical 0.89, data 0.78, playful 0 [E1, E7]. The draft's 123 BPM (inside 118–130 by energy) was nudged to 128 so 8 bars = 15.0 s and 16 bars = 30.0 s exactly (timing-and-length.md: 15 s is whole bars at multiples of 16 BPM). Key B from the accent hue 205° (free choice), minor (dark, cool, technical). drums light keeps the grooves sparse (kick on 1 and 3); the drop reaches energy 1.0, which switches to the full dark kit, so the reel builds to the impact; clap and snare are added to the instrument list for that drop. sfx digital (HUD, terminal, data).",
+    "narration": "Recommended: a research-style README (abstract, 7 citations/1k, formal register, 711 words) with numeric claims that need their qualifier ('in the demo run') spoken [E1]. Voice Charon (informative), tag [confident, clear], en-US. The 15-s cut keeps two short lines; the 30-s cut narrates every scene. Captions are burned in (layout.captions) because a README preview plays muted.",
+    "visuals": "No mascot or photo in the material (characters false). Carriers: vector data viz (dataViz true: 2 tables, Figure 1, data 0.78) and a REAL terminal capture of `spark-bench run` [E1] made with tools/capture_cli.py. The 4,096-block point cloud and the particle logo are computed from the README's pattern definition (band 7, 2 global blocks, 1,024-token blocks at 64k tokens). web-shots dropped: the reel does not show the docs page."
+  },
+  "palette": {
+    "bg": "#0A0E17",
+    "bg2": "#0E1422",
+    "surface": "#131B2B",
+    "ink": "#E8EEF7",
+    "ink2": "#9AA8BF",
+    "muted": "#6E7C94",
+    "accent": "#2FE4F0",
+    "accent2": "#8B7CFF",
+    "accent3": "#FFB547",
+    "ok": "#4ADE80",
+    "warn": "#FFCC4D",
+    "deny": "#FF5C7A",
+    "accentInk": "#2FE4F0",
+    "onAccent": "#0A0E17",
+    "line": "#22304A"
+  },
+  "fonts": {
+    "display": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "sans": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "serif": "\"Source Serif 4\", \"Iowan Old Style\", \"Charter\", serif",
+    "mono": "\"JetBrains Mono\", \"JetBrainsMono NF\", \"Fira Code\", monospace",
+    "cjk": "\"Pretendard\", \"Pretendard Variable\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Space Grotesk",
+        "path": "source/docs/fonts/SpaceGrotesk-Variable.ttf",
+        "weight": "300 700"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/docs/fonts/JetBrainsMono-Variable.ttf",
+        "weight": "100 800"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      12,
+      18,
+      24,
+      34,
+      46,
+      64,
+      88,
+      120,
+      166,
+      228
+    ],
+    "displayWeight": 700,
+    "bodyWeight": 400,
+    "tracking": -0.015,
+    "trackingLabel": 0.142
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": true,
+    "captions": {
+      "enabled": true,
+      "font": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+      "size": 36,
+      "weight": 600,
+      "fg": "#E8EEF7",
+      "bg": "rgba(6,9,16,0.72)",
+      "y": 930
+    },
+    "radius": 10
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.2,
+      "z": 0.84
+    },
+    "overshoot": 0.15,
+    "ease": "outExpo",
+    "transitions": [
+      "glitch",
+      "match",
+      "zoomInto",
+      "cut",
+      "impact"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector",
+      "cli"
+    ],
+    "typeReveal": [
+      "typing",
+      "scramble",
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.057,
+    "vignette": {
+      "a": 0.5,
+      "color": "#060911"
+    },
+    "bloom": 0.34
+  },
+  "sound": {
+    "bpm": 128,
+    "key": "B",
+    "mode": "minor",
+    "preset": "dark-synth",
+    "instruments": [
+      "pad",
+      "saw-pluck",
+      "arp",
+      "saw-bass",
+      "sub",
+      "stab",
+      "kick",
+      "clap",
+      "snare",
+      "hats"
+    ],
+    "drums": "light",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.55,
+      "breakdown": 0.45,
+      "drop": 1.0,
+      "outro": 0.4
+    }
+  },
+  "narration": {
+    "recommended": true,
+    "voice": "Charon",
+    "styleTag": "[confident, clear]",
+    "lang": "en-US"
+  },
+  "paletteAlt": {
+    "theme": "light",
+    "bg": "#F1FAFA",
+    "bg2": "#DFF0F1",
+    "surface": "#FFFFFF",
+    "ink": "#142728",
+    "ink2": "#4F5F60",
+    "muted": "#687576",
+    "accent": "#009FA9",
+    "accent2": "#8B7CFF",
+    "accent3": "#C4830A",
+    "ok": "#00A654",
+    "warn": "#B48A00",
+    "deny": "#F85675",
+    "accentInk": "#007F88",
+    "onAccent": "#142728",
+    "line": "#CCD7D7"
+  },
+  "terminal": {
+    "theme": "spark-bench docs",
+    "bg": "#131B2B",
+    "fg": "#E8EEF7",
+    "source": "the docs' code blocks (pre: --sb-surface on --sb-text, prompt --sb-primary, flags --sb-secondary); ANSI slots take the brand tokens",
+    "ansi": [
+      "#1C2638",
+      "#FF5C7A",
+      "#4ADE80",
+      "#FFB547",
+      "#6CA8FF",
+      "#8B7CFF",
+      "#2FE4F0",
+      "#C9D3E3",
+      "#64728C",
+      "#FF8098",
+      "#7BEBA2",
+      "#FFCC4D",
+      "#94C0FF",
+      "#A99DFF",
+      "#7CF0F6",
+      "#E8EEF7"
+    ]
+  },
+  "swatches": [
+    {
+      "hex": "#0A0E17",
+      "share": 0.234,
+      "role": "bg",
+      "from": [
+        "source/docs/index.html",
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#E8EEF7",
+      "share": 0.161,
+      "role": "ink",
+      "from": [
+        "source/docs/theme.css",
+        "source/docs/index.html"
+      ]
+    },
+    {
+      "hex": "#2FE4F0",
+      "share": 0.141,
+      "role": "accent",
+      "from": [
+        "source/docs/index.html",
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#9AA8BF",
+      "share": 0.062,
+      "role": "ink2",
+      "from": [
+        "source/docs/theme.css",
+        "source/docs/index.html"
+      ]
+    },
+    {
+      "hex": "#0E1422",
+      "share": 0.049,
+      "role": "bg2",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#131B2B",
+      "share": 0.049,
+      "role": "surface",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#22304A",
+      "share": 0.049,
+      "role": "line",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#8B7CFF",
+      "share": 0.049,
+      "role": "accent2",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#FFB547",
+      "share": 0.049,
+      "role": "accent3",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#4ADE80",
+      "share": 0.049,
+      "role": "ok",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#FFCC4D",
+      "share": 0.049,
+      "role": "warn",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    },
+    {
+      "hex": "#FF5C7A",
+      "share": 0.049,
+      "role": "deny",
+      "from": [
+        "source/docs/theme.css"
+      ]
+    }
+  ],
+  "review": []
+}

@@ -1,0 +1,29 @@
+{
+  "lang": "en-US",
+  "voice": "Charon",
+  "style": "[confident, clear]",
+  "model": "gemini-3.8-flash-tts",
+  "lexicon": {
+    "spark-bench": "spark bench",
+    "64k": "sixty-four K",
+    "4.1×": "four point one times"
+  },
+  "lines": [
+    { "scene": "matrix", "text": "Most of a long attention matrix is empty.",
+      "visual": "4,096 blocks; 3,422 fall away, 674 stay lit" },
+    { "scene": "problem", "text": "Kernels skip it. Their speedups are hard to compare.",
+      "visual": "hardware, clocks, warm-up and repeats scramble, then lock" },
+    { "scene": "cli", "text": "spark-bench pins the machine, clocks and seed, then runs every kernel five times.",
+      "visual": "the real `spark-bench run` capture, zoom to the spark row" },
+    { "scene": "results", "text": "In the demo run, the gain grows with sequence length.", "cuts": ["30", "60"],
+      "visual": "grouped bars 4k to 64k, spark in cyan" },
+    { "scene": "scaling", "text": "The longer the sequence, the less of it is computed, and the bigger the gain.", "cuts": ["60"],
+      "visual": "the same pattern at 4k, 16k, 32k and 64k; computed share falls, spark's gain rises" },
+    { "scene": "repeats", "text": "Every number is the median of five seeded repeats.", "cuts": ["60"],
+      "visual": "five p50 timings per kernel drop in; the median locks; the spread reads 1.2 to 1.8 percent" },
+    { "scene": "impact", "text": "At 64k tokens, spark reaches 4.1× the dense throughput.", "cuts": ["30", "60"],
+      "visual": "4.1× slams; p50 latency 47.6 to 11.6 ms; leaderboard" },
+    { "scene": "logo", "text": "One command. Numbers you can compare.", "cuts": ["30", "60"],
+      "visual": "particles assemble the spark-bench wordmark; install line" }
+  ]
+}

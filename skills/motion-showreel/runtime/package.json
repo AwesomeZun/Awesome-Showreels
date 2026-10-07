@@ -1,0 +1,19 @@
+{
+  "name": "motion-showreel-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frame-exact Canvas2D/WebGL2 showreel runtime: headless stills, parallel MP4 render, single-file HTML player.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "stills": "node stills.mjs",
+    "render": "node render.mjs",
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

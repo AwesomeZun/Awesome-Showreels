@@ -1,0 +1,983 @@
+{
+ "name": "app",
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:15.554Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 44,
+  "homeIndicator": 0,
+  "dpr": 3,
+  "mobile": true,
+  "touch": true,
+  "screen": [
+   412,
+   872
+  ],
+  "ua": "ios",
+  "note": "engine.js PHONE screen at 1080p (440x900, inset 14)",
+  "preset": "reel-phone"
+ },
+ "viewport": [
+  412,
+  828
+ ],
+ "statusBar": 44,
+ "dpr": 3,
+ "locale": "en-US",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "welcome": {
+   "step": "shot",
+   "note": "first screen as the app shows it",
+   "file": "welcome.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "48c973f81442",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "tidying_000": {
+   "step": "record",
+   "file": "tidying_000.png",
+   "t": 0,
+   "rect": {
+    "x": 36.89,
+    "y": 149.97,
+    "w": 375.11,
+    "h": 225.03
+   },
+   "screen": {
+    "x": 36.89,
+    "y": 193.97,
+    "w": 375.11,
+    "h": 225.03
+   },
+   "dpr": 3
+  },
+  "tidying_001": {
+   "step": "record",
+   "file": "tidying_001.png",
+   "t": 0.613,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "dpr": 3
+  },
+  "tidying_002": {
+   "step": "record",
+   "file": "tidying_002.png",
+   "t": 1.224,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "dpr": 3
+  },
+  "tidying_003": {
+   "step": "record",
+   "file": "tidying_003.png",
+   "t": 1.835,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "dpr": 3
+  },
+  "tidying_004": {
+   "step": "record",
+   "file": "tidying_004.png",
+   "t": 2.341,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "dpr": 3
+  },
+  "final": {
+   "step": "shot",
+   "note": "reference: the real screen in its final state (QA for layer placement)",
+   "file": "final.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "76dfa583cbde",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "note": {
+   "step": "layer",
+   "note": "typing source: text-free copy + text rows",
+   "selector": ".msg.me .bubble",
+   "file": "note.png",
+   "kind": "element",
+   "px": [
+    876,
+    220
+   ],
+   "dpr": 3,
+   "sha1": "305b0137c861",
+   "rect": {
+    "x": 104,
+    "y": 78,
+    "w": 292,
+    "h": 73.28
+   },
+   "screen": {
+    "x": 104,
+    "y": 122,
+    "w": 292,
+    "h": 73.28
+   },
+   "page": {
+    "x": 104,
+    "y": 78,
+    "w": 292,
+    "h": 73.28
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 292,
+    "h": 73.28
+   },
+   "pad": 0,
+   "radius": [
+    22,
+    22,
+    8,
+    22
+   ],
+   "bg": "rgb(255, 228, 236)",
+   "color": "rgb(70, 48, 61)",
+   "font": "700 17px/24.65px Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "oat milk, call mom fri 3pm, idea: pastel calendar",
+   "alpha": false,
+   "rows": [
+    {
+     "x0": 16,
+     "x1": 269.19,
+     "y0": 12,
+     "y1": 35,
+     "text": "oat milk, call mom fri 3pm, idea:",
+     "cx": [
+      25.8,
+      35.09,
+      41.63,
+      46.23,
+      61.14,
+      65.48,
+      70.91,
+      80.23,
+      84.45,
+      89.06,
+      97.03,
+      106.33,
+      111.75,
+      117.17,
+      121.78,
+      136.69,
+      146.48,
+      161.39,
+      166,
+      172.19,
+      178.84,
+      183.19,
+      187.8,
+      198,
+      208.19,
+      223.11,
+      227.31,
+      231.92,
+      236.27,
+      246.45,
+      255.67,
+      264.97,
+      269.19
+     ]
+    },
+    {
+     "x0": 16,
+     "x1": 137.34,
+     "y0": 36.64,
+     "y1": 59.64,
+     "text": "pastel calendar",
+     "cx": [
+      26.2,
+      35.5,
+      43.72,
+      50.16,
+      59.38,
+      64.8,
+      69.41,
+      77.38,
+      86.67,
+      92.02,
+      101.23,
+      111.17,
+      121.38,
+      130.67,
+      137.34
+     ]
+    }
+   ],
+   "textFree": "note.textfree.png",
+   "mask": "note.mask.png",
+   "rowsOverlay": "note.rows.png",
+   "textFreeMode": "dom",
+   "maskPixels": 15540,
+   "residualPixels": 0
+  },
+  "mini": {
+   "step": "layer",
+   "note": "Mochi's avatar beside the tidy card (not part of the card states)",
+   "selector": ".msg.mochi:has(.tidying) .mini",
+   "file": "mini.png",
+   "kind": "element",
+   "px": [
+    180,
+    180
+   ],
+   "dpr": 3,
+   "sha1": "f7287368ab89",
+   "rect": {
+    "x": 2,
+    "y": 302.28,
+    "w": 60,
+    "h": 60
+   },
+   "screen": {
+    "x": 2,
+    "y": 346.28,
+    "w": 60,
+    "h": 60
+   },
+   "page": {
+    "x": 2,
+    "y": 302.28,
+    "w": 60,
+    "h": 60
+   },
+   "element": {
+    "x": 14,
+    "y": 14,
+    "w": 32,
+    "h": 32
+   },
+   "pad": 14,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "result": {
+   "step": "layer",
+   "note": "result card row (avatar + card), real shadow kept as alpha; rows = where each item sits",
+   "selector": ".msg.mochi:has(.result)",
+   "file": "result.png",
+   "kind": "element",
+   "px": [
+    1236,
+    957
+   ],
+   "dpr": 3,
+   "sha1": "813576c167a7",
+   "rect": {
+    "x": 0,
+    "y": 334.28,
+    "w": 412,
+    "h": 319
+   },
+   "screen": {
+    "x": 0,
+    "y": 378.28,
+    "w": 412,
+    "h": 319
+   },
+   "page": {
+    "x": 0,
+    "y": 334.28,
+    "w": 412,
+    "h": 319
+   },
+   "element": {
+    "x": 16,
+    "y": 28,
+    "w": 380,
+    "h": 263
+   },
+   "pad": 28,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "✨ Tidy note\nErrands, calls & ideas\nOat milk\nCall Mom\nFri 3:00 PM\nPastel calendar\n#errands\n#family\n#ideas",
+   "alpha": true,
+   "rows": [
+    {
+     "x0": 82,
+     "x1": 156.58,
+     "y0": 46,
+     "y1": 62,
+     "text": "✨ Tidy note",
+     "cx": [
+      97.2,
+      100.75,
+      109.17,
+      112.59,
+      120.11000000000001,
+      126.72,
+      130.25,
+      137.59,
+      144.8,
+      149.8,
+      156.58
+     ]
+    },
+    {
+     "x0": 72,
+     "x1": 275.95,
+     "y0": 73,
+     "y1": 100,
+     "text": "Errands, calls & ideas",
+     "cx": [
+      84.09,
+      92.56,
+      100.94,
+      112.09,
+      124.02000000000001,
+      136.22,
+      145.84,
+      151.08,
+      156.61,
+      166.08,
+      177.23,
+      183.98,
+      190.64,
+      200.36,
+      205.89,
+      221,
+      226.53,
+      231.95,
+      244.17000000000002,
+      255.07999999999998,
+      266.23,
+      275.95
+     ]
+    },
+    {
+     "x0": 108,
+     "x1": 173.34,
+     "y0": 116.59,
+     "y1": 138.59,
+     "text": "Oat milk",
+     "cx": [
+      120.75,
+      129.66,
+      136.13,
+      140.59,
+      154.81,
+      159.09,
+      164.42,
+      173.34
+     ]
+    },
+    {
+     "x0": 108,
+     "x1": 368,
+     "y0": 161.09,
+     "y1": 183.09,
+     "text": "Call MomFri 3:00 PM",
+     "cx": [
+      118.66,
+      127.56,
+      132.89,
+      138.22,
+      142.69,
+      156.7,
+      166.11,
+      180.34,
+      305.14,
+      310.5,
+      313.97,
+      317.59,
+      325.39,
+      328.77,
+      336.58,
+      344.38,
+      347.98,
+      356.63,
+      368
+     ]
+    },
+    {
+     "x0": 108,
+     "x1": 225.3,
+     "y0": 205.59,
+     "y1": 227.59,
+     "text": "Pastel calendar",
+     "cx": [
+      118.27000000000001,
+      127.19,
+      134.98,
+      141.38,
+      150.16,
+      155.48,
+      159.94,
+      167.55,
+      176.47,
+      181.72,
+      190.5,
+      200.02,
+      209.78,
+      218.7,
+      225.3
+     ]
+    },
+    {
+     "x0": 82,
+     "x1": 275,
+     "y0": 252,
+     "y1": 270,
+     "text": "#errands#family#ideas",
+     "cx": [
+      89.81,
+      96.94,
+      102.3,
+      107.59,
+      114.84,
+      122.58000000000001,
+      130.52,
+      136.91,
+      170.72,
+      175.63,
+      182.86,
+      194.42,
+      197.91,
+      202.06,
+      209,
+      242.81,
+      246.3,
+      254.22000000000003,
+      261.34,
+      268.59,
+      275
+     ]
+    }
+   ]
+  },
+  "result_checked": {
+   "step": "layer",
+   "note": "the same card after the tick",
+   "selector": ".msg.mochi:has(.result)",
+   "file": "result_checked.png",
+   "kind": "element",
+   "px": [
+    1236,
+    957
+   ],
+   "dpr": 3,
+   "sha1": "480498c09ff5",
+   "rect": {
+    "x": 0,
+    "y": 334.28,
+    "w": 412,
+    "h": 319
+   },
+   "screen": {
+    "x": 0,
+    "y": 378.28,
+    "w": 412,
+    "h": 319
+   },
+   "page": {
+    "x": 0,
+    "y": 334.28,
+    "w": 412,
+    "h": 319
+   },
+   "element": {
+    "x": 16,
+    "y": 28,
+    "w": 380,
+    "h": 263
+   },
+   "pad": 28,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "✨ Tidy note\nErrands, calls & ideas\nOat milk\nCall Mom\nFri 3:00 PM\nPastel calendar\n#errands\n#family\n#ideas",
+   "alpha": true
+  },
+  "flavor_strawberry": {
+   "step": "shot",
+   "note": "full screen after the tick (default flavor)",
+   "file": "flavor_strawberry.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "e7445d54f8be",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "flavor_matcha": {
+   "step": "shot",
+   "file": "flavor_matcha.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "5dcf27ad39aa",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "flavor_ube": {
+   "step": "shot",
+   "file": "flavor_ube.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "a32cf61b9e92",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "flavor_yuzu": {
+   "step": "shot",
+   "file": "flavor_yuzu.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "a2737e32679e",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "base": {
+   "step": "shot",
+   "note": "empty feed under the animated layers",
+   "file": "base.png",
+   "kind": "screen",
+   "px": [
+    1236,
+    2484
+   ],
+   "dpr": 3,
+   "sha1": "eee1ddcd8212",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 412,
+    "h": 828
+   },
+   "screen": {
+    "x": 0,
+    "y": 44,
+    "w": 412,
+    "h": 828
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "steps_0": {
+   "step": "states",
+   "state": 0,
+   "note": "the five states the app shows while tidying, set on a static clone (last step: states leave the clone in place)",
+   "file": "steps_0.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "d6d89ebc7c04",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  "steps_1": {
+   "step": "states",
+   "state": 1,
+   "note": "the five states the app shows while tidying, set on a static clone (last step: states leave the clone in place)",
+   "file": "steps_1.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "e03e743b85ca",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  "steps_2": {
+   "step": "states",
+   "state": 2,
+   "note": "the five states the app shows while tidying, set on a static clone (last step: states leave the clone in place)",
+   "file": "steps_2.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "ad11dacfbd36",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  "steps_3": {
+   "step": "states",
+   "state": 3,
+   "note": "the five states the app shows while tidying, set on a static clone (last step: states leave the clone in place)",
+   "file": "steps_3.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "5a17cc057757",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  "steps_4": {
+   "step": "states",
+   "state": 4,
+   "note": "the five states the app shows while tidying, set on a static clone (last step: states leave the clone in place)",
+   "file": "steps_4.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "6eddfa9f4829",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "All tidy! ✨\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  }
+ },
+ "warnings": []
+}

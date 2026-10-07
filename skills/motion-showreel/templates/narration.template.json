@@ -1,0 +1,13 @@
+{
+  "lexicon": {},
+  "lines": [
+    { "scene": "hook", "text": "Which one would you trust?", "visual": "the hook question over the opening image" },
+    { "scene": "brand", "text": "Meet <Name>.", "visual": "logo reveal" },
+    { "scene": "problem", "text": "<The problem, in one plain sentence of about ten words.>", "visual": "the problem made visible" },
+    { "scene": "proof", "text": "<What it does, shown on the real product, one sentence.>", "visual": "real UI, terminal, or data" },
+    { "scene": "how", "text": "<How it works, one sentence; dropped with the scene in short cuts.>", "visual": "optional: mechanism" },
+    { "scene": "detail", "text": "<One concrete number with its source.>", "visual": "optional: a real number" },
+    { "scene": "climax", "text": "<The moment that matters: what it blocks, saves, or proves.>", "visual": "the climax" },
+    { "scene": "finale", "text": "<The one message people should repeat.>", "visual": "logo and the closing line" }
+  ]
+}

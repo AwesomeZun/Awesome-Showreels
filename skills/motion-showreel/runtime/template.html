@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showreel</title>
+<!--HEAD-->
+<style>
+  :root { --accent: #6c7bff; --stage: #0b0c10; --aspect: 16 / 9; --ar: 1.7778; --bar: 64px; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--stage); color: #f2f4f8; overflow: hidden;
+    font: 500 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+  #stage { position: fixed; inset: 0 0 var(--bar) 0; display: grid; place-items: center; }
+  #frame { position: relative; width: min(100vw, calc((100vh - var(--bar)) * var(--ar))); aspect-ratio: var(--aspect); }
+  #reel { width: 100%; height: 100%; display: block; background: #000; cursor: pointer; }
+  #overlay { position: absolute; inset: 0; display: grid; place-items: center; cursor: pointer;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.05), rgba(0,0,0,0.38)); }
+  #overlay[hidden] { display: none; }
+  #overlay .big { width: clamp(64px, 11vmin, 120px); aspect-ratio: 1; border-radius: 50%; border: 3px solid rgba(255,255,255,0.92);
+    background: rgba(10,12,16,0.5); display: grid; place-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    transition: transform .2s ease, background .2s ease; }
+  #overlay:hover .big { transform: scale(1.06); background: rgba(10,12,16,0.62); }
+  #overlay .big::after { content: ""; margin-left: 12%; border-style: solid; border-width: 0.9em 0 0.9em 1.5em;
+    border-color: transparent transparent transparent #fff; font-size: clamp(14px, 2.4vmin, 26px); }
+  #ui { position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%); height: 46px; display: flex; align-items: center; gap: 12px;
+    padding: 0 12px; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; background: rgba(12,14,20,0.82);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: opacity .35s; width: min(860px, calc(100vw - 20px)); }
+  body.idle #ui { opacity: 0; }
+  body.idle, body.idle #reel { cursor: none; }
+  #ui button { font: inherit; color: #f2f4f8; background: transparent; border: 1px solid rgba(255,255,255,0.16); border-radius: 9px;
+    padding: 6px 11px; cursor: pointer; white-space: nowrap; }
+  #ui button:hover { border-color: var(--accent); }
+  #ui button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  #play { width: 36px; height: 32px; padding: 0 !important; display: grid; place-items: center; }
+  #cuts { display: flex; gap: 4px; }
+  #bar { flex: 1; min-width: 60px; accent-color: var(--accent); }
+  #time { font: 500 12px ui-monospace, "SF Mono", Menlo, Consolas, monospace; opacity: .75; min-width: 112px; text-align: right; }
+  #loading { position: fixed; inset: 0; display: grid; place-items: center; font: 500 13px ui-monospace, Menlo, monospace; letter-spacing: .18em;
+    color: rgba(255,255,255,0.6); pointer-events: none; padding: 24px; text-align: center; }
+  #loading[hidden] { display: none; }
+  @media (max-width: 640px) { #time { display: none; } #ui { gap: 8px; } }
+  body.render { overflow: hidden; background: #000; }
+  body.render #stage { position: fixed; inset: 0; display: block; }
+  body.render #frame { width: auto; aspect-ratio: auto; }
+  body.render #reel { width: auto; height: auto; }
+  body.render #ui, body.render #overlay, body.render #loading { display: none !important; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="frame"><canvas id="reel" width="1920" height="1080"></canvas><div id="overlay" hidden aria-label="Play"><div class="big"></div></div></div></div>
+<div id="loading">LOADING</div>
+<div id="ui" role="toolbar" aria-label="Playback controls">
+  <button id="play" aria-label="Play" title="Play / pause (Space)">▶</button>
+  <div id="cuts" role="group" aria-label="Cuts"></div>
+  <input id="bar" type="range" min="0" max="1000" step="0.1" value="0" aria-label="Position" title="Left/Right: one frame, Shift: one second">
+  <span id="time">0:00.00 / 0:00.00</span>
+</div>
+<script id="manifest">window.MANIFEST = null;</script>
+<script src="engine.js"></script>
+<script src="gl.js" data-optional></script>
+<script src="quad.js" data-optional></script>
+<script src="term.js" data-optional></script>
+<script src="compositor.js"></script>
+<!--SCENES-->
+<script>
+  (function () {
+    var M = window.MANIFEST, c = M && M.config && M.config.size;
+    if (c) { document.documentElement.style.setProperty('--aspect', c[0] + ' / ' + c[1]); document.documentElement.style.setProperty('--ar', String(c[0] / c[1])); }
+    boot();
+  })();
+</script>
+</body>
+</html>

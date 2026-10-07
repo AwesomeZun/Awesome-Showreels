@@ -1,0 +1,44 @@
+{
+  "tool": "spark-bench",
+  "version": "0.4.0",
+  "demo": true,
+  "fingerprint": "437589",
+  "lengths": [
+    "4k",
+    "16k",
+    "32k",
+    "64k"
+  ],
+  "kernels": {
+    "dense": {
+      "relative": {
+        "4k": 1.0,
+        "16k": 1.0,
+        "32k": 1.0,
+        "64k": 1.0
+      },
+      "p50_ms": 47.6,
+      "spread_pct": 1.22
+    },
+    "block-sparse": {
+      "relative": {
+        "4k": 1.198,
+        "16k": 1.901,
+        "32k": 2.599,
+        "64k": 3.195
+      },
+      "p50_ms": 14.9,
+      "spread_pct": 1.61
+    },
+    "spark": {
+      "relative": {
+        "4k": 1.301,
+        "16k": 2.409,
+        "32k": 3.296,
+        "64k": 4.103
+      },
+      "p50_ms": 11.6,
+      "spread_pct": 1.81
+    }
+  }
+}

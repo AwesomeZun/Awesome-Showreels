@@ -1,0 +1,127 @@
+{
+ "step": "layer",
+ "note": "typing source: text-free copy + text rows",
+ "selector": ".msg.me .bubble",
+ "file": "note.png",
+ "kind": "element",
+ "px": [
+  876,
+  220
+ ],
+ "dpr": 3,
+ "sha1": "305b0137c861",
+ "rect": {
+  "x": 104,
+  "y": 78,
+  "w": 292,
+  "h": 73.28
+ },
+ "screen": {
+  "x": 104,
+  "y": 122,
+  "w": 292,
+  "h": 73.28
+ },
+ "page": {
+  "x": 104,
+  "y": 78,
+  "w": 292,
+  "h": 73.28
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 292,
+  "h": 73.28
+ },
+ "pad": 0,
+ "radius": [
+  22,
+  22,
+  8,
+  22
+ ],
+ "bg": "rgb(255, 228, 236)",
+ "color": "rgb(70, 48, 61)",
+ "font": "700 17px/24.65px Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+ "text": "oat milk, call mom fri 3pm, idea: pastel calendar",
+ "alpha": false,
+ "rows": [
+  {
+   "x0": 16,
+   "x1": 269.19,
+   "y0": 12,
+   "y1": 35,
+   "text": "oat milk, call mom fri 3pm, idea:",
+   "cx": [
+    25.8,
+    35.09,
+    41.63,
+    46.23,
+    61.14,
+    65.48,
+    70.91,
+    80.23,
+    84.45,
+    89.06,
+    97.03,
+    106.33,
+    111.75,
+    117.17,
+    121.78,
+    136.69,
+    146.48,
+    161.39,
+    166,
+    172.19,
+    178.84,
+    183.19,
+    187.8,
+    198,
+    208.19,
+    223.11,
+    227.31,
+    231.92,
+    236.27,
+    246.45,
+    255.67,
+    264.97,
+    269.19
+   ]
+  },
+  {
+   "x0": 16,
+   "x1": 137.34,
+   "y0": 36.64,
+   "y1": 59.64,
+   "text": "pastel calendar",
+   "cx": [
+    26.2,
+    35.5,
+    43.72,
+    50.16,
+    59.38,
+    64.8,
+    69.41,
+    77.38,
+    86.67,
+    92.02,
+    101.23,
+    111.17,
+    121.38,
+    130.67,
+    137.34
+   ]
+  }
+ ],
+ "textFree": "note.textfree.png",
+ "mask": "note.mask.png",
+ "rowsOverlay": "note.rows.png",
+ "textFreeMode": "dom",
+ "maskPixels": 15540,
+ "residualPixels": 0,
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:10.315Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

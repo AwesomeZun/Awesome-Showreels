@@ -1,0 +1,312 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "consumers",
+    "title": "Mochi Notes",
+    "reviewed": "Reviewed by hand after extract_style.py: fonts, characters, dataViz, type scale/weights, BPM, post grain, caption band and flavor swatches changed; rationale cites the evidence ids in style-extract.md (committed copy of build/style-extract.md)."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "product README: emoji-dense, short exclamatory lines, conversational second person; tagline, features, how-it-works example, flavors table, fictional-project disclaimer"
+    },
+    {
+      "path": "source/logo.png",
+      "kind": "images",
+      "notes": "logo lockup: app-icon tile with the plush strawberry mochi + two-tone Nunito Black wordmark (ink + strawberry)"
+    },
+    {
+      "path": "source/app.html",
+      "kind": "website",
+      "notes": "the demo web app: CSS colour/font/radius tokens, flavor themes (.app[data-flavor]), real UI captured with tools/capture_ui.mjs"
+    },
+    {
+      "path": "source/fonts/Nunito.ttf",
+      "kind": "other",
+      "notes": "Nunito variable font (wght 200-1000), SIL OFL 1.1 (source/fonts/OFL.txt); the app and logo face"
+    }
+  ],
+  "mood": [
+    "playful",
+    "bouncy",
+    "friendly",
+    "energetic",
+    "warm"
+  ],
+  "rationale": {
+    "palette": "Light theme: all background evidence is light (23.4 vs 0.0) [E23, E24]. Roles are the app's own tokens [E7]: bg #FFF7F2 (--bg), bg2 #FDEBEF (--bg-soft), surface #FFFFFF, ink #46303D (--text, also the logo wordmark [E2]), accent #FF8FAF (--primary, <meta theme-color> [E4]), accent2 #B9A3F3 (--secondary, ube), accent3 #92D2A6 (--tertiary, matcha). ok/warn/deny are the app tokens darkened to 3:1 on bg by the extractor. muted #7F6E73 is the draft's derived #9D8C91 (3.0:1) lifted to 4.5:1 on bg, because it sets the on-screen disclaimer (every text role reaches 4.5:1). accent is 2.0:1 on bg: fills, glows and the mascot only; small accent text uses accentInk #B84F71 (4.5:1); display-size accent words use accentStrong #E2567D (--primary-strong, the logo's \"Notes\" [E2, E7], 3.2:1 = AA large). Extra swatches strawberry/matcha/ube/yuzu are the four flavor primaries of source/app.html (--primary in :root and in .app[data-flavor] blocks, read by hand: the extractor reads root tokens only); the code-drawn mascot takes its body colours from them. Their text-strength partners strawberryInk/matchaInk/ubeInk/yuzuInk are the same blocks' --primary-strong tokens (the app's button and pill colours), used for flavor names on screen.",
+    "type": "Nunito everywhere, as in the material: @font-face + --font/--font-display tokens [E5, E6, E8, E9] and the logo wordmark [E2]. The extractor named the variable file's default instance (\"Nunito ExtraLight\") as the display face; corrected to the family \"Nunito\" with one fonts.files entry (wght 200-1000, OFL [E21]) so MP4 and HTML embed the same face. displayWeight 900 (the app's headings and the logo are Nunito Black), bodyWeight 700 (the app sets body copy at 700-800). Scale widened for motion type (18-144 px at 1080p): headlines 88-112, wordmark 144, chips 26-32; tracking -0.015 em on headlines, 0.09 em on small labels.",
+    "motion": "Energy 0.90 and playful 0.96 [E1: ‘!’ 38.6/1k, emoji 104/1k, 6 words/sentence] -> energetic pace with a bouncy underdamped spring (f 2.86, z 0.41), overshoot 1.8, outBack. Transitions by score: blobWipe, zoomInto (there is real app UI to dive into), whip, portalFlash, match; this reel uses blobWipe, match and zoomInto. characters: true (changed): the logo's mochi is the brand's named helper (\"Mochi, your squishy little helper\" [E1, E2]), so it acts; it is drawn in code from the logo and registered like a cutout. dataViz: false (changed): the 0.35 data score came from a flavors table and times like \"3pm\", not from data.",
+    "sound": "bright-pop scored 1.01 (next lofi 0.46) from warm 0.88, playful 0.96, dark 0 [E1, E7]. The draft said 123 BPM; set to 120 (same preset range 112-124, same energetic feel) so the 30 s cut is exactly 15 bars and every bar is 120 frames at 60 fps; the short cut is 7 bars = 14 s. Key C major (from the accent hue, free choice), full drums, glassy SFX.",
+    "narration": "Not recommended: a playful consumer launch, 259 words of short exclamatory copy, no claims that need explaining [E1, E3]; the reel is music-led and every idea is on screen as type. If narration is wanted: Puck with [bright, playful], en-US, conversational register, captions on (see README \"Narration on\"). Captions (narration on only) sit in a one-line band centred at y 1040 px that every scene keeps free (the drafted y 960 crossed the chips, Mochi and the flavor names).",
+    "visuals": "Carriers: code-drawn vector (always), the mascot as cutout-style sprites (drawn in code from the logo [E2]: four flavor variants + blink, happy and thinking poses), and real app UI captured from source/app.html with tools/capture_ui.mjs (bubble with text rows for typing, progress states on a static clone, result card, flavor themes). web-shots dropped: the README page itself adds nothing the app capture does not show."
+  },
+  "palette": {
+    "bg": "#FFF7F2",
+    "bg2": "#FDEBEF",
+    "surface": "#FFFFFF",
+    "ink": "#46303D",
+    "ink2": "#856B7A",
+    "muted": "#7F6E73",
+    "accent": "#FF8FAF",
+    "accent2": "#B9A3F3",
+    "accent3": "#92D2A6",
+    "ok": "#28A36D",
+    "warn": "#C68200",
+    "deny": "#EC5D73",
+    "accentInk": "#B84F71",
+    "onAccent": "#46303D",
+    "line": "#F2DDE3",
+    "accentStrong": "#E2567D",
+    "strawberry": "#FF8FAF",
+    "matcha": "#8FD1A3",
+    "ube": "#B9A3F3",
+    "yuzu": "#FFD066",
+    "strawberryInk": "#E2567D",
+    "matchaInk": "#3A9861",
+    "ubeInk": "#7A5CD6",
+    "yuzuInk": "#C2850B"
+  },
+  "fonts": {
+    "display": "\"Nunito\", \"Arial Rounded MT Bold\", ui-rounded, sans-serif",
+    "sans": "\"Nunito\", \"Arial Rounded MT Bold\", ui-rounded, sans-serif",
+    "serif": "\"Source Serif 4\", \"Iowan Old Style\", \"Charter\", serif",
+    "mono": "\"JetBrains Mono\", \"JetBrainsMono NF\", \"Fira Code\", monospace",
+    "cjk": "\"Pretendard\", \"Pretendard Variable\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Nunito",
+        "path": "source/fonts/Nunito.ttf",
+        "weight": "200 1000"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      26,
+      32,
+      40,
+      52,
+      68,
+      88,
+      112,
+      144
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 700,
+    "tracking": -0.015,
+    "trackingLabel": 0.09
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 36,
+      "fg": "#46303D",
+      "bg": "rgba(255,255,255,0.86)",
+      "y": 1040
+    },
+    "radius": 36
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 2.86,
+      "z": 0.41
+    },
+    "overshoot": 1.8,
+    "ease": "outBack",
+    "transitions": [
+      "blobWipe",
+      "zoomInto",
+      "whip",
+      "portalFlash",
+      "match"
+    ],
+    "characters": true,
+    "dataViz": false,
+    "visualSources": [
+      "vector",
+      "mascot-cutouts",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kineticPop",
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.045,
+    "vignette": {
+      "a": 0.12,
+      "color": "#542634"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 120,
+    "key": "C",
+    "mode": "major",
+    "preset": "bright-pop",
+    "instruments": [
+      "pad",
+      "pluck",
+      "bell",
+      "marimba",
+      "bass",
+      "kick",
+      "clap",
+      "hats",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "glassy",
+    "energy": {
+      "intro": 0.39,
+      "groove": 0.77,
+      "breakdown": 0.43,
+      "drop": 0.96,
+      "outro": 0.48
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Puck",
+    "styleTag": "[bright, playful]",
+    "lang": "en-US"
+  },
+  "paletteAlt": {
+    "theme": "dark",
+    "bg": "#201316",
+    "bg2": "#2D1A1F",
+    "surface": "#312024",
+    "ink": "#F4ECED",
+    "ink2": "#AEA3A5",
+    "muted": "#897C7E",
+    "accent": "#FF8FAF",
+    "accent2": "#B9A3F3",
+    "accent3": "#92D2A6",
+    "ok": "#28A36D",
+    "warn": "#C68200",
+    "deny": "#EC5D73",
+    "accentInk": "#FF8FAF",
+    "onAccent": "#201316",
+    "line": "#3B2E31"
+  },
+  "swatches": [
+    {
+      "hex": "#FFF7F2",
+      "share": 0.148,
+      "role": "bg",
+      "from": [
+        "source/app.html",
+        "build/snapshots/app-c4d442-light.png"
+      ]
+    },
+    {
+      "hex": "#FFFFFF",
+      "share": 0.114,
+      "role": "surface",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#46303D",
+      "share": 0.105,
+      "role": "ink",
+      "from": [
+        "source/app.html",
+        "source/logo.png"
+      ]
+    },
+    {
+      "hex": "#FF8FAF",
+      "share": 0.092,
+      "role": "accent",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#FDEBEF",
+      "share": 0.07,
+      "role": "bg2",
+      "from": [
+        "source/app.html",
+        "build/snapshots/app-c4d442-light.png"
+      ]
+    },
+    {
+      "hex": "#8A707F",
+      "share": 0.068,
+      "role": "ink",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#FFE4EC",
+      "share": 0.059,
+      "role": "accent",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#3BB27A",
+      "share": 0.059,
+      "role": "ok",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#E2567D",
+      "share": 0.045,
+      "role": "accent",
+      "from": [
+        "source/app.html",
+        "source/logo.png"
+      ]
+    },
+    {
+      "hex": "#B9A3F3",
+      "share": 0.033,
+      "role": "accent2",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#92D2A6",
+      "share": 0.033,
+      "role": "accent3",
+      "from": [
+        "source/app.html"
+      ]
+    },
+    {
+      "hex": "#F4A62A",
+      "share": 0.033,
+      "role": "warn",
+      "from": [
+        "source/app.html"
+      ]
+    }
+  ],
+  "review": []
+}

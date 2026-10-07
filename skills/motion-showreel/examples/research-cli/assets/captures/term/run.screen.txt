@@ -1,0 +1,15 @@
+~/spark-bench ❯ spark-bench run
+spark-bench 0.4.0 · suite attn · 4k–64k · 5 repeats · seed 1234
+fingerprint  437589  demo-gpu, clocks pinned (recorded demo run)
+warm-up      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3/3
+repeats      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60/60
+
+throughput vs dense · median of 5
+kernel            4k    16k    32k    64k    p50 @64k   spread
+dense           1.0×   1.0×   1.0×   1.0×     47.6 ms     1.2%
+block-sparse    1.2×   1.9×   2.6×   3.2×     14.9 ms     1.6%
+spark           1.3×   2.4×   3.3×   4.1×     11.6 ms     1.8%
+
+▲ spark 4.1× dense at 64k tokens · spread 1.8% · DEMO DATA
+results  results/demo-run.json
+~/spark-bench ❯

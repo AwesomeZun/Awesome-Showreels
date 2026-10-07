@@ -1,0 +1,49 @@
+{
+  "tool": "spark-bench",
+  "version": "0.4.0",
+  "demo": true,
+  "note": "DEMO DATA for the fictional spark-bench example of the motion-showreel skill. Not a measurement.",
+  "suite": "attn",
+  "seed": 1234,
+  "warmup": 3,
+  "repeats": 5,
+  "block": 1024,
+  "pattern": {
+    "kind": "spark",
+    "band": 7,
+    "global": 2
+  },
+  "fingerprint": {
+    "gpu": "demo-gpu",
+    "driver": "demo",
+    "clocks": "pinned",
+    "recorded": "with the demo run"
+  },
+  "seq": {
+    "4k": 4096,
+    "16k": 16384,
+    "32k": 32768,
+    "64k": 65536
+  },
+  "kernels": ["dense", "block-sparse", "spark"],
+  "latency_ms": {
+    "dense": {
+      "4k": [0.212, 0.2136, 0.2118, 0.2139, 0.2088],
+      "16k": [3.048, 3.06, 3.035, 3.079, 3.084],
+      "32k": [12.01, 11.98, 11.86, 11.93, 11.85],
+      "64k": [47.47, 47.73, 47.6, 47.35, 47.93]
+    },
+    "block-sparse": {
+      "4k": [0.1802, 0.177, 0.1753, 0.176, 0.1776],
+      "16k": [1.61, 1.611, 1.626, 1.592, 1.598],
+      "32k": [4.625, 4.64, 4.562, 4.59, 4.583],
+      "64k": [14.99, 14.9, 14.79, 14.95, 14.75]
+    },
+    "spark": {
+      "4k": [0.16, 0.1651, 0.163, 0.1642, 0.1624],
+      "16k": [1.257, 1.26, 1.27, 1.285, 1.271],
+      "32k": [3.631, 3.651, 3.583, 3.62, 3.606],
+      "64k": [11.63, 11.52, 11.54, 11.73, 11.6]
+    }
+  }
+}

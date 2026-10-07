@@ -1,0 +1,94 @@
+{
+ "step": "record",
+ "dedupe": "dom",
+ "every": 100,
+ "frames": [
+  {
+   "file": "tidying_000.png",
+   "t": 0,
+   "rect": {
+    "x": 36.89,
+    "y": 149.97,
+    "w": 375.11,
+    "h": 225.03
+   },
+   "screen": {
+    "x": 36.89,
+    "y": 193.97,
+    "w": 375.11,
+    "h": 225.03
+   }
+  },
+  {
+   "file": "tidying_001.png",
+   "t": 0.613,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   }
+  },
+  {
+   "file": "tidying_002.png",
+   "t": 1.224,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   }
+  },
+  {
+   "file": "tidying_003.png",
+   "t": 1.835,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   }
+  },
+  {
+   "file": "tidying_004.png",
+   "t": 2.341,
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   }
+  }
+ ],
+ "seconds": 3.154,
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:08.920Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".tidying",
+ "note": "t = seconds since the recording started when the change was seen (real app timing); frames are taken after finite animations settle"
+}

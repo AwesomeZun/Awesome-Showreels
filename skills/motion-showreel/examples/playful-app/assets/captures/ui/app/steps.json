@@ -1,0 +1,246 @@
+{
+ "step": "states",
+ "clone": true,
+ "states": [
+  {
+   "state": 0,
+   "file": "steps_0.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "d6d89ebc7c04",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  {
+   "state": 1,
+   "file": "steps_1.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "e03e743b85ca",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  {
+   "state": 2,
+   "file": "steps_2.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "ad11dacfbd36",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  {
+   "state": 3,
+   "file": "steps_3.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "5a17cc057757",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "Mochi is tidying…\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  },
+  {
+   "state": 4,
+   "file": "steps_4.png",
+   "kind": "element",
+   "px": [
+    1140,
+    693
+   ],
+   "dpr": 3,
+   "sha1": "6eddfa9f4829",
+   "rect": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "screen": {
+    "x": 32,
+    "y": 185.28,
+    "w": 380,
+    "h": 231
+   },
+   "page": {
+    "x": 32,
+    "y": 141.28,
+    "w": 380,
+    "h": 231
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 340,
+    "h": 183
+   },
+   "pad": 24,
+   "radius": [
+    22,
+    22,
+    22,
+    8
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(70, 48, 61)",
+   "font": "400 16px/normal Nunito, ui-rounded, \"SF Pro Rounded\", system-ui, sans-serif",
+   "text": "All tidy! ✨\nReading your note\nFinding to-dos\nSetting reminders\nAdding tags",
+   "alpha": false
+  }
+ ],
+ "url": "(served)/app.html",
+ "capturedAt": "2026-10-07T17:05:15.553Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".tidying"
+}
