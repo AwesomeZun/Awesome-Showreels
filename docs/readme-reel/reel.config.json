@@ -1,0 +1,36 @@
+{
+  "title": "Awesome Showreels: README reel",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 24,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "style", "label": "Style follows your source", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 4, "in": "cut", "music": "intro",
+     "cues": [{"beat": 3, "from": "start", "sfx": "whoosh"}, {"beat": 4, "from": "start", "sfx": "tick x5 gap=0.07s"}, {"beat": 5, "from": "start", "sfx": "swish"},
+              {"beat": 9, "from": "start", "sfx": "whoosh"}, {"beat": 10, "from": "start", "sfx": "tick x5 gap=0.07s"}, {"beat": 11, "from": "start", "sfx": "swish"}]},
+    {"id": "carriers", "label": "Every visual tool", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 4, "in": "glitch", "inParams": {"amount": 0.7}, "music": "groove",
+     "cues": [{"beat": 0, "from": "start", "sfx": "blip", "every": 2}]},
+    {"id": "tempo", "label": "Any length, same BPM", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 4, "in": "whip", "inParams": {"dir": "left"}, "music": "groove",
+     "cues": [{"beat": 3, "from": "start", "sfx": "whoosh"}, {"beat": 6, "from": "start", "sfx": "whoosh"}, {"beat": 9, "from": "start", "sfx": "whoosh"}]},
+    {"id": "sound", "label": "Every hit is a cue", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 4, "in": "impact", "inParams": {"zoom": 0.04, "shake": 8, "flash": 0.25}, "music": "drop",
+     "cues": [{"beat": 0, "from": "start", "sfx": "impact"}]},
+    {"id": "narration", "label": "Narration, timed to the grid", "minBars": 3, "maxBars": 3, "priority": 2, "inBeats": 4, "outBeats": 4, "in": "match", "inParams": {"fade": 0.3}, "music": "breakdown",
+     "cues": [{"beat": 0, "from": "start", "sfx": "air"}, {"beat": 6, "from": "start", "sfx": "swish"}]},
+    {"id": "ship", "label": "MP4 + one HTML", "minBars": 3, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 4, "in": "zoomInto", "inFallback": "glitch", "music": "outro",
+     "cues": [{"beat": 3, "from": "start", "sfx": "click"}, {"beat": 7, "from": "start", "sfx": "click"}, {"beat": 11, "from": "start", "sfx": "click"}]},
+    {"id": "social", "label": "Social preview card", "minBars": 1, "maxBars": 1, "priority": 3, "optional": true, "inBeats": 4, "outBeats": 0, "in": "cut", "music": "outro", "hud": false}
+  ],
+  "cuts": {
+    "style": {"bars": 3, "label": "feat-style", "only": ["style"]},
+    "carriers": {"bars": 3, "label": "feat-carriers", "only": ["carriers"]},
+    "tempo": {"bars": 3, "label": "feat-tempo", "only": ["tempo"]},
+    "sound": {"bars": 3, "label": "feat-sound", "only": ["sound"]},
+    "narration": {"bars": 3, "label": "feat-narration", "only": ["narration"]},
+    "ship": {"bars": 3, "label": "feat-ship", "only": ["ship"]},
+    "social": {"bars": 1, "label": "social preview", "only": ["social"]},
+    "tour": {"bars": 18, "label": "36-s tour", "exclude": ["social"]}
+  },
+  "poster": 0,
+  "captions": {"enabled": false},
+  "audio": {"transitionSfx": true}
+}

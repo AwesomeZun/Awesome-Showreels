@@ -1,0 +1,11 @@
+{
+  "defaults": {"quality": 92},
+  "assets": {
+    "mochi": {
+      "src": "build/prep/mochi-icon.png",
+      "kind": "character",
+      "eyes": [[118, 168, 24, 27], [201, 168, 24, 27]],
+      "prov": "the Mochi mascot from examples/playful-app/source/logo.png (icon crop by tools/prepare.mjs), lifted by macOS Vision; blink twin from the measured eye boxes"
+    }
+  }
+}

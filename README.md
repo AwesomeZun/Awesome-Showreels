@@ -1,49 +1,70 @@
 <div align="center">
 
-# 🎬 Awesome Showreels
+<img src="assets/readme/hero.webp" width="100%" alt="Sizzle reel made with motion-showreel: the Awesome Showreels title card over Mochi Notes and spark-bench, then both reels cut on the beat: kinetic type, an attention matrix, typing in the real app UI, a real terminal, four app themes, a scene only the 60-second cut has, a 4.1x impact, the mascot lineup, a particle logo, and back to the title"/>
 
-**A [Claude Code](https://claude.com/claude-code) skill that turns any repo, README, paper, deck or website into a premium 2D motion-graphics showreel: its look derived from the source, its proof captured for real, every hit on the beat. Ships an MP4 per cut and a single-file HTML player.**
+# Awesome Showreels
 
-[🇰🇷 한국어](README.ko.md) · [Quick Install](#-quick-install) · [Examples](#-try-the-examples) · [How it works](#-how-it-works) · [Case studies](#-case-studies)
+### Any repo in. A beat-synced showreel out.
 
-<img src="https://img.shields.io/github/stars/AwesomeZun/Awesome-Showreels?style=flat-square&color=f5c2e7" alt="Stars"/>
-<img src="https://img.shields.io/badge/Claude%20Code-skill%20%2B%20plugin-cba6f7?style=flat-square" alt="Claude Code skill"/>
-<img src="https://img.shields.io/badge/output-MP4%20%2B%20single--file%20HTML-89b4fa?style=flat-square" alt="MP4 + single-file HTML"/>
-<img src="https://img.shields.io/badge/music-synthesized%20on%20the%20beat-94e2d5?style=flat-square" alt="Synthesized music"/>
-<img src="https://img.shields.io/badge/narration-Gemini%20TTS%20(optional)-a6e3a1?style=flat-square" alt="Gemini TTS"/>
-<img src="https://img.shields.io/badge/license-MIT-fab387?style=flat-square" alt="MIT"/>
+A [Claude Code](https://claude.com/claude-code) skill that turns any repo, README, paper, deck or website into a 2D motion-graphics showreel.<br/>
+**Look measured from your source. Proof captured for real. Every hit on the beat.**
 
-<br/><br/>
+**This page is its own demo:** every animation built for it was rendered by the skill, from [`docs/readme-reel/`](docs/readme-reel/).
 
-<img src="assets/demo-playful-app-v1.1.0.gif" alt="Mochi Notes: a playful app README became a bouncy pastel reel with a plush mascot and the real app UI" width="410"/>
-<img src="assets/demo-research-cli-v1.1.0.gif" alt="spark-bench: a terse research CLI README became a dark, data-first reel with a real terminal capture" width="410"/>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-fab387?style=flat-square" alt="License: MIT"/></a>
+<a href="#install"><img src="https://img.shields.io/badge/Claude%20Code-plugin-cba6f7?style=flat-square&logo=claude&logoColor=white" alt="Claude Code plugin"/></a>
+<img src="https://img.shields.io/badge/same%20BPM-15%20%C2%B7%2030%20%C2%B7%2060%20s-f5c2e7?style=flat-square" alt="15, 30 and 60-second cuts at the same BPM"/>
+<img src="https://img.shields.io/badge/1080p-60%20fps-89b4fa?style=flat-square" alt="1080p at 60 fps"/>
+<img src="https://img.shields.io/badge/ships-MP4%20%2B%20HTML-94e2d5?style=flat-square" alt="Ships an MP4 per cut and a single-file HTML player"/>
+<a href="#bring-your-own-key"><img src="https://img.shields.io/badge/narration-BYOK-a6e3a1?style=flat-square" alt="Narration: bring your own key"/></a>
 
-<sub>Same skill, two sources, two reels: a cheerful app README → bouncy pastel mascot reel · a terse research CLI → dark data reel.<br/>▶ With sound: <a href="assets/demo-playful-app-v1.1.0.mp4">demo-playful-app-v1.1.0.mp4</a> · <a href="assets/demo-research-cli-v1.1.0.mp4">demo-research-cli-v1.1.0.mp4</a></sub>
+**[Install](#install) · [Examples](#same-skill-two-sources-two-reels) · [Moments](#best-moments) · [Features](#a-whole-motion-studio-in-one-skill) · [How it works](#watch-it-think) · [🇰🇷 한국어](README.ko.md)**
 
 </div>
 
----
+```
+/plugin marketplace add AwesomeZun/Awesome-Showreels
+/plugin install awesome-showreels@awesome-showreels
+```
 
-## Highlights
-
-- 🎨 **Style follows your source.** No presets. Palette, type, pace, transitions, music and voice are measured from the material and written to one spec with the evidence for every decision.
-- 🧰 **Every visual tool, used where the story needs it.** Code-drawn 2D always; mascot cutouts (GPT-image-2 + macOS Vision + OpenCV), real app UI, real terminal and CLI recordings, PDF figures, web shots and real data when they prove a claim.
-- 🥁 **Any length at the same BPM.** 15, 30 or 60 seconds on one bar grid: longer cuts add living holds and extra scenes, never slow motion.
-- 🔊 **Music and SFX synthesized on the beat.** Every hit is a cue in the same plan the picture reads, then measured: each cue within one frame, -14 LUFS, true peak at or below -1 dBTP.
-- 🎤 **Optional narration, BYOK.** Gemini TTS with your own API key, speech-to-text verification of every clip, ducked mix and burned-in captions.
-- 📦 **Delivery, verified.** 1080p60 MP4 per cut with cover and share copy, plus one HTML file with every cut and its audio that plays offline from any folder.
+<p align="center">Then ask Claude: <b><i>"Make a 30-second showreel from this repo."</i></b></p>
+<p align="center">The loops on this page are silent. <b>⬇ Sound on, 1080p60 MP4:</b> <a href="assets/demo-playful-app-v1.1.0.mp4">Mochi Notes · 14 s</a> · <a href="assets/demo-research-cli-v1.1.0.mp4">spark-bench · 15 s</a><br/>
+<sub>GitHub can’t preview files this big: press “Download raw file”.</sub></p>
 
 ---
 
-## 🎨 Style follows your source (tone & manner)
+## Same skill. Two sources. Two reels.
+
+One source packs 104 emoji per 1,000 words. The other packs 129 numbers and 7 citations per 1,000 words, and not a single emoji. Nobody picked a theme from a menu: the skill measured each source, Claude reviewed the draft like a designer, and the evidence set the palette, the type, the motion and the music.
+
+<table>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="assets/demo-playful-app-v1.1.0.mp4"><img src="assets/readme/twin-playful.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, chips fly out, the four-flavor lineup"/></a>
+<br/><b>Mochi Notes</b> · <code>playful-app</code>
+<br/><sub>cheerful app README, pastel logo, a tiny web app<br/>→ bouncy pastel reel · plush mascot drawn in code · real app UI in a phone · 120 BPM bright-pop</sub>
+<br/><sub><a href="assets/demo-playful-app-v1.1.0.mp4">⬇ MP4 with sound</a> · <a href="skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html">⬇ HTML player</a> · <a href="skills/motion-showreel/examples/playful-app/README.md">How it was made</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="assets/demo-research-cli-v1.1.0.mp4"><img src="assets/readme/twin-research.webp" width="100%" alt="spark-bench: 4,096 attention blocks sink to 674, glitch into a real terminal capture, zoom to the 4.1x row, impact, blocks swirl into the logo"/></a>
+<br/><b>spark-bench</b> · <code>research-cli</code>
+<br/><sub>terse research README, dark docs page, a real CLI<br/>→ dark data-first reel · 4,096 GPU points · real terminal capture tilted in 3D · 128 BPM dark-synth</sub>
+<br/><sub><a href="assets/demo-research-cli-v1.1.0.mp4">⬇ MP4 with sound</a> · <a href="skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html">⬇ HTML player</a> · <a href="skills/motion-showreel/examples/research-cli/README.md">How it was made</a></sub>
+</td>
+</tr>
+</table>
+
+Each player is one HTML file with every cut (15/short, 30 and 60 s) and their music. GitHub shows it as source, so download it (“Download raw file”) and open it in any browser, offline. Both projects are fictional and were written for this repo; their numbers are demo data, and the reels say so on screen.
+
+<details>
+<summary><b>Every style decision, side by side</b></summary>
 
 `tools/extract_style.py` reads whatever you give it (READMEs, docs sites, CSS tokens, Tailwind configs, PDFs, pptx themes, terminal themes, logos, screenshots) and drafts `style.json`: palette roles with contrast checks, font stacks, type scale, motion vocabulary, post-processing, a sound palette and a narration recommendation. Every decision cites evidence from the source; Claude reviews the draft like a designer and overrules it where the material says otherwise. A one-page style board goes to you before any scene is built.
-
-The two examples make the same kind of claim about software, but their sources speak differently, so the reels do too:
 
 | | `playful-app` (Mochi Notes) | `research-cli` (spark-bench) |
 |---|---|---|
 | Source | emoji-rich README, pastel logo, a small web app | terse README with citations, dark docs page, a real CLI |
+| Measured | 39 '!' and 104 emoji per 1,000 words, 6 words per sentence, second person | no '!', no emoji, no marketing words; 129 numbers and 7 citations per 1,000 words |
 | Mood | playful, bouncy, friendly, energetic, warm | technical, data-driven, cool, precise, nocturnal |
 | Stage and accents | light `#FFF7F2` · pink `#FF8FAF`, lilac `#B9A3F3`, mint `#92D2A6` | dark `#0A0E17` · cyan `#2FE4F0`, violet `#8B7CFF`, amber `#FFB547` |
 | Type | Nunito (the app's rounded face) | Space Grotesk + JetBrains Mono (the docs' faces) |
@@ -52,61 +73,117 @@ The two examples make the same kind of claim about software, but their sources s
 | Sound | bright-pop, 120 BPM, C major, glassy SFX | dark-synth, 128 BPM, B minor, digital SFX |
 | Voice | music-led | narration recommended (Charon): written and timed offline; ships music-led until a real voice is synthesized |
 
-<p align="center"><img src="assets/demo-stills-v1.1.0.png" alt="Four frames from each example: Mochi Notes on top, spark-bench below" width="820"/></p>
+Each example's README walks through its source, the tone pass decisions, the captures and the full build: [playful-app](skills/motion-showreel/examples/playful-app/README.md) · [research-cli](skills/motion-showreel/examples/research-cli/README.md).
+
+</details>
 
 ---
 
-## 🧰 Every visual tool, when the story needs it
+## Best moments
 
-Code-drawn vector and kinetic type carry every reel. Each scene then gets one hero carrier: the thing a skeptic must see.
+Eight beats from the two example reels. Left: Mochi Notes. Right: spark-bench.
 
-| Carrier | Tool in the skill | What it gives the motion |
-|---|---|---|
-| **Code-drawn 2D** (always) | `runtime/` Canvas2D engine + WebGL2 layer | kinetic type, springs, squash and jelly, 10 compositor transitions, HUD, point clouds and networks, all pure functions of time |
-| **Mascot cutouts** | `tools/imagegen.md` (GPT-image-2 through the Codex CLI, opt-in) → `tools/lift.swift` (macOS Vision) → `tools/prep_assets.py` | extra poses of your own mascot, clean alpha, blink twins, foot anchors, QA sheets |
-| **OpenCV** | `tools/prep_assets.py`, `tools/capture_ui.mjs --textfree` | GrabCut cutouts on any OS, matte refinement, sheet splitting, Telea inpainting for 2.5D photo parallax and text-free UI plates |
-| **Real app UI** | `tools/capture_ui.mjs` (Playwright) | layers instead of screenshots, component states on static clones, per-character text rows for typing |
-| **Terminal / CLI** | `tools/capture_cli.py` → `runtime/term.js` + `runtime/quad.js` | a real PTY recording with secrets masked, replayed in a 3D-tilted window with zoom to the key line |
-| **PDF figures** | `tools/pdf_figures.py` | the paper's own figures and tables with captions, dark variants for dark stages |
-| **Web shots, native apps** | `tools/capture_ui.mjs`, `tools/capture_native.md` | docs and landing pages in a browser frame; macOS windows, iOS Simulator, Android |
-| **Real data** | your JSON, CSV or run logs | counters, bars, impact numbers and point clouds with a provenance note for every value |
+<p align="center">
+<img src="assets/readme/moment-mochi-hook.webp" width="49%" alt="Mochi Notes hook: Too many thoughts? bounces in among dozens of pastel paper notes such as call mom, oat milk?? and yoga 7am"/> <img src="assets/readme/moment-spark-matrix.webp" width="49%" alt="A 64k attention matrix drawn as 4,096 GPU points; the counter falls to 674 as the 3,422 skipped blocks sink"/>
+<br/><sub><b>Too many thoughts?</b> kinetic type in a storm of paper scraps&emsp;·&emsp;<b>4,096 → 674</b> an attention matrix as GPU points; every skipped block sinks</sub>
+</p>
+<p align="center">
+<img src="assets/readme/moment-mochi-mascot.webp" width="49%" alt="A pink blob wipe clears the hook, then Mochi, the plush pastel mascot drawn in code, springs up, blinks and lands over the Mochi Notes wordmark"/> <img src="assets/readme/moment-spark-terminal.webp" width="49%" alt="A real recording of spark-bench run in a terminal window tilted in 3D; the camera zooms to the spark row and its 4.1x cell"/>
+<br/><sub><b>Meet Mochi</b> the code-drawn mascot springs up and blinks&emsp;·&emsp;<b>RUN</b> a real <code>spark-bench run</code> capture, tilted, zooming to the 4.1× row</sub>
+</p>
+<p align="center">
+<img src="assets/readme/moment-mochi-app.webp" width="49%" alt="The real Mochi Notes app UI in a phone: a messy note types itself, then Mochi tidies it into a checklist"/> <img src="assets/readme/moment-spark-impact.webp" width="49%" alt="Throughput bars grow from the CLI's own JSON, then 4.1x slams in with a ring, labelled demo data"/>
+<br/><sub><b>Jot it down.</b> the real app UI types, then Mochi tidies it up&emsp;·&emsp;<b>4.1×</b> bars from the CLI's own JSON, then the number slams in (demo data)</sub>
+</p>
+<p align="center">
+<img src="assets/readme/moment-mochi-flavors.webp" width="49%" alt="Pick a flavor!: the camera dives into the phone's result card and pulls back out on four real app themes, strawberry, matcha, ube and yuzu"/> <img src="assets/readme/moment-spark-scaling.webp" width="49%" alt="Only in the 60-second cut: the same attention pattern at four lengths, the masks fill, the computed share falls from 100% to 16.5% and the gain grows from 1.3x to 4.1x"/>
+<br/><sub><b>Pick a flavor!</b> the camera dives into the phone, out on four real app themes&emsp;·&emsp;<b>Only in the 60-s cut</b> one pattern at four lengths; the gain grows</sub>
+</p>
 
-Honesty rules come with the tools: real captures stay real, staged data is labelled on screen, and the credits separate what was computed from what was authored.
-
----
-
-## 🎤 Narration (optional)
-
-Narration uses **Gemini TTS** and is off unless the material calls for it (papers, docs, explainers, pitches) and you agree.
-
-- Lines are synthesized in batches, split at long pauses and **verified by speech-to-text**; clips with leaked style tags or missing words are retried.
-- Scene lengths grow in **whole bars** to fit the voice, so narration never changes the tempo or slows a frame.
-- The mix ducks music and SFX under the voice; captions ship as SRT/VTT and are burned in from the same timeline.
-- **BYOK (bring your own key).** The skill ships no key and never looks for one; requests are billed to your own Google account. On macOS, save your Gemini API key once in the Keychain from your own terminal window (not with Claude Code's `!`, which has no terminal for hidden input): `python3 ~/.claude/skills/motion-showreel/narration/tts_gemini.py key save` (personal skill; for a plugin install, the same file inside the plugin's `motion-showreel` folder that the setup section's `find` shows; from a clone, `skills/motion-showreel/narration/tts_gemini.py`). Or `export GEMINI_API_KEY=...` (or `GOOGLE_API_KEY`) in the terminal you start Claude Code from, before starting it, or point `--env-file` / `--api-key-env NAME` at a file or variable you choose. `key status` shows which source is used (never the key) and `key check` validates it for free. Never paste a key into the chat.
-- `--dry-run` builds and tests the whole chain offline with placeholder clips, which the render and build tools refuse to ship.
+<p align="center"><sub>Mochi Notes and spark-bench are fictional projects written for this repo, and their reels say so on screen. The moments, the two example loops and the sizzle at the top are ranges of the examples' real cut plans, rendered frame by frame (<a href="docs/readme-reel/sizzle/"><code>docs/readme-reel/sizzle/</code></a>) with film grain off to keep the files light.</sub></p>
 
 ---
 
-## 🥁 Any length at the same BPM
+## A whole motion studio in one skill
 
-Every reel runs on one bar grid (at 128 BPM a bar is 1.875 s, so 8 bars = 15 s, 16 bars = 30 s and 32 bars = 60 s). Scenes are elastic: a fixed in-phase, a hold that stretches and a fixed out-phase. `timing/plan_cut.py` spends extra bars on holds with secondary beats and on optional scenes, keeping every boundary on a bar line, and the music arranger builds the same song with more bars.
+Six things the skill does, each shown in a loop the skill rendered itself.
 
-| Scene (research-cli) | 15-s cut | 30-s cut | 60-s cut | What fills the extra time |
-|---|---|---|---|---|
-| matrix | 2 bars | 2 bars | 2 bars | (the hook never grows) |
-| problem | (left out) | 2 bars | 2 bars | an optional scene enters |
-| cli | 3 bars | 3 bars | 5 bars | a camera tour of the run's own provenance lines |
-| results | 1 bar | 3 bars | 5 bars | trend line, 64k focus with p50 values, spark's lead per length |
-| scaling | (left out) | (left out) | 5 bars | optional: the same pattern at four lengths, the gain grows |
-| repeats | (left out) | (left out) | 5 bars | optional: the five seeded repeats behind every number |
-| impact | 1 bar | 3 bars | 4 bars | leaderboard with spread, a scan per bar |
-| logo | 1 bar | 3 bars | 4 bars | install line and credits |
+<p align="center"><b>Styled by your source</b><br/>Palette, type, pace and music come from your material, every call backed by evidence. No theme presets: even the music genre is scored from the source.</p>
+<p align="center"><img src="assets/readme/feat-style.webp" width="100%" alt="Style follows the source: the slab reads Mochi Notes in its pastel palette, then wipes to spark-bench's night palette: the README render, the measured rates per 1,000 words, palette, face, BPM, the style board and a frame of the reel"/></p>
 
-A scene renders the same in-phase in every cut (rendered alone, the frames match, GPU-blended scenes to within rounding; full frames differ only by film grain and the HUD's timecode); only its hold changes. Uniform or piecewise slow-down variants (`--scale`, `--warp`) exist only for audiences who must read dense material.
+<p align="center"><b>Every visual tool, when the story needs it</b><br/>Code-drawn 2D, mascot cutouts, real app UI, real terminal casts, PDF figures and GPU particles. Proof, not decoration.</p>
+<p align="center"><img src="assets/readme/feat-carriers.webp" width="100%" alt="Six visual carriers on a grid, each expanding in turn: a real terminal cast zooming to its key line, a PDF figure lifted off its page, a GPU particle word, code-drawn shapes and kinetic type, a Vision cutout of the Mochi logo that hops and blinks, real app UI layers in a phone"/></p>
+
+<p align="center"><b>Any length, same BPM</b><br/>15, 30 or 60 s on one bar grid. Longer cuts add scenes and longer holds that keep moving, never slow motion.</p>
+<p align="center"><img src="assets/readme/feat-tempo.webp" width="100%" alt="The research example's real 15, 30 and 60-second cut plans on one 128 BPM bar grid: the row morphs between them, in-phases keep their width, holds stretch and optional scenes slide in"/></p>
+
+<p align="center"><b>Scored on the beat</b><br/>Music and SFX synthesized from the picture's own cue list. Every cue within one frame, at -14 LUFS.</p>
+<p align="center"><img src="assets/readme/feat-sound.webp" width="100%" alt="Three bars of the Mochi Notes soundtrack in real time: waveform and spectrum, every cue fires on its hit with its measured offset, 28 of 28 cues within 6 ms, -14 LUFS"/></p>
+
+<p align="center"><b>Narration on your own key (BYOK)</b><br/>Optional Gemini TTS: every clip checked by speech-to-text, music ducked under each line, captions burned in.</p>
+<p align="center"><img src="assets/readme/feat-narration.webp" width="100%" alt="Two narration lines of the research example on the grid: its 30-second cut plays with the captions burned in, the script lights line by line and the music ducks 9.9 dB under each line; dry-run timing, no voice synthesized"/></p>
+
+<p align="center"><b>Ships verified</b><br/>A 1080p60 MP4 per cut, plus one HTML player with every cut that plays offline from any folder.</p>
+<p align="center"><img src="assets/readme/feat-ship.webp" width="100%" alt="Delivery: the two MP4s with their ffprobe facts, and the single-file HTML player playing its 15, 30 and 60-second cuts as its own number keys switch them"/></p>
+
+<p align="center"><sub>The mascot tile is a macOS Vision cutout of the Mochi Notes logo; the PDF tile is a demo note generated from spark-bench's README and demo data, with its figure extracted by <code>pdf_figures.py</code>. The player window shows the example's real player, screenshotted as its own keys switch cuts. The narration loop shows dry-run timing: no voice was synthesized for this page.</sub></p>
 
 ---
 
-## 🚀 Quick install
+## Watch it think
+
+Give Claude a source and a length. Here is what happens next, beat by beat.
+
+1. **Reads the room.** Runs the tone pass over your material (palette, fonts, density, register, pace), drafts `style.json` with the evidence for every decision, overrules the draft where the material says otherwise, and shows you a one-page style board before a single scene exists.
+2. **Writes one sentence, one scene, one message.** Exact copy, banned wording and disclaimers go into `STORYBOARD.md`; scenes in bars and cues in beats go into `reel.config.json`.
+3. **Picks the proof.** One hero carrier per scene, the thing a skeptic must see: your app's real UI, your command's real output, your paper's own figure, your run's own numbers.
+4. **Locks the grid.** One BPM per project. `plan_cut.py` lays every cut on the same bar grid; longer cuts get longer holds that keep moving, and optional scenes, never slow motion.
+5. **Builds and scores.** Scenes are pure functions of time on a Canvas2D + WebGL2 runtime. Music and SFX are synthesized from the same cue list, and `verify_sync.py` proves every cue lands within one frame.
+6. **Checks, then ships.** Full-resolution stills at every boundary, motion QA for frozen holds and pops, loudness at -14 LUFS. Then an MP4 per cut and one HTML player, verified from an empty folder.
+
+```mermaid
+flowchart LR
+    subgraph decide ["① Decide"]
+        direction TB
+        src(["📂 Your source<br/>repo · README · paper<br/>deck · website"]):::io
+        tone["🎨 Tone pass<br/>extract_style.py<br/>→ style.json + board"]:::decide
+        story["📝 Storyboard<br/>STORYBOARD.md<br/>reel.config.json"]:::decide
+        plan["🥁 Bar-grid plan<br/>plan_cut.py<br/>→ 15 · 30 · 60 s"]:::decide
+        src --> tone --> story --> plan
+    end
+    subgraph make ["② Make"]
+        direction TB
+        car["📸 Carriers<br/>real UI · CLI casts<br/>PDF figures · cutouts"]:::make
+        scn["🎞 Scenes<br/>Canvas2D + WebGL2<br/>pure functions of time"]:::make
+        snd["🔊 Sound<br/>arrange.py<br/>→ verify_sync.py"]:::sound
+        vo["🎤 Voice · optional · BYOK<br/>Gemini TTS → STT check<br/>→ ducked mix"]:::opt
+        car --> scn --> snd -.-> vo
+    end
+    subgraph ship ["③ Ship"]
+        direction TB
+        look["👀 Look<br/>stills.mjs<br/>motion_qa.py"]:::check
+        out(["📦 Deliver<br/>MP4 per cut<br/>one self-contained HTML"]):::io
+        look --> out
+    end
+    decide ==> make ==> ship
+
+    style decide fill:none,stroke:#cba6f7,stroke-width:2px
+    style make fill:none,stroke:#89b4fa,stroke-width:2px
+    style ship fill:none,stroke:#fab387,stroke-width:2px
+
+    classDef io fill:#fab387,stroke:#fab387,color:#11111b
+    classDef decide fill:#cba6f7,stroke:#cba6f7,color:#11111b
+    classDef make fill:#89b4fa,stroke:#89b4fa,color:#11111b
+    classDef sound fill:#94e2d5,stroke:#94e2d5,color:#11111b
+    classDef opt fill:#a6e3a1,stroke:#a6e3a1,color:#11111b,stroke-dasharray:5 4
+    classDef check fill:#f5c2e7,stroke:#f5c2e7,color:#11111b
+```
+
+Because every frame is a pure function of time, a still, an MP4 frame and the HTML player show the same pixels, parallel render workers can take any frame range, and the picture and the soundtrack read one cue list.
+
+---
+
+## Install
 
 **As a Claude Code plugin**
 
@@ -131,75 +208,129 @@ cd ~/.claude/skills/motion-showreel/runtime && npm install     # personal skill
 python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli   # in a venv if pip refuses
 ```
 
-Then ask Claude, for example:
+---
 
-> Make a 30-second showreel from this repo, with a 15-second cut for social.<br/>
-> Turn `paper.pdf` into a narrated 45-second explainer reel.<br/>
-> Make a launch teaser for our app from `README.md` and the screenshots in `docs/`.
+## Prompts to try
+
+| | Say this to Claude |
+|---|---|
+| 📦 **Repo** | *Make a 30-second showreel from this repo, with a 15-second cut for social.* |
+| 📄 **Paper** | *Turn `paper.pdf` into a 45-second explainer reel built on the paper's own figures.* |
+| 🖼️ **Deck** | *Make a launch teaser from `pitch.pptx` in the deck's own colors and fonts.* |
+| ⌨️ **CLI** | *Make a 15-second reel for this CLI with a real terminal capture of `mytool demo`.* |
+| 🎤 **Narration (BYOK)** | *Narrate the 30-second cut. I saved my own Gemini key with `key save`.* |
+| 🥁 **60 s, same BPM** | *Extend the reel to 60 seconds at the same BPM, without slowing anything down.* |
 
 ---
 
-## 📦 What's inside
+## Case studies
 
-```
-.claude-plugin/              plugin.json, marketplace.json
-assets/                      README demos (GIF previews, MP4s with sound, stills)
-skills/motion-showreel/
-  SKILL.md                   the designer's procedure Claude follows
-  references/                tone & manner, visual sources, storyboard, timing, engine API, 36 motion recipes,
-                             capture, imagery, audio, narration, render pipeline, multi-agent production
-  runtime/                   engine.js, gl.js, quad.js, term.js, compositor.js, template.html,
-                             stills.mjs (stills, sheets, live player), render.mjs (MP4), build.mjs (single HTML)
-  timing/plan_cut.py         bar-grid planner for any length at one BPM
-  tools/                     extract_style.py, source_snapshot.mjs, capture_ui.mjs, capture_cli.py,
-                             pdf_figures.py, prep_assets.py, motion_qa.py, lift.swift, imagegen.md, capture_native.md
-  audio/                     synth.py, arrange.py, verify_sync.py (numpy/scipy, no samples)
-  narration/                 tts_gemini.py, vo_timeline.py, mix_vo.py, captions.py
-  templates/                 style.schema.json, STORYBOARD, reel.config, narration, showreel-workflow.js
-  examples/                  playful-app, research-cli (source, style, storyboard, scenes, dist/ player)
-tests/                       regression tests for the planner, audio sync, CLI capture, tools, BYOK key handling and the runtime
-```
+The method was not invented for this repo. It was distilled from four real productions that came before it, and two of their reels play right here.
 
----
+<table>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://github.com/AwesomeZun/FDDD"><img src="https://raw.githubusercontent.com/AwesomeZun/FDDD/main/docs/assets/fddd-showreel-15s-en-v1.1.0.webp" width="100%" alt="FDDD 15-second showreel: a fly-brain point cloud counting to 167,122 neurons, 20 brains computed live, a -13.09 kcal/mol docking score, a fly choosing to stay or leave, and Nothing faked."/></a>
+<br/><b><a href="https://github.com/AwesomeZun/FDDD">FDDD</a></b> · research data reel
+<br/><sub>128 BPM: a 16-bar 30-s cut and an 8-bar 15-s cut edited on its own. Real point clouds and connectome lines, docking scores that slam in as impact numbers, a poster frame that breaks into slices, and credits that separate computed from authored, closing on <i>“Real docking scores. Real spikes. Nothing faked.”</i></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://github.com/AwesomeZun/CC-statusline"><img src="https://raw.githubusercontent.com/AwesomeZun/CC-statusline/main/assets/reel.gif" width="100%" alt="Awesome Statusline 30-second motion reel: terminal captures in the Catppuccin palette"/></a>
+<br/><b><a href="https://github.com/AwesomeZun/CC-statusline">CC-statusline</a></b> · terminal tool reel
+<br/><sub>The tool's Catppuccin palette, one giant word per command, real terminal captures tilted in 3D with a zoom to the key line, and glitch and typing transitions.</sub>
+</td>
+</tr>
+</table>
 
-## 🧩 How it works
+- **K-BeautyGate** · hackathon pitch: a 30-second, 120 BPM product tour with Vision-lifted mascot poses and the real app UI in a phone; 24 agents took it from a hand-built harness to its first full render in about 25 minutes.
+- **[FlyGate](https://github.com/AwesomeZun/Project-FlyGate)** · narrated reels: an intro, a full narrated reel (28 scenes over 250 s), 15- and 30-second shorts and vertical versions, with Gemini narration verified by speech-to-text.
 
-```
- source material      repo · README · docs · paper · deck · website · brand guide · screenshots
-       │
-       ▼
- 1 tone pass          tools/extract_style.py  →  style.json  (+ evidence log, style board)
-       │
-       ▼
- 2 storyboard         STORYBOARD.md (exact copy, rules)  +  reel.config.json (scenes in bars, cues in beats)
-       │
-       ▼
- 3 plan               timing/plan_cut.py  →  build/cut-15.json · cut-30.json · cut-60.json  (one BPM)
-       │
-       ├──► carriers  capture_ui.mjs · capture_cli.py · pdf_figures.py · prep_assets.py (Vision + OpenCV)
-       ├──► scenes    scenes/<id>.js on the Canvas2D/WebGL2 runtime, pure functions of time
-       ├──► sound     audio/arrange.py: music + SFX on the planned cues  →  verify_sync.py
-       └──► voice     optional: Gemini TTS → STT check → vo_timeline → mix_vo → captions
-       │
-       ▼
- 4 look               runtime/stills.mjs: contact sheets, every transition, a live player
-       │
-       ▼
- 5 deliver            render.mjs → MP4 per cut (+ covers, share copy) · build.mjs → one self-contained HTML
-```
+<sub>The two previews are hotlinked from their own repos. K-BeautyGate and FlyGate are described here as text only; their media is not part of this repo.</sub>
 
-Because every frame is a pure function of time, a still, an MP4 frame and the HTML player show the same pixels, parallel render workers can take any frame range, and the picture and the soundtrack read one cue list. For large reels, `templates/showreel-workflow.js` runs the production as a team of agents (build, independent review and fix per scene), the pattern that built the K-BeautyGate reel below.
+<details>
+<summary><b>More about K-BeautyGate and FlyGate</b></summary>
+
+- **K-BeautyGate (hackathon pitch).** A cosmetics-ad × AI-agent tour: plush pastel mascot poses generated from the client's mascot and lifted with macOS Vision, springy character motion with blinks and jelly, the real app UI animated as layers inside a phone, a dark climax and a mascot lineup bouncing on the beat. Its slowed comprehension variants (today's `--scale` and `--warp`), at 45, 53 and 60 s, re-synthesized their music rather than stretching it. On a hand-built harness, 24 agents (build, review, fix) reached the first full render in about 25 minutes.
+- **[FlyGate](https://github.com/AwesomeZun/Project-FlyGate) (narrated reels).** Scene lengths driven by the voice, captions burned in, and terminal scenes in the CC-statusline grammar.
+
+</details>
 
 ---
 
-## 🧪 Try the examples
+## Under the hood
 
-Prebuilt players with every cut (15/short, 30 and 60 s) and their music, one HTML file each (download and open in any browser):
-[`mochi-notes-v1.1.0.html`](skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html) ·
-[`spark-bench-v1.1.0.html`](skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html)
-(the v1.0.0 players with two cuts stay next to them).
+<details>
+<summary><b>Every visual tool, when the story needs it</b></summary>
 
-Rebuild them yourself from a clone:
+Code-drawn vector and kinetic type carry every reel. Each scene then gets one hero carrier: the thing a skeptic must see.
+
+| Carrier | Tool in the skill | What it gives the motion |
+|---|---|---|
+| **Code-drawn 2D** (always) | `runtime/` Canvas2D engine + WebGL2 layer | kinetic type, springs, squash and jelly, 12 compositor transitions, HUD, point clouds and networks, all pure functions of time |
+| **Mascot cutouts** | `tools/imagegen.md` (GPT-image-2 through the Codex CLI, opt-in) → `tools/lift.swift` (macOS Vision) → `tools/prep_assets.py` | extra poses of your own mascot, clean alpha, blink twins, foot anchors, QA sheets |
+| **OpenCV** | `tools/prep_assets.py`, `tools/capture_ui.mjs --textfree` | GrabCut cutouts on any OS, matte refinement, sheet splitting, Telea inpainting for 2.5D photo parallax and text-free UI plates |
+| **Real app UI** | `tools/capture_ui.mjs` (Playwright) | layers instead of screenshots, component states on static clones, per-character text rows for typing |
+| **Terminal / CLI** | `tools/capture_cli.py` → `runtime/term.js` + `runtime/quad.js` | a real PTY recording with secrets masked, replayed in a 3D-tilted window with zoom to the key line |
+| **PDF figures** | `tools/pdf_figures.py` | the paper's own figures and tables with captions, dark variants for dark stages |
+| **Web shots, native apps** | `tools/capture_ui.mjs`, `tools/capture_native.md` | docs and landing pages in a browser frame; macOS windows, iOS Simulator, Android |
+| **Real data** | your JSON, CSV or run logs | counters, bars, impact numbers and point clouds with a provenance note for every value |
+
+Honesty rules come with the tools: real captures stay real, staged data is labelled on screen, and the credits separate what was computed from what was authored.
+
+</details>
+
+<details>
+<summary><b>Any length at the same BPM: the bar math</b></summary>
+
+Every reel runs on one bar grid (at 128 BPM a bar is 1.875 s, so 8 bars = 15 s, 16 bars = 30 s and 32 bars = 60 s). Scenes are elastic: a fixed in-phase, a hold that stretches and a fixed out-phase. `timing/plan_cut.py` spends extra bars on holds with secondary beats and on optional scenes, keeping every boundary on a bar line, and the music arranger builds the same song with more bars.
+
+| Scene (research-cli) | 15-s cut | 30-s cut | 60-s cut | What fills the extra time |
+|---|---|---|---|---|
+| matrix | 2 bars | 2 bars | 2 bars | (the hook never grows) |
+| problem | (left out) | 2 bars | 2 bars | an optional scene enters |
+| cli | 3 bars | 3 bars | 5 bars | a camera tour of the run's own provenance lines |
+| results | 1 bar | 3 bars | 5 bars | trend line, 64k focus with p50 values, spark's lead per length |
+| scaling | (left out) | (left out) | 5 bars | optional: the same pattern at four lengths, the gain grows |
+| repeats | (left out) | (left out) | 5 bars | optional: the five seeded repeats behind every number |
+| impact | 1 bar | 3 bars | 4 bars | leaderboard with spread, a scan per bar |
+| logo | 1 bar | 3 bars | 4 bars | install line and credits |
+
+A scene renders the same in-phase in every cut (rendered alone, the frames match, GPU-blended scenes to within rounding; full frames differ only by film grain and the HUD's timecode); only its hold changes. Uniform or piecewise slow-down variants (`--scale`, `--warp`) exist only for audiences who must read dense material.
+
+</details>
+
+<details>
+<summary><b>Music and SFX: synthesized, then measured</b></summary>
+
+`audio/synth.py`, `arrange.py` and `verify_sync.py` run on numpy and scipy, with no samples. Every hit is a cue in the same plan the picture reads, then measured: each cue within one frame, -14 LUFS, true peak at or below -1 dBTP. A longer cut gets the same song with more bars, never a time-stretch: in the Mochi Notes example the music measures 120.0 BPM in both the short and the 30-s cut, and every cue lands within one frame (18/18 and 28/28).
+
+</details>
+
+<details>
+<summary><b>Narration: Gemini TTS, verified</b></summary>
+
+Narration uses **Gemini TTS** and is off unless the material calls for it (papers, docs, explainers, pitches) and you agree.
+
+- Lines are synthesized in batches, split at long pauses and **verified by speech-to-text**; clips with leaked style tags or missing words are retried.
+- Scene lengths grow in **whole bars** to fit the voice, so narration never changes the tempo or slows a frame.
+- The mix ducks music and SFX under the voice; captions ship as SRT/VTT and are burned in from the same timeline.
+- `--dry-run` builds and tests the whole chain offline with placeholder clips, which the render and build tools refuse to ship.
+
+Narration in the research example is written and timed offline (`tts_gemini.py batch --dry-run`), but placeholder clips never ship: the tools skip a mix made from them and refuse captions timed from them. Its README shows both paths. Keys: see [Bring your own key](#bring-your-own-key).
+
+</details>
+
+<details>
+<summary><b>A team of agents for big reels</b></summary>
+
+For large reels, `templates/showreel-workflow.js` runs the production as a team of agents in a Claude Code Workflow: tone, storyboard, assets and narration, then build, independent review and fix per scene, with integrator checks (about 25-40 agents). It runs only with your go-ahead and can pause for approval after the tone pass or the storyboard. It is the pattern that built the K-BeautyGate reel.
+
+</details>
+
+<details>
+<summary><b>Rebuild the examples yourself</b></summary>
+
+From a clone:
 
 ```bash
 (cd skills/motion-showreel/runtime && npm install)      # once, and after every update
@@ -218,28 +349,103 @@ P=$S/examples/research-cli
 python3 $S/timing/plan_cut.py --project $P --cut 15,30,60
 for c in 15 30 60; do python3 $S/audio/arrange.py --project $P --cut $c; done
 node $S/runtime/render.mjs --project $P --cut 15 --out out/spark-bench-15.mp4 --poster 3.3
-node $S/runtime/stills.mjs --project $P --serve        # live player: Space, arrows, 1/2/3 switch cuts
+node $S/runtime/stills.mjs --project $P --serve        # live player: Space plays/pauses, ←/→ step, 1/2/3 switch cuts
+
+# this page's previews (also needs libwebp's cwebp and webpmux)
+node docs/readme-reel/tools/make_webp.mjs --out out/previews       # the six feature loops and the social card
+python3 docs/readme-reel/sizzle/build.py --out out/previews        # the sizzle, the two example loops and the moments
 ```
 
-Narration in the research example is written and timed offline (`tts_gemini.py batch --dry-run`), but placeholder clips never ship: the tools skip a mix made from them and refuse captions timed from them. Its README shows both paths.
+</details>
 
-Each example's README walks through its source, the tone pass decisions, the captures and the full build:
-[playful-app](skills/motion-showreel/examples/playful-app/README.md) · [research-cli](skills/motion-showreel/examples/research-cli/README.md).
+<details>
+<summary><b>What's inside</b></summary>
+
+```
+.claude-plugin/              plugin.json, marketplace.json
+assets/                      demo MP4s with sound; readme/: this page's animated WebP previews and social card
+docs/readme-reel/            the motion-showreel project that rendered this page's previews and social card
+skills/motion-showreel/
+  SKILL.md                   the designer's procedure Claude follows
+  references/                tone & manner, visual sources, storyboard, timing, engine API, 36 motion recipes,
+                             capture, imagery, audio, narration, render pipeline, multi-agent production
+  runtime/                   engine.js, gl.js, quad.js, term.js, compositor.js, template.html,
+                             stills.mjs (stills, sheets, live player), render.mjs (MP4), build.mjs (single HTML)
+  timing/plan_cut.py         bar-grid planner for any length at one BPM
+  tools/                     extract_style.py, source_snapshot.mjs, capture_ui.mjs, capture_cli.py,
+                             pdf_figures.py, prep_assets.py, motion_qa.py, lift.swift, imagegen.md, capture_native.md
+  audio/                     synth.py, arrange.py, verify_sync.py (numpy/scipy, no samples)
+  narration/                 tts_gemini.py, vo_timeline.py, mix_vo.py, captions.py
+  templates/                 style.schema.json, STORYBOARD, reel.config, narration, showreel-workflow.js
+  examples/                  playful-app, research-cli (source, style, storyboard, scenes, dist/ player)
+tests/                       regression tests for the planner, audio sync, CLI capture, tools, BYOK key handling and the runtime
+```
+
+</details>
 
 ---
 
-## 📚 Case studies
+## FAQ
 
-The method comes from real productions. Their media is not part of this repo; they are described here as text only.
+<details>
+<summary><b>Do I need an API key?</b></summary>
 
-- **K-BeautyGate (hackathon pitch).** A 30-second cosmetics-ad × AI-agent product tour at 120 BPM: plush pastel mascot poses generated from the client's mascot and lifted with macOS Vision, springy character motion with blinks and jelly, the real app UI animated as layers inside a phone, a dark climax, a mascot lineup bouncing on the beat. 45-, 53- and 60-second comprehension variants re-synthesized their music rather than stretching it. Built by 24 agents (build, review, fix) in about 25 minutes.
-- **[FlyGate](https://github.com/AwesomeZun/Project-FlyGate) (narrated reels).** A 1-minute intro, a 4.8-minute full reel, 15- and 30-second shorts and vertical versions, with Gemini narration verified by speech-to-text, scene lengths driven by the voice, captions burned in, and terminal scenes in the CC-statusline grammar.
-- **[FDDD](https://github.com/AwesomeZun/FDDD) (research data reel).** 128 BPM, 16 bars for 30 s and an independently edited 8-bar 15-s cut: real point clouds, connectome lines, docking scores as impact numbers, a poster frame that breaks into slices, and credits that separate computed from authored ("Real docking scores. Real spikes. Nothing faked.").
-- **CC-statusline (terminal tool reel).** The tool's Catppuccin palette, one giant word per command, real terminal captures tilted in 3D with a zoom to the key line, and glitch and typing transitions.
+Not to make a reel. The music is synthesized on your machine, and the captures and renders run there too. Narration is the one feature that needs a key, and it is optional and BYOK: your own Gemini API key, billed to your own Google account. See [Bring your own key](#bring-your-own-key).
+
+</details>
+
+<details>
+<summary><b>Does anything cost money?</b></summary>
+
+The skill is MIT-licensed and renders locally. Building a reel is a Claude Code task, so it uses your Claude plan like any other session (the multi-agent workflow for big reels runs about 25–40 agents and uses more). Two extras use your own accounts, and only with your go-ahead: narration (Gemini TTS, billed to your Google account) and extra mascot poses (GPT-image-2 through the Codex CLI, which spends your ChatGPT usage).
+
+</details>
+
+<details>
+<summary><b>Is anything in the examples faked?</b></summary>
+
+The projects themselves are fictional, and the reels say so on screen ("Fictional app · demo content", "DEMO DATA · FICTIONAL PROJECT"). What the reels show of them is real: the phone shows the demo app's own captured UI, the terminal is a real recording of `spark-bench run` (exit 0, 1.8 s), the benchmark numbers come from the CLI's own JSON output of its demo run, and the block counts are computed from the README's pattern. Real captures stay real, staged data is labelled on screen, and the credits separate computed from authored.
+
+</details>
+
+<details>
+<summary><b>Can I make a longer cut later?</b></summary>
+
+Yes, at the same BPM. Add the cut to `reel.config.json`, write optional scenes and hold beats for it, and `plan_cut.py` spends the extra bars while the arranger rebuilds the same song with more bars. Keep the project folder: an MP4 on its own cannot be lengthened at the same pace, and the skill never time-stretches video or music.
+
+</details>
+
+<details>
+<summary><b>Vertical or square?</b></summary>
+
+Yes, as a re-layout rather than a crop: a sibling project with `"size": [1080, 1920]` (or `[1080, 1080]`) shares the style, assets and narration. The planner, music, compositor, HUD, captions and HTML player follow the frame size; scenes need their layouts written in `W`, `H` and `UNIT`.
+
+</details>
+
+<details>
+<summary><b>Can it use my own mascot?</b></summary>
+
+Yes. Your mascot images become clean cutouts with macOS Vision (or OpenCV's GrabCut on any OS), with blink twins and foot anchors, then spring, squash, jelly and blink on the beat. Extra poses come from GPT-image-2 only from your own mascot and only with your consent. Or draw the cast in code, as the Mochi Notes example does.
+
+</details>
+
+<details>
+<summary><b>How fast is it?</b></summary>
+
+Measured on Apple Silicon for the Mochi Notes example: the style pass takes about 12 s, the UI capture 14 s, a stills sheet of 57 frames 7 s, the short MP4 about 55 s, and the HTML build with `--verify` a few seconds. Big reel on a deadline? See "A team of agents for big reels" under [Under the hood](#under-the-hood).
+
+</details>
+
+<details>
+<summary><b>What does the HTML player do?</b></summary>
+
+It holds every cut and its music in one file that plays offline from any folder. Space plays and pauses, ← and → step one frame (with Shift, one second), Home and End jump to the ends, the number keys switch cuts and F goes fullscreen.
+
+</details>
 
 ---
 
-## ✅ Requirements
+## Requirements
 
 | Dependency | Why | Notes |
 |---|---|---|
@@ -254,7 +460,19 @@ The method comes from real productions. Their media is not part of this repo; th
 
 ---
 
-## 🔬 Tests
+## Bring your own key
+
+Narration is the only feature that needs an API key, and it stays off unless you agree to it. The skill ships no key and never looks for one; requests are billed to your own Google account.
+
+- **macOS Keychain.** Save your Gemini API key once from your own terminal window (not with Claude Code's `!`, which has no terminal for hidden input):<br/>`python3 ~/.claude/skills/motion-showreel/narration/tts_gemini.py key save`<br/>That path is for a personal skill. For a plugin install, use the same file inside the plugin's `motion-showreel` folder that the setup section's `find` shows; from a clone, `skills/motion-showreel/narration/tts_gemini.py`.
+- **Or an environment variable.** `export GEMINI_API_KEY=...` (or `GOOGLE_API_KEY`) in the terminal you start Claude Code from, before starting it, or point `--env-file` / `--api-key-env NAME` at a file or variable you choose.
+- **Check it.** `key status` shows which source is used (never the key), and `key check` validates it for free.
+- **Never paste a key into the chat.**
+- **No key yet?** `--dry-run` builds and tests the whole chain offline with placeholder clips, which the render and build tools refuse to ship.
+
+---
+
+## Tests
 
 ```bash
 python3 -B -m unittest discover -s tests        # planner, audio sync, CLI capture and masking, tools, BYOK key handling
@@ -263,18 +481,20 @@ node --test tests/*.test.mjs                    # runtime: audio pick order, pla
 
 ---
 
-## 📄 License
+## License
 
-[MIT](LICENSE). The example fonts (Nunito, Space Grotesk, JetBrains Mono) are under the SIL Open Font License 1.1 and ship with their licence files. All music and sound effects are synthesized by the skill; no samples are included.
+[MIT](LICENSE). The example fonts (Nunito, Space Grotesk, JetBrains Mono) are under the SIL Open Font License 1.1 and ship with their license files. All music and sound effects are synthesized by the skill; no samples are included.
 
-## 🙏 Credits
+## Credits
 
-Built with [Claude Code](https://claude.com/claude-code). The skill drives, and does not bundle: Playwright and Chromium, FFmpeg, OpenCV, Apple Vision, PyMuPDF, fontTools, Gemini TTS and GPT-image-2 through the Codex CLI. The example projects (Mochi Notes, spark-bench) and their data are fictional and were written for this repo.
+Built with [Claude Code](https://claude.com/claude-code). The skill calls these tools but does not bundle them: Playwright and Chromium, FFmpeg, OpenCV, Apple Vision, PyMuPDF, fontTools, Gemini TTS and GPT-image-2 through the Codex CLI. The example projects (Mochi Notes, spark-bench) and their data are fictional and were written for this repo. The case-study previews are hotlinked from [FDDD](https://github.com/AwesomeZun/FDDD) and [CC-statusline](https://github.com/AwesomeZun/CC-statusline).
 
 <div align="center">
 
+⭐ **Star it if it made your project look as good as it is.**
+
 Built with 🎬 for the Claude Code community · MIT License
 
-⭐ **Star it if it made your project look as good as it is.**
+**Every preview built for this page was made with motion-showreel.**
 
 </div>

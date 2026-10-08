@@ -1,0 +1,17 @@
+{
+  "title": "Awesome Showreels sizzle",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 24,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "footage", "label": "Footage", "minBars": 1, "maxBars": 1, "priority": 1, "inBeats": 0, "outBeats": 0, "in": "cut", "hud": false }
+  ],
+  "cuts": {
+    "hero": { "label": "hero" },
+    "twin-playful": { "label": "twin-playful" },
+    "twin-research": { "label": "twin-research" }
+  },
+  "hud": { "enabled": false },
+  "captions": { "enabled": false }
+}

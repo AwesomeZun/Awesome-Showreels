@@ -1,0 +1,31 @@
+{
+ "source": {
+  "file": "spark-note.pdf",
+  "pages": 1,
+  "title": "spark-bench technical note (fictional example, demo data)",
+  "author": "motion-showreel examples",
+  "converted": false
+ },
+ "extractedAt": "2026-10-08T16:49:54Z",
+ "tool": "pdf_figures.py",
+ "toolVersion": "1.0.0",
+ "zoom": 3.0,
+ "dpi": 216,
+ "kind": "figure",
+ "label": "Figure 2",
+ "caption": "Figure 2: Throughput relative to dense on the same machine, median of 5 seeded repeats (demo data). At 64k tokens the spark kernel reaches 4.1× the dense throughput.",
+ "page": 1,
+ "bbox": [
+  328.0,
+  109.51,
+  550.0,
+  284.51
+ ],
+ "rasterFraction": 0.0,
+ "file": "fig-2.png",
+ "px": [
+  666,
+  525
+ ],
+ "sha1": "9b8e473910a4"
+}

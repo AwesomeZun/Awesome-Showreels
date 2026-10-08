@@ -1,0 +1,31 @@
+{
+ "source": {
+  "file": "spark-note.pdf",
+  "pages": 1,
+  "title": "spark-bench technical note (fictional example, demo data)",
+  "author": "motion-showreel examples",
+  "converted": false
+ },
+ "extractedAt": "2026-10-08T16:49:54Z",
+ "tool": "pdf_figures.py",
+ "toolVersion": "1.0.0",
+ "zoom": 3.0,
+ "dpi": 216,
+ "kind": "figure",
+ "label": "Figure 1",
+ "caption": "Figure 1: The spark pattern at 64k tokens with 1,024-token blocks: a band of 7 blocks around the diagonal plus 2 global blocks. 674 of 4,096 blocks (16.5%) are computed.",
+ "page": 1,
+ "bbox": [
+  76.0,
+  344.0,
+  276.0,
+  544.0
+ ],
+ "rasterFraction": 0.0,
+ "file": "fig-1.png",
+ "px": [
+  600,
+  600
+ ],
+ "sha1": "86a9c59b1588"
+}

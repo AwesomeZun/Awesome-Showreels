@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "draft": false,
+    "title": "Awesome Showreels sizzle (compositing stage)",
+    "reviewed": "Compositing stage only: every pixel on screen is a footage frame rendered by the runtime from another project (the two examples, the title card in ../title). The palette is the README-derived one in ../../style.json; post is off because the footage already carries its own reel's vignette and bloom (its film grain is switched off when the footage renders, edit.json grain 0, to keep the WebPs small)."
+  },
+  "palette": {
+    "bg": "#11111B",
+    "bg2": "#181825",
+    "surface": "#1E1E2E",
+    "ink": "#CDD6F4",
+    "ink2": "#A6ADC8",
+    "muted": "#9399B2",
+    "accent": "#CBA6F7",
+    "accent2": "#F5C2E7",
+    "accent3": "#89B4FA",
+    "ok": "#A6E3A1",
+    "warn": "#F9E2AF",
+    "deny": "#F38BA8"
+  },
+  "layout": {
+    "theme": "dark",
+    "hud": false,
+    "captions": { "enabled": false }
+  },
+  "post": {
+    "grain": 0,
+    "vignette": { "a": 0 },
+    "bloom": 0
+  },
+  "sound": { "bpm": 120 }
+}

@@ -1,0 +1,286 @@
+{
+  "$schema": "../../skills/motion-showreel/templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "explainer",
+    "audience": "developers browsing GitHub",
+    "title": "Awesome Showreels",
+    "hints": {
+      "purpose": "explainer",
+      "audience": "developers browsing GitHub",
+      "lang": "en-US"
+    },
+    "reviewed": "Draft from extract_style.py run on the repository README (v1.1.0 text and badges, frozen in source/readme-v1.1.0.md), reviewed by hand: see rationale; the extraction log is style-extract.md."
+  },
+  "source": [
+    {
+      "path": "source/readme-v1.1.0.md",
+      "kind": "readme",
+      "notes": "the repository README at v1.1.0 (commit 9c19853), text and badges only: its relative image links are left unresolved on purpose, so the previews this project renders never feed back into its own style"
+    }
+  ],
+  "mood": [
+    "technical",
+    "confident",
+    "crafted",
+    "nocturnal",
+    "playful"
+  ],
+  "rationale": {
+    "palette": "Dark theme. The README's only authored colours are its six badge colours, picked by hex: #F5C2E7, #CBA6F7, #89B4FA, #94E2D5, #A6E3A1, #FAB387 [E10]. They are exactly Catppuccin Mocha's pink, mauve, blue, teal, green and peach, and the README names Catppuccin as the terminal palette of its CC-statusline case study, so the reel takes the whole Mocha family. The extractor's bg #0A0E17 came from a table cell that describes the research-cli example [E6] (a hex in a comparison table describes something else), so it is replaced by Mocha's own darkest stage, crust #11111B; bg2 mantle #181825, surface base #1E1E2E, line surface0 #313244, ink text #CDD6F4 (12.97:1), ink2 subtext0 #A6ADC8 (8.42:1), muted overlay2 #9399B2 (6.64:1 on bg, 5.81:1 on surface; the draft's #777B82 was replaced by the family's own grey). accent mauve #CBA6F7 (the 'Claude Code skill + plugin' badge, the product's identity, 9.23:1), accent2 pink #F5C2E7 (stars badge), accent3 blue #89B4FA (output badge); ok green #A6E3A1 (narration badge), warn Mocha yellow #F9E2AF, deny Mocha red #F38BA8; the remaining badge colours stay available as extra keys teal #94E2D5 (music badge) and orange #FAB387 (Mocha's peach, the licence badge; the runtime reserves the key name peach for a derived tint). ok and deny are close for deutan viewers: the reel pairs them with marks and words. paletteAlt is Catppuccin Latte, the sibling light theme (unused: every scene is dark).",
+    "type": "The README declares no font: GitHub sets it in the system UI face with code in a monospace face. Every frame must render the same pixels on any machine, so the reel uses embeddable faces that already ship in this repository under the SIL OFL 1.1: Space Grotesk for display and body (a grotesk with mono-derived details, between the README's prose and its code blocks) and JetBrains Mono for labels, numbers and code (the README is 34 code-like tokens per 1k words [E1]). The extractor's draft set the display role in mono and the body in Inter, which is not installed everywhere. Nunito is loaded only to set the playful-app example's own type specimen. displayWeight 700, bodyWeight 500 (light text on a dark stage, downscaled for README previews, needs a little weight); headline tracking -0.02 em; labels tracked 0.14 em, in caps, like the README's section kickers.",
+    "motion": "Energy 0.46: 11.46 emoji per 1k words but almost no '!' or marketing words, 39.64 numbers per 1k [E1] → medium pace; playful 0.34, technical 0.84 → spring f 2.25 z 0.67 with a visible but short overshoot (0.7), ease outExpo: confident, not bouncy. Transitions from the tone scores: glitch 0.67, zoomInto 0.67, match 0.55, whip 0.40, impact 0.37 (used by the tour cut). Corners stay tight (radius 12, chips 8): the README's badges are flat-square [E10].",
+    "sound": "dark-synth scored 0.72 (next lofi 0.40) from dark 1, technical 0.84, playful 0.34. The draft's 124 BPM (inside 118–130 by energy) is nudged to 120: a bar is exactly 2.0 s, so every 3-bar README loop is a whole number of frames at 20, 24 or 25 fps and loops without a seam. Key Db from the accent hue 309° (free choice), minor; drums full; sfx digital. Only the 36-s tour cut has a soundtrack; the README previews are silent.",
+    "narration": "Off. The draft recommended narration for an explainer, but these loops autoplay muted inside a README and carry their message in type; a voice would need the viewer's own Gemini key (BYOK) and an audio track that animated WebP cannot hold. Captions are off for the same reason.",
+    "visuals": "The README is a technical tool page with 4 tables and 6 shell commands [E1] and no mascot of its own (characters false). Every carrier on screen is the bundled examples' real material: style boards, README renders, the Mochi mascot lifted from the playful-app logo by Vision with a blink twin, the real app UI captures, the real spark-bench CLI cast, cut plans, music and captions computed by the skill, and the real HTML player. Post: grain 0, because per-frame grain multiplies the size of an animated WebP; a static vignette and a light bloom keep the stage cinematic."
+  },
+  "palette": {
+    "bg": "#11111B",
+    "bg2": "#181825",
+    "surface": "#1E1E2E",
+    "ink": "#CDD6F4",
+    "ink2": "#A6ADC8",
+    "muted": "#9399B2",
+    "accent": "#CBA6F7",
+    "accent2": "#F5C2E7",
+    "accent3": "#89B4FA",
+    "ok": "#A6E3A1",
+    "warn": "#F9E2AF",
+    "deny": "#F38BA8",
+    "accentInk": "#CBA6F7",
+    "onAccent": "#11111B",
+    "line": "#313244",
+    "teal": "#94E2D5",
+    "orange": "#FAB387",
+    "lavender": "#B4BEFE",
+    "surface1": "#45475A",
+    "surface2": "#585B70"
+  },
+  "fonts": {
+    "display": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "sans": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "serif": "\"Source Serif 4\", \"Iowan Old Style\", \"Charter\", serif",
+    "mono": "\"JetBrains Mono\", \"JetBrainsMono NF\", \"Fira Code\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Space Grotesk",
+        "path": "../../skills/motion-showreel/examples/research-cli/source/docs/fonts/SpaceGrotesk-Variable.ttf",
+        "weight": "300 700"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "../../skills/motion-showreel/examples/research-cli/source/docs/fonts/JetBrainsMono-Variable.ttf",
+        "weight": "100 800"
+      },
+      {
+        "family": "Nunito",
+        "path": "../../skills/motion-showreel/examples/playful-app/source/fonts/Nunito.ttf",
+        "weight": "200 1000"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      26,
+      32,
+      40,
+      52,
+      66,
+      84,
+      108,
+      140
+    ],
+    "displayWeight": 700,
+    "bodyWeight": 500,
+    "tracking": -0.02,
+    "trackingLabel": 0.14
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Space Grotesk\", \"Helvetica Neue\", \"Arial\", sans-serif",
+      "size": 36,
+      "fg": "#CDD6F4",
+      "bg": "rgba(17,17,27,0.78)",
+      "y": 960
+    },
+    "radius": 12
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.25,
+      "z": 0.67
+    },
+    "overshoot": 0.7,
+    "ease": "outExpo",
+    "transitions": [
+      "glitch",
+      "zoomInto",
+      "match",
+      "whip",
+      "impact"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector",
+      "mascot-cutouts",
+      "app-ui",
+      "terminal",
+      "cli",
+      "pdf-figures",
+      "web-shots"
+    ],
+    "typeReveal": [
+      "kinetic",
+      "scramble",
+      "typing"
+    ]
+  },
+  "post": {
+    "grain": 0,
+    "vignette": {
+      "a": 0.32,
+      "color": "#0B0B12"
+    },
+    "bloom": 0.16
+  },
+  "sound": {
+    "bpm": 120,
+    "key": "Db",
+    "mode": "minor",
+    "preset": "dark-synth",
+    "instruments": [
+      "pad",
+      "saw-pluck",
+      "arp",
+      "saw-bass",
+      "sub",
+      "stab",
+      "kick",
+      "clap",
+      "snare",
+      "hats"
+    ],
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.32,
+      "groove": 0.61,
+      "breakdown": 0.34,
+      "drop": 0.78,
+      "outro": 0.39
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Fenrir",
+    "styleTag": "[confident, clear]",
+    "lang": "en-US"
+  },
+  "paletteAlt": {
+    "theme": "light",
+    "bg": "#EFF1F5",
+    "bg2": "#E6E9EF",
+    "surface": "#DCE0E8",
+    "ink": "#4C4F69",
+    "ink2": "#5C5F77",
+    "muted": "#6A6D7F",
+    "accent": "#8839EF",
+    "accent2": "#1E66F5",
+    "accent3": "#EF5B00",
+    "ok": "#3E9E29",
+    "warn": "#C67A00",
+    "deny": "#D20F39",
+    "accentInk": "#8839EF",
+    "onAccent": "#FFFFFF",
+    "line": "#D5D7DF"
+  },
+  "terminal": {
+    "theme": "catppuccin-mocha",
+    "bg": "#1E1E2E",
+    "fg": "#CDD6F4",
+    "ansi": [
+      "#45475A",
+      "#F38BA8",
+      "#A6E3A1",
+      "#F9E2AF",
+      "#89B4FA",
+      "#F5C2E7",
+      "#94E2D5",
+      "#BAC2DE",
+      "#585B70",
+      "#F38BA8",
+      "#A6E3A1",
+      "#F9E2AF",
+      "#89B4FA",
+      "#F5C2E7",
+      "#94E2D5",
+      "#A6ADC8"
+    ],
+    "source": "named in the material (the CC-statusline case study's Catppuccin palette)"
+  },
+  "swatches": [
+    {
+      "hex": "#CBA6F7",
+      "share": 0.157,
+      "role": "accent",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    },
+    {
+      "hex": "#F5C2E7",
+      "share": 0.127,
+      "role": "accent2",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    },
+    {
+      "hex": "#89B4FA",
+      "share": 0.127,
+      "role": "accent3",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    },
+    {
+      "hex": "#94E2D5",
+      "share": 0.127,
+      "role": "teal",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    },
+    {
+      "hex": "#A6E3A1",
+      "share": 0.127,
+      "role": "ok",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    },
+    {
+      "hex": "#FAB387",
+      "share": 0.127,
+      "role": "orange",
+      "from": [
+        "source/readme-v1.1.0.md"
+      ]
+    }
+  ],
+  "review": []
+}

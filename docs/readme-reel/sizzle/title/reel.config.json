@@ -1,0 +1,15 @@
+{
+  "title": "Awesome Showreels title card",
+  "style": "../../style.json",
+  "size": [1920, 1080],
+  "fps": 24,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "title", "label": "Awesome Showreels", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut" }
+  ],
+  "cuts": {
+    "card": { "bars": 2, "label": "card" }
+  },
+  "hud": { "enabled": false },
+  "captions": { "enabled": false }
+}

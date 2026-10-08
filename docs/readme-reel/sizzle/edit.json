@@ -1,0 +1,404 @@
+{
+ "about": "Edit decisions for the README previews (build.py). Times are seconds of the source cut (cut plans from timing/plan_cut.py); `at` is the source time of a shot's first frame. Edits sit on a beat grid (`bpm`): every shot opens on a beat or a cue of its own example (120 BPM playful-app, 128 BPM research-cli) and every cut lands on a beat of the edit. The edits keep a 16:9 safe area when they downscale (build.py SAFE), so the channel shift of glitch and whip never shows at the frame edge. `in` is the transition into a shot, rendered by the runtime's compositor: blobWipe and whip enter Mochi Notes, glitch enters spark-bench, as in the examples themselves.",
+ "fps": 24,
+ "grain": 0,
+ "tol": 2,
+ "cwebp": [
+  "-sharp_yuv"
+ ],
+ "sources": {
+  "playful": {
+   "project": "../../../skills/motion-showreel/examples/playful-app"
+  },
+  "research": {
+   "project": "../../../skills/motion-showreel/examples/research-cli"
+  },
+  "title": {
+   "project": "title",
+   "cut": "card",
+   "scene": "title",
+   "dur": 4.0
+  }
+ },
+ "edits": {
+  "hero": {
+   "out": "assets/readme/hero.webp",
+   "size": [
+    1200,
+    675
+   ],
+   "q": 76,
+   "maxMB": 6.5,
+   "bpm": 120,
+   "qPoster": 90,
+   "shots": [
+    {
+     "src": "title",
+     "at": 1.625,
+     "dur": 0.5,
+     "label": "title card, hold (the loop seam sits inside the hold: the closing shot ends on this frame)",
+     "q": 86
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 0.5,
+     "dur": 1.0,
+     "in": "blobWipe",
+     "inParams": {
+      "x": 960,
+      "y": 589,
+      "edge": "#FF8FAF"
+     },
+     "label": "Mochi: Too many thoughts? (the blob bursts from the tagline)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 1.640625,
+     "dur": 1.0,
+     "in": "glitch",
+     "inParams": {
+      "amount": 0.9
+     },
+     "label": "spark: 4,096 blocks sink to 674 (beat 3.5, the count cue)"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 5.0,
+     "dur": 1.0,
+     "in": "whip",
+     "inParams": {
+      "dir": "up"
+     },
+     "label": "Mochi: typing into the real app UI in the phone"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 3.75,
+     "dur": 0.5,
+     "in": "glitch",
+     "inParams": {
+      "amount": 0.7
+     },
+     "label": "spark: RUN, the real terminal flies in (bar 2)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 7.3828125,
+     "dur": 0.5,
+     "in": "cut",
+     "label": "spark: zoom to the 4.1x row of the real capture (the zoom cue)"
+    },
+    {
+     "src": "playful",
+     "cut": "30",
+     "at": 18.5,
+     "dur": 0.5,
+     "in": "whip",
+     "inParams": {
+      "dir": "left"
+     },
+     "label": "Mochi: Pick a flavor! (four real app themes)"
+    },
+    {
+     "src": "research",
+     "cut": "60",
+     "at": 28.0,
+     "dur": 0.5,
+     "in": "glitch",
+     "inParams": {
+      "amount": 0.6
+     },
+     "label": "spark: the same pattern at four lengths, masks fill (a scene only the 60-s cut has)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 11.291667,
+     "dur": 0.5,
+     "in": "cut",
+     "label": "spark: 4.1x impact (bar 6; opens one frame after the flash, on the number)"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 10.5,
+     "dur": 1.0,
+     "in": "blobWipe",
+     "inParams": {
+      "x": 960,
+      "y": 800,
+      "edge": "#FF8FAF"
+     },
+     "label": "Mochi: the four-mascot lineup and the wordmark (the one Mochi brand card)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 13.59375,
+     "dur": 1.0,
+     "in": "glitch",
+     "inParams": {
+      "amount": 0.8
+     },
+     "label": "spark: blocks become the logo (beat 29)"
+    },
+    {
+     "src": "title",
+     "at": 0.125,
+     "dur": 1.5,
+     "in": "glitch",
+     "inParams": {
+      "amount": 0.6
+     },
+     "label": "title card: Awesome Showreels",
+     "q": 86
+    }
+   ],
+   "radius": 20
+  },
+  "twin-playful": {
+   "out": "assets/readme/twin-playful.webp",
+   "size": [
+    720,
+    405
+   ],
+   "q": 78,
+   "maxMB": 2.8,
+   "bpm": 120,
+   "qPoster": 90,
+   "shots": [
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 12.25,
+     "dur": 0.5,
+     "label": "end card, hold (loop seam)"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 0.0,
+     "dur": 3.0,
+     "in": "cut",
+     "label": "hook, the reel's own blob wipe, Mochi springs up"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 5.0,
+     "dur": 1.0,
+     "in": "whip",
+     "inParams": {
+      "dir": "left"
+     },
+     "label": "typing into the real app UI"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 8.0,
+     "dur": 1.5,
+     "in": "cut",
+     "label": "result card on its hit, chips fly"
+    },
+    {
+     "src": "playful",
+     "cut": "short",
+     "at": 10.5,
+     "dur": 2.75,
+     "in": "cut",
+     "label": "cut on the beat past the blank stage of the reel's blob wipe: the lineup springs up, finale"
+    }
+   ],
+   "radius": 14
+  },
+  "twin-research": {
+   "out": "assets/readme/twin-research.webp",
+   "size": [
+    720,
+    405
+   ],
+   "q": 76,
+   "maxMB": 2.8,
+   "bpm": 128,
+   "qPoster": 90,
+   "shots": [
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 14.53125,
+     "dur": 0.46875,
+     "label": "end card, hold (loop seam)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 1.40625,
+     "dur": 3.28125,
+     "in": "cut",
+     "label": "4,096 -> 674, the reel's own glitch, RUN, the real terminal flies in"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 7.3828125,
+     "dur": 0.9375,
+     "in": "cut",
+     "label": "zoom to the 4.1x row of the real capture (the zoom cue)"
+    },
+    {
+     "src": "research",
+     "cut": "15",
+     "at": 11.291667,
+     "dur": 3.28125,
+     "in": "cut",
+     "label": "4.1x impact (opens one frame after the flash, on the number), blocks become the logo"
+    }
+   ],
+   "radius": 14
+  }
+ },
+ "moments": {
+  "moment-mochi-hook": {
+   "src": "playful",
+   "cut": "30",
+   "from": 0.0,
+   "to": 3.0,
+   "poster": 2.5,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-mochi-hook.webp",
+   "label": "kinetic type in a storm of paper scraps",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-mochi-mascot": {
+   "src": "playful",
+   "cut": "30",
+   "from": 3.85,
+   "to": 6.35,
+   "poster": 5.5,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-mochi-mascot.webp",
+   "label": "the blob wipe already over the hook, the code-drawn mascot springs up, wordmark",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-mochi-app": {
+   "src": "playful",
+   "cut": "short",
+   "from": 4.5,
+   "to": 8.25,
+   "poster": 7.5,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-mochi-app.webp",
+   "label": "the real app UI types and tidies, on the beat",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-mochi-flavors": {
+   "src": "playful",
+   "cut": "30",
+   "from": 17.5,
+   "to": 21.0,
+   "poster": 20.5,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-mochi-flavors.webp",
+   "label": "zoom into the phone, four real app themes spring up",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-spark-matrix": {
+   "src": "research",
+   "cut": "15",
+   "from": 0.234375,
+   "to": 3.75,
+   "poster": 3.1875,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-spark-matrix.webp",
+   "label": "4,096 GPU points, 3,422 sink, 674 stay lit; the reel's own glitch closes the loop",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-spark-terminal": {
+   "src": "research",
+   "cut": "15",
+   "from": 5.15625,
+   "to": 8.90625,
+   "poster": 8.4375,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-spark-terminal.webp",
+   "label": "a real terminal capture, tilted in 3D, zoom to the line",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-spark-impact": {
+   "src": "research",
+   "cut": "15",
+   "from": 9.375,
+   "to": 13.125,
+   "poster": 12.65625,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-spark-impact.webp",
+   "label": "bars grow from the CLI's own JSON, 4.1x slams in",
+   "qPoster": 88,
+   "radius": 10
+  },
+  "moment-spark-scaling": {
+   "src": "research",
+   "cut": "60",
+   "from": 26.5,
+   "to": 30.0,
+   "poster": 29.9,
+   "size": [
+    480,
+    270
+   ],
+   "q": 82,
+   "maxMB": 1.2,
+   "out": "assets/readme/moment-spark-scaling.webp",
+   "label": "the same pattern at four lengths: matrices build in, the masks fill, the gain grows (only in the 60-s cut)",
+   "qPoster": 88,
+   "radius": 10
+  }
+ }
+}

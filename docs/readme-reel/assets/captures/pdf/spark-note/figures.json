@@ -1,0 +1,156 @@
+{
+ "source": {
+  "file": "spark-note.pdf",
+  "pages": 1,
+  "title": "spark-bench technical note (fictional example, demo data)",
+  "author": "motion-showreel examples",
+  "converted": false
+ },
+ "extractedAt": "2026-10-08T16:49:54Z",
+ "tool": "pdf_figures.py",
+ "toolVersion": "1.0.0",
+ "zoom": 3.0,
+ "dpi": 216,
+ "mode": "paper",
+ "bodyFontSize": 8.5,
+ "items": [
+  {
+   "source": {
+    "file": "spark-note.pdf",
+    "pages": 1,
+    "title": "spark-bench technical note (fictional example, demo data)",
+    "author": "motion-showreel examples",
+    "converted": false
+   },
+   "extractedAt": "2026-10-08T16:49:54Z",
+   "tool": "pdf_figures.py",
+   "toolVersion": "1.0.0",
+   "zoom": 3.0,
+   "dpi": 216,
+   "kind": "figure",
+   "label": "Figure 1",
+   "caption": "Figure 1: The spark pattern at 64k tokens with 1,024-token blocks: a band of 7 blocks around the diagonal plus 2 global blocks. 674 of 4,096 blocks (16.5%) are computed.",
+   "page": 1,
+   "bbox": [
+    76.0,
+    344.0,
+    276.0,
+    544.0
+   ],
+   "rasterFraction": 0.0,
+   "file": "fig-1.png",
+   "px": [
+    600,
+    600
+   ],
+   "sha1": "86a9c59b1588"
+  },
+  {
+   "source": {
+    "file": "spark-note.pdf",
+    "pages": 1,
+    "title": "spark-bench technical note (fictional example, demo data)",
+    "author": "motion-showreel examples",
+    "converted": false
+   },
+   "extractedAt": "2026-10-08T16:49:54Z",
+   "tool": "pdf_figures.py",
+   "toolVersion": "1.0.0",
+   "zoom": 3.0,
+   "dpi": 216,
+   "kind": "figure",
+   "label": "Figure 2",
+   "caption": "Figure 2: Throughput relative to dense on the same machine, median of 5 seeded repeats (demo data). At 64k tokens the spark kernel reaches 4.1× the dense throughput.",
+   "page": 1,
+   "bbox": [
+    328.0,
+    109.51,
+    550.0,
+    284.51
+   ],
+   "rasterFraction": 0.0,
+   "file": "fig-2.png",
+   "px": [
+    666,
+    525
+   ],
+   "sha1": "9b8e473910a4"
+  }
+ ],
+ "warnings": [],
+ "note": "bbox in PDF points (72/in); files rendered at dpi; captions are the paper's own words — quote them, do not paraphrase in credits",
+ "finds": [
+  {
+   "text": "4.1× the dense throughput",
+   "page": 1,
+   "bbox": [
+    105.57,
+    214.64,
+    195.46,
+    226.12
+   ],
+   "pagePx": [
+    319.9,
+    650.4,
+    592.3,
+    685.2
+   ],
+   "pageZoom": 3.03,
+   "in": []
+  },
+  {
+   "text": "4.1× the dense throughput",
+   "page": 1,
+   "bbox": [
+    368.69,
+    313.63,
+    462.31,
+    324.62
+   ],
+   "pagePx": [
+    1117.2,
+    950.4,
+    1400.9,
+    983.7
+   ],
+   "pageZoom": 3.03,
+   "in": []
+  },
+  {
+   "text": "674 of 4,096 blocks (16.5%)",
+   "page": 1,
+   "bbox": [
+    261.67,
+    563.82,
+    283.91,
+    574.81
+   ],
+   "pagePx": [
+    792.9,
+    1708.5,
+    860.3,
+    1741.8
+   ],
+   "pageZoom": 3.03,
+   "in": []
+  },
+  {
+   "text": "674 of 4,096 blocks (16.5%)",
+   "page": 1,
+   "bbox": [
+    54.0,
+    575.63,
+    129.14,
+    586.62
+   ],
+   "pagePx": [
+    163.6,
+    1744.3,
+    391.3,
+    1777.7
+   ],
+   "pageZoom": 3.03,
+   "in": []
+  }
+ ]
+}
