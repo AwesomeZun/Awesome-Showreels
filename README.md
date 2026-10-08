@@ -30,7 +30,7 @@
 - 🧰 **Every visual tool, used where the story needs it.** Code-drawn 2D always; mascot cutouts (GPT-image-2 + macOS Vision + OpenCV), real app UI, real terminal and CLI recordings, PDF figures, web shots and real data when they prove a claim.
 - 🥁 **Any length at the same BPM.** 15, 30 or 60 seconds on one bar grid: longer cuts add living holds and extra scenes, never slow motion.
 - 🔊 **Music and SFX synthesized on the beat.** Every hit is a cue in the same plan the picture reads, then measured: each cue within one frame, -14 LUFS, true peak at or below -1 dBTP.
-- 🎤 **Optional narration.** Gemini TTS with speech-to-text verification of every clip, ducked mix and burned-in captions.
+- 🎤 **Optional narration, BYOK.** Gemini TTS with your own API key, speech-to-text verification of every clip, ducked mix and burned-in captions.
 - 📦 **Delivery, verified.** 1080p60 MP4 per cut with cover and share copy, plus one HTML file with every cut and its audio that plays offline from any folder.
 
 ---
@@ -82,7 +82,8 @@ Narration uses **Gemini TTS** and is off unless the material calls for it (paper
 - Lines are synthesized in batches, split at long pauses and **verified by speech-to-text**; clips with leaked style tags or missing words are retried.
 - Scene lengths grow in **whole bars** to fit the voice, so narration never changes the tempo or slows a frame.
 - The mix ducks music and SFX under the voice; captions ship as SRT/VTT and are burned in from the same timeline.
-- Needs `GEMINI_API_KEY` in your environment. `--dry-run` builds and tests the whole chain offline with placeholder clips, which the render and build tools refuse to ship.
+- **BYOK (bring your own key).** The skill ships no key and never looks for one; requests are billed to your own Google account. On macOS, save your Gemini API key once in the Keychain from your own terminal window (not with Claude Code's `!`, which has no terminal for hidden input): `python3 ~/.claude/skills/motion-showreel/narration/tts_gemini.py key save` (personal skill; for a plugin install, the same file inside the plugin's `motion-showreel` folder that the setup section's `find` shows; from a clone, `skills/motion-showreel/narration/tts_gemini.py`). Or `export GEMINI_API_KEY=...` (or `GOOGLE_API_KEY`) in the terminal you start Claude Code from, before starting it, or point `--env-file` / `--api-key-env NAME` at a file or variable you choose. `key status` shows which source is used (never the key) and `key check` validates it for free. Never paste a key into the chat.
+- `--dry-run` builds and tests the whole chain offline with placeholder clips, which the render and build tools refuse to ship.
 
 ---
 
@@ -156,7 +157,7 @@ skills/motion-showreel/
   narration/                 tts_gemini.py, vo_timeline.py, mix_vo.py, captions.py
   templates/                 style.schema.json, STORYBOARD, reel.config, narration, showreel-workflow.js
   examples/                  playful-app, research-cli (source, style, storyboard, scenes, dist/ player)
-tests/                       regression tests for the planner, audio sync, CLI capture, tools and the runtime
+tests/                       regression tests for the planner, audio sync, CLI capture, tools, BYOK key handling and the runtime
 ```
 
 ---
@@ -248,7 +249,7 @@ The method comes from real productions. Their media is not part of this repo; th
 | Python 3.9+ with numpy, scipy, Pillow, opencv-python | tone pass, planner, music, narration, cutouts, text-free UI plates | optional: `pymupdf` (PDFs), `fonttools` + `brotli` (font subsets in the HTML) |
 | macOS 14+ and `swiftc` *(optional)* | Vision subject lifting | other systems use the OpenCV path |
 | Codex CLI with a ChatGPT login *(optional)* | GPT-image-2 mascot poses | only with your consent; it spends your ChatGPT usage |
-| `GEMINI_API_KEY` *(optional)* | narration | `--dry-run` works without a key |
+| Your own Gemini API key *(optional, BYOK)* | narration | env var, macOS Keychain (`key save`) or `--env-file`; `--dry-run` works without a key |
 | LibreOffice, poppler *(optional)* | slide decks, PDF fallbacks | |
 
 ---
@@ -256,7 +257,7 @@ The method comes from real productions. Their media is not part of this repo; th
 ## 🔬 Tests
 
 ```bash
-python3 -B -m unittest discover -s tests        # planner, audio sync, CLI capture and masking, tools
+python3 -B -m unittest discover -s tests        # planner, audio sync, CLI capture and masking, tools, BYOK key handling
 node --test tests/*.test.mjs                    # runtime: audio pick order, placeholder guards
 ```
 

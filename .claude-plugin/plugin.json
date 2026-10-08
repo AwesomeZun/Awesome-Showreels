@@ -1,6 +1,6 @@
 {
   "name": "awesome-showreels",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Turn any repo, README, paper, deck or website into a premium 2D motion-graphics showreel: style derived from the source, real app/terminal/PDF captures, Vision + OpenCV cutouts, beat-synced synthesized music, optional Gemini narration. Ships MP4 + a single-file HTML player.",
   "author": {
     "name": "AwesomeZun",
@@ -10,5 +10,15 @@
   "homepage": "https://github.com/AwesomeZun/Awesome-Showreels",
   "repository": "https://github.com/AwesomeZun/Awesome-Showreels",
   "license": "MIT",
-  "keywords": ["showreel", "motion-graphics", "video", "sizzle-reel", "demo-video", "animation", "canvas", "tts", "skill"]
+  "keywords": [
+    "showreel",
+    "motion-graphics",
+    "video",
+    "sizzle-reel",
+    "demo-video",
+    "animation",
+    "canvas",
+    "tts",
+    "skill"
+  ]
 }

@@ -192,6 +192,7 @@ const [results, draft] = await parallel([
 | Background jobs left running | avoid `&`; check `ps` before re-rendering |
 | Render workers starve the machine | `--workers` <= cores / 2 while other agents render stills |
 | Live paid API calls by accident | only the narration role calls TTS and only the asset role generates images, each with explicit opt-in; `--dry-run` everywhere else |
+| An agent hunts for an API key | BYOK: the main session has the user set up their own key before `liveTts`; the narration role only runs `key status` / `key check` and falls back to `--dry-run` (music-only delivery, reported as an open issue) |
 | A 1-bar short-cut scene loses its title to the out-phase | compact schedule below ~1.5 bars (`motion-recipes.md` section 2); render the short cut too |
 | An empty stage shows through a `zoomInto`/`portalFlash` window | the incoming scene draws an establishing image at negative `env.lt` |
 | Ink, stamps, or titles vanish on a night stage | the scene is `"dark": true`; recipes switch blend modes and ink from `env.dark` |

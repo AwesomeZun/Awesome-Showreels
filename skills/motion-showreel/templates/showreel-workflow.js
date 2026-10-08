@@ -18,13 +18,16 @@ export const meta = {
 // It spawns about 25-40 agents (tone, storyboard, assets, narration, a builder/reviewer/fixer per scene, audio,
 // integrator): run it only after the user has agreed to a multi-agent production.
 // args: { projectDir, skillDir, scenes?: [ids], cuts?: [names], narration?: bool,
-//         mainCut?, liveTts?: bool, allowImageGen?: bool, reviewRounds?: 1-4, version?, slug?, brief?,
-//         styleApproved?: bool, storyboardApproved?: bool, stopAfter?: 'tone' | 'storyboard', workers? }
+//         mainCut?, liveTts?: bool, ttsEnvFile?, ttsApiKeyEnv?, ttsKeychainService?, allowImageGen?: bool,
+//         reviewRounds?: 1-4, version?, slug?, brief?, styleApproved?: bool, storyboardApproved?: bool,
+//         stopAfter?: 'tone' | 'storyboard', workers? }
 // stopAfter: end after that stage so the user can approve the style board / storyboard (re-run with styleApproved /
 // storyboardApproved). Paid calls are opt-in: narration runs as a TTS dry run (placeholder clips, no network) unless
 // liveTts === true (the user has agreed to spend quota; legacy ttsDryRun: false means the same); image generation
-// only when allowImageGen === true. Plain JS only: no Date.now(), Math.random(), or argless new Date() (they break
-// resume).
+// only when allowImageGen === true. Narration is BYOK: agents here cannot ask the user for a key, so set liveTts only
+// after the user set up their own key and `tts_gemini.py key status` / `key check` passed in the main session; a file
+// or variable NAME the user named goes in ttsEnvFile / ttsApiKeyEnv (never the key itself). Plain JS only: no
+// Date.now(), Math.random(), or argless new Date() (they break resume).
 
 const A = args || {}
 if (!A.projectDir || !A.skillDir) throw new Error('motion-showreel workflow: args.projectDir and args.skillDir are required')
@@ -34,6 +37,20 @@ const CUTS = (Array.isArray(A.cuts) && A.cuts.length ? A.cuts : ['30']).map(Stri
 const MAIN = A.mainCut ? String(A.mainCut) : CUTS.includes('30') ? '30' : CUTS[0]
 const NARRATION = A.narration === true
 const TTS_DRY = !(A.liveTts === true || A.ttsDryRun === false)   // dry run unless live TTS is explicitly allowed
+// BYOK key flags for every tts_gemini.py call: only a file, variable NAME or Keychain service the user named
+const looksLikeKey = (v) => /AIza[0-9A-Za-z_-]{20,}/.test(String(v))
+const shq = (v) => `'${String(v).replace(/'/g, `'\\''`)}'`
+if ([A.ttsEnvFile, A.ttsApiKeyEnv, A.ttsKeychainService].some((v) => v && looksLikeKey(v))) {
+  throw new Error('motion-showreel workflow: ttsEnvFile / ttsApiKeyEnv / ttsKeychainService take a file, a variable NAME or a Keychain service name, never the key itself (value not shown)')
+}
+if (A.ttsApiKeyEnv && !/^[A-Za-z_][A-Za-z0-9_]{0,63}$/.test(String(A.ttsApiKeyEnv))) {
+  throw new Error('motion-showreel workflow: ttsApiKeyEnv must be an environment variable NAME (value not shown)')
+}
+const KEY_FLAGS = ['--no-prompt']
+  .concat(A.ttsEnvFile ? ['--env-file', shq(A.ttsEnvFile)] : [])
+  .concat(A.ttsApiKeyEnv ? ['--api-key-env', String(A.ttsApiKeyEnv)] : [])
+  .concat(A.ttsKeychainService ? ['--keychain-service', shq(A.ttsKeychainService)] : [])
+  .join(' ')
 const STOP_AFTER = A.stopAfter === 'tone' || A.stopAfter === 'storyboard' ? A.stopAfter : null
 const IMAGE_GEN = A.allowImageGen === true
 const ROUNDS = Math.max(1, Math.min(4, Math.floor(Number(A.reviewRounds) || 2)))
@@ -43,11 +60,12 @@ const WORKERS = Math.max(1, Math.floor(Number(A.workers) || 6))
 const BRIEF = A.brief ? String(A.brief) : ''
 const CUTLIST = CUTS.join(', ')
 let VO_OK = false // set after the narration stage; later prompts use the VO timeline only when it exists
+let VO_PLACEHOLDER = false // narration ran as a dry run (asked for, or no usable key): its mix and captions are placeholders
 
 // ───────── shared prompt text ─────────
 const RULES = [
   `Skill folder S = ${S}. Reel project folder P = ${P}. Read ${S}/SKILL.md first.`,
-  'Never open, print, or copy any .env file or API key. Never copy images, fonts, audio, video, or data from other projects or a downloads folder into P.',
+  'Never open, print, copy, or search for any .env file or API key, and never ask anyone for a key. Never copy images, fonts, audio, video, or data from other projects or a downloads folder into P.',
   'Write only the files your role owns (listed below); everything else is read-only for you.',
   'Report paths and numbers, not file contents. Keep shell output short.',
 ].join('\n')
@@ -179,8 +197,8 @@ Check every produced file (open images at full resolution). Return what you prod
 
 const narrationPrompt = () => `${RULES}
 ROLE: narration. You own P/narration.json (wording fixes only when a line breaks a rate cap), P/build/vo/, P/build/vo-timeline.json, P/build/vo-minbars.json, and the P/build/cut-*.json files that plan_cut.py rewrites.
-Read ${S}/references/narration.md and follow its commands exactly.
-Mode: ${TTS_DRY ? 'DRY RUN only: use --dry-run (placeholder clips of estimated length, no network).' : 'LIVE Gemini TTS is allowed for this project. tts_gemini.py loads the key itself; never open .env files or print keys. If no key is configured, fall back to --dry-run and set keyMissing true.'}
+Read ${S}/references/narration.md and follow its commands exactly (its section 9 steps that involve the user were done by the main session before this run).
+Mode: ${TTS_DRY ? 'DRY RUN only: use --dry-run (placeholder clips of estimated length, no network).' : `LIVE Gemini TTS is allowed for this project. The key is BYOK (the user's own) and was set up before this run; getting it is the main session's job, never yours: never ask for, search for, open, print, or handle a key. First run python3 ${S}/narration/tts_gemini.py key status ${KEY_FLAGS} and then python3 ${S}/narration/tts_gemini.py key check ${KEY_FLAGS}. If either exits non-zero, do not look for another key (no .env files, shell history, dotfiles or configs, and no --env-file / --api-key-env beyond the flags given here): run every tts_gemini.py command with --dry-run instead and set keyMissing true. Otherwise pass ${KEY_FLAGS} to every tts_gemini.py command.`}
 1. Check every line against the scene it belongs to and the rate caps. 2. Synthesize (batch), then verify and audit${TTS_DRY ? ' (skipped in dry run)' : ''}. 3. Build the VO timeline and minBars. 4. Re-plan every cut (${CUTLIST}) with python3 ${S}/timing/plan_cut.py --project ${P} --cut <cut> --vo ${P}/build/vo-minbars.json.`
 
 const buildPrompt = (id) => `${RULES}
@@ -236,7 +254,7 @@ ROLE: integrator (config, cut plans, final audio). You own ${P}/reel.config.json
 Requests from scene and audio agents (JSON): ${JSON.stringify(requests)}
 1. Apply each cue or config request that fits the beat grid, STORYBOARD.md and the SFX library; reject the rest with a reason. Asset requests: produce what you can per ${S}/references/visual-sources.md section 8 (image generation ${IMAGE_GEN ? 'allowed' : 'NOT allowed'}); otherwise reject with the next step.
 2. Re-plan every cut (${CUTLIST}): python3 ${S}/timing/plan_cut.py --project ${P} --cut <cut>${VO_OK ? ' --vo ' + P + '/build/vo-minbars.json' : ''}
-3. Final audio per cut: python3 ${S}/audio/arrange.py --project ${P} --cut <cut>${VO_OK ? ' (the music-only song), then the unmastered bed python3 ' + S + '/audio/arrange.py --project ' + P + ' --cut <cut> --stem (writes music-<cut>-stem.wav beside the song), then the ducked VO mix and captions exactly as in ' + S + '/references/narration.md (mix_vo.py picks the stem; captions.py)' : ''}; python3 ${S}/audio/verify_sync.py --wav <final wav or mix> --cut ${P}/build/cut-<cut>.json ; loudness -14 LUFS (+-1), true peak <= -1 dBTP.${TTS_DRY && VO_OK ? ' The narration is a DRY RUN: its mix and captions are placeholders that render.mjs/build.mjs refuse; deliver music-only cuts and say so.' : ''}
+3. Final audio per cut: python3 ${S}/audio/arrange.py --project ${P} --cut <cut>${VO_OK ? ' (the music-only song), then the unmastered bed python3 ' + S + '/audio/arrange.py --project ' + P + ' --cut <cut> --stem (writes music-<cut>-stem.wav beside the song), then the ducked VO mix and captions exactly as in ' + S + '/references/narration.md (mix_vo.py picks the stem; captions.py)' : ''}; python3 ${S}/audio/verify_sync.py --wav <final wav or mix> --cut ${P}/build/cut-<cut>.json ; loudness -14 LUFS (+-1), true peak <= -1 dBTP.${VO_PLACEHOLDER ? ' The narration is a placeholder (TTS dry run): its mix and captions are placeholders that render.mjs/build.mjs refuse. Deliver music-only cuts: set "captions": {"enabled": false} in reel.config.json, never pass --allow-placeholder, and say so in "issues".' : ''}
 Return per-cut numbers; "audio" = the m4a for the MP4, "embedAudio" = the smaller m4a for the HTML when one exists.`
 
 const boundaryPrompt = (cut) => `${RULES}
@@ -258,7 +276,7 @@ Poster frame: ${posterHint}. In other cuts use the same scene at the same local 
 2. node ${S}/runtime/build.mjs --project ${P} --cuts ${CUTS.join(',')} --out ${P}/dist/${SLUG}-v${VERSION}.html --verify (audio per cut defaults to the 96k -embed copy of the mix, else of the music; --verify boots the file alone in an empty folder)
 2b. python3 ${S}/tools/motion_qa.py --video <each MP4> --cut ${P}/build/cut-<cut>.json : no frozen run > 0.5 s, no unexplained one-frame pop, no near-static hold.
 3. Checks, one entry each in "checks": ffprobe frames = fps x duration per cut; loudness and true peak per MP4 (python3 ${S}/audio/synth.py loudness); verify_sync.py per cut; build.mjs --verify passed (the HTML alone in an empty folder renders every cut, decodes fonts, images and audio, zero console errors; spot-check frames with node ${S}/runtime/stills.mjs --html <copy> --cut <cut> <times> --out <dir>); grep -nE '(src|href)="(https?:)?//|src="[^d]' on the HTML finds nothing; grep -nE 'Math\\.random|Date\\.now|performance\\.now|new Date' ${P}/scenes/*.js finds nothing; captions parse when narrated; covers and share copies exist.
-Never overwrite a delivered file: if this version already exists in P/dist, bump the patch version and say so in "issues".`
+Never overwrite a delivered file: if this version already exists in P/dist, bump the patch version and say so in "issues".${VO_PLACEHOLDER ? '\nThe narration is a placeholder (TTS dry run): deliver music-only cuts with captions off (the integrator set reel.config.json "captions": {"enabled": false}); never pass --allow-placeholder. If render.mjs or build.mjs still refuses placeholder captions, report it in "issues" instead of forcing it.' : ''}`
 
 const finalReviewPrompt = (cut, round, prev) => `${RULES}
 ROLE: whole-reel reviewer for cut "${cut}", round ${round}. Read-only except ${P}/build/review/reel/${cut}/r${round}/.
@@ -315,9 +333,10 @@ const [assetResults, narration] = await parallel([
   () => (NARRATION ? agent(narrationPrompt(), { label: 'narration', phase: 'Narration', schema: NARR }) : Promise.resolve(null)),
 ])
 VO_OK = NARRATION && !!narration
+VO_PLACEHOLDER = VO_OK && (TTS_DRY || narration.mode === 'dry-run' || narration.keyMissing === true)
 const blocked = (assetResults || []).filter(Boolean).flatMap((r) => r.blocked.map((b) => `${r.kind}:${b.name}: ${b.reason} -> ${b.nextStep}`))
 if (missing.length) log(`Assets: ${missing.length} requested, ${blocked.length} blocked.`)
-if (NARRATION) log(narration ? `Narration: ${narration.mode}${narration.keyMissing ? ' (no key configured)' : ''}, ${narration.lines} lines, ${narration.minBarsRaised.length} scenes lengthened.` : 'Narration: FAILED; continuing without VO.')
+if (NARRATION) log(narration ? `Narration: ${narration.mode}${narration.keyMissing ? ' (no usable key: dry run)' : ''}, ${narration.lines} lines, ${narration.minBarsRaised.length} scenes lengthened.` : 'Narration: FAILED; continuing without VO.')
 
 // ───────── 4. Build -> review -> fix (draft render released when every first build lands) ─────────
 const ITEMS = SCENE_IDS.map((id) => ({ kind: 'scene', id })).concat([{ kind: 'audio', id: 'audio' }])
@@ -418,6 +437,11 @@ const openIssues = []
   .concat(failedChecks)
   .concat(render ? render.issues : [])
 if (tone && tone.narrationRecommended && !NARRATION) openIssues.push('Tone pass recommends narration; rerun with narration: true to add it.')
+if (VO_PLACEHOLDER) {
+  openIssues.push(TTS_DRY
+    ? 'Narration ran as a TTS dry run (liveTts not set): the cuts ship music-only. For the real voice, have the user set up their own Gemini key (BYOK, references/narration.md section 9), confirm key status / key check in the main session, then re-run with liveTts: true.'
+    : 'Narration fell back to a dry run: no usable Gemini key (BYOK). Have the user set up their own key (references/narration.md section 9), confirm key status / key check in the main session, then re-run with liveTts: true.')
+}
 
 return {
   project: P,

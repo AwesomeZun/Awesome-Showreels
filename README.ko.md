@@ -30,7 +30,7 @@
 - 🧰 **이야기에 필요한 시각 도구를 모두 씁니다.** 코드로 그린 2D는 항상 쓰고, 마스코트 컷아웃(GPT-image-2 + macOS Vision + OpenCV), 실제 앱 화면, 실제 터미널·CLI 녹화, PDF 도판, 웹 화면, 실제 데이터는 주장을 증명할 때 씁니다.
 - 🥁 **어떤 길이든 같은 BPM으로 만듭니다.** 15초, 30초, 60초 컷이 같은 마디 그리드 위에 놓입니다. 긴 컷은 살아 있는 홀드와 장면을 더할 뿐, 움직임을 느리게 만들지 않습니다.
 - 🔊 **음악과 효과음을 박자에 맞춰 합성합니다.** 모든 히트는 화면이 읽는 바로 그 계획의 큐이며, 렌더 뒤에 측정합니다. 모든 큐는 한 프레임 안에 맞고, 라우드니스는 -14 LUFS, 트루 피크는 -1 dBTP 이하입니다.
-- 🎤 **내레이션은 선택 사항입니다.** Gemini TTS로 만들고, 모든 클립을 음성 인식으로 검증하며, 더킹 믹스와 번인 자막까지 처리합니다.
+- 🎤 **내레이션은 선택 사항이며 BYOK 방식입니다.** 사용자 본인의 API 키로 Gemini TTS를 쓰고, 모든 클립을 음성 인식으로 검증하며, 더킹 믹스와 번인 자막까지 처리합니다.
 - 📦 **검증된 결과물을 냅니다.** 컷마다 커버와 공유용 사본이 붙은 1080p60 MP4를 만들고, 모든 컷과 오디오가 들어 있는 HTML 파일 하나를 만듭니다. 이 HTML은 어느 폴더에서든 오프라인으로 재생됩니다.
 
 ---
@@ -82,7 +82,8 @@
 - 문장을 묶음으로 합성하고 긴 쉼에서 나눈 뒤, **음성 인식으로 모든 클립을 검증합니다.** 스타일 태그가 읽혀 들어갔거나 단어가 빠진 클립은 다시 만듭니다.
 - 목소리에 맞춰 장면 길이를 **마디 단위로** 늘리므로, 내레이션 때문에 템포가 바뀌거나 프레임이 느려지지 않습니다.
 - 목소리가 나오는 동안 음악과 효과음을 줄여 섞고, 같은 타임라인에서 SRT/VTT 자막과 번인 자막을 만듭니다.
-- 환경 변수 `GEMINI_API_KEY`가 필요합니다. `--dry-run`을 쓰면 키 없이 자리표시 클립으로 전체 과정을 오프라인에서 만들고 시험할 수 있습니다. 자리표시 클립은 렌더·빌드 도구가 배포용으로 받지 않습니다.
+- **BYOK(본인 키 사용) 방식입니다.** 스킬에는 키가 들어 있지 않고, 스킬이 키를 찾아다니지도 않습니다. 요금은 사용자 본인의 Google 계정에 청구됩니다. macOS에서는 직접 연 터미널 창에서 `python3 ~/.claude/skills/motion-showreel/narration/tts_gemini.py key save`를 실행해 본인의 Gemini API 키를 키체인에 한 번 저장하시면 됩니다(입력이 화면에 보이지 않습니다). Claude Code의 `!` 명령에는 숨김 입력을 받을 터미널이 없으므로 이 방법을 쓸 수 없습니다. 위 경로는 개인 스킬 기준이며, 플러그인으로 설치하셨다면 설정 절의 `find` 명령이 보여 주는 플러그인 안 `motion-showreel` 폴더의 같은 파일을, 저장소를 클론하셨다면 `skills/motion-showreel/narration/tts_gemini.py`를 쓰시면 됩니다. 또는 Claude Code를 시작할 터미널에서 시작하기 전에 `export GEMINI_API_KEY=...`(또는 `GOOGLE_API_KEY`)를 실행하시거나, 직접 고른 파일이나 변수를 `--env-file` / `--api-key-env 변수명`으로 지정하셔도 됩니다. `key status`는 어느 경로의 키를 쓰는지만 보여 주고(키 자체는 보여 주지 않습니다), `key check`는 쿼터를 쓰지 않고 키를 확인합니다. 키를 채팅창에 붙여 넣지 마세요.
+- `--dry-run`을 쓰면 키 없이 자리표시 클립으로 전체 과정을 오프라인에서 만들고 시험할 수 있습니다. 자리표시 클립은 렌더·빌드 도구가 배포용으로 받지 않습니다.
 
 ---
 
@@ -156,7 +157,7 @@ skills/motion-showreel/
   narration/                 tts_gemini.py, vo_timeline.py, mix_vo.py, captions.py
   templates/                 style.schema.json, STORYBOARD, reel.config, narration, showreel-workflow.js
   examples/                  playful-app, research-cli (원본, 스타일, 스토리보드, 장면, dist/ 플레이어)
-tests/                       플래너, 오디오 싱크, CLI 캡처, 도구, 런타임 회귀 테스트
+tests/                       플래너, 오디오 싱크, CLI 캡처, 도구, BYOK 키 처리, 런타임 회귀 테스트
 ```
 
 ---
@@ -248,7 +249,7 @@ node $S/runtime/stills.mjs --project $P --serve        # 라이브 플레이어:
 | numpy, scipy, Pillow, opencv-python이 설치된 Python 3.9+ | 톤 패스, 플래너, 음악, 내레이션, 컷아웃, 텍스트 없는 UI 판 | 선택: `pymupdf`(PDF), `fonttools` + `brotli`(HTML 폰트 서브셋) |
 | macOS 14+와 `swiftc` *(선택)* | Vision 피사체 분리 | 다른 OS에서는 OpenCV 경로를 씁니다 |
 | ChatGPT 로그인이 된 Codex CLI *(선택)* | GPT-image-2 마스코트 포즈 | 동의하실 때만 씁니다. ChatGPT 사용량이 차감됩니다 |
-| `GEMINI_API_KEY` *(선택)* | 내레이션 | `--dry-run`은 키 없이 동작합니다 |
+| 본인의 Gemini API 키 *(선택, BYOK)* | 내레이션 | 환경 변수, macOS 키체인(`key save`), `--env-file` 중 하나로 넘깁니다. `--dry-run`은 키 없이 동작합니다 |
 | LibreOffice, poppler *(선택)* | 발표 자료, PDF 대체 경로 | |
 
 ---
@@ -256,7 +257,7 @@ node $S/runtime/stills.mjs --project $P --serve        # 라이브 플레이어:
 ## 🔬 테스트
 
 ```bash
-python3 -B -m unittest discover -s tests        # 플래너, 오디오 싱크, CLI 캡처와 마스킹, 도구
+python3 -B -m unittest discover -s tests        # 플래너, 오디오 싱크, CLI 캡처와 마스킹, 도구, BYOK 키 처리
 node --test tests/*.test.mjs                    # 런타임: 오디오 선택 순서, 자리표시 차단
 ```
 

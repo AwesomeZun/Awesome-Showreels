@@ -157,7 +157,8 @@ To narrate the 30-s cut (Gemini TTS, `../../references/narration.md`):
 ```bash
 # in reel.config.json set "captions": {"enabled": true}
 python3 $S/narration/tts_gemini.py batch --project . --dry-run     # placeholder clips, no network: check the plan first
-python3 $S/narration/tts_gemini.py batch --project .               # real voice (needs GEMINI_API_KEY)
+python3 $S/narration/tts_gemini.py key status && python3 $S/narration/tts_gemini.py key check   # BYOK: your own Gemini key (../../references/narration.md section 9)
+python3 $S/narration/tts_gemini.py batch --project .               # real voice, billed to your key
 python3 $S/narration/vo_timeline.py --project .
 python3 $S/timing/plan_cut.py --project . --cut short,30
 python3 $S/narration/captions.py --project . --cut 30

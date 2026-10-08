@@ -90,7 +90,9 @@ estimates and verification).
 S=<skill>; P=<project>
 python3 $S/narration/vo_timeline.py --project $P --estimate        # plan from text estimates, no API call
 python3 $S/narration/tts_gemini.py batch --project $P --dry-run     # placeholder clips: test everything offline
-python3 $S/narration/tts_gemini.py batch --project $P [--env-file F] # real clips: batched, verified, cached
+python3 $S/narration/tts_gemini.py key status                       # BYOK (section 9): source only; exit 1: no key, stay on --dry-run
+python3 $S/narration/tts_gemini.py key check                        # free model lookup that validates the key
+python3 $S/narration/tts_gemini.py batch --project $P [--env-file <file the user named>]   # real clips: batched, verified, cached
 python3 $S/narration/vo_timeline.py --project $P                    # real durations -> vo-timeline.json, vo-minbars*.json
 python3 $S/timing/plan_cut.py --project $P --cut 30                 # picks up the minimums (bars grow; BPM never changes)
 python3 $S/audio/arrange.py --project $P --cut 30 --stem            # unmastered bed: build/music-30-stem.wav (song kept)
@@ -164,13 +166,52 @@ up automatically.
 - Never transcribe clip by clip with a separate transcribe model (one had a 100 requests/day limit); batch the clips.
 - Prices change; check current Gemini pricing before large jobs. Tests and CI use `--dry-run` only.
 
-## 9. API key
+## 9. API key (BYOK)
 
-Read from `GEMINI_API_KEY` or `--env-file FILE` (only its `GEMINI_API_KEY=` line is parsed; reading stops there).
+Narration is **bring your own key**: the skill ships no key, never goes looking for one, and every request is billed
+to the user's own Google account. The key is taken from the first source that has one; an explicit `--env-file` or
+`--api-key-env` must yield a key (it never falls back to the next source):
+
+| Order | Source | Notes |
+|---|---|---|
+| 1 | `--env-file FILE` | a file the user names; only its key lines are parsed, and a `GEMINI_API_KEY=` line wins over a `GOOGLE_API_KEY=` line wherever each sits |
+| 2 | `--api-key-env NAME` | the NAME of the user's own variable (never the key itself) |
+| 3 | `GEMINI_API_KEY` | exported in the terminal that starts Claude Code, before it starts (or in the shell profile) |
+| 4 | macOS Keychain item `motion-showreel-gemini` | written by `key save` in the user's own terminal (`--keychain-service` to rename) |
+| 5 | `GOOGLE_API_KEY` | a generic name other Google tools use too, so it ranks below the Keychain item saved on purpose |
+| 6 | hidden terminal prompt | only when a person runs the command in a terminal; kept in memory for that run; `--no-prompt` disables it |
+
+`key status` names the source in use and every other source that also holds a key (names only); a real batch logs
+the same line once.
+
+```bash
+python3 $S/narration/tts_gemini.py key status    # which source would be used (never prints the key); exit 1 if none
+python3 $S/narration/tts_gemini.py key check     # validates it with a free model lookup (no quota)
+python3 $S/narration/tts_gemini.py key save      # macOS, in the user's own terminal: typed hidden into the login Keychain
+python3 $S/narration/tts_gemini.py key forget    # removes that Keychain item (save / forget with --dry-run change nothing)
+```
+
+Rules for Claude:
+- Never look for a key yourself: never open, cat, grep or print an env file (this project's `.env` included), shell
+  history, dotfiles or configs, and never reuse a key you happen to see. When the user names a file, pass it to the
+  tool as `--env-file FILE` (the tool reads only the key line).
+- Never ask the user to paste the key into the chat, and never suggest a `!` command for it. Claude Code keeps `!`
+  command lines in the transcript and runs them without a terminal: `key save` cannot ask for hidden input there,
+  and an `! export ...` is gone before the next command. Instead, ask the user to do one of these, then tell you:
+  - macOS: open a separate terminal window (Terminal, iTerm) and run
+    `python3 <absolute path of S>/narration/tts_gemini.py key save` there (write out the real path);
+  - export `GEMINI_API_KEY` in the terminal they start Claude Code from, before starting it (or in their shell
+    profile, then restart Claude Code);
+  - name a file or a variable for `--env-file` / `--api-key-env`.
+- Then run `key status` and `key check` yourself. If either fails, stay on `--dry-run` and tell the user; do not look
+  for another key. Workflow sub-agents cannot ask the user: set the key up before running a workflow with
+  `liveTts: true`.
+
 The key travels only in the `x-goog-api-key` header, and only to Google's https endpoint or a loopback mock: a
-`--api-base` / `GEMINI_API_BASE` on any other host is refused unless `--allow-custom-api-base`, and plain http only
-reaches loopback. It is never printed, logged, written or put in a URL. Do not
-open or print `.env` files yourself; pass them with `--env-file`.
+`--api-base` / `GEMINI_API_BASE` on any other host is refused unless `--allow-custom-api-base`, plain http only
+reaches loopback (never through a proxy), and redirects are never followed. It is never printed, logged, cached,
+written to sidecars or put in a URL; logs name the source only. A key passed as an argument (`--api-key`, `--key`)
+is refused without being shown, and so is a key with spaces, line breaks or non-ASCII characters.
 
 ## 10. Pitfalls already paid for
 

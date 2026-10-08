@@ -47,7 +47,7 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 Required: Node 20+, Python 3.9+ with numpy, scipy, Pillow and opencv-python (cutouts, text-free UI plates),
 ffmpeg with libx264. Optional: PyMuPDF (PDFs), fontTools + brotli (font subsets in the HTML), macOS 14+ with
 `swiftc` (Vision cutouts), `soffice` (pptx/odp), poppler, the Codex CLI with a ChatGPT login (GPT-image-2 poses),
-`GEMINI_API_KEY` (narration). Regression tests: `python3 -B -m unittest discover -s tests` and
+your own Gemini API key (narration; BYOK). Regression tests: `python3 -B -m unittest discover -s tests` and
 `node --test tests/*.test.mjs` from the repo root.
 
 ## Project folder `P`
@@ -82,9 +82,15 @@ for paid generation); otherwise default to a 30-s and a 15-s cut, music-led unle
    only with the user's consent (each image spends their ChatGPT quota): `tools/imagegen.md`.
 3. **Narration on or off.** On for papers, docs, explainers, pitches and data-heavy claims; off for playful launch
    and brand teasers, 20-s-or-shorter cuts and muted autoplay. `style.narration.recommended` is a draft; ask the
-   user when it matters. Real TTS needs `GEMINI_API_KEY` and spends quota: plan with `--dry-run` first. Dry-run
-   clips and the captions timed from them are placeholders: render and build refuse them in deliverables.
-   (`references/narration.md`)
+   user when it matters. Real TTS is **BYOK**: the user's own Gemini API key, billed to them. Never look for a key
+   yourself: no `.env` file (this project's included) unless the user names it for `--env-file`, no shell history,
+   dotfiles or configs. Never ask for the key in chat and never suggest a `!` command for it: both land in the
+   transcript, and `!` commands have no terminal for hidden input. Ask the user to run
+   `python3 <S>/narration/tts_gemini.py key save` in a separate terminal window (macOS Keychain, typed hidden; write
+   out the absolute path of S), or to export `GEMINI_API_KEY` in the terminal they start Claude Code from, before
+   starting it. Then run `key status` (names the source, never the key) and `key check` (free model lookup) yourself.
+   Plan with `--dry-run` first. Dry-run clips and the captions timed from them are placeholders: render and build
+   refuse them in deliverables. (`references/narration.md` section 9)
 4. **Length.** Default 30 s, plus a 15-s cut edited on its own (not trimmed). 60 s or more only with optional scenes
    written for it (see "Extend to a longer cut"). Same BPM and the same in/out choreography in every cut; the planner
    adds bars. Slow-down variants (`--scale`, `--warp`) exist only for viewers who must read dense material, and are
@@ -145,6 +151,8 @@ ffmpeg -i <slug>-15-v1.0.0.mp4 -vf "fps=12,scale=600:-1:flags=lanczos,hqdn3d=3:2
 ```bash
 python3 "$S/narration/vo_timeline.py" --project P --estimate           # plan from text estimates, no network
 python3 "$S/narration/tts_gemini.py" batch --project P --dry-run       # placeholder clips: test the chain offline
+python3 "$S/narration/tts_gemini.py" key status                        # BYOK: names the source, never the key; exit 1: no key, stay on --dry-run
+python3 "$S/narration/tts_gemini.py" key check                         # free model lookup that validates the key
 python3 "$S/narration/tts_gemini.py" batch --project P                 # real voice, verified by STT (user consent)
 python3 "$S/narration/vo_timeline.py" --project P                      # real durations -> vo-minbars.json
 python3 "$S/timing/plan_cut.py" --project P --cut 30                   # minimums grow in whole bars, BPM unchanged
@@ -178,8 +186,11 @@ Captions burn in when reel.config `captions.enabled` is true, or, when reel.conf
 **Many scenes or a deadline:** offer the multi-agent production in `templates/showreel-workflow.js` (a Claude Code
 Workflow script: tone, storyboard, assets, narration, build/review/fix per scene, integrator checks; about 25-40
 agents) and run it only with the user's go-ahead; `stopAfter: "tone"` or `"storyboard"` pauses for approval, and
-narration stays a TTS dry run unless `liveTts: true`. Or follow `references/multi-agent.md` with subagents. Build the
-harness first (style, storyboard, plan, assets, stub scenes, a rendering timing draft), then fan out.
+narration stays a TTS dry run unless `liveTts: true`. Workflow agents cannot ask for a key: before passing
+`liveTts: true`, have the user set up their own key and see `key status` and `key check` pass in this session (a file
+or variable the user names goes in `ttsEnvFile` / `ttsApiKeyEnv`). Or follow `references/multi-agent.md` with
+subagents. Build the harness first (style, storyboard, plan, assets, stub scenes, a rendering timing draft), then fan
+out.
 
 ## Scene rules (binding for every scene file)
 

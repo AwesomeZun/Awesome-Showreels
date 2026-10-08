@@ -119,8 +119,10 @@ python3 $S/narration/vo_timeline.py --project $P
 python3 $S/timing/plan_cut.py --project $P --cut 15,30,60      # narration minimums; the edit stays the same here
 ```
 
-To narrate for real: synthesize (`tts_gemini.py batch --project $P`, key from `GEMINI_API_KEY` or `--env-file`),
-listen, `tts_gemini.py audit --project $P`, set `"captions": {"enabled": true}`, then:
+To narrate for real (BYOK: your own Gemini key from an environment variable, the `key save` Keychain item or an
+`--env-file` you name; see `../../references/narration.md` section 9 and confirm with `tts_gemini.py key status` and
+`key check`): synthesize (`tts_gemini.py batch --project $P`), listen, `tts_gemini.py audit --project $P`, set
+`"captions": {"enabled": true}`, then:
 
 ```bash
 python3 $S/narration/vo_timeline.py --project $P

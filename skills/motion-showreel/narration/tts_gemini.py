@@ -9,11 +9,18 @@ Subcommands
   audit   --project P [--fix [--force]]   re-verify every cached line clip (12 lines per call); --fix deletes the bad
           ones, but refuses when most clips fail (usually an STT problem) unless --force
   sample  --out DIR [--project P] [--voices A,B] [--styles "[a]|[b]"] [--text TEXT]   voice/style auditions
+  key     status|check|save|forget   BYOK key: show where your key comes from (never the key), validate it with a free
+          model lookup, or save/remove it in the macOS Keychain (save runs in your own terminal: typed hidden, never an
+          argument; --dry-run changes nothing)
   selftest                         offline checks (RIFF parsing, retry delays, key line parsing, splitting, comparison)
 Common: --dry-run (placeholder clips sized by the text estimate, simulated transcripts; no network, no key),
-        --env-file FILE (reads only its GEMINI_API_KEY= line), --model, --stt-model, --cache, --rpm,
+        BYOK key sources (first found wins): --env-file FILE (only its key lines; GEMINI_API_KEY= wins), --api-key-env
+        NAME, GEMINI_API_KEY, the Keychain item from `key save`, GOOGLE_API_KEY, a hidden terminal prompt (--no-prompt
+        disables it). An explicit --env-file / --api-key-env must yield a key (no fallback); a key is never an argument.
+        --model, --stt-model, --cache, --rpm,
         --api-base URL (or env GEMINI_API_BASE; e.g. a local mock server in tests; the key only ever goes to Google's
-        https endpoint or a loopback host unless --allow-custom-api-base).
+        https endpoint or a loopback host unless --allow-custom-api-base, never through a redirect, and loopback
+        requests never through a proxy).
 
 How a batch works: up to 8 lines that share voice/style/model go into ONE request, joined with " [long pause] " and
 preceded by a throw-away lead sentence (the model sometimes reads the style tag aloud or ad-libs before the first
@@ -36,12 +43,15 @@ import io
 import json
 import os
 import re
+import shlex
 import shutil
 import ssl
+import subprocess
 import sys
 import tempfile
 import threading
 import time
+import traceback
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -99,7 +109,9 @@ _print_lock = threading.Lock()
 
 
 def log(msg: str) -> None:
-    """Print progress; if the reader went away (| head), keep working silently instead of dying mid-synthesis."""
+    """Print progress (never a key: see redact); if the reader went away (| head), keep working silently instead of
+    dying mid-synthesis."""
+    msg = redact(msg)
     with _print_lock:
         try:
             print(msg, flush=True)
@@ -114,30 +126,198 @@ class ApiError(RuntimeError):
     pass
 
 
-# ---------------------------------------------------------------- key
-def read_key(env_file: str | None) -> str:
-    """GEMINI_API_KEY from --env-file (only that line is parsed; reading stops there) or the environment."""
+# ---------------------------------------------------------------- key (BYOK)
+# Bring your own key. The skill ships no key and never goes looking for one: it uses only the key the user provides, in
+# this order: --env-file FILE (only its key lines; GEMINI_API_KEY= wins over GOOGLE_API_KEY=), --api-key-env NAME,
+# GEMINI_API_KEY, the macOS Keychain item written by `key save`, GOOGLE_API_KEY (a generic name other Google tools use
+# too, so it ranks below the item saved on purpose), or a hidden prompt on a terminal (kept in memory for this run
+# only). An explicit --env-file / --api-key-env never falls back. The key is sent only in the x-goog-api-key header to
+# Google's endpoint (or a loopback mock), never through a redirect, and is never printed, logged, cached or written.
+SELF = Path(__file__).resolve()
+KEY_ENVS = ("GEMINI_API_KEY", "GOOGLE_API_KEY")
+KEYCHAIN_SERVICE = "motion-showreel-gemini"
+KEYCHAIN_ACCOUNT = "gemini-api-key"
+SECURITY = "/usr/bin/security"   # absolute path: a `security` earlier in PATH must never see the key
+KEY_SHAPE = re.compile(r"AIza[0-9A-Za-z_\-]{20,}")   # Google API key shape, loosely (hidden in anything printed)
+KEY_CHARS = re.compile(r"[\x21-\x7e]{1,512}")      # printable ASCII without spaces: anything else breaks the header
+ENV_NAME = re.compile(r"[A-Za-z_][A-Za-z0-9_]{0,63}")
+_SECRETS: set[str] = set()   # keys this process resolved; redact() hides them in everything it prints
+BYOK_HELP = (
+    "Narration is BYOK: bring your own Gemini API key (usage is billed to your Google account). Give it one way:\n"
+    "  macOS, once, in your own terminal window (Claude Code's `!` commands have no terminal for hidden input):\n"
+    f"      python3 {shlex.quote(str(SELF))} key save\n"
+    "  export GEMINI_API_KEY=...  in the terminal you start Claude Code from, before starting it, or in your shell\n"
+    "      profile (never through `!`: the transcript keeps that line and the export is gone before the next\n"
+    "      command); GOOGLE_API_KEY and --api-key-env NAME work the same way\n"
+    "  --env-file FILE   a file you name yourself (an assistant never picks one); only its key line is read\n"
+    "  a hidden prompt   when you run a command yourself in a terminal; kept in memory for that run only\n"
+    "Never paste a key into a chat. Get one at https://aistudio.google.com/apikey . No key? Plan offline with --dry-run.")
+
+
+def redact(text: str) -> str:
+    """Hide every key this process resolved, and anything shaped like a Google API key, in text about to be shown."""
+    for s in tuple(_SECRETS):
+        if len(s) >= 6:
+            text = text.replace(s, "[key hidden]")
+    return KEY_SHAPE.sub("[key hidden]", text)
+
+
+def key_from_env_file(env_file: str, names: tuple = KEY_ENVS) -> tuple[str, str] | None:
+    """(value, NAME) of the key line to use: the first line with a value per NAME, picked in `names` order like the
+    environment (export prefix, quotes and trailing comments handled). Nothing else in the file is kept."""
+    try:
+        fh = open(Path(env_file).expanduser(), encoding="utf-8", errors="ignore")
+    except OSError as e:   # the path is not repeated: it may be a key typed in the wrong place
+        raise SystemExit(f"--env-file: cannot read the file you named ({e.strerror or type(e).__name__}); it takes a "
+                         "file path, never the key itself") from None
+    found: dict[str, str] = {}
+    with fh:
+        for line in fh:
+            s = line.strip()
+            if s.startswith("export "):
+                s = s[7:].lstrip()
+            name = s.split("=", 1)[0].strip() if "=" in s else ""
+            if name not in names or name in found:
+                continue
+            v = s.split("=", 1)[1].strip()
+            if v[:1] in ("'", '"'):
+                v = v[1:].split(v[0], 1)[0]
+            else:
+                v = v.split(" #", 1)[0].strip()
+            if v:
+                found[name] = v
+    return next(((found[n], n) for n in names if n in found), None)
+
+
+def keychain_available() -> bool:
+    return sys.platform == "darwin" and os.access(SECURITY, os.X_OK)
+
+
+def keychain_get(service: str = KEYCHAIN_SERVICE) -> str | None:
+    """The key saved by `key save`, or None (no item, locked keychain, not macOS)."""
+    if not keychain_available():
+        return None
+    r = subprocess.run([SECURITY, "find-generic-password", "-s", service, "-a", KEYCHAIN_ACCOUNT, "-w"],
+                       capture_output=True, text=True)
+    v = r.stdout.strip() if r.returncode == 0 else ""
+    return v or None
+
+
+def keychain_has(service: str = KEYCHAIN_SERVICE) -> bool:
+    """Whether the `key save` item exists (asks for its attributes only, never for the key)."""
+    if not keychain_available():
+        return False
+    return subprocess.run([SECURITY, "find-generic-password", "-s", service, "-a", KEYCHAIN_ACCOUNT],
+                          capture_output=True).returncode == 0
+
+
+def env_name_ok(name: str) -> bool:
+    """A plausible environment variable NAME, and not a key typed in its place."""
+    return bool(ENV_NAME.fullmatch(name)) and not KEY_SHAPE.search(name)
+
+
+def usable(v: str, src: str) -> tuple[str, str]:
+    """Refuse, without showing it, a key that cannot go into a header (urllib's error would quote it in full)."""
+    if not KEY_CHARS.fullmatch(v):
+        raise SystemExit(f"the key from {src} has spaces, line breaks or non-ASCII characters, or is over 512 characters "
+                         "(value not shown); set it again as a single line")
+    _SECRETS.add(v)
+    return v, src
+
+
+def ambient_sources(o) -> list:
+    """Sources tried when no --env-file / --api-key-env is given, in order: (description, lookup)."""
+    service = getattr(o, "keychain_service", None) or KEYCHAIN_SERVICE
+    return [("environment variable GEMINI_API_KEY", lambda: os.environ.get("GEMINI_API_KEY", "").strip()),
+            (f"macOS Keychain item {service}", lambda: keychain_get(service)),
+            ("environment variable GOOGLE_API_KEY", lambda: os.environ.get("GOOGLE_API_KEY", "").strip())]
+
+
+def resolve_key(o, prompt: bool = True) -> tuple[str | None, str]:
+    """(key, where it came from). The description names the source only; it never holds the key or any part of it.
+    An explicit --env-file or --api-key-env must yield a key: it never falls back to the next source."""
+    env_file = getattr(o, "env_file", None)
     if env_file:
-        with open(Path(env_file).expanduser(), encoding="utf-8", errors="ignore") as fh:
-            for line in fh:
-                s = line.strip()
-                if s.startswith("export "):
-                    s = s[7:].lstrip()
-                if not s.startswith("GEMINI_API_KEY="):
-                    continue
-                v = s.split("=", 1)[1].strip()
-                if v[:1] in ("'", '"'):
-                    v = v[1:].split(v[0], 1)[0]
-                else:
-                    v = v.split(" #", 1)[0].strip()
-                if v:
-                    return v
-                break
-        raise SystemExit(f"no GEMINI_API_KEY= line with a value in {env_file}")
-    v = os.environ.get("GEMINI_API_KEY", "").strip()
-    if v:
-        return v
-    raise SystemExit("GEMINI_API_KEY is not set: export it, or pass --env-file FILE (only its GEMINI_API_KEY= line is read)")
+        hit = key_from_env_file(env_file)
+        if not hit:
+            raise SystemExit(f"--env-file {Path(env_file).name}: no GEMINI_API_KEY= or GOOGLE_API_KEY= line with a value")
+        return usable(hit[0], f"--env-file {Path(env_file).name} ({hit[1]} line)")
+    name = getattr(o, "api_key_env", None)
+    if name:
+        if not env_name_ok(name):
+            raise SystemExit("--api-key-env takes the NAME of an environment variable (like MY_GEMINI_KEY), never the key "
+                             "itself (value not shown). If you typed a real key there, it is in your shell history: rotate it.")
+        v = os.environ.get(name, "").strip()
+        if not v:
+            raise SystemExit(f"--api-key-env {name}: that variable is empty or not set")
+        return usable(v, f"environment variable {name}")
+    for src, get in ambient_sources(o):
+        v = get()
+        if v:
+            return usable(v, src)
+    if prompt and not getattr(o, "no_prompt", False) and sys.stdin.isatty():
+        import getpass  # noqa: PLC0415
+        v = getpass.getpass("Gemini API key (hidden; used for this run only): ").strip()
+        if v:
+            return usable(v, "terminal prompt (this run only)")
+    return None, "none"
+
+
+def other_sources(o, used: str) -> list[str]:
+    """The other sources that also hold a key, by name only (so a stray GOOGLE_API_KEY never goes unnoticed)."""
+    service = getattr(o, "keychain_service", None) or KEYCHAIN_SERVICE
+    checks = [("environment variable GEMINI_API_KEY", lambda: bool(os.environ.get("GEMINI_API_KEY", "").strip())),
+              (f"macOS Keychain item {service}", lambda: keychain_has(service)),
+              ("environment variable GOOGLE_API_KEY", lambda: bool(os.environ.get("GOOGLE_API_KEY", "").strip()))]
+    return [src for src, present in checks if src != used and present()]
+
+
+def read_key(env_file: str | None) -> str:
+    """Non-interactive lookup kept for scripts and tests: --env-file's key line, else GEMINI_API_KEY / GOOGLE_API_KEY."""
+    if env_file:
+        hit = key_from_env_file(env_file)
+        if hit:
+            return hit[0]
+        raise SystemExit(f"--env-file {Path(env_file).name}: no GEMINI_API_KEY= or GOOGLE_API_KEY= line with a value")
+    for n in KEY_ENVS:
+        v = os.environ.get(n, "").strip()
+        if v:
+            return v
+    raise SystemExit("no Gemini API key.\n" + BYOK_HELP)
+
+
+def ssl_context(url: str):
+    if not url.startswith("https"):
+        return None
+    try:
+        import certifi  # noqa: PLC0415
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
+def is_loopback(base: str) -> bool:
+    return (urllib.parse.urlparse(base).hostname or "").lower() in ("localhost", "127.0.0.1", "::1")
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Never follow a redirect: urllib would copy every header, the key included, to whatever URL the server names.
+    The 3xx then surfaces as an HTTPError."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def opener_for(base: str):
+    """The urllib opener for every keyed request: no redirects, verified TLS, and no proxy for a loopback base (a proxy
+    would receive that plain-http request, key header included)."""
+    handlers = [NoRedirect()]
+    ctx = ssl_context(base)
+    if ctx is not None:
+        handlers.append(urllib.request.HTTPSHandler(context=ctx))
+    if is_loopback(base):
+        handlers.append(urllib.request.ProxyHandler({}))
+    return urllib.request.build_opener(*handlers)
 
 
 def retry_delay(body: str, header: str | None = None) -> float | None:
@@ -490,8 +670,7 @@ def safe_api_base(base: str, allow_custom: bool, dry: bool) -> str:
     base = base.rstrip("/")
     u = urllib.parse.urlparse(base)
     host = (u.hostname or "").lower()
-    loopback = host in ("localhost", "127.0.0.1", "::1")
-    if dry or loopback:
+    if dry or is_loopback(base):
         return base
     if u.scheme != "https":
         raise SystemExit(f"refusing to send the API key over {u.scheme or 'an unknown scheme'} to {host or base}: use https "
@@ -509,7 +688,9 @@ class Api:
         self.dry = o.dry_run
         self.base = safe_api_base(o.api_base or os.environ.get("GEMINI_API_BASE") or API_BASE,
                                   getattr(o, "allow_custom_api_base", False), self.dry)
+        self._opener = opener_for(self.base)
         self._key = None
+        self._key_lock = threading.Lock()
         self._lock = threading.Lock()
         self._last = 0.0
         self.calls = {"tts": 0, "stt": 0}
@@ -517,9 +698,17 @@ class Api:
         self.faults = parse_faults(os.environ.get("MSR_TTS_FAULTS", "")) if self.dry else {}
 
     def key(self) -> str:
-        if self._key is None:
-            self._key = read_key(self.o.env_file)
-        return self._key
+        """The BYOK key, resolved once. Commands call this on the main thread before any worker starts, and the lock
+        keeps two hidden prompts from ever sharing the terminal (overlapping getpass calls can leave echo on or off)."""
+        with self._key_lock:
+            if self._key is None:
+                k, src = resolve_key(self.o)
+                if not k:
+                    raise SystemExit("no Gemini API key.\n" + BYOK_HELP)
+                others = other_sources(self.o, src)
+                log(f"  · Gemini key: {src}" + (f" (also set, not used: {', '.join(others)})" if others else ""))
+                self._key = k
+            return self._key
 
     def _pace(self) -> None:
         if self.o.rpm and self.o.rpm > 0:
@@ -531,13 +720,6 @@ class Api:
 
     def post(self, model: str, body: dict, what: str, timeout: float) -> dict:
         url = f"{self.base}/models/{model}:generateContent"
-        ctx = None
-        if url.startswith("https"):
-            try:
-                import certifi  # noqa: PLC0415
-                ctx = ssl.create_default_context(cafile=certifi.where())
-            except ImportError:
-                ctx = ssl.create_default_context()
         data = json.dumps(body).encode("utf-8")
         tries = max(1, int(self.o.retries))
         for i in range(tries):
@@ -545,9 +727,11 @@ class Api:
             req = urllib.request.Request(url, data=data, method="POST",
                                          headers={"Content-Type": "application/json", "x-goog-api-key": self.key()})
             try:
-                with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+                with self._opener.open(req, timeout=timeout) as r:
                     return json.load(r)
             except urllib.error.HTTPError as e:
+                if 300 <= e.code < 400:
+                    raise ApiError(f"{what}: HTTP {e.code} redirect refused (the key is never sent on to another URL)") from None
                 raw = e.read().decode("utf-8", "ignore")
                 if e.code == 429 and DAILY.search(raw):
                     raise ApiError(f"{what}: daily quota exhausted (HTTP 429); wait for the reset or use a higher tier") from None
@@ -566,6 +750,8 @@ class Api:
                     time.sleep(wait)
                     continue
                 raise ApiError(f"{what}: {type(e).__name__}: {str(e)[:160]}") from None
+            except ValueError as e:   # a header or URL urllib refuses (UnicodeError too); its message may quote the key
+                raise ApiError(f"{what}: request refused before sending ({type(e).__name__}; details not shown)") from None
         raise ApiError(f"{what}: retries exhausted")
 
     def tts(self, prompt: str, voice: str, model: str, lang: str) -> np.ndarray:
@@ -908,6 +1094,8 @@ def cmd_batch(a) -> int:
             secs += e
         if chunk:
             jobs.append(chunk)
+    if jobs and not run.api.dry:
+        run.api.key()   # once, on this thread, before any worker exists (a hidden prompt must never run twice at once)
     err = None
     with cf.ThreadPoolExecutor(max_workers=max(1, min(a.jobs, len(jobs) or 1))) as ex:
         futs = [ex.submit(run.batch, chunk) for chunk in jobs]
@@ -944,6 +1132,8 @@ def cmd_synth(a) -> int:
         run.cdir = Path(tempfile.mkdtemp(prefix="msr-tts-"))
     p = V.cache_path(run.cdir, ln, dry=run.api.dry)
     if not p.exists():
+        if not run.api.dry:
+            run.api.key()
         run.single(ln)
     if not p.exists():
         log("! no clip produced")
@@ -962,7 +1152,10 @@ def cmd_verify(a) -> int:
     run.lang = a.lang or V.detect_lang(a.text)
     style = a.style if a.style is not None else V.DEFAULT_STYLE
     lines = [{"key": f"clip{k + 1}", "scene": "-", "text": t, "say": t, "style": style, "verify": True} for k, t in enumerate(a.text)]
-    res = run.listen([read_wav(Path(w)) for w in a.wav], lines)
+    segs = [read_wav(Path(w)) for w in a.wav]
+    if not run.api.dry:
+        run.api.key()
+    res = run.listen(segs, lines)
     bad = 0
     for w, (prob, tr) in zip(a.wav, res):
         bad += prob is not None
@@ -987,6 +1180,8 @@ def cmd_audit(a) -> int:
         ls = [ln for ln, _ in chunk]
         nbs = [[lines[j] for j in (order[ln["key"]] - 1, order[ln["key"]] + 1) if 0 <= j < len(lines)] for ln in ls]
         return run.listen(segs, ls, nbs)
+    if chunks and not run.api.dry:
+        run.api.key()   # once, on this thread, before the worker threads start
     with cf.ThreadPoolExecutor(max_workers=max(1, min(3, len(chunks)))) as ex:
         results = sum(ex.map(work, chunks), [])
     nbad = sum(1 for prob, _ in results if prob)
@@ -1039,6 +1234,8 @@ def cmd_sample(a) -> int:
     out.mkdir(parents=True, exist_ok=True)
     rows, reel = [], []
     model = a.model or (st["model"] if st else TTS_MODEL)
+    if not run.api.dry:
+        run.api.key()
     for v in voices:
         for s in styles:
             pcm = run.api.tts(join_prompt(s, [run.lead(), text]), v, model, run.lang)
@@ -1090,6 +1287,14 @@ def cmd_selftest(a) -> int:
         check("key line parsing (export, quotes)", read_key(str(kf)) == "selftest-not-a-key")
         kf.write_text("GEMINI_API_KEY=selftest-plain # note\n")
         check("key line parsing (plain, comment)", read_key(str(kf)) == "selftest-plain")
+        kf.write_text("GOOGLE_API_KEY=selftest-other-project\nGEMINI_API_KEY=selftest-gemini\n")
+        check("GEMINI_API_KEY line wins over an earlier GOOGLE_API_KEY line",
+              key_from_env_file(str(kf)) == ("selftest-gemini", "GEMINI_API_KEY"))
+    dummy = "AIza" + "selftestDUMMY" * 3
+    check("key-shaped text is hidden", dummy not in redact(f"--api-key-env {dummy}: not set"))
+    check("a key typed as a variable name is refused", not env_name_ok(dummy) and env_name_ok("MY_GEMINI_KEY"))
+    check("multi-line or spaced keys are refused", not KEY_CHARS.fullmatch("part-one\npart-two") and not KEY_CHARS.fullmatch("a b")
+          and bool(KEY_CHARS.fullmatch("selftest-plain")))
     check("ko number reading", V.ko_num_read("4,600") == "사천육백" and V.ko_num_read("10000") == "만" and V.ko_num_read("0.71") == "영점칠일")
     check("en number words", V.en_num_words("2026") == ["twenty", "twenty", "six"] and V.en_num_words("4,600") == ["four", "thousand", "six", "hundred"])
     texts = ["Here we go.", "TrailMix filters unsupported claims.", "It answers seven questions in 0.3 seconds.",
@@ -1137,23 +1342,121 @@ def cmd_selftest(a) -> int:
     return 0 if ok else 1
 
 
+# ---------------------------------------------------------------- key command (BYOK)
+def cmd_key(a) -> int:
+    """status: which source holds the key | check: validate it with a free model lookup | save / forget: macOS Keychain."""
+    service = a.keychain_service or KEYCHAIN_SERVICE
+    flag = f" --keychain-service {shlex.quote(service)}" if service != KEYCHAIN_SERVICE else ""
+    if a.action == "status":
+        k, src = resolve_key(a, prompt=False)
+        if not k:
+            log("Gemini key: not found\n" + BYOK_HELP)
+            return 1
+        others = other_sources(a, src)
+        log(f"Gemini key: found ({src})" + (f"\n  also set, not used: {', '.join(others)}" if others else ""))
+        return 0
+    if a.action == "check":
+        if a.dry_run:
+            log("key check: dry run, no network")
+            return 0
+        k, src = resolve_key(a)
+        if not k:
+            log("no Gemini API key.\n" + BYOK_HELP)
+            return 1
+        base = safe_api_base(a.api_base or os.environ.get("GEMINI_API_BASE") or API_BASE, a.allow_custom_api_base, False)
+        model = a.model or TTS_MODEL
+        req = urllib.request.Request(f"{base}/models/{model}", headers={"x-goog-api-key": k})
+        try:
+            with opener_for(base).open(req, timeout=30) as r:
+                json.load(r)
+            log(f"key check: OK ({src}); {model} is available to this key")
+            return 0
+        except urllib.error.HTTPError as e:
+            why = {400: "rejected: invalid key", 401: "rejected", 403: "forbidden: the key is restricted or the API is not enabled",
+                   404: f"the key works, but {model} was not found (check the model name)"}.get(e.code)
+            if why is None:
+                why = (f"HTTP {e.code} redirect refused (the key is never sent on to another URL)" if 300 <= e.code < 400
+                       else f"HTTP {e.code}")
+            log(f"key check: {why} ({src})")
+            return 0 if e.code == 404 else 1
+        except urllib.error.URLError as e:
+            log(f"key check: network error ({e.reason})")
+            return 1
+        except (OSError, ValueError, http.client.HTTPException) as e:   # header errors would quote the key: no details
+            log(f"key check: request failed ({type(e).__name__}; details not shown)")
+            return 1
+    if not keychain_available():
+        log("key save / forget use the macOS Keychain. Elsewhere, export GEMINI_API_KEY in the terminal you start Claude "
+            "Code from (before starting it), or pass --env-file / --api-key-env.")
+        return 1
+    if a.dry_run:
+        what = "save the key you type into" if a.action == "save" else "remove"
+        log(f"key {a.action}: dry run, nothing changed (would {what} Keychain item {service})")
+        return 0
+    if a.action == "save":
+        if not sys.stdin.isatty():
+            log("key save needs an interactive terminal for hidden input, and Claude Code's `!` commands have none. Run "
+                f"this in your own terminal window (Terminal, iTerm), then come back:\n  python3 {shlex.quote(str(SELF))} key save{flag}")
+            return 1
+        log(f"Saving your Gemini API key in the login Keychain as {service} (input hidden; asked twice).")
+        r = subprocess.run([SECURITY, "add-generic-password", "-U", "-s", service, "-a", KEYCHAIN_ACCOUNT,
+                            "-l", "motion-showreel Gemini API key", "-w"])
+        log(f"saved; check it with: python3 {shlex.quote(str(SELF))} key check{flag}" if r.returncode == 0 else "not saved")
+        return 0 if r.returncode == 0 else 1
+    r = subprocess.run([SECURITY, "delete-generic-password", "-s", service, "-a", KEYCHAIN_ACCOUNT],
+                       capture_output=True, text=True)
+    log(f"removed Keychain item {service}" if r.returncode == 0 else f"no Keychain item {service}")
+    return 0
+
+
 # ---------------------------------------------------------------- CLI
+class Parser(argparse.ArgumentParser):
+    """No abbreviated options (`--api-key` must never turn into `--api-key-env`) and no key-shaped value in errors
+    (argparse repeats unrecognized arguments and invalid values)."""
+
+    def __init__(self, *args, **kw):
+        kw.setdefault("allow_abbrev", False)
+        super().__init__(*args, **kw)
+
+    def error(self, message):
+        self.print_usage(sys.stderr)
+        self.exit(2, f"{self.prog}: error: {redact(message)}\n")
+
+
+class KeyArgument(argparse.Action):
+    """--api-key / --key and friends: a key given as an argument is refused at once, without being repeated."""
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        parser.exit(2, f"{parser.prog}: {option_string}: a key is never passed as a command-line argument (shell history, "
+                       "process lists and transcripts keep it; value not shown). If that was a real key, rotate it at "
+                       "https://aistudio.google.com/apikey , then give the new one as below.\n" + BYOK_HELP + "\n")
+
+
 def main() -> int:
-    common = argparse.ArgumentParser(add_help=False)
+    keyopts = Parser(add_help=False)   # what the key subcommand needs; every other subcommand gets these too
+    keyopts.add_argument("--env-file", metavar="FILE", help="BYOK: a file you name (an assistant never picks one); only its "
+                                                            "GEMINI_API_KEY= line (else its GOOGLE_API_KEY= line) is read; it "
+                                                            "must hold a key (no fallback)")
+    keyopts.add_argument("--api-key-env", metavar="NAME", help="BYOK: the NAME of an environment variable holding the key "
+                                                               "(never the key itself); it must be set (no fallback)")
+    keyopts.add_argument("--keychain-service", metavar="NAME", help=f"BYOK: macOS Keychain service name (default {KEYCHAIN_SERVICE})")
+    keyopts.add_argument("--no-prompt", action="store_true", help="never ask for the key on the terminal")
+    keyopts.add_argument("--api-key", "--key", "--apikey", "--api_key", "--gemini-api-key", "--gemini-key", "--google-api-key",
+                         dest="key_argument", nargs="?", action=KeyArgument, help=argparse.SUPPRESS)
+    keyopts.add_argument("--model", help=f"TTS model (default narration.json model or {TTS_MODEL})")
+    keyopts.add_argument("--api-base", help=f"API base URL (default {API_BASE}; env GEMINI_API_BASE). The key is sent only to "
+                                            "Google's https endpoint or a loopback mock unless --allow-custom-api-base")
+    keyopts.add_argument("--allow-custom-api-base", action="store_true",
+                         help="allow an https --api-base / GEMINI_API_BASE on another host (it receives the key)")
+    common = Parser(add_help=False, parents=[keyopts])
     common.add_argument("--dry-run", action="store_true", help="placeholders + simulated transcripts; no network, no key")
-    common.add_argument("--env-file", help="file holding a GEMINI_API_KEY= line (only that line is read)")
-    common.add_argument("--model", help=f"TTS model (default narration.json model or {TTS_MODEL})")
     common.add_argument("--stt-model", default=STT_MODEL, help=f"verification model (default {STT_MODEL})")
-    common.add_argument("--api-base", help=f"API base URL (default {API_BASE}; env GEMINI_API_BASE). The key is sent only to "
-                                           "Google's https endpoint or a loopback mock unless --allow-custom-api-base")
-    common.add_argument("--allow-custom-api-base", action="store_true",
-                        help="allow an https --api-base / GEMINI_API_BASE on another host (it receives the key)")
     common.add_argument("--cache", help="TTS cache folder (default env MSR_TTS_CACHE or P/build/vo/cache)")
     common.add_argument("--retries", type=int, default=12, help="HTTP retries per request (default 12)")
     common.add_argument("--rpm", type=float, default=0, help="client-side request pacing, requests per minute (0 = off)")
     common.add_argument("--tries", type=int, default=3, help="synthesis attempts per batch / line (default 3)")
     common.add_argument("--lang", help="language code (default narration.json lang or detected)")
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = Parser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("batch", parents=[common], help="synthesize all narration lines of a project")
     b.add_argument("--project", required=True)
@@ -1186,9 +1489,19 @@ def main() -> int:
     m.add_argument("--style")
     m.add_argument("--text")
     sub.add_parser("selftest", help="offline checks")
+    k = sub.add_parser("key", parents=[keyopts], help="BYOK key: status | check | save | forget (macOS Keychain)",
+                       description="Your own Gemini API key (BYOK): where it comes from, whether it works, and the macOS "
+                                   "Keychain item `key save` writes. The key itself is never printed and never an argument.")
+    k.add_argument("action", choices=["status", "check", "save", "forget"],
+                   help="status: which source holds the key (names only, never the key) | check: free models.get lookup "
+                        "with it | save: store it in the macOS Keychain, typed hidden in your own terminal | forget: "
+                        "remove that Keychain item")
+    k.add_argument("--dry-run", action="store_true", help="check: no network; save / forget: say what would happen, change nothing")
     a = ap.parse_args()
     if a.cmd == "selftest":
         return cmd_selftest(a)
+    if a.cmd == "key":
+        return cmd_key(a)
     try:
         return {"batch": cmd_batch, "synth": cmd_synth, "verify": cmd_verify, "audit": cmd_audit, "sample": cmd_sample}[a.cmd](a)
     except ApiError as e:
@@ -1196,5 +1509,15 @@ def main() -> int:
         return 2
 
 
+def _excepthook(kind, value, tb) -> None:
+    """Uncaught errors print as usual, minus any key (a header error, for one, quotes the header value)."""
+    sys.stderr.write(redact("".join(traceback.format_exception(kind, value, tb))))
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.excepthook = _excepthook
+    try:
+        code = main()
+    except SystemExit as e:   # exit messages may name a value the user typed: hide anything key-shaped
+        raise SystemExit(redact(e.code) if isinstance(e.code, str) else e.code) from None
+    sys.exit(code)
