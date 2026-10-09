@@ -13,6 +13,10 @@ from `source/`, reviewed by hand and written to `style.json` with the evidence f
 
 ![Style board derived from the source material](style-board.jpg)
 
+- Demo (short cut, with its music): [`assets/demo-sketchnote-v1.0.0.mp4`](../../../../assets/demo-sketchnote-v1.0.0.mp4)
+- Web version with every cut: [`dist/visual-notes-lab-v1.0.0.html`](dist/visual-notes-lab-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html))
+- Cuts: `short` (8 bars = 18.5 s), `30` (13 bars = 30.0 s), all at 104 BPM.
+
 ## Folder
 
 ```

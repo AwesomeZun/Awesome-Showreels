@@ -28,11 +28,17 @@
         for (let k = 0; k < K; k++) {
           const d = D.dot[j * K + k], m = d[2], pct = d[3], e = Ease.outQuint(clamp((at(j * 0.125 + k * 0.03)) * 3));
           if (e <= 0) continue;
-          const r = (4 + 24 * Math.sqrt(pct)) * e;
+          const r = (4 + 24 * Math.sqrt(pct)) * e * (1 + 0.04 * Math.sin(t * 2.2 + j * 0.7 + k));
           ctx.fillStyle = cmap(m * e); circle(ctx, x, Y0 + k * RH - 8, r); ctx.fill();
           if (pct > 0.3) { ctx.strokeStyle = 'rgba(17,20,24,0.25)'; ctx.lineWidth = 1; ctx.stroke(); }
         }
       });
+      // hold: one gene per beat lights its column, walking the whole panel
+      if (at(3) > 0) {
+        const gj = Math.floor(at(3)) % G.length, x = X0 + gj * CW, a = 0.5 + 0.5 * Math.exp(-(at(3) % 1) * 3);
+        ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.fillStyle = rgba(P.accent2, 0.1 * a);
+        rr(ctx, x - CW / 2 + 4, Y0 - 40, CW - 8, RH * K + 10, 8); ctx.fill(); ctx.restore();
+      }
       // the KRT8 / CLDN4 / SFN block
       const bx = Ease.outQuint(clamp(at(2.5) * 2));
       if (bx > 0) {

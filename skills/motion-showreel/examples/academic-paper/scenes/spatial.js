@@ -49,8 +49,15 @@
         const x = lerp(ux, sx, mv), y = lerp(uy, sy, mv) - lift;
         const hero = k === 1 || k === 5 || k === 7;
         const a = lerp(0.92, hero ? 0.95 : 0.16, focus);
-        return [x, y, D.colors[k], a, lerp(3.4, 2.6, mv) + (k === 1 ? focus * 0.9 : 0)];
+        const br = mv >= 1 ? 0.9 : 0, beat = (lt / bs) % 1, pulse = k === 1 && focus > 0.5 ? 0.9 * Math.exp(-beat * 5) : 0;
+        return [x + br * Math.sin(t * 1.2 + D.h[i] * 31), y + br * Math.cos(t * 1.4 + D.h[i] * 17), D.colors[k], a, lerp(3.4, 2.6, mv) + (k === 1 ? focus * 0.9 : 0) + pulse];
       });
+      // the imaging scan: a thin line sweeps the section once per bar in the hold
+      if (lt > 4 * bs) {
+        const sp = ((lt - 4 * bs) / (4 * bs)) % 1, sx = R[0] + sp * R[2];
+        ctx.save(); ctx.fillStyle = linear(ctx, sx - 60, 0, sx, 0, [[0, rgba(P.accent2, 0)], [1, rgba(P.accent2, 0.16)]]); ctx.fillRect(sx - 60, R[1], 60, R[3]);
+        ctx.fillStyle = rgba(P.accent2, 0.6); ctx.fillRect(sx, R[1], 2, R[3]); ctx.restore();
+      }
       // niche ring (dashed, slow rotation) and its label
       const nk = Ease.outQuint(clamp(at(3) * 1.6));
       if (nk > 0) {

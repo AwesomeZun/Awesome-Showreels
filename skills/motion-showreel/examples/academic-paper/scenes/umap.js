@@ -30,7 +30,8 @@
           else if (pt <= sweep * 1.05) col = A.ptColor(pt);
           else col = toHex(mix(D.colors[k], '#D5DAE2', 0.7 * bMode));
         }
-        return [x, y, col, a, 3.1 + 0.5 * fly];
+        const br = fly >= 1 ? 1.2 : 0;                                         // settled cells breathe a little
+        return [x + br * Math.sin(t * 1.3 + D.h[i] * 40), y + br * Math.cos(t * 1.1 + D.h[i] * 23), col, a, 3.1 + 0.5 * fly];
       });
       // cluster names on the plot (white halo), one per eighth
       D.clusters.forEach((c, k) => {
@@ -69,6 +70,16 @@
         if (dp > 0.05) {
           const n = Math.max(1, Math.floor(dp * 60)), a = pts[n - 1], b = pts[n], ang = Math.atan2(b[1] - a[1], b[0] - a[0]);
           ctx.save(); ctx.translate(b[0], b[1]); ctx.rotate(ang); ctx.fillStyle = P.ink; ctx.beginPath(); ctx.moveTo(10, 0); ctx.lineTo(-12, -10); ctx.lineTo(-12, 10); ctx.closePath(); ctx.fill(); ctx.restore();
+        }
+        // in the hold, a light runs along the trajectory once per bar, AT2 -> AT1
+        const cm = ((lt - 6.4 * bs) / (4 * bs)) % 1;
+        if (lt > 6.4 * bs && dp >= 1) {
+          for (let k = 0; k < 14; k++) {
+            const u = clamp(cm - k * 0.012), q = pts[Math.min(60, Math.floor(u * 60))];
+            ctx.globalAlpha = bMode * (1 - k / 14) * 0.9; ctx.fillStyle = k ? A.ptColor(u) : '#FFFFFF';
+            circle(ctx, q[0], q[1], 9 - k * 0.5); ctx.fill();
+          }
+          ctx.globalAlpha = bMode;
         }
         // colour bar under the legend
         const cb = clamp(at(4.6) * 1.5), y = 790;

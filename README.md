@@ -4,10 +4,10 @@
 
 # Awesome Showreels
 
-### Turn any repo, paper or deck into a motion-graphics showreel that looks like its source.
+### A motion-graphics showreel about anything, styled by its own material.
 
-An agent skill for Claude Code, Codex CLI, Gemini CLI or any coding agent.<br/>
-It reads your material, picks the style from it, captures the real thing and renders an MP4 plus a one-file HTML player.
+A repo, a paper, a brand, a shop, an event or just an idea: give your agent the material, or a few lines about it, and it designs, scores and renders the reel.<br/>
+An agent skill for Claude Code, Codex CLI, Gemini CLI or any coding agent. Delivers an MP4.
 
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-fab387?style=flat-square" alt="License: MIT"/></a>
 <a href="#install"><img src="https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Gemini-cba6f7?style=flat-square" alt="Works with Claude Code, Codex CLI and Gemini CLI"/></a>
@@ -15,7 +15,7 @@ It reads your material, picks the style from it, captures the real thing and ren
 <img src="https://img.shields.io/badge/ships-MP4%20%2B%20HTML-94e2d5?style=flat-square" alt="Ships an MP4 per cut and a single-file HTML player"/>
 <a href="#bring-your-own-key"><img src="https://img.shields.io/badge/narration-BYOK-a6e3a1?style=flat-square" alt="Narration: bring your own key"/></a>
 
-**[Examples](#examples) · [Real productions](#real-productions) · [Moments](#best-moments) · [Features](#features) · [Install](#install) · [FAQ](#faq) · [🇰🇷 한국어](README.ko.md)**
+**[Examples](#examples) · [Real productions](#real-productions) · [Features](#features) · [Install](#install) · [FAQ](#faq) · [🇰🇷 한국어](README.ko.md)**
 
 </div>
 
@@ -28,125 +28,125 @@ Fourteen example projects, each made from a different kind of source. The style 
 <table>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html"><img src="assets/readme/wall-playful-app.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html"><img src="assets/readme/moment-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
+<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
+<br/><sub>a single-cell paper → 4,900 cells as live data · 100 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">▶ Play</a> · <a href="assets/demo-academic-paper-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html"><img src="assets/readme/moment-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
+<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
+<br/><sub>a jazz-age invitation → gilded frames · swing 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html">▶ Play</a> · <a href="assets/demo-art-deco-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/art-deco">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html"><img src="assets/readme/moment-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
+<br/><b>Mistfold</b> · <code>botanical-organic</code>
+<br/><sub>a tea brand story → watercolour, growth time-lapse · guitar 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html">▶ Play</a> · <a href="assets/demo-botanical-organic-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/botanical-organic">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html"><img src="assets/readme/moment-editorial-luxe.webp" width="100%" alt="Maison Veyrande: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
+<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
+<br/><sub>a fashion press release → Bodoni, ivory and black · piano 80 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html">▶ Play</a> · <a href="assets/demo-editorial-luxe-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/editorial-luxe">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html"><img src="assets/readme/moment-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
+<br/><b>kablok</b> · <code>neo-brutal</code>
+<br/><sub>a landing page → hard shadows, slabs · funk 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html">▶ Play</a> · <a href="assets/demo-neo-brutal-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/neo-brutal">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html"><img src="assets/readme/moment-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
+<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
+<br/><sub>a local newspaper → printing press, halftone · 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html">▶ Play</a> · <a href="assets/demo-newsprint-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/newsprint">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html"><img src="assets/readme/moment-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
+<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
+<br/><sub>a game jam → pixel art, CRT · chiptune 144 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">▶ Play</a> · <a href="assets/demo-pixel-arcade-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-arcade">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html"><img src="assets/readme/moment-mochi-hook.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
 <br/><b>Mochi Notes</b> · <code>playful-app</code>
 <br/><sub>an app README → pastel mascot, real app UI · bright pop 120 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html">▶ Play</a> · <a href="assets/demo-playful-app-v1.1.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html">HTML</a> · <a href="skills/motion-showreel/examples/playful-app">Source</a></sub>
 </td>
+</tr>
+<tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html"><img src="assets/readme/wall-research-cli.webp" width="100%" alt="spark-bench: 4,096 attention blocks sink to 674, a real terminal capture, the 4.1x row, blocks swirl into the logo"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html"><img src="assets/readme/moment-spark-matrix.webp" width="100%" alt="spark-bench: 4,096 attention blocks sink to 674, a real terminal capture, the 4.1x row, blocks swirl into the logo"/></a>
 <br/><b>spark-bench</b> · <code>research-cli</code>
 <br/><sub>a research CLI → GPU points, real terminal · dark synth 128 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html">▶ Play</a> · <a href="assets/demo-research-cli-v1.1.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html">HTML</a> · <a href="skills/motion-showreel/examples/research-cli">Source</a></sub>
 </td>
-</tr>
-<tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html"><img src="assets/readme/wall-editorial-luxe.webp" width="100%" alt="Les Heures Blanches: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
-<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
-<br/><sub>a fashion press release → Bodoni, ivory and black · piano 80 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/editorial-luxe">Source</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html"><img src="assets/readme/wall-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html"><img src="assets/readme/moment-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
 <br/><b>PAPER JAM #07</b> · <code>riso-zine</code>
 <br/><sub>a zine → riso inks off register · 160 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/riso-zine">Source</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html">▶ Play</a> · <a href="assets/demo-riso-zine-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/riso-zine/dist/paper-jam-07-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/riso-zine">Source</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html"><img src="assets/readme/wall-swiss-grid.webp" width="100%" alt="Haus für Musik: a strict Swiss grid, one red, numbers set at poster size"/></a>
-<br/><b>Haus für Musik</b> · <code>swiss-grid</code>
-<br/><sub>an architecture brief → 12-column grid, one red · 124 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/swiss-grid">Source</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html"><img src="assets/readme/wall-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
-<br/><b>Mistfold</b> · <code>botanical-organic</code>
-<br/><sub>a tea brand story → watercolour, growth time-lapse · guitar 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/botanical-organic/dist/mistfold-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/botanical-organic">Source</a></sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html"><img src="assets/readme/wall-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
-<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
-<br/><sub>a game jam → pixel art, CRT · chiptune 144 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-arcade">Source</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html"><img src="assets/readme/wall-sumi-wabi.webp" width="100%" alt="余白庵: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
-<br/><b>余白庵</b> · <code>sumi-wabi</code>
-<br/><sub>a ryokan website → sumi ink, vertical type · koto 72 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sumi-wabi">Source</a></sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html"><img src="assets/readme/wall-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
-<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
-<br/><sub>a single-cell paper → 4,900 cells as live data · 100 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">Source</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html"><img src="assets/readme/wall-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html"><img src="assets/readme/moment-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
 <br/><b>Visual Notes Lab</b> · <code>sketchnote</code>
 <br/><sub>a workshop handout → markers that write themselves · 104 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sketchnote">Source</a></sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html"><img src="assets/readme/wall-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
-<br/><b>kablok</b> · <code>neo-brutal</code>
-<br/><sub>a landing page → hard shadows, slabs · funk 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/neo-brutal">Source</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html">▶ Play</a> · <a href="assets/demo-sketchnote-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/sketchnote/dist/visual-notes-lab-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sketchnote">Source</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html"><img src="assets/readme/wall-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
-<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
-<br/><sub>a jazz-age invitation → gilded frames · swing 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/art-deco">Source</a></sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html"><img src="assets/readme/wall-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
-<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
-<br/><sub>a local newspaper → printing press, halftone · 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/newsprint/dist/tamsin-valley-courier-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/newsprint">Source</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html"><img src="assets/readme/wall-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html"><img src="assets/readme/moment-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
 <br/><b>VELMORA 42</b> · <code>sports-kinetic</code>
 <br/><sub>a race-timing app → broadcast type, real splits · drum and bass 176 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sports-kinetic">Source</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html">▶ Play</a> · <a href="assets/demo-sports-kinetic-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/sports-kinetic/dist/velmora-42-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sports-kinetic">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html"><img src="assets/readme/moment-sumi-wabi.webp" width="100%" alt="Yohakuan: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
+<br/><b>Yohakuan</b> · <code>sumi-wabi</code>
+<br/><sub>a ryokan website → sumi ink, vertical type · koto 72 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html">▶ Play</a> · <a href="assets/demo-sumi-wabi-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/sumi-wabi">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html"><img src="assets/readme/moment-swiss-grid.webp" width="100%" alt="House of Music: a strict Swiss grid, one red, numbers set at poster size"/></a>
+<br/><b>House of Music</b> · <code>swiss-grid</code>
+<br/><sub>an architecture brief → 12-column grid, one red · 124 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html">▶ Play</a> · <a href="assets/demo-swiss-grid-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/swiss-grid">Source</a></sub>
 </td>
 </tr>
 </table>
 
-<sub>Loops play the short cut at 2x without sound. <b>▶ Play</b> opens the full player in your browser (short and 30-s cuts, with music). All projects and data are fictional and labelled as such on screen.</sub>
+<sub>Each loop is one moment of the reel at real speed, without sound. <b>▶ Play</b> opens the full reel in your browser with music, where you can switch between its lengths (the same file is in each folder's <code>dist/</code>: 1–2 MB, opens offline, number keys switch lengths). All projects and data are fictional and labelled as such on screen.</sub>
 
 <details>
 <summary><b>Style decisions per example</b></summary>
 
 | Example | Source | Mood | Palette | Type | Motion | Music (BPM) |
 |---|---|---|---|---|---|---|
+| `academic-paper` | single-cell paper | precise, data-dense | white · vermilion | Inter | measured | ambient 100 |
+| `art-deco` | invitation | opulent, nocturnal | black · gold | Limelight | symmetrical | swing 112 |
+| `botanical-organic` | tea brand story | calm, earthy | oat · leaf green | Fraunces | slow | guitar 96 |
+| `editorial-luxe` | press release | elegant, quiet | ivory · champagne | Bodoni Moda | slow | piano 80 |
+| `neo-brutal` | landing page | loud, blunt | cream · lemon | Archivo | hard snaps | funk 112 |
+| `newsprint` | newspaper | factual, civic | newsprint · red | Newsreader | steady | piano 96 |
+| `pixel-arcade` | game jam | chunky, punchy | night · gold | Press Start 2P | stepped | chiptune 144 |
 | `playful-app` | app README | playful, bouncy | light · pink | Nunito | springy | bright pop 120 |
 | `research-cli` | research CLI | technical, cool | dark · cyan | Space Grotesk | damped | dark synth 128 |
-| `editorial-luxe` | press release | elegant, quiet | ivory · champagne | Bodoni Moda | slow | piano 80 |
 | `riso-zine` | zine | loud, scrappy | newsprint · fluo pink | Anton | jumpy | lo-fi 160 |
-| `swiss-grid` | architecture brief | precise, ordered | paper · one red | Schibsted Grotesk | on the grid | synth 124 |
-| `botanical-organic` | tea brand story | calm, earthy | oat · leaf green | Fraunces | slow | guitar 96 |
-| `pixel-arcade` | game jam | chunky, punchy | night · gold | Press Start 2P | stepped | chiptune 144 |
-| `sumi-wabi` | ryokan site | quiet, restrained | washi · one vermilion | Shippori Mincho | very slow | koto 72 |
-| `academic-paper` | single-cell paper | precise, data-dense | white · vermilion | Inter | measured | ambient 100 |
 | `sketchnote` | workshop handout | hand-drawn, friendly | whiteboard · orange | Shantell Sans | handwritten | bright 104 |
-| `neo-brutal` | landing page | loud, blunt | cream · lemon | Archivo | hard snaps | funk 112 |
-| `art-deco` | invitation | opulent, nocturnal | black · gold | Limelight | symmetrical | swing 112 |
-| `newsprint` | newspaper | factual, civic | newsprint · red | Newsreader | steady | piano 96 |
 | `sports-kinetic` | race-timing app | energetic, exact | track black · orange | Barlow Condensed | fast | drum and bass 176 |
+| `sumi-wabi` | ryokan site | quiet, restrained | washi · one vermilion | Shippori Mincho | very slow | koto 72 |
+| `swiss-grid` | architecture brief | precise, ordered | paper · one red | Schibsted Grotesk | on the grid | synth 124 |
 
 Each folder's <code>style.json</code> records every decision and the evidence from the source behind it.
 
@@ -187,67 +187,6 @@ The method comes from four real projects made before this repo.
 
 ---
 
-## Best moments
-
-One moment from each of the eighteen reels.
-
-<p align="center">
-<img src="assets/readme/moment-mochi-hook.webp" width="49%" alt="Mochi Notes hook: Too many thoughts? bounces in among dozens of pastel paper notes"/> <img src="assets/readme/moment-spark-matrix.webp" width="49%" alt="A 64k attention matrix drawn as 4,096 GPU points; the counter falls to 674"/>
-<br/><sub><b>Too many thoughts?</b> kinetic type in a storm of paper scraps&emsp;·&emsp;<b>4,096 → 674</b> an attention matrix as GPU points; every skipped block sinks</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-editorial-luxe.webp" width="49%" alt="Maison Veyrande: an ink pen draws a croquis on ivory, then embroidery is sewn along its lines"/> <img src="assets/readme/moment-riso-zine.webp" width="49%" alt="PAPER JAM #07: pink and blue riso drums sweep the newsprint off register and the #07 stamp slams"/>
-<br/><sub><b>1,240 hours</b> a pen draws the croquis, then the embroidery is sewn along it&emsp;·&emsp;<b>PAPER JAM #07</b> two riso drums print off register, a stamp slams</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-swiss-grid.webp" width="49%" alt="Haus für Musik: 24, 2 and 1 roll in digit by digit on a black page, the 1 in red"/> <img src="assets/readme/moment-botanical-organic.webp" width="49%" alt="Mistfold: mist parts over tea terraces while a new flush grows, its folded leaves opening"/>
-<br/><sub><b>24 · 2 · 1</b> one number per beat on a black page, the hall in the one red&emsp;·&emsp;<b>Grown slowly.</b> the mist parts and a tea flush grows: internodes stretch, leaves unfold</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-pixel-arcade.webp" width="49%" alt="ONE CREDIT JAM: a CRT powers on into a starfield and a gold token drops into the coin slot"/> <img src="assets/readme/moment-sumi-wabi.webp" width="49%" alt="余白庵: a drop of sumi falls onto washi and blooms while vertical text soaks in"/>
-<br/><sub><b>INSERT COIN</b> the CRT powers on, a token drops into the slot&emsp;·&emsp;<b>一滴</b> one drop of sumi blooms on washi, the words soak in</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-academic-paper.webp" width="49%" alt="Alveolar repair atlas: 4,900 coloured nuclei fly from their UMAP positions into a tissue section"/> <img src="assets/readme/moment-sketchnote.webp" width="49%" alt="Visual Notes Lab: a blue marker boxes three phrases in a wall of notes and they lift off the board"/>
-<br/><sub><b>UMAP → tissue</b> 4,900 nuclei leave the UMAP for their place in the section&emsp;·&emsp;<b>Box it. Arrow it.</b> the marker boxes three phrases in a wall of text and lifts them out</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-neo-brutal.webp" width="49%" alt="kablok: hard-shadowed blocks fall into a page one per beat while the cursor carries a tile"/> <img src="assets/readme/moment-art-deco.webp" width="49%" alt="THE EMERALD FAN: gold rules draw an emerald door's stepped architrave, KNOCK and TWICE land on the beat"/>
-<br/><sub><b>Stack it.</b> blocks fall into the page one per beat and thunk&emsp;·&emsp;<b>KNOCK TWICE.</b> gold rules draw the door, two knocks on the beat</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-newsprint.webp" width="49%" alt="The Tamsin Valley Courier: an inked cylinder rolls page A1 off the press and the headline lands as cast slugs"/> <img src="assets/readme/moment-sports-kinetic.webp" width="49%" alt="VELMORA 42: 3, 2, 1 slam on the beat, the gun fires and the race clock starts"/>
-<br/><sub><b>Page A1</b> an inked cylinder rolls the front page out, the headline casts in&emsp;·&emsp;<b>3, 2, 1, GO</b> a countdown slams, the gun fires, the race clock starts</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-fddd.webp" width="49%" alt="FDDD showreel: fly-brain point clouds and docking scores"/> <img src="assets/readme/moment-cc-statusline.webp" width="49%" alt="CC-statusline reel: real terminal captures in the Catppuccin palette"/>
-<br/><sub><b>FDDD</b> fly-brain point clouds and docking scores, nothing faked&emsp;·&emsp;<b>CC-statusline</b> real terminal captures in the tool's Catppuccin palette</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-kbeautygate.webp" width="49%" alt="K-BeautyGate: plush pastel mascots and the real app UI inside a phone"/> <img src="assets/readme/moment-flygate.webp" width="49%" alt="FlyGate: a narrated research reel with burned-in captions"/>
-<br/><sub><b>K-BeautyGate</b> plush mascots and the real app UI in a phone&emsp;·&emsp;<b>FlyGate</b> narrated research reel, captions burned in</sub>
-</p>
-
-<details>
-<summary><b>More moments from Mochi Notes and spark-bench</b></summary>
-
-<p align="center">
-<img src="assets/readme/moment-mochi-mascot.webp" width="49%" alt="A pink blob wipe clears the hook, then Mochi, the plush pastel mascot drawn in code, springs up, blinks and lands over the Mochi Notes wordmark"/> <img src="assets/readme/moment-spark-terminal.webp" width="49%" alt="A real recording of spark-bench run in a terminal window tilted in 3D; the camera zooms to the spark row and its 4.1x cell"/>
-<br/><sub><b>Meet Mochi</b> the code-drawn mascot springs up and blinks&emsp;·&emsp;<b>RUN</b> a real <code>spark-bench run</code> capture, tilted, zooming to the 4.1× row</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-mochi-app.webp" width="49%" alt="The real Mochi Notes app UI in a phone: a messy note types itself, then Mochi tidies it into a checklist"/> <img src="assets/readme/moment-spark-impact.webp" width="49%" alt="Throughput bars grow from the CLI's own JSON, then 4.1x slams in with a ring, labelled demo data"/>
-<br/><sub><b>Jot it down.</b> the real app UI types, then Mochi tidies it up&emsp;·&emsp;<b>4.1×</b> bars from the CLI's own JSON, then the number slams in (demo data)</sub>
-</p>
-<p align="center">
-<img src="assets/readme/moment-mochi-flavors.webp" width="49%" alt="Pick a flavor!: the camera dives into the phone's result card and pulls back out on four real app themes, strawberry, matcha, ube and yuzu"/> <img src="assets/readme/moment-spark-scaling.webp" width="49%" alt="Only in the 60-second cut: the same attention pattern at four lengths, the masks fill, the computed share falls from 100% to 16.5% and the gain grows from 1.3x to 4.1x"/>
-<br/><sub><b>Pick a flavor!</b> the camera dives into the phone, out on four real app themes&emsp;·&emsp;<b>Only in the 60-s cut</b> one pattern at four lengths; the gain grows</sub>
-</p>
-
-</details>
-
----
-
 ## Features
 
 <p align="center"><b>Style from your source</b><br/>Palette, type, pace and music are read from your material, with the evidence written down. No presets.</p>
@@ -265,7 +204,7 @@ One moment from each of the eighteen reels.
 <p align="center"><b>Optional narration</b><br/>Gemini TTS on your own key, checked by speech-to-text, with captions.</p>
 <p align="center"><img src="assets/readme/feat-narration.webp" width="100%" alt="Two narration lines of the research example on the grid: its 30-second cut plays with the captions burned in, the script lights line by line and the music ducks 9.9 dB under each line; dry-run timing, no voice synthesized"/></p>
 
-<p align="center"><b>Ready to share</b><br/>An MP4 per cut and one HTML file with every cut that plays offline.</p>
+<p align="center"><b>Ready to share</b><br/>An MP4 for each length, plus a web version: one 1–2 MB HTML file with every length and its music. It opens in any browser without internet, switches length with the number keys, steps frame by frame for review, and can be sent in a chat or played from a link.</p>
 <p align="center"><img src="assets/readme/feat-ship.webp" width="100%" alt="Delivery: the two MP4s with their ffprobe facts, and the single-file HTML player playing its 15, 30 and 60-second cuts as its own number keys switch them"/></p>
 
 ---
@@ -364,6 +303,7 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 | ⌨️ **CLI** | *Make a 15-second reel with a real terminal capture of `mytool demo`.* |
 | 🎤 **Narration** | *Narrate the 30-second cut with my Gemini key.* |
 | ⏱️ **Longer** | *Make a 60-second version of the reel.* |
+| 💡 **Just an idea** | *Make a 20-second reel for my bakery's weekend market: sourdough, cinnamon buns, Saturday 9 to 1.* |
 
 ---
 
@@ -405,16 +345,16 @@ Yes. Images become clean cutouts (macOS Vision or OpenCV) that blink, bounce and
 </details>
 
 <details>
-<summary><b>How do I use the HTML player?</b></summary>
+<summary><b>What is the HTML file?</b></summary>
 
-Open it in any browser, offline. Space plays and pauses, ← → step, number keys switch cuts, F is fullscreen.
+The web version of the reel: one small file with every length and its music. Open it in any browser, even offline. Space plays and pauses, ← → step, number keys switch cuts, F is fullscreen.
 
 </details>
 
 <details>
 <summary><b>Under the hood</b></summary>
 
-- **Runtime:** Canvas2D + WebGL2; every frame is a function of time, so stills, MP4 and the HTML player match exactly.
+- **Runtime:** Canvas2D + WebGL2; every frame is a function of time, so stills, MP4 and the web version match exactly.
 - **Planner:** `timing/plan_cut.py` lays every cut on one bar grid; longer cuts add scenes and holds.
 - **Audio:** `audio/synth.py`, `arrange.py`, `verify_sync.py` (numpy/scipy, no samples): presets from ambient to chiptune, swing and drum and bass; every cue checked against the picture, -14 LUFS.
 - **Captures:** `tools/capture_ui.mjs` (app UI), `capture_cli.py` (terminal), `pdf_figures.py` (paper figures), `prep_assets.py` + `lift.swift` (cutouts).
@@ -430,7 +370,7 @@ Open it in any browser, offline. Space plays and pauses, ← → step, number ke
 
 | | Needed for |
 |---|---|
-| Node.js 20+ and Chrome/Chromium | rendering stills, MP4 and the HTML player |
+| Node.js 20+ and Chrome/Chromium | rendering stills, MP4 and the web version |
 | ffmpeg | MP4 and audio encoding |
 | Python 3.9+ with numpy, scipy, Pillow, opencv-python | style pass, planner, music, cutouts |
 | *Optional:* pymupdf, fonttools + brotli | PDFs, font subsets |

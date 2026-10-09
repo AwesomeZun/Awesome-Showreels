@@ -14,6 +14,10 @@ Büro Zwölf Architekten and Haus für Musik are fictional; every number is demo
 
 Music and previews are stage 2 (the audio library has no minimal-techno preset yet).
 
+- Demo (short cut, with its music): [`assets/demo-swiss-grid-v1.0.0.mp4`](../../../../assets/demo-swiss-grid-v1.0.0.mp4)
+- Web version with every cut: [`dist/haus-fur-musik-v1.0.0.html`](dist/haus-fur-musik-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/swiss-grid/dist/haus-fur-musik-v1.0.0.html))
+- Cuts: `short` (8 bars = 15.5 s), `30` (15 bars = 29.0 s), all at 124 BPM.
+
 ## Source
 
 | File | What it contributes |

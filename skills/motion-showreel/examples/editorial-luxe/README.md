@@ -15,6 +15,10 @@ reel uses a light paper ground, a serif display, no characters, no data viz, no 
 
 ![Style board derived from the source material](style-board.jpg)
 
+- Demo (short cut, with its music): [`assets/demo-editorial-luxe-v1.0.0.mp4`](../../../../assets/demo-editorial-luxe-v1.0.0.mp4)
+- Web version with every cut: [`dist/maison-veyrande-v1.0.0.html`](dist/maison-veyrande-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/editorial-luxe/dist/maison-veyrande-v1.0.0.html))
+- Cuts: `short` (5 bars = 15.0 s), `30` (10 bars = 30.0 s), all at 80 BPM.
+
 ## Folder
 
 ```

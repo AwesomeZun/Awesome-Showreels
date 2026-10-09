@@ -12,6 +12,10 @@ every value in `style.json` is traced to `source/` in its `rationale`.
 
 > kablok is fictional. Every creator, handle, price and notification is made up for this example.
 
+- Demo (short cut, with its music): [`assets/demo-neo-brutal-v1.0.0.mp4`](../../../../assets/demo-neo-brutal-v1.0.0.mp4)
+- Web version with every cut: [`dist/kablok-v1.0.0.html`](dist/kablok-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html))
+- Cuts: `short` (9 bars = 19.3 s), `30` (14 bars = 30.0 s), all at 112 BPM.
+
 ## Folder
 
 ```

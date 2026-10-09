@@ -13,6 +13,10 @@ sound brief all come from `source/`, and `style.json` cites the evidence for eac
 
 ![Style board derived from the source material](style-board.jpg)
 
+- Demo (short cut, with its music): [`assets/demo-sumi-wabi-v1.0.0.mp4`](../../../../assets/demo-sumi-wabi-v1.0.0.mp4)
+- Web version with every cut: [`dist/yohakuan-v1.0.0.html`](dist/yohakuan-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/sumi-wabi/dist/yohakuan-v1.0.0.html))
+- Cuts: `short` (6 bars = 20.0 s), `30` (9 bars = 30.0 s), all at 72 BPM.
+
 ## Folder
 
 ```

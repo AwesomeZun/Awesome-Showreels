@@ -14,6 +14,10 @@ decision.
 
 ![Style board derived from the source material](style-board.jpg)
 
+- Demo (short cut, with its music): [`assets/demo-pixel-arcade-v1.0.0.mp4`](../../../../assets/demo-pixel-arcade-v1.0.0.mp4)
+- Web version with every cut: [`dist/one-credit-jam-v1.0.0.html`](dist/one-credit-jam-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html))
+- Cuts: `short` (10 bars = 16.7 s), `30` (18 bars = 30.0 s), all at 144 BPM.
+
 ## Folder
 
 ```
