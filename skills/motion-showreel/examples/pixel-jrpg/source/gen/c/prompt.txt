@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: polished 16-bit SNES-era JRPG pixel art. Crisp hard-edged pixels where every art pixel is an exact 4x4 block of output pixels, a limited palette of about 32 colours (deep navy night, royal blue, moss and leaf greens, warm stone greys, bark browns, amber and gold lantern light), hand-placed shading and dithering, no anti-aliasing, no blur, no smooth gradients, no text, no letters, no logos, no UI, no watermark, no border.
+
+Image 1, filename overworld.png: a square (1024x1024) top-down overworld map texture: rolling grassland, dark forests, winding rivers, a coastline with sea, a mountain range, sandy roads linking three small towns and one castle; bright daylight colours; no text, no grid lines, no frame.
+
+Image 2, filename airship.png: a small wooden airship with a patched cream balloon, a carved hull, two side propellers and a little flag, side view facing right, on a perfectly flat pure #00FF00 green background, filling about half of the image.
+
+Image 3, filename clouds.png: four large puffy clouds lit from below by a sunset (cream, peach and lilac with navy shadows), spread across a wide 16:9 landscape (1536x864) on a perfectly flat pure #00FF00 green background.

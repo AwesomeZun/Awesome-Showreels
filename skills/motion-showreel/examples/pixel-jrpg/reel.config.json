@@ -9,40 +9,60 @@
   "beatsPerBar": 4,
   "scenes": [
     {
-      "id": "title",
-      "label": "Title screen",
+      "id": "ignite",
+      "label": "A lantern in the dark",
       "minBars": 2,
       "maxBars": 3,
       "priority": 1,
-      "inBeats": 6,
+      "inBeats": 7,
       "outBeats": 1,
       "in": "cut",
       "music": "intro",
       "cues": [
         {
-          "beat": 0,
+          "beat": 0.5,
           "from": "start",
-          "sfx": "whoosh"
+          "sfx": "click"
+        },
+        {
+          "beat": 0.6,
+          "from": "start",
+          "sfx": "swell"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "pop soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "pop soft"
         },
         {
           "beat": 3,
           "from": "start",
-          "sfx": "impact"
+          "sfx": "sparkle dur=1"
         },
         {
-          "beat": 4,
+          "beat": 4.5,
           "from": "start",
           "sfx": "stamp"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "tick:10 gap=0.05s soft"
         }
       ]
     },
     {
       "id": "town",
-      "label": "The town",
+      "label": "Every window lights",
       "minBars": 2,
       "maxBars": 3,
-      "priority": 2,
-      "inBeats": 5,
+      "priority": 1,
+      "inBeats": 6,
       "outBeats": 1,
       "in": "cut",
       "music": "groove",
@@ -50,20 +70,53 @@
         {
           "beat": 0,
           "from": "start",
-          "sfx": "swish"
+          "sfx": "whoosh up"
         },
         {
-          "beat": 2,
+          "beat": 1,
           "from": "start",
-          "sfx": "keytap dur=2 soft"
+          "sfx": "sparkle dur=4 soft"
+        },
+        {
+          "beat": 4.5,
+          "from": "start",
+          "sfx": "notify"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "tick:12 gap=0.05s soft"
+        }
+      ]
+    },
+    {
+      "id": "flight",
+      "label": "Mode-7 world map",
+      "minBars": 1,
+      "maxBars": 2,
+      "priority": 2,
+      "inBeats": 2,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "blip step=3"
         }
       ]
     },
     {
       "id": "battle",
-      "label": "Battle",
+      "label": "The boss is a bug",
       "minBars": 2,
-      "maxBars": 5,
+      "maxBars": 4,
       "priority": 1,
       "inBeats": 7,
       "outBeats": 1,
@@ -76,19 +129,29 @@
           "sfx": "glitch"
         },
         {
-          "beat": 2,
+          "beat": 1.5,
           "from": "start",
           "sfx": "confirm"
         },
         {
-          "beat": 3,
+          "beat": 2.5,
           "from": "start",
           "sfx": "hit"
         },
         {
-          "beat": 5,
+          "beat": 4,
           "from": "start",
-          "sfx": "hit"
+          "sfx": "charge"
+        },
+        {
+          "beat": 4.6,
+          "from": "start",
+          "sfx": "impact"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "slam big"
         },
         {
           "beat": 6.5,
@@ -98,10 +161,10 @@
       ]
     },
     {
-      "id": "victory",
+      "id": "finale",
       "label": "Victory",
       "minBars": 2,
-      "maxBars": 4,
+      "maxBars": 3,
       "priority": 1,
       "inBeats": 5,
       "outBeats": 0,
@@ -114,12 +177,12 @@
           "sfx": "sting"
         },
         {
-          "beat": 2,
+          "beat": 1.5,
           "from": "start",
-          "sfx": "blips"
+          "sfx": "stamp"
         },
         {
-          "beat": 4,
+          "beat": 3,
           "from": "start",
           "sfx": "chime"
         }
@@ -128,15 +191,20 @@
   ],
   "cuts": {
     "short": {
-      "bars": 8,
-      "label": "short"
+      "bars": 9,
+      "label": "short",
+      "scenes": {
+        "flight": {
+          "bars": 1
+        }
+      }
     },
     "30": {
       "bars": 15,
       "label": "30 s"
     }
   },
-  "poster": 9.0,
+  "poster": 3.4,
   "captions": {
     "enabled": false
   },

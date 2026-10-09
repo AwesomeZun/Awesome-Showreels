@@ -32,3 +32,7 @@ venv/
 
 # README hero: clip frames prepared from the examples' renders and the case-study reels (docs/readme-reel/hero/README.md)
 docs/readme-reel/hero/assets/clips/
+
+# gpt-image-2 originals and Codex logs (the prompts and the pixelized assets are committed)
+skills/motion-showreel/examples/*/source/gen/**/*.png
+skills/motion-showreel/examples/*/source/gen/**/codex.log

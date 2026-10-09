@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: polished 16-bit SNES-era JRPG pixel art. Crisp hard-edged pixels where every art pixel is an exact 4x4 block of output pixels, a limited palette of about 32 colours (deep navy night, royal blue, moss and leaf greens, warm stone greys, bark browns, amber and gold lantern light), hand-placed shading and dithering, no anti-aliasing, no blur, no smooth gradients, no text, no letters, no logos, no UI, no watermark, no border.
+
+Image 1, filename town_sky.png: a wide 16:9 landscape (1536x864) dusk sky over layered distant mountain silhouettes, a few long clouds lit orange and pink from below, the first stars at the top, colours moving from deep navy at the top to warm amber at the horizon in dithered bands.
+
+Image 2, filename town_mid.png: a wide 16:9 landscape (1536x864) row of seven medieval half-timbered houses with steep tiled roofs, chimneys, a small bell tower in the middle, lots of small windows, every window glowing warm yellow-orange, side view with the houses standing on the bottom edge, on a perfectly flat pure #00FF00 green background above and between the roofs.
+
+Image 3, filename town_near.png: a wide 16:9 landscape (1536x864) dark foreground layer: silhouettes of rooftops and chimneys along the bottom edge, an iron street lamp on the left, leafy tree branches entering from the top right corner, mostly deep navy and dark moss green, on a perfectly flat pure #00FF00 green background; the middle of the image empty green.

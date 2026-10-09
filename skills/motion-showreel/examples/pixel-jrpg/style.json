@@ -1,35 +1,170 @@
 {
   "$schema": "../../templates/style.schema.json",
-  "meta": { "purpose": "launch", "audience": "indie game developers", "title": "Lanternforge 2.0",
-    "reviewed": "Written by hand from source/RELEASE.md and source/palette.txt: the release notes ask for a trailer shaped like the games made with the engine (title screen, town, battle, fanfare) and fix the canvas, palette, windows and face." },
+  "meta": {
+    "purpose": "launch",
+    "audience": "indie game developers",
+    "title": "Lanternforge 2.0",
+    "reviewed": "Rebuilt (v2) from source/RELEASE.md: the release adds dynamic lights, depth and bloom, so the trailer shows pixel art under real light (HD-2D): gpt-image-2 pixel originals quantized to one 40-colour palette (gen-src/pixelize.py), a light map, bloom, depth of field and a grade on top."
+  },
   "source": [
-    { "path": "source/RELEASE.md", "kind": "markdown", "notes": "release notes: highlights, numbers 1.x vs 2.0, tone (friendly innkeeper), look" },
-    { "path": "source/palette.txt", "kind": "brand-guide", "notes": "32 colours in ramps of four" },
-    { "path": "source/fonts", "kind": "other", "notes": "DotGothic16 (SIL OFL 1.1)" }
+    {
+      "path": "source/RELEASE.md",
+      "kind": "markdown",
+      "notes": "release notes: highlights, numbers 1.x vs 2.0, tone (friendly innkeeper), look"
+    },
+    {
+      "path": "source/palette.txt",
+      "kind": "brand-guide",
+      "notes": "32 colours in ramps of four"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "DotGothic16 (SIL OFL 1.1)"
+    }
   ],
-  "mood": ["heroic", "warm", "nostalgic", "playful", "dramatic"],
+  "mood": [
+    "heroic",
+    "warm",
+    "nostalgic",
+    "playful",
+    "dramatic"
+  ],
   "rationale": {
-    "palette": "The engine's 32 colours (palette.txt) in ramps of four; sky gradients and lights step through a ramp instead of blending. Windows use the classic navy-to-royal fill with a white double border.",
-    "type": "DotGothic16, the face the docs use, rendered on the 384 x 216 grid and thresholded so every glyph pixel is crisp.",
+    "palette": "One 40-colour palette shared by every asset (median cut over all of them), so every scene sits in the same 16-bit world; lighting is a light map multiplied over the pixels (cool navy ambient, amber lights), bloom adds on top, and a teal/amber grade ties it together.",
+    "type": "Pixelify Sans (bold, gold stepped fill, dark outline) for the logo and numbers; DotGothic16 for dialog. Both are drawn at art size, thresholded and scaled 5x, so every glyph pixel is square.",
     "motion": "A 16-bit trailer: a Mode-7 world map that rotates and tilts under the logo, a town walk with a typewriter dialog, a turn-based battle where the engine's features are the attacks and the numbers are damage, and a victory fanfare. Sprites animate on a 10-fps step clock.",
     "sound": "'A little dramatic' (RELEASE.md): cinematic strings, a saw lead motif, toms and a half-time snare at 120 BPM in D minor; the fanfare resolves on the end card.",
-    "visuals": "Everything is drawn in code on the grid: the Mode-7 plane samples a generated tilemap per scanline, sprites are pixel strings, windows and damage numbers are the UI of the games the engine makes."
+    "visuals": "Pixel art from source/gen (gpt-image-2 originals, prompts kept beside them) turned into true pixel art on one shared 40-colour palette; the camera, light map, bloom, shafts, dust and depth of field are code (modules/hd.js). Scenes: a lantern lit in a dark corridor that lights the logo, a town at dusk whose windows light up, a Mode-7 flight, a boss battle whose damage numbers are the release numbers, a victory card."
   },
   "palette": {
-    "bg": "#0D0B1E", "bg2": "#1B1A3A", "surface": "#24306E", "ink": "#FFFFFF", "ink2": "#D7ECFF", "muted": "#9AA3B8",
-    "accent": "#F2B33D", "accent2": "#4A86E8", "accent3": "#5DB547", "ok": "#5DB547", "warn": "#E07B24", "deny": "#B8203C",
-    "accentInk": "#F2B33D", "onAccent": "#0D0B1E", "line": "#2E4FB0", "highlight": "#F2B33D"
+    "bg": "#0D0B1E",
+    "bg2": "#1B1A3A",
+    "surface": "#24306E",
+    "ink": "#FFFFFF",
+    "ink2": "#D7ECFF",
+    "muted": "#9AA3B8",
+    "accent": "#F2B33D",
+    "accent2": "#4A86E8",
+    "accent3": "#5DB547",
+    "ok": "#5DB547",
+    "warn": "#E07B24",
+    "deny": "#B8203C",
+    "accentInk": "#F2B33D",
+    "onAccent": "#0D0B1E",
+    "line": "#2E4FB0",
+    "highlight": "#F2B33D"
   },
-  "fonts": { "display": "\"DotGothic16\", monospace", "sans": "\"DotGothic16\", monospace", "serif": "\"DotGothic16\", monospace", "mono": "\"DotGothic16\", monospace", "cjk": "\"DotGothic16\", monospace",
-    "files": [ { "family": "DotGothic16", "path": "source/fonts/DotGothic16-Regular.ttf", "weight": "400", "style": "normal" } ] },
-  "type": { "scale": [16, 20, 24, 32, 40, 48, 64, 80, 96, 128], "displayWeight": 400, "bodyWeight": 400, "tracking": 0, "trackingLabel": 0 },
-  "layout": { "theme": "dark", "margin": 64, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
-    "captions": { "enabled": false, "font": "\"DotGothic16\", monospace", "size": 32, "fg": "#FFFFFF", "bg": "#24306E", "y": 972 }, "radius": 0 },
-  "motion": { "pace": "energetic", "spring": { "f": 2, "z": 1 }, "overshoot": 0, "ease": "lin", "transitions": ["cut"], "characters": true, "dataViz": true, "visualSources": ["vector"], "typeReveal": ["typewriter"] },
-  "post": { "grain": 0, "vignette": { "a": 0, "color": "#0D0B1E" }, "bloom": 0 },
-  "sound": { "bpm": 120, "key": "D", "mode": "minor", "preset": "cinematic-lite",
-    "instruments": ["strings", "lead", "sub", "toms", "kick", "snare", "hats"], "drums": "full", "sfx": "digital",
-    "energy": { "intro": 0.4, "groove": 0.7, "breakdown": 0.45, "drop": 1.0, "outro": 0.55 } },
-  "narration": { "recommended": false },
+  "fonts": {
+    "display": "\"Pixelify Sans\", monospace",
+    "sans": "\"DotGothic16\", monospace",
+    "serif": "\"DotGothic16\", monospace",
+    "mono": "\"DotGothic16\", monospace",
+    "cjk": "\"DotGothic16\", monospace",
+    "files": [
+      {
+        "family": "DotGothic16",
+        "path": "source/fonts/DotGothic16-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Pixelify Sans",
+        "path": "source/fonts/PixelifySans-Variable.ttf",
+        "weight": "400 700",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      32,
+      40,
+      48,
+      64,
+      80,
+      96,
+      128
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 400,
+    "tracking": 0,
+    "trackingLabel": 0
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 64,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"DotGothic16\", monospace",
+      "size": 32,
+      "fg": "#FFFFFF",
+      "bg": "#24306E",
+      "y": 972
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 2,
+      "z": 1
+    },
+    "overshoot": 0,
+    "ease": "lin",
+    "transitions": [
+      "cut"
+    ],
+    "characters": true,
+    "dataViz": true,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "typewriter"
+    ]
+  },
+  "post": {
+    "grain": 0,
+    "vignette": {
+      "a": 0,
+      "color": "#0D0B1E"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 120,
+    "key": "D",
+    "mode": "minor",
+    "preset": "cinematic-lite",
+    "instruments": [
+      "strings",
+      "lead",
+      "sub",
+      "toms",
+      "kick",
+      "snare",
+      "hats"
+    ],
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.4,
+      "groove": 0.7,
+      "breakdown": 0.45,
+      "drop": 1.0,
+      "outro": 0.55
+    }
+  },
+  "narration": {
+    "recommended": false
+  },
   "review": []
 }

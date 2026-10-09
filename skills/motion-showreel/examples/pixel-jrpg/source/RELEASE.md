@@ -5,7 +5,8 @@ Lanternforge is an open-source engine for 16-bit-style role-playing games. Versi
 ## Highlights
 
 - **Tilemap editor.** Paint towns, dungeons and world maps in the browser; layers, autotiles, collision.
-- **Dynamic lights.** Torches, lanterns and day/night, on a real 16-bit palette (no shaders needed).
+- **Dynamic lights.** Torches, lanterns and day/night, on a real 16-bit palette.
+- **Depth & bloom.** Layers with depth of field, light shafts and bloom over crisp pixel art.
 - **Mode-7 world map.** The rotating, tilting overworld everyone remembers, in 40 lines of your code.
 - **Hot reload.** Change a map or a script and see it in the running game in under a second.
 - **3x faster.** The renderer draws a full 384 x 216 screen in 0.9 ms on a 2018 laptop.

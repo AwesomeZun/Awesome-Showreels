@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: polished 16-bit SNES-era JRPG pixel art. Crisp hard-edged pixels where every art pixel is an exact 4x4 block of output pixels, a limited palette of about 32 colours (deep navy night, royal blue, moss and leaf greens, warm stone greys, bark browns, amber and gold lantern light), hand-placed shading and dithering, no anti-aliasing, no blur, no smooth gradients, no text, no letters, no logos, no UI, no watermark, no border.
+
+Image 1, filename battle_bg.png: a wide 16:9 landscape (1536x864) battle backdrop: a moonlit forest clearing with broken stone ruins, a big moon behind thin clouds, the ground plane from 55 percent of the height down, cool blue moonlight with a few warm fireflies; empty middle ground for the fighters.
+
+Image 2, filename boss.png: a large boss monster sprite: a giant brass mechanical beetle with glowing violet rune-like circuit lines on its shell, six jointed legs and big mandibles, menacing but fun, three-quarter side view facing right, on a perfectly flat pure #00FF00 green background, filling about 70 percent of the image.
+
+Image 3, filename party.png: three heroes in battle stance facing left, standing side by side in one row on a perfectly flat pure #00FF00 green background: a hooded adventurer holding a glowing brass lantern and a short sword, a mage in a violet robe with a gnarled staff, a knight in steel armour with a blue shield; the same pixel style and scale, each about 56 art pixels tall, feet on the same baseline, evenly spaced.
