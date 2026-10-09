@@ -1,0 +1,16 @@
+cream    #FFF4E0
+latte    #E8C9A0
+caramel  #C98F5A
+espresso #5B3A29
+ink      #3B2F3F
+sage     #A8C3A0
+mint     #CFE7D1
+sky      #BFD9F0
+dusk     #7A86B8
+plum     #8E6A9E
+peach    #F6B59B
+rose     #E88A8A
+brick    #B5654A
+sand     #F7E3C3
+leaf     #6E9A6A
+glow     #FFE8A3

@@ -1,0 +1,33 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": { "purpose": "launch", "audience": "neighbours", "title": "Pebble & Bean",
+    "reviewed": "Written by hand from source/README.md and source/palette.txt: the house style fixes the 16 colours, the isometric 2:1 diorama and the sign style; the README's 'cosy building game' sets the pace and the build-up motion." },
+  "source": [
+    { "path": "source/README.md", "kind": "readme", "notes": "opening announcement: date, address, menu, how it feels, house style" },
+    { "path": "source/palette.txt", "kind": "brand-guide", "notes": "the 16 pastel colours by name" }
+  ],
+  "mood": ["cosy", "warm", "slow", "playful", "neighbourly"],
+  "rationale": {
+    "palette": "The shop's 16 pastels (palette.txt), never black: shadows are darker tiles of the same family. At dusk the whole palette swaps to its evening ramp step by step and the windows glow (glow #FFE8A3).",
+    "type": "A 5x7 pixel face with the house sign's one-pixel caramel shadow (modules/bean.js).",
+    "motion": "A cosy building game: the shop assembles tile by tile in a diagonal wave, people and the roaster animate in two-frame loops on an 8-fps step clock (86 BPM: about 5.6 steps per beat), steam rises in single pixels.",
+    "sound": "Slow lo-fi with game-console sounds (README): 86 BPM in F major, a soft pad, pulse-wave comping, a stepped triangle bass, boom-bap drums with swing and tape.",
+    "visuals": "An isometric diorama on a 320 x 180 grid at 6x: the lot builds itself, the cutaway interior with the roaster and the counter, the street at dusk, the opening card."
+  },
+  "palette": {
+    "bg": "#FFF4E0", "bg2": "#F7E3C3", "surface": "#FFF4E0", "ink": "#3B2F3F", "ink2": "#5B3A29", "muted": "#8E6A9E",
+    "accent": "#C98F5A", "accent2": "#E88A8A", "accent3": "#A8C3A0", "ok": "#6E9A6A", "warn": "#C98F5A", "deny": "#B5654A",
+    "accentInk": "#5B3A29", "onAccent": "#FFF4E0", "line": "#E8C9A0", "highlight": "#FFE8A3"
+  },
+  "fonts": { "display": "monospace", "sans": "monospace", "serif": "monospace", "mono": "monospace", "cjk": "monospace", "files": [] },
+  "type": { "scale": [16, 20, 24, 32, 40, 48, 64, 80, 96, 128], "displayWeight": 400, "bodyWeight": 400, "tracking": 0, "trackingLabel": 0 },
+  "layout": { "theme": "light", "margin": 64, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": { "enabled": false, "font": "monospace", "size": 32, "fg": "#3B2F3F", "bg": "#FFF4E0", "y": 972 }, "radius": 0 },
+  "motion": { "pace": "calm", "spring": { "f": 2, "z": 1 }, "overshoot": 0, "ease": "lin", "transitions": ["cut"], "characters": true, "dataViz": false, "visualSources": ["vector"], "typeReveal": ["typewriter"] },
+  "post": { "grain": 0, "vignette": { "a": 0, "color": "#3B2F3F" }, "bloom": 0 },
+  "sound": { "bpm": 86, "key": "F", "mode": "major", "preset": "lofi",
+    "instruments": ["pad", "pulse", "tri-bass", "kick", "snare", "hats", "crackle"], "drums": "full", "sfx": "organic",
+    "energy": { "intro": 0.3, "groove": 0.55, "breakdown": 0.35, "drop": 0.65, "outro": 0.35 } },
+  "narration": { "recommended": false },
+  "review": []
+}
