@@ -1,0 +1,37 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": { "purpose": "paper", "audience": "immunologists and functional genomics researchers", "title": "Genome-scale Perturb-seq maps the regulators of T-cell exhaustion",
+    "reviewed": "Written by hand from source/manuscript.md: the preprint's own figure style (dark panels, diverging cyan-grey-magenta, IBM Plex and Plex Mono) sets the look; the figure legend sets the scenes." },
+  "source": [
+    { "path": "source/manuscript.md", "kind": "paper", "notes": "fictional preprint: title, authors, abstract, Figure 1 legend (a-d), key numbers, figure style" },
+    { "path": "source/data", "kind": "other", "notes": "simulated effects matrix (60 perturbations x 40 genes) and inferred network (paper-src/simulate.py)" },
+    { "path": "source/fonts", "kind": "other", "notes": "IBM Plex Sans and Plex Mono (SIL OFL 1.1)" }
+  ],
+  "mood": ["precise", "nocturnal", "technical", "decisive", "data-dense"],
+  "rationale": {
+    "palette": "The preprint's figure style: a near-black panel (#0B0F17) with a diverging scale, cyan (#22D3EE) for down, magenta (#E879F9) for up, and a slate midpoint; each of the five programmes keeps one colour across every panel (exhaustion rose, effector amber, memory green, cycling blue, stress violet).",
+    "type": "IBM Plex Sans for sentences, Plex Mono for every gene, guide sequence and number, as the manuscript asks.",
+    "motion": "Laboratory exact and quick: guides are typed, the cut happens on the beat, matrices build row by row, the network draws edge by edge; no bounce, outExpo.",
+    "sound": "A night in the genomics core: dark synth at 116 BPM in A minor, plucked arps and glassy blips for the data.",
+    "visuals": "The sgRNA and the cut, the pooled screen into droplets, the clustered effect heatmap with its dendrogram, the regulatory network with its hub, and the killing assay with every donor as a dot."
+  },
+  "palette": {
+    "bg": "#0B0F17", "bg2": "#121826", "surface": "#121826", "ink": "#E6EDF3", "ink2": "#B6C2D1", "muted": "#8B98A9",
+    "accent": "#E879F9", "accent2": "#22D3EE", "accent3": "#FBBF24", "ok": "#34D399", "warn": "#FBBF24", "deny": "#F472B6",
+    "accentInk": "#F0ABFC", "onAccent": "#0B0F17", "line": "#1F2937", "highlight": "#3B1F4A"
+  },
+  "fonts": { "display": "\"IBM Plex Sans\", sans-serif", "sans": "\"IBM Plex Sans\", sans-serif", "serif": "\"IBM Plex Sans\", sans-serif", "mono": "\"IBM Plex Mono\", monospace", "cjk": "\"IBM Plex Sans\", sans-serif",
+    "files": [ { "family": "IBM Plex Sans", "path": "source/fonts/IBMPlexSans-Variable.ttf", "weight": "100 700", "style": "normal" },
+               { "family": "IBM Plex Mono", "path": "source/fonts/IBMPlexMono-Regular.ttf", "weight": "400", "style": "normal" },
+               { "family": "IBM Plex Mono", "path": "source/fonts/IBMPlexMono-SemiBold.ttf", "weight": "600", "style": "normal" } ] },
+  "type": { "scale": [16, 20, 24, 30, 38, 48, 60, 76, 96, 128], "displayWeight": 600, "bodyWeight": 400, "tracking": -0.01, "trackingLabel": 0.06 },
+  "layout": { "theme": "dark", "margin": 96, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": { "enabled": false, "font": "\"IBM Plex Sans\", sans-serif", "size": 32, "fg": "#E6EDF3", "bg": "rgba(11,15,23,0.9)", "y": 972 }, "radius": 6 },
+  "motion": { "pace": "medium", "spring": { "f": 2.2, "z": 0.95 }, "overshoot": 0, "ease": "outExpo", "transitions": ["cut", "match"], "characters": false, "dataViz": true, "visualSources": ["vector", "data"], "typeReveal": ["typewriter", "revealLine"] },
+  "post": { "grain": 0.015, "vignette": { "a": 0.25, "color": "#000000" }, "bloom": 0 },
+  "sound": { "bpm": 116, "key": "A", "mode": "minor", "preset": "dark-synth",
+    "instruments": ["pad", "saw-pluck", "saw-bass", "glass", "kick", "snare", "hats"], "drums": "light", "sfx": "digital",
+    "energy": { "intro": 0.35, "groove": 0.65, "breakdown": 0.4, "drop": 0.85, "outro": 0.4 } },
+  "narration": { "recommended": true, "voice": "Charon", "styleTag": "[clear, informative]", "lang": "en-US" },
+  "review": []
+}
