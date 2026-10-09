@@ -1,0 +1,21 @@
+{
+  "title": "Ridgeline Pocket",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "boot", "label": "Power on", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "blip step=0" }, { "beat": 3, "from": "start", "sfx": "ding" }, { "beat": 4, "from": "start", "sfx": "tick:8 gap=0.06s soft" } ] },
+    { "id": "trail", "label": "On the trail", "minBars": 2, "maxBars": 4, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "cut", "music": "groove",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 2, "from": "start", "sfx": "blip step=2" }, { "beat": 0, "from": "holdBar", "sfx": "blip step=4", "count": 2 } ] },
+    { "id": "map", "label": "Offline map", "minBars": 2, "maxBars": 3, "priority": 2, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "groove",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 1, "from": "start", "sfx": "buzz" }, { "beat": 3, "from": "start", "sfx": "confirm" } ] },
+    { "id": "summit", "label": "Summit", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "cut", "music": "outro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 2, "from": "start", "sfx": "stamp" }, { "beat": 4, "from": "start", "sfx": "chime" } ] }
+  ],
+  "cuts": { "short": { "bars": 8, "label": "short" }, "30": { "bars": 13, "label": "30 s" } },
+  "poster": 10.0,
+  "captions": { "enabled": false },
+  "audio": { "transitionSfx": false }
+}

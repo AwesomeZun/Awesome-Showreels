@@ -1,0 +1,33 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": { "purpose": "launch", "audience": "day hikers", "title": "Ridgeline Pocket",
+    "reviewed": "Written by hand from source/README.md and source/brand-notes.md: the brand fixes the palette, the grid, the font and the step rate, so the tone pass had little to decide." },
+  "source": [
+    { "path": "source/README.md", "kind": "readme", "notes": "app README: offline maps, trail cards, elevation, summit check-ins, battery; one example trail with numbers" },
+    { "path": "source/brand-notes.md", "kind": "brand-guide", "notes": "four greens exactly, 240x135 grid at whole-number scale, 5x7 bitmap type, 9-fps steps, LCD ghosting" }
+  ],
+  "mood": ["calm", "outdoorsy", "nostalgic", "pocket-sized", "confident"],
+  "rationale": {
+    "palette": "The brand allows exactly four greens (shadow #1B2B1A, moss #3E5E2E, lichen #8FAE3A, paper #D4E59A) and forbids a fifth; gradients become ordered dithering between two neighbours.",
+    "type": "Its own 5x7 bitmap font, uppercase, tabular numbers, drawn pixel by pixel in code (modules/pocket.js); no anti-aliasing anywhere.",
+    "motion": "Everything steps at 9 fps on the 108-BPM grid (a beat is exactly 5 steps). The LCD keeps a faint ghost of the previous step. No smooth zooms; scrolling moves whole pixels.",
+    "sound": "Soft square-wave chiptune at 108 BPM in G major: pulse arps, a stepped triangle bass, a pulse lead and quiet noise drums, never loud ('a pocket toy, not a dashboard').",
+    "visuals": "A trail told in four screens: power-on, the side-scrolling trail with live distance and climb, the offline map drawing the route, the summit check-in."
+  },
+  "palette": {
+    "bg": "#D4E59A", "bg2": "#8FAE3A", "surface": "#D4E59A", "ink": "#1B2B1A", "ink2": "#3E5E2E", "muted": "#3E5E2E",
+    "accent": "#3E5E2E", "accent2": "#8FAE3A", "accent3": "#1B2B1A", "ok": "#3E5E2E", "warn": "#3E5E2E", "deny": "#1B2B1A",
+    "accentInk": "#1B2B1A", "onAccent": "#D4E59A", "line": "#8FAE3A", "highlight": "#8FAE3A"
+  },
+  "fonts": { "display": "monospace", "sans": "monospace", "serif": "monospace", "mono": "monospace", "cjk": "monospace", "files": [] },
+  "type": { "scale": [16, 20, 24, 32, 40, 48, 64, 80, 96, 128], "displayWeight": 400, "bodyWeight": 400, "tracking": 0, "trackingLabel": 0 },
+  "layout": { "theme": "light", "margin": 64, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": { "enabled": false, "font": "monospace", "size": 32, "fg": "#1B2B1A", "bg": "#D4E59A", "y": 972 }, "radius": 0 },
+  "motion": { "pace": "medium", "spring": { "f": 2, "z": 1 }, "overshoot": 0, "ease": "lin", "transitions": ["cut"], "characters": true, "dataViz": true, "visualSources": ["vector"], "typeReveal": ["typewriter"] },
+  "post": { "grain": 0, "vignette": { "a": 0, "color": "#1B2B1A" }, "bloom": 0 },
+  "sound": { "bpm": 108, "key": "G", "mode": "major", "preset": "chiptune",
+    "instruments": ["pulse", "tri-bass", "pulse-lead", "kick", "snare", "hats"], "drums": "light", "sfx": "digital",
+    "energy": { "intro": 0.3, "groove": 0.55, "breakdown": 0.35, "drop": 0.7, "outro": 0.4 } },
+  "narration": { "recommended": false },
+  "review": []
+}
