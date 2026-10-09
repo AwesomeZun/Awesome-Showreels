@@ -1,0 +1,21 @@
+{
+  "title": "WNT pulse organoids",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "seed", "label": "a  Seeding", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "plink" }, { "beat": 1, "from": "start", "sfx": "pop:5 gap=0.25b soft" }, { "beat": 4, "from": "start", "sfx": "drawon dur=0.75" } ] },
+    { "id": "grow", "label": "b  Days 0-7", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "cut", "music": "groove",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "air" }, { "beat": 2, "from": "start", "sfx": "bloop" }, { "beat": 4, "from": "start", "sfx": "bloop" }, { "beat": 6, "from": "start", "sfx": "chime" } ] },
+    { "id": "plate", "label": "c  The pulse, well by well", "minBars": 2, "maxBars": 3, "priority": 2, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "drop",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 2, "from": "start", "sfx": "tick:12 gap=0.06s soft" }, { "beat": 5, "from": "start", "sfx": "ding" } ] },
+    { "id": "result", "label": "d  Twice the enterocytes", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 0, "in": "cut", "music": "outro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swell" }, { "beat": 1, "from": "start", "sfx": "count" }, { "beat": 3, "from": "start", "sfx": "chime" } ] }
+  ],
+  "cuts": { "short": { "bars": 8, "label": "short" }, "30": { "bars": 12, "label": "30 s" } },
+  "poster": 9.0,
+  "captions": { "enabled": false },
+  "audio": { "transitionSfx": false }
+}

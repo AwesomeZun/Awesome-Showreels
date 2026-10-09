@@ -1,4 +1,4 @@
-# Image generation: GPT-image-2 through the Codex CLI
+# Image generation: GPT Image 2.5 through the Codex CLI
 
 How to make extra character poses, per-member renders, product/prop sheets and eyes-closed twins that match the
 source material. This is a recipe, not a tool: nothing here runs on its own.
@@ -6,11 +6,20 @@ source material. This is a recipe, not a tool: nothing here runs on its own.
 - **Ask first.** Every image spends the user's ChatGPT usage, and generated imagery has rights implications. Generate
   only when the user (or the run's settings) allows it; otherwise write the exact prompt into the plan as a blocked
   step.
-- **No API key.** The Codex CLI's built-in image tool (gpt-image-2 backend) runs on the user's ChatGPT login. Never
+- **No API key.** The Codex CLI's built-in image tool (`image_gen`: OpenAI's current image model, GPT Image 2.5 since September 2026) runs on the user's ChatGPT login. Never
   call an image API directly, never read or print keys or `.env` files, never switch to a paid API when the
   ChatGPT usage limit is reached. Wait for the reset instead.
-- **Transparent backgrounds are not supported.** Always generate on a flat background and lift it afterwards
+- **Generate on a flat key colour.** The tool now has a `transparent_background` option, but until it is verified on your setup, generate on a flat background (pure `#00FF00` for pixel art) and lift it afterwards
   (`prep_assets.py`, see `../references/imagery.md`).
+
+## 0. Pixel art from generated originals
+
+The image model draws excellent pixel-art scenes and sprite sheets, but not on an exact grid or palette. Ask for
+"every art pixel an exact 4x4 block", about 32 colours, no text, flat `#00FF00` behind anything that needs alpha;
+then make it true pixel art in code, as `examples/pixel-jrpg/gen-src/pixelize.py` does: key out the green, downsample
+to the art grid with a per-block majority vote (never blended colours), quantize every asset of the reel to one shared
+palette (median cut over all of them), keep alpha 0 or 255, and split sheets into frames. Size sprites by the height
+you need on screen (the model draws characters much larger than asked). Keep the prompts beside the originals.
 
 ## 1. When to generate (and when not)
 
@@ -192,10 +201,10 @@ Reject and regenerate rather than fix. Ask for 2-3 variants of a pose that carri
 - The reference character must belong to the client or be licensed to them. Generated poses are derivatives
   made for this client's reel. They do not go into public repositories unless the client says so. (The skill's
   own examples use art made from scratch.)
-- Record provenance per image: tool (Codex CLI image generation, gpt-image-2 backend), date, prompt file,
+- Record provenance per image: tool (Codex CLI image generation, GPT Image 2.5), date, prompt file,
   reference images. Put it in the asset's `"prov"` field in `P/assets.json`. `prep_assets.py` copies it to
   `P/build/provenance.json` for the credits.
-- Credits say what is generated, e.g. "Character poses generated with GPT-image-2 from <client>'s mascot". Some
+- Credits say what is generated, e.g. "Character poses generated with GPT Image 2.5 from <client>'s mascot". Some
   platforms and campaigns require an AI-imagery disclosure; follow the client's rules.
 - Check OpenAI's current terms and usage policies for output ownership and permitted use before shipping.
 - Keep prompts, references and `codex.log` in the reel project (`P/source/gen/<job>/`), not in the skill

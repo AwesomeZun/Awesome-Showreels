@@ -64,7 +64,7 @@ node $S/runtime/build.mjs --project $P --cuts short,30 --out out/lanternforge-v2
 
 ## How the pixel art was made
 
-1. **Originals.** Twelve images from gpt-image-2 through the Codex CLI (`source/gen/<job>/prompt.txt` holds every
+1. **Originals.** Twelve images from GPT Image 2.5 through the Codex CLI (`source/gen/<job>/prompt.txt` holds every
    prompt; the PNGs themselves are not committed): the corridor and its foreground pillars, the hero's 8-frame sheet,
    the town's sky, houses and foreground roofs, the overworld map, the airship, clouds, the battle backdrop, the boss
    and the party. Every prompt asks for the same SNES-era style, about 32 colours, 4x4 art pixels, no text.
@@ -86,7 +86,7 @@ node $S/runtime/build.mjs --project $P --cuts short,30 --out out/lanternforge-v2
 
 - **sound.** 'A little dramatic' (RELEASE.md): cinematic strings, a saw lead motif, toms and a half-time snare at 120 BPM in D minor; the fanfare resolves on the end card.
 
-- **visuals.** Pixel art from source/gen (gpt-image-2 originals, prompts kept beside them) turned into true pixel art on one shared 40-colour palette; the camera, light map, bloom, shafts, dust and depth of field are code (modules/hd.js). Scenes: a lantern lit in a dark corridor that lights the logo, a town at dusk whose windows light up, a Mode-7 flight, a boss battle whose damage numbers are the release numbers, a victory card.
+- **visuals.** Pixel art from source/gen (GPT Image 2.5 originals, prompts kept beside them) turned into true pixel art on one shared 40-colour palette; the camera, light map, bloom, shafts, dust and depth of field are code (modules/hd.js). Scenes: a lantern lit in a dark corridor that lights the logo, a town at dusk whose windows light up, a Mode-7 flight, a boss battle whose damage numbers are the release numbers, a victory card.
 
 ## Same BPM, more bars
 

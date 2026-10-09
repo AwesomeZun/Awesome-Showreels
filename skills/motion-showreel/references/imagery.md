@@ -75,7 +75,7 @@ eyes) are deleted.
   "assets": {
     "hero":   {"src": "source/mascot.png", "prov": "client mascot (brand kit 2026)"},
     "wave":   {"src": "source/gen/poses-a/hero_wave.png", "match": {"to": "hero", "strength": 0.5},
-               "prov": "GPT-image-2 via Codex CLI from source/mascot.png, prompt source/gen/poses-a/prompt.txt"},
+               "prov": "GPT Image 2.5 via Codex CLI from source/mascot.png, prompt source/gen/poses-a/prompt.txt"},
     "guard":  {"src": "source/gen/poses-a/hero_guard.png", "blinkFrom": "source/gen/poses-a/hero_guard_closed.png"},
     "prod":   {"src": "source/gen/sheet/products.png", "split": true, "names": ["toner", "jar", "tube"]},
     "logo":   {"src": "source/logo.jpg", "kind": "logo"},

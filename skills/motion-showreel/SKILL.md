@@ -4,7 +4,7 @@ description: >-
   Produce premium 2D motion-graphics showreels (an MP4 per cut plus a single-file HTML player) from any source
   material: a GitHub repo or README, markdown, a paper or PDF, a slide deck, a website, a brand guide, screenshots.
   It derives the material's tone and manner into style.json; picks the visual carriers the story needs (code-drawn
-  vector always; mascot cutouts via GPT-image-2, macOS Vision and OpenCV; real app UI, terminal and CLI captures; PDF
+  vector always; mascot cutouts via GPT Image 2.5, macOS Vision and OpenCV; real app UI, terminal and CLI captures; PDF
   figures, web shots, data viz); plans 15/30/60-s cuts on one fixed-BPM bar grid; synthesizes beat-synced music; adds
   optional Gemini TTS narration; and verifies sync, loudness and self-containment. Use for a showreel, sizzle reel,
   teaser, launch or pitch video, an explainer reel from a repo, paper or deck, "make a 30-second reel", to re-cut or
@@ -46,7 +46,7 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 
 Required: Node 20+, Python 3.9+ with numpy, scipy, Pillow and opencv-python (cutouts, text-free UI plates),
 ffmpeg with libx264. Optional: PyMuPDF (PDFs), fontTools + brotli (font subsets in the HTML), macOS 14+ with
-`swiftc` (Vision cutouts), `soffice` (pptx/odp), poppler, the Codex CLI with a ChatGPT login (GPT-image-2 poses),
+`swiftc` (Vision cutouts), `soffice` (pptx/odp), poppler, the Codex CLI with a ChatGPT login (GPT Image 2.5 poses and pixel-art originals),
 your own Gemini API key (narration; BYOK). Regression tests: `python3 -B -m unittest discover -s tests` and
 `node --test tests/*.test.mjs` from the repo root.
 
@@ -269,7 +269,7 @@ out.
 | `references/narration.md` | when to narrate, script writing, voices, TTS pipeline, captions, mix |
 | `references/render-pipeline.md` | stills, MP4, covers, share copies, single-file HTML, motion QA, troubleshooting |
 | `references/multi-agent.md` | contracts, roles, reviewer rubric, integrator checks, drafts |
-| `tools/imagegen.md`, `tools/capture_native.md` | GPT-image-2 poses via Codex; native app and simulator captures |
+| `tools/imagegen.md`, `tools/capture_native.md` | GPT Image 2.5 poses and pixel-art originals via Codex; native app and simulator captures |
 | `templates/` | style schema, STORYBOARD, reel.config, narration and Workflow templates |
 
 ## Examples

@@ -1,0 +1,36 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": { "purpose": "paper", "audience": "stem-cell and organoid researchers", "title": "A timed WNT pulse doubles mature enterocytes in human intestinal organoids",
+    "reviewed": "Written by hand from source/manuscript.md: the lab-notebook figure style (warm paper, light grid, brightfield with phase halos, Literata and a monospaced face) is the look; the four panels are the scenes." },
+  "source": [
+    { "path": "source/manuscript.md", "kind": "paper", "notes": "fictional stem-cell article: abstract, Figure 1 legend (a-d), notebook style" },
+    { "path": "source/data", "kind": "other", "notes": "simulated 96-well plate and growth curve (paper-src/simulate.py)" },
+    { "path": "source/fonts", "kind": "other", "notes": "Literata and Spline Sans Mono (SIL OFL 1.1)" }
+  ],
+  "mood": ["warm", "hands-on", "patient", "hopeful", "careful"],
+  "rationale": {
+    "palette": "Notebook paper (#F4EFE4) with a faint blue grid, brightfield greys for the images (#D9D4CA field, #6E665C cell walls, white phase halos), and the stains only where the figure uses them: villin magenta (#C2185B) and LGR5 green (#2E7D32). Pencil graphite for annotations.",
+    "type": "Literata for sentences and margin notes (the 'handwritten-feeling serif'), Spline Sans Mono for days, doses and well IDs.",
+    "motion": "Time-lapse patience: the organoid grows continuously with a day counter, buds push out, notes are written in as the days pass; the plate fills well by well. Ease ioSine, no hits.",
+    "sound": "Bench-side warmth: corporate preset at 100 BPM in D major with marimba and soft strings, light drums.",
+    "visuals": "A Matrigel dome with seeded stem cells, the brightfield time-lapse from one cell to a budding organoid, the protocol timeline with the 96-well plate map, and the day-7 result with a villin-stained organoid."
+  },
+  "palette": {
+    "bg": "#F4EFE4", "bg2": "#EAE3D4", "surface": "#FBF8F1", "ink": "#2B2722", "ink2": "#5A5248", "muted": "#8A8174",
+    "accent": "#C2185B", "accent2": "#2E7D32", "accent3": "#3D6FB6", "ok": "#2E7D32", "warn": "#C77D1A", "deny": "#B3261E",
+    "accentInk": "#A3154D", "onAccent": "#FFFFFF", "line": "#CFC6B6", "highlight": "#F7E3EC"
+  },
+  "fonts": { "display": "\"Literata\", serif", "sans": "\"Literata\", serif", "serif": "\"Literata\", serif", "mono": "\"Spline Sans Mono\", monospace", "cjk": "\"Literata\", serif",
+    "files": [ { "family": "Literata", "path": "source/fonts/Literata-Variable.ttf", "weight": "200 900", "style": "normal" },
+               { "family": "Spline Sans Mono", "path": "source/fonts/SplineSansMono-Variable.ttf", "weight": "300 700", "style": "normal" } ] },
+  "type": { "scale": [16, 20, 24, 30, 38, 48, 60, 76, 96, 128], "displayWeight": 600, "bodyWeight": 400, "tracking": -0.01, "trackingLabel": 0.04 },
+  "layout": { "theme": "light", "margin": 96, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": { "enabled": false, "font": "\"Literata\", serif", "size": 32, "fg": "#2B2722", "bg": "rgba(244,239,228,0.92)", "y": 972 }, "radius": 8 },
+  "motion": { "pace": "calm", "spring": { "f": 1.6, "z": 1 }, "overshoot": 0, "ease": "ioSine", "transitions": ["cut"], "characters": false, "dataViz": true, "visualSources": ["vector", "data"], "typeReveal": ["revealLine"] },
+  "post": { "grain": 0.03, "vignette": { "a": 0.12, "color": "#5A4A30" }, "bloom": 0 },
+  "sound": { "bpm": 100, "key": "D", "mode": "major", "preset": "corporate",
+    "instruments": ["strings", "marimba", "bell", "bass", "kick", "rim", "shaker"], "drums": "light", "sfx": "organic",
+    "energy": { "intro": 0.3, "groove": 0.55, "breakdown": 0.35, "drop": 0.7, "outro": 0.35 } },
+  "narration": { "recommended": true, "voice": "Kore", "styleTag": "[warm, clear]", "lang": "en-GB" },
+  "review": []
+}

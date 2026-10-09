@@ -1,4 +1,4 @@
-"""pixelize.py: turn the gpt-image-2 originals in source/gen/*/ into true pixel art in assets/px/.
+"""pixelize.py: turn the GPT Image 2.5 originals in source/gen/*/ into true pixel art in assets/px/.
 
 Each original was asked for 'every art pixel an exact 4x4 block' on a flat #00FF00 key where it needs alpha. Steps:
   1. key out the green (and its anti-aliased fringe) into a hard alpha;

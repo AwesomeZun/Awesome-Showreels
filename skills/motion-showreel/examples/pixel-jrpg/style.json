@@ -4,7 +4,7 @@
     "purpose": "launch",
     "audience": "indie game developers",
     "title": "Lanternforge 2.0",
-    "reviewed": "Rebuilt (v2) from source/RELEASE.md: the release adds dynamic lights, depth and bloom, so the trailer shows pixel art under real light (HD-2D): gpt-image-2 pixel originals quantized to one 40-colour palette (gen-src/pixelize.py), a light map, bloom, depth of field and a grade on top."
+    "reviewed": "Rebuilt (v2) from source/RELEASE.md: the release adds dynamic lights, depth and bloom, so the trailer shows pixel art under real light (HD-2D): GPT Image 2.5 pixel originals quantized to one 40-colour palette (gen-src/pixelize.py), a light map, bloom, depth of field and a grade on top."
   },
   "source": [
     {
@@ -35,7 +35,7 @@
     "type": "Pixelify Sans (bold, gold stepped fill, dark outline) for the logo and numbers; DotGothic16 for dialog. Both are drawn at art size, thresholded and scaled 5x, so every glyph pixel is square.",
     "motion": "A 16-bit trailer: a Mode-7 world map that rotates and tilts under the logo, a town walk with a typewriter dialog, a turn-based battle where the engine's features are the attacks and the numbers are damage, and a victory fanfare. Sprites animate on a 10-fps step clock.",
     "sound": "'A little dramatic' (RELEASE.md): cinematic strings, a saw lead motif, toms and a half-time snare at 120 BPM in D minor; the fanfare resolves on the end card.",
-    "visuals": "Pixel art from source/gen (gpt-image-2 originals, prompts kept beside them) turned into true pixel art on one shared 40-colour palette; the camera, light map, bloom, shafts, dust and depth of field are code (modules/hd.js). Scenes: a lantern lit in a dark corridor that lights the logo, a town at dusk whose windows light up, a Mode-7 flight, a boss battle whose damage numbers are the release numbers, a victory card."
+    "visuals": "Pixel art from source/gen (GPT Image 2.5 originals, prompts kept beside them) turned into true pixel art on one shared 40-colour palette; the camera, light map, bloom, shafts, dust and depth of field are code (modules/hd.js). Scenes: a lantern lit in a dark corridor that lights the logo, a town at dusk whose windows light up, a Mode-7 flight, a boss battle whose damage numbers are the release numbers, a victory card."
   },
   "palette": {
     "bg": "#0D0B1E",

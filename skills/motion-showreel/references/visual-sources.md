@@ -24,7 +24,7 @@ proofs, it is two scenes (or one scene with a match cut on the beat).
 |---|---|---|---|---|---|
 | **Kinetic type** | the claim, the name, the number | minutes | too many words for the on-screen time | storyboard copy | per-glyph rise, reveal line, scramble decode, wipe bar, beat slam |
 | **Data viz (real numbers)** | scale, results, rankings, change | low-medium | decorative charts with invented values | numbers from the source (JSON, table, run log) with a provenance note; `gl.js` for 20k+ points or edges | counters, impact numbers, bars, sparklines, tile wall, point cloud, network pulses |
-| **Mascot / character cutouts** | personality, emotion, "who" | ~1.5 min per generated pose + lift | off-model poses, licensing, kitsch in serious material | client mascot -> GPT-image-2 poses -> macOS Vision lift -> trim/blink (`imagery.md`) -> `P/assets/<name>.webp` + `meta.json` | spring pop, squash, jelly, blink, beat bounce, ride a path, guard/hop |
+| **Mascot / character cutouts** | personality, emotion, "who" | ~1.5 min per generated pose + lift | off-model poses, licensing, kitsch in serious material | client mascot -> GPT Image 2.5 poses -> macOS Vision lift -> trim/blink (`imagery.md`) -> `P/assets/<name>.webp` + `meta.json` | spring pop, squash, jelly, blink, beat bounce, ride a path, guard/hop |
 | **Real app UI** | the product exists and works; "how" | low if deployed | ghosted cross-fades, frozen blank states, unreachable states | `tools/capture_ui.mjs --spec spec.json` (`--example` prints one): layers, component states on a static clone, `textFree` + `rows` for typing, at the device's web-view size and dpr 3 (`capture.md`) -> `P/assets/captures/ui/` + json sidecars | device frame, character-accurate typing, progress states, zoom-through via `portal()`, scroll |
 | **Real terminal / CLI** | the tool runs; the exact output | low | fake output, unreadable density | `tools/capture_cli.py --cmd "..." --out P/assets/captures/term/<name>.cast` (real run, secrets masked, home paths anonymized) -> `term.js` | giant command word, tilted window, typing, zoom to the key line |
 | **PDF / paper figures** | the evidence in its own form | low | illegible at 1080p, altered data | `tools/pdf_figures.py paper.pdf --out P/assets/captures/pdf` (figures, `panels` per figure, `--mode pages`, `--find TEXT` for highlight rects) | paper sheet, zoom into panel, highlight, re-plot from the table (recipe 35, `paperSheet`) |
@@ -42,7 +42,7 @@ Both prepare rasters so that code can animate them; neither invents or edits evi
 | Job | Tool | What it gives the motion |
 |---|---|---|
 | Lift a character, product, or photo subject off its background | macOS Vision foreground instance masks (`tools/lift.swift`, macOS 14+), run by `prep_assets.py` (`--backend auto` picks Vision on macOS; `--check` lists backends) | cutouts that pop, squash, and stand on a contact shadow |
-| Flat or chroma backgrounds on any OS (generated poses come on a flat color: GPT-image-2 has no transparency) | OpenCV GrabCut (`prep_assets.py --backend flatbg`) | the same cutouts without macOS |
+| Flat or chroma backgrounds on any OS (generated images come on a flat key colour; see tools/imagegen.md) | OpenCV GrabCut (`prep_assets.py --backend flatbg`) | the same cutouts without macOS |
 | Clean, trimmed alpha; a sheet split into one file per item (`"split": true`) | OpenCV matte refinement and connected components in `prep_assets.py` | crisp edges at 1080p, product lineups |
 | Eyes-closed twin (`<name>_blink.webp`, `meta.eyes`) | eye-blob detection and inpainting in `prep_assets.py` | blinks (`blinkAt`, `popChar`) |
 | 2.5D photo: subject layer plus a subject-free plate (`"parallax": true`) | Vision lift + OpenCV Telea inpainting | parallax drift and push-ins on a still |
@@ -134,7 +134,7 @@ beautiful web demo gets the UI.
    does not say "proven", "cure", "detects". Banned wording comes from the source (`storyboard.md`).
 8. **No impersonation.** Do not fake another company's UI, logo, or endorsement. Third-party names and logos appear
    only as honest attribution ("built on X") and per that brand's rules.
-9. **Generated imagery stays a character.** GPT-image-2 poses extend the client's own mascot from its reference and
+9. **Generated imagery stays a character.** GPT Image 2.5 poses extend the client's own mascot from its reference and
    keep its identity (a brand without a mascot gets one only if the client agrees). Never generate photoreal people,
    products, or places presented as real, logos or text, or anything that stands in for evidence (screenshots,
    charts, figures, logs). Generation spends the user's quota: only with their consent (`tools/imagegen.md`).
