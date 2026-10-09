@@ -1,0 +1,4 @@
+night #0D0B1E  deep #1B1A3A  navy #24306E  royal #2E4FB0  azure #4A86E8  sky #8EC5FF  ice #D7ECFF  white #FFFFFF
+moss #1E4D2B  grass #2F7D3B  leaf #5DB547  lime #A6E05A  sand #E9D59A  gold #F2B33D  amber #E07B24  rust #A8461E
+wine #5A1F3A  crimson #B8203C  rose #F0607A  pink #FFB3C1  plum #4B2A6B  violet #7A4FD6  lilac #B9A0FF  mist #E8E0FF
+soil #4A3326  bark #7A5236  stone #6E7387  slate #9AA3B8  shadow #2A2A3A  ink #141420  bone #F4EBD9  ember #FF8A3D
