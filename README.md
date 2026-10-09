@@ -18,7 +18,7 @@ A [Claude Code](https://claude.com/claude-code) skill that turns any repo, READM
 <img src="https://img.shields.io/badge/ships-MP4%20%2B%20HTML-94e2d5?style=flat-square" alt="Ships an MP4 per cut and a single-file HTML player"/>
 <a href="#bring-your-own-key"><img src="https://img.shields.io/badge/narration-BYOK-a6e3a1?style=flat-square" alt="Narration: bring your own key"/></a>
 
-**[Install](#install) · [Examples](#same-skill-two-sources-two-reels) · [Moments](#best-moments) · [Features](#a-whole-motion-studio-in-one-skill) · [How it works](#watch-it-think) · [🇰🇷 한국어](README.ko.md)**
+**[Install](#install) · [Examples](#same-skill-fourteen-sources-fourteen-reels) · [Moments](#best-moments) · [Features](#a-whole-motion-studio-in-one-skill) · [How it works](#watch-it-think) · [🇰🇷 한국어](README.ko.md)**
 
 </div>
 
@@ -33,31 +33,101 @@ A [Claude Code](https://claude.com/claude-code) skill that turns any repo, READM
 
 ---
 
-## Same skill. Two sources. Two reels.
+## Same skill. Fourteen sources. Fourteen reels.
 
-One source packs 104 emoji per 1,000 words. The other packs 129 numbers and 7 citations per 1,000 words, and not a single emoji. Nobody picked a theme from a menu: the skill measured each source, Claude reviewed the draft like a designer, and the evidence set the palette, the type, the motion and the music.
+One source packs 104 emoji per 1,000 words. Another packs 129 numbers and 7 citations per 1,000 words, and not a single emoji. The rest are a press release, a competition brief, a zine, a game jam, a tea garden, a single-cell paper, a workshop handout, a landing page, a ryokan, a jazz-age invitation, a small-town newspaper and a race-timing app. Nobody picked a theme from a menu: the skill measured each source, Claude reviewed the draft like a designer, and the evidence set the palette, the type, the motion and the music. No two share a look, and none of them is a template.
 
 <table>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="assets/demo-playful-app-v1.1.0.mp4"><img src="assets/readme/twin-playful.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, chips fly out, the four-flavor lineup"/></a>
+<a href="skills/motion-showreel/examples/playful-app"><img src="assets/readme/wall-playful-app.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
 <br/><b>Mochi Notes</b> · <code>playful-app</code>
-<br/><sub>cheerful app README, pastel logo, a tiny web app<br/>→ bouncy pastel reel · plush mascot drawn in code · real app UI in a phone · 120 BPM bright-pop</sub>
-<br/><sub><a href="assets/demo-playful-app-v1.1.0.mp4">⬇ MP4 with sound</a> · <a href="skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html">⬇ HTML player</a> · <a href="skills/motion-showreel/examples/playful-app/README.md">How it was made</a></sub>
+<br/><sub>a cheerful app README, a pastel logo and a tiny web app<br/>→ plush mascot drawn in code, real app UI in a phone · 120 BPM bright-pop</sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="assets/demo-research-cli-v1.1.0.mp4"><img src="assets/readme/twin-research.webp" width="100%" alt="spark-bench: 4,096 attention blocks sink to 674, glitch into a real terminal capture, zoom to the 4.1x row, impact, blocks swirl into the logo"/></a>
+<a href="skills/motion-showreel/examples/research-cli"><img src="assets/readme/wall-research-cli.webp" width="100%" alt="spark-bench: 4,096 attention blocks sink to 674, a real terminal capture, the 4.1x row, blocks swirl into the logo"/></a>
 <br/><b>spark-bench</b> · <code>research-cli</code>
-<br/><sub>terse research README, dark docs page, a real CLI<br/>→ dark data-first reel · 4,096 GPU points · real terminal capture tilted in 3D · 128 BPM dark-synth</sub>
-<br/><sub><a href="assets/demo-research-cli-v1.1.0.mp4">⬇ MP4 with sound</a> · <a href="skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html">⬇ HTML player</a> · <a href="skills/motion-showreel/examples/research-cli/README.md">How it was made</a></sub>
+<br/><sub>a terse research README, a dark docs page and a real CLI<br/>→ 4,096 GPU points, a real terminal tilted in 3D · 128 BPM dark-synth</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/editorial-luxe"><img src="assets/readme/wall-editorial-luxe.webp" width="100%" alt="Les Heures Blanches: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
+<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
+<br/><sub>a fashion house press release and lookbook notes<br/>→ Bodoni hairlines, slow reveals, ivory and black · 80 BPM piano and strings</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/riso-zine"><img src="assets/readme/wall-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
+<br/><b>PAPER JAM #07</b> · <code>riso-zine</code>
+<br/><sub>a zine README and house style<br/>→ misregistered riso inks, stamps, jumpy cuts · 160 BPM</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/swiss-grid"><img src="assets/readme/wall-swiss-grid.webp" width="100%" alt="Haus für Musik: a strict Swiss grid, one red, numbers set at poster size"/></a>
+<br/><b>Haus für Musik</b> · <code>swiss-grid</code>
+<br/><sub>an architecture competition brief and CSS tokens<br/>→ 12-column grid, one red, numbers at poster size · 124 BPM</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/botanical-organic"><img src="assets/readme/wall-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
+<br/><b>Mistfold</b> · <code>botanical-organic</code>
+<br/><sub>a tea-garden story and brand notes<br/>→ watercolour, a botanically real time-lapse of a tea flush · 96 BPM nylon guitar and marimba</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/pixel-arcade"><img src="assets/readme/wall-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
+<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
+<br/><sub>a game-jam README and a 16-colour palette<br/>→ pixel art, CRT glow, a high-score end card · 144 BPM chiptune</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/sumi-wabi"><img src="assets/readme/wall-sumi-wabi.webp" width="100%" alt="余白庵: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
+<br/><b>余白庵</b> · <code>sumi-wabi</code>
+<br/><sub>a ryokan site and its shitsurae notes<br/>→ sumi bleeding into washi, vertical type, one vermilion seal · 72 BPM koto in hirajōshi</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/academic-paper"><img src="assets/readme/wall-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
+<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
+<br/><sub>a single-cell and spatial omics manuscript and its data<br/>→ 4,900 cells keep their identity: UMAP, tissue, dot plot · 100 BPM D dorian</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/sketchnote"><img src="assets/readme/wall-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
+<br/><b>Visual Notes Lab</b> · <code>sketchnote</code>
+<br/><sub>facilitator notes and a handout<br/>→ markers write themselves on one whiteboard, one camera take · 104 BPM</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/neo-brutal"><img src="assets/readme/wall-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
+<br/><b>kablok</b> · <code>neo-brutal</code>
+<br/><sub>a landing page's CSS and BRAND.md<br/>→ hard shadows, slabs, a cursor that presses · 112 BPM funk</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/art-deco"><img src="assets/readme/wall-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
+<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
+<br/><sub>an invitation, a menu and a house style<br/>→ gilded stepped frames, a fan, a sunburst · 112 BPM swing</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/newsprint"><img src="assets/readme/wall-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
+<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
+<br/><sub>a front page and a stylebook<br/>→ a printing press, halftone, cast slugs, a red plate · 96 BPM</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="skills/motion-showreel/examples/sports-kinetic"><img src="assets/readme/wall-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
+<br/><b>VELMORA 42</b> · <code>sports-kinetic</code>
+<br/><sub>a race-timing app README and BRAND.md<br/>→ broadcast type, real splits as bars, racing stripes · 176 BPM drum and bass</sub>
 </td>
 </tr>
 </table>
 
-Each player is one HTML file with every cut (15/short, 30 and 60 s) and their music. GitHub shows it as source, so download it (“Download raw file”) and open it in any browser, offline. Both projects are fictional and were written for this repo; their numbers are demo data, and the reels say so on screen.
+<sub>Each loop is that example's short cut played at 2x, silent. Every project, brand and data set is fictional and was written for this repo; the reels say so on screen. Open any folder for its source, its <code>style.json</code> with the reasoning behind every decision, and its scenes. With sound, in 1080p60: <a href="assets/demo-playful-app-v1.1.0.mp4">Mochi Notes MP4</a> · <a href="assets/demo-research-cli-v1.1.0.mp4">spark-bench MP4</a>; single-file players with every cut: <a href="skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html">Mochi Notes</a> · <a href="skills/motion-showreel/examples/research-cli/dist/spark-bench-v1.1.0.html">spark-bench</a> (GitHub shows them as source: “Download raw file”, then open offline).</sub>
 
 <details>
-<summary><b>Every style decision, side by side</b></summary>
+<summary><b>Every style decision, side by side: Mochi Notes and spark-bench</b></summary>
 
 `tools/extract_style.py` reads whatever you give it (READMEs, docs sites, CSS tokens, Tailwind configs, PDFs, pptx themes, terminal themes, logos, screenshots) and drafts `style.json`: palette roles with contrast checks, font stacks, type scale, motion vocabulary, post-processing, a sound palette and a narration recommendation. Every decision cites evidence from the source; Claude reviews the draft like a designer and overrules it where the material says otherwise. A one-page style board goes to you before any scene is built.
 
@@ -76,85 +146,6 @@ Each player is one HTML file with every cut (15/short, 30 and 60 s) and their mu
 Each example's README walks through its source, the tone pass decisions, the captures and the full build: [playful-app](skills/motion-showreel/examples/playful-app/README.md) · [research-cli](skills/motion-showreel/examples/research-cli/README.md).
 
 </details>
-
----
-
-## Fourteen sources. Fourteen looks. Zero presets.
-
-The two reels above are not two styles to pick from. Here are twelve more, each made from its own source: a press release, a competition brief, a zine, a game jam, a tea garden, a single-cell paper, a workshop handout, a landing page, a ryokan, a jazz-age invitation, a small-town newspaper and a race-timing app. The palette, the type, the motion grammar and the music all came out of the material. No two share a look, and none of them is a template.
-
-<table>
-<tr>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/editorial-luxe"><img src="assets/readme/wall-editorial-luxe.webp" width="100%" alt="Les Heures Blanches: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
-<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
-<br/><sub>a fashion house press release and lookbook notes<br/>→ Bodoni hairlines, slow reveals, ivory and black · 80 BPM piano and strings</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/swiss-grid"><img src="assets/readme/wall-swiss-grid.webp" width="100%" alt="Haus für Musik: a strict Swiss grid, one red, numbers set at poster size"/></a>
-<br/><b>Haus für Musik</b> · <code>swiss-grid</code>
-<br/><sub>an architecture competition brief and CSS tokens<br/>→ 12-column grid, one red, numbers at poster size · 124 BPM</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/riso-zine"><img src="assets/readme/wall-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
-<br/><b>PAPER JAM #07</b> · <code>riso-zine</code>
-<br/><sub>a zine README and house style<br/>→ misregistered riso inks, stamps, jumpy cuts · 160 BPM</sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/pixel-arcade"><img src="assets/readme/wall-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
-<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
-<br/><sub>a game-jam README and a 16-colour palette<br/>→ pixel art, CRT glow, a high-score end card · 144 BPM chiptune</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/botanical-organic"><img src="assets/readme/wall-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
-<br/><b>Mistfold</b> · <code>botanical-organic</code>
-<br/><sub>a tea-garden story and brand notes<br/>→ watercolour, a botanically real time-lapse of a tea flush · 96 BPM nylon guitar and marimba</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/academic-paper"><img src="assets/readme/wall-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
-<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
-<br/><sub>a single-cell and spatial omics manuscript and its data<br/>→ 4,900 cells keep their identity: UMAP, tissue, dot plot · 100 BPM D dorian</sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/sketchnote"><img src="assets/readme/wall-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
-<br/><b>Visual Notes Lab</b> · <code>sketchnote</code>
-<br/><sub>facilitator notes and a handout<br/>→ markers write themselves on one whiteboard, one camera take · 104 BPM</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/neo-brutal"><img src="assets/readme/wall-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
-<br/><b>kablok</b> · <code>neo-brutal</code>
-<br/><sub>a landing page's CSS and BRAND.md<br/>→ hard shadows, slabs, a cursor that presses · 112 BPM funk</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/sumi-wabi"><img src="assets/readme/wall-sumi-wabi.webp" width="100%" alt="余白庵: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
-<br/><b>余白庵</b> · <code>sumi-wabi</code>
-<br/><sub>a ryokan site and its shitsurae notes<br/>→ sumi bleeding into washi, vertical type, one vermilion seal · 72 BPM koto in hirajōshi</sub>
-</td>
-</tr>
-<tr>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/art-deco"><img src="assets/readme/wall-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
-<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
-<br/><sub>an invitation, a menu and a house style<br/>→ gilded stepped frames, a fan, a sunburst · 112 BPM swing: walking bass, ride, clarinet</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/newsprint"><img src="assets/readme/wall-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
-<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
-<br/><sub>a front page and a stylebook<br/>→ a printing press, halftone, cast slugs, a red plate · 96 BPM</sub>
-</td>
-<td align="center" valign="top" width="33%">
-<a href="skills/motion-showreel/examples/sports-kinetic"><img src="assets/readme/wall-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
-<br/><b>VELMORA 42</b> · <code>sports-kinetic</code>
-<br/><sub>a race-timing app README and BRAND.md<br/>→ broadcast type, real splits as bars, racing stripes · 176 BPM drum and bass</sub>
-</td>
-</tr>
-</table>
-
-<sub>Each loop is that example's short cut played at 2x, silent. Every project, brand and data set is fictional and was written for this repo; the reels say so on screen. Open any folder for its source, its <code>style.json</code> with the reasoning behind every decision, and its scenes.</sub>
 
 ---
 
