@@ -1,0 +1,21 @@
+{
+  "title": "Every cell of the zebrafish embryo",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "gather", "label": "The embryo gathers", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "air" }, { "beat": 3, "from": "start", "sfx": "shimmer" }, { "beat": 4, "from": "start", "sfx": "ding soft" } ] },
+    { "id": "sheet", "label": "b  One plane at a time", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "cut", "music": "groove",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "scan dur=2" }, { "beat": 2, "from": "start", "sfx": "blip step=2" } ] },
+    { "id": "tracks", "label": "c  4,812 tracks", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "drop",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "drawon dur=2" }, { "beat": 5, "from": "start", "sfx": "lock" } ] },
+    { "id": "decision", "label": "d  The early decision", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 0, "in": "cut", "music": "outro",
+      "cues": [ { "beat": 0, "from": "start", "sfx": "swell" }, { "beat": 1, "from": "start", "sfx": "count" }, { "beat": 3, "from": "start", "sfx": "chime" } ] }
+  ],
+  "cuts": { "short": { "bars": 8, "label": "short" }, "30": { "bars": 11, "label": "30 s" } },
+  "poster": 12.0,
+  "captions": { "enabled": false },
+  "audio": { "transitionSfx": false }
+}
