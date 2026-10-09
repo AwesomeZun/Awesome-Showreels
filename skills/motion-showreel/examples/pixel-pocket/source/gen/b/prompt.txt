@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: classic handheld game console pixel art from the early 1990s, using ONLY four shades of green: darkest #1B2B1A, dark #3E5E2E, light #8FAE3A, lightest #D4E59A. Gradients and soft light are made only with ordered dithering patterns of those four shades. Every art pixel is an exact solid 6x6 block of output pixels. Crisp hard edges, no anti-aliasing, no blur, no other colours, no text, no letters, no logos, no UI, no watermark, no border. Beautiful, detailed, atmospheric hand-crafted pixel art.
+
+Image 1, filename forest.png: a wide 16:9 landscape (1536x864): deep inside an old pine forest, layered trunks receding into mist, shafts of sunlight slanting down through the canopy drawn with dithering, moss, roots and ferns, a narrow trail winding through the middle.
+
+Image 2, filename forest_near.png: a wide 16:9 landscape (1536x864) foreground layer: big dark tree trunks at the far left and far right edges and large fern leaves along the bottom edge, all darkest and dark green, on a perfectly flat pure #00FF00 green background; the whole middle of the image empty green.
+
+Image 3, filename topo_map.png: a wide 16:9 landscape (1536x864) top-down hiking map: contour lines around three peaks, a lake, a winding river, forest patches drawn as tiny tree clusters, cliffs and a saddle between two peaks; no trail line, no text, no symbols with letters.

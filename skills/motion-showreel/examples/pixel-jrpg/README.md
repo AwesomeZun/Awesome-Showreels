@@ -16,16 +16,16 @@ every decision.
 
 ```
 pixel-jrpg/
-  source/                 26 file(s)
+  source/                 10 file(s)
     RELEASE.md
     fonts/DotGothic16-Regular.ttf
     fonts/OFL-PixelifySans.txt
     fonts/OFL.txt
     fonts/PixelifySans-Variable.ttf
-    gen/a/codex.log
-    gen/a/corridor_bg.png
-    gen/a/corridor_fg.png
-    ... 18 more
+    gen/a/prompt.txt
+    gen/b/prompt.txt
+    gen/c/prompt.txt
+    ... 2 more
   assets/                 14 file(s)
     px/airship.png
     px/battle_bg.png

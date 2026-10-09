@@ -1,21 +1,260 @@
 {
-  "title": "Ridgeline Pocket",
-  "style": "style.json",
-  "size": [1920, 1080],
-  "fps": 60,
-  "beatsPerBar": 4,
-  "scenes": [
-    { "id": "boot", "label": "Power on", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "blip step=0" }, { "beat": 3, "from": "start", "sfx": "ding" }, { "beat": 4, "from": "start", "sfx": "tick:8 gap=0.06s soft" } ] },
-    { "id": "trail", "label": "On the trail", "minBars": 2, "maxBars": 4, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "cut", "music": "groove",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 2, "from": "start", "sfx": "blip step=2" }, { "beat": 0, "from": "holdBar", "sfx": "blip step=4", "count": 2 } ] },
-    { "id": "map", "label": "Offline map", "minBars": 2, "maxBars": 3, "priority": 2, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "groove",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 1, "from": "start", "sfx": "buzz" }, { "beat": 3, "from": "start", "sfx": "confirm" } ] },
-    { "id": "summit", "label": "Summit", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "cut", "music": "outro",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "swish" }, { "beat": 2, "from": "start", "sfx": "stamp" }, { "beat": 4, "from": "start", "sfx": "chime" } ] }
-  ],
-  "cuts": { "short": { "bars": 8, "label": "short" }, "30": { "bars": 13, "label": "30 s" } },
-  "poster": 10.0,
-  "captions": { "enabled": false },
-  "audio": { "transitionSfx": false }
+ "title": "Ridgeline Pocket",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "boot",
+   "label": "Power on",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 3.6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0.2,
+     "from": "start",
+     "sfx": "blip step=0"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 2.6,
+     "from": "start",
+     "sfx": "tick:6 gap=0.09s soft"
+    }
+   ]
+  },
+  {
+   "id": "trail",
+   "label": "Dawn at the trailhead",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 6.5,
+   "outBeats": 1.5,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "click"
+    },
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 3.8,
+     "from": "start",
+     "sfx": "tick:4 gap=0.4"
+    },
+    {
+     "beat": 6,
+     "from": "start",
+     "sfx": "beep"
+    }
+   ]
+  },
+  {
+   "id": "forest",
+   "label": "No service",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 2,
+   "inBeats": 5.5,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.4,
+     "from": "start",
+     "sfx": "whoosh"
+    },
+    {
+     "beat": 1.8,
+     "from": "start",
+     "sfx": "bwoop"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "buzz"
+    },
+    {
+     "beat": 4,
+     "from": "start",
+     "sfx": "confirm"
+    }
+   ]
+  },
+  {
+   "id": "map",
+   "label": "The offline map",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.4,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "drawon dur=2.6"
+    },
+    {
+     "beat": 3.6,
+     "from": "start",
+     "sfx": "blip step=4"
+    },
+    {
+     "beat": 4,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 4.2,
+     "from": "start",
+     "sfx": "drawon dur=1.4"
+    },
+    {
+     "beat": 6,
+     "from": "start",
+     "sfx": "beep:2"
+    }
+   ]
+  },
+  {
+   "id": "summit",
+   "label": "Summit check-in",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 4.5,
+   "outBeats": 2,
+   "in": "cut",
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0.6,
+     "from": "start",
+     "sfx": "whoosh up"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "stamp"
+    },
+    {
+     "beat": 4,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 4.4,
+     "from": "start",
+     "sfx": "tick:4 gap=0.1"
+    },
+    {
+     "beat": -1.8,
+     "from": "end",
+     "sfx": "downlifter"
+    }
+   ]
+  },
+  {
+   "id": "camp",
+   "label": "Night camp",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "air"
+    },
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "tick:4 gap=0.3"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "click"
+    },
+    {
+     "beat": 4.4,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 5,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 5.4,
+     "from": "start",
+     "sfx": "tick:6 gap=0.13"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 9,
+   "label": "short",
+   "exclude": [
+    "forest"
+   ],
+   "scenes": {
+    "boot": {
+     "bars": 1
+    }
+   }
+  },
+  "30": {
+   "bars": 14,
+   "label": "30 s"
+  }
+ },
+ "poster": 12.8,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
 }

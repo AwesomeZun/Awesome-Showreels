@@ -16,9 +16,11 @@ already on the device: the map, the trail, the elevation, the way back.
 
 ## Example trail
 
-| Trail | Distance | Climb | Time | Summit |
-|---|---|---|---|---|
-| Granite Saddle Loop | 12.4 km | +860 m | 4 h 30 | Pika Point, 1,847 m |
+| Trail | Distance | Climb | Time | Summit | Water | The turn you will miss |
+|---|---|---|---|---|---|---|
+| Granite Saddle Loop | 12.4 km | +860 m | 4 h 30 | Pika Point, 1,847 m (km 6.2) | spring at km 3.4 | left at km 7.9 |
+
+The last 0.8 km to Pika Point is the steep part: +287 m.
 
 ## Design notes
 

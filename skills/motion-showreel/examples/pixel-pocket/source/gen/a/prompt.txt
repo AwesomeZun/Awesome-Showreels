@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: classic handheld game console pixel art from the early 1990s, using ONLY four shades of green: darkest #1B2B1A, dark #3E5E2E, light #8FAE3A, lightest #D4E59A. Gradients and soft light are made only with ordered dithering patterns of those four shades. Every art pixel is an exact solid 6x6 block of output pixels. Crisp hard edges, no anti-aliasing, no blur, no other colours, no text, no letters, no logos, no UI, no watermark, no border. Beautiful, detailed, atmospheric hand-crafted pixel art.
+
+Image 1, filename dawn_far.png: a wide 16:9 landscape (1536x864): a mountain range at dawn seen from a valley, layered ridges fading toward the horizon, a rising sun behind the central peak with dithered rays, a few long thin clouds; the lower third is empty lightest green sky-haze so other layers can sit in front.
+
+Image 2, filename trailhead.png: a wide 16:9 landscape (1536x864) side view of a trailhead at the edge of a pine forest: a wooden trail sign with an arrow (no letters on it), a log bench, tall pines on the right, ferns and rocks, a dirt path running from left to right along the bottom quarter; everything above and behind the trees is a perfectly flat pure #00FF00 green background.
+
+Image 3, filename hiker_sheet.png: a sprite sheet of one hiker with a cap, a big backpack with a rolled sleeping mat and a trekking pole, side view walking right, 8 frames in a single horizontal row of a smooth walk cycle, the identical character in every frame, about 40 art pixels tall, evenly spaced, feet on the same baseline, on a perfectly flat pure #00FF00 green background.

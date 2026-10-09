@@ -1,0 +1,9 @@
+Generate each image with your image generation tool one at a time. Immediately after each image is generated, copy the PNG from ~/.codex/generated_images into the current working directory using the exact filename given, then print a line "SAVED: <path>". Do not edit any other files. Do not stop until all images are saved.
+
+Shared style for every image: classic handheld game console pixel art from the early 1990s, using ONLY four shades of green: darkest #1B2B1A, dark #3E5E2E, light #8FAE3A, lightest #D4E59A. Gradients and soft light are made only with ordered dithering patterns of those four shades. Every art pixel is an exact solid 6x6 block of output pixels. Crisp hard edges, no anti-aliasing, no blur, no other colours, no text, no letters, no logos, no UI, no watermark, no border. Beautiful, detailed, atmospheric hand-crafted pixel art.
+
+Image 1, filename summit.png: a wide 16:9 landscape (1536x864): standing on a rocky summit at sunrise above a sea of clouds, distant peaks poking through the clouds, the sun just above the horizon on the right with dithered glow; the summit rocks and a small stone cairn fill the lower left third.
+
+Image 2, filename camp.png: a wide 16:9 landscape (1536x864) night scene at a mountain camp: a small A-frame tent, a campfire with flames and a log seat in the centre, pine silhouettes on both sides, a lake reflecting a starry sky behind, the moon in the upper left; very dark overall with the fire as the only bright spot.
+
+Image 3, filename cloud_sea.png: a wide 16:9 landscape (1536x864): only rolling banks of clouds seen from above, lit from the right, with dithered shading, on a perfectly flat pure #00FF00 green background above the clouds; the clouds fill the lower half.
