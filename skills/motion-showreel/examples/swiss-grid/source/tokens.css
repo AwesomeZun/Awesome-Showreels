@@ -1,0 +1,119 @@
+/*
+  Büro Zwölf Architekten, Zürich: Gestaltungstoken / design tokens, version 3.
+  One page of rules for print, screen and project films. Fictional studio (showreel example).
+
+  Three colours. One typeface in two weights. Twelve columns. Nothing else.
+*/
+
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("fonts/SchibstedGrotesk-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ── Farben / Colours ─────────────────────────────────────────────── */
+  --zw-paper: #F4F3EF;        /* Papierweiss: every ground */
+  --zw-ink: #111111;          /* Schwarz: type, rules, solid fields */
+  --zw-signal: #D52B1E;       /* Signalrot: one red element per page, never a tint */
+
+  /* Grey is not a colour: it is ink on paper at a fixed share. */
+  --zw-ink-70: #555554;       /* secondary text (6.7:1 on paper) */
+  --zw-ink-60: #6C6B6A;       /* captions, meta lines, small print (4.8:1 on paper) */
+  --zw-ink-15: #D2D1CE;       /* hairlines and rules */
+  --zw-ink-06: #E6E5E2;       /* grid fields, shown only in construction drawings */
+  --zw-paper-65: #A5A4A1;     /* secondary text on a black page (7.6:1 on ink) */
+
+  /* Semantic roles */
+  --zw-bg: var(--zw-paper);
+  --zw-text: var(--zw-ink);
+  --zw-text-muted: var(--zw-ink-60);
+  --zw-accent: var(--zw-signal);
+  --zw-border: var(--zw-ink-15);
+  --zw-bg-inverse: var(--zw-ink);
+  --zw-text-inverse: var(--zw-paper);
+
+  /* ── Schrift / Type ───────────────────────────────────────────────── */
+  --zw-font: "Schibsted Grotesk", sans-serif;   /* the only family */
+  --zw-weight-text: 500;      /* Medium: all running text, labels, captions */
+  --zw-weight-display: 700;   /* Bold: headlines, numerals, the wordmark */
+  --zw-tracking-display: -0.03em;
+  --zw-tracking-numeral: -0.045em;
+  --zw-tracking-text: 0;
+  --zw-leading-display: 0.92;
+  --zw-leading-text: 1.33;
+
+  /* Grössen / sizes, screen px at 1920 × 1080 */
+  --zw-size-1: 16px;          /* small print */
+  --zw-size-2: 20px;          /* meta, axis labels */
+  --zw-size-3: 24px;          /* text */
+  --zw-size-4: 32px;          /* lead */
+  --zw-size-5: 48px;
+  --zw-size-6: 72px;          /* headline */
+  --zw-size-7: 120px;
+  --zw-size-8: 200px;
+  --zw-size-9: 320px;         /* numerals */
+  --zw-size-10: 480px;        /* the one huge numeral per page */
+
+  /* ── Raster / Grid (screen 1920 × 1080) ───────────────────────────── */
+  --zw-columns: 12;
+  --zw-column: 122px;
+  --zw-gutter: 24px;
+  --zw-margin-x: 96px;
+  --zw-margin-y: 72px;
+  --zw-rows: 6;
+  --zw-row: 136px;
+  --zw-baseline: 8px;
+  --zw-radius: 0;             /* no rounded corners, anywhere */
+  --zw-shadow: none;          /* no shadows, no glows, no gradients */
+
+  /* ── Bewegung / Motion (project films, screens) ───────────────────── */
+  --zw-tempo: 124;                                /* BPM, 4/4 */
+  --zw-beat: 483.87ms;                            /* 60 000 / 124 */
+  --zw-bar: 1935.48ms;
+  --zw-snap: 60ms;                                /* a snap: one eighth of a beat, then a dead stop */
+  --zw-ease-snap: cubic-bezier(0.16, 1, 0.3, 1);  /* expo out: no overshoot, no bounce */
+  --zw-ease-wipe: cubic-bezier(0.7, 0, 0.84, 0);  /* wipes accelerate into the next column */
+}
+
+/* ── Base ────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--zw-bg);
+  color: var(--zw-text);
+  font: var(--zw-weight-text) var(--zw-size-3)/var(--zw-leading-text) var(--zw-font);
+  -webkit-font-smoothing: antialiased;
+  text-align: left;            /* flush left, ragged right; never centred, never justified */
+  hyphens: manual;
+}
+
+h1, h2, h3, .numeral {
+  font-weight: var(--zw-weight-display);
+  letter-spacing: var(--zw-tracking-display);
+  line-height: var(--zw-leading-display);
+  margin: 0;
+}
+.numeral { letter-spacing: var(--zw-tracking-numeral); font-variant-numeric: tabular-nums; }   /* tabular figures for numerals only */
+em, i { font-style: normal; font-weight: var(--zw-weight-display); }   /* emphasis by weight, never italics */
+a { color: inherit; text-decoration: none; border-bottom: 2px solid var(--zw-ink); }
+
+.page {
+  display: grid;
+  grid-template-columns: repeat(var(--zw-columns), 1fr);
+  column-gap: var(--zw-gutter);
+  padding: var(--zw-margin-y) var(--zw-margin-x);
+  max-width: 1920px;
+}
+.rule { border: 0; border-top: 2px solid var(--zw-ink); margin: 0; }
+.hairline { border: 0; border-top: 1px solid var(--zw-border); margin: 0; }
+.signal { color: var(--zw-signal); }
+.square { display: block; width: var(--zw-column); aspect-ratio: 1; background: var(--zw-signal); }
+.inverse { background: var(--zw-bg-inverse); color: var(--zw-text-inverse); }
+.meta { font-size: var(--zw-size-2); color: var(--zw-text-muted); }
+.small { font-size: var(--zw-size-1); color: var(--zw-text-muted); }

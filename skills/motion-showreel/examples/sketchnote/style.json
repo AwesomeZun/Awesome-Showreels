@@ -1,0 +1,310 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "people who take notes in meetings: team leads, PMs, teachers (the workshop's own list, source/README.md)",
+    "title": "Visual Notes Lab · Lesson 3",
+    "reviewed": "Reviewed by hand after extract_style.py (draft kept in build/style.draft-original.json). Changed: accent order (orange is the material's 'ONE thing', blue its structure), mood, fonts (handwriting fallbacks, the pen face), type scale and tracking, HUD off, transitions, dataViz off, visualSources vector only, typeReveal, post, the whole sound block, narration voice. Rationale cites the evidence ids in style-extract.md (committed copy of build/style-extract.md)."
+  },
+  "source": [
+    {
+      "path": "source/lesson-03-notes.md",
+      "kind": "markdown",
+      "notes": "the facilitator's lesson notes: timings, the 3 moves, the arrow vocabulary, the wall-of-text exercise and its 'good rescue', the board plan, say this / not this"
+    },
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "the workshop page: tagline 'Notes nobody reads → notes people see.', sessions, the 3-marker kit and its colour jobs, house rules, the big board that stays up all session, fictional disclaimer"
+    },
+    {
+      "path": "source/handout/lesson-03-handout.html",
+      "kind": "website",
+      "notes": "printable one-page handout: hand-drawn SVG doodles in the three marker colours, title, kit, moves, rescue"
+    },
+    {
+      "path": "source/handout/handout.css",
+      "kind": "brand-guide",
+      "notes": "the kit as tokens: --paper, --ink, --ink-soft, --marker-blue, --marker-orange, --marker-orange-text, --ghost, dot-vote green and red; jobs --words / --structure / --highlight; --font-marker / --font-pen"
+    },
+    {
+      "path": "source/handout/lesson-03-handout.pdf",
+      "kind": "other",
+      "notes": "the handout printed to A4 landscape (Chromium print-to-PDF)"
+    },
+    {
+      "path": "source/fonts/shantell-sans/ShantellSans-Variable.ttf",
+      "kind": "other",
+      "notes": "Shantell Sans variable (wght 300-800, INFM, BNCE, SPAC), SIL OFL 1.1 (OFL.txt beside it): the marker voice"
+    },
+    {
+      "path": "source/fonts/caveat/Caveat-Variable.ttf",
+      "kind": "other",
+      "notes": "Caveat variable (wght 400-700), SIL OFL 1.1 (OFL.txt beside it): the pen voice for margin notes"
+    }
+  ],
+  "mood": [
+    "hand-drawn",
+    "playful",
+    "clear",
+    "friendly",
+    "warm"
+  ],
+  "rationale": {
+    "palette": "Light theme, as measured (16.3 light vs 0 dark) and as the world is: a whiteboard. Every role is a token from source/handout/handout.css [E7]: bg #FAFAF7 (--paper, also <meta theme-color> [E4] and the page background [E10]; 'never pure #FFF on a projector'), ink #1E2024 (--ink, black marker), ink2 #5C6068 (--ink-soft). CHANGED the accent order: the draft ranked blue first by area share (blue 19 % vs orange 9 %), but the material assigns jobs, not areas: 'orange → the ONE thing: stars, underlines, circles' and 'blue → structure. Blue never carries content' [E1, E2], and its own role token --highlight resolves to orange [E7]. So accent #EE6316 (--marker-orange, 3.1:1: fills, stars, big words only), accent2 #1F5BC4 (--marker-blue, 6.0:1), accent3 and ok #25874A (--dot-green, the dot-vote stickers), deny #D23A2F (--dot-red, replacing the draft's derived #D2444E), accentInk #B84A0C (--marker-orange-text, 5.0:1: orange words at text size), onAccent #1E2024 (5.0:1 on orange; white is 3.3:1). muted #686C74 is ink2's cool grey one step lighter (5.0:1; the draft's derived #737374 was warm-neutral), line #DADDE2 (--ghost: 'the ghost that stays behind is fine' [E2]). bg2 #EEEFEC is authored (one step darker paper for the board edge and tray; the draft's #EDEEF7 leaned toward the blue accent). warn #A97F00 is derived (the material has no warn colour; 3.5:1). Extra keys name the kit for the code: markerBlack/markerBlue/markerOrange, dotGreen/dotRed, ghost, and boardFrame #AEB4BC (authored aluminium edge of 'the big board' [E1]). paletteAlt removed: a whiteboard has no night stage and no scene is dark.",
+    "type": "The material's own two voices [E5, E6, E8, E9, E23, E24]: Shantell Sans (--font-marker, OFL, a marker handwriting variable font) for display and body, and Caveat (--font-pen, OFL) for margin notes, stored as the extra role fonts.pen (the engine roles have no handwriting slot; the project module reads it). CHANGED fallbacks: the extractor filed Shantell Sans under grotesk (it is not in its handwriting list) and fell back to Helvetica Neue/Arial; the stacks now follow the material's own CSS (Comic Neue, Patrick Hand, cursive). serif, mono and cjk are unused system stacks (no copy needs them; the draft's JetBrains Mono and Source Serif 4 were generic defaults, not evidence). displayWeight 800 (the handout's h1 [E12]), bodyWeight 500; scale 20-168 px for board lettering (titles 108-136, boxed phrases 52-64, pen notes 40-52); tracking -0.01 em like the handout title, labels +0.04 em (caps tags such as BOX IT).",
+    "motion": "Medium pace at 104 BPM: the notes are energetic in voice ('!!', arrows, ALL-CAPS ONE [E1, E2]) but the method is about clarity ('speed > beauty', 'one idea per box'), so things are written at marker speed and then stay readable. The draft's energy 0.61 is right; its data axis 0.76 is not: 86 digit tokens are lesson-plan clock times (20), minute durations (11), session-table cells (16) and counts like '3 markers' (39), plus 2 schedule tables and the handout's vector doodles counted as PDF figures [E19, E21]. CHANGED: dataViz false, HUD off, impact and whip dropped. Spring f 2.6 z 0.55 and overshoot 1.2 with outBack: the notes literally say 'corners can overshoot. Overshoot = alive.' [E2]. Transitions: match and cut only. The reel is one big board ('the big board stays up all session ... at the end we step back and look at the whole thing' [E1]; 'the zones are joined by big blue arrows, left → right' [E2]), so scene changes are camera flights along the board that follow a drawn blue arrow, and an eraser wipe ('short zig-zags, never circles' [E2]), all drawn inside the scenes; the compositor only cuts. typeReveal typing = the sequential write-on family: every word is written stroke by stroke with the marker (modules/ink.js), never blurred in.",
+    "sound": "104 BPM, G major (orange maps to G in the extractor's Scriabin table; G also suits ukulele-like plucks), light drums, organic SFX (paper, felt and marker, not glass). The workshop is hand-made and friendly, with a squeaky marker as its sound ('squeak = good marker' [E2]): the target is playful pizzicato and ukulele-like plucks with marker squeaks, cap pops and eraser swipes. The draft's bright-pop at 119 BPM with glassy SFX is the pastel product grammar (glassy is for cosmetics and glossy 3D) and its 119 BPM would rush the handwriting. audio/synth.py has no pizzicato, ukulele or squeak yet (stage 2 extends it): until then preset corporate is the nearest family that plays at 104 BPM (plucked motion, light kit), with instruments strings, pluck, marimba, bass, rim, shaker, kick. At 104 BPM a bar is 2.308 s: 13 bars = 30.0 s exactly and the short cut is 6 bars = 13.85 s.",
+    "narration": "Off, as drafted, but for the right reasons: a music-led teaser for a workshop, 14 s and 30 s, likely muted autoplay, and every idea is on the board as handwriting. The draft's reason ('data 0.76') was a false positive. If a cut is narrated: Achird (friendly) with [warm, friendly], en-US, the facilitator's conversational register (second person, short lines [E1]).",
+    "visuals": "vector only: the whiteboard, the marker ink and every prop (three markers, the felt eraser) are drawn in code, because the material's world is a board you draw on. CHANGED from vector, app-ui, pdf-figures, web-shots: the handout is a print-out, not an app, and its doodles are redrawn live on the board instead of shown as a PDF figure. No characters (no mascot in the material), no data viz (no data)."
+  },
+  "palette": {
+    "bg": "#FAFAF7",
+    "bg2": "#EEEFEC",
+    "surface": "#FFFFFF",
+    "ink": "#1E2024",
+    "ink2": "#5C6068",
+    "muted": "#686C74",
+    "accent": "#EE6316",
+    "accent2": "#1F5BC4",
+    "accent3": "#25874A",
+    "ok": "#25874A",
+    "warn": "#A97F00",
+    "deny": "#D23A2F",
+    "accentInk": "#B84A0C",
+    "onAccent": "#1E2024",
+    "line": "#DADDE2",
+    "markerBlack": "#1E2024",
+    "markerBlue": "#1F5BC4",
+    "markerOrange": "#EE6316",
+    "dotGreen": "#25874A",
+    "dotRed": "#D23A2F",
+    "ghost": "#DADDE2",
+    "boardFrame": "#AEB4BC"
+  },
+  "fonts": {
+    "display": "\"Shantell Sans\", \"Comic Neue\", \"Patrick Hand\", cursive",
+    "sans": "\"Shantell Sans\", \"Comic Neue\", \"Patrick Hand\", cursive",
+    "serif": "\"Iowan Old Style\", Georgia, serif",
+    "mono": "ui-monospace, \"SF Mono\", Menlo, monospace",
+    "cjk": "\"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "pen": "\"Caveat\", \"Patrick Hand\", cursive",
+    "files": [
+      {
+        "family": "Shantell Sans",
+        "path": "source/fonts/shantell-sans/ShantellSans-Variable.ttf",
+        "weight": "300 800"
+      },
+      {
+        "family": "Caveat",
+        "path": "source/fonts/caveat/Caveat-Variable.ttf",
+        "weight": "400 700"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      20,
+      26,
+      32,
+      40,
+      52,
+      64,
+      84,
+      108,
+      136,
+      168
+    ],
+    "displayWeight": 800,
+    "bodyWeight": 500,
+    "tracking": -0.01,
+    "trackingLabel": 0.04
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#1E2024",
+      "bg": "rgba(250,250,247,0.9)",
+      "y": 1000
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.6,
+      "z": 0.55
+    },
+    "overshoot": 1.2,
+    "ease": "outBack",
+    "transitions": [
+      "match",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "typing"
+    ]
+  },
+  "post": {
+    "grain": 0.022,
+    "vignette": {
+      "a": 0.08,
+      "color": "#5C6068"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 104,
+    "key": "G",
+    "mode": "major",
+    "preset": "corporate",
+    "instruments": [
+      "strings",
+      "pluck",
+      "marimba",
+      "bass",
+      "rim",
+      "shaker",
+      "kick"
+    ],
+    "drums": "light",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.6,
+      "breakdown": 0.35,
+      "drop": 0.8,
+      "outro": 0.4
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Achird",
+    "styleTag": "[warm, friendly]",
+    "lang": "en-US"
+  },
+  "swatches": [
+    {
+      "hex": "#FAFAF7",
+      "share": 0.203,
+      "role": "bg",
+      "from": [
+        "source/handout/lesson-03-handout.html",
+        "source/handout/handout.css"
+      ]
+    },
+    {
+      "hex": "#1F5BC4",
+      "share": 0.193,
+      "role": "accent2",
+      "from": [
+        "source/handout/handout.css",
+        "source/handout/lesson-03-handout.pdf"
+      ]
+    },
+    {
+      "hex": "#1E2024",
+      "share": 0.189,
+      "role": "ink",
+      "from": [
+        "source/handout/handout.css",
+        "source/handout/lesson-03-handout.html"
+      ]
+    },
+    {
+      "hex": "#5C6068",
+      "share": 0.098,
+      "role": "ink2",
+      "from": [
+        "source/handout/lesson-03-handout.html",
+        "source/handout/handout.css"
+      ]
+    },
+    {
+      "hex": "#EE6316",
+      "share": 0.086,
+      "role": "accent",
+      "from": [
+        "source/handout/handout.css",
+        "source/handout/lesson-03-handout.pdf"
+      ]
+    },
+    {
+      "hex": "#B84A0C",
+      "share": 0.074,
+      "role": "accentInk",
+      "from": [
+        "source/handout/handout.css",
+        "source/handout/lesson-03-handout.pdf"
+      ]
+    },
+    {
+      "hex": "#25874A",
+      "share": 0.041,
+      "role": "accent3",
+      "from": [
+        "source/handout/handout.css",
+        "source/handout/lesson-03-handout.pdf"
+      ]
+    },
+    {
+      "hex": "#DADDE2",
+      "share": 0.038,
+      "role": "line",
+      "from": [
+        "source/handout/handout.css"
+      ]
+    },
+    {
+      "hex": "#D23A2F",
+      "share": 0.038,
+      "role": "deny",
+      "from": [
+        "source/handout/handout.css"
+      ]
+    },
+    {
+      "hex": "#D1D2D1",
+      "share": 0.017,
+      "role": "bg",
+      "from": [
+        "build/snapshots/lesson-03-handout-b5a308-light.png",
+        "build/snapshots/lesson-03-handout-0067e7-p01.png"
+      ]
+    },
+    {
+      "hex": "#5D88D1",
+      "share": 0.006,
+      "role": "accent",
+      "from": [
+        "build/snapshots/lesson-03-handout-0067e7-p01.png",
+        "build/snapshots/lesson-03-handout-b5a308-light.png"
+      ]
+    },
+    {
+      "hex": "#BBBCBA",
+      "share": 0.005,
+      "role": "bg",
+      "from": [
+        "build/snapshots/lesson-03-handout-0067e7-p01.png"
+      ]
+    }
+  ],
+  "review": []
+}

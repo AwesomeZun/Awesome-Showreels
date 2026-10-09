@@ -1,0 +1,365 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "tea and skin-care customers (brand film for the website and social, sound on or muted)",
+    "title": "Mistfold",
+    "reviewed": "Draft from extract_style.py (no hints), reviewed by hand against the material: accent order, muted, bg2, the evening palette, fonts (Soft instances, Alegreya Sans as sans, old-style fallbacks), type weights, motion damping, transitions, visual sources, dataViz, BPM, instruments, SFX family and language changed; every change is explained in rationale and in README.md. The extraction log is style-extract.md (copy of build/style-extract.md); the untouched draft is kept in build/style.extracted-draft.json."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "press-kit index: what each file is, the fictional-brand disclaimer"
+    },
+    {
+      "path": "source/story.md",
+      "kind": "markdown",
+      "notes": "the long-form brand story: the hillside since 1962, grown slowly, picked by hand at first light, a cup at first light (80 °C, three minutes, two grams), a balm at dusk (tea seed oil), what we will not do"
+    },
+    {
+      "path": "source/brand-notes.md",
+      "kind": "brand-guide",
+      "notes": "essence, voice (banned words table), colour with roles and hex, type (Fraunces Soft 100, Alegreya Sans labels), illustration, motion, sound (acoustic, about 96 BPM), the seal rules, legal"
+    },
+    {
+      "path": "source/site/index.html",
+      "kind": "website",
+      "notes": "one-page site: hero with a watercolour tea sprig, the two rituals, steeping numbers, story quote; light and evening schemes"
+    },
+    {
+      "path": "source/site/tokens.css",
+      "kind": "website",
+      "notes": "design tokens: hillside colours, role tokens, the evening (prefers-color-scheme: dark) scheme, font tokens, SOFT/WONK settings, beat = 625 ms"
+    },
+    {
+      "path": "source/label/harvest-card.pdf",
+      "kind": "other",
+      "notes": "the card in every tin: First Light (oat) and Dusk Balm (night moss), set in the brand fonts"
+    },
+    {
+      "path": "source/images/seal.svg",
+      "kind": "images",
+      "notes": "the seal, the only mark: terracotta ring, MISTFOLD, a sprig of two leaves and a bud (the reel draws it from this path data)"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "Fraunces (variable SOFT/WONK/opsz/wght) and Alegreya Sans, SIL OFL 1.1, from google/fonts"
+    }
+  ],
+  "mood": [
+    "calm",
+    "unhurried",
+    "earthy",
+    "botanical",
+    "warm",
+    "hand-drawn"
+  ],
+  "rationale": {
+    "palette": "Light theme on oat paper: the brand notes say 'Background: Oat #F1E9D8 (paper, always)' [E4] and the site, manifest and harvest card measure the same [E18, E23, E30, E35, E44]. Roles follow the material's own names, not the measured weights: accent = Moss #4F6B3A, the 'Primary colour' [E5] and --primary/theme_color [E23, E29] (the draft put Terracotta first because the all-terracotta seal [E2, E42] outweighed the spec); accent2 = Sage #9BAF86, 'Secondary colour ... washes, young leaves, fills; never text' [E6]; accent3 = Terracotta #C2673F, 'Accent colour: the seal and one detail per page; never body text' [E7]. bg2 is the material's --paper-deep #E6DAC2 [E23] (the draft derived #E8DDC7); muted is the material's 'Small print: Stone #66654F' [E9, E10] at 4.91:1 (the draft derived #6B6A5C). ink Loam #2B2F23 11.34:1 [E8], ink2 Bark #4F5242 6.64:1 [E9]; Moss is text-safe (4.97:1), so accentInk = accent and Oat on Moss (onAccent) is 4.97:1. ok/warn/deny are the --success/--warning/--danger tokens [E23]; ok (moss) and deny (clay) are close for deutan viewers, so the reel never signals by colour alone (it signals nothing by colour). Extras for the illustration, all from the material: liquor #D4A24A ('Gold, for tea liquor and oil only' [E11]; the key is the site's --liquor token, because the engine reserves 'gold' as an alias of accent3), clay #9A4A2A (terracotta text, 5.13:1), and the illustration's own washes leaf #7F9868, bud #B9C6A4 and stem #5B4A36 [E34]. paletteAlt is the site's evening scheme token for token [E12, E13, E19, E23, E46]: Night moss #1B2318, Oat ink #EFE7D4, ink2 #CFC7B0, muted #A39F88 (6.05:1), accent = the evening --primary #A9BE92 (8.05:1), accent3 = the warmer Terracotta #D9845A [E13]; the draft had derived most of these from the light accents instead of reading the evening tokens.",
+    "type": "Fraunces for headlines and the serif role, Alegreya Sans for labels and small print, as the brand notes and tokens say [E14, E15, E20, E21, E22]. The notes specify 'the Soft axis at 100 and Wonk at 0' (italic: Soft 100) [E3], which canvas cannot set, so the reel loads 'Fraunces Soft', two partial instances of the shipped OFL variable fonts [E37, E38] made with fontTools (SOFT=100, WONK=0 roman / WONK=1 italic; opsz and wght stay variable, and Chrome applies optical sizing in canvas automatically) in assets/fonts with the OFL. The draft's fallbacks were Didot and Bodoni (high-contrast fashion serifs, because the extractor files Fraunces with them as 'display-serif') and Inter for sans (it filed Alegreya Sans under serif); both replaced with old-style and humanist stacks from the material's own CSS (Iowan Old Style, Georgia; Gill Sans, Trebuchet MS) [E20, E22]. displayWeight 380 and bodyWeight 400: the notes say 'weight 300 to 450 at display sizes. Never bold' and the site sets h1 at 380 [E3, E17] (the draft said 600). Scale 16-176 px at 1080p; headline tracking -0.012 em (the site sets -0.015 em); labels +0.12 em, 'letter-spaced capitals (+12 %)' [E3, E23].",
+    "motion": "Energy 0.30: no '!', no emoji, 0.59 marketing words per 1k, short plain sentences [E1, E3, E16] -> calm pace. The notes are explicit: 'Things grow; they do not pop ... one leaf per beat, never faster. Ease out softly. No bounce, no overshoot, no flashes, no hard cuts' [E3]. So the spring is critically damped (f 1.9, z 0.95; the draft's z 0.72 and overshoot 0.56 would bounce) with overshoot 0 and outQuint. Transitions: match and cut only, and every boundary joins identical frames because the scenes paint their own wet-colour bleeds (modules/botanica.js): the outgoing scene floods the frame with a wash and the incoming scene starts from that same wash. zoomInto was dropped (it came from 'app-ui', and there is no app). Text arrives as ink soaking into paper (kinetic per glyph with a long blur-in, no rise bounce) and sublines slide up softly (revealLine). characters false (no mascot; the seal is a mark). dataViz false: the draft's data 0.58 came from steeping numbers, a founding year, an ingredient list and two tables (a file index and the banned-words table), not from data.",
+    "sound": "The notes name the sound: 'Acoustic and unhurried, at walking pace: about 96 beats per minute. Fingerpicked nylon-string guitar and a wooden marimba carry the tune; a soft upright bass and a brushed shaker keep time. No synthesisers, no drum machines, no whooshes. Our sound logo is three plucked notes rising' [E3]. BPM 96 (the draft's 89 came from the ambient range; 96 is the stated tempo and gives whole bars: 15 s = 6 bars, 30 s = 12). The draft's ambient instruments (pad, glass, sub) are synthesisers the brand forbids; instruments are the brand's: guitar (a Karplus-Strong nylon guitar, not in audio/synth.py yet: stage 2 adds it), marimba, bass (upright), shaker. preset stays 'ambient' only as the closest pace/energy bundle (84-100 BPM, light drums, long reverb) until an acoustic preset exists. Key D major (free choice: open D and A strings ring on a nylon guitar, and major for a morning ritual). SFX family organic (paper, wood, hand-made, nature) instead of glassy, which the extractor chose from 'beauty' words that are negations here ('We will not add perfume') [E16]. Energy stays low: the reel never drops hard.",
+    "narration": "Off: 'Voice-over: none. Let the garden speak, and set the words on screen, small' [E3]; brand purpose, short headlines. If a client ever asks for a voice: Sulafat (warm) with [warm, gentle], en-GB (the material spells colour, recolour, synthesisers, ageing) [E3, E16]. Captions stay off.",
+    "visuals": "Code-drawn vector only, in the brand's illustration rules: 'a fine loam ink line, then watercolour washes that pool darker at their edges and let the oat paper show through. Leaves keep their real serrated margins and alternate up the stem' [E3, E34]. Carriers: procedurally grown tea branches (an L-system), watercolour washes with edge darkening and granulation, a hand-drawn cup and balm tin, the seal drawn from its own SVG path data [E42], oat paper with fibres and flecks. The draft's app-ui, pdf-figures and web-shots were dropped: there is no app, the harvest card is not a paper figure, and the reel tells the story rather than showing the website."
+  },
+  "palette": {
+    "bg": "#F1E9D8",
+    "bg2": "#E6DAC2",
+    "surface": "#F9F5EC",
+    "ink": "#2B2F23",
+    "ink2": "#4F5242",
+    "muted": "#66654F",
+    "accent": "#4F6B3A",
+    "accent2": "#9BAF86",
+    "accent3": "#C2673F",
+    "ok": "#4F6B3A",
+    "warn": "#A87A1F",
+    "deny": "#9A4A2A",
+    "accentInk": "#4F6B3A",
+    "onAccent": "#F1E9D8",
+    "line": "#D6C9AE",
+    "clay": "#9A4A2A",
+    "leaf": "#7F9868",
+    "bud": "#B9C6A4",
+    "stem": "#5B4A36",
+    "nightMoss": "#1B2318",
+    "liquor": "#D4A24A"
+  },
+  "paletteAlt": {
+    "theme": "dark",
+    "bg": "#1B2318",
+    "bg2": "#232E1F",
+    "surface": "#2B3826",
+    "ink": "#EFE7D4",
+    "ink2": "#CFC7B0",
+    "muted": "#A39F88",
+    "accent": "#A9BE92",
+    "accent2": "#7E9868",
+    "accent3": "#D9845A",
+    "ok": "#A9BE92",
+    "warn": "#E3B65E",
+    "deny": "#E08A6A",
+    "accentInk": "#A9BE92",
+    "onAccent": "#1B2318",
+    "line": "#3A4834",
+    "clay": "#D9845A",
+    "leaf": "#7E9868",
+    "bud": "#B9C6A4",
+    "stem": "#8C7A60",
+    "nightMoss": "#1B2318",
+    "liquor": "#E3B65E"
+  },
+  "fonts": {
+    "display": "\"Fraunces Soft\", \"Iowan Old Style\", \"Palatino\", \"Georgia\", serif",
+    "sans": "\"Alegreya Sans\", \"Gill Sans\", \"Trebuchet MS\", sans-serif",
+    "serif": "\"Fraunces Soft\", \"Iowan Old Style\", \"Palatino\", \"Georgia\", serif",
+    "mono": "ui-monospace, \"Courier New\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Fraunces Soft",
+        "path": "assets/fonts/FrauncesSoft-Italic[opsz,wght].ttf",
+        "weight": "100 900",
+        "style": "italic"
+      },
+      {
+        "family": "Fraunces Soft",
+        "path": "assets/fonts/FrauncesSoft[opsz,wght].ttf",
+        "weight": "100 900",
+        "style": "normal"
+      },
+      {
+        "family": "Alegreya Sans",
+        "path": "source/fonts/alegreya-sans/AlegreyaSans-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Alegreya Sans",
+        "path": "source/fonts/alegreya-sans/AlegreyaSans-Medium.ttf",
+        "weight": "500",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      30,
+      38,
+      48,
+      62,
+      80,
+      104,
+      136,
+      176
+    ],
+    "displayWeight": 380,
+    "bodyWeight": 400,
+    "tracking": -0.012,
+    "trackingLabel": 0.12
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 128,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 34,
+      "fg": "#2B2F23",
+      "bg": "rgba(249,245,236,0.88)",
+      "y": 1010
+    },
+    "radius": 3
+  },
+  "motion": {
+    "pace": "calm",
+    "spring": {
+      "f": 1.9,
+      "z": 0.95
+    },
+    "overshoot": 0,
+    "ease": "outQuint",
+    "transitions": [
+      "match",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "kinetic",
+      "revealLine"
+    ]
+  },
+  "post": {
+    "grain": 0.032,
+    "vignette": {
+      "a": 0.14,
+      "color": "#4A3A28"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 96,
+    "key": "D",
+    "mode": "major",
+    "preset": "ambient",
+    "instruments": [
+      "guitar",
+      "marimba",
+      "bass",
+      "shaker"
+    ],
+    "drums": "light",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.25,
+      "groove": 0.45,
+      "breakdown": 0.32,
+      "drop": 0.6,
+      "outro": 0.35
+    },
+    "brief": "From brand-notes.md: fingerpicked nylon-string guitar and a wooden marimba carry the tune; soft upright bass and brushed shaker keep time; no synthesisers, no drum machines, no whooshes; sound logo = three plucked notes rising, on the seal press. 'guitar' (Karplus-Strong) is not in audio/synth.py yet; until it is, arrange.py ignores it with a warning."
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Sulafat",
+    "styleTag": "[warm, gentle]",
+    "lang": "en-GB"
+  },
+  "swatches": [
+    {
+      "hex": "#F1E9D8",
+      "share": 0.163,
+      "role": "bg",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css",
+        "source/site/index.html"
+      ]
+    },
+    {
+      "hex": "#4F6B3A",
+      "share": 0.147,
+      "role": "accent",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css",
+        "source/site/site.webmanifest"
+      ]
+    },
+    {
+      "hex": "#C2673F",
+      "share": 0.127,
+      "role": "accent3",
+      "from": [
+        "source/images/seal.svg",
+        "source/brand-notes.md",
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#2B2F23",
+      "share": 0.085,
+      "role": "ink",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#9BAF86",
+      "share": 0.068,
+      "role": "accent2",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#7F9868",
+      "share": 0.05,
+      "role": "leaf",
+      "from": [
+        "source/label/harvest-card.pdf",
+        "source/site/index.html"
+      ]
+    },
+    {
+      "hex": "#D4A24A",
+      "share": 0.048,
+      "role": "liquor",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#E6DAC2",
+      "share": 0.041,
+      "role": "bg2",
+      "from": [
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#F9F5EC",
+      "share": 0.041,
+      "role": "surface",
+      "from": [
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#9A4A2A",
+      "share": 0.041,
+      "role": "clay",
+      "from": [
+        "source/site/tokens.css"
+      ]
+    },
+    {
+      "hex": "#5B4A36",
+      "share": 0.02,
+      "role": "stem",
+      "from": [
+        "source/label/harvest-card.pdf",
+        "source/site/index.html"
+      ]
+    },
+    {
+      "hex": "#B9C6A4",
+      "share": 0.01,
+      "role": "bud",
+      "from": [
+        "source/label/harvest-card.pdf",
+        "source/site/index.html"
+      ]
+    },
+    {
+      "hex": "#1B2318",
+      "share": 0.036,
+      "role": "nightMoss",
+      "from": [
+        "source/brand-notes.md",
+        "source/site/tokens.css",
+        "source/label/harvest-card.pdf"
+      ]
+    }
+  ],
+  "review": []
+}

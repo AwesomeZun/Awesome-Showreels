@@ -1,0 +1,55 @@
+/* Maison Veyrande: design tokens for the digital lookbook and the press pages. */
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("../fonts/BodoniModa-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("../fonts/BodoniModa-Italic-Variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  color-scheme: light;
+
+  /* the house colours */
+  --vy-ivoire: #F3EEE4;
+  --vy-perle: #E8E0D2;
+  --vy-papier: #FAF7F1;
+  --vy-encre: #16130F;
+  --vy-graphite: #4A443B;
+  --vy-huitre: #675F54;
+  --vy-champagne: #C8AD7F;
+  --vy-vieil-or: #76592E;
+  --vy-nacre: #E6DCD3;
+
+  /* roles */
+  --vy-bg: var(--vy-ivoire);
+  --vy-bg-alt: var(--vy-perle);
+  --vy-card: var(--vy-papier);
+  --vy-text: var(--vy-encre);
+  --vy-text-secondary: var(--vy-graphite);
+  --vy-text-muted: var(--vy-huitre);
+  --vy-accent: var(--vy-champagne);
+  --vy-accent-text: var(--vy-vieil-or);
+  --vy-rule: var(--vy-champagne);
+
+  /* type */
+  --vy-font-display: "Bodoni Moda", serif;
+  --vy-font-label: "Jost", sans-serif;
+  --vy-tracking-caps: 0.3em;
+  --vy-tracking-name: 0.32em;
+
+  /* layout */
+  --vy-margin: calc(100vw / 12);
+  --vy-hairline: 0.5pt;
+}

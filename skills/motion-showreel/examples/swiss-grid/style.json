@@ -1,0 +1,277 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "architects, clients and competition juries",
+    "title": "Haus für Musik",
+    "reviewed": "Draft from extract_style.py (kept in build/style.draft-extractor.json), reviewed by hand against the brand sheet: the draft found the paper, ink, red, the typeface and its two weights, but invented an olive and a magenta accent, a pink bg2, a red-brown vignette, overshoot, zoomInto/whip transitions and a corporate 109-BPM score that the brand sheet rules out. Every change is explained in rationale; the comparison table is in style-extract.md and README.md."
+  },
+  "source": [
+    {
+      "path": "source/brief.md",
+      "kind": "markdown",
+      "notes": "project brief for Haus für Musik: 12 axes at 7.20 m, four floors at 3.60 m (±0.00 to +14.40), the hall on axes 5-8, programme 24 / 2 / 1, the stance line; German / English headings; fictional"
+    },
+    {
+      "path": "source/brand-sheet.md",
+      "kind": "brand-guide",
+      "notes": "Büro Zwölf brand sheet: three colours, one typeface in two weights, numbers, the 12-column screen grid, wordmark, drawing conventions, motion rules (snaps, column wipes, hard cuts on the beat), sound (minimal techno, 124 BPM), language rules and banned words"
+    },
+    {
+      "path": "source/tokens.css",
+      "kind": "website",
+      "notes": "--zw-* tokens: colours, type sizes 16-480, grid (122 / 24 / 96 / 72 / 136 / 8), radius 0, motion (snap 60 ms, expo-out, tempo 124)"
+    },
+    {
+      "path": "source/projektblatt.html",
+      "kind": "website",
+      "notes": "the studio's project sheet built from the tokens: red square + wordmark, the huge 12, the section with the red hall, the black programme band"
+    },
+    {
+      "path": "source/fonts/SchibstedGrotesk-Variable.ttf",
+      "kind": "other",
+      "notes": "Schibsted Grotesk, variable wght 400-900, SIL OFL 1.1 (source/fonts/OFL.txt), from the google/fonts repository"
+    }
+  ],
+  "mood": [
+    "objective",
+    "precise",
+    "ordered",
+    "restrained",
+    "rhythmic"
+  ],
+  "rationale": {
+    "palette": "Light theme: every ground is paper (--zw-paper #F4F3EF, theme-color, computed page background) [E2, E11, E13, E15, E18]. The brand sheet allows three colours and nothing else [E1]: paper, ink #111111 [E13, E16] and signal red #D52B1E [E3, E13]. The three accent slots carry exactly those three: accent = signal red (the one red element per page), accent2 = ink (black solid fields and black pages), accent3 = paper (reversed type on black). The draft's derived olive #7A7100 and magenta #C22F9E are not in the material and were removed; its pink bg2 #F2E5E2 broke 'red is never a tint' and became the 6 % ink grid-field grey #E6E5E2 [E7]. Greys are ink shares from the sheet: ink2 = 70 % #555554 (6.72:1) [E4], muted = 60 % #6C6B6A (4.79:1, captions and small print) [E5], line = 15 % #D2D1CE [E6]; paper65 #A5A4A1 is secondary text on black pages (7.58:1 on ink) [E8]. Contrast on paper: ink 17.0:1, red 4.51:1, so the red also serves as accentInk and paper on red reads at 4.51:1 (onAccent). The brand has no status colours (status is a word): ok = ink, warn = ink 70 %, deny = signal red, so nothing outside the palette can appear. surface = paper (the brand has no cards). paletteAlt is the brand's black page (ink ground, paper type, the same red at 3.77:1 for display sizes only), not the draft's derived brown #201410.",
+    "type": "One typeface in two weights, as the brand sheet demands [E1, E12, E14]: Schibsted Grotesk, shipped as the variable OFL file [E17] and embedded through fonts.files. Medium 500 for text, Bold 700 for headlines, numerals and the wordmark (draft: 700 / 500, kept). Every role (display, sans, serif, mono, cjk) maps to the same family, so no second face can enter (the draft listed Source Serif 4, JetBrains Mono, Helvetica Neue and Arial fallbacks; there is no serif, mono or CJK copy). The type scale is the brand's own screen sizes 16, 20, 24, 32, 48, 72, 120, 200, 320, 480 px [E13] instead of the draft's derived modular scale (12 ... 228), which had no room for the huge numerals the sheet asks for. Tracking -0.03 em for display (sheet: display -0.03, numerals -0.045); labels are not letter-spaced (trackingLabel 0; the draft's 0.088 em is a HUD habit). Flush left, ragged right, sentence case, no italics.",
+    "motion": "The brand sheet writes the motion out [E1, E13]: elements move along grid lines only, snap in one eighth of a beat (--zw-snap 60 ms, expo-out cubic-bezier(0.16, 1, 0.3, 1)) and stop dead; no overshoot, no bounce, no blur, no glow, no zoom, no rotation; changes are hard cuts on the beat; wipes run along the columns a sixteenth note apart; numbers roll digit by digit. So: ease outExpo, overshoot 0, spring f 3.0 z 0.9 (the engine's spring needs z < 1; 0.9 overshoots 0.15 %, invisible), text reveals by mask only (revealLine; kinetic's blur-in is ruled out). Transitions are cut and match only: the grid stays in place across every cut, and the column wipes are drawn inside the scenes (modules/zwoelf.js) because no compositor transition wipes along columns. The draft scored zoomInto 0.68, match 0.59, impact and whip 0.40 and overshoot 0.41 from generic energy, warmth and a guessed app UI; the sheet forbids zoom, whip blur and bounce. Pace medium: one idea per one or two beats, snaps fast, compositions held still between hits.",
+    "sound": "The brand sheet specifies the sound [E1, E13]: minimal techno at 124 BPM in 4/4 (bar 1.935 s), a dry sub kick on every beat, clicks on the sixteenths, one short stab per bar, no pads, no reverb tails, no vocals; every cut and snap has a click, the sub kick carries the numbers. The draft read none of it (it derives sound from tone axes only) and proposed corporate strings and piano at 109 BPM in G major. Kept: bpm 124, sfx minimal (clicks and ticks), drums full (four on the floor), instruments kick, sub, rim, hats, stab and no bed. preset is dark-synth only because it is the nearest instrument family in the current library (kick, sub, stab, hats) and the schema needs a preset; the library has no minimal-techno preset yet (stage 2 adds one). Key G from the red's hue (the extractor's own mapping, a free choice), minor for a cool, unsentimental colour (dorian would fit better and the arranger plays it, but extract_style.py --validate accepts only major or minor although the schema lists the church modes). Energy stays flat and high in the grooves (minimal techno does not swell): the numbers scene is the drop.",
+    "narration": "Off: a brand film for screens and juries, music-led, every idea is on screen as type and numbers, and the copy is short declarative lines (avg 7.9 words per sentence) [E1, E9]. If ever narrated: Schedar (even), tag [calm, even], en-US; the German headings are names and stay German. The draft's [clear, upbeat] tag contradicts the sheet's 'no exclamation marks, no superlatives'.",
+    "visuals": "Vector only, drawn in code from the material's own numbers: the 12-column grid of the brand sheet (122 / 24 / 96 / 72 px) [E13], the section of the brief (12 axes at 7.20 m, floors at 3.60 m, hall on axes 5-8 from ±0.00 to +7.20, levels marked with filled triangles, axes as dash-dot lines with numbered circles, as the sheet's drawing rules say) [E1, E9, E10], the programme numerals 24 / 2 / 1 and the wordmark (red square + büro zwölf). No app, no web capture (the draft's app-ui and web-shots came from the presence of an HTML page; the project sheet is the source's own layout, not a product to capture). dataViz true in the sense that the drawing and every numeral are computed from the brief; no charts. No characters, no photos."
+  },
+  "palette": {
+    "bg": "#F4F3EF",
+    "bg2": "#E6E5E2",
+    "surface": "#F4F3EF",
+    "ink": "#111111",
+    "ink2": "#555554",
+    "muted": "#6C6B6A",
+    "accent": "#D52B1E",
+    "accent2": "#111111",
+    "accent3": "#F4F3EF",
+    "ok": "#111111",
+    "warn": "#555554",
+    "deny": "#D52B1E",
+    "accentInk": "#D52B1E",
+    "onAccent": "#F4F3EF",
+    "line": "#D2D1CE",
+    "paper65": "#A5A4A1"
+  },
+  "fonts": {
+    "display": "\"Schibsted Grotesk\", sans-serif",
+    "sans": "\"Schibsted Grotesk\", sans-serif",
+    "serif": "\"Schibsted Grotesk\", sans-serif",
+    "mono": "\"Schibsted Grotesk\", sans-serif",
+    "cjk": "\"Schibsted Grotesk\", sans-serif",
+    "files": [
+      {
+        "family": "Schibsted Grotesk",
+        "path": "source/fonts/SchibstedGrotesk-Variable.ttf",
+        "weight": "400 900"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      32,
+      48,
+      72,
+      120,
+      200,
+      320,
+      480
+    ],
+    "displayWeight": 700,
+    "bodyWeight": 500,
+    "tracking": -0.03,
+    "trackingLabel": 0
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 96,
+    "marginY": 72,
+    "grid": 12,
+    "gutter": 24,
+    "rows": 6,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Schibsted Grotesk\", sans-serif",
+      "size": 36,
+      "weight": 500,
+      "fg": "#111111",
+      "bg": "rgba(244,243,239,0.94)",
+      "y": 1000
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 3.0,
+      "z": 0.9
+    },
+    "overshoot": 0,
+    "ease": "outExpo",
+    "transitions": [
+      "cut",
+      "match"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "revealLine"
+    ],
+    "snapBeats": 0.125,
+    "wipeStepBeats": 0.25
+  },
+  "post": {
+    "grain": 0,
+    "vignette": {
+      "a": 0,
+      "color": "#111111"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 124,
+    "key": "G",
+    "mode": "minor",
+    "preset": "dark-synth",
+    "genre": "minimal techno",
+    "brief": "dry sub kick on every beat, clicks on the sixteenths, one short stab per bar; no pads, no reverb tails, no vocals; a click on every cut and snap; the sub kick carries the numbers (brand sheet 08)",
+    "instruments": [
+      "kick",
+      "sub",
+      "rim",
+      "hats",
+      "stab"
+    ],
+    "drums": "full",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.45,
+      "groove": 0.65,
+      "breakdown": 0.4,
+      "drop": 0.85,
+      "outro": 0.45
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Schedar",
+    "styleTag": "[calm, even]",
+    "lang": "en-US"
+  },
+  "paletteAlt": {
+    "theme": "dark",
+    "bg": "#111111",
+    "bg2": "#1F1F1E",
+    "surface": "#111111",
+    "ink": "#F4F3EF",
+    "ink2": "#A5A4A1",
+    "muted": "#999996",
+    "accent": "#D52B1E",
+    "accent2": "#F4F3EF",
+    "accent3": "#111111",
+    "ok": "#F4F3EF",
+    "warn": "#A5A4A1",
+    "deny": "#D52B1E",
+    "accentInk": "#D52B1E",
+    "onAccent": "#F4F3EF",
+    "line": "#3A3A39"
+  },
+  "swatches": [
+    {
+      "hex": "#F4F3EF",
+      "share": 0.33,
+      "role": "bg",
+      "from": [
+        "source/projektblatt.html",
+        "source/tokens.css"
+      ]
+    },
+    {
+      "hex": "#111111",
+      "share": 0.22,
+      "role": "ink",
+      "from": [
+        "source/tokens.css",
+        "source/projektblatt.html"
+      ]
+    },
+    {
+      "hex": "#6C6B6A",
+      "share": 0.124,
+      "role": "muted",
+      "from": [
+        "source/projektblatt.html",
+        "source/tokens.css"
+      ]
+    },
+    {
+      "hex": "#D52B1E",
+      "share": 0.101,
+      "role": "accent",
+      "from": [
+        "source/tokens.css",
+        "source/brand-sheet.md"
+      ]
+    },
+    {
+      "hex": "#D2D1CE",
+      "share": 0.081,
+      "role": "line",
+      "from": [
+        "source/tokens.css",
+        "source/brand-sheet.md"
+      ]
+    },
+    {
+      "hex": "#555554",
+      "share": 0.063,
+      "role": "ink2",
+      "from": [
+        "source/brand-sheet.md",
+        "source/tokens.css"
+      ]
+    },
+    {
+      "hex": "#A5A4A1",
+      "share": 0.059,
+      "role": "paper65",
+      "from": [
+        "source/brand-sheet.md",
+        "source/tokens.css"
+      ]
+    },
+    {
+      "hex": "#E6E5E2",
+      "share": 0.012,
+      "role": "bg2",
+      "from": [
+        "source/tokens.css"
+      ]
+    }
+  ],
+  "review": []
+}

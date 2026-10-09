@@ -1,0 +1,127 @@
+/* The Tamsin Valley Courier · e-edition stylesheet (print replica of the daily pages).
+   Two inks on newsprint: Courier Black and one spot red. Type and colour standards: ../stylebook.md section 4.
+   A fictional newspaper, written for the motion-showreel example. */
+
+@font-face { font-family: "Grenze Gotisch"; src: url("../fonts/GrenzeGotisch-Variable.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/Newsreader-Variable.ttf") format("truetype"); font-weight: 200 800; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/Newsreader-Italic-Variable.ttf") format("truetype"); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: "Libre Franklin"; src: url("../fonts/LibreFranklin-Variable.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Courier Prime"; src: url("../fonts/CourierPrime-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Courier Prime"; src: url("../fonts/CourierPrime-Bold.ttf") format("truetype"); font-weight: 700; }
+
+:root {
+  color-scheme: light;
+  /* paper */
+  --courier-newsprint: #E4E0D6;
+  --courier-newsprint-shade: #D6D1C5;
+  --courier-newsprint-light: #EFECE4;
+  /* inks */
+  --courier-black: #1D1B18;
+  --courier-black-70: #4A4640;
+  --courier-black-55: #625D55;
+  --courier-black-40: #9A958B;
+  --courier-black-15: #CDC8BD;
+  --courier-red: #B9202A;
+  /* type */
+  --font-nameplate: "Grenze Gotisch", "Old English Text MT", serif;
+  --font-headline: "Newsreader", "Georgia", serif;
+  --font-body: "Newsreader", "Georgia", serif;
+  --font-label: "Libre Franklin", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  --font-wire: "Courier Prime", "Courier New", monospace;
+  /* grid */
+  --columns: 6;
+  --gutter: 16px;
+  --column-rule: 0.5px solid var(--courier-black);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--courier-newsprint-shade); }
+body {
+  margin: 0;
+  color: var(--courier-black);
+  font: 400 15px/1.35 var(--font-body);
+  font-optical-sizing: auto;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── the Valley Wire ticker (web only) ── */
+.wire { display: flex; align-items: stretch; height: 34px; background: var(--courier-newsprint-light); border-bottom: 1px solid var(--courier-black); overflow: hidden; }
+.wire__label { flex: none; display: flex; align-items: center; padding: 0 14px; background: var(--courier-red); color: var(--courier-newsprint-light);
+  font: 800 12px/1 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; }
+.wire__tape { flex: 1; overflow: hidden; white-space: nowrap; display: flex; align-items: center; }
+.wire__tape span { display: inline-block; padding-left: 24px; font: 400 14px/1 var(--font-wire); text-transform: uppercase; letter-spacing: 0.02em;
+  animation: wire 48s steps(400, end) infinite; }
+@keyframes wire { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .wire__tape span { animation: none; } }
+
+/* ── the page ── */
+.page { width: 1240px; margin: 28px auto 40px; padding: 26px 34px 36px; background: var(--courier-newsprint);
+  box-shadow: 0 1px 0 var(--courier-black-40), 0 18px 40px rgba(29, 27, 24, 0.18); }
+
+.skybox { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 8px; border-bottom: 0.5px solid var(--courier-black);
+  font: 700 12px/1.2 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; }
+.skybox em { font: italic 400 15px/1.2 var(--font-headline); letter-spacing: 0; text-transform: none; }
+.skybox b { color: var(--courier-black); }
+
+.masthead { display: grid; grid-template-columns: 150px 1fr 150px; align-items: center; gap: 18px; padding: 14px 0 10px; }
+.nameplate { margin: 0; text-align: center; font: 700 76px/1 var(--font-nameplate); letter-spacing: -0.005em; white-space: nowrap; }
+.ear { border: 0.5px solid var(--courier-black); padding: 8px 10px; font: 400 13px/1.3 var(--font-body); }
+.ear h3 { margin: 0 0 4px; font: 800 11px/1 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.oxford { height: 9px; border-top: 4px solid var(--courier-black); border-bottom: 1px solid var(--courier-black); }
+.folio { display: flex; justify-content: space-between; padding: 6px 0 5px; font: 700 11.5px/1 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; }
+.folio-rule { height: 0; border-top: 2px solid var(--courier-red); margin-bottom: 18px; }
+
+.front { display: grid; grid-template-columns: repeat(var(--columns), 1fr); column-gap: var(--gutter); }
+.lead { grid-column: 1 / 6; }
+.flag { display: inline-block; margin: 0 0 8px; padding: 4px 8px 3px; background: var(--courier-red); color: var(--courier-newsprint-light);
+  font: 800 11px/1 var(--font-label); letter-spacing: 0.1em; text-transform: uppercase; }
+.headline { margin: 0; font: 800 64px/0.95 var(--font-headline); letter-spacing: -0.012em; }
+.deck { margin: 10px 0 16px; font: italic 400 24px/1.15 var(--font-headline); color: var(--courier-black); }
+.lead-grid { display: grid; grid-template-columns: 3fr 2fr; column-gap: var(--gutter); }
+.photo { margin: 0; }
+.photo img { display: block; width: 100%; height: auto; }
+.photo figcaption { margin-top: 6px; font: 400 12.5px/1.3 var(--font-body); color: var(--courier-black-70); }
+.photo figcaption b { font: 800 11px/1 var(--font-label); letter-spacing: 0.06em; color: var(--courier-black); }
+.photo .credit { display: block; margin-top: 3px; font: 600 10px/1 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--courier-black-55); }
+.story { columns: 2; column-gap: var(--gutter); column-rule: var(--column-rule); text-align: justify; hyphens: auto; }
+.byline { margin: 0 0 8px; font: 800 11px/1.2 var(--font-label); letter-spacing: 0.08em; text-transform: uppercase; }
+.byline span { display: block; font-weight: 500; color: var(--courier-black-55); }
+.story p { margin: 0 0 0.55em; text-indent: 1em; }
+.story p.lede { text-indent: 0; }
+.dateline { font: 800 12px/1 var(--font-label); letter-spacing: 0.06em; }
+.jump { font: italic 600 13px/1.2 var(--font-body); text-align: right; text-indent: 0 !important; }
+
+.rail { grid-column: 6 / 7; border-left: var(--column-rule); padding-left: var(--gutter); }
+.numbers { background: var(--courier-black-15); padding: 10px 12px 12px; }
+.numbers h3, .briefs h3 { margin: 0 0 8px; font: 800 12px/1 var(--font-label); letter-spacing: 0.1em; text-transform: uppercase; }
+.numbers dl { margin: 0; }
+.numbers dt { font: 800 30px/1 var(--font-headline); }
+.numbers dd { margin: 0 0 8px; padding-bottom: 7px; border-bottom: 0.5px solid var(--courier-black-40); font: 400 12.5px/1.25 var(--font-body); }
+.numbers .src { font: 600 10px/1.2 var(--font-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--courier-black-55); }
+.briefs { margin-top: 16px; }
+.briefs article { padding: 10px 0; border-top: 0.5px solid var(--courier-black); }
+.briefs h4 { margin: 0 0 4px; font: 700 17px/1.05 var(--font-headline); }
+.briefs p { margin: 0; text-align: justify; hyphens: auto; font-size: 13.5px; }
+.pullquote { margin: 18px 0 0; padding-top: 10px; border-top: 0.5px solid var(--courier-black); font: italic 500 21px/1.15 var(--font-headline); }
+.pullquote::before { content: "\201C"; color: var(--courier-red); font-size: 48px; line-height: 0; vertical-align: -0.38em; margin-right: 2px; }
+.pullquote cite { display: block; margin-top: 6px; font: 700 10.5px/1.2 var(--font-label); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; color: var(--courier-black-55); }
+
+.fold { display: grid; grid-template-columns: repeat(var(--columns), 1fr); column-gap: var(--gutter); margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--courier-black); }
+.second { grid-column: 1 / 6; }
+.headline--second { font-size: 40px; font-weight: 700; margin-bottom: 10px; }
+.story--three { columns: 3; }
+.corrections h3 { margin: 0 0 6px; font: 800 12px/1 var(--font-label); letter-spacing: 0.1em; text-transform: uppercase; }
+.corrections p { margin: 0; font-size: 13px; text-align: justify; hyphens: auto; }
+
+.endmark { margin: 22px 0 0; text-align: center; font: 700 13px/1 var(--font-wire); letter-spacing: 0.3em; }
+.disclaimer { width: 1240px; margin: 0 auto 30px; font: 500 11px/1.3 var(--font-label); letter-spacing: 0.04em; color: var(--courier-black-55); }
+
+@page { size: 1240px 1680px; margin: 0; }
+@media print {
+  html { background: var(--courier-newsprint); }
+  .wire { display: none; }
+  .page { margin: 0; width: 1240px; min-height: 1680px; box-shadow: none; }
+  .disclaimer { position: absolute; left: 34px; bottom: 14px; width: auto; margin: 0; }
+}

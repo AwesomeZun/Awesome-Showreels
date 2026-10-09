@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1500" width="600" height="1500">
+  <title>Maison Veyrande · Look 07 · Robe colonne (croquis)</title>
+  <rect width="600" height="1500" fill="#E8E0D2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 276 62 C 265 75 261 89 262 101 C 256 109 249 118 248 125 C 248 129 253 131 258 132 C 255 136 255 140 259 142 C 256 146 257 150 261 152 C 262 159 266 166 273 171 C 283 178 297 181 309 178" stroke="#16130F" stroke-width="3.2"/>
+    <path d="M 270 68 C 284 44 324 36 349 56 C 369 73 374 103 363 128" stroke="#16130F" stroke-width="3.8"/>
+    <path d="M 363 128 C 382 125 393 142 387 159 C 380 174 359 176 351 163 C 346 155 349 145 357 139" stroke="#16130F" stroke-width="3.2"/>
+    <path d="M 273 71 C 297 75 320 89 336 107 C 346 119 352 129 357 141" stroke="#16130F" stroke-width="2" stroke-opacity="0.75"/>
+    <path d="M 301 51 C 327 57 347 75 356 99 C 360 111 362 121 362 131" stroke="#16130F" stroke-width="1.4" stroke-opacity="0.5"/>
+    <path d="M 369 139 C 378 144 380 155 373 162" stroke="#16130F" stroke-width="1.4" stroke-opacity="0.6"/>
+    <path d="M 331 121 C 337 127 337 139 331 146" stroke="#16130F" stroke-width="1.6" stroke-opacity="0.5"/>
+    <path d="M 291 178 C 290 202 288 224 284 247" stroke="#16130F" stroke-width="2.4" stroke-opacity="0.9"/>
+    <path d="M 341 163 C 339 193 342 221 351 245" stroke="#16130F" stroke-width="2.4" stroke-opacity="0.9"/>
+    <path d="M 246 268 C 280 276 320 276 354 264" stroke="#16130F" stroke-width="2.6"/>
+    <path d="M 208 294 C 194 340 188 420 188 500 C 188 580 192 640 198 690" stroke="#16130F" stroke-width="2.6" stroke-opacity="0.9"/>
+    <path d="M 198 690 C 194 708 196 724 204 734" stroke="#16130F" stroke-width="2" stroke-opacity="0.85"/>
+    <path d="M 392 294 C 406 340 412 420 412 500 C 412 580 408 640 402 690" stroke="#16130F" stroke-width="2.6" stroke-opacity="0.9"/>
+    <path d="M 402 690 C 406 708 404 724 396 734" stroke="#16130F" stroke-width="2" stroke-opacity="0.85"/>
+    <path d="M 246 268 C 230 270 216 280 208 294 C 214 340 220 400 228 470 C 232 520 228 600 222 700 C 216 900 210 1150 204 1431" stroke="#16130F" stroke-width="3.4"/>
+    <path d="M 354 264 C 372 270 386 280 392 294 C 386 340 380 400 372 470 C 368 520 372 600 378 700 C 386 900 392 1150 398 1431" stroke="#16130F" stroke-width="3.4"/>
+    <path d="M 204 1431 C 260 1443 340 1443 398 1431" stroke="#16130F" stroke-width="3"/>
+  </g>
+  <path d="M 246 268 C 280 276 320 276 354 264 C 372 270 386 280 392 294 C 386 340 380 400 372 470 C 368 520 372 600 378 700 C 386 900 392 1150 398 1431 C 340 1443 260 1443 204 1431 C 210 1150 216 900 222 700 C 228 600 232 520 228 470 C 220 400 214 340 208 294 C 216 280 230 270 246 268 Z" fill="#16130F" fill-opacity="0.94"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 238 282 C 234 600 224 1000 216 1428" stroke="#C8AD7F" stroke-width="1.8"/>
+  </g>
+</svg>

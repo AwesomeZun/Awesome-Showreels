@@ -1,0 +1,194 @@
+{
+  "title": "余白庵",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "poster": 12.5,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "shizuku",
+      "label": "墨がにじむ速さで",
+      "minBars": 1,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "plink"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "plink soft"
+        }
+      ]
+    },
+    {
+      "id": "yama",
+      "label": "山あいの谷に",
+      "minBars": 2,
+      "maxBars": 3,
+      "priority": 2,
+      "optional": true,
+      "inBeats": 5,
+      "outBeats": 1,
+      "in": "dissolve",
+      "inParams": {
+        "preBeats": 1,
+        "postBeats": 1
+      },
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "air soft"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "swish soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "ding soft"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "ding soft step=1"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "ding soft step=2"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "ding soft"
+        }
+      ]
+    },
+    {
+      "id": "chaseki",
+      "label": "この一服は",
+      "minBars": 2,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 1,
+      "in": "dissolve",
+      "inParams": {
+        "preBeats": 1,
+        "postBeats": 1
+      },
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "air soft"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "swish soft"
+        },
+        {
+          "beat": 1.75,
+          "from": "start",
+          "sfx": "swish soft"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "plink soft"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "air soft"
+        }
+      ]
+    },
+    {
+      "id": "rakkan",
+      "label": "余白庵",
+      "minBars": 1,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 0,
+      "in": "dissolve",
+      "inParams": {
+        "preBeats": 1,
+        "postBeats": 1
+      },
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "air soft"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "whoosh soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "stamp"
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 6,
+      "label": "short",
+      "narration": false,
+      "exclude": [
+        "yama"
+      ],
+      "scenes": {
+        "shizuku": {
+          "bars": 2
+        },
+        "chaseki": {
+          "bars": 2
+        },
+        "rakkan": {
+          "bars": 2
+        }
+      }
+    },
+    "30": {
+      "seconds": 30,
+      "label": "30 s"
+    }
+  },
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": false
+  }
+}

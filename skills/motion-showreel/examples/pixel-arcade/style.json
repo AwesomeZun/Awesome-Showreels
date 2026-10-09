@@ -1,0 +1,402 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "game makers (jam entrants and players)",
+    "title": "ONE CREDIT JAM #07",
+    "reviewed": "Reviewed by hand after extract_style.py (draft kept in build/draft/). Kept: every palette role except muted, the two pixel faces and their OFL files, radius 0, dark theme. Changed: purpose, mood, muted, mono/serif stacks, type scale/weights/tracking, margin/grid, HUD, captions, pace, motion, transitions, visual sources, characters, dataViz, post, the whole sound block, narration, paletteAlt (removed). Added: the 16 indexed CREDIT-16 colours and the pixel console spec (top-level 'pixel'). Rationale cites the evidence ids in style-extract.md."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "jam README: arcade voice (ALL-CAPS headings, caps ratio 0.30), INSERT COIN tagline, five rules (72 HOURS, 16 COLOURS, 320 × 180, 4 CHANNELS, 1 CREDIT), the CREDIT-16 table with roles per colour, dates, WORDS WE USE rules, fictional disclaimer"
+    },
+    {
+      "path": "source/palette/credit16.hex",
+      "kind": "other",
+      "notes": "the palette itself, in index order (also credit16.gpl, credit16.pal and the swatch strip credit16.png); the extractor reads none of the three palette formats, only the PNG strip and the same values as CSS tokens"
+    },
+    {
+      "path": "source/site/index.html",
+      "kind": "website",
+      "notes": "jam page: 16 indexed colour tokens and role tokens (style.css), Press Start 2P + Silkscreen @font-face, image-rendering: pixelated, a 4-px scanline overlay, a 0.834-s steps() blink, the HUD row 1UP / HI 072016 / CREDIT 00, site.webmanifest"
+    },
+    {
+      "path": "source/jam-kit/SOUND.md",
+      "kind": "markdown",
+      "notes": "sound rule: PULSE 1, PULSE 2, TRIANGLE, NOISE; 60-Hz tick; house tempo 144 BPM (25 ticks per beat); the attract tune INSERT COIN in D mixolydian; SFX recipes"
+    },
+    {
+      "path": "source/media/attract.png",
+      "kind": "images",
+      "notes": "the jam's own pixel mock-ups (also logo.png and level.png): 320 × 180 art scaled ×4 nearest, CREDIT-16 only; the token hero and the bug come from level.png"
+    },
+    {
+      "path": "source/fonts/PressStart2P/PressStart2P-Regular.ttf",
+      "kind": "other",
+      "notes": "Press Start 2P (8-px design grid) and Silkscreen Regular/Bold (5-px caps), SIL OFL 1.1, licences beside the files"
+    }
+  ],
+  "mood": [
+    "arcade",
+    "chunky",
+    "punchy",
+    "cheeky",
+    "electric"
+  ],
+  "rationale": {
+    "palette": "CREDIT-16 is the law of this world (README rule 2: 'No other colours, no alpha blending' [E1]); every role is one of its 16 colours and the reel draws only with the 16 indexed keys (void … peach, in palette order [E28, source/palette/credit16.hex]). Kept from the draft: dark theme (page, manifest and attract screen are VOID [E25, E32, E42, E19]), bg VOID #0B0A16, bg2/surface NIGHT #1E1B3A (the .rule panels [E28]), ink BONE #FFF6E3 [E34], ink2 FOG #A8ADC6 (--text-dim), accent GOLD #FFD93D (--primary, the .btn fill, manifest theme_color, 'coins, credits, the player' [E10, E39, E41]), accent2 CHERRY (1UP), accent3 SKY (links, 2UP), ok LIME, warn EMBER, deny CHERRY, line SLATE, onAccent VOID [E38]. Changed: muted was a derived #7D7876 that is not in the palette; it is FOG (the page's footer and small-print colour, 8.9:1 on VOID). Removed: the derived light paletteAlt (#FBF8F2 …), which is not CREDIT-16 and has no scene to serve (every scene is the same CRT). Dark colours (COBALT, GRAPE, SLATE, RUST, PINE) are fills only; text uses BONE, FOG, GOLD, SKY, LIME, EMBER, BUBBLE or CHERRY (all ≥ 4.7:1 on VOID).",
+    "type": "Two pixel faces, as on the jam page [E26, E27, E29–E31, E35]: Press Start 2P (8-px grid, caps 7 px) for titles, HUD and numbers, Silkscreen (5-px caps) for small print, both embedded from source/fonts (OFL [E43–E45]). The draft's stacks fell back to Helvetica/Arial and put JetBrains Mono in mono (the extractor files pixel faces under 'grotesk' and has no pixel category); every role now resolves to the two pixel faces with a monospace fallback, and mono is Press Start 2P (its 8-px cells are monospaced). Sizes are whole multiples of the 8-px cell at the console's ×6 scale (48, 96, 144, 192, 288 px at 1080p) because README rule 3 allows 'whole numbers only' and type is drawn on the 320 × 180 canvas, never scaled smoothly. displayWeight/bodyWeight 400 (Press Start 2P has one weight; the draft's synthetic 800 would smear the pixels); tracking 0 (the cell carries its own 1-px gap).",
+    "motion": "Energetic: an attract loop that shouts (ALL-CAPS ratio 0.30, one rule per line [E1]) at the house tempo of 144 BPM [E23]; the draft's 'medium' came from '!' and emoji counts, which this README barely uses, and it does not read caps. Motion is the console's, not a motion designer's curves: sprites live on the 320 × 180 grid and move in whole pixels, stepped at 12 fps on the 60-fps timeline (a beat is exactly 5 steps at 144 BPM), with constant run speeds, gravity arcs and hard landings (ease lin); springs only pop score text. Screen shake moves the game world by whole pixels while the HUD row stays put. Transitions: hard cuts, the game's own palette flashes and fades, mosaic and iris wipes drawn on the canvas, and the compositor's cut, flash, strobe and glitch (a CRT signal hit); the draft's zoomInto and whip are smooth camera moves that would smear the pixel grid and slide the CRT glass. Reveals: typing (letter by letter) and slot-reel digit spins. characters: true (changed): the GOLD token with sneakers is 'the player' in the jam's own mock-up [E10, E21]; it is drawn in code as pixel sprites. dataViz: false (changed): data 0.66 came from the palette table, hex codes and dates, not from measurements.",
+    "sound": "The material states its sound: four chip channels (two pulse, triangle, noise), a 60-Hz tick, the house tempo 144 BPM and the attract tune INSERT COIN in D mixolydian [E23]. The draft (dark-synth, 125 BPM, A minor) followed the dark theme and could not reach 144 inside dark-synth's 118–130 range. Key D (also what the extractor's hue mapping gives GOLD); sound.mode is major until the validator accepts the schema's church modes, the tune itself is mixolydian (sound.chip.mode). BPM 144 also makes 15 s = 9 bars and 30 s = 18 bars exactly and a bar = 100 frames at 60 fps. No preset in audio/synth.py plays chip channels yet: preset bright-pop and its plucks/lead/bass/kit stand in for the timing draft, and sound.chip records the target voices and the jam's SFX recipes for the audio pass. SFX family digital (bleeps) until a chip family exists.",
+    "narration": "Not recommended (changed): an arcade attract loop and a jam launch teaser, music-led; the draft's purpose 'docs' came from tables and section counts, not from the voice of the material. Every idea is on screen as type, so muted autoplay works. If a voice is ever wanted it is an announcer, not an explainer: Puck, [bright, playful], en-GB (the README spells 'colours' and asks for it [E1]).",
+    "visuals": "Carrier: code-drawn pixel art only (vector): a 320 × 180 indexed canvas per scene, scaled ×6 nearest and shown through a code-drawn CRT (scanlines, slight curvature, phosphor glow via post.bloom) because the jam page itself overlays scanlines and renders pixelated [source/site/style.css]. The draft's app-ui and web-shots are dropped: the material's screens are mock-ups (README disclaimer), and a browser capture of the jam page would be a smooth web page, not the console. The token hero, the bug, the gems and the logo lockup follow the jam's own mock-ups [E18, E19, E21]."
+  },
+  "palette": {
+    "bg": "#0B0A16",
+    "bg2": "#1E1B3A",
+    "surface": "#1E1B3A",
+    "ink": "#FFF6E3",
+    "ink2": "#A8ADC6",
+    "muted": "#A8ADC6",
+    "accent": "#FFD93D",
+    "accent2": "#F0263E",
+    "accent3": "#62C3FF",
+    "ok": "#6CE24A",
+    "warn": "#FF8A1F",
+    "deny": "#F0263E",
+    "accentInk": "#FFD93D",
+    "onAccent": "#0B0A16",
+    "line": "#4C5170",
+    "void": "#0B0A16",
+    "night": "#1E1B3A",
+    "slate": "#4C5170",
+    "fog": "#A8ADC6",
+    "bone": "#FFF6E3",
+    "rust": "#8C3327",
+    "cherry": "#F0263E",
+    "ember": "#FF8A1F",
+    "gold": "#FFD93D",
+    "pine": "#17603F",
+    "lime": "#6CE24A",
+    "cobalt": "#2B49E8",
+    "sky": "#62C3FF",
+    "grape": "#5B2A86",
+    "bubble": "#FF5FB5",
+    "peach": "#FFB98A"
+  },
+  "fonts": {
+    "display": "\"Press Start 2P\", monospace",
+    "sans": "\"Silkscreen\", \"Press Start 2P\", monospace",
+    "serif": "\"Press Start 2P\", monospace",
+    "mono": "\"Press Start 2P\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Press Start 2P",
+        "path": "source/fonts/PressStart2P/PressStart2P-Regular.ttf",
+        "weight": "400"
+      },
+      {
+        "family": "Silkscreen",
+        "path": "source/fonts/Silkscreen/Silkscreen-Regular.ttf",
+        "weight": "400"
+      },
+      {
+        "family": "Silkscreen",
+        "path": "source/fonts/Silkscreen/Silkscreen-Bold.ttf",
+        "weight": "700"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      48,
+      96,
+      144,
+      192,
+      288
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 400,
+    "tracking": 0,
+    "trackingLabel": 0
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 48,
+    "grid": 20,
+    "gutter": 0,
+    "baseline": 6,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 48,
+      "fg": "#FFF6E3",
+      "bg": "rgba(11,10,22,0.88)",
+      "y": 1002
+    },
+    "radius": 0
+  },
+  "pixel": {
+    "canvas": [
+      320,
+      180
+    ],
+    "scale": 6,
+    "stepFps": 12,
+    "palette": [
+      "void",
+      "night",
+      "slate",
+      "fog",
+      "bone",
+      "rust",
+      "cherry",
+      "ember",
+      "gold",
+      "pine",
+      "lime",
+      "cobalt",
+      "sky",
+      "grape",
+      "bubble",
+      "peach"
+    ],
+    "fontCell": 8,
+    "crt": {
+      "curvature": 0.032,
+      "scanline": 0.42,
+      "mask": 0.1,
+      "corner": 0.05,
+      "roll": 0.03
+    },
+    "rationale": "README rule 3 (320 × 180, whole-number scaling, square pixels, no smoothing) and the jam page (--px, image-rendering: pixelated, a scanline overlay) [E1, source/site/style.css]; ×6 fills 1920 × 1080 exactly. stepFps 12 on the 60-fps timeline: at 144 BPM a beat is 25 frames = 5 steps, so every stepped pose lands on the beat grid. palette lists the CREDIT-16 keys in index order (00 VOID … 15 PEACH)."
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 3.2,
+      "z": 0.42
+    },
+    "overshoot": 1.2,
+    "ease": "lin",
+    "transitions": [
+      "cut",
+      "flash",
+      "strobe",
+      "glitch"
+    ],
+    "characters": true,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "typing",
+      "scramble"
+    ]
+  },
+  "post": {
+    "grain": 0.018,
+    "vignette": {
+      "a": 0.32,
+      "color": "#0B0A16"
+    },
+    "bloom": 0.42
+  },
+  "sound": {
+    "bpm": 144,
+    "key": "D",
+    "mode": "mixolydian",
+    "preset": "chiptune",
+    "instruments": [
+      "pulse",
+      "tri-bass",
+      "pulse-lead",
+      "kick",
+      "snare",
+      "hats"
+    ],
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.42,
+      "groove": 0.75,
+      "breakdown": 0.45,
+      "drop": 1.0,
+      "outro": 0.55
+    },
+    "chip": {
+      "status": "chip voices live in audio/synth.py (chip_pulse, chip_tri, chip_noise); preset chiptune",
+      "source": "source/jam-kit/SOUND.md",
+      "channels": [
+        {
+          "name": "PULSE 1",
+          "wave": "square",
+          "duty": [
+            0.125,
+            0.25,
+            0.5
+          ],
+          "job": "lead melody, coin and jump blips"
+        },
+        {
+          "name": "PULSE 2",
+          "wave": "square",
+          "duty": [
+            0.125,
+            0.25,
+            0.5
+          ],
+          "job": "harmony, fast arpeggios"
+        },
+        {
+          "name": "TRIANGLE",
+          "wave": "4-bit stepped triangle",
+          "job": "bass line, kick-like pitch drops"
+        },
+        {
+          "name": "NOISE",
+          "wave": "1-bit noise, long and short mode",
+          "job": "snare, hats, explosions, the coin slot"
+        }
+      ],
+      "tickHz": 60,
+      "ticksPerBeat": 25,
+      "mix": "mono, no reverb, no filters, 16 volume steps",
+      "tune": "INSERT COIN, D mixolydian, 4-bar loop: PULSE 1 hook, PULSE 2 arpeggios on D, C, G, TRIANGLE walking bass, NOISE kick-snare on 1 and 3 with closed hats on every 8th",
+      "sfx": {
+        "coin": "PULSE 1, duty 50 %, B5 then E6, 4 ticks each",
+        "jump": "PULSE 1, duty 25 %, slide up an octave over 10 ticks",
+        "stomp": "NOISE short mode, 6 ticks + TRIANGLE drop",
+        "pickup": "PULSE 2, duty 12.5 %, three-note arpeggio up",
+        "hit": "NOISE long mode + PULSE 1 sliding down two octaves",
+        "highscore": "PULSE 1 + PULSE 2 in octaves, eight fast notes up the scale"
+      },
+      "mode": "mixolydian"
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Puck",
+    "styleTag": "[bright, playful]",
+    "lang": "en-GB"
+  },
+  "swatches": [
+    {
+      "hex": "#0B0A16",
+      "share": 0.18,
+      "role": "bg",
+      "from": [
+        "source/site/index.html",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#FFD93D",
+      "share": 0.135,
+      "role": "accent",
+      "from": [
+        "source/site/style.css",
+        "source/site/index.html"
+      ]
+    },
+    {
+      "hex": "#FFF6E3",
+      "share": 0.093,
+      "role": "ink",
+      "from": [
+        "source/site/index.html",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#1E1B3A",
+      "share": 0.081,
+      "role": "bg2",
+      "from": [
+        "source/site/style.css",
+        "source/media/logo.png"
+      ]
+    },
+    {
+      "hex": "#F0263E",
+      "share": 0.073,
+      "role": "accent2",
+      "from": [
+        "source/site/style.css",
+        "source/README.md"
+      ]
+    },
+    {
+      "hex": "#62C3FF",
+      "share": 0.063,
+      "role": "accent3",
+      "from": [
+        "source/site/style.css",
+        "source/README.md"
+      ]
+    },
+    {
+      "hex": "#FF8A1F",
+      "share": 0.049,
+      "role": "warn",
+      "from": [
+        "source/site/style.css",
+        "source/media/logo.png"
+      ]
+    },
+    {
+      "hex": "#6CE24A",
+      "share": 0.049,
+      "role": "ok",
+      "from": [
+        "source/site/style.css",
+        "source/README.md"
+      ]
+    },
+    {
+      "hex": "#4C5170",
+      "share": 0.047,
+      "role": "line",
+      "from": [
+        "source/site/style.css",
+        "source/media/level.png"
+      ]
+    },
+    {
+      "hex": "#A8ADC6",
+      "share": 0.041,
+      "role": "ink2",
+      "from": [
+        "source/site/style.css",
+        "source/README.md"
+      ]
+    },
+    {
+      "hex": "#8C3327",
+      "share": 0.031,
+      "role": "rust",
+      "from": [
+        "source/site/style.css",
+        "source/media/logo.png"
+      ]
+    },
+    {
+      "hex": "#5B2A86",
+      "share": 0.025,
+      "role": "grape",
+      "from": [
+        "source/site/style.css",
+        "source/media/level.png"
+      ]
+    }
+  ],
+  "review": []
+}

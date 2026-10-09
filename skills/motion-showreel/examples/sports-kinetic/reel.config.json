@@ -1,0 +1,276 @@
+{
+  "title": "VELMORA 42",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "gun",
+      "label": "The gun",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "motionBlur": {
+        "samples": 6,
+        "shutter": 0.5
+      },
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "impact:big"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "swish"
+        }
+      ]
+    },
+    {
+      "id": "splits",
+      "label": "Every kilometre",
+      "minBars": 3,
+      "maxBars": 8,
+      "priority": 1,
+      "inBeats": 8,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "motionBlur": {
+        "samples": 5,
+        "shutter": 0.5
+      },
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 7,
+          "from": "start",
+          "sfx": "beep"
+        },
+        {
+          "beat": 0,
+          "from": "holdBeat",
+          "sfx": "beep",
+          "every": 1
+        }
+      ]
+    },
+    {
+      "id": "slam",
+      "label": "Race day in numbers",
+      "minBars": 3,
+      "maxBars": 7,
+      "priority": 1,
+      "inBeats": 8,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "drop",
+      "motionBlur": {
+        "samples": 5,
+        "shutter": 0.5
+      },
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh"
+        },
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "slam big"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "slam big"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "impact:big"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "slam big",
+          "every": 4
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "label": "VELMORA 42",
+      "minBars": 3,
+      "maxBars": 5,
+      "priority": 2,
+      "inBeats": 8,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "motionBlur": {
+        "samples": 5,
+        "shutter": 0.5
+      },
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "impact:big"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "drawon dur=2"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "whoosh"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "sting"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "hit"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "hit soft"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "hit"
+        },
+        {
+          "beat": 6.5,
+          "from": "start",
+          "sfx": "hit soft"
+        },
+        {
+          "beat": 7,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 0.5,
+          "from": "holdBar",
+          "sfx": "whoosh",
+          "every": 4
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "label": "short",
+      "narration": false,
+      "bars": 12,
+      "scenes": {
+        "finish": {
+          "bars": 4
+        },
+        "gun": {
+          "bars": 2
+        },
+        "splits": {
+          "bars": 3
+        },
+        "slam": {
+          "bars": 3
+        }
+      }
+    },
+    "30": {
+      "seconds": 30,
+      "label": "30 s",
+      "narration": false
+    }
+  },
+  "poster": 9.6,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": true
+  }
+}

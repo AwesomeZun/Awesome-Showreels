@@ -218,8 +218,10 @@
         "bpm": { "type": "number", "minimum": 50, "maximum": 200, "description": "Tempo of every cut (reel.config bpm may override)." },
         "key": { "enum": ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"] },
         "mode": { "enum": ["major", "minor", "dorian", "mixolydian", "lydian", "phrygian", "aeolian", "ionian", "locrian"], "description": "extract_style.py writes major or minor; audio/arrange.py also plays the church modes." },
-        "preset": { "enum": ["bright-pop", "dark-synth", "ambient", "corporate", "lofi", "cinematic-lite"], "description": "Instrument family for audio/synth.py (a sound palette, not a visual style)." },
-        "instruments": { "type": "array", "items": { "type": "string" }, "description": "audio/synth.py instrument names (python3 audio/synth.py list): pad strings piano epiano pluck arp marimba bell glass saw-pluck bass saw-bass sub stab lead kick clap snare rim hats shaker toms crackle. Include at least one bed (pad, strings, epiano or piano)." },
+        "preset": { "enum": ["bright-pop", "dark-synth", "ambient", "corporate", "lofi", "cinematic-lite", "chiptune", "swing", "dnb"], "description": "Instrument family for audio/synth.py (a sound palette, not a visual style)." },
+        "instruments": { "type": "array", "items": { "type": "string" }, "description": "audio/synth.py instrument names (python3 audio/synth.py list): pad strings piano epiano pluck arp marimba bell glass saw-pluck bass saw-bass sub stab lead kick clap snare rim hats shaker toms crackle, plus guitar ukulele koto upright reese clarinet pulse pulse-lead tri-bass ride brush. Include at least one bed (pad, strings, epiano, piano, guitar, ukulele or koto) unless the preset plays without one (swing)." },
+        "roles": { "type": "object", "description": "Pin a role to an instrument: {bed|motion|bass|top|motif: name}.", "additionalProperties": { "type": "string" } },
+        "scale": { "type": "array", "items": { "type": "integer", "minimum": 0, "maximum": 11 }, "description": "Pitch classes above the tonic that melodic lines snap to (pentatonic / Japanese colour), e.g. hirajoshi [0, 2, 3, 7, 8]." },
         "drums": { "enum": ["none", "light", "full"] },
         "sfx": { "enum": ["glassy", "digital", "organic", "minimal"] },
         "energy": {

@@ -1,0 +1,170 @@
+/* Visual Notes Lab · Lesson 3 handout (Scribblewell Studio, fictional).
+   One page, A4 landscape. Print it, then draw on it with the same three markers we use on the big board. */
+
+@font-face {
+  font-family: "Shantell Sans";
+  src: url("../fonts/shantell-sans/ShantellSans-Variable.ttf") format("truetype");
+  font-weight: 300 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/caveat/Caveat-Variable.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+:root {
+  /* the board kit: three markers, three jobs */
+  --paper: #FAFAF7;              /* board / paper white: never pure #FFF on a projector */
+  --ink: #1E2024;                /* black marker → words */
+  --ink-soft: #5C6068;           /* faded black → margin notes, footers */
+  --marker-blue: #1F5BC4;        /* blue marker → structure: boxes, arrows, frames */
+  --marker-orange: #EE6316;      /* orange marker → the ONE thing: stars, underlines, circles */
+  --marker-orange-text: #B84A0C; /* orange for small words on paper (the marker itself is for shapes and big words) */
+  --ghost: #DADDE2;              /* eraser ghosts: old marker that never quite comes off */
+  --dot-green: #25874A;          /* dot voting only */
+  --dot-red: #D23A2F;            /* dot voting only */
+
+  /* jobs, not colours */
+  --words: var(--ink);
+  --structure: var(--marker-blue);
+  --highlight: var(--marker-orange);
+
+  --font-marker: "Shantell Sans", "Comic Neue", cursive;   /* the board voice: block caps + print */
+  --font-pen: "Caveat", "Patrick Hand", cursive;            /* margin notes, quick asides */
+
+  --stroke: 5px;                 /* bullet-tip marker at handout scale */
+  --stroke-fine: 3px;
+  --wobble: -1.2deg;             /* nothing on the board is perfectly straight */
+}
+
+@page { size: A4 landscape; margin: 0; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--words);
+  font-family: var(--font-marker);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.sheet {
+  width: 297mm;
+  height: 210mm;
+  padding: 9mm 13mm 7mm;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1.15fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  gap: 3.5mm 9mm;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ghosts of last week's board, left on purpose */
+.sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120mm 22mm at 70% 18%, rgba(218, 221, 226, 0.45), transparent 70%),
+    radial-gradient(ellipse 90mm 16mm at 22% 86%, rgba(218, 221, 226, 0.35), transparent 70%);
+  pointer-events: none;
+}
+
+header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+.kicker {
+  font-family: var(--font-pen);
+  font-size: 22px;
+  color: var(--ink-soft);
+  margin: 0 0 1mm;
+}
+h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 42px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transform: rotate(var(--wobble));
+  transform-origin: left bottom;
+}
+h1 .star-word { color: var(--words); position: relative; }
+h1 .star-word svg { position: absolute; right: -44px; top: -26px; }
+.when {
+  text-align: right;
+  font-family: var(--font-pen);
+  font-size: 24px;
+  line-height: 1.1;
+}
+.when b { font-family: var(--font-marker); font-size: 17px; font-weight: 700; color: var(--structure); }
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+h2 .arrow { color: var(--structure); }
+
+.box-it h2 { color: var(--structure); }
+.arrow-it h2 { color: var(--structure); }
+.star-it h2 { color: var(--marker-orange-text); }
+
+.kit { grid-column: 1 / -1; display: grid; grid-template-columns: 30mm repeat(3, 1fr); gap: 4mm; align-items: center; }
+.kit .marker { display: flex; align-items: center; gap: 3mm; }
+.kit .marker span { font-size: 16px; white-space: nowrap; }
+.kit .marker em { font-style: normal; font-family: var(--font-pen); font-size: 20px; color: var(--ink-soft); display: block; white-space: normal; }
+.kit .title { font-weight: 800; font-size: 20px; }
+
+.move p { margin: 1mm 0; }
+.move ul { margin: 0.5mm 0 0; padding-left: 5mm; }
+.move svg { display: block; }
+.move li { margin: 0.6mm 0; }
+.pen { font-family: var(--font-pen); font-size: 19px; color: var(--ink-soft); }
+.orange { color: var(--marker-orange-text); font-weight: 700; }
+.blue { color: var(--structure); font-weight: 700; }
+
+svg .s { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: var(--stroke); }
+svg .f { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: var(--stroke-fine); }
+svg .ink { stroke: var(--words); }
+svg .blue { stroke: var(--structure); }
+svg .orange { stroke: var(--highlight); }
+svg text { font-family: var(--font-marker); fill: var(--words); }
+svg text.pen { font-family: var(--font-pen); fill: var(--ink-soft); }
+
+.rescue { grid-column: 1 / -1; display: grid; grid-template-columns: 0.9fr 1.6fr; gap: 8mm; align-items: center; }
+.wall {
+  font-size: 11.5px;
+  line-height: 1.42;
+  color: var(--words);
+  padding: 3mm 4mm;
+  border: var(--stroke-fine) dashed var(--ghost);
+  border-radius: 3mm;
+  transform: rotate(0.6deg);
+}
+.wall mark { white-space: nowrap; background: none; color: inherit; outline: 2.5px solid var(--structure); outline-offset: 1px; border-radius: 2px; }
+
+footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--font-pen);
+  font-size: 17px;
+  color: var(--ink-soft);
+  gap: 8mm;
+}
+footer .rules { white-space: nowrap; }
+footer .rules span + span::before { content: " · "; }
+footer small { font-family: var(--font-marker); font-size: 10px; color: var(--ink-soft); max-width: 112mm; text-align: right; }

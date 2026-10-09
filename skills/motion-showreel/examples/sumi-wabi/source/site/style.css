@@ -1,0 +1,139 @@
+/* 余白庵 ウェブの文様（しつらえ準拠）。色は伝統色の名で持ち、役割名はその別名です。 */
+@font-face {
+  font-family: "Shippori Mincho B1";
+  src: url("../fonts/ShipporiMinchoB1-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: block;
+}
+
+:root {
+  /* 伝統色 */
+  --torinoko: #F2EBDD;   /* 鳥の子：和紙の地 */
+  --kinari: #E8DFCD;     /* 生成：二番目の地、帯 */
+  --gofun: #FAF6EE;      /* 胡粉：紙を重ねるところ */
+  --sumi: #1E1C1A;       /* 墨：文字、線 */
+  --usuzumi: #57524C;    /* 薄墨：添え書き */
+  --nibi: #67615A;       /* 鈍色：注記 */
+  --rikyu: #7D8272;      /* 利休鼠：淡い面、茶の色 */
+  --shu: #C0392B;        /* 朱：落款のみ */
+
+  /* 役割 */
+  --bg: var(--torinoko);
+  --bg-soft: var(--kinari);
+  --surface: var(--gofun);
+  --text: var(--sumi);
+  --text-soft: var(--usuzumi);
+  --muted: var(--nibi);
+  --line: rgba(30, 28, 26, 0.14);
+  --accent: var(--shu);
+
+  --font: "Shippori Mincho B1", serif;
+  --measure: 22em;
+  --gap: 3.2em;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 和紙の繊維：ごく薄く */
+body {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='360'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='0.012 0.09' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.11  0 0 0 0 0.10  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--gap);
+  padding: 12vh 9vw 14vh;
+  min-height: 100vh;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 2.1;
+  letter-spacing: 0.12em;
+}
+
+.mast {
+  position: relative;
+  height: 62vh;
+  margin-left: 4em;
+}
+
+.mast h1 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mast .seal {
+  position: absolute;
+  left: -3.6rem;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--text);
+  height: 62vh;
+  margin: 2.4em 0 0;
+}
+
+.prose {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  height: var(--measure);
+  max-height: 66vh;
+}
+
+.prose h2 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.3em;
+  margin: 0 0 0 1.6em;
+}
+
+.prose p { margin: 0 0 0 1.2em; }
+
+.prose ul { list-style: none; padding: 0; margin: 0 0 0 1.2em; }
+
+.rule {
+  width: 1px;
+  align-self: stretch;
+  background: var(--line);
+  margin: 0 0.8em;
+}
+
+.reserve a {
+  color: var(--text);
+  text-decoration: none;
+  border-left: 1px solid var(--line);
+  padding-left: 0.3em;
+}
+
+.note {
+  position: fixed;
+  left: 3vw;
+  bottom: 3vh;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}

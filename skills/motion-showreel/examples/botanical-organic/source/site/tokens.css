@@ -1,0 +1,105 @@
+/* Mistfold design tokens. The colours come from the hillside (see ../brand-notes.md): oat paper, moss, sage,
+   terracotta pots and the gold of a steeped cup. Evening pages (prefers-color-scheme: dark) turn the paper to
+   night moss. Type: Fraunces with the Soft axis at 100, Alegreya Sans for labels. Both SIL Open Font License. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces/Fraunces[SOFT,WONK,opsz,wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces/Fraunces-Italic[SOFT,WONK,opsz,wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* hillside colours */
+  --mf-oat: #F1E9D8;
+  --mf-oat-deep: #E6DAC2;
+  --mf-linen: #F9F5EC;
+  --mf-loam: #2B2F23;
+  --mf-bark: #4F5242;
+  --mf-stone: #66654F;
+  --mf-moss: #4F6B3A;
+  --mf-sage: #9BAF86;
+  --mf-terracotta: #C2673F;
+  --mf-clay: #9A4A2A;
+  --mf-gold: #D4A24A;
+  --mf-night-moss: #1B2318;
+
+  /* roles */
+  --paper: var(--mf-oat);
+  --paper-deep: var(--mf-oat-deep);
+  --surface: var(--mf-linen);
+  --text: var(--mf-loam);
+  --text-muted: var(--mf-bark);
+  --text-subtle: var(--mf-stone);
+  --primary: var(--mf-moss);
+  --secondary: var(--mf-sage);
+  --tertiary: var(--mf-terracotta);
+  --seal: var(--mf-terracotta);
+  --liquor: var(--mf-gold);
+  --success: var(--mf-moss);
+  --warning: #A87A1F;
+  --danger: var(--mf-clay);
+  --rule: #D6C9AE;
+
+  /* type */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-label: "Alegreya Sans", "Gill Sans", "Trebuchet MS", sans-serif;
+  --soft: "SOFT" 100, "WONK" 0;
+  --soft-italic: "SOFT" 100, "WONK" 1;
+  --label-tracking: 0.12em;
+
+  /* shape and pace */
+  --radius: 3px;
+  --measure: 34rem;
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --beat: 625ms; /* 96 beats per minute: one leaf per beat */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1B2318;
+    --paper-deep: #232E1F;
+    --surface: #2B3826;
+    --text: #EFE7D4;
+    --text-muted: #CFC7B0;
+    --text-subtle: #A39F88;
+    --primary: #A9BE92;
+    --secondary: #7E9868;
+    --tertiary: #D9845A;
+    --seal: #EFE7D4;
+    --liquor: #E3B65E;
+    --success: #A9BE92;
+    --warning: #E3B65E;
+    --danger: #E08A6A;
+    --rule: #3A4834;
+  }
+}

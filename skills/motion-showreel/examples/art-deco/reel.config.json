@@ -1,0 +1,215 @@
+{
+  "title": "THE EMERALD FAN",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "door",
+      "label": "Knock twice",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 2,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "drawon dur=1.5"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "chime"
+        }
+      ]
+    },
+    {
+      "id": "fan",
+      "label": "The Emerald Fan",
+      "minBars": 2,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 5,
+      "outBeats": 1,
+      "in": "portalFlash",
+      "inParams": {
+        "preBeats": 2,
+        "postBeats": 1,
+        "color": "#F3E2A9"
+      },
+      "music": "drop",
+      "cues": [
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "tick x7 gap=0.11s"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "chime"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "drawon dur=1"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "sparkle dur=1 soft",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "label": "The programme for the evening",
+      "minBars": 3,
+      "maxBars": 4,
+      "priority": 2,
+      "optional": true,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh soft"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "tick x5 gap=1b soft"
+        },
+        {
+          "beat": 2.25,
+          "from": "start",
+          "sfx": "sparkle dur=1 soft"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "chime soft"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "chime soft"
+        },
+        {
+          "beat": 4.5,
+          "from": "start",
+          "sfx": "chime soft"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "chime"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "sparkle dur=1 soft",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "label": "The ninth of October",
+      "minBars": 3,
+      "maxBars": 5,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh soft"
+        },
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "drawon dur=1.5"
+        },
+        {
+          "beat": 2.6666666666666665,
+          "from": "start",
+          "sfx": "chime"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "drawon dur=0.8 soft"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "chime"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "sparkle dur=1"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "sparkle dur=1 soft",
+          "every": 4
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 7,
+      "label": "short (15 s)"
+    },
+    "30": {
+      "seconds": 30,
+      "label": "30 s"
+    }
+  },
+  "poster": 7.2,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": true
+  }
+}

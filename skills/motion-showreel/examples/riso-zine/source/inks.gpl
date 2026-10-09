@@ -1,0 +1,8 @@
+GIMP Palette
+Name: PAPER JAM two-drum riso
+Columns: 4
+# screen proofs of our two inks, their overprint and the paper. print with the real drums, not these numbers.
+255  72 176	fluoro pink (drum 1)
+ 61  85 136	federal blue (drum 2)
+ 58  22  84	overprint (drum 1 + 2)
+242 237 227	newsprint (paper)

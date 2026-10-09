@@ -1,0 +1,95 @@
+/* VELMORA 42 design tokens: race app, course screens and brand art share this file.
+   Fictional brand (motion-showreel example). Fonts: SIL Open Font License 1.1, see ../fonts/OFL.txt. */
+
+@font-face { font-family: "Barlow Condensed"; src: url("../fonts/BarlowCondensed-BlackItalic.ttf") format("truetype"); font-weight: 900; font-style: italic; }
+@font-face { font-family: "Barlow Condensed"; src: url("../fonts/BarlowCondensed-ExtraBoldItalic.ttf") format("truetype"); font-weight: 800; font-style: italic; }
+@font-face { font-family: "Barlow Condensed"; src: url("../fonts/BarlowCondensed-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; }
+@font-face { font-family: "Barlow Condensed"; src: url("../fonts/BarlowCondensed-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "Barlow Condensed"; src: url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; }
+@font-face { font-family: "Barlow"; src: url("../fonts/Barlow-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "Barlow"; src: url("../fonts/Barlow-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; }
+@font-face { font-family: "Barlow"; src: url("../fonts/Barlow-SemiBoldItalic.ttf") format("truetype"); font-weight: 600; font-style: italic; }
+
+:root {
+  color-scheme: dark;
+
+  /* brand colours: three carry the brand */
+  --v42-signal-orange: #FF5A1F;
+  --v42-track-black: #0B0B0B;
+  --v42-bib-white: #F5F3EE;
+  /* support */
+  --v42-asphalt: #1A1A1A;
+  --v42-lane-grey: #3A3936;
+  --v42-kerb-grey: #8F8B84;
+  --v42-signal-deep: #C2410C;   /* print only: orange text on white paper */
+  /* status: inside the app only, never in brand art */
+  --v42-go: #2FBF71;
+  --v42-hold: #FFB800;
+  --v42-stop: #E8392E;
+
+  /* roles */
+  --color-bg: var(--v42-track-black);
+  --color-surface: var(--v42-asphalt);
+  --color-text: var(--v42-bib-white);
+  --color-text-muted: var(--v42-kerb-grey);
+  --color-border: var(--v42-lane-grey);
+  --color-primary: var(--v42-signal-orange);
+  --color-on-primary: var(--v42-track-black);
+  --color-ahead: var(--v42-signal-orange);   /* with a minus sign */
+  --color-behind: var(--v42-bib-white);      /* with a plus sign */
+  --color-success: var(--v42-go);
+  --color-warning: var(--v42-hold);
+  --color-danger: var(--v42-stop);
+
+  /* type */
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --weight-display: 900;
+  --weight-headline: 800;
+  --weight-label: 600;
+  --weight-body: 500;
+  --tracking-display: -0.01em;
+  --tracking-label: 0.12em;
+  --size-clock: 96px;
+  --size-headline: 44px;
+  --size-body: 16px;
+  --size-label: 12px;
+
+  /* geometry: everything leans forward 12 degrees (the italic type leans 7 inside it), nothing is round */
+  --lean: -12deg;
+  --radius: 0;
+  --stripe: 14px;
+  --stripe-gap: 6px;
+
+  /* motion */
+  --beat: 341ms;                            /* 176 BPM: the race-day soundtrack */
+  --ease-land: cubic-bezier(0.16, 1, 0.3, 1);
+  --shake: 250ms;
+}
+
+/* the lean: number plates, stripes and wipes */
+.lean { transform: skewX(var(--lean)); }
+.lean > * { transform: skewX(calc(-1 * var(--lean))); }
+
+/* race stripes: Signal Orange, Bib White, Signal Orange */
+.stripes {
+  height: 64px;
+  background: repeating-linear-gradient(
+    102deg,
+    var(--v42-signal-orange) 0 var(--stripe),
+    transparent var(--stripe) calc(var(--stripe) + var(--stripe-gap)),
+    var(--v42-bib-white) calc(var(--stripe) + var(--stripe-gap)) calc(2 * var(--stripe) + var(--stripe-gap)),
+    transparent calc(2 * var(--stripe) + var(--stripe-gap)) calc(2 * var(--stripe) + 2 * var(--stripe-gap))
+  );
+}
+
+/* course screens: the split ticker along the bottom edge; the newest split is Signal Orange */
+.ticker { height: 64px; background: var(--color-bg); border-top: 4px solid var(--color-primary); display: flex; align-items: center; overflow: hidden; }
+.ticker .split { font-family: var(--font-display); font-weight: var(--weight-headline); font-style: italic; font-size: 34px; text-transform: uppercase; padding: 0 28px; white-space: nowrap; }
+.ticker .split:last-child { color: var(--color-primary); }
+
+/* numbers: tabular, never changing width */
+.num { font-family: var(--font-display); font-weight: var(--weight-display); font-style: italic; font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-display); }
+.label { font-family: var(--font-display); font-weight: var(--weight-label); text-transform: uppercase; letter-spacing: var(--tracking-label); }
+.ahead { color: var(--color-ahead); }
+.behind { color: var(--color-behind); }

@@ -1,0 +1,319 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "fashion press and the house's clients",
+    "title": "Maison Veyrande · Les Heures Blanches",
+    "hints": {},
+    "reviewed": "Reviewed by hand after extract_style.py (run without hints): title, audience, muted, accent2/accent3/accentInk, ok/warn/deny, line, paletteAlt, font stacks (sans back to Jost) and files (italic faces), type scale and weights, caps tracking, margin, radius, spring, overshoot, transitions, typeReveal, dataViz, visualSources, grain, vignette and the whole sound block changed; every change is explained in rationale and in README.md. Evidence ids refer to style-extract.md (committed copy of build/style-extract.md)."
+  },
+  "source": [
+    {
+      "path": "source/press-release.md",
+      "kind": "markdown",
+      "notes": "the couture house's press release for Les Heures Blanches: formal third person, no exclamation marks, the collection's story, 31 looks, look 31 at 1,240 hours, the show music (a nocturne for piano and string quartet, the walk one step to each beat), the fictional-house disclaimer"
+    },
+    {
+      "path": "source/identity-notes.md",
+      "kind": "brand-guide",
+      "notes": "the house identity: name always in tracked capitals, ivory/ink/champagne only (hex roles), Bodoni Moda Regular at its finest optical size + Jost capitals tracked 0.3 em, margins of 1/12, motion rules (nothing bounces, masked reveals, dissolves of at least one beat, film grain), sound (piano, strings and silence at about 80 BPM, no drums, risers or stings), banned words"
+    },
+    {
+      "path": "source/lookbook-notes.md",
+      "kind": "markdown",
+      "notes": "captions for editors: five selected looks with materials and hours, colour story, the show (about eighty beats per minute)"
+    },
+    {
+      "path": "source/lookbook/index.html",
+      "kind": "website",
+      "notes": "the digital lookbook with its design tokens (lookbook/tokens.css: --vy-* house colours and role aliases, @font-face Bodoni Moda + Jost); rendered by the extractor for palette and computed styles"
+    },
+    {
+      "path": "source/lookbook.pdf",
+      "kind": "other",
+      "notes": "the same lookbook printed to PDF (6 pages, A4 landscape, Chromium), fonts embedded"
+    },
+    {
+      "path": "source/sketches",
+      "kind": "images",
+      "notes": "the atelier's croquis for looks 01, 07, 12, 19 and 31 (SVG on Perle paper); modules/veyrande-croquis.js draws the same paths with an ink pen"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "Bodoni Moda (roman and italic, variable opsz 6-96, wght 400-900) and Jost (variable wght 100-900), SIL OFL 1.1 (OFL-BodoniModa.txt, OFL-Jost.txt), from github.com/google/fonts"
+    }
+  ],
+  "mood": [
+    "elegant",
+    "refined",
+    "quiet",
+    "calm",
+    "minimal",
+    "editorial"
+  ],
+  "rationale": {
+    "palette": "Light theme: the ivory page is the material's largest area everywhere (26.6 light vs 0.2 dark) [E39, E30-E35, E40]. Every role is an authored house colour, the identity notes' role list and the lookbook tokens agreeing [E2-E10, E17]: bg Ivoire #F3EEE4 (also <meta theme-color> [E14]), bg2 Perle #E8E0D2, surface Papier #FAF7F1, ink Encre #16130F (16.0:1, 'never pure black'), ink2 Graphite #4A443B (8.3:1), muted Huitre #675F54 (the identity's caption colour [E7], 5.4:1 on bg and 4.8:1 on Perle; the draft derived a neutral grey #706C67 because 'captions' is not a role word), accent Champagne #C8AD7F ('foil, hairline rules, the monogram. Never a fill behind text' [E8]: 1.9:1, fills only). accentInk is the authored Vieil or #76592E ('champagne words at small sizes' [E9], 5.6:1); the draft had put it in accent2 and derived a second text gold #80693F. accent2 is Nacre #E6DCD3 ('mother-of-pearl, for embroidery only' [E10]) and accent3 the deep champagne #9C7F52 measured in the printed lookbook's vector art [E29] (foil shadows, bead bodies): the three accents are one champagne family across lightness (L 88 / 72 / 55), because the identity says 'Ivory, ink and champagne carry everything. No other colour appears in house communication.' For the same reason ok/warn/deny are not the draft's derived green, coral and pink (#4A8A53, #D56B4E, #C0507D): the reel never signals success or failure, and the three required roles are set to dark in-family inks (olive graphite #5A6450, old gold #8A6A35, oxblood #7C3A2D) so a stray use stays on palette. line is a soft champagne #D4C3A3 for secondary rules; the hero hairlines use accent. paletteAlt is the house's own night, not the draft's derived brown #1C160A: Encre #16130F as the stage with Ivoire type and the same champagne (no scene uses it in the shipped cuts).",
+    "type": "The material's own faces [E15-E20, E36-E38, E39]: Bodoni Moda for display and serif, Jost for labels, both embedded from source/fonts (SIL OFL 1.1). fonts.files marks the italic file as style italic (the draft registers both Bodoni files as the normal style, so the italic would replace the roman). The draft's sans stack starts with Inter, not Jost: the lookbook PDF, printed by Chromium, carries its web fonts as unnamed Type3 faces, and one of them outranks the CSS label token --vy-font-label: \"Jost\" [E16, E27] for the body role; Jost's own file is still listed in the draft's fonts.files. The identity notes name Jost for captions and labels [E1], so sans is Jost (an earlier draft, made while an unused Jost italic file was in the material, happened to keep Jost first). Fallbacks are generic (serif, sans-serif): no system Didot or Bodoni 72, so every render uses the shipped files; mono and cjk are generic because the material has no code and no CJK text (the draft's JetBrains Mono and Pretendard are defaults from other material). displayWeight 400, not the draft's 500: 'Regular weight only, set large, at its finest optical size so that the hairlines almost disappear' [E1]; Chrome applies Bodoni Moda's opsz axis from the font size in canvas text as in CSS (checked: a 200-px canvas glyph matches opsz 96), so display sizes get the hairline cut. bodyWeight 500: Jost Medium for small tracked capitals ('Regular or Medium'). Scale 16-232 px at 1080p (the draft's 12-px step is too small for video). tracking 0 for mixed-case Bodoni; trackingLabel 0.15 is the schema's maximum, so the identity's '+300 (0.3 em)' for capitals is kept in the extra key trackingCaps 0.3 and the wordmark's 0.32 em (tokens.css --vy-tracking-name) in trackingName.",
+    "motion": "Calm, as drafted (energy 0.31: no '!', no emoji, no hedges; short declarative sentences). The identity's motion section decides the rest [E1]: 'Slow. Nothing bounces, nothing flashes, nothing spins' -> overshoot 0 (draft 0.29) and a slow, nearly critically damped spring f 1.1 z 0.92 (draft f 2.04 z 0.79), ease outQuint as drafted. 'Type is revealed from behind a mask, never typed out letter by letter and never scrambled' -> typeReveal revealLine first (the draft led with kinetic, a per-glyph blur-in); scenes use the module veyrande-type.js maskRise. 'A dissolve lasts at least one beat' -> scene changes are 2-beat cross-dissolves (reel.config in: dissolve, preBeats 1, postBeats 1) and one match cut; the extractor's transition table has no dissolve at all (it is a runtime extra), so motion.transitions keeps the schema's nearest names, match and cut. zoomInto is dropped: it scored 0.65 only because the material contains a web page ('ui' signal), but nothing in this reel dives into a screen. 'Hold the frame longer than feels necessary' -> long holds that stay alive through the satin's slow folds, dust in the lamplight, sequin glints and hairline glints, never through added motion of the type.",
+    "sound": "The material states the music: 'Piano, strings and silence, at about eighty beats per minute: the pace of the walk. No drums, no risers, no logo stings' [E1], 'an original nocturne for piano and string quartet ... one step to each beat' [E12], 'About eighty beats per minute' [E11]. bpm 80 (draft 89: the extractor reads no tempo from prose and the ambient preset's range starts at 84; 80 BPM also makes a bar exactly 3.0 s = 180 frames, so 15 s = 5 bars and 30 s = 10 bars). preset ambient as drafted (the nearest bed of strings and piano in the current library), instruments piano and strings only (draft: pad, glass, bell, sub, rim, shaker), drums none (draft light), sfx minimal as drafted, a low energy curve with no real drop. Key D-flat major instead of the draft's A major (a free choice either way, from the accent hue in the draft): the classic key of the piano nocturne, which is what the press release says is played.",
+    "narration": "Not recommended, as drafted: brand material, sparse copy, every idea is a line of type; the reel is music-led. If a voice is wanted: Algieba with [soft, elegant], en-US, measured third person ('the Maison', 'the atelier'), captions on.",
+    "visuals": "vector only, all drawn in code: the satin (modules/veyrande-silk.js, a WebGL2 shader), the house's own croquis (modules/veyrande-croquis.js draws the paths of source/sketches/*.svg with an ink pen, and sews the closing gown's embroidery along the lines of the first sketch, as the press release says), and the typography (modules/veyrande-type.js). The draft's app-ui, pdf-figures and web-shots are dropped: the lookbook page and its PDF are where the colours and faces come from, not the story (the identity: 'One image, one line'). dataViz false (draft true): the 0.53 data score came from hex codes, dates and look numbers; the reel has one number, 1,240 hours, set as type. characters false, as drafted."
+  },
+  "palette": {
+    "bg": "#F3EEE4",
+    "bg2": "#E8E0D2",
+    "surface": "#FAF7F1",
+    "ink": "#16130F",
+    "ink2": "#4A443B",
+    "muted": "#675F54",
+    "accent": "#C8AD7F",
+    "accent2": "#E6DCD3",
+    "accent3": "#9C7F52",
+    "ok": "#5A6450",
+    "warn": "#8A6A35",
+    "deny": "#7C3A2D",
+    "accentInk": "#76592E",
+    "onAccent": "#16130F",
+    "line": "#D4C3A3"
+  },
+  "fonts": {
+    "display": "\"Bodoni Moda\", serif",
+    "sans": "\"Jost\", sans-serif",
+    "serif": "\"Bodoni Moda\", serif",
+    "mono": "ui-monospace, monospace",
+    "cjk": "sans-serif",
+    "files": [
+      {
+        "family": "Bodoni Moda",
+        "path": "source/fonts/BodoniModa-Italic-Variable.ttf",
+        "weight": "400 900",
+        "style": "italic"
+      },
+      {
+        "family": "Bodoni Moda",
+        "path": "source/fonts/BodoniModa-Variable.ttf",
+        "weight": "400 900",
+        "style": "normal"
+      },
+      {
+        "family": "Jost",
+        "path": "source/fonts/Jost-Variable.ttf",
+        "weight": "100 900",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      32,
+      44,
+      60,
+      84,
+      120,
+      168,
+      232
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 500,
+    "tracking": 0,
+    "trackingLabel": 0.15,
+    "trackingCaps": 0.3,
+    "trackingName": 0.32
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 160,
+    "grid": 12,
+    "gutter": 32,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 34,
+      "fg": "#16130F",
+      "bg": "rgba(243,238,228,0.9)",
+      "y": 1012
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "calm",
+    "spring": {
+      "f": 1.1,
+      "z": 0.92
+    },
+    "overshoot": 0,
+    "ease": "outQuint",
+    "transitions": [
+      "match",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "revealLine",
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.055,
+    "vignette": {
+      "a": 0.15,
+      "color": "#3E3321"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 80,
+    "key": "Db",
+    "mode": "major",
+    "preset": "ambient",
+    "instruments": [
+      "piano",
+      "strings"
+    ],
+    "drums": "none",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.22,
+      "groove": 0.4,
+      "breakdown": 0.28,
+      "drop": 0.5,
+      "outro": 0.3
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Algieba",
+    "styleTag": "[soft, elegant]",
+    "lang": "en-US"
+  },
+  "paletteAlt": {
+    "theme": "dark",
+    "bg": "#16130F",
+    "bg2": "#1F1B16",
+    "surface": "#26211B",
+    "ink": "#F3EEE4",
+    "ink2": "#CFC6B6",
+    "muted": "#A39886",
+    "accent": "#C8AD7F",
+    "accent2": "#E6DCD3",
+    "accent3": "#9C7F52",
+    "ok": "#8FA07E",
+    "warn": "#C9A15E",
+    "deny": "#C98472",
+    "accentInk": "#C8AD7F",
+    "onAccent": "#16130F",
+    "line": "#3A332A"
+  },
+  "swatches": [
+    {
+      "hex": "#F3EEE4",
+      "share": 0.294,
+      "role": "bg",
+      "from": [
+        "source/lookbook/index.html",
+        "source/identity-notes.md"
+      ]
+    },
+    {
+      "hex": "#16130F",
+      "share": 0.166,
+      "role": "ink",
+      "from": [
+        "source/lookbook/index.html",
+        "source/identity-notes.md"
+      ]
+    },
+    {
+      "hex": "#C8AD7F",
+      "share": 0.128,
+      "role": "accent",
+      "from": [
+        "source/identity-notes.md",
+        "source/lookbook/tokens.css"
+      ]
+    },
+    {
+      "hex": "#76592E",
+      "share": 0.095,
+      "role": "ink",
+      "from": [
+        "source/identity-notes.md",
+        "source/lookbook/tokens.css"
+      ]
+    },
+    {
+      "hex": "#4A443B",
+      "share": 0.079,
+      "role": "ink",
+      "from": [
+        "source/identity-notes.md",
+        "source/lookbook/tokens.css"
+      ]
+    },
+    {
+      "hex": "#E8E0D2",
+      "share": 0.075,
+      "role": "bg2",
+      "from": [
+        "source/lookbook/tokens.css",
+        "source/identity-notes.md"
+      ]
+    },
+    {
+      "hex": "#FAF7F1",
+      "share": 0.061,
+      "role": "surface",
+      "from": [
+        "source/lookbook/tokens.css"
+      ]
+    },
+    {
+      "hex": "#675F54",
+      "share": 0.053,
+      "role": "ink2",
+      "from": [
+        "source/lookbook/tokens.css",
+        "source/lookbook.pdf"
+      ]
+    },
+    {
+      "hex": "#E6DCD3",
+      "share": 0.03,
+      "role": "bg",
+      "from": [
+        "source/lookbook/tokens.css"
+      ]
+    },
+    {
+      "hex": "#9C7F52",
+      "share": 0.015,
+      "role": "accent",
+      "from": [
+        "source/lookbook.pdf"
+      ]
+    },
+    {
+      "hex": "#C5C1B8",
+      "share": 0.004,
+      "role": "bg",
+      "from": [
+        "build/snapshots/index-5191c2-light-full.png",
+        "build/snapshots/lookbook-6bce91-p02.png"
+      ]
+    }
+  ],
+  "review": []
+}

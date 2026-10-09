@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistfold · tea and balm from one quiet hillside</title>
+  <meta name="description" content="A family tea garden on a misty hillside. First Light green tea for the morning, Dusk Balm from our own tea seed oil for the night. Grown slowly, picked by hand since 1962.">
+  <meta name="theme-color" content="#F1E9D8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1B2318" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body {
+      margin: 0; color: var(--text); background: var(--paper);
+      font-family: var(--font-body); font-variation-settings: var(--soft); font-size: 19px; line-height: 1.62;
+      font-weight: 360;
+    }
+    /* oat paper: fibres and flecks, multiplied over the background */
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; mix-blend-mode: multiply; opacity: 0.55;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.24 0 0 0 0.22 -0.06'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    }
+    main, header, footer { position: relative; z-index: 1; }
+    a { color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; padding-bottom: 28px; }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text); }
+    .brand svg { width: 54px; height: 54px; }
+    .wordmark { font-family: var(--font-display); font-size: 30px; font-weight: 400; letter-spacing: -0.01em; }
+    nav { display: flex; gap: 28px; }
+    nav a, .kicker, .label, .button, .meta {
+      font-family: var(--font-label); font-weight: 500; text-transform: uppercase; letter-spacing: var(--label-tracking);
+      font-size: 14px; text-decoration: none;
+    }
+    nav a { color: var(--text-muted); }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; padding-top: 40px; padding-bottom: 72px; }
+    .kicker { color: var(--primary); margin: 0 0 18px; }
+    h1, h2, h3 { font-family: var(--font-display); font-variation-settings: var(--soft); font-weight: 380; letter-spacing: -0.015em; margin: 0; }
+    h1 { font-size: 78px; line-height: 1.02; }
+    h1 em, h2 em { font-variation-settings: var(--soft-italic); color: var(--primary); }
+    .lede { font-size: 23px; color: var(--text-muted); max-width: var(--measure); margin: 26px 0 34px; }
+    .button { display: inline-block; padding: 14px 24px; border-radius: var(--radius); background: var(--primary); color: var(--paper); }
+    .hero-art svg { width: 100%; height: auto; overflow: visible; }
+    .leaf .wash { fill: var(--secondary); opacity: 0.62; filter: url(#bleed-a); }
+    .leaf .wash2 { fill: var(--secondary); opacity: 0.38; filter: url(#bleed-b); }
+    .leaf.mature .wash, .leaf.mature .wash2 { fill: #7F9868; }
+    .leaf .pool { fill: none; stroke: var(--primary); stroke-width: 3; opacity: 0.42; filter: url(#pool); }
+    .leaf .ink { fill: none; stroke: var(--text); stroke-width: 1.1; opacity: 0.72; filter: url(#nib); }
+    .leaf .rib { fill: none; stroke: var(--text); stroke-width: 1; opacity: 0.55; }
+    .leaf .vein { fill: none; stroke: var(--text); stroke-width: 0.7; opacity: 0.32; }
+    .leaf.bud .wash { fill: #B9C6A4; }
+    .stem { fill: none; stroke: #5B4A36; stroke-width: 3.2; stroke-linecap: round; filter: url(#nib); }
+    .pot { fill: var(--tertiary); opacity: 0.86; filter: url(#bleed-a); }
+    .pot-rim { fill: var(--tertiary); filter: url(#bleed-a); }
+    .pot-shade { fill: var(--danger); opacity: 0.35; filter: url(#bleed-b); }
+    .soil { fill: #5B4A36; opacity: 0.8; filter: url(#bleed-a); }
+    .rituals { background: var(--paper-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .rituals .wrap { padding-top: 72px; padding-bottom: 80px; }
+    .rituals h2 { font-size: 46px; margin-bottom: 36px; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 34px 36px 38px; }
+    .card h3 { font-size: 36px; margin: 6px 0 10px; }
+    .label { color: var(--tertiary); }
+    .meta { color: var(--text-subtle); font-size: 13px; margin-top: 18px; }
+    .liquor { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--liquor); vertical-align: -1px; margin-right: 8px; }
+    .steep .wrap { padding-top: 80px; padding-bottom: 80px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+    .steep h2 { font-size: 46px; }
+    .numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .numbers div { border-top: 1px solid var(--rule); padding-top: 14px; }
+    .numbers strong { display: block; font-family: var(--font-display); font-weight: 340; font-size: 52px; line-height: 1.1; color: var(--primary); }
+    .numbers span { font-family: var(--font-label); color: var(--text-muted); font-size: 16px; }
+    .story .wrap { padding-bottom: 90px; }
+    .story blockquote { margin: 0; font-family: var(--font-display); font-style: italic; font-variation-settings: var(--soft-italic); font-size: 34px; line-height: 1.3; max-width: 46rem; color: var(--text); }
+    .story p { max-width: var(--measure); color: var(--text-muted); }
+    footer { border-top: 1px solid var(--rule); }
+    footer .wrap { display: flex; gap: 22px; align-items: center; padding-top: 30px; padding-bottom: 40px; color: var(--text-subtle); font-family: var(--font-label); font-size: 15px; }
+    footer svg { width: 64px; height: 64px; flex: none; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="bleed-a" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="0.7"/>
+      </filter>
+      <filter id="bleed-b" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="9" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="G" yChannelSelector="R" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="1.4"/>
+      </filter>
+      <filter id="pool" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="5" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="6" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="1.6"/>
+      </filter>
+      <filter id="nib" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" seed="2" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/>
+      </filter>
+    </defs>
+  </svg>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Mistfold home"><svg style="color: var(--seal)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mistfold seal">
+  
+  <defs>
+    <path id="arc-top-h" d="M 50 200 A 150 150 0 0 1 350 200"/>
+    <path id="arc-bottom-h" d="M 40 200 A 160 160 0 0 0 360 200"/>
+  </defs>
+  <g fill="none" stroke="currentColor">
+    <circle cx="200" cy="200" r="186" stroke-width="10"/>
+    <circle cx="200" cy="200" r="134" stroke-width="3"/>
+  </g>
+  <g fill="currentColor" font-family="Alegreya Sans, sans-serif" font-weight="500">
+    <text font-size="34" letter-spacing="8"><textPath href="#arc-top-h" startOffset="50%" text-anchor="middle">MISTFOLD</textPath></text>
+    <text font-size="21" letter-spacing="6"><textPath href="#arc-bottom-h" startOffset="50%" text-anchor="middle">TEA GARDEN · 1962</textPath></text>
+  </g>
+  <circle cx="41" cy="200" r="4.5" fill="currentColor"/>
+  <circle cx="359" cy="200" r="4.5" fill="currentColor"/>
+  <!-- the sprig: two leaves and a bud (stem, bud, sheath, upper leaf, lower leaf); midribs are oat gaps -->
+  <g id="sprig-h" transform="translate(200 202) scale(0.84) translate(-198 -189)">
+    <path d="M196 312 C 198 268, 206 214, 204 136" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path d="M204 142 C 190 120, 194 92, 213 66 C 224 94, 221 124, 204 142 Z" fill="currentColor"/>
+    <path d="M203 150 C 188 142, 182 124, 186 108 C 196 118, 203 132, 203 150 Z" fill="currentColor"/>
+    <path d="M208 176 C 252 186, 289 147, 301 104 C 258 103, 211 128, 208 176 Z" fill="currentColor"/>
+    <path d="M196 238 C 153 254, 112 222, 95 181 C 139 174, 188 192, 196 238 Z" fill="currentColor"/>
+    <g fill="none" stroke="var(--paper)" stroke-width="3.2" stroke-linecap="round">
+      <path d="M212 170 Q 255 142 292 111"/>
+      <path d="M192 232 Q 146 206 104 186"/>
+      <path d="M206 132 Q 207 104 212 78"/>
+    </g>
+  </g>
+</svg>
+<span class="wordmark">Mistfold</span></a>
+      <nav aria-label="Main"><a href="#story">Our story</a><a href="#first-light">First Light</a><a href="#dusk-balm">Dusk Balm</a><a href="#visit">Visit</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="kicker">Mistfold Tea Garden · since 1962</p>
+          <h1>Grown slowly, <em>picked by hand.</em></h1>
+          <p class="lede">Tea and balm from one quiet hillside: a cup at first light, a balm at dusk.</p>
+          <a class="button" href="#first-light">Steeping notes</a>
+        </div>
+        <figure class="hero-art" aria-label="A tea sprig in watercolour: alternate serrated leaves, two young leaves and a bud">
+          <svg viewBox="40 10 460 670" role="img">
+            <path class="stem" d="M250 600 C 244 520, 268 400, 266 310 C 264 230, 254 180, 262 112" />
+<g class="leaf mature"><path class="wash" d="M247.0 515.0 L243.4 505.2 L239.5 496.3 L235.4 488.0 L231.1 480.0 L226.9 471.7 L222.5 464.2 L217.6 458.0 L212.5 452.5 L207.4 446.7 L201.5 443.3 L196.2 438.2 L189.4 437.0 L183.8 432.8 L176.5 433.1 L170.1 431.0 L162.6 431.9 L155.5 431.8 L147.8 433.4 L140.0 435.0 L132.2 436.9 L123.9 439.9 L116.1 441.8 L107.4 445.8 L99.7 447.4 L90.9 451.9 L82.6 455.1 L82.6 455.1 L87.7 460.8 L92.3 467.8 L97.9 472.0 L102.6 478.7 L108.1 483.3 L113.1 489.3 L118.5 494.2 L123.8 499.2 L129.2 504.2 L135.0 507.8 L140.4 512.7 L146.8 514.8 L152.2 519.5 L159.2 520.1 L165.0 523.9 L172.1 524.1 L178.5 526.1 L185.7 526.1 L192.7 526.5 L199.9 526.4 L207.5 525.2 L215.3 523.3 L223.0 521.9 L230.8 520.2 L238.7 518.1 L247.0 515.0 Z"/><path class="wash2" d="M247.0 515.0 L243.4 505.2 L239.5 496.3 L235.4 488.0 L231.1 480.0 L226.9 471.7 L222.5 464.2 L217.6 458.0 L212.5 452.5 L207.4 446.7 L201.5 443.3 L196.2 438.2 L189.4 437.0 L183.8 432.8 L176.5 433.1 L170.1 431.0 L162.6 431.9 L155.5 431.8 L147.8 433.4 L140.0 435.0 L132.2 436.9 L123.9 439.9 L116.1 441.8 L107.4 445.8 L99.7 447.4 L90.9 451.9 L82.6 455.1 L82.6 455.1 L87.7 460.8 L92.3 467.8 L97.9 472.0 L102.6 478.7 L108.1 483.3 L113.1 489.3 L118.5 494.2 L123.8 499.2 L129.2 504.2 L135.0 507.8 L140.4 512.7 L146.8 514.8 L152.2 519.5 L159.2 520.1 L165.0 523.9 L172.1 524.1 L178.5 526.1 L185.7 526.1 L192.7 526.5 L199.9 526.4 L207.5 525.2 L215.3 523.3 L223.0 521.9 L230.8 520.2 L238.7 518.1 L247.0 515.0 Z"/><path class="pool" d="M247.0 515.0 L243.4 505.2 L239.5 496.3 L235.4 488.0 L231.1 480.0 L226.9 471.7 L222.5 464.2 L217.6 458.0 L212.5 452.5 L207.4 446.7 L201.5 443.3 L196.2 438.2 L189.4 437.0 L183.8 432.8 L176.5 433.1 L170.1 431.0 L162.6 431.9 L155.5 431.8 L147.8 433.4 L140.0 435.0 L132.2 436.9 L123.9 439.9 L116.1 441.8 L107.4 445.8 L99.7 447.4 L90.9 451.9 L82.6 455.1 L82.6 455.1 L87.7 460.8 L92.3 467.8 L97.9 472.0 L102.6 478.7 L108.1 483.3 L113.1 489.3 L118.5 494.2 L123.8 499.2 L129.2 504.2 L135.0 507.8 L140.4 512.7 L146.8 514.8 L152.2 519.5 L159.2 520.1 L165.0 523.9 L172.1 524.1 L178.5 526.1 L185.7 526.1 L192.7 526.5 L199.9 526.4 L207.5 525.2 L215.3 523.3 L223.0 521.9 L230.8 520.2 L238.7 518.1 L247.0 515.0 Z"/><path class="ink" d="M247.0 515.0 L243.4 505.2 L239.5 496.3 L235.4 488.0 L231.1 480.0 L226.9 471.7 L222.5 464.2 L217.6 458.0 L212.5 452.5 L207.4 446.7 L201.5 443.3 L196.2 438.2 L189.4 437.0 L183.8 432.8 L176.5 433.1 L170.1 431.0 L162.6 431.9 L155.5 431.8 L147.8 433.4 L140.0 435.0 L132.2 436.9 L123.9 439.9 L116.1 441.8 L107.4 445.8 L99.7 447.4 L90.9 451.9 L82.6 455.1 L82.6 455.1 L87.7 460.8 L92.3 467.8 L97.9 472.0 L102.6 478.7 L108.1 483.3 L113.1 489.3 L118.5 494.2 L123.8 499.2 L129.2 504.2 L135.0 507.8 L140.4 512.7 L146.8 514.8 L152.2 519.5 L159.2 520.1 L165.0 523.9 L172.1 524.1 L178.5 526.1 L185.7 526.1 L192.7 526.5 L199.9 526.4 L207.5 525.2 L215.3 523.3 L223.0 521.9 L230.8 520.2 L238.7 518.1 L247.0 515.0 Z"/><path class="rib" d="M247.0 515.0 L236.0 508.6 L225.0 502.3 L213.9 496.3 L202.6 490.6 L191.2 485.3 L179.6 480.5 L167.9 476.2 L155.9 472.4 L143.8 469.2 L131.5 466.3 L119.1 463.8 L106.6 461.5 L94.1 459.3"/><path class="vein" d="M214.4 497.0 Q213.8 483.5 205.3 460.8 M214.4 497.0 Q205.3 506.8 185.7 514.5 M193.9 486.9 Q194.8 469.2 185.4 448.8 M193.9 486.9 Q183.2 501.0 163.7 508.5 M172.9 478.0 Q174.3 458.8 163.2 443.3 M172.9 478.0 Q161.7 493.7 142.9 499.0 M151.4 470.6 Q152.3 452.8 138.9 443.7 M151.4 470.6 Q140.6 484.9 123.3 486.5 M129.4 464.6 Q128.9 450.7 113.1 448.1 M129.4 464.6 Q120.0 475.0 104.3 472.1"/></g>
+<g class="leaf mature"><path class="wash" d="M252.0 452.0 L259.9 455.2 L267.5 457.4 L275.0 459.3 L282.4 460.8 L289.9 462.8 L297.2 464.2 L304.2 464.5 L311.0 464.3 L317.9 464.5 L324.2 462.7 L331.1 462.8 L336.9 459.3 L343.6 459.0 L349.1 454.6 L355.4 452.8 L360.8 448.2 L366.6 444.9 L371.9 440.3 L377.3 435.7 L382.7 431.2 L387.8 425.6 L393.3 421.3 L398.1 415.1 L403.8 411.3 L408.5 404.7 L413.7 399.5 L413.7 399.5 L405.7 396.1 L397.3 391.5 L389.9 389.8 L381.7 385.6 L374.1 383.6 L366.2 380.4 L358.7 378.4 L351.2 376.6 L343.8 374.9 L336.9 374.8 L329.7 373.6 L323.4 375.5 L316.4 375.0 L310.7 378.8 L304.2 379.8 L298.8 384.5 L293.0 387.6 L287.8 393.0 L282.6 398.1 L277.7 404.0 L273.1 411.0 L268.7 418.9 L264.3 426.4 L260.0 434.3 L255.9 442.7 L252.0 452.0 Z"/><path class="wash2" d="M252.0 452.0 L259.9 455.2 L267.5 457.4 L275.0 459.3 L282.4 460.8 L289.9 462.8 L297.2 464.2 L304.2 464.5 L311.0 464.3 L317.9 464.5 L324.2 462.7 L331.1 462.8 L336.9 459.3 L343.6 459.0 L349.1 454.6 L355.4 452.8 L360.8 448.2 L366.6 444.9 L371.9 440.3 L377.3 435.7 L382.7 431.2 L387.8 425.6 L393.3 421.3 L398.1 415.1 L403.8 411.3 L408.5 404.7 L413.7 399.5 L413.7 399.5 L405.7 396.1 L397.3 391.5 L389.9 389.8 L381.7 385.6 L374.1 383.6 L366.2 380.4 L358.7 378.4 L351.2 376.6 L343.8 374.9 L336.9 374.8 L329.7 373.6 L323.4 375.5 L316.4 375.0 L310.7 378.8 L304.2 379.8 L298.8 384.5 L293.0 387.6 L287.8 393.0 L282.6 398.1 L277.7 404.0 L273.1 411.0 L268.7 418.9 L264.3 426.4 L260.0 434.3 L255.9 442.7 L252.0 452.0 Z"/><path class="pool" d="M252.0 452.0 L259.9 455.2 L267.5 457.4 L275.0 459.3 L282.4 460.8 L289.9 462.8 L297.2 464.2 L304.2 464.5 L311.0 464.3 L317.9 464.5 L324.2 462.7 L331.1 462.8 L336.9 459.3 L343.6 459.0 L349.1 454.6 L355.4 452.8 L360.8 448.2 L366.6 444.9 L371.9 440.3 L377.3 435.7 L382.7 431.2 L387.8 425.6 L393.3 421.3 L398.1 415.1 L403.8 411.3 L408.5 404.7 L413.7 399.5 L413.7 399.5 L405.7 396.1 L397.3 391.5 L389.9 389.8 L381.7 385.6 L374.1 383.6 L366.2 380.4 L358.7 378.4 L351.2 376.6 L343.8 374.9 L336.9 374.8 L329.7 373.6 L323.4 375.5 L316.4 375.0 L310.7 378.8 L304.2 379.8 L298.8 384.5 L293.0 387.6 L287.8 393.0 L282.6 398.1 L277.7 404.0 L273.1 411.0 L268.7 418.9 L264.3 426.4 L260.0 434.3 L255.9 442.7 L252.0 452.0 Z"/><path class="ink" d="M252.0 452.0 L259.9 455.2 L267.5 457.4 L275.0 459.3 L282.4 460.8 L289.9 462.8 L297.2 464.2 L304.2 464.5 L311.0 464.3 L317.9 464.5 L324.2 462.7 L331.1 462.8 L336.9 459.3 L343.6 459.0 L349.1 454.6 L355.4 452.8 L360.8 448.2 L366.6 444.9 L371.9 440.3 L377.3 435.7 L382.7 431.2 L387.8 425.6 L393.3 421.3 L398.1 415.1 L403.8 411.3 L408.5 404.7 L413.7 399.5 L413.7 399.5 L405.7 396.1 L397.3 391.5 L389.9 389.8 L381.7 385.6 L374.1 383.6 L366.2 380.4 L358.7 378.4 L351.2 376.6 L343.8 374.9 L336.9 374.8 L329.7 373.6 L323.4 375.5 L316.4 375.0 L310.7 378.8 L304.2 379.8 L298.8 384.5 L293.0 387.6 L287.8 393.0 L282.6 398.1 L277.7 404.0 L273.1 411.0 L268.7 418.9 L264.3 426.4 L260.0 434.3 L255.9 442.7 L252.0 452.0 Z"/><path class="rib" d="M252.0 452.0 L262.9 446.2 L273.8 440.4 L284.8 434.9 L295.9 429.8 L307.2 425.0 L318.6 420.8 L330.1 417.0 L341.9 413.8 L353.8 411.0 L365.8 408.6 L377.9 406.6 L390.1 404.8 L402.4 403.1"/><path class="vein" d="M284.2 435.6 Q292.7 445.3 311.4 453.1 M284.2 435.6 Q285.4 422.8 294.5 401.2 M304.5 426.5 Q314.3 440.3 332.9 448.1 M304.5 426.5 Q304.3 409.5 314.2 390.3 M325.2 418.6 Q335.5 433.9 353.4 439.6 M325.2 418.6 Q324.5 400.2 335.9 385.7 M346.3 412.2 Q356.2 426.1 373.0 428.2 M346.3 412.2 Q346.1 395.1 359.5 386.7 M367.9 407.1 Q376.6 417.2 391.9 415.0 M367.9 407.1 Q368.9 393.8 384.4 391.8"/></g>
+<g class="leaf mature"><path class="wash" d="M262.0 382.0 L258.2 373.8 L254.2 366.5 L250.1 359.6 L245.9 353.0 L241.7 346.2 L237.4 340.1 L232.8 335.1 L228.0 330.7 L223.2 326.1 L217.9 323.7 L213.0 319.7 L207.2 319.1 L202.0 316.0 L195.8 316.8 L190.2 315.5 L183.9 316.9 L177.8 317.4 L171.3 319.3 L164.8 321.3 L158.2 323.5 L151.4 326.8 L144.8 329.0 L137.7 333.2 L131.2 335.2 L124.0 339.8 L117.1 343.2 L117.1 343.2 L121.9 347.7 L126.3 353.4 L131.4 356.6 L136.0 362.0 L141.0 365.6 L145.7 370.4 L150.6 374.2 L155.5 378.1 L160.5 382.0 L165.7 384.7 L170.7 388.5 L176.3 389.8 L181.3 393.5 L187.2 393.5 L192.5 396.3 L198.6 395.8 L204.2 397.1 L210.3 396.5 L216.4 396.3 L222.5 395.6 L228.9 394.0 L235.5 391.8 L242.0 389.9 L248.5 387.8 L255.1 385.3 L262.0 382.0 Z"/><path class="wash2" d="M262.0 382.0 L258.2 373.8 L254.2 366.5 L250.1 359.6 L245.9 353.0 L241.7 346.2 L237.4 340.1 L232.8 335.1 L228.0 330.7 L223.2 326.1 L217.9 323.7 L213.0 319.7 L207.2 319.1 L202.0 316.0 L195.8 316.8 L190.2 315.5 L183.9 316.9 L177.8 317.4 L171.3 319.3 L164.8 321.3 L158.2 323.5 L151.4 326.8 L144.8 329.0 L137.7 333.2 L131.2 335.2 L124.0 339.8 L117.1 343.2 L117.1 343.2 L121.9 347.7 L126.3 353.4 L131.4 356.6 L136.0 362.0 L141.0 365.6 L145.7 370.4 L150.6 374.2 L155.5 378.1 L160.5 382.0 L165.7 384.7 L170.7 388.5 L176.3 389.8 L181.3 393.5 L187.2 393.5 L192.5 396.3 L198.6 395.8 L204.2 397.1 L210.3 396.5 L216.4 396.3 L222.5 395.6 L228.9 394.0 L235.5 391.8 L242.0 389.9 L248.5 387.8 L255.1 385.3 L262.0 382.0 Z"/><path class="pool" d="M262.0 382.0 L258.2 373.8 L254.2 366.5 L250.1 359.6 L245.9 353.0 L241.7 346.2 L237.4 340.1 L232.8 335.1 L228.0 330.7 L223.2 326.1 L217.9 323.7 L213.0 319.7 L207.2 319.1 L202.0 316.0 L195.8 316.8 L190.2 315.5 L183.9 316.9 L177.8 317.4 L171.3 319.3 L164.8 321.3 L158.2 323.5 L151.4 326.8 L144.8 329.0 L137.7 333.2 L131.2 335.2 L124.0 339.8 L117.1 343.2 L117.1 343.2 L121.9 347.7 L126.3 353.4 L131.4 356.6 L136.0 362.0 L141.0 365.6 L145.7 370.4 L150.6 374.2 L155.5 378.1 L160.5 382.0 L165.7 384.7 L170.7 388.5 L176.3 389.8 L181.3 393.5 L187.2 393.5 L192.5 396.3 L198.6 395.8 L204.2 397.1 L210.3 396.5 L216.4 396.3 L222.5 395.6 L228.9 394.0 L235.5 391.8 L242.0 389.9 L248.5 387.8 L255.1 385.3 L262.0 382.0 Z"/><path class="ink" d="M262.0 382.0 L258.2 373.8 L254.2 366.5 L250.1 359.6 L245.9 353.0 L241.7 346.2 L237.4 340.1 L232.8 335.1 L228.0 330.7 L223.2 326.1 L217.9 323.7 L213.0 319.7 L207.2 319.1 L202.0 316.0 L195.8 316.8 L190.2 315.5 L183.9 316.9 L177.8 317.4 L171.3 319.3 L164.8 321.3 L158.2 323.5 L151.4 326.8 L144.8 329.0 L137.7 333.2 L131.2 335.2 L124.0 339.8 L117.1 343.2 L117.1 343.2 L121.9 347.7 L126.3 353.4 L131.4 356.6 L136.0 362.0 L141.0 365.6 L145.7 370.4 L150.6 374.2 L155.5 378.1 L160.5 382.0 L165.7 384.7 L170.7 388.5 L176.3 389.8 L181.3 393.5 L187.2 393.5 L192.5 396.3 L198.6 395.8 L204.2 397.1 L210.3 396.5 L216.4 396.3 L222.5 395.6 L228.9 394.0 L235.5 391.8 L242.0 389.9 L248.5 387.8 L255.1 385.3 L262.0 382.0 Z"/><path class="rib" d="M262.0 382.0 L252.1 377.4 L242.2 372.8 L232.3 368.5 L222.3 364.5 L212.1 360.8 L201.9 357.6 L191.5 354.8 L181.0 352.5 L170.4 350.6 L159.7 349.0 L149.0 347.8 L138.1 346.8 L127.3 345.9"/><path class="vein" d="M232.9 369.1 Q231.3 357.5 222.4 338.5 M232.9 369.1 Q225.7 378.3 209.6 386.5 M214.6 361.9 Q214.0 346.6 204.6 329.7 M214.6 361.9 Q206.4 375.0 190.3 383.1 M196.0 356.0 Q195.8 339.2 185.2 326.7 M196.0 356.0 Q187.5 370.4 171.9 376.5 M177.1 351.3 Q176.6 335.8 164.4 328.9 M177.1 351.3 Q168.9 364.4 154.2 367.1 M157.8 347.8 Q156.4 335.8 142.7 334.7 M157.8 347.8 Q150.6 357.4 136.9 356.2"/></g>
+<g class="leaf mature"><path class="wash" d="M266.0 312.0 L272.8 314.0 L279.3 315.3 L285.6 316.3 L291.8 317.0 L298.2 318.0 L304.3 318.6 L310.1 318.3 L315.6 317.6 L321.4 317.2 L326.4 315.2 L332.0 314.7 L336.5 311.4 L342.0 310.5 L346.0 306.4 L351.0 304.4 L355.0 300.2 L359.5 296.9 L363.5 292.6 L367.5 288.4 L371.5 284.1 L375.1 279.1 L379.2 275.0 L382.6 269.4 L386.9 265.8 L390.2 259.9 L393.9 255.1 L393.9 255.1 L387.1 252.9 L379.8 249.8 L373.5 248.9 L366.4 246.2 L360.0 245.1 L353.2 243.1 L346.9 242.1 L340.6 241.2 L334.3 240.4 L328.6 240.8 L322.6 240.5 L317.6 242.6 L311.8 242.7 L307.5 246.3 L302.2 247.7 L298.3 252.1 L293.7 255.1 L290.0 260.0 L286.2 264.7 L282.7 270.0 L279.5 276.2 L276.7 283.1 L273.8 289.7 L270.9 296.6 L268.3 303.9 L266.0 312.0 Z"/><path class="wash2" d="M266.0 312.0 L272.8 314.0 L279.3 315.3 L285.6 316.3 L291.8 317.0 L298.2 318.0 L304.3 318.6 L310.1 318.3 L315.6 317.6 L321.4 317.2 L326.4 315.2 L332.0 314.7 L336.5 311.4 L342.0 310.5 L346.0 306.4 L351.0 304.4 L355.0 300.2 L359.5 296.9 L363.5 292.6 L367.5 288.4 L371.5 284.1 L375.1 279.1 L379.2 275.0 L382.6 269.4 L386.9 265.8 L390.2 259.9 L393.9 255.1 L393.9 255.1 L387.1 252.9 L379.8 249.8 L373.5 248.9 L366.4 246.2 L360.0 245.1 L353.2 243.1 L346.9 242.1 L340.6 241.2 L334.3 240.4 L328.6 240.8 L322.6 240.5 L317.6 242.6 L311.8 242.7 L307.5 246.3 L302.2 247.7 L298.3 252.1 L293.7 255.1 L290.0 260.0 L286.2 264.7 L282.7 270.0 L279.5 276.2 L276.7 283.1 L273.8 289.7 L270.9 296.6 L268.3 303.9 L266.0 312.0 Z"/><path class="pool" d="M266.0 312.0 L272.8 314.0 L279.3 315.3 L285.6 316.3 L291.8 317.0 L298.2 318.0 L304.3 318.6 L310.1 318.3 L315.6 317.6 L321.4 317.2 L326.4 315.2 L332.0 314.7 L336.5 311.4 L342.0 310.5 L346.0 306.4 L351.0 304.4 L355.0 300.2 L359.5 296.9 L363.5 292.6 L367.5 288.4 L371.5 284.1 L375.1 279.1 L379.2 275.0 L382.6 269.4 L386.9 265.8 L390.2 259.9 L393.9 255.1 L393.9 255.1 L387.1 252.9 L379.8 249.8 L373.5 248.9 L366.4 246.2 L360.0 245.1 L353.2 243.1 L346.9 242.1 L340.6 241.2 L334.3 240.4 L328.6 240.8 L322.6 240.5 L317.6 242.6 L311.8 242.7 L307.5 246.3 L302.2 247.7 L298.3 252.1 L293.7 255.1 L290.0 260.0 L286.2 264.7 L282.7 270.0 L279.5 276.2 L276.7 283.1 L273.8 289.7 L270.9 296.6 L268.3 303.9 L266.0 312.0 Z"/><path class="ink" d="M266.0 312.0 L272.8 314.0 L279.3 315.3 L285.6 316.3 L291.8 317.0 L298.2 318.0 L304.3 318.6 L310.1 318.3 L315.6 317.6 L321.4 317.2 L326.4 315.2 L332.0 314.7 L336.5 311.4 L342.0 310.5 L346.0 306.4 L351.0 304.4 L355.0 300.2 L359.5 296.9 L363.5 292.6 L367.5 288.4 L371.5 284.1 L375.1 279.1 L379.2 275.0 L382.6 269.4 L386.9 265.8 L390.2 259.9 L393.9 255.1 L393.9 255.1 L387.1 252.9 L379.8 249.8 L373.5 248.9 L366.4 246.2 L360.0 245.1 L353.2 243.1 L346.9 242.1 L340.6 241.2 L334.3 240.4 L328.6 240.8 L322.6 240.5 L317.6 242.6 L311.8 242.7 L307.5 246.3 L302.2 247.7 L298.3 252.1 L293.7 255.1 L290.0 260.0 L286.2 264.7 L282.7 270.0 L279.5 276.2 L276.7 283.1 L273.8 289.7 L270.9 296.6 L268.3 303.9 L266.0 312.0 Z"/><path class="rib" d="M266.0 312.0 L274.4 306.3 L282.9 300.6 L291.4 295.2 L300.1 290.0 L308.9 285.2 L317.8 280.7 L327.0 276.6 L336.3 273.0 L345.8 269.7 L355.5 266.7 L365.2 264.0 L375.1 261.5 L384.9 259.0"/><path class="vein" d="M291.0 295.8 Q298.9 303.2 314.9 308.3 M291.0 295.8 Q290.8 285.0 296.2 266.3 M306.8 286.6 Q316.2 297.3 332.2 302.3 M306.8 286.6 Q305.1 272.4 311.4 255.6 M323.1 278.4 Q333.0 290.3 348.2 293.6 M323.1 278.4 Q320.8 263.0 328.8 250.0 M339.8 271.3 Q349.2 282.1 363.2 282.4 M339.8 271.3 Q338.1 257.0 348.3 248.9 M357.1 265.3 Q365.1 273.0 377.5 269.8 M357.1 265.3 Q356.7 254.1 369.1 251.1"/></g>
+<g class="leaf young"><path class="wash" d="M263.0 245.0 L261.3 238.5 L259.3 232.5 L257.2 226.9 L254.9 221.5 L252.8 216.0 L250.4 210.9 L247.6 206.6 L244.7 202.8 L241.8 198.8 L238.2 196.3 L235.1 192.7 L230.9 191.6 L227.5 188.6 L222.9 188.4 L218.9 186.7 L214.0 186.9 L209.5 186.4 L204.5 187.0 L199.4 187.7 L194.3 188.5 L188.8 190.0 L183.7 190.8 L178.0 192.9 L172.9 193.6 L167.0 196.0 L161.5 197.7 L161.5 197.7 L164.4 201.6 L166.9 206.4 L170.3 209.4 L172.9 214.0 L176.1 217.3 L178.9 221.4 L182.1 224.9 L185.2 228.4 L188.3 231.9 L191.8 234.6 L194.9 238.1 L198.9 239.7 L202.1 243.1 L206.5 243.9 L210.0 246.6 L214.5 247.1 L218.5 248.7 L223.1 249.1 L227.5 249.7 L232.2 250.0 L237.1 249.6 L242.2 248.8 L247.2 248.3 L252.3 247.6 L257.5 246.6 L263.0 245.0 Z"/><path class="wash2" d="M263.0 245.0 L261.3 238.5 L259.3 232.5 L257.2 226.9 L254.9 221.5 L252.8 216.0 L250.4 210.9 L247.6 206.6 L244.7 202.8 L241.8 198.8 L238.2 196.3 L235.1 192.7 L230.9 191.6 L227.5 188.6 L222.9 188.4 L218.9 186.7 L214.0 186.9 L209.5 186.4 L204.5 187.0 L199.4 187.7 L194.3 188.5 L188.8 190.0 L183.7 190.8 L178.0 192.9 L172.9 193.6 L167.0 196.0 L161.5 197.7 L161.5 197.7 L164.4 201.6 L166.9 206.4 L170.3 209.4 L172.9 214.0 L176.1 217.3 L178.9 221.4 L182.1 224.9 L185.2 228.4 L188.3 231.9 L191.8 234.6 L194.9 238.1 L198.9 239.7 L202.1 243.1 L206.5 243.9 L210.0 246.6 L214.5 247.1 L218.5 248.7 L223.1 249.1 L227.5 249.7 L232.2 250.0 L237.1 249.6 L242.2 248.8 L247.2 248.3 L252.3 247.6 L257.5 246.6 L263.0 245.0 Z"/><path class="pool" d="M263.0 245.0 L261.3 238.5 L259.3 232.5 L257.2 226.9 L254.9 221.5 L252.8 216.0 L250.4 210.9 L247.6 206.6 L244.7 202.8 L241.8 198.8 L238.2 196.3 L235.1 192.7 L230.9 191.6 L227.5 188.6 L222.9 188.4 L218.9 186.7 L214.0 186.9 L209.5 186.4 L204.5 187.0 L199.4 187.7 L194.3 188.5 L188.8 190.0 L183.7 190.8 L178.0 192.9 L172.9 193.6 L167.0 196.0 L161.5 197.7 L161.5 197.7 L164.4 201.6 L166.9 206.4 L170.3 209.4 L172.9 214.0 L176.1 217.3 L178.9 221.4 L182.1 224.9 L185.2 228.4 L188.3 231.9 L191.8 234.6 L194.9 238.1 L198.9 239.7 L202.1 243.1 L206.5 243.9 L210.0 246.6 L214.5 247.1 L218.5 248.7 L223.1 249.1 L227.5 249.7 L232.2 250.0 L237.1 249.6 L242.2 248.8 L247.2 248.3 L252.3 247.6 L257.5 246.6 L263.0 245.0 Z"/><path class="ink" d="M263.0 245.0 L261.3 238.5 L259.3 232.5 L257.2 226.9 L254.9 221.5 L252.8 216.0 L250.4 210.9 L247.6 206.6 L244.7 202.8 L241.8 198.8 L238.2 196.3 L235.1 192.7 L230.9 191.6 L227.5 188.6 L222.9 188.4 L218.9 186.7 L214.0 186.9 L209.5 186.4 L204.5 187.0 L199.4 187.7 L194.3 188.5 L188.8 190.0 L183.7 190.8 L178.0 192.9 L172.9 193.6 L167.0 196.0 L161.5 197.7 L161.5 197.7 L164.4 201.6 L166.9 206.4 L170.3 209.4 L172.9 214.0 L176.1 217.3 L178.9 221.4 L182.1 224.9 L185.2 228.4 L188.3 231.9 L191.8 234.6 L194.9 238.1 L198.9 239.7 L202.1 243.1 L206.5 243.9 L210.0 246.6 L214.5 247.1 L218.5 248.7 L223.1 249.1 L227.5 249.7 L232.2 250.0 L237.1 249.6 L242.2 248.8 L247.2 248.3 L252.3 247.6 L257.5 246.6 L263.0 245.0 Z"/><path class="rib" d="M263.0 245.0 L256.4 240.3 L249.7 235.7 L242.9 231.2 L236.1 226.9 L229.1 222.9 L222.0 219.2 L214.7 215.9 L207.3 212.8 L199.7 210.0 L192.1 207.5 L184.3 205.2 L176.5 203.1 L168.6 201.0"/><path class="vein" d="M243.3 231.7 Q243.6 223.0 239.6 207.8 M243.3 231.7 Q236.8 237.6 223.8 241.6 M230.7 224.1 Q232.3 212.7 227.6 199.0 M230.7 224.1 Q223.0 232.7 210.1 236.6 M217.8 217.3 Q219.9 204.9 213.7 194.3 M217.8 217.3 Q209.7 226.8 197.4 229.3 M204.5 211.4 Q206.2 199.9 198.2 193.2 M204.5 211.4 Q196.8 220.1 185.6 220.2 M190.8 206.3 Q191.3 197.3 181.4 194.7 M190.8 206.3 Q184.2 212.5 174.4 209.8"/></g>
+<g class="leaf young"><path class="wash" d="M259.0 186.0 L263.8 186.7 L268.3 186.9 L272.6 186.9 L276.9 186.8 L281.3 186.8 L285.5 186.6 L289.4 185.8 L293.1 184.8 L296.9 184.0 L300.1 182.1 L303.9 181.2 L306.6 178.6 L310.2 177.4 L312.6 174.3 L315.8 172.4 L318.2 169.2 L320.9 166.6 L323.2 163.3 L325.5 160.1 L327.8 156.8 L329.8 153.1 L332.3 150.0 L334.1 145.9 L336.6 143.0 L338.3 138.7 L340.4 135.1 L340.4 135.1 L335.6 134.4 L330.4 133.0 L326.0 133.0 L321.0 131.9 L316.5 131.8 L311.8 131.1 L307.4 131.0 L303.0 131.0 L298.7 131.1 L294.9 132.0 L290.8 132.3 L287.6 134.2 L283.7 134.9 L281.1 137.8 L277.7 139.2 L275.4 142.5 L272.6 145.0 L270.5 148.7 L268.4 152.2 L266.4 156.1 L264.9 160.6 L263.6 165.5 L262.2 170.2 L260.9 175.2 L259.8 180.4 L259.0 186.0 Z"/><path class="wash2" d="M259.0 186.0 L263.8 186.7 L268.3 186.9 L272.6 186.9 L276.9 186.8 L281.3 186.8 L285.5 186.6 L289.4 185.8 L293.1 184.8 L296.9 184.0 L300.1 182.1 L303.9 181.2 L306.6 178.6 L310.2 177.4 L312.6 174.3 L315.8 172.4 L318.2 169.2 L320.9 166.6 L323.2 163.3 L325.5 160.1 L327.8 156.8 L329.8 153.1 L332.3 150.0 L334.1 145.9 L336.6 143.0 L338.3 138.7 L340.4 135.1 L340.4 135.1 L335.6 134.4 L330.4 133.0 L326.0 133.0 L321.0 131.9 L316.5 131.8 L311.8 131.1 L307.4 131.0 L303.0 131.0 L298.7 131.1 L294.9 132.0 L290.8 132.3 L287.6 134.2 L283.7 134.9 L281.1 137.8 L277.7 139.2 L275.4 142.5 L272.6 145.0 L270.5 148.7 L268.4 152.2 L266.4 156.1 L264.9 160.6 L263.6 165.5 L262.2 170.2 L260.9 175.2 L259.8 180.4 L259.0 186.0 Z"/><path class="pool" d="M259.0 186.0 L263.8 186.7 L268.3 186.9 L272.6 186.9 L276.9 186.8 L281.3 186.8 L285.5 186.6 L289.4 185.8 L293.1 184.8 L296.9 184.0 L300.1 182.1 L303.9 181.2 L306.6 178.6 L310.2 177.4 L312.6 174.3 L315.8 172.4 L318.2 169.2 L320.9 166.6 L323.2 163.3 L325.5 160.1 L327.8 156.8 L329.8 153.1 L332.3 150.0 L334.1 145.9 L336.6 143.0 L338.3 138.7 L340.4 135.1 L340.4 135.1 L335.6 134.4 L330.4 133.0 L326.0 133.0 L321.0 131.9 L316.5 131.8 L311.8 131.1 L307.4 131.0 L303.0 131.0 L298.7 131.1 L294.9 132.0 L290.8 132.3 L287.6 134.2 L283.7 134.9 L281.1 137.8 L277.7 139.2 L275.4 142.5 L272.6 145.0 L270.5 148.7 L268.4 152.2 L266.4 156.1 L264.9 160.6 L263.6 165.5 L262.2 170.2 L260.9 175.2 L259.8 180.4 L259.0 186.0 Z"/><path class="ink" d="M259.0 186.0 L263.8 186.7 L268.3 186.9 L272.6 186.9 L276.9 186.8 L281.3 186.8 L285.5 186.6 L289.4 185.8 L293.1 184.8 L296.9 184.0 L300.1 182.1 L303.9 181.2 L306.6 178.6 L310.2 177.4 L312.6 174.3 L315.8 172.4 L318.2 169.2 L320.9 166.6 L323.2 163.3 L325.5 160.1 L327.8 156.8 L329.8 153.1 L332.3 150.0 L334.1 145.9 L336.6 143.0 L338.3 138.7 L340.4 135.1 L340.4 135.1 L335.6 134.4 L330.4 133.0 L326.0 133.0 L321.0 131.9 L316.5 131.8 L311.8 131.1 L307.4 131.0 L303.0 131.0 L298.7 131.1 L294.9 132.0 L290.8 132.3 L287.6 134.2 L283.7 134.9 L281.1 137.8 L277.7 139.2 L275.4 142.5 L272.6 145.0 L270.5 148.7 L268.4 152.2 L266.4 156.1 L264.9 160.6 L263.6 165.5 L262.2 170.2 L260.9 175.2 L259.8 180.4 L259.0 186.0 Z"/><path class="rib" d="M259.0 186.0 L264.2 181.3 L269.4 176.7 L274.7 172.2 L280.0 167.8 L285.6 163.7 L291.2 159.8 L297.0 156.2 L303.0 152.8 L309.2 149.6 L315.4 146.7 L321.8 143.9 L328.2 141.3 L334.7 138.7"/><path class="vein" d="M274.4 172.6 Q280.4 176.8 291.7 178.6 M274.4 172.6 Q273.3 165.4 275.3 152.3 M284.3 164.9 Q291.6 171.1 302.9 172.9 M284.3 164.9 Q281.8 155.5 284.6 143.6 M294.5 157.7 Q302.3 164.7 312.9 165.4 M294.5 157.7 Q291.6 147.6 295.9 138.1 M305.2 151.3 Q312.6 157.6 322.1 156.5 M305.2 151.3 Q302.8 141.9 308.9 135.5 M316.4 145.6 Q322.5 150.0 330.6 146.7 M316.4 145.6 Q315.1 138.1 323.3 134.9"/></g>
+<g class="leaf bud"><path class="wash" d="M262 118 C 250 96, 252 62, 268 34 C 280 62, 278 96, 262 118 Z"/><path class="wash2" d="M262 118 C 250 96, 252 62, 268 34 C 280 62, 278 96, 262 118 Z"/><path class="pool" d="M262 118 C 250 96, 252 62, 268 34 C 280 62, 278 96, 262 118 Z"/><path class="ink" d="M262 118 C 250 96, 252 62, 268 34 C 280 62, 278 96, 262 118 Z"/></g>
+
+            <path class="soil" d="M176 598 Q 250 586 324 598 L 324 606 L 176 606 Z"/>
+            <path class="pot" d="M184 606 L 316 606 L 302 662 Q 250 670 198 662 Z"/>
+            <path class="pot-shade" d="M262 606 L 316 606 L 302 662 Q 284 665 268 666 Z"/>
+            <path class="pot-rim" d="M170 588 L 330 588 L 328 610 L 172 610 Z"/>
+          </svg>
+        </figure>
+      </div>
+    </section>
+    <section class="rituals" id="first-light">
+      <div class="wrap">
+        <p class="kicker">Two rituals</p>
+        <h2>The same bushes, <em>morning and night.</em></h2>
+        <div class="cards">
+          <article class="card">
+            <p class="label">Green tea · spring first flush</p>
+            <h3>First Light</h3>
+            <p>The bud and two young leaves, picked by hand before the dew lifts, rolled by hand and dried slowly over low heat. Nothing is added.</p>
+            <p class="meta"><span class="liquor"></span>Liquor pale gold · cut grass and chestnut · 50 g tin</p>
+          </article>
+          <article class="card" id="dusk-balm">
+            <p class="label">Balm · tea seed oil, beeswax and shea</p>
+            <h3>Dusk Balm</h3>
+            <p>Pressed from the seeds our bushes set in autumn. A soft balm for hands, elbows and dry cheeks, when the day is done.</p>
+            <p class="meta">50 ml tin · unperfumed · a cosmetic, for external use only</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="steep">
+      <div class="wrap">
+        <div>
+          <p class="kicker">How we steep it</p>
+          <h2>A cup at <em>first light.</em></h2>
+        </div>
+        <div class="numbers">
+          <div><strong>80 °C</strong><span>water, just off the boil</span></div>
+          <div><strong>3 min</strong><span>then pour it all</span></div>
+          <div><strong>2 g</strong><span>to a small cup; steep again twice</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="kicker">Our story</p>
+        <blockquote>“From seed to a bush worth picking takes four years. We do not force them.”</blockquote>
+        <p>Our grandmother planted the first rows in 1962, on a north-facing slope where the morning mist folds into the valley and stays until the sun finds it. We still pick there, on the same terraces. <a href="../story.md">Read the whole story</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="visit">
+    <div class="wrap"><svg style="color: var(--seal)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mistfold seal">
+  
+  <defs>
+    <path id="arc-top-f" d="M 50 200 A 150 150 0 0 1 350 200"/>
+    <path id="arc-bottom-f" d="M 40 200 A 160 160 0 0 0 360 200"/>
+  </defs>
+  <g fill="none" stroke="currentColor">
+    <circle cx="200" cy="200" r="186" stroke-width="10"/>
+    <circle cx="200" cy="200" r="134" stroke-width="3"/>
+  </g>
+  <g fill="currentColor" font-family="Alegreya Sans, sans-serif" font-weight="500">
+    <text font-size="34" letter-spacing="8"><textPath href="#arc-top-f" startOffset="50%" text-anchor="middle">MISTFOLD</textPath></text>
+    <text font-size="21" letter-spacing="6"><textPath href="#arc-bottom-f" startOffset="50%" text-anchor="middle">TEA GARDEN · 1962</textPath></text>
+  </g>
+  <circle cx="41" cy="200" r="4.5" fill="currentColor"/>
+  <circle cx="359" cy="200" r="4.5" fill="currentColor"/>
+  <!-- the sprig: two leaves and a bud (stem, bud, sheath, upper leaf, lower leaf); midribs are oat gaps -->
+  <g id="sprig-f" transform="translate(200 202) scale(0.84) translate(-198 -189)">
+    <path d="M196 312 C 198 268, 206 214, 204 136" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path d="M204 142 C 190 120, 194 92, 213 66 C 224 94, 221 124, 204 142 Z" fill="currentColor"/>
+    <path d="M203 150 C 188 142, 182 124, 186 108 C 196 118, 203 132, 203 150 Z" fill="currentColor"/>
+    <path d="M208 176 C 252 186, 289 147, 301 104 C 258 103, 211 128, 208 176 Z" fill="currentColor"/>
+    <path d="M196 238 C 153 254, 112 222, 95 181 C 139 174, 188 192, 196 238 Z" fill="currentColor"/>
+    <g fill="none" stroke="var(--paper)" stroke-width="3.2" stroke-linecap="round">
+      <path d="M212 170 Q 255 142 292 111"/>
+      <path d="M192 232 Q 146 206 104 186"/>
+      <path d="M206 132 Q 207 104 212 78"/>
+    </g>
+  </g>
+</svg>
+<p>Mistfold is a fictional brand created as example material: fictional brand · illustrative. Type: Fraunces and Alegreya Sans, SIL Open Font License.</p></div>
+  </footer>
+</body>
+</html>

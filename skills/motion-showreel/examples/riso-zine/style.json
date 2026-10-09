@@ -1,0 +1,181 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "zine readers and the local DIY music scene",
+    "title": "PAPER JAM #07",
+    "reviewed": "Draft from extract_style.py (kept as build/style.extracted-draft.json), reviewed by hand against the material: palette roles re-derived from the two-drum print model, fonts and weights, motion, transitions, carriers, sound, post and layout changed; a print block added. Every change is explained in rationale and in README.md (what the draft got right and wrong)."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "the issue announcement: lowercase lo-fi copy with CAPS shouting and '!!', 7 words per sentence, the numbers table, release-show details, ink hex codes, 'words we don't use' rules, the fictional disclaimer"
+    },
+    {
+      "path": "source/house-style.md",
+      "kind": "brand-guide",
+      "notes": "contributor style sheet: two drums only (fluoro pink, federal blue, overprint, newsprint), halftones 45 lpi at 15 and 75 degrees, registration about 1 mm off, four OFL faces and their jobs, paste-up rules, and the video rules (stop-motion at 10 to 12 fps, slaps, hard cuts on the beat, no fades or glow, 160 bpm downstrokes, music only)"
+    },
+    {
+      "path": "source/flyer.html",
+      "kind": "website",
+      "notes": "release-show web flyer: CSS tokens --paper --pink --blue --overprint --text and four font tokens, @font-face to the OFL files, a pink flood with blue on top through mix-blend-mode multiply (real overprint), a halftone circle, a torn paper strip"
+    },
+    {
+      "path": "source/issue07-cover-scan.jpg",
+      "kind": "images",
+      "notes": "phone scan of printed copy No. 001: ransom-note masthead on torn scraps, halftone speaker cone, #07 stamp, marker scrawl, blue strip with knocked-out type; the inks multiplied on newsprint, misregistered, mottled and specked"
+    },
+    {
+      "path": "source/issue07-cover-seps.pdf",
+      "kind": "other",
+      "notes": "the riso master: one grayscale page per drum (the way a riso wants files), crop and registration marks, slug lines in the four embedded faces"
+    },
+    {
+      "path": "source/inks.gpl",
+      "kind": "other",
+      "notes": "GIMP palette of the two inks, their overprint and the paper (the extractor does not read .gpl; the same four values are in the README, house style and CSS)"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "Anton, Alfa Slab One, Courier Prime (Regular, Bold), Covered By Your Grace: SIL OFL 1.1 files from google/fonts with their licences (OFL-*.txt)"
+    }
+  ],
+  "mood": [
+    "loud",
+    "scrappy",
+    "hand-made",
+    "jumpy",
+    "defiant"
+  ],
+  "rationale": {
+    "palette": "Light theme on newsprint: bg #F2EDE3 is the paper in every source (--paper and <meta theme-color> [E17, E12], body background [E23], README and house style [E5, E10]). The material allows exactly two inks, so the roles are built from the print model, not picked: accent #FF48B0 is drum 1 fluoro pink (--pink [E17], README and house style [E2, E7]), accent2 #3D5588 is drum 2 federal blue (--blue [E17, E3, E8]) and accent3 #3A1654 is their overprint (--overprint [E17, E4, E9]; the flyer render measures #3D195E where blue multiplies the pink flood [E43]). Text is blue as the material says ('words you have to read', --text [E17, E24]): ink #394E78 is federal blue multiplied on the paper (#3A4F79, 6.99:1) taken a hair darker to clear 7:1 (7.1:1; the draft's #364E81 was the same idea), ink2 #536384 is that blue as the phone scan reads it through the mottled ink (measured [E40], 5.2:1), muted #5E6A87 a slightly starved blue (4.6:1). accent is 2.6:1 on paper: floods, stamps and display only ('pink type on bare paper is hard to read. if it's small, make it blue'); accentInk #A7338B is the pink overprinted with a blue halftone, measured in the flyer render [E43] (5.2:1), the deepest pink two drums can print. onAccent #3A1654 (overprint on the pink flood, 4.8:1). ok/warn/deny stay inside the two inks (blue, deep pink, overprint) instead of the draft's derived green, orange and red, which the press cannot print; the reel signals with stamped words, never colour alone. bg2 #E7E3D8 is the paper as the scan sees it [E40]; surface is the same newsprint (scraps read by their torn edges and printed shadows, not by a lighter fill). The draft's #FFFFFF bg2/surface and #000000 swatches came from the grayscale riso master [E26, E27, E33, E34], which is a separation, not the look; dropped. paletteAlt removed: the zine has no dark scheme; its dark pages are blue floods on the same paper, drawn with these inks, and no scene uses the compositor's night stage. Extra keys paper/pink/blue/overprint feed the riso press module; pinkOnPaper/blueOnPaper are the inks multiplied on the newsprint.",
+    "type": "Four OFL faces, each with the job the house style gives it (E13-E16 tokens, E18-E22 @font-face, E35-E39 files): display Anton (headlines, all caps), serif and stamp Alfa Slab One (rubber-stamp lettering), sans and mono Courier Prime (typewriter: the flyer's body rule is var(--font-type) [E15]; interviews, dates, small print), hand Covered By Your Grace (marker scribbles). The draft made the scrawl face the body font (its computed-style probe sampled the scrawl [E42]) and put it in the grotesk category with Helvetica/Arial fallbacks, read the PDF's Courier Prime as 'Courier New' [E31], and left serif as Source Serif 4: all corrected. Fallbacks are generic families only (no system faces). displayWeight 400 (Anton and Alfa Slab One ship one weight; the draft's 700 would have synthesized a faux bold), bodyWeight 700 (Courier Prime Bold survives the ink texture on video). Scale 18-400 px: the zine shouts (masthead and numbers 300-400 px), typed lines 32-44 px, disclaimers 18-24 px. Tracking +0.01 em on Anton (flyer h1 [E25]), 0.08 em on stamps (the flyer stamp letter-spacing).",
+    "motion": "The house style decides the motion and the extractor could not read it (it does not parse prose rules): 'stop-motion only. about 10 to 12 frames a second', 'things SLAP onto the page: one frame in the air, one frame squashed, then still (ish)', 'hard cuts on the beat. no fades. no swooshes. no glow. no 3D' [E6]. So: energetic pace at 160 BPM; every element is posed on a stop-motion clock of a quarter beat (motion.stopMotion.stepBeats 0.25 = 10.7 fps at 160 BPM) with a re-printed boil per step; slaps are three poses (in the air, squashed, down) landing on the beat; spring f 3.2 z 0.55 and outExpo with overshoot 0.9 only shape those poses. Transitions: cut (hard cuts on the bar line) and match (a torn sheet that both scenes draw at the same place); the draft's zoomInto, whip and impact were swooshes, a 3D dive into a 'website' and an RGB chroma kick, all banned or digital. Text reveals: typing (Courier Prime strikes) and kineticPop (ransom letters slapped one by one). characters false (no mascot), dataViz false (the draft's 0.55 data score came from prices, page numbers, dates and hex codes, not data). Energy was underestimated by the draft (0.53): it counts '!' and marketing words but not CAPS shouting or the 160 bpm in the house style.",
+    "sound": "House style: 'tempo: 160 bpm, downstrokes only, like the fastest song on the tape', 'music only' [E6]; README: a garage tape comp, 'side A is fast. side B is faster', tape hiss is 'the sound' [E1]. The draft's corporate 109 BPM, F major, light drums, glassy SFX is the opposite of the material: the library has no garage or punk family, so loud DIY copy fell into the most neutral preset. Set: 160 BPM (bar 1.5 s, 90 frames at 60 fps; 10 bars = 15 s, 20 bars = 30 s), E major (open-E garage power chords; mixolydian, with its bVII, is the intended colour, but extract_style.py --validate accepts only major/minor although the schema and arrange.py allow church modes), full drums, organic SFX (paper, stamps, hand-made), energy high throughout. preset lofi is a stand-in until the audio library has a garage kit: it is the only family built for hand-made material (tape crackle, organic SFX); its swing, e-piano and boom-bap do not fit and stage 2 replaces them (saw-bass and stabs stand in for bass and guitar, crackle for tape hiss).",
+    "narration": "Off. The house style says 'music only. nobody wants to hear us talk' [E6]; the reel is a 15-30 s punk teaser that must read muted, and every idea is on screen as stamped or typed words. If a voice is ever wanted: Fenrir, [fast, energetic], en-US, conversational lowercase register (README [E1]), captions on.",
+    "visuals": "Carriers: code-drawn vector only, but as print: every frame is two separations (pink, blue) multiplied onto newsprint with halftone screens, mottled ink, specks and misregistration, re-printed every stop-motion step (modules/riso-press.js). The cover, flyer, numbers, tape and band strips are redrawn in code after source/issue07-cover-scan.jpg [E40] and source/flyer.html [E43]. The draft's app-ui and web-shots came from treating flyer.html as an app to capture; there is no product UI in this world, and a browser frame would be the wrong object (the flyer is paper). No photos, no glow, no gradients, no soft shadows: shadows are printed halftone offsets.",
+    "print": "house-style.md [E6]: two drums, 'tints are halftones, never opacity: round dots, about 45 lpi. pink screen at 15°, blue at 75°', 'registration is about 1 mm off and changes from sheet to sheet', 'ink is uneven. big floods come out mottled with tiny white specks'. At the reel's magnification (an A5 cover fills the frame height, 1 mm = 5 px) that is a 9 px screen pitch, a blue drum about 5 px off with 1.5 px of jitter per step, ink density 0.82-1.0 with about 2.5 % paper specks; the scan shows the same [E40]."
+  },
+  "palette": {
+    "bg": "#F2EDE3",
+    "bg2": "#E7E3D8",
+    "surface": "#F2EDE3",
+    "ink": "#394E78",
+    "ink2": "#536384",
+    "muted": "#5E6A87",
+    "accent": "#FF48B0",
+    "accent2": "#3D5588",
+    "accent3": "#3A1654",
+    "ok": "#3D5588",
+    "warn": "#A7338B",
+    "deny": "#3A1654",
+    "accentInk": "#A7338B",
+    "onAccent": "#3A1654",
+    "line": "#8E99B3",
+    "paper": "#F2EDE3",
+    "pink": "#FF48B0",
+    "blue": "#3D5588",
+    "overprint": "#3A1654",
+    "pinkOnPaper": "#F2439D",
+    "blueOnPaper": "#3A4F79"
+  },
+  "fonts": {
+    "display": "\"Anton\", sans-serif",
+    "sans": "\"Courier Prime\", monospace",
+    "serif": "\"Alfa Slab One\", serif",
+    "mono": "\"Courier Prime\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "stamp": "\"Alfa Slab One\", serif",
+    "hand": "\"Covered By Your Grace\", cursive",
+    "files": [
+      { "family": "Anton", "path": "source/fonts/Anton-Regular.ttf", "weight": 400 },
+      { "family": "Alfa Slab One", "path": "source/fonts/AlfaSlabOne-Regular.ttf", "weight": 400 },
+      { "family": "Courier Prime", "path": "source/fonts/CourierPrime-Regular.ttf", "weight": 400 },
+      { "family": "Courier Prime", "path": "source/fonts/CourierPrime-Bold.ttf", "weight": 700 },
+      { "family": "Covered By Your Grace", "path": "source/fonts/CoveredByYourGrace.ttf", "weight": 400 }
+    ]
+  },
+  "type": {
+    "scale": [18, 24, 32, 42, 56, 76, 100, 132, 176, 232, 300, 400],
+    "displayWeight": 400,
+    "bodyWeight": 700,
+    "tracking": 0.01,
+    "trackingLabel": 0.08
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 88,
+    "grid": 6,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#394E78",
+      "bg": "rgba(242,237,227,0.94)",
+      "y": 0.9
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": { "f": 3.2, "z": 0.55 },
+    "overshoot": 0.9,
+    "ease": "outExpo",
+    "transitions": ["cut", "match"],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": ["vector"],
+    "typeReveal": ["typing", "kineticPop"],
+    "stopMotion": { "stepBeats": 0.25, "boilPx": 1.5, "slapPoses": 3 }
+  },
+  "print": {
+    "drums": ["pink", "blue"],
+    "screen": { "pitchPx": 9, "angles": { "pink": 15, "blue": 75 } },
+    "misregisterPx": { "pink": [0, 0], "blue": [5, -3] },
+    "jitterPx": 1.5,
+    "inkDensity": [0.82, 1.0],
+    "specks": 0.025
+  },
+  "post": {
+    "grain": 0,
+    "vignette": { "a": 0, "color": "#3A1654" },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 160,
+    "key": "E",
+    "mode": "major",
+    "preset": "lofi",
+    "instruments": ["pad", "saw-bass", "stab", "kick", "snare", "hats", "toms", "crackle"],
+    "drums": "full",
+    "sfx": "organic",
+    "energy": { "intro": 0.6, "groove": 0.82, "breakdown": 0.55, "drop": 1.0, "outro": 0.7 }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Fenrir",
+    "styleTag": "[fast, energetic]",
+    "lang": "en-US"
+  },
+  "swatches": [
+    { "hex": "#F2EDE3", "share": 0.24, "role": "bg", "from": ["source/flyer.html", "source/issue07-cover-scan.jpg"] },
+    { "hex": "#3D5588", "share": 0.274, "role": "accent2", "from": ["source/flyer.html", "source/README.md"] },
+    { "hex": "#FF48B0", "share": 0.098, "role": "accent", "from": ["source/flyer.html", "source/README.md"] },
+    { "hex": "#3A1654", "share": 0.096, "role": "accent3", "from": ["source/flyer.html", "source/README.md"] },
+    { "hex": "#E7E3D8", "share": 0.05, "role": "bg2", "from": ["source/issue07-cover-scan.jpg"] },
+    { "hex": "#536384", "share": 0.013, "role": "ink2", "from": ["source/issue07-cover-scan.jpg"] },
+    { "hex": "#EC5CA4", "share": 0.006, "role": "accent", "from": ["source/issue07-cover-scan.jpg"] },
+    { "hex": "#EB98BD", "share": 0.015, "role": "accent", "from": ["source/issue07-cover-scan.jpg", "build/snapshots/flyer-81cafa-light-full.png"] },
+    { "hex": "#A7338B", "share": 0.02, "role": "accentInk", "from": ["build/snapshots/flyer-81cafa-light-full.png"] }
+  ],
+  "review": []
+}

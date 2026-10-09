@@ -1,0 +1,17 @@
+{
+  "title": "Maison Veyrande · Les Heures Blanches",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "soie", "label": "Maison Veyrande", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "intro", "cues": [{"beat": 0.5, "from": "start", "sfx": "air"}]},
+    {"id": "atelier", "label": "1,240 hours", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "dissolve", "inParams": {"preBeats": 1, "postBeats": 1}, "music": "groove", "cues": [{"beat": 0, "from": "start", "sfx": "drawon dur=5 soft"}, {"beat": 4, "from": "start", "sfx": "sparkle dur=3 soft"}, {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=1 soft", "every": 4}]},
+    {"id": "regard", "label": "Thirty-one looks", "minBars": 2, "maxBars": 3, "priority": 2, "optional": true, "inBeats": 7, "outBeats": 1, "in": "match", "inFallback": "dissolve", "music": "groove", "cues": [{"beat": 1, "from": "start", "sfx": "flip x4 gap=0.5 soft"}, {"beat": 0, "from": "holdBar", "sfx": "air", "every": 4}]},
+    {"id": "finale", "label": "Les Heures Blanches", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "dissolve", "inParams": {"preBeats": 1, "postBeats": 1}, "music": "outro", "cues": [{"beat": 0.25, "from": "start", "sfx": "air"}, {"beat": 4, "from": "start", "sfx": "sparkle dur=1.5 soft"}]}
+  ],
+  "cuts": {"short": {"bars": 5, "label": "15 s", "narration": false, "exclude": ["regard"], "scenes": {"soie": {"bars": 1, "inBeats": 3}}}, "30": {"seconds": 30, "label": "30 s"}},
+  "poster": 13.5,
+  "captions": {"enabled": false},
+  "audio": {"transitionSfx": true}
+}

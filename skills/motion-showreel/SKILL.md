@@ -281,6 +281,16 @@ out.
   (128 BPM, dark-synth, GPU point cloud, real terminal capture tilted in 3D, data viz from the CLI's own JSON;
   narration script dry-run tested; cuts `15`, `30` and `60`).
 
-Each has its source, reviewed `style.json` with the extraction log, STORYBOARD, scenes and a built player in
-`dist/`. Re-plan before rendering (`build/` is generated): `python3 "$S/timing/plan_cut.py" --project
+Twelve more examples show the range, each derived from its own source and none reusable as a preset:
+`editorial-luxe` (fashion lookbook -> Bodoni hairlines, piano and strings), `swiss-grid` (competition brief ->
+12-column grid, one red), `riso-zine` (zine -> misregistered riso inks), `pixel-arcade` (game jam -> pixel art,
+chiptune), `botanical-organic` (tea garden -> watercolour, a botanically real growth time-lapse), `academic-paper`
+(single-cell omics manuscript -> 4,900 cells across UMAP, tissue and dot plot), `sketchnote` (workshop notes ->
+self-writing markers on one whiteboard), `neo-brutal` (landing page -> hard shadows, funk), `sumi-wabi` (ryokan ->
+sumi ink, koto in hirajōshi), `art-deco` (invitation -> gilded frames, swing), `newsprint` (front page -> printing
+press, halftone) and `sports-kinetic` (race-timing app -> broadcast type, drum and bass). Their `short` cuts are
+the README's style wall.
+
+The two first examples have their source, reviewed `style.json` with the extraction log, STORYBOARD, scenes and a
+built player in `dist/`. Re-plan before rendering (`build/` is generated): `python3 "$S/timing/plan_cut.py" --project
 "$S/examples/playful-app" --cut short,30,60`.

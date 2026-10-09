@@ -1,0 +1,129 @@
+/* ONE CREDIT JAM page. Every colour on this page is one of the 16 CREDIT-16 colours. Nothing else. */
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../fonts/PressStart2P/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: block;
+}
+@font-face {
+  font-family: "Silkscreen";
+  src: url("../fonts/Silkscreen/Silkscreen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: block;
+}
+@font-face {
+  font-family: "Silkscreen";
+  src: url("../fonts/Silkscreen/Silkscreen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: block;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* CREDIT-16, in palette order */
+  --c00-void: #0B0A16;
+  --c01-night: #1E1B3A;
+  --c02-slate: #4C5170;
+  --c03-fog: #A8ADC6;
+  --c04-bone: #FFF6E3;
+  --c05-rust: #8C3327;
+  --c06-cherry: #F0263E;
+  --c07-ember: #FF8A1F;
+  --c08-gold: #FFD93D;
+  --c09-pine: #17603F;
+  --c10-lime: #6CE24A;
+  --c11-cobalt: #2B49E8;
+  --c12-sky: #62C3FF;
+  --c13-grape: #5B2A86;
+  --c14-bubble: #FF5FB5;
+  --c15-peach: #FFB98A;
+
+  /* roles */
+  --bg: #0B0A16;
+  --bg-2: #1E1B3A;
+  --surface: #1E1B3A;
+  --text: #FFF6E3;
+  --text-dim: #A8ADC6;
+  --line: #4C5170;
+  --primary: #FFD93D;
+  --secondary: #F0263E;
+  --tertiary: #62C3FF;
+  --success: #6CE24A;
+  --warning: #FF8A1F;
+  --danger: #F0263E;
+
+  --font-display: "Press Start 2P", monospace;
+  --font-body: "Silkscreen", monospace;
+  --px: 4px;                 /* one CREDIT-16 pixel at the page's x4 scale */
+  --radius: 0;               /* pixels are square */
+}
+
+* { box-sizing: border-box; border-radius: 0; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.6 var(--font-body);
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+img, canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* the CRT: scanlines over everything, a little bloom on bright text */
+.crt { position: relative; overflow: hidden; }
+.crt::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(11, 10, 22, 0) 0, rgba(11, 10, 22, 0) 3px, rgba(11, 10, 22, 0.45) 3px, rgba(11, 10, 22, 0.45) 4px);
+}
+.glow { text-shadow: 0 0 8px rgba(255, 217, 61, 0.55); }
+
+h1, h2, h3, .hud, .btn {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+h1 { font-size: 32px; line-height: 40px; color: var(--primary); }
+h2 { font-size: 16px; line-height: 24px; color: var(--text); margin-top: 48px; }
+h3 { font-size: 8px; line-height: 16px; color: var(--tertiary); }
+
+.hud { display: flex; justify-content: space-between; font-size: 16px; padding: 16px 24px; color: var(--text); }
+.hud .up { color: var(--secondary); }
+.hud .hi { color: var(--primary); }
+
+.attract { text-align: center; padding: 48px 24px 64px; }
+.attract img { width: 960px; max-width: 100%; }
+.blink { animation: blink 0.834s steps(1, end) infinite; color: var(--primary); }
+@keyframes blink { 50% { visibility: hidden; } }
+
+.btn {
+  display: inline-block; padding: 16px 24px; font-size: 16px;
+  color: var(--bg); background: var(--primary);
+  box-shadow: var(--px) var(--px) 0 var(--c05-rust), calc(var(--px) * 2) calc(var(--px) * 2) 0 var(--c00-void);
+}
+.btn:active { transform: translate(var(--px), var(--px)); box-shadow: 0 0 0 var(--c05-rust); }
+
+.rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.rule { background: var(--surface); padding: 24px; border: var(--px) solid var(--line); }
+.rule b { display: block; font: 400 32px/40px var(--font-display); color: var(--primary); }
+.rule:nth-child(2) b { color: var(--secondary); }
+.rule:nth-child(3) b { color: var(--tertiary); }
+.rule:nth-child(4) b { color: var(--success); }
+
+.palette { display: grid; grid-template-columns: repeat(8, 64px); gap: 0; }
+.palette span { height: 64px; display: block; }
+
+.scores { width: 100%; max-width: 640px; border-collapse: collapse; font-family: var(--font-display); font-size: 16px; }
+.scores td { padding: 8px 12px; }
+.scores tr:nth-child(1) td { color: var(--primary); }
+.scores tr:nth-child(2) td { color: var(--text); }
+.scores tr:nth-child(3) td { color: var(--c07-ember); }
+.scores .you td { color: var(--tertiary); }
+
+.small { font-size: 16px; color: var(--text-dim); }
+footer { padding: 48px 24px; color: var(--text-dim); font-size: 16px; border-top: var(--px) solid var(--line); }
+a { color: var(--tertiary); text-decoration: none; border-bottom: var(--px) solid var(--c11-cobalt); }

@@ -1,0 +1,252 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "creators (link-in-bio pages, zines, merch, tips)",
+    "title": "kablok",
+    "reviewed": "Draft from extract_style.py (kept as build/style.draft.json), reviewed by hand: every change is explained in rationale and in README.md; the extraction log is style-extract.md."
+  },
+  "source": [
+    {
+      "path": "source/index.html",
+      "kind": "website",
+      "notes": "landing page of a fictional creator-tools SaaS: hero (H1 'Stack blocks. Ship your page.'), Mara's example page built from blocks, live-activity toasts, ink marquee, Pick/Stack/Ship steps, block library, quote, pricing, fictional-product footer"
+    },
+    {
+      "path": "source/kablok.css",
+      "kind": "website",
+      "notes": "design tokens --kb-* (4 named colours + roles), 5 px ink borders, hard 8 px offset shadows, 12 px radius, press/hover states (translate into the shadow), pop/drop/marquee keyframes, @font-face for the shipped OFL fonts"
+    },
+    {
+      "path": "source/BRAND.md",
+      "kind": "brand-guide",
+      "notes": "voice and wording rules, colour roles with hex codes, shape rules, type, motion rules (press 80 ms, pop 180 ms with one overshoot, no fades over 120 ms, no blur), sound (slap-ish bass, claps on 2 and 4, 112-116 BPM), logo rules"
+    },
+    {
+      "path": "source/logo.svg",
+      "kind": "images",
+      "notes": "the wordmark slab (lemon, 5 px ink border, 8 px hard shadow), outlines generated from the shipped Archivo at wght 900 / wdth 125"
+    }
+  ],
+  "mood": [
+    "loud",
+    "flat",
+    "chunky",
+    "blunt",
+    "snappy",
+    "cheeky"
+  ],
+  "rationale": {
+    "palette": "Light theme on paper: the page and BRAND.md set the background #FFF5E1 [E2, E16, E29]. Every role is an authored token or a colour named in BRAND.md: ink #111111 is 'every border, every shadow and every word' [E13, E17], ink2 --kb-ink-soft #3A352D (11.2:1), accent lemon #FFE14D ('Primary', logo slab, theme-color, hero band) [E3, E9, E21, E28], accent2 lilac #C5A3FF ('Secondary') [E4], accent3 mint #6FE8B0 ('Tertiary') [E5], ok/warn/deny --kb-success/--kb-warning/--kb-danger. Changed from the draft: muted is the authored --kb-muted #5E574A (6.6:1) instead of a derived #747167, because the role regex filed the token under ink2; tomato #FF5A36 ('CTA, the one button that matters', E6, E20) lost the accent slot to lemon and fell out of the roles, so it is kept as the extra key `tomato` and used for the one button of each screen and the ship stage; accentInk is ink, not the derived olive #817100, because BRAND.md says 'Text is always ink. Never set text in lemon, lilac, mint or tomato'. Coloured fills carry ink text only (lemon 14.5:1, mint 12.5:1, lilac 9.0:1, tomato 6.1:1); secondary text on tomato stays ink because ink2 drops to 3.9:1 there. paletteAlt is the source's own dark band, the marquee (ink background, lemon type) [E13]; no scene uses it.",
+    "type": "The page sets Archivo for headings and text and Martian Mono for labels [E10, E11, E12, E14, E15]; both ship as variable OFL-1.1 files [E26, E27] and are embedded from fonts.files. BRAND.md: 'Headlines in Black 900 with -2% tracking; the wordmark and huge words in Expanded', 'Labels ... Martian Mono 700, uppercase, +8% tracking'. So displayWeight 900 (the draft's 800 thinned the brand's Black), bodyWeight 700 (BRAND.md text 500/700; heavy reads on video), tracking -0.02 em, labels 0.08 em. Archivo's width axis (62-125) is used for the wordmark and slams: modules/kablok-kit.js registers the same file once more with a width range, so 'expanded 900' and 'condensed 900' work in canvas. The scale is chunkier than the draft (the h1 is 104 px on a 1440-px page, 140 px here): 14 18 24 32 44 60 84 116 160 220.",
+    "motion": "BRAND.md is explicit: 'Things land. They don't float.' Press 6 px into the shadow in 80 ms and spring back with one overshoot; pop from 60% with one overshoot in about 180 ms, then stop dead; a dropped block falls with no easing in the air, squashes 6% and the stack below thunks; no fades over 120 ms, no blur, no parallax; marquees left at 80 px/s; stickers within 8 degrees [E1]. The draft (energy 0.62, playful 0.60) gave spring f 2.48 z 0.56: a 240-ms peak, too slow for 180 ms; spring f 4.5 z 0.55 peaks at 0.13 s and settles by 0.26 s with a 13% overshoot. The draft's transitions blobWipe (soft wobbly circle) and whip (motion blur, chroma) and the kinetic reveal (blur-in) break 'no blur, no gradients'; the reel cuts hard on bar lines and draws its own flat transitions in scene code: slabs that slide up or drop like stacked cards, and the Publish button flooding the frame. Text slams in at full opacity with a squash (kineticPop with blur 0 is the closest engine name). motion.ui carries the brand numbers for scene code.",
+    "sound": "BRAND.md: 'a slap-ish bass line, dry claps on 2 and 4, sixteenth hats with a little swing and a clav stab on the hits, somewhere around 112 to 116 BPM. Every press is a click, every drop is a thunk. No EDM risers, no cinematic booms' [E1]. The extractor does not read sound statements: it drafted bright-pop 120 BPM A major with glassy SFX (bells, shimmer). Reviewed: 112 BPM, inside the brand's range and the only tempo in it where 15 s (7 bars) and 30 s (14 bars) are whole bars. E minor stands in for an E dorian funk vamp (style validation accepts only major/minor; audio/arrange.py plays dorian). The audio library has no funk preset yet: bright-pop is the closest groove container (claps on 2 and 4, offbeat bass, shaker), re-voiced with e-piano, pluck, round bass and a stab instead of pad, bell and marimba, swing 0.12, and organic SFX (dry clicks and thuds, not glass). `groove` describes the target for the audio stage.",
+    "narration": "Not recommended: a launch teaser with terse, slogan-length copy (avg 6 words per sentence, 767 words) and every idea on screen as type [E1, E8]. If a cut is ever narrated: Kore (firm) with [punchy, dry] fits 'Short. Blunt. Friendly.'",
+    "visuals": "The material is flat CSS: boxes with a 5 px ink border, an 8 px hard shadow and a 12 px radius [E13, E19, E23]. The reel redraws those components in code from the same tokens (scaled 1.33x from the 1440-px page to the 1920-px frame: 6 px border, 10 px shadow, 16 px radius), so every block can press, pop and stack; the copy on every block, toast and sticker is verbatim from index.html. No capture is needed (the draft's app-ui and web-shots): there is no app, and a screenshot would freeze the very components that have to move. Carriers: the block library, Mara's example page, the live-activity toasts, the ink marquee and the logo slab, plus a chunky cursor that carries one block through the whole reel. The editor toolbar with its Publish button is illustrative (the landing page only says 'Hit publish')."
+  },
+  "palette": {
+    "bg": "#FFF5E1",
+    "bg2": "#F8E7C3",
+    "surface": "#FFFFFF",
+    "ink": "#111111",
+    "ink2": "#3A352D",
+    "muted": "#5E574A",
+    "accent": "#FFE14D",
+    "accent2": "#C5A3FF",
+    "accent3": "#6FE8B0",
+    "ok": "#0E8A55",
+    "warn": "#B25D00",
+    "deny": "#D92D20",
+    "accentInk": "#111111",
+    "onAccent": "#111111",
+    "line": "#111111",
+    "lemon": "#FFE14D",
+    "lilac": "#C5A3FF",
+    "mint": "#6FE8B0",
+    "tomato": "#FF5A36",
+    "paper": "#FFF5E1",
+    "dots": "#D9CFBC"
+  },
+  "paletteAlt": {
+    "theme": "dark",
+    "bg": "#111111",
+    "bg2": "#1B1A17",
+    "surface": "#211F1B",
+    "ink": "#FFF5E1",
+    "ink2": "#E6DCC6",
+    "muted": "#B0A78F",
+    "accent": "#FFE14D",
+    "accent2": "#C5A3FF",
+    "accent3": "#6FE8B0",
+    "ok": "#3DDC97",
+    "warn": "#FFB547",
+    "deny": "#FF6B57",
+    "accentInk": "#FFE14D",
+    "onAccent": "#111111",
+    "line": "#FFF5E1"
+  },
+  "fonts": {
+    "display": "\"Archivo\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "sans": "\"Archivo\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "serif": "\"Source Serif 4\", \"Iowan Old Style\", \"Charter\", serif",
+    "mono": "\"Martian Mono\", \"IBM Plex Mono\", \"Menlo\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Archivo",
+        "path": "source/fonts/Archivo-Variable.ttf",
+        "weight": "100 900"
+      },
+      {
+        "family": "Martian Mono",
+        "path": "source/fonts/MartianMono-Variable.ttf",
+        "weight": "100 800"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      14,
+      18,
+      24,
+      32,
+      44,
+      60,
+      84,
+      116,
+      160,
+      220
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 700,
+    "tracking": -0.02,
+    "trackingLabel": 0.08
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Archivo\", \"Helvetica Neue\", \"Arial\", sans-serif",
+      "size": 38,
+      "weight": 800,
+      "fg": "#111111",
+      "bg": "#FFFFFF",
+      "y": 1010
+    },
+    "radius": 16,
+    "border": 6,
+    "shadow": {
+      "x": 10,
+      "y": 10,
+      "press": 8,
+      "lift": 6,
+      "color": "#111111"
+    },
+    "pill": 999
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 4.5,
+      "z": 0.55
+    },
+    "overshoot": 1.7,
+    "ease": "outBack",
+    "transitions": [
+      "cut",
+      "match",
+      "impact"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "kineticPop"
+    ],
+    "ui": {
+      "pressSec": 0.08,
+      "popSec": 0.18,
+      "popFrom": 0.6,
+      "squash": 0.06,
+      "maxFadeSec": 0.12,
+      "stickerMaxDeg": 8,
+      "marqueePxPerSec": 107,
+      "blur": false,
+      "notes": "BRAND.md 'Motion'; px values scaled 1.33x from the 1440-px page"
+    }
+  },
+  "post": {
+    "grain": 0.012,
+    "vignette": {
+      "a": 0,
+      "color": "#111111"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 112,
+    "key": "E",
+    "mode": "minor",
+    "preset": "bright-pop",
+    "instruments": [
+      "epiano",
+      "pluck",
+      "bass",
+      "stab",
+      "kick",
+      "clap",
+      "hats",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.4,
+      "groove": 0.7,
+      "breakdown": 0.4,
+      "drop": 1.0,
+      "outro": 0.5
+    },
+    "tweaks": {
+      "swing": 0.12
+    },
+    "groove": {
+      "feel": "funk",
+      "mode": "dorian",
+      "bass": "slap-ish sixteenth bass with octave pops and ghost notes",
+      "keys": "clav-like stab on the and of 4; e-piano comping",
+      "drums": "dry kick, claps on 2 and 4, sixteenth hats with a little swing; no risers, no booms",
+      "sfx": "every press is a click, every drop is a thunk",
+      "source": "BRAND.md 'Sound'"
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[punchy, dry]",
+    "lang": "en-US"
+  },
+  "swatches": [
+    { "hex": "#FFE14D", "share": 0.17, "role": "accent", "from": ["source/BRAND.md", "source/kablok.css", "source/index.html", "source/logo.svg"] },
+    { "hex": "#111111", "share": 0.14, "role": "ink", "from": ["source/kablok.css", "source/BRAND.md", "source/logo.svg"] },
+    { "hex": "#FFF5E1", "share": 0.12, "role": "bg", "from": ["source/BRAND.md", "source/kablok.css", "source/index.html"] },
+    { "hex": "#FFFFFF", "share": 0.1, "role": "surface", "from": ["source/BRAND.md", "source/kablok.css"] },
+    { "hex": "#6FE8B0", "share": 0.08, "role": "accent3", "from": ["source/BRAND.md", "source/kablok.css"] },
+    { "hex": "#C5A3FF", "share": 0.08, "role": "accent2", "from": ["source/BRAND.md", "source/kablok.css"] },
+    { "hex": "#FF5A36", "share": 0.08, "role": "tomato", "from": ["source/BRAND.md", "source/kablok.css"] },
+    { "hex": "#3A352D", "share": 0.07, "role": "ink2", "from": ["source/kablok.css"] },
+    { "hex": "#F8E7C3", "share": 0.03, "role": "bg2", "from": ["source/kablok.css"] },
+    { "hex": "#5E574A", "share": 0.03, "role": "muted", "from": ["source/kablok.css"] }
+  ],
+  "review": []
+}

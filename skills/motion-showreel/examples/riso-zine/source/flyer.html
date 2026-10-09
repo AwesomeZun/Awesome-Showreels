@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F2EDE3">
+<title>PAPER JAM #07 release show</title>
+<meta name="description" content="PAPER JAM #07, the basement issue: release show, fri oct 23, 8pm, the laundromat basement. all ages. $4 or a trade. (fictional zine)">
+<style>
+  /* PAPER JAM web flyer. two drums, one paper. screen proofs only: the printed flyer uses the real riso inks. */
+  @font-face { font-family: "Anton"; src: url("fonts/Anton-Regular.ttf") format("truetype"); font-weight: 400; }
+  @font-face { font-family: "Alfa Slab One"; src: url("fonts/AlfaSlabOne-Regular.ttf") format("truetype"); font-weight: 400; }
+  @font-face { font-family: "Courier Prime"; src: url("fonts/CourierPrime-Regular.ttf") format("truetype"); font-weight: 400; }
+  @font-face { font-family: "Courier Prime"; src: url("fonts/CourierPrime-Bold.ttf") format("truetype"); font-weight: 700; }
+  @font-face { font-family: "Covered By Your Grace"; src: url("fonts/CoveredByYourGrace.ttf") format("truetype"); font-weight: 400; }
+
+  :root {
+    --paper: #F2EDE3;          /* off-white newsprint */
+    --pink: #FF48B0;           /* drum 1: fluoro pink, shouting */
+    --blue: #3D5588;           /* drum 2: federal blue, talking */
+    --overprint: #3A1654;      /* drum 1 + 2 */
+    --text: var(--blue);       /* small type is always blue */
+    --misreg-x: 3px;           /* the blue drum is never quite where it should be */
+    --misreg-y: -2px;
+    --font-shout: "Anton", sans-serif;
+    --font-stamp: "Alfa Slab One", serif;
+    --font-type: "Courier Prime", monospace;
+    --font-hand: "Covered By Your Grace", cursive;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--paper); color: var(--text); font: 400 18px/1.45 var(--font-type); }
+  body {
+    min-height: 100vh; display: grid; place-items: center; padding: 48px 16px;
+    /* newsprint fibres: two faint dot screens that never line up */
+    background-image:
+      radial-gradient(rgba(58, 22, 84, 0.05) 0.8px, transparent 1.2px),
+      radial-gradient(rgba(61, 85, 136, 0.04) 0.8px, transparent 1.3px);
+    background-size: 7px 7px, 11px 11px;
+    background-position: 0 0, 3px 5px;
+  }
+
+  main { width: min(720px, 100%); }
+  /* the flyer itself: a pink flood with blue on top (multiply = real overprint) */
+  .flyer {
+    position: relative; width: min(720px, 100%); aspect-ratio: 1 / 1.414; overflow: hidden; isolation: isolate;
+    background: var(--pink);
+    transform: rotate(-1.2deg);
+    box-shadow: 10px 12px 0 rgba(61, 85, 136, 0.35);   /* a printed offset shadow, not a soft one */
+  }
+  .flyer::before {                                       /* uneven ink: paper specks punched through the flood */
+    content: ""; position: absolute; inset: -20px; z-index: 0; pointer-events: none;
+    background-image:
+      radial-gradient(var(--paper) 0.7px, transparent 1.1px),
+      radial-gradient(var(--paper) 0.6px, transparent 1px);
+    background-size: 13px 17px, 23px 19px; background-position: 2px 4px, 9px 1px; opacity: 0.55;
+  }
+  .drum2 { position: absolute; inset: 0; transform: translate(var(--misreg-x), var(--misreg-y)); mix-blend-mode: multiply; z-index: 2; }
+  .halftone {                                            /* blue 35 % screen at 75 degrees: the "speaker" circle */
+    position: absolute; width: 430px; height: 430px; right: -170px; top: 372px; border-radius: 50%; overflow: hidden;
+  }
+  .halftone::before {
+    content: ""; position: absolute; inset: -40%;
+    background-image: radial-gradient(var(--blue) 0 34%, transparent 37%);
+    background-size: 12px 12px; transform: rotate(75deg);
+  }
+  .halftone::after {                                     /* the dust cap: solid blue */
+    content: ""; position: absolute; left: 33%; top: 33%; width: 34%; height: 34%; border-radius: 50%; background: var(--blue);
+  }
+  .stamp {
+    position: absolute; left: 44px; top: 40px; padding: 6px 14px 4px; border: 5px solid var(--blue);
+    font: 400 34px/1 var(--font-stamp); letter-spacing: 0.06em; color: var(--blue); transform: rotate(-6deg);
+  }
+  h1 {
+    position: absolute; left: 40px; top: 118px; margin: 0; font: 400 172px/0.86 var(--font-shout); letter-spacing: 0.01em;
+    text-transform: uppercase; color: var(--blue);
+  }
+  .when { position: absolute; left: 46px; top: 470px; margin: 0; font: 700 34px/1.25 var(--font-type); color: var(--blue); }
+  .where { position: absolute; left: 46px; top: 560px; margin: 0; font: 400 26px/1.3 var(--font-stamp); color: var(--blue); transform: rotate(-3deg); }
+  .bands { position: absolute; left: 46px; top: 636px; margin: 0; padding: 0; list-style: none; font: 700 22px/1.5 var(--font-type); color: var(--blue); }
+  .scrawl { position: absolute; right: 40px; top: 30px; margin: 0; text-align: right; font: 400 40px/0.95 var(--font-hand); color: var(--blue); transform: rotate(7deg); }
+
+  /* a torn strip of bare paper glued on the bottom: knocked out of the flood, so it reads paper-white */
+  .strip {
+    position: absolute; left: -10px; right: -10px; bottom: 54px; z-index: 3; padding: 18px 48px 16px; background: var(--paper);
+    clip-path: polygon(0 12%, 6% 4%, 13% 10%, 22% 2%, 31% 9%, 40% 0, 52% 8%, 61% 3%, 70% 11%, 79% 2%, 88% 9%, 96% 1%, 100% 8%,
+                       100% 92%, 94% 99%, 85% 91%, 77% 100%, 66% 93%, 57% 98%, 45% 90%, 36% 99%, 25% 92%, 15% 100%, 7% 93%, 0 98%);
+    transform: rotate(1.5deg);
+  }
+  .strip p { margin: 0; font: 700 21px/1.35 var(--font-type); color: var(--blue); }
+  .strip .tag { font: 400 30px/1.1 var(--font-hand); color: var(--pink); }
+  .strip small { display: block; margin-top: 6px; font: 400 15px/1.3 var(--font-type); color: var(--blue); }
+  .number { position: absolute; right: 40px; bottom: 210px; z-index: 3; font: 400 28px/1 var(--font-stamp); color: var(--blue); transform: rotate(4deg); }
+
+  footer { margin: 40px auto 0; font: 400 15px/1.5 var(--font-type); color: var(--blue); text-align: center; max-width: 640px; }
+  footer a { color: var(--overprint); }
+</style>
+</head>
+<body>
+  <main>
+    <article class="flyer" aria-label="PAPER JAM #07 release show flyer">
+      <div class="drum2">
+        <div class="halftone" aria-hidden="true"></div>
+        <div class="stamp">PAPER JAM #07</div>
+        <h1>Release<br>Show!!</h1>
+        <p class="scrawl">the basement<br>issue!!</p>
+        <p class="when">FRI OCT 23 · 8PM</p>
+        <p class="where">THE LAUNDROMAT BASEMENT</p>
+        <ul class="bands">
+          <li>BAD KERNING</li>
+          <li>SISTER STATIC</li>
+          <li>LUNCHBOX RIOT</li>
+        </ul>
+      </div>
+      <div class="strip">
+        <p class="tag">loud music. cheap paper. no ads.</p>
+        <p>ALL AGES · $4 OR A TRADE · zine + tape included</p>
+        <small>fictional zine · made-up bands, venue &amp; date</small>
+      </div>
+      <div class="number">No. 001</div>
+    </article>
+    <footer>
+      round the back, knock twice, mind the stairs. photocopy this &amp; pass it on.<br>
+      PAPER JAM is a fictional zine made for the <code>riso-zine</code> example. type: Anton, Alfa Slab One, Courier Prime,
+      Covered By Your Grace (SIL Open Font License, <a href="fonts/">fonts/</a>).
+    </footer>
+  </main>
+</body>
+</html>

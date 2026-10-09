@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F3EEE4">
+<meta name="description" content="Les Heures Blanches. Haute Couture Automne–Hiver 2026–2027. Thirty-one looks made between midnight and dawn.">
+<title>Maison Veyrande · Les Heures Blanches · Lookbook</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--vy-bg); }
+  body { background: var(--vy-bg); color: var(--vy-text); font-family: var(--vy-font-display); font-weight: 400;
+         -webkit-font-smoothing: antialiased; font-optical-sizing: auto; }
+  .caps { font-family: var(--vy-font-label); font-weight: 400; text-transform: uppercase; letter-spacing: var(--vy-tracking-caps);
+          font-size: 13px; color: var(--vy-text-muted); }
+  .name { font-family: var(--vy-font-display); text-transform: uppercase; letter-spacing: var(--vy-tracking-name); font-size: 17px;
+          color: var(--vy-text); }
+  .rule { width: 160px; height: 0; border-top: var(--vy-hairline) solid var(--vy-rule); margin: 28px auto; }
+  section { min-height: 100vh; padding: 9vh var(--vy-margin); display: flex; flex-direction: column; justify-content: center;
+            page-break-after: always; break-after: page; }
+  /* cover */
+  .cover { align-items: center; text-align: center; }
+  .cover h1 { font-style: italic; font-weight: 400; font-size: clamp(64px, 10vw, 168px); line-height: 1; letter-spacing: -0.01em; margin: 6vh 0 4vh; }
+  .cover .season { margin-top: 1.5vh; }
+  /* intro */
+  .intro { max-width: 1180px; margin: 0 auto; }
+  .intro .lead { font-size: clamp(30px, 3.6vw, 58px); line-height: 1.12; margin-bottom: 6vh; }
+  .intro .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; font-size: 17px; line-height: 1.65; color: var(--vy-text-secondary); }
+  /* plates */
+  .plates { background: var(--vy-bg); }
+  .plates .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4vw; align-items: start; }
+  figure { display: flex; flex-direction: column; }
+  figure .paper { display: block; }
+  figure img { width: 100%; height: auto; display: block; }
+  figcaption { margin-top: 18px; }
+  figcaption .look { font-family: var(--vy-font-label); text-transform: uppercase; letter-spacing: var(--vy-tracking-caps); font-size: 12px; color: var(--vy-accent-text); }
+  figcaption .title { font-family: var(--vy-font-label); text-transform: uppercase; letter-spacing: 0.22em; font-size: 12px; margin-top: 6px; }
+  figcaption .mat { font-size: 15px; line-height: 1.45; color: var(--vy-text-secondary); margin-top: 10px; }
+  figcaption .hours { font-family: var(--vy-font-label); text-transform: uppercase; letter-spacing: var(--vy-tracking-caps); font-size: 11px; color: var(--vy-text-muted); margin-top: 10px; }
+  .plates header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5vh; }
+  .plates header h2 { font-weight: 400; font-style: italic; font-size: clamp(32px, 3.4vw, 54px); }
+  /* closing gown */
+  .closing { display: grid; grid-template-columns: 1.1fr 1fr; gap: 6vw; align-items: center; }
+  .closing .paper { display: flex; justify-content: center; }
+  .closing .paper img { height: 82vh; width: auto; }
+  .closing .figure { font-size: clamp(110px, 13vw, 220px); line-height: 0.9; font-weight: 400; letter-spacing: -0.02em; }
+  .closing .unit { font-style: italic; font-size: clamp(26px, 2.6vw, 40px); margin-top: 2vh; }
+  .closing p { font-size: 17px; line-height: 1.65; color: var(--vy-text-secondary); margin-top: 4vh; max-width: 30em; }
+  /* quote */
+  .quote { align-items: center; text-align: center; }
+  .quote blockquote { font-style: italic; font-size: clamp(30px, 3.4vw, 56px); line-height: 1.2; max-width: 22em; }
+  .quote cite { margin-top: 5vh; font-style: normal; }
+  /* colophon */
+  .colophon { align-items: center; text-align: center; min-height: 60vh; }
+  .colophon p { font-size: 15px; line-height: 1.7; color: var(--vy-text-secondary); max-width: 40em; }
+  .colophon .note { margin-top: 4vh; font-family: var(--vy-font-label); font-size: 12px; letter-spacing: 0.08em; color: var(--vy-text-muted); }
+  @page { size: A4 landscape; margin: 0; }
+  @media print {
+    section { height: 100vh; min-height: 0; overflow: hidden; padding: 7vh var(--vy-margin); }
+    .plates header { margin-bottom: 3vh; }
+    figure img { height: 54vh; width: auto; margin: 0 auto; }
+    figcaption { margin-top: 12px; }
+    figcaption .mat { font-size: 12px; }
+    .closing .paper img { height: 84vh; }
+  }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="name">Maison Veyrande</div>
+  <div class="rule"></div>
+  <h1>Les Heures Blanches</h1>
+  <div class="caps">Haute Couture · Automne–Hiver 2026–2027</div>
+  <div class="caps season">Paris · 6 juillet 2026 · Trente et une silhouettes</div>
+</section>
+
+<section class="intro">
+  <p class="lead">Between midnight and dawn, the atelier keeps its own hours.</p>
+  <div class="cols">
+    <p>For its Autumn–Winter 2026–2027 Haute Couture collection, Maison Veyrande returns to the hours the city never sees:
+      the lamps of the atelier at the top of the house stay lit, and seventeen pairs of hands work in silence.</p>
+    <p>The palette is the atelier's own. Ivory duchesse satin and silk gazar, the colour of the toile before the first cut.
+      Ink, for the sketch and for the night outside the window. Champagne, for the lamplight on the silk.</p>
+  </div>
+</section>
+
+<section class="plates">
+  <header>
+    <h2>Thirty-one looks</h2>
+    <div class="caps">Selected croquis · I–V</div>
+  </header>
+  <div class="grid">
+    <figure>
+      <div class="paper"><img src="../sketches/look-01.svg" alt="Croquis of look 01, an evening coat"></div>
+      <figcaption><div class="look">Look 01</div><div class="title">Manteau du soir</div>
+        <div class="mat">Ivory duchesse satin, high open collar, hand-rolled edges.</div><div class="hours">96 hours</div></figcaption>
+    </figure>
+    <figure>
+      <div class="paper"><img src="../sketches/look-07.svg" alt="Croquis of look 07, an ink column dress"></div>
+      <figcaption><div class="look">Look 07</div><div class="title">Robe colonne</div>
+        <div class="mat">Ink silk faille, one line of champagne thread from shoulder to hem.</div><div class="hours">140 hours</div></figcaption>
+    </figure>
+    <figure>
+      <div class="paper"><img src="../sketches/look-12.svg" alt="Croquis of look 12, an ink velvet cape"></div>
+      <figcaption><div class="look">Look 12</div><div class="title">Cape de minuit</div>
+        <div class="mat">Ink velvet, lined with pleated ivory organza.</div><div class="hours">210 hours</div></figcaption>
+    </figure>
+    <figure>
+      <div class="paper"><img src="../sketches/look-19.svg" alt="Croquis of look 19, an ivory jacket and long skirt"></div>
+      <figcaption><div class="look">Look 19</div><div class="title">Tailleur blanc</div>
+        <div class="mat">Ivory wool and silk, sculpted shoulder, long gazar skirt.</div><div class="hours">120 hours</div></figcaption>
+    </figure>
+    <figure>
+      <div class="paper"><img src="../sketches/look-31.svg" alt="Croquis of look 31, the embroidered closing gown"></div>
+      <figcaption><div class="look">Look 31</div><div class="title">La Dernière Heure</div>
+        <div class="mat">Ivory silk organza, mother-of-pearl sequins, champagne glass beads.</div><div class="hours">1,240 hours</div></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="paper"><img src="../sketches/look-31.svg" alt="Croquis of look 31, La Dernière Heure"></div>
+  <div>
+    <div class="caps">Look 31 · La Dernière Heure</div>
+    <div class="figure">1,240</div>
+    <div class="unit">hours of hand embroidery</div>
+    <p>Ivory silk organza, embroidered by hand with mother-of-pearl sequins and champagne glass beads, by seventeen hands
+      over eleven weeks. The embroidery follows the lines of the first sketch, stitch for stitch.</p>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>Couture is made in the white hours, when the city sleeps and the hands keep working.</blockquote>
+  <cite class="caps">Odile Sorrèze · Creative Director</cite>
+</section>
+
+<section class="colophon">
+  <div class="name">Maison Veyrande</div>
+  <div class="rule"></div>
+  <p>Presented on 6 July 2026 in the grand salon of the Maison, Paris, to an original nocturne for piano and string
+    quartet, performed live.</p>
+  <p class="note">Maison Veyrande is a fictional couture house created for this example. All names, looks, dates and figures are invented.</p>
+</section>
+
+</body>
+</html>

@@ -79,6 +79,85 @@
 
 ---
 
+## 원본 열네 개, 스타일 열네 개, 프리셋은 0개
+
+위의 두 쇼릴은 고르는 스타일 두 가지가 아닙니다. 아래 열두 개도 각자 자기 원본에서 나왔습니다. 보도자료, 공모 브리프, 진(zine), 게임잼, 차밭, 싱글셀 논문, 워크숍 핸드아웃, 랜딩 페이지, 료칸, 재즈 시대 초대장, 작은 마을 신문, 레이스 타이밍 앱입니다. 팔레트, 서체, 모션 문법, 음악이 모두 원본에서 나왔습니다. 같은 모양은 하나도 없고, 템플릿도 없습니다.
+
+<table>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/editorial-luxe"><img src="assets/readme/wall-editorial-luxe.webp" width="100%" alt="Les Heures Blanches: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
+<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
+<br/><sub>패션 하우스 보도자료와 룩북 노트<br/>→ 보도니 헤어라인, 느린 리빌, 아이보리와 블랙 · 80 BPM 피아노와 현악</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/swiss-grid"><img src="assets/readme/wall-swiss-grid.webp" width="100%" alt="Haus für Musik: a strict Swiss grid, one red, numbers set at poster size"/></a>
+<br/><b>Haus für Musik</b> · <code>swiss-grid</code>
+<br/><sub>건축 공모 브리프와 CSS 토큰<br/>→ 12단 그리드, 빨강 하나, 포스터 크기 숫자 · 124 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/riso-zine"><img src="assets/readme/wall-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
+<br/><b>PAPER JAM #07</b> · <code>riso-zine</code>
+<br/><sub>진(zine) README와 하우스 스타일<br/>→ 어긋난 리소 잉크, 도장, 튀는 컷 · 160 BPM</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/pixel-arcade"><img src="assets/readme/wall-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
+<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
+<br/><sub>게임잼 README와 16색 팔레트<br/>→ 픽셀 아트, CRT 글로, 하이스코어 엔드카드 · 144 BPM 칩튠</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/botanical-organic"><img src="assets/readme/wall-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
+<br/><b>Mistfold</b> · <code>botanical-organic</code>
+<br/><sub>차밭 이야기와 브랜드 노트<br/>→ 수채화, 식물학적으로 맞는 차 새순 타임랩스 · 96 BPM 나일론 기타와 마림바</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/academic-paper"><img src="assets/readme/wall-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
+<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
+<br/><sub>싱글셀·공간 오믹스 원고와 데이터<br/>→ 세포 4,900개가 UMAP, 조직, 점도표를 오가며 정체를 유지 · 100 BPM D 도리안</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sketchnote"><img src="assets/readme/wall-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
+<br/><b>Visual Notes Lab</b> · <code>sketchnote</code>
+<br/><sub>진행자 노트와 핸드아웃<br/>→ 한 화이트보드 위에 마커가 스스로 써 내려가는 원테이크 · 104 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/neo-brutal"><img src="assets/readme/wall-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
+<br/><b>kablok</b> · <code>neo-brutal</code>
+<br/><sub>랜딩 페이지 CSS와 BRAND.md<br/>→ 하드 섀도, 슬래브, 눌러 대는 커서 · 112 BPM 펑크</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sumi-wabi"><img src="assets/readme/wall-sumi-wabi.webp" width="100%" alt="余白庵: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
+<br/><b>余白庵</b> · <code>sumi-wabi</code>
+<br/><sub>료칸 사이트와 시츠라에 노트<br/>→ 화지에 번지는 먹, 세로쓰기, 붉은 낙관 하나 · 72 BPM 고토, 평조자</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/art-deco"><img src="assets/readme/wall-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
+<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
+<br/><sub>초대장, 메뉴, 하우스 스타일<br/>→ 금박 계단 프레임, 부채, 선버스트 · 112 BPM 스윙: 워킹 베이스, 라이드, 클라리넷</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/newsprint"><img src="assets/readme/wall-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
+<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
+<br/><sub>1면 원고와 스타일북<br/>→ 인쇄기, 망점, 주조 활자, 빨간 판 · 96 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sports-kinetic"><img src="assets/readme/wall-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
+<br/><b>VELMORA 42</b> · <code>sports-kinetic</code>
+<br/><sub>레이스 타이밍 앱 README와 BRAND.md<br/>→ 중계 그래픽 타이포, 실제 구간 기록 막대, 레이싱 스트라이프 · 176 BPM 드럼앤베이스</sub>
+</td>
+</tr>
+</table>
+
+<sub>각 루프는 해당 예제의 짧은 컷을 2배속으로 재생한 무음 영상입니다. 모든 프로젝트, 브랜드, 데이터는 이 리포지토리를 위해 지어낸 가상의 것이며, 화면에도 그렇게 표시됩니다. 폴더를 열면 원본, 모든 결정의 근거가 적힌 <code>style.json</code>, 장면 코드를 볼 수 있습니다.</sub>
+
+---
+
 ## 명장면 모음
 
 두 예제 쇼릴에서 고른 여덟 장면입니다. 왼쪽은 Mochi Notes, 오른쪽은 spark-bench입니다.
@@ -225,7 +304,7 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 
 ## 사례
 
-이 방법은 이 리포지토리를 위해 새로 지어낸 것이 아닙니다. 먼저 있었던 실제 제작 네 건에서 정리해 낸 것이고, 그중 두 건의 쇼릴은 아래에서 바로 재생됩니다.
+이 방법은 이 리포지토리를 위해 새로 지어낸 것이 아닙니다. 먼저 있었던 실제 제작 네 건에서 정리해 낸 것이고, 네 건의 쇼릴 모두 아래에서 바로 재생됩니다.
 
 <table>
 <tr>
@@ -240,12 +319,19 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 <br/><sub>도구의 Catppuccin 팔레트, 명령마다 거대한 단어 하나, 3D로 기울인 실제 터미널 캡처와 핵심 줄 줌인, 글리치와 타이핑 전환을 썼습니다.</sub>
 </td>
 </tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<img src="assets/readme/case-kbeautygate.webp" width="100%" alt="K-BeautyGate 30초 쇼릴 1.5배속: 파스텔 봉제 토끼 마스코트가 튀어 오르고, 폰 속 실제 K-BeautyGate 앱 화면이 움직이고, 어두운 클라이맥스 뒤 마스코트들이 비트에 맞춰 통통 튑니다"/>
+<br/><b>K-BeautyGate</b> · 해커톤 피치 쇼릴
+<br/><sub>120 BPM, 30초: 화장품 광고 × AI 에이전트 제품 투어입니다. macOS Vision으로 배경을 걷어 낸 마스코트 포즈, 눈 깜박임과 젤리처럼 출렁이는 캐릭터 모션, 폰 속에서 레이어로 움직이는 실제 앱 화면, 비트에 맞춰 튀는 마스코트 라인업이 들어갔습니다.</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://github.com/AwesomeZun/Project-FlyGate"><img src="assets/readme/case-flygate.webp" width="100%" alt="FlyGate 쇼릴 미리보기: 초파리 뇌의 의사결정 회로를 데이터로 그린 장면, 번인 자막이 들어간 내레이션 장면과 터미널 장면"/></a>
+<br/><b><a href="https://github.com/AwesomeZun/Project-FlyGate">FlyGate</a></b> · 내레이션 연구 쇼릴
+<br/><sub>인트로, 장면 28개·250초 분량의 전체 내레이션 영상, 15초·30초 숏폼과 세로 버전을 만들었습니다. 장면 길이는 목소리를 따르고, 자막은 번인했으며, Gemini 내레이션은 음성 인식으로 검증했습니다.</sub>
+</td>
+</tr>
 </table>
-
-- **K-BeautyGate** · 해커톤 피치: Vision으로 배경을 걷어 낸 마스코트 포즈와 폰 속 실제 앱 화면이 들어간 120 BPM의 30초 제품 투어입니다. 미리 만든 하네스(엔진과 장면 뼈대)에서 첫 전체 렌더까지 에이전트 24개가 약 25분 만에 마쳤습니다.
-- **[FlyGate](https://github.com/AwesomeZun/Project-FlyGate)** · 내레이션 쇼릴: 인트로, 장면 28개·250초 분량의 전체 내레이션 영상, 15초·30초 숏폼과 세로 버전에 음성 인식으로 검증한 Gemini 내레이션을 입혔습니다.
-
-<sub>두 미리보기는 각 리포지토리에서 직접 불러옵니다. K-BeautyGate와 FlyGate는 글로만 소개하며, 해당 미디어는 이 리포지토리에 들어 있지 않습니다.</sub>
 
 <details>
 <summary><b>K-BeautyGate와 FlyGate 더 보기</b></summary>

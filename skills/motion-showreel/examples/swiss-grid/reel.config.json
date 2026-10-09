@@ -1,0 +1,32 @@
+{
+  "title": "Haus für Musik",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "raster", "label": "01 Raster / Grid", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "cut", "music": "intro",
+     "cues": [{"beat": 0, "from": "start", "sfx": "click"}, {"beat": 0, "from": "start", "sfx": "tick pitch=0"}, {"beat": 0.25, "from": "start", "sfx": "tick pitch=1"}, {"beat": 0.5, "from": "start", "sfx": "tick pitch=2"},
+              {"beat": 0.75, "from": "start", "sfx": "tick pitch=3"}, {"beat": 1, "from": "start", "sfx": "tick pitch=4"}, {"beat": 1.25, "from": "start", "sfx": "tick pitch=5"}, {"beat": 1.5, "from": "start", "sfx": "tick pitch=6"},
+              {"beat": 1.75, "from": "start", "sfx": "tick pitch=7"}, {"beat": 2, "from": "start", "sfx": "tick pitch=8"}, {"beat": 2.25, "from": "start", "sfx": "tick pitch=9"}, {"beat": 2.5, "from": "start", "sfx": "tick pitch=10"},
+              {"beat": 2.75, "from": "start", "sfx": "tick pitch=11"}, {"beat": 3, "from": "start", "sfx": "tick:12 gap=0.0625b soft"}, {"beat": 4, "from": "start", "sfx": "thud"}, {"beat": 4.25, "from": "start", "sfx": "click"},
+              {"beat": 5, "from": "start", "sfx": "tick:12 gap=0.0417b soft"}, {"beat": 6, "from": "start", "sfx": "tick:11 gap=0.0625b soft"}, {"beat": 7, "from": "start", "sfx": "click"}]},
+    {"id": "schnitt", "label": "02 Schnitt / Section", "minBars": 2, "maxBars": 5, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "match", "inFallback": "cut", "music": "groove",
+     "cues": [{"beat": 0, "from": "start", "sfx": "click"}, {"beat": 0, "from": "start", "sfx": "tick:12 gap=0.0625b soft"}, {"beat": 1, "from": "start", "sfx": "click"}, {"beat": 1.25, "from": "start", "sfx": "click soft"},
+              {"beat": 2, "from": "start", "sfx": "click"}, {"beat": 3, "from": "start", "sfx": "click"}, {"beat": 4, "from": "start", "sfx": "click"}, {"beat": 5, "from": "start", "sfx": "thud"},
+              {"beat": 0, "from": "holdBar", "sfx": "tick:24 gap=0.125b soft", "count": 1}, {"beat": 4, "from": "holdBar", "sfx": "tick:12 gap=0.125b soft", "count": 1}, {"beat": 8, "from": "holdBar", "sfx": "click", "count": 1}, {"beat": 0, "from": "outStart", "sfx": "tick:12 gap=0.0625b"}]},
+    {"id": "programm", "label": "03 Programm / Programme", "minBars": 2, "maxBars": 4, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "cut", "music": "drop",
+     "cues": [{"beat": 0, "from": "start", "sfx": "thud"}, {"beat": 1, "from": "start", "sfx": "thud"}, {"beat": 2, "from": "start", "sfx": "thud big"}, {"beat": 3, "from": "start", "sfx": "tick:12 gap=0.0417b soft"},
+              {"beat": 0, "from": "holdBar", "sfx": "click", "every": 4, "count": 3}]},
+    {"id": "ende", "label": "büro zwölf", "minBars": 2, "maxBars": 4, "priority": 2, "inBeats": 2, "outBeats": 0, "in": "cut", "music": "outro",
+     "cues": [{"beat": 0, "from": "start", "sfx": "tick:12 gap=0.0625b"}, {"beat": 0.5, "from": "start", "sfx": "click"}, {"beat": 0.75, "from": "start", "sfx": "click soft"}, {"beat": 1, "from": "start", "sfx": "click"},
+              {"beat": 1.5, "from": "start", "sfx": "click soft"}, {"beat": 0, "from": "holdBar", "sfx": "click soft", "every": 4, "count": 3}]}
+  ],
+  "cuts": {
+    "short": {"bars": 8, "label": "short"},
+    "30": {"seconds": 30, "label": "30 s"}
+  },
+  "poster": 3.6,
+  "captions": {"enabled": false},
+  "audio": {"transitionSfx": false}
+}

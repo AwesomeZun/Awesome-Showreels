@@ -29,7 +29,7 @@ unknown SFX or has a bad parameter (everything else is still rendered; the sidec
 
 | Key | Values | Effect |
 |---|---|---|
-| `preset` | `bright-pop` `dark-synth` `ambient` `corporate` `lofi` `cinematic-lite` | parameter bundle (section 2); a starting point, not a look |
+| `preset` | `bright-pop` `dark-synth` `ambient` `corporate` `lofi` `cinematic-lite` `chiptune` `swing` `dnb` | parameter bundle (section 2); a starting point, not a look |
 | `bpm` | number | used by the planner; the cut's `bpm` is the authority (the arranger warns on a mismatch) |
 | `key` | `F`, `Bb`, `F#`, `D minor` | tonic; pitched SFX (pops, dings, chimes, beeps, blips, sparkles, stings) are in this key |
 | `mode` | `major` `minor` `dorian` `mixolydian` `lydian` `phrygian` | harmony tables; church modes are stacked inside their own scale (locrian -> phrygian) |
@@ -37,11 +37,16 @@ unknown SFX or has a bad parameter (everything else is still rendered; the sidec
 | `drums` | `none` `light` `full` | groove density cap |
 | `sfx` | `glassy` `digital` `organic` `minimal` | timbre family of every SFX (level-matched; minimal sits 2.5 dB lower) |
 | `energy` | `[intro, groove, breakdown, drop, outro]` 0..1, or `{part: value}` | layer count, filter brightness, velocities per music part |
+| `roles` | `{role: instrument}` | pins a role (bed, motion, bass, top, motif) to one instrument, e.g. `{"motion": "koto"}`; otherwise the preset's choice stands when it is in `instruments` |
+| `scale` | semitones above the tonic, e.g. `[0, 2, 3, 7, 8]` | melodic lines (motion, top, motif) snap to these pitch classes while the harmony stays diatonic: pentatonic or Japanese colour (平調子 hirajōshi on the tonic = `[0, 2, 3, 7, 8]`, miyako-bushi = `[0, 1, 5, 7, 8]`) |
 | `tweaks` | object of preset keys | advanced override, deep-merged into the preset (e.g. `{"swing": 0.15, "pad": {"gain": 0.12}}`) |
 
-Instrument roles: bed = `pad` `strings` `epiano` `piano`; motion = `pluck`/`arp` `saw-pluck` `marimba` `piano`
-`epiano` `strings` `bell`; bass = `saw-bass` `bass` `sub`; top = `stab` `bell` `glass` `strings`; motif = `bell`
-`lead` `piano` `epiano` `marimba`. Drums: `kick` `clap` `snare` `rim` `hats` `shaker` `toms`; texture `crackle`.
+Instrument roles: bed = `pad` `strings` `epiano` `piano` `guitar` `ukulele` `koto` (strummed); motion = `pulse`
+`pluck`/`arp` `saw-pluck` `marimba` `guitar` `ukulele` `koto` `piano` `epiano` `strings` `bell`; bass = `tri-bass`
+`upright` `reese` `saw-bass` `bass` `sub`; top = `stab` `bell` `glass` `strings`; motif = `pulse-lead` `clarinet` `bell`
+`lead` `piano` `epiano` `marimba` (and `guitar` `ukulele` `koto` when pinned). Drums: `kick` `clap` `snare` `rim`
+`hats` `shaker` `toms` `ride` `brush`; texture `crackle`. Plucked strings are Karplus-Strong; chiptune voices are
+4-bit stepped (pulse, triangle, LFSR noise).
 A role whose instruments are all missing is silent (no bed = no sustained harmony; the arranger warns).
 
 **`reel.config.json` `"audio"`** (optional, project-level): `preset`, `transitionSfx` (default true), `musicDb` /
@@ -69,6 +74,9 @@ with `--tables`; `tone-and-manner.md` section 4 quotes them); those tables are t
 | B2B, institutional, finance; corporate slide template | corporate | 100-118 | C, G major | light | minimal / glassy | .3 .6 .35 .85 .4 |
 | developer tool, indie, cosy, terminal-first, hand-drawn | lofi | 80-92 | Eb, Ab major 7ths; dorian | full (swing) | organic | .3 .6 .35 .75 .35 |
 | launch trailer, mission, space / climate, big claims | cinematic-lite | 88-110 | D, C minor | light (toms) | minimal | .3 .6 .4 1 .45 |
+| retro game, pixel art, arcade | chiptune | 132-150 | major / mixolydian | full (chip noise) | digital | .4 .75 .4 1 .5 |
+| 1920s-30s, jazz age, art deco, speakeasy, vintage invitation | swing | 108-132 | Bb, F, Eb major | full (ride, brushes) | glassy / organic | .35 .6 .35 .85 .4 |
+| sport, race, speed, broadcast graphics, energetic numbers | dnb | 170-178 | G, F, A minor | full (two-step, half-time drops) | digital | .5 .8 .45 1 .55 |
 | terminal tool with a playful theme (Catppuccin-like) | bright-pop or dark-synth by theme | 120-128 | major / mixolydian | full | digital | default |
 
 - **Tempo** sets length arithmetic (`timing-and-length.md`); pick one the material can carry, then let bars decide
@@ -89,6 +97,9 @@ with `--tables`; `tone-and-manner.md` section 4 quotes them); those tables are t
 | corporate | vi IV I V / I V vi IV (add9) | strings / piano broken 8ths (+ marimba in drops) / round 8ths / glock / piano hook | four-on-floor light | warm, modest pumping |
 | lofi | ii9 V9 Imaj9 vi9 | e-piano chords / e-piano comping / syncopated round bass / - / e-piano hook | boom-bap, swing 0.22 | tape wow, 5.2 kHz low-pass, vinyl crackle |
 | cinematic-lite | i VI III VII, cadence V | strings / spiccato ostinato / sub + low strings / high strings / piano | toms, half-time snare | pre-drop gap, 3.5 s hall |
+| chiptune | I V vi IV | - / pulse arps / triangle bass / - / pulse lead | chip noise kick, snare, hats | no reverb, no sidechain |
+| swing | I6 vi7 ii7 V7 (rhythm changes in drops) | - / piano comping on the Charleston rhythm (rootless) / walking upright bass with chromatic approach notes / - / clarinet | ride "ding ding-a", hat chick on 2+4, brushes, feathered kick | swung eighths (triplet), tape |
+| dnb | i9 VI7 iv9 v7, 2 bars per chord | pad only outside drops / - / reese + sub (long notes, half-time in drops) / offbeat stabs / - | two-step (kick 1 and the 'and' of 3, snare 2+4, ghosts), half-time drops | light swing, pre-drop gap |
 
 Case studies (where the material led, not presets to copy): K-BeautyGate (Korean consumer pitch, pastel app and
 plush mascots) -> bright-pop, F major, 120 BPM, glassy, music-led. FDDD / FlyGate (research repos, dark neon

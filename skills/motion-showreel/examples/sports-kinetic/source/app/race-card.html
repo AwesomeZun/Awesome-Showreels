@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B0B0B">
+<title>VELMORA 42 · Live race card</title>
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-weight: var(--weight-body);
+         font-size: var(--size-body); display: flex; gap: 48px; justify-content: center; padding: 48px 24px; }
+  .screen { width: 390px; min-height: 844px; background: var(--color-bg); border: 1px solid var(--color-border); position: relative; overflow: hidden; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 12px; }
+  .wordmark { font-family: var(--font-display); font-weight: 900; font-style: italic; font-size: 26px; letter-spacing: var(--tracking-display); text-transform: uppercase; }
+  .wordmark b { color: var(--color-primary); font-weight: 900; }
+  .live { font-family: var(--font-display); font-weight: var(--weight-label); font-size: var(--size-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-text-muted); display: flex; align-items: center; gap: 6px; }
+  .live i { width: 8px; height: 8px; background: var(--color-success); display: inline-block; }
+  .band { height: 18px; margin: 0 -20px 0 -20px; }
+  .kicker { padding: 18px 20px 0; font-family: var(--font-display); font-weight: var(--weight-label); font-size: var(--size-label); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-text-muted); }
+  .clock { padding: 0 16px; font-size: var(--size-clock); line-height: 1; }
+  .where { padding: 4px 20px 0; font-family: var(--font-display); font-weight: 700; font-style: italic; font-size: 22px; text-transform: uppercase; }
+  .where span { color: var(--color-text-muted); font-weight: 600; font-style: normal; font-size: 14px; letter-spacing: var(--tracking-label); margin-left: 8px; }
+  .plate { margin: 20px 20px 0; padding: 10px 18px; background: var(--color-primary); color: var(--color-on-primary); display: inline-flex; align-items: baseline; gap: 12px; }
+  .plate .num { font-size: 40px; line-height: 1; }
+  .plate .label { font-size: 13px; }
+  table { width: calc(100% - 40px); margin: 22px 20px 0; border-collapse: collapse; }
+  th { text-align: left; font-family: var(--font-display); font-weight: var(--weight-label); font-size: 11px; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-text-muted); padding: 0 0 6px; border-bottom: 1px solid var(--color-border); }
+  td { padding: 9px 0; border-bottom: 1px solid var(--color-border); font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: 22px; font-variant-numeric: tabular-nums; }
+  td.mat { font-weight: 700; font-size: 18px; }
+  th:last-child, td:last-child { text-align: right; }
+  tr.now td { color: var(--color-primary); }
+  .next { margin: 18px 20px 0; padding: 12px 14px; background: var(--color-surface); display: flex; justify-content: space-between; }
+  .next .label { font-size: 12px; color: var(--color-text-muted); }
+  .next b { font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: 20px; text-transform: uppercase; }
+  .foot { position: absolute; left: 20px; right: 20px; bottom: 16px; font-size: 11px; color: var(--color-text-muted); }
+  .finish-time { padding: 6px 16px 0; font-size: 104px; line-height: 1; }
+  .neg { padding: 6px 20px 0; font-family: var(--font-display); font-weight: 900; font-style: italic; font-size: 30px; text-transform: uppercase; color: var(--color-primary); }
+  .chart { margin: 26px 20px 0; padding: 14px 14px 10px; background: var(--color-surface); }
+  .chart svg { display: block; width: 100%; height: auto; }
+  .chart rect { fill: var(--color-text); }
+  .chart .plan { stroke: var(--color-primary); stroke-width: 2; }
+  .axis { display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-display); font-weight: var(--weight-label); font-size: 11px; letter-spacing: var(--tracking-label); color: var(--color-text-muted); text-transform: uppercase; }
+  .halves { display: flex; gap: 2px; margin: 18px 20px 0; }
+  .halves div { flex: 1; background: var(--color-surface); padding: 12px 14px; }
+  .halves .label { font-size: 11px; color: var(--color-text-muted); display: block; }
+  .halves .num { font-size: 34px; }
+</style>
+</head>
+<body>
+
+<!-- Screen 1: the live race card of a runner, at the KM 21 mat -->
+<section class="screen" aria-label="Live race card">
+  <header>
+    <div class="wordmark">Velmora <b>42</b></div>
+    <div class="live"><i></i>Live</div>
+  </header>
+  <div class="stripes band lean"></div>
+  <p class="kicker">BIB 2417 · Plan 3:15:00 · 4:37 /km</p>
+  <p class="clock num">1:37:03</p>
+  <p class="where">KM 21<span>21 of 42 splits</span></p>
+  <div class="plate lean"><span class="num">±0:00</span><span class="label">On plan</span></div>
+  <table>
+    <thead><tr><th>Mat</th><th>Split</th><th>Elapsed</th><th>vs plan</th></tr></thead>
+    <tbody>
+      <tr class="now"><td class="mat">KM 21</td><td>4:35</td><td>1:37:03</td><td>±0:00</td></tr>
+      <tr><td class="mat">KM 20</td><td>4:35</td><td>1:32:28</td><td class="behind">+0:02</td></tr>
+      <tr><td class="mat">KM 19</td><td>4:35</td><td>1:27:53</td><td class="behind">+0:05</td></tr>
+      <tr><td class="mat">KM 18</td><td>4:36</td><td>1:23:18</td><td class="behind">+0:07</td></tr>
+      <tr><td class="mat">KM 17</td><td>4:39</td><td>1:18:42</td><td class="behind">+0:08</td></tr>
+    </tbody>
+  </table>
+  <div class="next"><span class="label">Next mat</span><b>KM 22 · Bridge 5</b></div>
+  <p class="foot">Fictional race and app · demo data</p>
+</section>
+
+<!-- Screen 2: the finish card, all 42 splits (bar height = pace per km; the orange line is the plan, 4:37) -->
+<section class="screen" aria-label="Finish card">
+  <header>
+    <div class="wordmark">Velmora <b>42</b></div>
+    <div class="live">Finish card</div>
+  </header>
+  <div class="stripes band lean"></div>
+  <p class="kicker">BIB 2417 · 42.195 KM · SUN 18 APR 2027</p>
+  <p class="finish-time num">3:12:58</p>
+  <p class="neg">Negative split −2:02</p>
+  <div class="halves">
+    <div><span class="label">First half</span><span class="num">1:37:30</span></div>
+    <div><span class="label">Second half</span><span class="num">1:35:28</span></div>
+  </div>
+  <div class="chart">
+    <svg viewBox="0 0 300 96" role="img" aria-label="42 splits, pace per kilometre">
+          <rect x="0.00" y="16.46" width="5.19" height="79.54"/>
+          <rect x="7.19" y="30.17" width="5.19" height="65.83"/>
+          <rect x="14.38" y="35.66" width="5.19" height="60.34"/>
+          <rect x="21.57" y="24.69" width="5.19" height="71.31"/>
+          <rect x="28.76" y="38.40" width="5.19" height="57.60"/>
+          <rect x="35.95" y="35.66" width="5.19" height="60.34"/>
+          <rect x="43.14" y="35.66" width="5.19" height="60.34"/>
+          <rect x="50.33" y="35.66" width="5.19" height="60.34"/>
+          <rect x="57.52" y="21.94" width="5.19" height="74.06"/>
+          <rect x="64.71" y="38.40" width="5.19" height="57.60"/>
+          <rect x="71.90" y="38.40" width="5.19" height="57.60"/>
+          <rect x="79.10" y="38.40" width="5.19" height="57.60"/>
+          <rect x="86.29" y="30.17" width="5.19" height="65.83"/>
+          <rect x="93.48" y="41.14" width="5.19" height="54.86"/>
+          <rect x="100.67" y="38.40" width="5.19" height="57.60"/>
+          <rect x="107.86" y="41.14" width="5.19" height="54.86"/>
+          <rect x="115.05" y="30.17" width="5.19" height="65.83"/>
+          <rect x="122.24" y="38.40" width="5.19" height="57.60"/>
+          <rect x="129.43" y="41.14" width="5.19" height="54.86"/>
+          <rect x="136.62" y="41.14" width="5.19" height="54.86"/>
+          <rect x="143.81" y="41.14" width="5.19" height="54.86"/>
+          <rect x="151.00" y="27.43" width="5.19" height="68.57"/>
+          <rect x="158.19" y="41.14" width="5.19" height="54.86"/>
+          <rect x="165.38" y="43.89" width="5.19" height="52.11"/>
+          <rect x="172.57" y="43.89" width="5.19" height="52.11"/>
+          <rect x="179.76" y="35.66" width="5.19" height="60.34"/>
+          <rect x="186.95" y="46.63" width="5.19" height="49.37"/>
+          <rect x="194.14" y="49.37" width="5.19" height="46.63"/>
+          <rect x="201.33" y="49.37" width="5.19" height="46.63"/>
+          <rect x="208.52" y="52.11" width="5.19" height="43.89"/>
+          <rect x="215.71" y="38.40" width="5.19" height="57.60"/>
+          <rect x="222.90" y="54.86" width="5.19" height="41.14"/>
+          <rect x="230.10" y="54.86" width="5.19" height="41.14"/>
+          <rect x="237.29" y="52.11" width="5.19" height="43.89"/>
+          <rect x="244.48" y="43.89" width="5.19" height="52.11"/>
+          <rect x="251.67" y="52.11" width="5.19" height="43.89"/>
+          <rect x="258.86" y="60.34" width="5.19" height="35.66"/>
+          <rect x="266.05" y="60.34" width="5.19" height="35.66"/>
+          <rect x="273.24" y="49.37" width="5.19" height="46.63"/>
+          <rect x="280.43" y="63.09" width="5.19" height="32.91"/>
+          <rect x="287.62" y="63.09" width="5.19" height="32.91"/>
+          <rect x="294.81" y="76.80" width="5.19" height="19.20"/>
+      <line class="plan" x1="0" x2="300" y1="34.89" y2="34.89"/>
+    </svg>
+    <div class="axis"><span>KM 1</span><span>Plan 4:37 /km</span><span>Finish</span></div>
+  </div>
+  <p class="foot">Fictional race and app · demo data</p>
+</section>
+
+</body>
+</html>

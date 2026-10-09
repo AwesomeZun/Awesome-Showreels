@@ -1,0 +1,178 @@
+{
+  "title": "Mistfold",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "grow",
+      "label": "Grown slowly.",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 2,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "drawon dur=1 soft"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "tick soft"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "pop soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "pop:4 gap=1 soft"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "plink soft"
+        }
+      ]
+    },
+    {
+      "id": "steep",
+      "label": "A cup at first light.",
+      "minBars": 1,
+      "maxBars": 4,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 1,
+      "in": "match",
+      "inParams": {
+        "fade": 0.2
+      },
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "snap soft"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "plink"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "tick soft",
+          "count": 1
+        },
+        {
+          "beat": 4,
+          "from": "holdBar",
+          "sfx": "tick:3 gap=1 soft"
+        },
+        {
+          "beat": 8,
+          "from": "holdBar",
+          "sfx": "plink soft",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "balm",
+      "label": "A balm at dusk.",
+      "minBars": 1,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 1,
+      "in": "cut",
+      "dark": true,
+      "music": "breakdown",
+      "cues": [
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "reveal soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "plink"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "thud soft"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "tick soft",
+          "count": 1
+        },
+        {
+          "beat": 4,
+          "from": "holdBar",
+          "sfx": "sparkle soft",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "finale",
+      "label": "Mistfold",
+      "minBars": 2,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "stamp soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "drawon dur=1 soft"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "plink soft",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 6
+    },
+    "30": {
+      "bars": 12
+    }
+  },
+  "poster": 3.75,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": false
+  }
+}

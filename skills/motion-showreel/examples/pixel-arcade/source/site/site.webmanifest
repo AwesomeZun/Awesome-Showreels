@@ -1,0 +1,10 @@
+{
+  "name": "ONE CREDIT JAM",
+  "short_name": "1CREDIT",
+  "description": "A 72-hour arcade game jam: 16 colours, 4 channels, 1 credit.",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "#FFD93D",
+  "background_color": "#0B0A16"
+}

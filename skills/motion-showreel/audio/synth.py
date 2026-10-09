@@ -466,6 +466,25 @@ def _bass_saw(m, d, bright):
     return _frozen(np.tanh(x * env * 1.4) * 0.8)
 
 
+def reese(m, d, move=1.0):
+    """Reese bass: two saws detuned +-0.35 % beating against each other, an octave saw for edge, through a low-pass
+    whose cutoff breathes (the moving 'neuro' growl), saturated over a clean sine sub. Cached (read-only)."""
+    return _reese(int(round(m)), round(float(d), 3), round(float(move), 2))
+
+
+@functools.lru_cache(maxsize=512)
+def _reese(m, d, move):
+    f = float(mtof(m))
+    n = ns(d + 0.06)
+    t = tt(n)
+    dn = n / SR
+    x = saw(f * 1.0035, n) + saw(f * 0.9965, n, 1.3) + 0.3 * saw(f * 2.003, n, 0.7)
+    x = sweep_filter(x, lambda p: 260 + 1300 * move * (0.5 + 0.5 * np.sin(2 * np.pi * 1.6 * p * dn - 1.2)), "lp", 1.1) * 0.42
+    body = sine(f, n) * 0.75
+    env = np.minimum(1, t / 0.008) * np.where(t < d, 1.0, np.clip(1 - (t - d) / 0.05, 0, 1))
+    return _frozen(np.tanh((x + body) * env * 1.5) * 0.72)
+
+
 def sub(m, d, atk=0.01, rel=0.12):
     f = float(mtof(m))
     n = ns(d + rel)
@@ -596,6 +615,12 @@ def crackle(n, rng, density=9.0):
 
 
 INSTRUMENTS = {
+    "reese": "reese bass: two detuned saws through a slowly moving low-pass, over a sine sub (drum and bass)",
+    "upright": "upright (double) bass, plucked: Karplus-Strong with a thumpy finger attack (walking bass)",
+    "clarinet": "clarinet-like reed lead: odd harmonics, breath, delayed vibrato (swing / trad motif)",
+    "ride": "ride cymbal: ringing inharmonic partials + stick tick (swing pattern)", "brush": "brushed snare: a swish of filtered noise (swing backbeat)",
+    "guitar": "nylon guitar, Karplus-Strong (strummed bed / fingerpicked motion)", "ukulele": "ukulele, Karplus-Strong", "koto": "koto-like pluck with pitch press",
+    "pulse": "chiptune pulse channel (arps, chords)", "pulse-lead": "chiptune pulse lead (motif)", "tri-bass": "chiptune 4-bit triangle bass",
     "pad": "detuned saw pad (bed)", "strings": "strings-lite ensemble (bed / spiccato ostinato)",
     "piano": "additive piano-ish (bed chords / broken-chord motion / motif)", "epiano": "FM electric piano (lofi keys)",
     "pluck": "marimba+bell pluck (arp motion)", "arp": "arpeggiator using the preset pluck", "marimba": "marimba",
@@ -605,6 +630,11 @@ INSTRUMENTS = {
     "hats": "hi-hats", "shaker": "shaker", "toms": "toms / taiko", "crackle": "vinyl crackle texture",
 }
 INSTRUMENT_ALIASES = {
+    "reese-bass": "reese", "dnb-bass": "reese", "neuro-bass": "reese",
+    "double-bass": "upright", "upright-bass": "upright", "walking-bass": "upright", "contrabass": "upright",
+    "reed": "clarinet", "sax": "clarinet", "saxophone": "clarinet", "ride-cymbal": "ride", "brushes": "brush", "brush-snare": "brush",
+    "acoustic-guitar": "guitar", "nylon-guitar": "guitar", "classical-guitar": "guitar", "uke": "ukulele", "koto-pluck": "koto", "shamisen": "koto",
+    "square": "pulse", "chip-pulse": "pulse", "chiptune": "pulse", "chip-lead": "pulse-lead", "square-lead": "pulse-lead", "triangle": "tri-bass", "tri": "tri-bass", "chip-bass": "tri-bass",
     "pads": "pad", "synth-pad": "pad", "saw-pad": "pad", "strings-lite": "strings", "string": "strings",
     "piano-ish": "piano", "keys": "epiano", "rhodes": "epiano", "e-piano": "epiano", "electric-piano": "epiano",
     "plucks": "pluck", "arps": "arp", "arpeggio": "arp", "fm-bell": "bell", "fm-bells": "bell", "bells": "bell",
@@ -620,6 +650,202 @@ def canonical_instrument(name: str) -> str | None:
     k = re.sub(r"[\s_]+", "-", str(name).strip().lower())
     k = INSTRUMENT_ALIASES.get(k, k)
     return k if k in INSTRUMENTS else None
+
+
+
+# ───────────────────────────── chiptune voices (2A03-style: pulse, stepped triangle, LFSR noise) ─────────────────────────────
+TICK = 1.0 / 60.0   # volume and pitch change on 60 Hz frame ticks, like the console's sound driver
+
+
+def _tick_env(n, levels):
+    """Stepped volume envelope: one 0..15 level per 60 Hz tick (last level held)."""
+    idx = np.minimum((tt(n) / TICK).astype(int), len(levels) - 1)
+    return np.asarray(levels, float)[idx] / 15.0
+
+
+def chip_pulse(m, d, duty=0.25, vel=1.0, decay=1):
+    """Pulse channel: band-limited pulse (12.5 / 25 / 50 % duty), 16-step volume decaying `decay` level per tick."""
+    f = mtof(m)
+    n = ns(d + 0.01)
+    y = 0.5 * (saw(f, n) - saw(f, n, duty))
+    y -= y.mean()
+    top = max(1, int(round(15 * vel)))
+    nt = int(np.ceil(n * TICK ** -1 / SR)) + 1
+    lv = [max(top - decay * i, 3 if decay < 2 else 0) for i in range(nt)]
+    env = _tick_env(n, lv)
+    env[-ns(0.01):] *= np.linspace(1, 0, ns(0.01))
+    return y * env
+
+
+def chip_tri(m, d):
+    """Triangle channel: 4-bit stepped triangle, no volume control (gate only)."""
+    f = mtof(m)
+    n = ns(d)
+    ph, _ = _phase(f, n)
+    tr = 4.0 * np.abs((ph % 1.0) - 0.5) - 1.0
+    y = np.round((tr + 1) * 7.5) / 7.5 - 1.0
+    g = np.ones(n)
+    k = min(n // 2, ns(0.004))
+    g[:k] = np.linspace(0, 1, k); g[-k:] = np.linspace(1, 0, k)
+    return 0.7 * y * g
+
+
+def _lfsr(n, rate, short=False, seed=1):
+    """1-bit noise from a 15-bit LFSR clocked at `rate` Hz (short mode = 93-step metallic loop)."""
+    steps = int(n * rate / SR) + 2
+    reg, out = 1 + seed % 32767, np.empty(steps)
+    tap = 6 if short else 1
+    for i in range(steps):
+        b = (reg ^ (reg >> tap)) & 1
+        reg = (reg >> 1) | (b << 14)
+        out[i] = 1.0 if reg & 1 else -1.0
+    return out[(np.arange(n) * rate / SR).astype(int)]
+
+
+def chip_noise(kind="snare", var=0):
+    """Noise-channel drums: kick (triangle drop + noise click), snare (long-mode burst), hat (short-mode tick)."""
+    if kind == "kick":
+        n = ns(0.16)
+        t = tt(n)
+        f = 55 + 260 * np.exp(-t * 40)
+        ph = np.cumsum(f) / SR
+        tr = 4.0 * np.abs((ph % 1.0) - 0.5) - 1.0
+        tr = np.round((tr + 1) * 7.5) / 7.5 - 1.0
+        click = _lfsr(n, 12000, seed=var + 3) * _tick_env(n, [12, 6, 2, 0])
+        return 0.8 * tr * _tick_env(n, [15, 15, 12, 9, 6, 3, 0]) + 0.25 * click
+    if kind == "snare":
+        n = ns(0.14)
+        return 0.6 * _lfsr(n, 9000 + 800 * (var % 3), seed=var + 11) * _tick_env(n, [15, 12, 10, 8, 6, 4, 2, 1, 0])
+    n = ns(0.06)  # hat
+    return 0.4 * _lfsr(n, 22000, short=True, seed=var + 29) * _tick_env(n, [10, 6, 3, 0])
+
+
+
+# ───────────────────────────── plucked strings (Karplus-Strong): guitar, ukulele, koto ─────────────────────────────
+def ks(m, d, bright=0.5, decay=0.996, pick=0.5, seed=0):
+    """Karplus-Strong string: noise burst through a tuned delay loop with a one-pole damping filter."""
+    from scipy.signal import lfilter
+    f = mtof(m)
+    n = ns(d)
+    L = max(2, int(round(SR / f)))
+    rng = rng_of("ks", m, seed)
+    exc = rng.uniform(-1, 1, L)
+    exc = lfilter([1 - bright * 0.6], [1, -bright * 0.6], exc)          # darker pick = smoother burst
+    exc -= exc.mean()
+    p = int(L * pick)
+    if p > 0:
+        exc = exc - np.roll(exc, p) * 0.6                                  # pick position comb
+    y = np.zeros(n)
+    y[:L] = exc
+    # averaging loop, processed one period at a time
+    buf = np.zeros(n + L)
+    buf[:L] = exc
+    k = L
+    while k < n:
+        j = min(k + L, n)
+        prev = buf[k - L:j - L]
+        prev2 = buf[k - L + 1:j - L + 1]
+        if len(prev2) < len(prev):
+            prev2 = np.append(prev2, prev2[-1:])
+        buf[k:j] = decay * 0.5 * (prev + prev2)
+        k = j
+    y = buf[:n]
+    tail = min(n, ns(0.02))
+    y[-tail:] *= np.linspace(1, 0, tail)
+    return 0.6 * y / (np.abs(y).max() + 1e-9)
+
+
+def upright(m, d, vel=0.8, seed=0):
+    """Plucked upright bass: a dark Karplus-Strong string, a woody finger thump and a short fingerboard buzz."""
+    m = int(round(m))
+    while m > 52:
+        m -= 12
+    y = ks(m, max(d, 0.35), bright=0.18 + 0.12 * vel, decay=0.993, pick=0.12, seed=seed)
+    n = len(y)
+    t = tt(n)
+    thump = np.sin(2 * np.pi * float(mtof(m)) * t) * np.exp(-t / 0.09) * 0.6
+    y = lp(y + thump, 1400) * np.where(t < d, 1.0, np.clip(1 - (t - d) / 0.07, 0, 1))
+    return vel * 1.15 * fades(y, 0.002, 0.03)
+
+
+@functools.lru_cache(maxsize=512)
+def _clarinet(m, d, vel):
+    f = float(mtof(m))
+    n = ns(d + 0.12)
+    t = tt(n)
+    vib = 1 + 0.006 * np.sin(2 * np.pi * 5.2 * t) * np.clip((t - 0.18) / 0.25, 0, 1)
+    ph = 2 * np.pi * f * np.cumsum(vib) / SR
+    y = np.zeros(n)
+    for k in range(1, 16, 2):                                   # a reed: odd harmonics, rolling off
+        y += np.sin(k * ph) / k ** 1.15
+    y += 0.05 * np.sin(2 * ph)
+    y = lp(y, 900 + 2600 * vel)
+    breath = bp(rng_of("clar", m).standard_normal(n), 1500, 5000) * 0.03
+    env = np.minimum(1, t / 0.05) * np.where(t < d, 1 - 0.15 * (t / max(d, 1e-3)), np.clip(1 - (t - d) / 0.12, 0, 1) * 0.85)
+    return _frozen(fades((y * 0.32 + breath) * env, 0.004, 0.03))
+
+
+def clarinet(m, d, vel=0.8):
+    """Clarinet-like reed lead for the swing motif."""
+    return vel * _clarinet(int(round(m)), round(float(d) * 20) / 20, round(float(vel), 1))
+
+
+@functools.lru_cache(maxsize=16)
+def ride(var=0, bell=False):
+    """Ride cymbal: a stick tick on top of ringing inharmonic partials with a long, shimmering decay."""
+    rng = rng_of("ride", var, bell)
+    n = ns(1.6)
+    t = tt(n)
+    y = hp(rng.standard_normal(n), 6000) * np.exp(-t / 0.35) * 0.25
+    for r, a in ((1.0, 0.5), (1.483, 0.4), (1.932, 0.35), (2.546, 0.3), (2.972, 0.22), (3.66, 0.18)):
+        fr = (480 if not bell else 620) * r * (1 + 0.002 * var)
+        y += a * np.sin(2 * np.pi * fr * t + rng.uniform(0, 6.28)) * np.exp(-t / (0.9 if not bell else 1.4))
+    y = hp(y, 2500) * (1 + 0.15 * np.sin(2 * np.pi * 6.5 * t))
+    tick = hp(rng.standard_normal(ns(0.012)), 3000) * 0.8
+    y[:len(tick)] += tick
+    return _frozen(fades(y * 0.6, 0.0003, 0.05))
+
+
+@functools.lru_cache(maxsize=16)
+def brush(var=0):
+    """Brushed snare: a short swish into a soft slap, mostly noise above 1.5 kHz with a little drum body."""
+    rng = rng_of("brush", var)
+    n = ns(0.32)
+    t = tt(n)
+    sw = bp(rng.standard_normal(n), 1500, 9000) * np.sin(np.pi * np.clip(t / 0.3, 0, 1)) ** 0.6 * np.exp(-t / 0.14)
+    body = np.sin(2 * np.pi * 190 * t) * np.exp(-t / 0.05) * 0.25
+    return _frozen(fades(sw * 0.7 + body, 0.004, 0.03))
+
+
+def guitar(m, d, vel=0.8, seed=0):
+    """Nylon-ish guitar note: KS body plus a soft low-mid resonance."""
+    return vel * ks(m, max(d, 0.6), bright=0.35 + 0.3 * vel, decay=0.9965, pick=0.27, seed=seed)
+
+
+def ukulele(m, d, vel=0.8, seed=0):
+    return vel * ks(m + 12 if m < 60 else m, max(d, 0.4), bright=0.55, decay=0.992, pick=0.2, seed=seed)
+
+
+def koto(m, d, vel=0.8, seed=0):
+    """Koto-like pluck: bright KS with a short pitch-bend press after the attack."""
+    y = ks(m, max(d, 1.0), bright=0.8, decay=0.9975, pick=0.12, seed=seed)
+    n = len(y)
+    t = tt(n)
+    bend = 1 + 0.03 * np.clip((t - 0.25) / 0.3, 0, 1) * (t > 0.25)        # oshide-style press, a quarter tone up
+    idx = np.clip(np.cumsum(bend), 0, n - 1)
+    return vel * np.interp(idx, np.arange(n), y)
+
+
+def strum(ms, d, inst="guitar", vel=0.8, down=True, gap=0.014, seed=0):
+    """A chord strummed string by string (gap seconds apart)."""
+    fn = {"guitar": guitar, "ukulele": ukulele, "koto": koto}[inst]
+    order = list(ms) if down else list(ms)[::-1]
+    out = np.zeros(ns(d + gap * len(order) + 0.05))
+    for i, m in enumerate(order):
+        y = fn(m, d, vel * (0.85 + 0.15 * (i == 0)), seed + i)
+        o = ns(gap * i)
+        out[o:o + len(y)] += y[:len(out) - o]
+    return out / max(1.0, len(order) ** 0.5)
 
 
 # ───────────────────────────── SFX context, grammar, registry ─────────────────────────────
@@ -2177,6 +2403,9 @@ def read_audio(path, sr=SR):
     return np.frombuffer(r.stdout, dtype="<f4").reshape(-1, 2).T.astype(float)
 
 
+_AAC_AT_BROKEN = False
+
+
 @functools.lru_cache(maxsize=1)
 def best_aac_encoder():
     """aac_at (Apple AudioToolbox) when this ffmpeg has it, else ffmpeg's native aac."""
@@ -2192,16 +2421,27 @@ def best_aac_encoder():
 def encode_aac(src, out, bitrate="192k", tp=-1.0, encoder=None, max_iter=4, faststart=True):
     """WAV -> AAC (.m4a), then decode and re-measure: if the codec pushed the true peak above tp, trim the
     gain and re-encode. Returns {encoder, bitrate, volumeDb, truePeak, lufs}."""
-    enc = encoder or best_aac_encoder()
+    global _AAC_AT_BROKEN
+    enc = encoder or ("aac" if _AAC_AT_BROKEN else best_aac_encoder())
     vol, rep = 0.0, {}
     for _ in range(max_iter):
         cmd = [ffmpeg_bin(), "-y", "-v", "error", "-i", str(src)]
         if abs(vol) > 1e-9:
             cmd += ["-af", f"volume={vol:.3f}dB"]
+        base = list(cmd)
         cmd += ["-c:a", enc, "-b:a", str(bitrate)]
         if faststart:
             cmd += ["-movflags", "+faststart"]
-        subprocess.run(cmd + [str(out)], check=True)
+        try:
+            subprocess.run(cmd + [str(out)], check=True, stderr=subprocess.PIPE if enc == "aac_at" else None)
+        except subprocess.CalledProcessError:
+            if enc != "aac_at":
+                raise
+            _AAC_AT_BROKEN = True
+            # AudioToolbox can be unreachable (sandboxed or headless sessions): fall back to ffmpeg's native aac
+            enc = "aac"
+            cmd = base + ["-c:a", enc, "-b:a", str(bitrate)] + (["-movflags", "+faststart"] if faststart else [])
+            subprocess.run(cmd + [str(out)], check=True)
         y = read_audio(out)
         tpv = true_peak_db(y)
         rep = {"encoder": enc, "bitrate": str(bitrate), "volumeDb": round(vol, 2), "truePeak": round(tpv, 2),

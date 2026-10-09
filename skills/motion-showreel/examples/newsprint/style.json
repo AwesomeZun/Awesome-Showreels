@@ -1,0 +1,301 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "readers of the Courier's social video (muted autoplay first, sound second)",
+    "title": "The Tamsin Valley Courier · Page A1",
+    "reviewed": "Draft from extract_style.py (kept as build/style.draft.json), reviewed by hand against the stylebook, the e-edition and the press PDF: see rationale and README.md 'What the draft got right and wrong'."
+  },
+  "source": [
+    {
+      "path": "source/front-page.md",
+      "kind": "markdown",
+      "notes": "newsroom export of Page A1: the lead story in AP style with dateline, deck, byline, cutline and quotes; By the numbers sidebar; briefs; the Valley Wire items; approved social copy"
+    },
+    {
+      "path": "source/stylebook.md",
+      "kind": "brand-guide",
+      "notes": "house style and design standards: words we do not use, headline and dateline rules, AP numbers, the six-column page, two inks on newsprint with hex values, type per element, the Courier on video (no bounce, pages roll, newsroom sound at about 96 BPM)"
+    },
+    {
+      "path": "source/e-edition/index.html",
+      "kind": "website",
+      "notes": "print replica of Page A1 with the Valley Wire ticker; nameplate, Oxford rule, red folio rule, six-column grid, column rules"
+    },
+    {
+      "path": "source/e-edition/courier.css",
+      "kind": "website",
+      "notes": "9 colour tokens --courier-*, 5 font tokens, @font-face for the shipped OFL files"
+    },
+    {
+      "path": "source/e-edition/a1-clocktower.png",
+      "kind": "images",
+      "notes": "the A1 picture as printed: an 85-line round-dot halftone at 45 degrees (an illustration drawn in code by modules/np-photo.js, not a photograph)"
+    },
+    {
+      "path": "source/front-page.pdf",
+      "kind": "other",
+      "notes": "press PDF of Page A1 (one page, fonts embedded by name: Newsreader, Libre Franklin, Grenze Gotisch, Courier Prime)"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "OFL-1.1 font files from github.com/google/fonts with their OFL texts"
+    }
+  ],
+  "mood": [
+    "factual",
+    "warm",
+    "civic",
+    "steady",
+    "printed"
+  ],
+  "rationale": {
+    "palette": "Light theme: newsprint covers 80-82 % of both page renders [E36, E44] and is the page's own token and theme colour (--courier-newsprint, theme-color #E4E0D6) [E13, E19, E28]. The draft took bg from the e-edition's html background #D6D1C5 [E26, E43], which is the desk around the page, not the paper: bg and bg2 are swapped back (bg #E4E0D6 newsprint, bg2 #D6D1C5 newsprint shade). Every role is a token or a row of the stylebook's colour table [E3-E11, E19]: surface #EFECE4 newsprint light (the draft's derived #FFFFFF does not exist on newsprint), ink #1D1B18 Courier Black, ink2 #4A4640 Black 70, muted #625D55 Black 55, accent #B9202A Courier Red, line #9A958B Black 40. The stylebook allows two inks and one spot colour [E2: 'Two inks, one paper. Red is a signal'], so the draft's derived accent2 #725E00 (olive) and accent3 #9B3491 (magenta) and its derived green, orange and pink semantic colours are removed: accent2 is Black 40 #9A958B (rules and screens) and accent3 Black 15 #CDC8BD (tint boxes), both fills only; ok is Courier Black, warn Black 70, deny Courier Red (the reel signals nothing by colour; a verdict would be a word). onAccent is newsprint light reversed out of red (5.39:1), as the e-edition's flags do. Contrast on bg: ink 13.04:1, ink2 7.11:1, muted 4.95:1, accent 4.82:1, so accentInk equals accent (on the draft's bg muted was 4.29:1 and accent 4.17:1). muted on the Black 15 tint is only 3.92:1: small text never sits on a tint box. No paletteAlt: the paper has no dark scheme and no scene goes dark (the draft derived a red-black night palette).",
+    "type": "Five families, all declared in courier.css and named in the stylebook's type table [E2, E14-E18], all shipped as OFL files [E37-E42] and embedded by name in the press PDF [E33]. display and serif: Newsreader (A1 banners ExtraBold 800, body 400; Chromium applies its optical size axis automatically per font size, so a 100-px banner gets the display cut and 16-px body copy the text cut). sans: Libre Franklin, the stylebook's label face for flags, folios, credits and the sidebar [E17]; the draft put Inter here, a face the material never names. mono: Courier Prime, the wire and agate face [E18], with the CSS's own fallback Courier New; the draft's JetBrains Mono and Fira Code fallbacks belong to a code editor, not a teletype. nameplate (extra key): Grenze Gotisch, the stylebook's nameplate face [E14]; the extractor has no blackletter category and filed it as a grotesk. The draft listed the italic variable file without style: italic, so the runtime would have registered it as a second upright Newsreader; fixed. displayWeight 800 as the A1 banner [E2], bodyWeight 400 as the text cut (the draft's 600/500 were tuned for compression on glossy light stages); headline tracking -0.012 em as the CSS headline; labels tracked 0.08 em (the stylebook's '+80'). Scale steps follow the page's hierarchy: agate 14, label 18, body 22, deck 28, 36, 48, 64, banner 88, figure 116, nameplate 152.",
+    "motion": "Energy 0.40 with no '!', no emoji and 0.66 marketing words per 1,000 [E1, E2] → medium pace, kept. The stylebook's video section decides the character [E2]: 'Type is set, not thrown: lines land like slugs of cast metal, firmly and on the beat, without bounce. Pages change the way the press changes them, by rolling.' So overshoot 0 (draft 0.28), a near-critical spring (f 2.6, z 0.92; draft z 0.79) and outQuint, the deceleration of a press stopping (draft outC). Transitions: cut (the compositor cuts while the scenes run the press roll themselves: the outgoing page leaves on the paper web, the incoming page comes off an inked cylinder; modules/np-kit.js) and zoomInto (into the A1 picture); match kept for same-layout hand-offs; the draft's impact (zoom punch, shake, flash) is not something a press can print. Reveals: revealLine for slugs, typing for datelines and the wire. HUD off: the draft turned the frame HUD on for 'pitch' and data, but brackets and a timecode are not print. radius 0: newspaper boxes are square (draft 6). Six-column grid with a 24-px gutter as the broadsheet [E2]; margin 96. dataViz false: the numbers are set as type in a sidebar, never charted; characters false.",
+    "sound": "The stylebook names its own sound [E2]: 'typewriter keys, the teletype and the press, over a steady walking pulse of about 96 beats per minute.' The extractor does not read tempo from prose and drafted corporate at 107 BPM, G major, minimal SFX. Reviewed: 96 BPM (also 6 bars = 15.0 s and 12 bars = 30.0 s exactly), lofi as the nearest instrument family (organic SFX: paper, stamps, keys; piano bed, round bass, rim and hats) with swing 0 because the pulse is steady, not swung; drums full so the 16th-note hats can carry the typewriter figure. Key C (Scriabin red: the extractor read the accent's 31° hue as orange and chose G), major for a good-news story. The teletype, typewriter and press voices are not in audio/synth.py yet: stage 2 adds them (README 'needs').",
+    "narration": "Not recommended, and the material says why [E2]: 'No voice-over on teasers under 20 seconds; the type tells the story.' Every idea is on screen as type for muted autoplay. The draft reached the same answer for the wrong reason (it read the page as a 'pitch' for 'investors and judges' from its prices and page numbers). If a 30-s cut is narrated later: Schedar (even), [measured, warm], en-US, captions on a newsprint-light band.",
+    "visuals": "Every carrier is code-drawn vector, printed the way the page is printed: type in columns, column and Oxford rules, the nameplate, a teletype tape, and the A1 picture as a round-dot halftone at 45° (black plate) with sound rings on a 15° red plate. The picture is an illustration drawn in code (modules/np-photo.js; source/e-edition/a1-clocktower.png is that drawing screened once), so visualSources is vector only. The draft's app-ui, pdf-figures and web-shots came from classifying the halftone PNG and the PDF's image as screenshots [E30, E31]: the reel shows neither an app nor a web page, and it re-sets the page rather than screenshotting the PDF."
+  },
+  "palette": {
+    "bg": "#E4E0D6",
+    "bg2": "#D6D1C5",
+    "surface": "#EFECE4",
+    "ink": "#1D1B18",
+    "ink2": "#4A4640",
+    "muted": "#625D55",
+    "accent": "#B9202A",
+    "accent2": "#9A958B",
+    "accent3": "#CDC8BD",
+    "ok": "#1D1B18",
+    "warn": "#4A4640",
+    "deny": "#B9202A",
+    "accentInk": "#B9202A",
+    "onAccent": "#EFECE4",
+    "line": "#9A958B"
+  },
+  "fonts": {
+    "display": "\"Newsreader\", \"Georgia\", serif",
+    "sans": "\"Libre Franklin\", \"Franklin Gothic Medium\", \"Arial Narrow\", sans-serif",
+    "serif": "\"Newsreader\", \"Georgia\", serif",
+    "mono": "\"Courier Prime\", \"Courier New\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "nameplate": "\"Grenze Gotisch\", \"Old English Text MT\", serif",
+    "files": [
+      {
+        "family": "Newsreader",
+        "path": "source/fonts/Newsreader-Variable.ttf",
+        "weight": "200 800",
+        "style": "normal"
+      },
+      {
+        "family": "Newsreader",
+        "path": "source/fonts/Newsreader-Italic-Variable.ttf",
+        "weight": "200 800",
+        "style": "italic"
+      },
+      {
+        "family": "Libre Franklin",
+        "path": "source/fonts/LibreFranklin-Variable.ttf",
+        "weight": "100 900",
+        "style": "normal"
+      },
+      {
+        "family": "Grenze Gotisch",
+        "path": "source/fonts/GrenzeGotisch-Variable.ttf",
+        "weight": "100 900",
+        "style": "normal"
+      },
+      {
+        "family": "Courier Prime",
+        "path": "source/fonts/CourierPrime-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Courier Prime",
+        "path": "source/fonts/CourierPrime-Bold.ttf",
+        "weight": "700",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      14,
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      88,
+      116,
+      152
+    ],
+    "displayWeight": 800,
+    "bodyWeight": 400,
+    "tracking": -0.012,
+    "trackingLabel": 0.08
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 96,
+    "grid": 6,
+    "gutter": 24,
+    "baseline": 6,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Newsreader\", \"Georgia\", serif",
+      "size": 34,
+      "fg": "#1D1B18",
+      "bg": "rgba(239,236,228,0.94)",
+      "y": 0.9
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.6,
+      "z": 0.92
+    },
+    "overshoot": 0,
+    "ease": "outQuint",
+    "transitions": [
+      "cut",
+      "zoomInto",
+      "match"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "revealLine",
+      "typing"
+    ]
+  },
+  "post": {
+    "grain": 0.02,
+    "vignette": {
+      "a": 0.1,
+      "color": "#4A4640"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 96,
+    "key": "C",
+    "mode": "major",
+    "preset": "corporate",
+    "instruments": [
+      "piano",
+      "bass",
+      "bell",
+      "kick",
+      "rim",
+      "shaker",
+      "hats"
+    ],
+    "drums": "light",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.55,
+      "breakdown": 0.35,
+      "drop": 0.72,
+      "outro": 0.4
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Schedar",
+    "styleTag": "[measured, warm]",
+    "lang": "en-US"
+  },
+  "swatches": [
+    {
+      "hex": "#E4E0D6",
+      "role": "newsprint",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md",
+        "source/front-page.pdf"
+      ]
+    },
+    {
+      "hex": "#D6D1C5",
+      "role": "newsprint shade",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#EFECE4",
+      "role": "newsprint light",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#1D1B18",
+      "role": "Courier Black",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md",
+        "source/front-page.pdf"
+      ]
+    },
+    {
+      "hex": "#4A4640",
+      "role": "Black 70",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#625D55",
+      "role": "Black 55",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#9A958B",
+      "role": "Black 40",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#CDC8BD",
+      "role": "Black 15",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md"
+      ]
+    },
+    {
+      "hex": "#B9202A",
+      "role": "Courier Red",
+      "from": [
+        "source/e-edition/courier.css",
+        "source/stylebook.md",
+        "source/front-page.pdf"
+      ]
+    }
+  ],
+  "review": []
+}

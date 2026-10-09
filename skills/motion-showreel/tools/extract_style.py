@@ -3389,7 +3389,7 @@ AXIS_FORMULAS = {
 }
 
 PACE_THRESHOLDS = {"calm": "energy < 0.35", "medium": "0.35 ≤ energy ≤ 0.62", "energetic": "energy > 0.62"}
-PRESET_FITS_PACE = "calm reels use ambient, lofi, cinematic-lite or corporate; energetic reels use bright-pop, dark-synth, corporate or cinematic-lite"
+PRESET_FITS_PACE = "calm reels use ambient, lofi, cinematic-lite, corporate or swing; energetic reels use bright-pop, dark-synth, corporate, cinematic-lite, chiptune, swing or dnb"
 
 SOUND_PRESETS = {
     "bright-pop": {"w": {"energy": .30, "playful": .35, "warm": .20, "light": .25, "technical": -.15, "serious": -.20, "luxe": -.25}, "linear": True,
@@ -4251,7 +4251,7 @@ def interpret(ctx: Ctx, hints):
 
     # ---- sound
     psc = {k: round(sig_score(v["w"], ex, linear=True), 3) for k, v in SOUND_PRESETS.items()}
-    fits_pace = {"calm": ("ambient", "lofi", "cinematic-lite", "corporate"), "energetic": ("bright-pop", "dark-synth", "corporate", "cinematic-lite")}
+    fits_pace = {"calm": ("ambient", "lofi", "cinematic-lite", "corporate", "swing"), "energetic": ("bright-pop", "dark-synth", "corporate", "cinematic-lite", "chiptune", "swing", "dnb")}
     allowed = fits_pace.get(pace, tuple(SOUND_PRESETS))
     preset = max((k for k in psc if k in allowed), key=psc.get)
     lo, hi = SOUND_PRESETS[preset]["bpm"]
@@ -4480,7 +4480,7 @@ PALETTE_KEYS = ["bg", "bg2", "surface", "ink", "ink2", "muted", "accent", "accen
 ENUMS = {
     ("layout", "theme"): ("light", "dark"),
     ("motion", "pace"): ("calm", "medium", "energetic"),
-    ("sound", "preset"): ("bright-pop", "dark-synth", "ambient", "corporate", "lofi", "cinematic-lite"),
+    ("sound", "preset"): ("bright-pop", "dark-synth", "ambient", "corporate", "lofi", "cinematic-lite", "chiptune", "swing", "dnb"),
     ("sound", "drums"): ("none", "light", "full"),
     ("sound", "sfx"): ("glassy", "digital", "organic", "minimal"),
     ("sound", "mode"): ("major", "minor"),

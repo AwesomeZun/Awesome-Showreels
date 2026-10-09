@@ -1,0 +1,61 @@
+/* THE EMERALD FAN: print masters for the invitation card and the supper menu.
+   Gold leaf on lacquer black, emerald for panels, ivory for small type (house-style.md). */
+@font-face { font-family: "Limelight"; src: url("../fonts/Limelight-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans[wght].ttf") format("truetype"); font-weight: 100 700; }
+@font-face { font-family: "Poiret One"; src: url("../fonts/PoiretOne-Regular.ttf") format("truetype"); font-weight: 400; }
+
+:root {
+  /* inks */
+  --lacquer: #0E0C09;          /* the ground of everything */
+  --lacquer-raised: #17140F;   /* a panel lifted off the ground */
+  --gold: #C9A24A;             /* gold leaf (foil on paper; this value for screen proofs) */
+  --gold-burnished: #F3E2A9;   /* the highlight where the leaf catches the light */
+  --gold-shaded: #7A5A1E;      /* the leaf in shadow */
+  --emerald: #0F6B53;          /* the door, the silk band, the panels between the ribs */
+  --emerald-deep: #0A3D31;
+  --ivory: #F2E8D3;            /* small type on black */
+  --ivory-dim: #B9AC8E;        /* the second line of small type */
+
+  /* faces */
+  --face-display: "Limelight", "Josefin Sans", serif;
+  --face-text: "Josefin Sans", "Futura", sans-serif;
+  --face-hairline: "Poiret One", "Josefin Sans", sans-serif;
+
+  /* spacing of capitals */
+  --open: 0.08em;              /* the name, set a little open */
+  --tracked: 0.33em;           /* labels: a third of an em */
+}
+
+@page { margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--lacquer); color: var(--ivory); }
+body { font-family: var(--face-text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.card { position: relative; overflow: hidden; background: var(--lacquer); }
+.card > svg.ground { position: absolute; inset: 0; width: 100%; height: 100%; }
+.card .content { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+.name { font-family: var(--face-display); color: var(--gold); letter-spacing: var(--open); text-transform: uppercase; line-height: 1; }
+.label { font-family: var(--face-text); font-weight: 600; color: var(--ivory); letter-spacing: var(--tracked); text-transform: uppercase; }
+.label.gold { color: var(--gold); }
+.spoken { font-family: var(--face-hairline); color: var(--ivory); line-height: 1.55; }
+.date { font-family: var(--face-display); color: var(--gold); letter-spacing: 0.05em; text-transform: uppercase; }
+.detail { font-family: var(--face-text); font-weight: 400; color: var(--ivory); }
+.detail.dim { color: var(--ivory-dim); }
+.price { font-family: var(--face-text); font-weight: 600; color: var(--gold); }
+
+.rule { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--gold); }
+.rule::before, .rule::after { content: ""; height: 1px; flex: 0 0 var(--rule-w, 70px); background: var(--gold); }
+.rule i { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
+
+.band { width: 100%; background: linear-gradient(180deg, var(--emerald-deep), var(--emerald) 50%, var(--emerald-deep));
+        border-top: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; }
+.band .label { color: var(--gold); }
+
+.fineprint { font-family: var(--face-text); font-weight: 400; color: var(--ivory-dim); letter-spacing: 0.08em; }
+
+.menu-section { width: 100%; }
+.menu-section h3 { white-space: nowrap; font-family: var(--face-text); font-weight: 600; font-size: 10.5px; color: var(--gold); letter-spacing: var(--tracked); text-transform: uppercase; }
+.dish { display: flex; align-items: baseline; gap: 6px; font-size: 11.5px; color: var(--ivory); }
+.dish .leader { flex: 1; border-bottom: 1px dotted var(--gold-shaded); transform: translateY(-3px); }
+.dish em { font-style: normal; color: var(--gold-burnished); }

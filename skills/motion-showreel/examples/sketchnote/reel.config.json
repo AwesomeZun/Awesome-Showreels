@@ -1,0 +1,317 @@
+{
+  "title": "Visual Notes Lab · Lesson 3",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "wall",
+      "label": "Notes nobody reads?",
+      "minBars": 1,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 2.5,
+      "outBeats": 2,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "drawon dur=1.5 gain=-6"
+        },
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "drawon dur=1.25"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "drawon dur=0.5 gain=-3"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 0,
+          "from": "holdBeat",
+          "sfx": "drawon dur=1 gain=-4"
+        },
+        {
+          "beat": 1.5,
+          "from": "holdBeat",
+          "sfx": "pop x3 gap=0.5b soft"
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "swish"
+        },
+        {
+          "beat": 0.5,
+          "from": "outStart",
+          "sfx": "swish"
+        },
+        {
+          "beat": 1,
+          "from": "outStart",
+          "sfx": "swish"
+        }
+      ]
+    },
+    {
+      "id": "rescue",
+      "label": "Box it. Arrow it. Star it.",
+      "minBars": 3,
+      "maxBars": 5,
+      "priority": 1,
+      "inBeats": 10,
+      "outBeats": 1.5,
+      "in": "match",
+      "music": "drop",
+      "cues": [
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "drawon dur=0.5"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "drawon dur=0.5"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "drawon dur=0.5"
+        },
+        {
+          "beat": 2.25,
+          "from": "start",
+          "sfx": "pop x3 gap=0.125b"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 4.5,
+          "from": "start",
+          "sfx": "drawon dur=0.75"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "drawon dur=0.5"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "drawon dur=0.5"
+        },
+        {
+          "beat": 6.5,
+          "from": "start",
+          "sfx": "pop big"
+        },
+        {
+          "beat": 7,
+          "from": "start",
+          "sfx": "drawon dur=1.5"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "drawon dur=2.5 gain=-4",
+          "count": 1
+        },
+        {
+          "beat": 4,
+          "from": "holdBar",
+          "sfx": "drawon dur=1 gain=-4",
+          "count": 1
+        },
+        {
+          "beat": 5,
+          "from": "holdBar",
+          "sfx": "pop x3 gap=0.5b",
+          "count": 1
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "kit",
+      "label": "3 markers. 3 jobs.",
+      "minBars": 3,
+      "maxBars": 3,
+      "priority": 2,
+      "optional": true,
+      "inBeats": 8,
+      "outBeats": 1.5,
+      "in": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "drawon dur=1"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 2.75,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 4.25,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 5.75,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 6.5,
+          "from": "start",
+          "sfx": "pop big"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "drawon dur=1 gain=-4",
+          "count": 1
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "endcard",
+      "label": "Lesson 3 · Thursday",
+      "minBars": 2,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "drawon dur=1"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "drawon dur=1.75"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "chime"
+        },
+        {
+          "beat": 4.25,
+          "from": "start",
+          "sfx": "drawon dur=0.75 gain=-3"
+        },
+        {
+          "beat": 6,
+          "from": "start",
+          "sfx": "whoosh soft"
+        },
+        {
+          "beat": 7,
+          "from": "start",
+          "sfx": "reveal"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "thud x3 gap=0.5b",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 8,
+      "label": "short",
+      "narration": false,
+      "exclude": [
+        "kit"
+      ],
+      "scenes": {
+        "wall": {
+          "bars": 2
+        },
+        "rescue": {
+          "bars": 3
+        },
+        "endcard": {
+          "bars": 3
+        }
+      }
+    },
+    "30": {
+      "bars": 13,
+      "label": "30 s",
+      "scenes": {
+        "wall": {
+          "bars": 2
+        }
+      }
+    }
+  },
+  "poster": 7.6,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": false
+  }
+}

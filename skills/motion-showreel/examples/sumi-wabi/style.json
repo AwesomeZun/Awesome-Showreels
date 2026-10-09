@@ -1,0 +1,274 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "travellers",
+    "title": "余白庵",
+    "hints": {
+      "purpose": "brand",
+      "audience": "travellers"
+    },
+    "reviewed": "Reviewed by hand after extract_style.py (--purpose brand --audience travellers): title, accent2/accent3, muted, ok/warn/deny, accentInk/onAccent, every font stack, type scale/weights/tracking, margin, radius, the whole motion block, post vignette colour, the whole sound block, narration voice/tag, mood and swatches changed; paletteAlt dropped. The house rules in source/brand/shitsurae.md (E3) decided most of it; the extractor cannot read them (Japanese rule text). Draft vs final: README.md."
+  },
+  "source": [
+    {
+      "path": "source/site/index.md",
+      "kind": "markdown",
+      "notes": "the inn's top page in Japanese: tagline 墨がにじむ速さで、すごす宿。, ten rooms, the evening tea, booking address, fictional-inn disclaimer"
+    },
+    {
+      "path": "source/site/chaseki.md",
+      "kind": "markdown",
+      "notes": "tea-room guide (茶室「一滴」): the order of one sitting, the utensils (black raku bowl, ensō scroll), 一期一会 and この一服は、二度とおなじにはなりません。"
+    },
+    {
+      "path": "source/brand/shitsurae.md",
+      "kind": "brand-guide",
+      "notes": "house style: eight traditional colours with hex values, vermilion only for the seal, Shippori Mincho B1 set vertically, three type sizes, 70 % empty paper, motion at breathing pace with no bounce, scroll-like scene changes, koto/shakuhachi/suikinkutsu at about 70 BPM, banned words, seal rules"
+    },
+    {
+      "path": "source/site/index.html",
+      "kind": "website",
+      "notes": "the top page set vertically (writing-mode: vertical-rl) on washi, with style.css: traditional-colour tokens and role aliases, @font-face, letter-spacing 0.12-0.36 em"
+    },
+    {
+      "path": "source/site/img/logo.png",
+      "kind": "images",
+      "notes": "the seal mark (落款): a vermilion square with 余白 cut out in white"
+    },
+    {
+      "path": "source/print/kaiki.pdf",
+      "kind": "other",
+      "notes": "a printed tea-gathering record (会記) set vertically on washi, ending with the seal; embeds only Shippori Mincho B1"
+    },
+    {
+      "path": "source/fonts/ShipporiMinchoB1-Regular.ttf",
+      "kind": "other",
+      "notes": "Shippori Mincho B1 Regular (rounded corners and ink pooling), SIL OFL 1.1 (source/fonts/OFL.txt), from github.com/google/fonts ofl/shipporiminchob1"
+    }
+  ],
+  "mood": [
+    "quiet",
+    "unhurried",
+    "restrained",
+    "tactile",
+    "contemplative"
+  ],
+  "rationale": {
+    "palette": "The guide's own eight traditional colours, which style.css also declares as tokens [E3-E11, E15]: bg #F2EBDD 鳥の子 (--bg, <meta theme-color>, computed page background [E13, E17, E28]), bg2 #E8DFCD 生成, surface #FAF6EE 胡粉, ink #1E1C1A 墨 (14.3:1), ink2 #57524C 薄墨 (6.5:1), muted #67615A 鈍色 (the --muted token; 5.2:1, the draft derived #6F6A64 instead), accent #C0392B 朱 (--shu, the seal mark [E21]). accent2 is #7D8272 利休鼠 (the guide: 淡い面、茶の色), a fill for the tea and pale washes; the draft's #550000/#891C18 were artefacts of the seal image embedded in kaiki.pdf, whose transparent pixels the extractor read as black and dark red [E22], not colours of the material. accent3 #938E85 is 淡墨: the same 墨 diluted into 鳥の子 (55 %), the wash the reel paints; sumi-e has one ink in many densities, so no new hue is introduced. The guide allows vermilion only on the seal (朱は落款ひとつだけ) and no gradients, gold or silver, so accentInk is not set (no vermilion text), onAccent #F2EBDD is the paper showing through the seal's cut characters (4.6:1), and ok/warn/deny are in-family tones that no scene draws (this reel has no status). seal #C0392B names the seal colour for modules/sumi.js. paletteAlt dropped: no dark scenes and no night scheme in the material.",
+    "type": "One face for everything, as the guide says (書体は、しっぽり明朝 B1 [E3]) and every source uses it: @font-face, --font and computed styles [E14, E16, E19, E28], the only font in kaiki.pdf [E24], and the file with its OFL licence [E27] (fonts.files). The draft's Inter and Hiragino Sans stacks were a Latin grotesk and a Japanese gothic the brand never uses; the cjk stack is Mincho, so no glyph can fall back to a gothic. Weights 400 (the one shipped weight; the site sets headings at 400) instead of the draft's 600/500. The guide limits type to three sizes (宿名、言葉、添え書き): scenes use 24, 52 and 120 px from the scale; the in-between steps only satisfy the schema. Tracking 0.12 em (the site's .vertical letter-spacing) and labels 0.08 em (.note). Japanese copy is set vertically, right to left (縦組み), by SUMI.vtext with the font's own vertical punctuation (its 'vert' forms at U+FE11, U+FE12, ...).",
+    "motion": "The guide's motion rules decide the pace, not the copy rates [E3]: 呼吸より速く動かしません。跳ねない、弾まない、揺らさない. So pace calm, a critically damped spring (z 1.0), overshoot 0, ease outQuint, no shake and no flash. The draft read energy 0.41 from a sparse Japanese copy it has no calm or wabi words for and drafted medium pace, overshoot 0.48 and zoomInto/whip/match (zoomInto because it took the PDF page for a screenshot). Things appear as ink soaking into paper (ink-bleed reveals, brush strokes with drying, a blooming drop) and leave like clearing mist (現れるときは、墨が紙ににじむように。消えるときは、霧が晴れるように). Scene changes open like a picture scroll from right to left (絵巻をひらくように、右から左へ): the runtime's dissolve (not in this enum, so transitions lists match and cut as the allowed fallbacks) with a shared scroll pan in modules/sumi.js. Paper and mist always move a little (止まって見えるときも…), so every hold breathes. No characters, no data.",
+    "sound": "The guide names the sound [E3]: 水琴窟の一滴、琴の一音、尺八の息; 拍は、ゆっくりとした脈ほど（一分におよそ七十）; 太鼓、手拍子、電子音は使いません. 72 BPM is that pulse and makes the 30-s cut exactly 9 bars (a bar = 3.333 s = 200 frames at 60 fps) and the short cut 4 bars (13.3 s). D minor holds the koto's standard tuning, 平調子 hirajōshi (D E F A Bb), so plucks stay inside the scale (the validator accepts only major/minor; a miyako-bushi colour is a stage-2 option in sound.notes), drums none, organic SFX (paper, water, wood). preset ambient and pad/pluck/bell/sub are the nearest instruments in audio/synth.py today; the draft's bright-pop 117 BPM G major with kick, hats and shaker (corporate 107 BPM without the purpose hint) contradicts every line of the guide. Stage 2 extends the library (koto pluck, breathy shakuhachi pad, suikinkutsu drop) before the music is made; see sound.notes.",
+    "narration": "Off: a brand teaser for an inn whose guide asks for few words and a short cut under 20 s; every line is on screen as vertical type. If a narrated variant is wanted: ja-JP in です・ます (the source's register [E1-E3]), a soft, slow voice (Achernar) with [soft, calm]; the draft's Schedar [clear, upbeat] is the wrong temperature.",
+    "visuals": "Code-drawn vector only, which is how the material itself makes images: brush and ink. The reel paints what the copy names: an ink drop (墨がにじむ), mountain washes in mist (山あいの谷), a black raku bowl with steam (黒楽, 一服), an ensō (掛物 円相), and the seal 「余白」 pressed once, small, at the lower left of the name (the guide's 落款 rules [E3, E21]). The draft's app-ui and web-shots were dropped: the site is a brochure, not an app, and the reel shows the inn's world rather than its web page."
+  },
+  "palette": {
+    "bg": "#F2EBDD",
+    "bg2": "#E8DFCD",
+    "surface": "#FAF6EE",
+    "ink": "#1E1C1A",
+    "ink2": "#57524C",
+    "muted": "#67615A",
+    "accent": "#C0392B",
+    "accent2": "#7D8272",
+    "accent3": "#938E85",
+    "ok": "#56664A",
+    "warn": "#6E5A44",
+    "deny": "#8F3B31",
+    "onAccent": "#F2EBDD",
+    "line": "#D8CFBE",
+    "seal": "#C0392B",
+    "rikyu": "#7D8272",
+    "usuzumi": "#57524C",
+    "tanboku": "#938E85"
+  },
+  "fonts": {
+    "display": "\"Shippori Mincho B1\", \"Hiragino Mincho ProN\", \"Yu Mincho\", \"Noto Serif JP\", serif",
+    "sans": "\"Shippori Mincho B1\", \"Hiragino Mincho ProN\", \"Yu Mincho\", \"Noto Serif JP\", serif",
+    "serif": "\"Shippori Mincho B1\", \"Hiragino Mincho ProN\", \"Yu Mincho\", \"Noto Serif JP\", serif",
+    "mono": "ui-monospace, monospace",
+    "cjk": "\"Shippori Mincho B1\", \"Hiragino Mincho ProN\", \"Yu Mincho\", \"Noto Serif JP\", serif",
+    "files": [
+      {
+        "family": "Shippori Mincho B1",
+        "path": "source/fonts/ShipporiMinchoB1-Regular.ttf",
+        "weight": "400"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      24,
+      32,
+      52,
+      76,
+      120
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 400,
+    "tracking": 0.12,
+    "trackingLabel": 0.08
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 144,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "cjk",
+      "size": 34,
+      "fg": "#1E1C1A",
+      "bg": "rgba(242,235,221,0.82)",
+      "y": 1000
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "calm",
+    "spring": {
+      "f": 1.2,
+      "z": 1.0
+    },
+    "overshoot": 0,
+    "ease": "outQuint",
+    "transitions": [
+      "match",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "revealLine"
+    ]
+  },
+  "post": {
+    "grain": 0.03,
+    "vignette": {
+      "a": 0.12,
+      "color": "#3A2E22"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 72,
+    "key": "D",
+    "mode": "minor",
+    "preset": "ambient",
+    "instruments": [
+      "pad",
+      "koto",
+      "bell",
+      "sub"
+    ],
+    "drums": "none",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.16,
+      "groove": 0.3,
+      "breakdown": 0.2,
+      "drop": 0.38,
+      "outro": 0.24
+    },
+    "notes": "Stage 2 (audio library): a koto pluck (琴の一音) for the brush taps and moss dots, a breathy shakuhachi-like pad (尺八の息) as the bed, a suikinkutsu drop (水琴窟の一滴) for the ink drops, tuned to 平調子 hirajōshi on D (D E F A Bb, inside D minor); a miyako-bushi (in) colour (D Eb G A Bb) is the alternative if the arranger gains pentatonic Japanese scales. No drums, claps or electronic sounds (the guide). Cue intentions are listed per scene in STORYBOARD.md section 7. Now realised: koto (Karplus-Strong with a pitch press) carries the motion line and every melodic note is snapped to 平調子 hirajōshi on D via sound.scale [0, 2, 3, 7, 8].",
+    "scale": [
+      0,
+      2,
+      3,
+      7,
+      8
+    ],
+    "roles": {
+      "bed": "pad",
+      "motion": "koto",
+      "motif": "koto",
+      "top": "bell",
+      "bass": "sub"
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Achernar",
+    "styleTag": "[soft, calm]",
+    "lang": "ja-JP"
+  },
+  "swatches": [
+    {
+      "hex": "#F2EBDD",
+      "role": "bg",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#E8DFCD",
+      "role": "bg2",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#FAF6EE",
+      "role": "surface",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#1E1C1A",
+      "role": "ink",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css",
+        "source/print/kaiki.pdf"
+      ]
+    },
+    {
+      "hex": "#57524C",
+      "role": "ink2",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css",
+        "source/print/kaiki.pdf"
+      ]
+    },
+    {
+      "hex": "#67615A",
+      "role": "muted",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css",
+        "source/print/kaiki.pdf"
+      ]
+    },
+    {
+      "hex": "#7D8272",
+      "role": "accent2",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css"
+      ]
+    },
+    {
+      "hex": "#C0392B",
+      "role": "accent",
+      "from": [
+        "source/brand/shitsurae.md",
+        "source/site/style.css",
+        "source/site/img/logo.png"
+      ]
+    }
+  ],
+  "review": []
+}

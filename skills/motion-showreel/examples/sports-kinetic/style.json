@@ -1,0 +1,324 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "launch",
+    "audience": "marathon runners and spectators",
+    "title": "VELMORA 42",
+    "hints": {
+      "purpose": "launch",
+      "audience": "marathon runners and spectators",
+      "lang": "en-GB"
+    },
+    "reviewed": "Draft from extract_style.py, reviewed by hand against the material: see rationale and README.md (draft vs final). The draft went light because the race card rendered unstyled in the snapshot (E35, E36)."
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "launch copy: '42 kilometres. 42 timing mats. 42 splits. Live.', race day in numbers, BIB 2417 checkpoint table, how a split reaches you, race week; uppercase headings, no '!', no emoji"
+    },
+    {
+      "path": "source/brand/BRAND.md",
+      "kind": "brand-guide",
+      "notes": "three-colour rule (Signal Orange, Track Black, Bib White), 'No gradients. No glow. No neon.', Barlow Condensed Black Italic, the 12-degree lean, stripes and speed lines, 'A number never fades in. It lands.', drum & bass 172-176 BPM, voice and banned words, logo rules"
+    },
+    {
+      "path": "source/brand/tokens.css",
+      "kind": "website",
+      "notes": "colour tokens with roles (--color-bg, --color-primary, --color-on-primary, --color-ahead/behind), font tokens, @font-face for the shipped OFL files, --lean -12deg, --radius 0, --beat 341ms"
+    },
+    {
+      "path": "source/app/race-card.html",
+      "kind": "website",
+      "notes": "the app's live race card (KM 21, +/- vs plan plate, split list) and finish card (3:12:58, negative split, 42-bar chart from the CSV); dark only"
+    },
+    {
+      "path": "source/data/bib-2417-splits.csv",
+      "kind": "other",
+      "notes": "DEMO DATA: 42 splits of the fictional BIB 2417 (41 one-km mats + the finish); every split number in the reel is read from this file"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "Barlow Condensed (Black Italic, ExtraBold Italic, Bold Italic, Bold, SemiBold) and Barlow (Medium, SemiBold, SemiBold Italic), SIL OFL 1.1 with OFL.txt"
+    }
+  ],
+  "mood": [
+    "energetic",
+    "punchy",
+    "loud",
+    "exact",
+    "forward-leaning"
+  ],
+  "rationale": {
+    "palette": "Dark theme, every role authored: BRAND.md names the roles in prose ('Primary colour: Signal Orange #FF5A1F', 'Background: Track Black #0B0B0B. The stage, always.', 'Text: Bib White #F5F3EE') [E3, E4, E5], tokens.css repeats them as --color-bg/--color-text/--color-primary with color-scheme: dark [E17] and the race card sets theme-color #0B0B0B [E14]. The draft chose light only because the race card rendered unstyled in the snapshot (white page, Times) [E35, E36]: that render is renderer default, not material, and is dropped from the swatches. bg #0B0B0B is kept as authored (flat fields, no gradients, so no banding to fear); surface Asphalt #1A1A1A [E6]; line Lane Grey #3A3936 [E7]; muted Kerb Grey #8F8B84 'labels, meta, disclaimers' [E8] at 5.81:1; ink2 #BDB9B1 is derived (Bib White 55 % toward Kerb Grey, 10.1:1) for sublines, so sublines and meta stay two steps apart. The brand carries exactly one chromatic colour ('Three colours carry the brand'), so accent2 is Bib White (the white stripe between two orange ones) and accent3 is Signal Deep #C2410C [E9], used on screen only as the shade of orange plates and stripes on a Signal Orange field, never as text (its print rule is about orange text on white paper). The draft's accent2 #2FBF71 and accent3 #FFB800 were the app-only status colours [E10, E11]; BRAND.md forbids them in brand art, so they stay ok/warn/deny only. ok/deny are never used to mean ahead/behind: ahead = Signal Orange with a minus sign, behind = Bib White with a plus sign (BRAND.md 'Colour'; tokens --color-ahead/--color-behind), kept as palette extras ahead/behind. onAccent Track Black (--color-on-primary) at 6.31:1 on orange: the loud 'Signal field' (a full orange frame with black type) uses accent + onAccent. Contrast on bg: ink 17.75:1, ink2 10.1:1, muted 5.81:1, accent 6.31:1. Bib White on Signal Orange is only 2.81:1, so type on the Signal field is always Track Black. No paletteAlt: 'Bib White fields are for print, never on screen'.",
+    "type": "Barlow Condensed for display and numbers, Barlow for body (tokens --font-display/--font-body [E15, E16], @font-face [E18-E25], OFL files [E26-E33]). BRAND.md: 'Numbers and display: Barlow Condensed Black Italic, uppercase, tracking -1 %. Big. Then bigger.', so displayWeight 900 (draft 700) and tracking -0.01 em; labels Barlow Condensed SemiBold +12 % (trackingLabel 0.12); body Barlow Medium 500. Scenes request the italic with a weight string ('italic 900'). The draft's scale topped out at 134 px; 'Big. Then bigger.' asks for slam sizes, so the scale runs 16-480 px (ratio about 1.4). fonts.files lists each face with its real style (the draft registered the three italic files as upright, which would have collided with the upright 600/700 faces). mono points at Barlow Condensed: the material has no monospace face; its numbers are tabular Barlow Condensed (.num, 'A running clock never changes width'), which the reel reproduces with a fixed-advance digit helper (modules/v42-kit.js) because canvas cannot switch on tnum. The draft's JetBrains Mono came from no source and is not shipped.",
+    "motion": "Energetic, not the draft's medium: the draft's energy 0.48 counted '!' and emoji (0/1k) as calm, but BRAND.md bans exclamation marks on purpose ('The numbers are loud enough'); the loudness is in 193 numbers/1k, 11 % capitals, 8.3-word sentences and the motion rules [E1, E2]. BRAND.md 'Motion': 'A number never fades in. It lands. When it lands, the frame shakes once, for a quarter of a second.' and 'No dissolves, no soft blur-ins, no bounce' -> a fast, heavily damped spring (f 4.2, z 0.86), overshoot 0.3, outExpo, no blur on entrances, a 0.25 s frame shake through env.fx on every landing. 'Hard cuts, whip pans and stripe wipes' -> transitions cut, match (the stripe wipe is drawn identically on both sides of a cut), whip; the draft's zoomInto (no device window to fly into) and impact (the compositor's impact adds a chromatic split, a digital look the brand never shows) were dropped. 'Everything leans forward 12 degrees' and 'what is ahead enters from the right, what is behind leaves to the left' set the direction of every move.",
+    "sound": "BRAND.md 'Sound': 'drum & bass at 172 to 176 BPM: breakbeats under the splits, a half-time drop for the big numbers, the start horn, and a timing beep at every mat'; tokens --beat 341ms = 176 BPM. bpm 176 (draft 109): inside the brand's range, and 11 bars = 15.0 s, 22 bars = 30.0 s exactly. None of the six presets is a breakbeat kit (the draft's corporate scored 0.60 on warmth from the orange hue and light theme): preset dark-synth is a placeholder for its saw bass, stabs and full kit until a drum & bass preset exists; sound.intent records the genre, groove and the race SFX for the audio pass. Key G (orange in the hue map), minor; drums full; SFX digital (timing-chip beeps); energy high from the intro on.",
+    "narration": "Not recommended, as the draft said: a launch teaser with sparse slogan copy, cut for muted autoplay, and the 15-s cut is music-led by rule. If a voice is ever wanted, BRAND.md's 'Talk like the finish-line announcer: loud, exact, never cute' points to Fenrir [fast, energetic] (the draft's Schedar [clear, upbeat] is the even corporate voice), en-GB (kilometre, colour).",
+    "visuals": "No mascot, photo or capture asked for (characters false). The proof is the data: the 42 splits of BIB 2417 from source/data/bib-2417-splits.csv (ticker, finish-card bars), the race-day numbers from README.md (31,500 x 42 = 1,323,000) and the app's race card, redrawn in vector from source/app/race-card.html with the same tokens. Brand devices from BRAND.md are the vector carriers: race stripes (orange, white, orange, leaning 12 degrees), speed lines (Bib White, 2-6 px, right to left), number plates (parallelograms, radius 0), the Signal field. dataViz true; visualSources vector only (the draft's web-shots and app-ui would show the README page and a static capture; the race card is drawn so its clock can run)."
+  },
+  "palette": {
+    "bg": "#0B0B0B",
+    "bg2": "#121212",
+    "surface": "#1A1A1A",
+    "ink": "#F5F3EE",
+    "ink2": "#BDB9B1",
+    "muted": "#8F8B84",
+    "accent": "#FF5A1F",
+    "accent2": "#F5F3EE",
+    "accent3": "#C2410C",
+    "ok": "#2FBF71",
+    "warn": "#FFB800",
+    "deny": "#E8392E",
+    "accentInk": "#FF5A1F",
+    "onAccent": "#0B0B0B",
+    "line": "#3A3936",
+    "ahead": "#FF5A1F",
+    "behind": "#F5F3EE"
+  },
+  "fonts": {
+    "display": "\"Barlow Condensed\", \"Arial Narrow\", \"Helvetica Neue\", sans-serif",
+    "sans": "\"Barlow\", \"Helvetica Neue\", \"Arial\", sans-serif",
+    "serif": "\"Source Serif 4\", \"Iowan Old Style\", \"Charter\", serif",
+    "mono": "\"Barlow Condensed\", \"Arial Narrow\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "files": [
+      {
+        "family": "Barlow Condensed",
+        "path": "source/fonts/BarlowCondensed-BlackItalic.ttf",
+        "weight": "900",
+        "style": "italic"
+      },
+      {
+        "family": "Barlow Condensed",
+        "path": "source/fonts/BarlowCondensed-ExtraBoldItalic.ttf",
+        "weight": "800",
+        "style": "italic"
+      },
+      {
+        "family": "Barlow Condensed",
+        "path": "source/fonts/BarlowCondensed-BoldItalic.ttf",
+        "weight": "700",
+        "style": "italic"
+      },
+      {
+        "family": "Barlow Condensed",
+        "path": "source/fonts/BarlowCondensed-SemiBold.ttf",
+        "weight": "600",
+        "style": "normal"
+      },
+      {
+        "family": "Barlow",
+        "path": "source/fonts/Barlow-Medium.ttf",
+        "weight": "500",
+        "style": "normal"
+      },
+      {
+        "family": "Barlow",
+        "path": "source/fonts/Barlow-SemiBold.ttf",
+        "weight": "600",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      26,
+      34,
+      46,
+      64,
+      90,
+      128,
+      180,
+      256,
+      360,
+      480
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 500,
+    "tracking": -0.01,
+    "trackingLabel": 0.12
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Barlow Condensed\", \"Arial Narrow\", sans-serif",
+      "size": 40,
+      "weight": 700,
+      "fg": "#F5F3EE",
+      "bg": "rgba(11,11,11,0.82)",
+      "y": 0.9
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 4.2,
+      "z": 0.86
+    },
+    "overshoot": 0.3,
+    "ease": "outExpo",
+    "transitions": [
+      "cut",
+      "match",
+      "whip"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.03,
+    "vignette": {
+      "a": 0.18,
+      "color": "#000000"
+    },
+    "bloom": 0.0
+  },
+  "sound": {
+    "bpm": 176,
+    "key": "G",
+    "mode": "minor",
+    "preset": "dnb",
+    "instruments": [
+      "pad",
+      "stab",
+      "reese",
+      "kick",
+      "snare",
+      "hats"
+    ],
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.55,
+      "groove": 0.8,
+      "breakdown": 0.5,
+      "drop": 1.0,
+      "outro": 0.6
+    },
+    "intent": {
+      "genre": "drum and bass / breakbeat (BRAND.md 'Sound')",
+      "groove": "two-step breakbeat at 176 under the splits; half-time (snare on beat 3, 88 feel) for the big-number slams",
+      "texture": "reese / saw bass and sub, short stabs, rides and shuffled 16th hats; no pads in the drops",
+      "sfx": "start horn on the gun, a timing-chip beep at every mat, whooshes on whips, a dry slam (kick + snare crack) under every number that lands",
+      "presetNote": "preset dnb (added for this example): two-step break, half-time drops, reese + sub, offbeat stabs, no pads in drops"
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Fenrir",
+    "styleTag": "[fast, energetic]",
+    "lang": "en-GB"
+  },
+  "swatches": [
+    {
+      "hex": "#0B0B0B",
+      "share": 0.172,
+      "role": "bg",
+      "from": [
+        "source/brand/BRAND.md",
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#FF5A1F",
+      "share": 0.129,
+      "role": "accent",
+      "from": [
+        "source/brand/BRAND.md",
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#F5F3EE",
+      "share": 0.129,
+      "role": "ink",
+      "from": [
+        "source/brand/BRAND.md",
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#2FBF71",
+      "share": 0.097,
+      "role": "accent",
+      "from": [
+        "source/brand/BRAND.md",
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#FFB800",
+      "share": 0.075,
+      "role": "warn",
+      "from": [
+        "source/brand/tokens.css",
+        "source/brand/BRAND.md"
+      ]
+    },
+    {
+      "hex": "#E8392E",
+      "share": 0.075,
+      "role": "deny",
+      "from": [
+        "source/brand/tokens.css",
+        "source/brand/BRAND.md"
+      ]
+    },
+    {
+      "hex": "#8F8B84",
+      "share": 0.065,
+      "role": "ink",
+      "from": [
+        "source/brand/BRAND.md",
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#1A1A1A",
+      "share": 0.065,
+      "role": "surface",
+      "from": [
+        "source/brand/tokens.css"
+      ]
+    },
+    {
+      "hex": "#C2410C",
+      "share": 0.043,
+      "role": "accent",
+      "from": [
+        "source/brand/tokens.css",
+        "source/brand/BRAND.md"
+      ]
+    },
+    {
+      "hex": "#3A3936",
+      "share": 0.043,
+      "role": "line",
+      "from": [
+        "source/brand/tokens.css",
+        "source/brand/BRAND.md"
+      ]
+    }
+  ],
+  "review": []
+}

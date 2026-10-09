@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4F3EF">
+  <meta name="description" content="Haus für Musik. Projektblatt, Büro Zwölf Architekten. Fictional studio and project, demo content.">
+  <title>Haus für Musik — Projektblatt — büro zwölf</title>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    .head { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; padding-bottom: 48px; }
+    .head .square { grid-column: 1; }
+    .head .mark { grid-column: 2 / 6; font: var(--zw-weight-display) var(--zw-size-5)/1 var(--zw-font); letter-spacing: var(--zw-tracking-display); }
+    .head .meta { grid-column: 9 / -1; margin: 0; }
+    .kicker { grid-column: 1 / 7; margin: 0 0 24px; font-size: var(--zw-size-2); font-weight: var(--zw-weight-display); }
+    .title { grid-column: 1 / 10; font-size: var(--zw-size-7); margin-bottom: 64px; }
+    .big { grid-column: 1 / 6; font-size: var(--zw-size-10); line-height: 0.8; }
+    .big-note { grid-column: 7 / 12; align-self: end; font-size: var(--zw-size-4); font-weight: var(--zw-weight-text); margin: 0 0 18px; }
+    .full { grid-column: 1 / -1; }
+    .section { grid-column: 1 / -1; margin: 72px 0 24px; }
+    .section svg { display: block; width: 100%; height: auto; }
+    .cap { grid-column: 1 / 7; margin: 8px 0 72px; }
+    .prog { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; padding: 48px 0 56px; }
+    .prog div { grid-column: span 4; }
+    .prog .n { display: block; font-size: var(--zw-size-8); line-height: 0.82; font-weight: var(--zw-weight-display); letter-spacing: var(--zw-tracking-numeral); }
+    .prog .l { display: block; margin-top: 18px; font-size: var(--zw-size-3); color: var(--zw-paper-65); }
+    .prog .n.signal { color: var(--zw-signal); }
+    .stance { grid-column: 1 / 9; font-size: var(--zw-size-6); margin: 72px 0 12px; }
+    .stance-en { grid-column: 1 / 9; font-size: var(--zw-size-4); margin: 0 0 72px; color: var(--zw-ink-70); }
+    .facts { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; border-top: 2px solid var(--zw-ink); padding-top: 16px; }
+    .facts p { grid-column: span 3; margin: 0; font-size: var(--zw-size-2); }
+    .facts b { display: block; font-weight: var(--zw-weight-display); }
+    .foot { grid-column: 1 / -1; margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="head">
+      <span class="square" aria-hidden="true"></span>
+      <span class="mark">büro zwölf</span>
+      <p class="meta">Büro Zwölf Architekten, Zürich<br>Projektblatt 2026/04</p>
+    </header>
+
+    <hr class="rule full">
+    <p class="kicker" style="margin-top: 16px">Wettbewerb 2026, 1. Rang / Competition 2026, first prize</p>
+    <h1 class="title">Haus für Musik</h1>
+
+    <p class="kicker">01 Raster / Grid</p>
+    <hr class="hairline full" style="margin-bottom: 24px">
+    <div class="big numeral">12</div>
+    <p class="big-note">Achsen, 7.20 m Achsmass.<br>12 axes, 7.20 m apart.</p>
+
+    <figure class="section" aria-label="Schnitt / Section: four floors on twelve axes, the hall in red">
+      <svg viewBox="-40 -196 920 222" role="img">
+        <g font-family="Schibsted Grotesk, sans-serif" font-size="11" font-weight="500" fill="#111111">
+          <!-- axes: dash-dot lines with numbered circles (7.20 m = 72 units) -->
+          <g stroke="#111111" stroke-width="0.6" stroke-dasharray="10 3 2 3" fill="none">
+            <line x1="0" y1="-170" x2="0" y2="14"/><line x1="72" y1="-170" x2="72" y2="14"/>
+            <line x1="144" y1="-170" x2="144" y2="14"/><line x1="216" y1="-170" x2="216" y2="14"/>
+            <line x1="288" y1="-170" x2="288" y2="14"/><line x1="360" y1="-170" x2="360" y2="14"/>
+            <line x1="432" y1="-170" x2="432" y2="14"/><line x1="504" y1="-170" x2="504" y2="14"/>
+            <line x1="576" y1="-170" x2="576" y2="14"/><line x1="648" y1="-170" x2="648" y2="14"/>
+            <line x1="720" y1="-170" x2="720" y2="14"/><line x1="792" y1="-170" x2="792" y2="14"/>
+          </g>
+          <g fill="#F4F3EF" stroke="#111111" stroke-width="0.8">
+            <circle cx="0" cy="-180" r="9"/><circle cx="72" cy="-180" r="9"/><circle cx="144" cy="-180" r="9"/>
+            <circle cx="216" cy="-180" r="9"/><circle cx="288" cy="-180" r="9"/><circle cx="360" cy="-180" r="9"/>
+            <circle cx="432" cy="-180" r="9"/><circle cx="504" cy="-180" r="9"/><circle cx="576" cy="-180" r="9"/>
+            <circle cx="648" cy="-180" r="9"/><circle cx="720" cy="-180" r="9"/><circle cx="792" cy="-180" r="9"/>
+          </g>
+          <g text-anchor="middle">
+            <text x="0" y="-176">1</text><text x="72" y="-176">2</text><text x="144" y="-176">3</text><text x="216" y="-176">4</text>
+            <text x="288" y="-176">5</text><text x="360" y="-176">6</text><text x="432" y="-176">7</text><text x="504" y="-176">8</text>
+            <text x="576" y="-176">9</text><text x="648" y="-176">10</text><text x="720" y="-176">11</text><text x="792" y="-176">12</text>
+          </g>
+          <!-- the hall: axes 5 to 8, ±0.00 to +7.20 (the one red element) -->
+          <rect x="288" y="-72" width="216" height="72" fill="#D52B1E"/>
+          <!-- slabs and roof (3.60 m = 36 units) -->
+          <g fill="#111111">
+            <rect x="0" y="-145" width="792" height="3"/>
+            <rect x="0" y="-109" width="792" height="3"/>
+            <rect x="0" y="-73" width="792" height="3"/>
+            <rect x="0" y="-37" width="288" height="3"/><rect x="504" y="-37" width="288" height="3"/>
+            <rect x="-30" y="0" width="852" height="4"/>
+          </g>
+          <!-- walls on the axes -->
+          <g stroke="#111111" stroke-width="1.6">
+            <line x1="0" y1="-144" x2="0" y2="0"/><line x1="792" y1="-144" x2="792" y2="0"/>
+            <line x1="72" y1="-144" x2="72" y2="-36"/><line x1="144" y1="-144" x2="144" y2="-36"/><line x1="216" y1="-144" x2="216" y2="-36"/>
+            <line x1="288" y1="-144" x2="288" y2="0"/><line x1="504" y1="-144" x2="504" y2="0"/>
+            <line x1="576" y1="-144" x2="576" y2="-36"/><line x1="648" y1="-144" x2="648" y2="-36"/><line x1="720" y1="-144" x2="720" y2="-36"/>
+          </g>
+          <!-- levels -->
+          <g>
+            <path d="M808 0 l-6 -9 h12 z"/><text x="820" y="-1">±0.00</text>
+            <path d="M808 -36 l-6 -9 h12 z"/><text x="820" y="-37">+3.60</text>
+            <path d="M808 -72 l-6 -9 h12 z"/><text x="820" y="-73">+7.20</text>
+            <path d="M808 -108 l-6 -9 h12 z"/><text x="820" y="-109">+10.80</text>
+            <path d="M808 -144 l-6 -9 h12 z"/><text x="820" y="-145">+14.40</text>
+          </g>
+          <text x="396" y="-30" text-anchor="middle" fill="#F4F3EF" font-weight="700">Saal / Hall</text>
+        </g>
+      </svg>
+    </figure>
+    <p class="cap meta">02 Schnitt / Section. Vier Geschosse à 3.60 m. Four floors, 3.60 m each.</p>
+  </main>
+
+  <section class="inverse">
+    <div class="page">
+      <p class="kicker" style="padding-top: 24px">03 Programm / Programme</p>
+      <div class="prog">
+        <div><span class="n numeral">24</span><span class="l">Übungsräume / practice rooms</span></div>
+        <div><span class="n numeral">2</span><span class="l">Ensembleräume / ensemble rooms</span></div>
+        <div><span class="n numeral signal">1</span><span class="l">Saal, 240 Plätze / hall, 240 seats</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <p class="stance">Ein Raster für den Raum. Ein Takt für die Zeit.</p>
+    <p class="stance-en">A grid for space. A beat for time.</p>
+    <div class="facts">
+      <p><b>Ort / Site</b>Long plot beside the railway, 1’980 m²</p>
+      <p><b>Fläche / Area</b>4’562 m² gross floor area</p>
+      <p><b>Raster / Grid</b>12 × 3 axes, 7.20 m</p>
+      <p><b>Termine / Dates</b>Jury June 2026, further development from autumn 2026</p>
+    </div>
+    <p class="foot small">Fictional studio and project, demo content. Büro Zwölf Architekten and Haus für Musik do not exist.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Mistfold Tea Garden",
+  "short_name": "Mistfold",
+  "description": "Tea and balm from one quiet hillside. Fictional brand, example material.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F1E9D8",
+  "theme_color": "#4F6B3A",
+  "icons": [{ "src": "../images/seal.png", "sizes": "800x800", "type": "image/png" }]
+}

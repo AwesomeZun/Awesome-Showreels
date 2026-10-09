@@ -1,0 +1,301 @@
+{
+  "title": "kablok",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "pick",
+      "label": "Pick a block.",
+      "minBars": 1,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "pop:6 gap=0.125b"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "thud soft"
+        },
+        {
+          "beat": 1.75,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "click"
+        },
+        {
+          "beat": 2.25,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "stamp",
+          "every": 4,
+          "count": 1
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh up"
+        }
+      ]
+    },
+    {
+      "id": "stack",
+      "label": "Stack it.",
+      "minBars": 2,
+      "maxBars": 4,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "thud soft"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3.25,
+          "from": "start",
+          "sfx": "pop"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "thud big"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "snap"
+        },
+        {
+          "beat": 5.5,
+          "from": "start",
+          "sfx": "swish"
+        },
+        {
+          "beat": 0.5,
+          "from": "holdBar",
+          "sfx": "click",
+          "every": 4
+        },
+        {
+          "beat": 1,
+          "from": "holdBar",
+          "sfx": "thud soft",
+          "every": 4
+        },
+        {
+          "beat": 1.5,
+          "from": "holdBar",
+          "sfx": "click",
+          "every": 4
+        },
+        {
+          "beat": 2,
+          "from": "holdBar",
+          "sfx": "thud soft",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "click"
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh"
+        }
+      ]
+    },
+    {
+      "id": "ship",
+      "label": "Ship it.",
+      "minBars": 2,
+      "maxBars": 4,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "drop",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "slam big"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "notify"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "notify"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "notify"
+        },
+        {
+          "beat": 1,
+          "from": "holdBar",
+          "sfx": "click",
+          "every": 4
+        },
+        {
+          "beat": 2,
+          "from": "holdBar",
+          "sfx": "notify",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "end",
+          "sfx": "whoosh down"
+        }
+      ]
+    },
+    {
+      "id": "logo",
+      "label": "kablok",
+      "minBars": 2,
+      "maxBars": 4,
+      "priority": 2,
+      "inBeats": 6,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 0.75,
+          "from": "start",
+          "sfx": "pop:6 gap=0.125b"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "thud soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "thud soft"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "click"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "click",
+          "every": 4
+        },
+        {
+          "beat": 0.25,
+          "from": "holdBar",
+          "sfx": "stamp",
+          "every": 4
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 9,
+      "label": "short",
+      "narration": false,
+      "scenes": {
+        "pick": {
+          "bars": 2
+        },
+        "stack": {
+          "bars": 2
+        },
+        "ship": {
+          "bars": 2
+        },
+        "logo": {
+          "bars": 3
+        }
+      }
+    },
+    "30": {
+      "seconds": 30,
+      "label": "30 s"
+    }
+  },
+  "poster": 9.4,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": false
+  }
+}

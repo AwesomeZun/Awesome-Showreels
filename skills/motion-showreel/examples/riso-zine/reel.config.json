@@ -1,0 +1,261 @@
+{
+  "title": "PAPER JAM #07",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "cover",
+      "label": "Hot off the drum",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "hit"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "hit"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "keytap:0.75 fast"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "drawon:1"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "stamp"
+        }
+      ]
+    },
+    {
+      "id": "inside",
+      "label": "40 pages. 2 inks. 0 ads.",
+      "minBars": 2,
+      "maxBars": 6,
+      "priority": 1,
+      "inBeats": 4,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "drop",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "slam big"
+        },
+        {
+          "beat": 0.5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3.25,
+          "from": "start",
+          "sfx": "keytap:0.75 fast"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "stamp",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "flip"
+        }
+      ]
+    },
+    {
+      "id": "tape",
+      "label": "6 bands. 1 tape.",
+      "minBars": 3,
+      "maxBars": 7,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 1,
+      "in": "match",
+      "inFallback": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "thud big"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 2.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "thud"
+        },
+        {
+          "beat": 4.5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "drawon:1",
+          "every": 4
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "flip"
+        }
+      ]
+    },
+    {
+      "id": "show",
+      "label": "Release show!!",
+      "minBars": 3,
+      "maxBars": 6,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 4,
+      "in": "match",
+      "inFallback": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "slam big"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "slam"
+        },
+        {
+          "beat": 1.5,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "keytap:0.75 fast"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "drawon:1"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "stamp big"
+        },
+        {
+          "beat": 0,
+          "from": "holdBar",
+          "sfx": "drawon:1",
+          "every": 1
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "slam big"
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 10
+    },
+    "30": {
+      "bars": 20
+    }
+  },
+  "poster": 2.6,
+  "captions": {
+    "enabled": false
+  }
+}

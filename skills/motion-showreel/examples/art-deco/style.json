@@ -1,0 +1,298 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "generator": "extract_style.py 1.0.0",
+    "draft": false,
+    "evidence": "build/style-extract.json",
+    "purpose": "brand",
+    "audience": "invited guests and the press",
+    "title": "THE EMERALD FAN",
+    "reviewed": "Draft from extract_style.py (kept as build/style.extracted-draft.json; log in style-extract.md), reviewed by hand. Kept: theme, bg, ink, gold accent, emerald accent2, the display face and the three font files. Changed: sans face, accent3, ink2, muted, semantic colours, type weights/tracking/scale, radius, pace, spring, ease, transitions, dataViz, visualSources, BPM, key, mode, drums, narration, mood, purpose and audience. README.md lists every change with its reason."
+  },
+  "source": [
+    {
+      "path": "source/invitation.md",
+      "kind": "markdown",
+      "notes": "the invitation as printed: formal third-person register, dates and hours in words, the programme for the evening, the proprietors' wording rules and the fictional-club disclaimer"
+    },
+    {
+      "path": "source/menu.md",
+      "kind": "markdown",
+      "notes": "the opening-night supper menu: four courses with period prices in figures, champagne and three house cocktails"
+    },
+    {
+      "path": "source/house-style.md",
+      "kind": "brand-guide",
+      "notes": "the designer's notes: the fan mark (seven gold ribs, emerald panels), the colour schedule with screen values, the three faces, the ornament rules (symmetry, sunbursts, stepped frames, drawn gold rules), the door and the bandstand"
+    },
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "the press-kit cover note: the band's line-up and how it plays (medium tempo for dancing, walking string bass, comping piano, brushes), the room, the disclaimer"
+    },
+    {
+      "path": "source/print/deco.css",
+      "kind": "website",
+      "notes": "the print masters' CSS: nine colour tokens named by material (--lacquer, --gold, --emerald, --ivory ...), the three @font-face rules, --open and --tracked letter-spacing"
+    },
+    {
+      "path": "source/invitation.pdf",
+      "kind": "other",
+      "notes": "the printer's proof of the card (5 x 7 in), set from print/invitation.html: sunburst ground, stepped double frame, the fan mark, emerald silk band"
+    },
+    {
+      "path": "source/menu.pdf",
+      "kind": "other",
+      "notes": "the printer's proof of the menu (5.5 x 8.5 in), set from print/menu.html"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Limelight, Josefin Sans (variable, wght 100-700) and Poiret One, from the google/fonts repository, each with its SIL OFL 1.1 licence"
+    }
+  ],
+  "mood": [
+    "elegant",
+    "opulent",
+    "nocturnal",
+    "symmetrical",
+    "swinging"
+  ],
+  "rationale": {
+    "palette": "Dark theme: every page of the material is lacquer black [E17, E44, E46]. All roles are the material's own tokens, named by material rather than role in print/deco.css [E13] and repeated in the house-style colour table [E3-E9]: bg --lacquer #0E0C09, bg2 --lacquer-raised #17140F, ink --ivory #F2E8D3 (16.1:1; 'ivory for small type'), ink2 --ivory-dim #B9AC8E (8.7:1, 'the second line of small type'; the draft derived #A69F90 instead), accent --gold #C9A24A (8.1:1, gold carries the name, rules and frames), accent2 --emerald #0F6B53 (3.0:1, fill only: 'emerald never carries small type'), accent3 --gold-burnished #F3E2A9 (the leaf catching the light; the draft took --gold-shaded #7A5A1E, a shadow tone, which stays as the extra goldShade). surface #1C1812 is derived (lacquer one step above bg2) for panels. muted #8C8170 is derived from ivory-dim toward the lacquer at 5.1:1 for the disclaimer. The house style allows no other colours ('Nothing else: no silver, no chrome, no pastel tints' [E2]); the draft's derived warn #FFC4B3 and deny #FF7577 were pastel and coral, so the semantic roles reuse material inks (ok emerald, warn gold, deny gold-shaded); the reel never signals allowed or denied. Extras for the gold-leaf and lacquer rendering: goldLight #F3E2A9, goldShade #7A5A1E, emerald #0F6B53, emeraldDeep #0A3D31 [E13]. Gold text on mid emerald is only 2.7:1, so type on an emerald band is set in goldLight on emeraldDeep (9.4:1), never gold on emerald. No paletteAlt: the material has one scheme.",
+    "type": "Three faces, all shipped as OFL files [E40-E42] and declared in print/deco.css [E14-E16]. display: Limelight for the name, the headlines and the date, capitals only, set a little open (house style [E2]; --open 0.08em [E13]) -> tracking +0.08 em. sans: Josefin Sans, the body face of the masters (body font-family, [E19]) and of the house style ('details, the menu and the programme'); the draft put Poiret One here because the invitation's longest text runs are set in it [E36, E44, E46]. hairline (extra role): Poiret One, 'for the lines of the invitation that are spoken rather than announced' [E2]. Labels are capitals tracked about a third of an em (--tracked 0.33em [E13]): trackingLabel is capped at 0.15 by the schema, so the full value lives in trackingWide 0.33. displayWeight 400: Limelight has one weight, and the draft's 700 made the browser fake a bold. serif and mono: the material has neither; serif points at the display face so nothing off-brand can render, mono is an unused system fallback. Scale 18-168 px at 1080p: labels 22-26, hairline lines 40-52, headlines 92-124, the wordmark 168.",
+    "motion": "The band plays 'an easy, medium tempo for dancing' [E1], so the pace is medium, not the draft's calm (energy 0.25 came from the absence of '!', emoji and marketing words, which a 1926 invitation never has). The house style is machine-age and exact: 'symmetry about the centre line, always', 'gold rules are drawn, never stamped: thin, unbroken, meeting exactly on the centre line', sunbursts that 'rise from the middle of the bottom edge', a door whose fan 'is whole only while the door is shut', bandstand arches 'lit one after another, from the inside out, in time' [E2]. Hence: a firm spring (f 2.2, z 0.82), a small overshoot (0.4) only for things that swing, outQuint for entrances, symmetric centre-out reveals, gilded line draws, and secondary beats on the swung eighth. Transitions: portalFlash for the emerald door opening onto the room, cut on the downbeat behind the scene-drawn fan iris (the mark's seven ribs open across the frame and fold away), and match where the gold frame stays. The draft's zoomInto and whip were scored from 'app/web captures to dive into' (the HTML print masters) and generic energy; there is no app here, and a whip pan has no place in this material. dataViz false: the seven tables are a menu and a programme, not data (the draft's data 0.44). characters false.",
+    "sound": "The press-kit note describes the sound exactly [E1]: a seven-piece hot dance band (trumpet, clarinet, trombone, piano, banjo, string bass, drums) playing foxtrots and stomps 'at an easy, medium tempo for dancing, the string bass walking four to the bar, the piano comping, the drummer on brushes after midnight'. That is a swung medium tempo: 112 BPM (inside 'medium', and 7 bars = 15.0 s, 14 bars = 30.0 s exactly), major mode (an opening night), key Bb (a horn key; the draft's A came from the gold hue and its minor mode from 'dark'), light drums (brushes). No preset of audio/arrange.py plays swing yet: lofi (the draft's choice, the only preset with a swing setting) is the stand-in with swing raised to 0.33 (a triplet feel) until the audio library has a swing-band preset; the draft's 83 BPM and drums none came from the calm misreading. SFX family glassy: champagne coupes, gold leaf glints and crystal; knocks use thud.",
+    "narration": "Not recommended: a music-led invitation film of 15 and 30 s whose every line is on screen as type, in the invitation's own words. The draft recommended narration because the extractor read the kit as developer docs (the word 'example' in the disclaimers and the bandstand's 'shell' scored as docs and tool vocabulary). If a voice is wanted, a smooth announcer: Algieba with [smooth, confident], en-GB, because the material spells programme, colours and centre the British way.",
+    "visuals": "Everything is code-drawn vector and type, in the material's own tokens and faces: the stepped double frame, the sunburst ground and the fan mark of the PDF proofs [E33, E38], the emerald door from the house style, the bandstand arches, and the champagne tower from the press-kit note ('a champagne tower on the bandstand on the opening night' [E1]). The PDFs are print artwork, not figures to excerpt (the draft's pdf-figures), and the HTML files are print masters, not an app or a website (the draft's app-ui and web-shots): the reel redraws their ornament at video resolution so every line can move on the beat."
+  },
+  "palette": {
+    "bg": "#0E0C09",
+    "bg2": "#17140F",
+    "surface": "#1C1812",
+    "ink": "#F2E8D3",
+    "ink2": "#B9AC8E",
+    "muted": "#8C8170",
+    "accent": "#C9A24A",
+    "accent2": "#0F6B53",
+    "accent3": "#F3E2A9",
+    "ok": "#0F6B53",
+    "warn": "#C9A24A",
+    "deny": "#7A5A1E",
+    "accentInk": "#C9A24A",
+    "onAccent": "#0E0C09",
+    "line": "#4A3B1E",
+    "goldLight": "#F3E2A9",
+    "goldShade": "#7A5A1E",
+    "emerald": "#0F6B53",
+    "emeraldDeep": "#0A3D31"
+  },
+  "fonts": {
+    "display": "\"Limelight\", \"Futura\", sans-serif",
+    "sans": "\"Josefin Sans\", \"Futura\", sans-serif",
+    "serif": "\"Limelight\", \"Futura\", serif",
+    "mono": "\"Menlo\", \"Courier New\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", \"Noto Sans CJK JP\", sans-serif",
+    "hairline": "\"Poiret One\", \"Josefin Sans\", sans-serif",
+    "files": [
+      {
+        "family": "Limelight",
+        "path": "source/fonts/Limelight-Regular.ttf",
+        "weight": "400"
+      },
+      {
+        "family": "Josefin Sans",
+        "path": "source/fonts/JosefinSans[wght].ttf",
+        "weight": "100 700"
+      },
+      {
+        "family": "Poiret One",
+        "path": "source/fonts/PoiretOne-Regular.ttf",
+        "weight": "400"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      26,
+      32,
+      40,
+      52,
+      68,
+      92,
+      124,
+      168
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 400,
+    "tracking": 0.08,
+    "trackingLabel": 0.15,
+    "trackingWide": 0.33
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 34,
+      "fg": "#F2E8D3",
+      "bg": "rgba(14,12,9,0.78)",
+      "y": 1000
+    },
+    "radius": 0
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.2,
+      "z": 0.82
+    },
+    "overshoot": 0.4,
+    "ease": "outQuint",
+    "transitions": [
+      "portalFlash",
+      "cut",
+      "match"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "revealLine",
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.055,
+    "vignette": {
+      "a": 0.5,
+      "color": "#0E0800"
+    },
+    "bloom": 0.12
+  },
+  "sound": {
+    "bpm": 112,
+    "key": "Bb",
+    "mode": "major",
+    "preset": "swing",
+    "instruments": [
+      "piano",
+      "upright",
+      "clarinet",
+      "ride",
+      "brush",
+      "kick",
+      "hats"
+    ],
+    "drums": "full",
+    "sfx": "glassy",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.62,
+      "breakdown": 0.35,
+      "drop": 0.9,
+      "outro": 0.5
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Algieba",
+    "styleTag": "[smooth, confident]",
+    "lang": "en-GB"
+  },
+  "swatches": [
+    {
+      "hex": "#0E0C09",
+      "share": 0.28,
+      "role": "bg",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf",
+        "source/menu.pdf"
+      ]
+    },
+    {
+      "hex": "#F2E8D3",
+      "share": 0.2,
+      "role": "ink",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf",
+        "source/menu.pdf"
+      ]
+    },
+    {
+      "hex": "#C9A24A",
+      "share": 0.11,
+      "role": "accent",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf",
+        "source/menu.pdf"
+      ]
+    },
+    {
+      "hex": "#B9AC8E",
+      "share": 0.07,
+      "role": "ink2",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf"
+      ]
+    },
+    {
+      "hex": "#0A3D31",
+      "share": 0.07,
+      "role": "emeraldDeep",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf"
+      ]
+    },
+    {
+      "hex": "#F3E2A9",
+      "share": 0.06,
+      "role": "accent3",
+      "from": [
+        "source/print/deco.css",
+        "source/menu.pdf"
+      ]
+    },
+    {
+      "hex": "#0F6B53",
+      "share": 0.06,
+      "role": "accent2",
+      "from": [
+        "source/print/deco.css",
+        "source/invitation.pdf"
+      ]
+    },
+    {
+      "hex": "#7A5A1E",
+      "share": 0.06,
+      "role": "goldShade",
+      "from": [
+        "source/print/deco.css",
+        "source/menu.pdf"
+      ]
+    },
+    {
+      "hex": "#17140F",
+      "share": 0.06,
+      "role": "bg2",
+      "from": [
+        "source/print/deco.css"
+      ]
+    }
+  ],
+  "review": []
+}

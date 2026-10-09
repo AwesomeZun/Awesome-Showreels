@@ -1,0 +1,60 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "paper",
+    "audience": "life scientists, computational biologists, journal readers",
+    "title": "A spatial multiome atlas of human alveolar repair resolves a KRT8+ transitional niche",
+    "reviewed": "Written by hand from source/manuscript.md and the figure data (source/data); replaces the earlier classical-physics letter example."
+  },
+  "source": [
+    { "path": "source/manuscript.md", "kind": "paper", "notes": "fictional 2026 single-cell + spatial omics article: title, authors, abstract, Figure 1 legend (panels a-e), key numbers" },
+    { "path": "source/data", "kind": "other", "notes": "illustrative figure data from paper-src/simulate.py: cells.csv (4,900 sampled nuclei: cell type, UMAP, tissue x/y, pseudotime), markers.csv (dot plot)" },
+    { "path": "source/fonts", "kind": "other", "notes": "Inter and Source Serif 4 (google/fonts, SIL OFL 1.1)" }
+  ],
+  "mood": ["precise", "contemporary", "data-dense", "luminous", "confident"],
+  "rationale": {
+    "palette": "A current life-science article reads white page, near-black ink, and the figure's categorical palette as the only colour. bg is the page (#FFFFFF) and bg2 a cool figure-panel grey (#F3F5F8). The eight cell-type colours come from the figure data (atlas.json) and carry all chroma; the accent is the hero population's colour, the KRT8+ transitional vermillion (#E8553A), used for the claim and the niche. accent2 is the AT2 blue (#2F6FDB) for the trajectory start, accent3 the AT1 teal (#13A39A) for its end. Rules and axes are a cool grey (#C9CFD8).",
+    "type": "Modern journals set headlines and figure labels in a grotesque and the abstract in a text serif: Inter (600-700, tight -0.02 em tracking) for title, panel letters (bold lowercase a-e, as in the legend) and axis labels; Source Serif 4 for the abstract and author line; tabular figures for counts.",
+    "motion": "Data-first and exact: points move on purpose (dissociated cells -> UMAP -> tissue), no bounce, outQuint, short staggers by cell type. Every scene is one figure panel; transitions are match cuts on the same points.",
+    "sound": "Clean, modern, slightly luminous: ambient preset at 100 BPM in D dorian (open, curious, not dark). Marimba for the precise motion line (cells landing), glass top, soft pad, sub, light kick/rim/shaker. SFX minimal: blips and ticks for points and labels, drawon for trajectories.",
+    "narration": "Recommended for a paper explainer; this example ships music-led with captions off.",
+    "visuals": "No photos or characters. The figure is the hero: 4,900 cells drawn as dots that keep their identity across UMAP, pseudotime, the tissue section and the dot plot."
+  },
+  "palette": {
+    "bg": "#FFFFFF", "bg2": "#F3F5F8", "surface": "#FFFFFF",
+    "ink": "#111418", "ink2": "#3C4350", "muted": "#6B7380",
+    "accent": "#E8553A", "accent2": "#2F6FDB", "accent3": "#13A39A",
+    "ok": "#13A39A", "warn": "#F0A030", "deny": "#C63A2E",
+    "accentInk": "#C8402A", "onAccent": "#FFFFFF", "line": "#C9CFD8", "highlight": "#FDECE7"
+  },
+  "fonts": {
+    "display": "\"Inter\", \"Helvetica Neue\", Arial, sans-serif",
+    "sans": "\"Inter\", \"Helvetica Neue\", Arial, sans-serif",
+    "serif": "\"Source Serif 4\", Georgia, serif",
+    "mono": "ui-monospace, \"SF Mono\", monospace",
+    "cjk": "\"Pretendard\", \"Apple SD Gothic Neo\", \"Noto Sans CJK KR\", sans-serif",
+    "files": [
+      { "family": "Inter", "path": "source/fonts/Inter.ttf", "weight": "100 900", "style": "normal" },
+      { "family": "Source Serif 4", "path": "source/fonts/SourceSerif4.ttf", "weight": "200 900", "style": "normal" }
+    ]
+  },
+  "type": { "scale": [16, 20, 24, 30, 38, 48, 60, 76, 96, 128], "displayWeight": 650, "bodyWeight": 400, "tracking": -0.02, "trackingLabel": 0.06 },
+  "layout": {
+    "theme": "light", "margin": 112, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": { "enabled": false, "font": "\"Inter\", sans-serif", "size": 32, "fg": "#111418", "bg": "rgba(255,255,255,0.92)", "y": 972 },
+    "radius": 6
+  },
+  "motion": {
+    "pace": "medium", "spring": { "f": 2.0, "z": 0.9 }, "overshoot": 0.0, "ease": "outQuint",
+    "transitions": ["match", "cut"], "characters": false, "dataViz": true, "visualSources": ["vector", "data"], "typeReveal": ["revealLine", "kinetic"]
+  },
+  "post": { "grain": 0.0, "vignette": { "a": 0.0, "color": "#111418" }, "bloom": 0.0 },
+  "sound": {
+    "bpm": 100, "key": "D", "mode": "dorian", "preset": "ambient",
+    "instruments": ["pad", "marimba", "glass", "sub", "kick", "rim", "shaker"],
+    "drums": "light", "sfx": "minimal",
+    "energy": { "intro": 0.3, "groove": 0.55, "breakdown": 0.35, "drop": 0.7, "outro": 0.35 }
+  },
+  "narration": { "recommended": true, "voice": "Charon", "styleTag": "[clear, informative]", "lang": "en-US" },
+  "review": []
+}

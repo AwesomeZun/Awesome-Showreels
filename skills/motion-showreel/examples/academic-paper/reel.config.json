@@ -1,0 +1,50 @@
+{
+  "title": "Alveolar repair atlas",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    { "id": "title", "label": "The article", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "intro",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "tick:6 gap=0.05s soft" },
+        { "beat": 1, "from": "start", "sfx": "swish" },
+        { "beat": 3, "from": "start", "sfx": "blips" },
+        { "beat": 5, "from": "start", "sfx": "ding soft" }
+      ] },
+    { "id": "umap", "label": "a  Cell types", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "match", "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "whoosh" },
+        { "beat": 2, "from": "start", "sfx": "blip step=0" },
+        { "beat": 2.5, "from": "start", "sfx": "blip step=1" },
+        { "beat": 3, "from": "start", "sfx": "blip step=2" },
+        { "beat": 3.5, "from": "start", "sfx": "blip step=3" },
+        { "beat": 0, "from": "holdBar", "sfx": "drawon dur=0.9", "count": 1 }
+      ] },
+    { "id": "spatial", "label": "c  In tissue", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "match", "music": "drop",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "zoom" },
+        { "beat": 2, "from": "start", "sfx": "drawon dur=0.6" },
+        { "beat": 3, "from": "start", "sfx": "pop" },
+        { "beat": 0, "from": "holdBar", "sfx": "count", "count": 1 }
+      ] },
+    { "id": "markers", "label": "d  Markers", "minBars": 1, "maxBars": 2, "priority": 2, "inBeats": 3, "outBeats": 1, "in": "cut", "music": "groove",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "tick:16 gap=0.075s soft" },
+        { "beat": 2.5, "from": "start", "sfx": "blip step=2" }
+      ] },
+    { "id": "finding", "label": "The finding", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 0, "in": "cut", "music": "outro",
+      "cues": [
+        { "beat": 0, "from": "start", "sfx": "swell" },
+        { "beat": 1, "from": "start", "sfx": "count" },
+        { "beat": 3, "from": "start", "sfx": "ding soft" }
+      ] }
+  ],
+  "cuts": {
+    "short": { "bars": 9 },
+    "30": { "bars": 12 }
+  },
+  "poster": 12.0,
+  "captions": { "enabled": false },
+  "audio": { "transitionSfx": false }
+}

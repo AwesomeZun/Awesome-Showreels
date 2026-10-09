@@ -1,0 +1,200 @@
+{
+  "title": "The Tamsin Valley Courier",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "press",
+      "label": "Clock tower ticks again",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "cues": [
+        {
+          "beat": 0.75,
+          "from": "start",
+          "sfx": "whoosh dur=1.5 soft"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 3.5,
+          "from": "start",
+          "sfx": "swish soft"
+        },
+        {
+          "beat": 4,
+          "from": "start",
+          "sfx": "stamp soft"
+        },
+        {
+          "beat": 4.5,
+          "from": "start",
+          "sfx": "keytap:1.25 fast soft"
+        }
+      ]
+    },
+    {
+      "id": "photo",
+      "label": "Noon, Saturday",
+      "minBars": 1,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 2,
+      "outBeats": 1,
+      "in": "zoomInto",
+      "inFallback": "cut",
+      "music": "drop",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "every": 1,
+          "count": 12,
+          "sfx": "ding pitch=-12"
+        },
+        {
+          "beat": 0.25,
+          "from": "start",
+          "sfx": "swish soft"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "keytap:1 fast soft"
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "swish"
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "label": "By the numbers",
+      "minBars": 2,
+      "maxBars": 4,
+      "priority": 1,
+      "inBeats": 7,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh dur=1 soft"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "every": 1,
+          "count": 6,
+          "sfx": "stamp"
+        },
+        {
+          "beat": 5,
+          "from": "start",
+          "sfx": "ding pitch=-5 soft"
+        },
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "keytap:8 fast soft"
+        },
+        {
+          "beat": 0,
+          "from": "outStart",
+          "sfx": "swish"
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "label": "Covering the valley since 1891",
+      "minBars": 1,
+      "maxBars": 3,
+      "priority": 1,
+      "inBeats": 4,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": [
+        {
+          "beat": 0,
+          "from": "start",
+          "sfx": "whoosh dur=1 soft"
+        },
+        {
+          "beat": 1,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 2,
+          "from": "start",
+          "sfx": "stamp"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "ding pitch=-12"
+        },
+        {
+          "beat": 3,
+          "from": "start",
+          "sfx": "keytap:0.75 fast soft"
+        }
+      ]
+    }
+  ],
+  "cuts": {
+    "short": {
+      "bars": 7,
+      "label": "short",
+      "scenes": {
+        "press": {
+          "bars": 2
+        },
+        "photo": {
+          "bars": 1
+        },
+        "numbers": {
+          "bars": 2
+        },
+        "end": {
+          "bars": 2
+        }
+      }
+    },
+    "30": {
+      "bars": 12,
+      "label": "30 s"
+    }
+  },
+  "poster": 4.0,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": true
+  }
+}

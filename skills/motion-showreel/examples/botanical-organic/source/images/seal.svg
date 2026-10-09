@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Mistfold seal">
+  <title>Mistfold seal</title>
+  <desc>A terracotta ring around a sprig of two leaves and a bud, with MISTFOLD across the top and TEA GARDEN · 1962 below. Terracotta #C2673F on Oat; Oat on Night moss for evening pages.</desc>
+  <defs>
+    <path id="arc-top" d="M 50 200 A 150 150 0 0 1 350 200"/>
+    <path id="arc-bottom" d="M 40 200 A 160 160 0 0 0 360 200"/>
+  </defs>
+  <g fill="none" stroke="#C2673F">
+    <circle cx="200" cy="200" r="186" stroke-width="10"/>
+    <circle cx="200" cy="200" r="134" stroke-width="3"/>
+  </g>
+  <g fill="#C2673F" font-family="Alegreya Sans, sans-serif" font-weight="500">
+    <text font-size="34" letter-spacing="8"><textPath href="#arc-top" startOffset="50%" text-anchor="middle">MISTFOLD</textPath></text>
+    <text font-size="21" letter-spacing="6"><textPath href="#arc-bottom" startOffset="50%" text-anchor="middle">TEA GARDEN · 1962</textPath></text>
+  </g>
+  <circle cx="41" cy="200" r="4.5" fill="#C2673F"/>
+  <circle cx="359" cy="200" r="4.5" fill="#C2673F"/>
+  <!-- the sprig: two leaves and a bud (stem, bud, sheath, upper leaf, lower leaf); midribs are oat gaps -->
+  <g id="sprig" transform="translate(200 202) scale(0.84) translate(-198 -189)">
+    <path id="stem" d="M196 312 C 198 268, 206 214, 204 136" fill="none" stroke="#C2673F" stroke-width="7" stroke-linecap="round"/>
+    <path id="bud" d="M204 142 C 190 120, 194 92, 213 66 C 224 94, 221 124, 204 142 Z" fill="#C2673F"/>
+    <path id="sheath" d="M203 150 C 188 142, 182 124, 186 108 C 196 118, 203 132, 203 150 Z" fill="#C2673F"/>
+    <path id="leaf-upper" d="M208 176 C 252 186, 289 147, 301 104 C 258 103, 211 128, 208 176 Z" fill="#C2673F"/>
+    <path id="leaf-lower" d="M196 238 C 153 254, 112 222, 95 181 C 139 174, 188 192, 196 238 Z" fill="#C2673F"/>
+    <g fill="none" stroke="#F1E9D8" stroke-width="3.2" stroke-linecap="round">
+      <path d="M212 170 Q 255 142 292 111"/>
+      <path d="M192 232 Q 146 206 104 186"/>
+      <path d="M206 132 Q 207 104 212 78"/>
+    </g>
+  </g>
+</svg>

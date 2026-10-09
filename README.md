@@ -79,6 +79,85 @@ Each example's README walks through its source, the tone pass decisions, the cap
 
 ---
 
+## Fourteen sources. Fourteen looks. Zero presets.
+
+The two reels above are not two styles to pick from. Here are twelve more, each made from its own source: a press release, a competition brief, a zine, a game jam, a tea garden, a single-cell paper, a workshop handout, a landing page, a ryokan, a jazz-age invitation, a small-town newspaper and a race-timing app. The palette, the type, the motion grammar and the music all came out of the material. No two share a look, and none of them is a template.
+
+<table>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/editorial-luxe"><img src="assets/readme/wall-editorial-luxe.webp" width="100%" alt="Les Heures Blanches: hairline Bodoni type, ivory and black, slow editorial reveals"/></a>
+<br/><b>Maison Veyrande</b> · <code>editorial-luxe</code>
+<br/><sub>a fashion house press release and lookbook notes<br/>→ Bodoni hairlines, slow reveals, ivory and black · 80 BPM piano and strings</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/swiss-grid"><img src="assets/readme/wall-swiss-grid.webp" width="100%" alt="Haus für Musik: a strict Swiss grid, one red, numbers set at poster size"/></a>
+<br/><b>Haus für Musik</b> · <code>swiss-grid</code>
+<br/><sub>an architecture competition brief and CSS tokens<br/>→ 12-column grid, one red, numbers at poster size · 124 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/riso-zine"><img src="assets/readme/wall-riso-zine.webp" width="100%" alt="PAPER JAM #07: misregistered risograph inks, stamps and jumpy cuts"/></a>
+<br/><b>PAPER JAM #07</b> · <code>riso-zine</code>
+<br/><sub>a zine README and house style<br/>→ misregistered riso inks, stamps, jumpy cuts · 160 BPM</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/pixel-arcade"><img src="assets/readme/wall-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
+<br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
+<br/><sub>a game-jam README and a 16-colour palette<br/>→ pixel art, CRT glow, a high-score end card · 144 BPM chiptune</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/botanical-organic"><img src="assets/readme/wall-botanical-organic.webp" width="100%" alt="Mistfold: watercolour tea garden, a tea flush grows in time-lapse, a balm tin at dusk, a flat-lay end card"/></a>
+<br/><b>Mistfold</b> · <code>botanical-organic</code>
+<br/><sub>a tea-garden story and brand notes<br/>→ watercolour, a botanically real time-lapse of a tea flush · 96 BPM nylon guitar and marimba</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/academic-paper"><img src="assets/readme/wall-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
+<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
+<br/><sub>a single-cell and spatial omics manuscript and its data<br/>→ 4,900 cells keep their identity: UMAP, tissue, dot plot · 100 BPM D dorian</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sketchnote"><img src="assets/readme/wall-sketchnote.webp" width="100%" alt="Visual Notes Lab: a whiteboard wall of text is boxed, arrowed and starred in marker, one camera take"/></a>
+<br/><b>Visual Notes Lab</b> · <code>sketchnote</code>
+<br/><sub>facilitator notes and a handout<br/>→ markers write themselves on one whiteboard, one camera take · 104 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/neo-brutal"><img src="assets/readme/wall-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
+<br/><b>kablok</b> · <code>neo-brutal</code>
+<br/><sub>a landing page's CSS and BRAND.md<br/>→ hard shadows, slabs, a cursor that presses · 112 BPM funk</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sumi-wabi"><img src="assets/readme/wall-sumi-wabi.webp" width="100%" alt="余白庵: a drop of sumi blooms on washi, a raku bowl in three strokes, an ensō and one vermilion seal"/></a>
+<br/><b>余白庵</b> · <code>sumi-wabi</code>
+<br/><sub>a ryokan site and its shitsurae notes<br/>→ sumi bleeding into washi, vertical type, one vermilion seal · 72 BPM koto in hirajōshi</sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/art-deco"><img src="assets/readme/wall-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
+<br/><b>THE EMERALD FAN</b> · <code>art-deco</code>
+<br/><sub>an invitation, a menu and a house style<br/>→ gilded stepped frames, a fan, a sunburst · 112 BPM swing: walking bass, ride, clarinet</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/newsprint"><img src="assets/readme/wall-newsprint.webp" width="100%" alt="The Tamsin Valley Courier: page A1 rolls off the press, a halftone photo, numbers set as cast slugs"/></a>
+<br/><b>The Tamsin Valley Courier</b> · <code>newsprint</code>
+<br/><sub>a front page and a stylebook<br/>→ a printing press, halftone, cast slugs, a red plate · 96 BPM</sub>
+</td>
+<td align="center" valign="top" width="33%">
+<a href="skills/motion-showreel/examples/sports-kinetic"><img src="assets/readme/wall-sports-kinetic.webp" width="100%" alt="VELMORA 42: a countdown and gun, live splits per kilometre, 1,323,000 live splits, the finish card"/></a>
+<br/><b>VELMORA 42</b> · <code>sports-kinetic</code>
+<br/><sub>a race-timing app README and BRAND.md<br/>→ broadcast type, real splits as bars, racing stripes · 176 BPM drum and bass</sub>
+</td>
+</tr>
+</table>
+
+<sub>Each loop is that example's short cut played at 2x, silent. Every project, brand and data set is fictional and was written for this repo; the reels say so on screen. Open any folder for its source, its <code>style.json</code> with the reasoning behind every decision, and its scenes.</sub>
+
+---
+
 ## Best moments
 
 Eight beats from the two example reels. Left: Mochi Notes. Right: spark-bench.
@@ -225,7 +304,7 @@ python3 -m pip install numpy scipy pillow opencv-python pymupdf fonttools brotli
 
 ## Case studies
 
-The method was not invented for this repo. It was distilled from four real productions that came before it, and two of their reels play right here.
+The method was not invented for this repo. It was distilled from four real productions that came before it, and all four of their reels play right here.
 
 <table>
 <tr>
@@ -240,12 +319,19 @@ The method was not invented for this repo. It was distilled from four real produ
 <br/><sub>The tool's Catppuccin palette, one giant word per command, real terminal captures tilted in 3D with a zoom to the key line, and glitch and typing transitions.</sub>
 </td>
 </tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<img src="assets/readme/case-kbeautygate.webp" width="100%" alt="K-BeautyGate 30-second showreel at 1.5x: plush pastel bunny mascots spring in, the real K-BeautyGate app UI animates inside a phone, a dark climax, and the mascot lineup bounces on the beat"/>
+<br/><b>K-BeautyGate</b> · hackathon pitch reel
+<br/><sub>120 BPM, 30 s: a cosmetics-ad × AI-agent product tour. Mascot poses lifted with macOS Vision, springy character motion with blinks and jelly, the real app UI animated as layers inside a phone, and a mascot lineup bouncing on the beat.</sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://github.com/AwesomeZun/Project-FlyGate"><img src="assets/readme/case-flygate.webp" width="100%" alt="FlyGate showreel preview: a fruit-fly brain decision circuit drawn as data, narrated scenes with burned-in captions and terminal shots"/></a>
+<br/><b><a href="https://github.com/AwesomeZun/Project-FlyGate">FlyGate</a></b> · narrated research reels
+<br/><sub>An intro, a full narrated reel (28 scenes over 250 s), 15- and 30-second shorts and vertical versions. Scene lengths follow the voice, captions are burned in, and the Gemini narration is checked by speech-to-text.</sub>
+</td>
+</tr>
 </table>
-
-- **K-BeautyGate** · hackathon pitch: a 30-second, 120 BPM product tour with Vision-lifted mascot poses and the real app UI in a phone; 24 agents took it from a hand-built harness to its first full render in about 25 minutes.
-- **[FlyGate](https://github.com/AwesomeZun/Project-FlyGate)** · narrated reels: an intro, a full narrated reel (28 scenes over 250 s), 15- and 30-second shorts and vertical versions, with Gemini narration verified by speech-to-text.
-
-<sub>The two previews are hotlinked from their own repos. K-BeautyGate and FlyGate are described here as text only; their media is not part of this repo.</sub>
 
 <details>
 <summary><b>More about K-BeautyGate and FlyGate</b></summary>
