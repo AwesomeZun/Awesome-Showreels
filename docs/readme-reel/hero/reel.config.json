@@ -1,0 +1,159 @@
+{
+  "title": "Awesome Showreels",
+  "style": "style.json",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 24,
+  "beatsPerBar": 4,
+  "scenes": [
+    {
+      "id": "intro",
+      "label": "Any source in",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 6,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "intro",
+      "cues": []
+    },
+    {
+      "id": "styles",
+      "label": "14 looks",
+      "minBars": 4,
+      "maxBars": 4,
+      "priority": 1,
+      "inBeats": 14,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "groove",
+      "cues": []
+    },
+    {
+      "id": "cases",
+      "label": "4 productions",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 2,
+      "outBeats": 1,
+      "in": "cut",
+      "music": "drop",
+      "cues": []
+    },
+    {
+      "id": "end",
+      "label": "Install",
+      "minBars": 2,
+      "maxBars": 2,
+      "priority": 1,
+      "inBeats": 3,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "outro",
+      "cues": []
+    },
+    {
+      "id": "fstyle",
+      "label": "feat-style",
+      "minBars": 3,
+      "maxBars": 3,
+      "priority": 3,
+      "optional": true,
+      "inBeats": 0,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "groove",
+      "cues": []
+    },
+    {
+      "id": "fcarriers",
+      "label": "feat-carriers",
+      "minBars": 3,
+      "maxBars": 3,
+      "priority": 3,
+      "optional": true,
+      "inBeats": 0,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "groove",
+      "cues": []
+    },
+    {
+      "id": "ftempo",
+      "label": "feat-tempo",
+      "minBars": 3,
+      "maxBars": 3,
+      "priority": 3,
+      "optional": true,
+      "inBeats": 0,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "groove",
+      "cues": []
+    },
+    {
+      "id": "fsound",
+      "label": "feat-sound",
+      "minBars": 3,
+      "maxBars": 3,
+      "priority": 3,
+      "optional": true,
+      "inBeats": 0,
+      "outBeats": 0,
+      "in": "cut",
+      "music": "groove",
+      "cues": []
+    }
+  ],
+  "cuts": {
+    "hero": {
+      "bars": 10,
+      "label": "README hero",
+      "exclude": [
+        "fstyle",
+        "fcarriers",
+        "ftempo",
+        "fsound"
+      ]
+    },
+    "fstyle": {
+      "bars": 3,
+      "label": "feat-style",
+      "only": [
+        "fstyle"
+      ]
+    },
+    "fcarriers": {
+      "bars": 3,
+      "label": "feat-carriers",
+      "only": [
+        "fcarriers"
+      ]
+    },
+    "ftempo": {
+      "bars": 3,
+      "label": "feat-tempo",
+      "only": [
+        "ftempo"
+      ]
+    },
+    "fsound": {
+      "bars": 3,
+      "label": "feat-sound",
+      "only": [
+        "fsound"
+      ]
+    }
+  },
+  "poster": 7.0,
+  "captions": {
+    "enabled": false
+  },
+  "audio": {
+    "transitionSfx": false
+  }
+}

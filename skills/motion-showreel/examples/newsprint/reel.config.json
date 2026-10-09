@@ -68,7 +68,7 @@
           "from": "start",
           "every": 1,
           "count": 12,
-          "sfx": "ding pitch=-12"
+          "sfx": "ding pitch=-7"
         },
         {
           "beat": 0.25,
@@ -156,7 +156,7 @@
         {
           "beat": 3,
           "from": "start",
-          "sfx": "ding pitch=-12"
+          "sfx": "ding pitch=-7"
         },
         {
           "beat": 3,

@@ -87,7 +87,7 @@ for paid generation); otherwise default to a 30-s and a 15-s cut, music-led unle
    dotfiles or configs. Never ask for the key in chat and never suggest a `!` command for it: both land in the
    transcript, and `!` commands have no terminal for hidden input. Ask the user to run
    `python3 <S>/narration/tts_gemini.py key save` in a separate terminal window (macOS Keychain, typed hidden; write
-   out the absolute path of S), or to export `GEMINI_API_KEY` in the terminal they start Claude Code from, before
+   out the absolute path of S), or to export `GEMINI_API_KEY` in the terminal they start their agent from, before
    starting it. Then run `key status` (names the source, never the key) and `key check` (free model lookup) yourself.
    Plan with `--dry-run` first. Dry-run clips and the captions timed from them are placeholders: render and build
    refuse them in deliverables. (`references/narration.md` section 9)
@@ -183,9 +183,9 @@ Captions burn in when reel.config `captions.enabled` is true, or, when reel.conf
 6. Render, then build the HTML with every cut under a new version. An MP4 without its project cannot be
    lengthened at the same pace: rebuild the project, never time-stretch the video or the music.
 
-**Many scenes or a deadline:** offer the multi-agent production in `templates/showreel-workflow.js` (a Claude Code
+**Many scenes or a deadline:** offer the multi-agent production in `templates/showreel-workflow.js` (on Claude Code a
 Workflow script: tone, storyboard, assets, narration, build/review/fix per scene, integrator checks; about 25-40
-agents) and run it only with the user's go-ahead; `stopAfter: "tone"` or `"storyboard"` pauses for approval, and
+agents; on other agents, run the same phases one after another) and run it only with the user's go-ahead; `stopAfter: "tone"` or `"storyboard"` pauses for approval, and
 narration stays a TTS dry run unless `liveTts: true`. Workflow agents cannot ask for a key: before passing
 `liveTts: true`, have the user set up their own key and see `key status` and `key check` pass in this session (a file
 or variable the user names goes in `ttsEnvFile` / `ttsApiKeyEnv`). Or follow `references/multi-agent.md` with

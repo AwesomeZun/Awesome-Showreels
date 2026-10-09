@@ -1,0 +1,6 @@
+{
+  "name": "awesome-showreels",
+  "version": "1.2.0",
+  "description": "Turn any repo, paper, deck or website into a motion-graphics showreel that looks like its source (MP4 + single-file HTML).",
+  "contextFileName": "GEMINI.md"
+}

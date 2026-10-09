@@ -29,3 +29,6 @@ venv/
 .DS_Store
 .env
 .env.*
+
+# README hero: clip frames prepared from the examples' renders and the case-study reels (docs/readme-reel/hero/README.md)
+docs/readme-reel/hero/assets/clips/
