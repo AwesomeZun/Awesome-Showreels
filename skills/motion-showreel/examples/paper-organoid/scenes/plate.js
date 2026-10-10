@@ -1,36 +1,50 @@
-// plate (2 bars, 3 in the 30): panel c. The protocol as a notebook timeline (ENR medium days 0-7, the 24-h WNT pulse
-// drawn as a block that slides to day 2, 3, 4, 5 with the columns it belongs to), and the 96-well plate under it
-// filling well by well in a sweep (beats 2-4.5), each well's colour its enterocyte share; on beat 5 the day-4 columns
-// ring and the best condition is marked. Hold: a highlight passes over the plate row by row.
+// plate (2 bars, 3 in the 30): the protocol and the plate. On the left page the pen draws the week as a line and the
+// four ways to give the 24-hour WNT pulse (day 2, 3, 4 or 5) as bars under it, with seeding and the day-7 readout. On
+// the right a 96-well plate map fills column by column from the plate data (deeper magenta = more mature enterocytes)
+// while the pipette sketch moves from well to well; then the pen rings the day-4 columns. The page turns at the end.
 (() => {
-  const CONDCOLS = { control: [1, 2], 'day 2': [3, 4, 5], 'day 3': [6, 7, 8], 'day 4': [9, 10], 'day 5': [11, 12] };
-  const shade = (v) => toHex(mix('#F6E4EC', '#8E0F43', clamp((v - 10) / 40)));
+  const PULSES = [['pulse d2', 2], ['pulse d3', 3], ['pulse d4', 4], ['pulse d5', 5]];
+  function right(g, b, lt, B, pp) {
+    const k = clamp((b - 1) / 3.2) * 96, P = BOOK.plate(g, 60, 190, 680, k);
+    g.font = `600 18px ${FAM.mono}`; g.fillStyle = 'rgba(38,34,29,0.75)'; g.fillText('villin+ enterocytes, day 7', 60, 160);
+    if (pp && k > 0 && k < 96) {                                       // the pipette over the well being filled
+      const i = Math.floor(k), c = Math.floor(i / 8), r = i % 8, [x, y] = P.wellAt(c, r), im = BOOK.ill('pipette');
+      if (im) { const h = 300, w = h * im.naturalWidth / im.naturalHeight; g.save(); g.globalAlpha = 0.9; g.drawImage(im, x - w * 0.72, y - h + 4, w, h); g.restore(); }
+    }
+    const ring = clamp((b - 4.4) / 0.6);
+    if (ring > 0) {
+      const [x0, y0] = P.wellAt(8, 0), [x1, y1] = P.wellAt(9, 7), cx = (x0 + x1) / 2, cy = (y0 + y1) / 2, rx = (x1 - x0) / 2 + 40, ry = (y1 - y0) / 2 + 40;
+      const pts = []; for (let a = -1.9; a < -1.9 + TAU * 1.05; a += 0.12) pts.push([cx + Math.cos(a) * rx, cy + Math.sin(a) * ry]);
+      BOOK.inkLine(g, pts, ring, { color: BOOK.MAG, w: 3.4, seed: 4 });
+    }
+    return BOOK.notes(g, [{ s: 'd4: most enterocytes!', x: 420, y: 880, t0: 5 * B, cps: 22, size: 44, color: BOOK.MAG }], lt);
+  }
   SCENES['plate'] = {
     draw(ctx, t, env) {
-      const O = window.ORG, D = O.data(), B = env.beatSec, b = env.lt / B;
-      O.page(ctx);
-      O.txt(ctx, 'c', 200, 120, { size: 40, weight: 700, color: C.accent }); O.txt(ctx, 'One 24-h WNT pulse, moved day by day', 244, 118, { size: 28, weight: 600 });
-      // timeline
-      const TX = 260, TW = 1300, TY = 230, dx = (d) => TX + d / 7 * TW;
-      ctx.fillStyle = rgba(C.accent2, 0.18); ctx.fillRect(TX, TY, TW, 34); O.txt(ctx, 'ENR medium', TX + 12, TY + 24, { size: 20, mono: true, color: C.accent2 });
-      for (let d = 0; d <= 7; d++) { ctx.fillStyle = C.ink; ctx.fillRect(dx(d), TY + 40, 1.5, 10); O.txt(ctx, `D${d}`, dx(d), TY + 74, { size: 18, mono: true, align: 'center' }); }
-      const pd = 2 + Math.min(3, Math.floor(clamp(b / 2) * 4)), pulseX = dx(pd);
-      ctx.fillStyle = C.accent; ctx.fillRect(pulseX, TY - 6, TW / 7, 46); O.txt(ctx, `WNT pulse · day ${pd}`, pulseX + 8, TY + 24, { size: 20, mono: true, weight: 600, color: '#FFFFFF' });
-      // the plate
-      const PX = 420, PY = 400, CW = 76, RH = 58;
-      rr(ctx, PX - 40, PY - 50, 12 * CW + 80, 8 * RH + 90, 22); ctx.fillStyle = rgba('#FFFFFF', 0.7); ctx.fill(); ctx.strokeStyle = rgba(C.ink, 0.35); ctx.lineWidth = 2; ctx.stroke();
-      for (let c = 1; c <= 12; c++) O.txt(ctx, `${c}`, PX + (c - 0.5) * CW, PY - 18, { size: 18, mono: true, align: 'center', color: C.muted });
-      'ABCDEFGH'.split('').forEach((r, i) => O.txt(ctx, r, PX - 22, PY + (i + 0.6) * RH, { size: 18, mono: true, align: 'center', color: C.muted }));
-      D.plate.forEach(([r, c, cond, v], k) => {
-        const i = r.charCodeAt(0) - 65, x = PX + (c - 0.5) * CW, y = PY + (i + 0.5) * RH, p = clamp((b - 2 - (c - 1) * 0.15 - i * 0.03) * 3);
-        ctx.fillStyle = rgba('#FFFFFF', 1); circle(ctx, x, y, 24); ctx.fill(); ctx.strokeStyle = rgba(C.ink, 0.3); ctx.lineWidth = 1.5; ctx.stroke();
-        if (p > 0) { ctx.fillStyle = shade(v); ctx.globalAlpha = p; circle(ctx, x, y, 22 * Ease.ioSine(p)); ctx.fill(); ctx.globalAlpha = 1; }
+      const B = env.beatSec, b = env.lt / B + 1e-4, n = Math.round(env.dur / B), lt = env.lt;
+      BOOK.desk(ctx); BOOK.spread(ctx, { pages: [5, 6] });
+      let head = null;
+      BOOK.onPage(ctx, 'L', g => {
+        const items = [{ s: 'Protocol', x: 60, y: 170, t0: 0.1 * B, cps: 20, size: 60, weight: 600 }];
+        const X0 = 90, X1 = 720, Y = 330, dx = (d) => X0 + d / 7 * (X1 - X0);
+        BOOK.inkLine(g, [[X0, Y], [X1, Y]], clamp((b - 0.6) / 0.6), { w: 3, seed: 2 });
+        g.font = `500 16px ${FAM.mono}`; g.fillStyle = 'rgba(38,34,29,0.75)'; g.textAlign = 'center';
+        for (let d = 0; d <= 7; d++) if (b > 0.6 + d * 0.08) { g.fillRect(dx(d) - 1, Y - 8, 2, 16); g.fillText('d' + d, dx(d), Y + 32); }
+        g.textAlign = 'left';
+        items.push({ s: 'seed', x: dx(0) - 20, y: Y - 26, t0: 1.1 * B, cps: 20, size: 30 }, { s: 'read', x: dx(7) - 34, y: Y - 26, t0: 1.3 * B, cps: 20, size: 30 });
+        PULSES.forEach(([s, d], i) => {
+          const y = 420 + i * 84, k = clamp((b - 1.6 - i * 0.35) / 0.4), hi = d === 4;
+          if (k > 0) { g.fillStyle = rgba(hi ? BOOK.MAG : '#8A8174', 0.75); g.fillRect(dx(d), y - 18, (dx(d + 1) - dx(d)) * Ease.outC(k), 26); }
+          items.push({ s, x: 60, y: y + 4, t0: (1.6 + i * 0.35) * B, cps: 24, size: 34, color: hi ? BOOK.MAG : '#26221D' });
+        });
+        items.push({ s: 'one 24-h pulse of WNT per column', x: 60, y: 800, t0: 3.4 * B, cps: 24, size: 36, color: '#5A5248' });
+        head = BOOK.notes(g, items, lt); const p = BOOK.PG.L; if (head) head = [head[0] + p.x, head[1] + p.y];
       });
-      // column labels and the best condition
-      Object.entries(CONDCOLS).forEach(([k, cols]) => { const x0 = PX + (cols[0] - 1) * CW, x1 = PX + cols[cols.length - 1] * CW; O.txt(ctx, k, (x0 + x1) / 2, PY + 8 * RH + 30, { size: 18, mono: true, align: 'center', color: k === 'day 4' ? C.accentInk : C.ink2, a: clamp(b - 3) }); });
-      if (b > 5) { const a = Ease.ioSine(clamp((b - 5) / 0.6)), x0 = PX + 8 * CW, w = 2 * CW; ctx.strokeStyle = rgba(C.accent, a); ctx.lineWidth = 4; rr(ctx, x0 + 4, PY - 4, w - 8, 8 * RH + 8, 16); ctx.stroke(); O.note(ctx, 'best: pulse on day 4', x0 + w + 40, PY + 4 * RH, clamp((b - 5.2) * 1.5), { size: 26, color: C.accentInk }); }
-      if (b > 6) { const r = Math.floor((b - 6) * 4) % 8; ctx.fillStyle = rgba('#FFFFFF', 0.25); ctx.fillRect(PX, PY + r * RH, 12 * CW, RH); }
-      for (let i = 0; i < 6; i++) { ctx.fillStyle = shade(10 + i * 8); ctx.fillRect(1500 + i * 40, 480, 40, 18); } O.txt(ctx, 'enterocytes 10–50%', 1500, 530, { size: 18, mono: true, color: C.muted });
+      let headR = null;
+      BOOK.onPage(ctx, 'R', g => { headR = right(g, b, lt, B, true); const p = BOOK.PG.R; if (headR) headR = [headR[0] + p.x, headR[1] + p.y]; });
+      const ph = b >= 4.4 ? headR : head;
+      if (ph && b < n - 0.8) BOOK.pen(ctx, ph[0], ph[1], { rot: 0.05 });
+      const tk = clamp((b - (n - 0.8)) / 0.8); BOOK.turn(ctx, tk, g => right(g, 99, 1e9, B, false), 8);
     },
   };
 })();

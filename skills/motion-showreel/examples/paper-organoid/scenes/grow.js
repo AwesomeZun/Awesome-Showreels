@@ -1,31 +1,38 @@
-// grow (2 bars, 3 in the 30): panel b, days 0-7 in brightfield. One organoid in a large field of view grows on a
-// continuous clock (the day counter in mono runs 0 -> 7 over beats 0-6): a single cell, a smooth cyst, then crypt
-// buds pushing out of the wall from day 2, one more each day. Notes are written into the margin as the days pass
-// (D2 first buds, D4 WNT pulse 24 h, D7 harvest), and the growth curve draws itself under the field.
+// grow (2 bars, 4 in the 30): seven days in a taped print. The brightfield print on the left page is alive: one stem
+// cell divides into a cluster, the cluster hollows into a cyst, and from day 2 crypt buds push out on the days the
+// growth data gives, under a phase halo, with the day stamp running. On the right the pen keeps the log as the days
+// pass, and draws the growth curve (diameter by day) as far as today. On the last beat the page turns.
 (() => {
-  const BUDS = [[0.4, 2.0], [2.3, 2.7], [4.1, 3.4], [1.3, 4.1], [5.3, 4.8], [3.2, 5.5], [0.9, 6.2]];   // [angle, day it starts]
+  const LOG = [[0, 'd0  one LGR5+ cell in a dome'], [1, 'd1  a hollow cyst'], [2, 'd2  first crypt buds!'], [4, 'd4  five buds, growing fast'], [6.9, 'd7  560 µm, budding']];
+  function right(g, day, lt, B) {
+    const items = [{ s: 'WNT timing', x: 130, y: 54, t0: 0, cps: 99, size: 30 }, { s: 'days 0-7', x: 522, y: 54, t0: 0, cps: 99, size: 30 }];
+    LOG.forEach(([d, s], i) => { const t0 = dayTime(d, B); items.push({ s, x: 50, y: 170 + i * 66, t0, cps: 22, size: 42 }); });
+    // the curve: axes, then diameter by day up to today
+    const X0 = 90, Y0 = 860, CW = 620, CH = 340;
+    BOOK.inkLine(g, [[X0, Y0 - CH], [X0, Y0], [X0 + CW, Y0]], clamp(lt / (0.8 * B)), { w: 2.2, seed: 5 });
+    g.font = `500 15px ${FAM.mono}`; g.fillStyle = 'rgba(38,34,29,0.7)'; g.textAlign = 'center';
+    for (let d = 0; d <= 7; d++) g.fillText(String(d), X0 + d / 7 * CW, Y0 + 24);
+    g.textAlign = 'left'; g.fillText('diameter, µm', X0 + 8, Y0 - CH - 10); g.fillText('day', X0 + CW - 30, Y0 + 46);
+    const pts = []; for (let d = 0; d <= day + 1e-6; d += 0.125) pts.push([X0 + d / 7 * CW, Y0 - BOOK.diameter(d) / 600 * CH]);
+    if (pts.length > 1) BOOK.inkLine(g, pts, 1, { color: BOOK.MAG, w: 3, amp: 0.5, seed: 9 });
+    return BOOK.notes(g, items, lt) || (pts.length ? pts[pts.length - 1] : null);
+  }
+  let dayTime = () => 0;
   SCENES['grow'] = {
     draw(ctx, t, env) {
-      const O = window.ORG, D = O.data(), B = env.beatSec, b = env.lt / B;
-      O.page(ctx);
-      O.txt(ctx, 'b', 200, 120, { size: 40, weight: 700, color: C.accent }); O.txt(ctx, 'Brightfield, every 6 hours', 244, 118, { size: 28, weight: 600 });
-      const day = clamp(b / 6) * 7, FX = 200, FY = 160, FW = 980, FH = 640;
-      O.field(ctx, FX, FY, FW, FH, () => {
-        const r = 14 + 210 * (1 - Math.exp(-day / 3.2)), buds = BUDS.filter(([, d0]) => day > d0).map(([a, d0]) => [a, Math.min(1, (day - d0) / 1.2)]);
-        O.organoid(ctx, FX + FW / 2, FY + FH / 2, r, buds, { wob: day });
-        for (let i = 0; i < 4; i++) O.organoid(ctx, FX + 80 + i * 260 + Math.sin(i) * 30, FY + (i % 2 ? 560 : 90), 10 + day * 3 * (0.4 + i * 0.1), [], { wob: i });   // neighbours
+      const B = env.beatSec, b = env.lt / B + 1e-4, n = Math.round(env.dur / B), lt = env.lt;
+      const span = n - 1.2, day = 7 * Ease.ioSine(clamp((b - 0.2) / span));
+      dayTime = (d) => (0.2 + span * Math.acos(1 - 2 * clamp(d / 7)) / Math.PI) * B;   // when the clock reaches day d
+      BOOK.desk(ctx); BOOK.spread(ctx, { pages: [3, 4] });
+      BOOK.onPage(ctx, 'L', g => {
+        BOOK.write(g, 'brightfield, every 6 h', 230, 122, 99, { size: 34, color: '#5A5248' });
+        BOOK.print(g, 50, 150, 700, 620, 0.015, clamp(b / 0.5) + 0.001, { draw: (q, w, h) => BOOK.field(q, w, h, day), foot: 26, caption: 'organoid 14 · well C4' });
+        BOOK.tape(g, 70, 160, 140, -0.7, clamp(b / 0.3)); BOOK.tape(g, 732, 760, 140, -0.62, clamp(b / 0.3));
       });
-      O.txt(ctx, `DAY ${day.toFixed(1)}`, FX + 24, FY + 50, { size: 30, mono: true, weight: 600, color: C.ink });
-      ctx.fillStyle = C.ink; ctx.fillRect(FX + FW - 170, FY + FH - 36, 140, 5); O.txt(ctx, '100 µm', FX + FW - 100, FY + FH - 48, { size: 18, mono: true, align: 'center' });
-      // margin notes
-      [['D2  first crypt buds', 2], ['D4  WNT pulse, 24 h', 4], ['D7  harvest + stain', 6.6]].forEach(([s, d], i) => O.note(ctx, s, 1240, 260 + i * 70, clamp((day - d) * 1.5), { size: 26, color: i === 1 ? C.accentInk : '#4E5A6E' }));
-      // growth curve
-      const GX = 1240, GY = 560, GW = 520, GH = 220;
-      ctx.strokeStyle = rgba(C.ink, 0.5); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(GX, GY); ctx.lineTo(GX, GY + GH); ctx.lineTo(GX + GW, GY + GH); ctx.stroke();
-      ctx.strokeStyle = C.accent3; ctx.lineWidth = 3; ctx.beginPath();
-      D.growth.forEach(([d, dia], i) => { if (d > day) return; const x = GX + d / 7 * GW, y = GY + GH - dia / 600 * GH; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke();
-      O.txt(ctx, 'diameter (µm)', GX, GY - 14, { size: 18, mono: true, color: C.muted });
-      O.txt(ctx, 'days', GX + GW, GY + GH + 30, { size: 18, mono: true, color: C.muted, align: 'right' });
+      let head = null;
+      BOOK.onPage(ctx, 'R', g => { head = right(g, day, lt, B); const p = BOOK.PG.R; if (head) head = [head[0] + p.x, head[1] + p.y]; });
+      if (head && b < n - 0.8) BOOK.pen(ctx, head[0], head[1], { rot: 0.05 });
+      const tk = clamp((b - (n - 0.8)) / 0.8); BOOK.turn(ctx, tk, g => right(g, 7, 1e9, B), 6);
     },
   };
 })();

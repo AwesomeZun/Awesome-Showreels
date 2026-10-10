@@ -1,35 +1,38 @@
-// result (2 bars; the end card): panel d. Day-7 enterocyte share: control vs day-4 pulse, each well a dot over its
-// bar; 2.0x counts up; on the right a villin-stained organoid (brush border magenta, nuclei blue) breathes in its
-// field; the sentence and the citation. Hold: the stained organoid turns slowly, the dots settle.
+// result (2 bars, 3 in the 30; the end): two times the enterocytes. A stained organoid drops onto the left page (a
+// generated illustration in the style of immunofluorescence, and labelled as an illustration); on the right the pen
+// draws the result as a bar chart (control 21%, day-4 pulse 42%, every well a dot), writes 2x and rings it, and notes
+// that stem cells hold. The last lines are the article's: the authors, and that it is fictional with simulated data.
 (() => {
   SCENES['result'] = {
     draw(ctx, t, env) {
-      const O = window.ORG, D = O.data(), B = env.beatSec, b = env.lt / B;
-      O.page(ctx);
-      O.txt(ctx, 'd', 200, 120, { size: 40, weight: 700, color: C.accent }); O.txt(ctx, 'Mature enterocytes on day 7 (% villin+)', 244, 118, { size: 28, weight: 600 });
-      const base = 760, sc = 10;
-      [['control', D.control, '#B7AEA0'], ['day-4 pulse', D.day4, '#C2185B']].forEach(([lab, v, c], k) => {
-        const m = v.reduce((s, x) => s + x, 0) / v.length, x = 260 + k * 300, g = Ease.ioSine(clamp((b - k * 0.3) / 0.9));
-        ctx.fillStyle = rgba(c, 0.8); ctx.fillRect(x, base - m * sc * g, 180, m * sc * g);
-        v.forEach((d, i) => { const p = clamp((b - 0.8 - i * 0.04) * 3); if (p <= 0) return; ctx.fillStyle = C.ink; ctx.globalAlpha = p; circle(ctx, x + 20 + (i % 8) * 20, base - d * sc + Math.sin(t + i) * 1.2, 5); ctx.fill(); ctx.globalAlpha = 1; });
-        O.txt(ctx, lab, x + 90, base + 40, { size: 22, mono: true, align: 'center', color: C.ink2 });
+      const B = env.beatSec, b = env.lt / B + 1e-4, n = Math.round(env.dur / B), lt = env.lt, D = BOOK.data();
+      BOOK.desk(ctx); BOOK.spread(ctx, { pages: [7, 8] });
+      let head = null;
+      BOOK.onPage(ctx, 'L', g => {
+        BOOK.print(g, 80, 150, 640, 640, -0.02, (b - 0.2) / 0.6, { img: BOOK.ill('stained'), border: '#111', margin: 0, foot: 0 });
+        BOOK.tape(g, 110, 160, 150, -0.66, (b - 0.7) / 0.25); BOOK.tape(g, 690, 778, 150, -0.6, (b - 0.85) / 0.25);
+        g.font = `500 17px ${FAM.mono}`; g.fillStyle = 'rgba(38,34,29,0.8)';
+        if (b > 1) { g.fillText('illustration · day 7, day-4 pulse', 80, 830); g.fillStyle = BOOK.MAG; g.fillText('villin', 80, 858); g.fillStyle = BOOK.GRN; g.fillText('LGR5', 160, 858); g.fillStyle = BOOK.BLUE; g.fillText('DNA', 230, 858); }
       });
-      const mc = D.means.control, m4 = D.means['day 4'], gp = clamp((b - 1) / 1.2);
-      if (gp > 0) O.txt(ctx, `${(m4 / mc * Ease.ioSine(gp)).toFixed(1)}×`, 400, 300, { size: 110, weight: 700, color: C.accent });
-      // the stained organoid
-      O.field(ctx, 1080, 180, 640, 460, () => {
-        ctx.save(); ctx.fillStyle = '#0D0B14'; ctx.fillRect(1080, 180, 640, 460); ctx.restore();
-        const cx = 1400, cy = 410, r = 150, rot = t * 0.08;
-        ctx.save(); ctx.globalCompositeOperation = 'lighter';
-        for (let i = 0; i < 90; i++) { const a = rot + (i / 90) * TAU, bump = 1 + 0.18 * Math.max(0, Math.sin(a * 5)); const x = cx + Math.cos(a) * r * bump, y = cy + Math.sin(a) * r * bump; ctx.fillStyle = rgba('#3D6FB6', 0.8); circle(ctx, x * 0.98 + cx * 0.02, y, 7); ctx.fill(); }
-        ctx.lineWidth = 6; ctx.strokeStyle = rgba('#E0337A', 0.9); ctx.beginPath();
-        for (let i = 0; i <= 180; i++) { const a = rot + (i / 180) * TAU, bump = 1 + 0.18 * Math.max(0, Math.sin(a * 5)), x = cx + Math.cos(a) * r * bump * 0.86, y = cy + Math.sin(a) * r * bump * 0.86; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
-        ctx.stroke(); ctx.restore();
+      BOOK.onPage(ctx, 'R', g => {
+        const X0 = 120, Y0 = 640, Hh = 380, bw = 170, k = (i) => Ease.outC(clamp((b - 1.2 - i * 0.4) / 0.7));
+        BOOK.inkLine(g, [[X0 - 30, Y0 - Hh], [X0 - 30, Y0], [X0 + 520, Y0]], clamp((b - 0.9) / 0.4), { w: 2.2, seed: 7 });
+        [[D.means.control, D.control, '#8A8174', 'control'], [D.means['day 4'], D.day4, BOOK.MAG, 'd4 pulse']].forEach(([m, pts, col, name], i) => {
+          const x = X0 + i * 280, h = m / 50 * Hh * k(i);
+          g.fillStyle = rgba(col, 0.55); g.fillRect(x, Y0 - h, bw, h);
+          g.strokeStyle = rgba('#26221D', 0.8); g.lineWidth = 2; g.strokeRect(x, Y0 - h, bw, h);
+          pts.forEach((v, j) => { if (k(i) < 1) return; g.fillStyle = 'rgba(38,34,29,0.8)'; circle(g, x + 25 + (j % 8) * 17 + (hash(j + i) - 0.5) * 6, Y0 - v / 50 * Hh, 4); g.fill(); });
+          if (k(i) > 0.05) { g.font = `600 22px ${FAM.mono}`; g.fillStyle = col; g.globalAlpha = clamp(k(i) * 2); g.fillText(`${Math.round(m)}%`, x + 52, Y0 - h - 44); g.globalAlpha = 1; }
+        });
+        const items = [{ s: 'control', x: X0 + 40, y: Y0 + 48, t0: 1.4 * B, cps: 22, size: 36 }, { s: 'd4 pulse', x: X0 + 310, y: Y0 + 48, t0: 1.8 * B, cps: 22, size: 36, color: BOOK.MAG },
+          { s: '2×', x: 560, y: 260, t0: 2.8 * B, cps: 8, size: 120, weight: 700, color: BOOK.MAG },
+          { s: 'stem cells unchanged', x: 60, y: 790, t0: 3.6 * B, cps: 24, size: 38, color: '#5A5248' },
+          { s: 'Lindqvist et al. · fictional, simulated data', x: 60, y: 880, t0: (n - 2.2) * B, cps: 30, size: 30, color: '#8A8174' }];
+        head = BOOK.notes(g, items, lt);
+        const ring = clamp((b - 3.2) / 0.5); if (ring > 0) { const pts = []; for (let a = -2; a < -2 + TAU * 1.05; a += 0.12) pts.push([610 + Math.cos(a) * 110, 220 + Math.sin(a) * 80]); BOOK.inkLine(g, pts, ring, { color: BOOK.MAG, w: 3.2, seed: 6 }); }
+        const p = BOOK.PG.R; if (head) head = [head[0] + p.x, head[1] + p.y];
       });
-      O.txt(ctx, 'villin', 1100, 670, { size: 18, mono: true, color: '#C2185B' }); O.txt(ctx, 'DAPI', 1180, 670, { size: 18, mono: true, color: '#3D6FB6' });
-      O.rise(ctx, 'Pulse WNT on day 4, after the first buds,', 1080, 760, clamp((b - 2) * 1.5), { size: 34, weight: 600 });
-      O.rise(ctx, 'and twice as many cells grow up.', 1080, 808, clamp((b - 2.3) * 1.5), { size: 34, weight: 600, color: C.accentInk });
-      if (b > 3) { const a = clamp((b - 3) * 2); ctx.fillStyle = rgba(C.ink, 0.25 * a); ctx.fillRect(200, 880, 1520, 1.5); O.txt(ctx, 'Lindqvist, R. et al. A timed WNT pulse doubles mature enterocytes in human intestinal organoids. 2026.', 200, 924, { size: 20, color: C.ink2, a }); O.txt(ctx, 'FICTIONAL MANUSCRIPT · SIMULATED DATA', 200, 962, { size: 16, mono: true, color: C.muted, ls: 1.5, a }); }
+      if (head) BOOK.pen(ctx, head[0], head[1], { rot: 0.05 });
     },
   };
 })();
