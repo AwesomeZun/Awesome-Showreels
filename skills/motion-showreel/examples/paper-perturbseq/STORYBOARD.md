@@ -1,11 +1,11 @@
-# Perturb-seq of exhaustion: storyboard and build contract
+# Perturb-seq: regulators of T-cell exhaustion: storyboard and build contract
 
 Generated from the project files (reel.config.json, the cut plans, the scene headers and style.json); the scene
 headers are the authority for the beat-by-beat choreography.
 
 ## 1. Brief
 
-- **Material:** `source/manuscript.md` (paper); `source/data` (other); `source/fonts` (other)
+- **Material:** `source/manuscript.md` (paper); `source/data` (other); `source/fonts` (other); `source/gen/` (generated-art)
 - **Mood:** precise, nocturnal, technical, decisive, data-dense
 - **Purpose:** paper
 - **Fiction:** every name, figure and claim is invented for this example and labelled on screen.
@@ -21,45 +21,52 @@ headers are the authority for the beat-by-beat choreography.
 
 | Cut | Bars | Length |
 |---|---|---|
-| `short` | 10 | 20.7 s |
-| `30` | 14 | 29.0 s |
+| `short` | 9 | 18.6 s |
+| `30` | 15 | 31.0 s |
 
 One bar = 2.069 s at 116 BPM; every scene starts on a bar line in every cut.
 
 ## 4. Scenes
 
-### 4.1 `cut`: The guide and the cut
+### 4.1 `dive`: Into the tumour
 
-- Bars: short 2 · 30 s 3 (min 2, max 3) · in 6 beats, out 1 beats · entrance `cut` · music part `intro`
-- Cues: keytap dur=2 fast soft @ start+0b, snap @ start+3b, impact @ start+3.05b, drawon dur=0.5 @ start+4.5b
+- Bars: short 1 · 30 s 2 (min 1, max 2) · in 3 beats, out 1 beats · entrance `cut` · music part `intro`
+- Cues: reveal @ start+0.3b, blip @ start+1.6b, blip step=2 @ start+2b, zoom @ end+-0.2b
 
-cut (2 bars, 3 in the 30): the guide and the cut. A DNA double helix scrolls across the frame (two strands and their rungs); the 20-nt guide types above its target (beats 0-2) with the NGG PAM lit in amber; on beat 3 two blades close and the helix breaks with a flash and the two halves spring apart; the title rises line by line (4-5), then the authors. 30-s hold: the cut ends keep fraying, the guide blinks its PAM on the beat.
+dive (1 bar, 2 in the 30): into the tumour. The camera pushes slowly into the tissue: the backdrop, a far T cell (soft), the tumour cluster and, nearest, an exhausted T cell move at their own depths, with bokeh drifting through. The tired cell's receptors pulse magenta on the beat. The preprint's title rises line by line, then the problem in one sentence, and two lab labels name the cells. On the last beat the camera dives into the T cell's nucleus and the frame goes to a cyan glow (the DNA scene opens from it).
 
-### 4.2 `screen`: a  The pooled screen
+### 4.2 `cut`: One guide, one gene
 
-- Bars: short 2 · 30 s 3 (min 2, max 3) · in 5 beats, out 1 beats · entrance `cut` · music part `groove`
-- Cues: whoosh @ start+0b, blips dur=2 @ start+1b, count @ start+3b
+- Bars: short 2 · 30 s 2 (min 2, max 2) · in 6 beats, out 0 beats · entrance `cut` · music part `groove`
+- Cues: whoosh @ start+0.2b, keytap dur=1 @ start+1.2b, scan dur=1.5 @ start+2.2b, impact @ start+4b, swish @ start+4.6b, count dur=1.5 @ start+5.2b
 
-screen (2 bars, 3 in the 30): panel a, the pooled screen. A field of T cells in a well (left); one guide per cell, each cell taking its barcode colour in a sweep (beats 0-2); the cells stream right through a microfluidic channel and are caught one by one in droplets (2-4), counters for 612 regulators, 9 donors and 1.2 M cells rolling up.
+cut (2 bars): one guide, one gene. Inside the nucleus (opening from the dive's cyan glow): a DNA double helix drawn in code turns slowly across the frame, chromatin threads drift behind it. Cas9 (a generated molecular surface with a real alpha channel) slides in on the helix, which passes through its open channel; the guide RNA's sequence types in, and the 20 base pairs it matches light amber on the DNA. On beat 4 Cas9 cuts: a flash at the break, sparks, and the two halves of the helix swing apart. Then the method in one line, and the count of regulators knocked out.
 
-### 4.3 `heatmap`: b  Effects
+### 4.3 `screen`: Pooled screen
 
-- Bars: short 2 · 30 s 3 (min 2, max 3) · in 6 beats, out 1 beats · entrance `cut` · music part `drop`
-- Cues: scan dur=1 @ start+0b, drawon dur=0.75 @ start+3b, lock @ start+4b
+- Bars: short - · 30 s 2 (min 2, max 2) · in 4 beats, out 0 beats · entrance `cut` · music part `groove`
+- Cues: blips dur=4 @ start+0b, count dur=4 @ start+1b
 
-heatmap (2 bars, 3 in the 30): panel b. 60 perturbations (rows, clustered by programme) x 40 programme genes (columns, five blocks of eight). Rows fill top to bottom on a scan (beats 0-3), the programme bars above the columns and the module stripes at the left draw on; on beat 3 a dendrogram grows at the left; on beat 4 the three hub rows lock with a bracket and their names (TOX, NR4A1, ARID1A). Hold: a scan line keeps passing over the matrix.
+screen (2 bars, the 30 only): the pooled screen. A microfluidic chip as a glass slab with glowing channels: edited T cells (each with a dot in its guide's programme colour) flow in from the left, barcode beads come down from the top, and at the junction the oil pinches off one droplet per cell and bead; the droplets squeeze along the outlet and are read, each read leaving a barcode line that scrolls up the right edge. The count runs up to 1.2 million cells; 612 guides, 9 donors.
 
-### 4.4 `network`: c  The hub
+### 4.4 `heatmap`: Clustered effects
 
-- Bars: short 2 · 30 s 3 (min 2, max 3) · in 5 beats, out 1 beats · entrance `cut` · music part `drop`
-- Cues: zoom @ start+0b, drawon dur=1 @ start+2b, lock big @ start+4b
+- Bars: short 2 · 30 s 3 (min 2, max 3) · in 6 beats, out 0 beats · entrance `cut` · music part `drop`
+- Cues: blips dur=1.5 @ start+0b, whoosh @ start+1.9b, drawon dur=0.9 @ start+3.5b, pop:5 gap=0.15 @ start+4.4b, lock @ start+5.6b
 
-network (2 bars, 3 in the 30): panel c. The 60 regulators as nodes coloured by programme (layout precomputed in paper-src/simulate.py), sized by total effect; the strong shared-effect edges draw on (beats 1-3: magenta for positive, cyan for negative). On beat 4 the hub (TOX, NR4A1, ARID1A) pulls to the centre of attention: the rest dims, the hub pulses on the beat with its names. The graph turns very slowly.
+heatmap (2 bars, 3 in the 30): the screen's result, sorted by the real clustering. Sixty knockouts (rows, in library order: the order they were screened) against forty programme genes (columns, five programmes under coloured bands) fill in row by row in the diverging scale. Then every row slides to its place in the clustering computed in paper-src/simulate.py (average linkage on correlation distance), top rows settling first; the dendrogram grows out of the leaves to the root; the five programmes are bracketed; and the three rows of the hub (TOX, NR4A1, ARID1A) are outlined. In the 30 the hold reads them: exhaustion genes down, effector genes up.
 
-### 4.5 `finding`: d  Killing restored
+### 4.5 `network`: The hub
 
-- Bars: short 2 · 30 s 2 (min 2, max 2) · in 5 beats, out 0 beats · entrance `cut` · music part `outro`
-- Cues: swell @ start+0b, count @ start+1b, ding @ start+3b
+- Bars: short 2 · 30 s 3 (min 2, max 3) · in 4 beats, out 0 beats · entrance `cut` · music part `drop`
+- Cues: swish @ start+0b, zap dur=1 @ start+0.5b, drawon dur=2 @ start+1.4b, chime @ start+3.4b
 
-finding (2 bars; the end card): panel d. Two bars of tumour-cell killing, control guides vs the triple knockout, with each of the nine donors as a dot dropping onto its bar (beats 0-1.5); +45% counts up between them (1); the claim rises (2-3) and the citation block with the fictional-preprint note settles (3). Hold: the dots breathe.
+network (2 bars, 3 in the 30): the heatmap becomes the network (a match cut). Each sorted row collapses into a dot at its left end, and the sixty dots fly to the force layout computed in paper-src/simulate.py; edges draw in, strongest first, magenta where two knockouts change the same genes the same way and cyan where they oppose. Node colour is the programme, node size the number of links. The three hub nodes (TOX, NR4A1, ARID1A) light up with rings on the beat and their names; signals travel their edges. In the 30 the camera leans in on the hub.
+
+### 4.6 `attack`: They kill again
+
+- Bars: short 2 · 30 s 3 (min 2, max 3) · in 5 beats, out 2 beats · entrance `cut` · music part `outro`
+- Cues: whoosh @ start+0b, thud @ start+1b, sparkle dur=2 @ start+1.2b, swish @ start+3b, count dur=1.2 @ start+4.2b, sting @ end+-2.2b
+
+attack (2 bars, 3 in the 30; the end): back in the tissue, with the hub knocked out. A healthy T cell (a generated render, its granules gathered at a flattened contact face) reaches the tumour cell on beat 1; magenta granules stream across the synapse, and the tumour cell dies: it shrinks, darkens and throws off blebs that drift away. The result slides in: killing in co-culture, control against the triple knockout, every donor a dot, +45% counting up. The end card holds the title, the authors and the honest note: a fictional manuscript with simulated data.
 

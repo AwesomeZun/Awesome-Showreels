@@ -14,6 +14,7 @@ genes, and the triple knockout raises tumour-cell killing by 45% in co-culture.
 
 ## Figure 1 | Perturb-seq of exhaustion
 **a**, Pooled CRISPR knockout of 612 regulators; every cell carries one guide, read alongside its transcriptome.
+The figure shows one guide as an example: TOX sgRNA 5′-GACCTTCAGCAATGTCTACG-3′ (an illustrative sequence).
 **b**, Effect of each perturbation (rows) on 40 programme genes (columns), clustered; colour, log2 fold change.
 **c**, Regulatory network inferred from shared effects; edges, positive (magenta) or negative (cyan) regulation.
 **d**, Killing assay: triple knockout vs control guides.

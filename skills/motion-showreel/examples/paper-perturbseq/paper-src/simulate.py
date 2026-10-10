@@ -1,5 +1,7 @@
 """Simulated data for the fictional Perturb-seq manuscript (source/manuscript.md). Deterministic (seed 11).
-Writes source/data/effects.csv (perturbation x gene log2FC), source/data/network.csv and assets/data/screen.json."""
+Writes source/data/effects.csv (perturbation x gene log2FC), source/data/network.csv and assets/data/screen.json: the
+perturbations in library order (the order they were screened), the real clustering of their profiles (average linkage
+on correlation distance: leaf order and dendrogram segments), the network edges and a force layout, and the killing assay."""
 import csv, json, pathlib
 import numpy as np
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -57,8 +59,24 @@ for it in range(400):
         ang = mod_o[i] * 2 * np.pi / 5; f[i] += (np.array([np.cos(ang), np.sin(ang)]) * 1.2 - pos[i]) * 0.01
     pos += np.clip(f, -0.05, 0.05)
 pos = (pos - pos.mean(0)) / np.abs(pos).max()
-out = {'pos': [[round(float(x), 3), round(float(y), 3)] for x, y in pos], 'strong': [[a, b, round(r, 2)] for a, b, r in strong], 'note': 'simulated for a fictional manuscript', 'programs': PROGRAMS, 'genes': GENES, 'perts': [PERTS[i] for i in order], 'module': [module[i] for i in order],
-       'effects': [[round(float(v), 2) for v in eff[i]] for i in order], 'edges': [[order.index(a), order.index(b), round(r, 2)] for a, b, r in edges],
+# the clustering the heatmap shows: average linkage on correlation distance between perturbation profiles
+from scipy.cluster.hierarchy import linkage, dendrogram
+Z = linkage(eff, method='average', metric='correlation')
+dn = dendrogram(Z, no_plot=True)
+leaves = [int(i) for i in dn['leaves']]                            # library indices in leaf order
+hmax = float(max(max(d) for d in dn['dcoord']))
+dendro = []                                                         # segments: x = merge height (0 leaf .. 1 root), y = leaf slot
+for ic, dc in zip(dn['icoord'], dn['dcoord']):
+    ys = [(v - 5) / 10 for v in ic]                                 # scipy puts leaf k at 5 + 10 k
+    for (y0, x0), (y1, x1) in zip(zip(ys, dc), zip(ys[1:], dc[1:])):
+        dendro.append([round(x0 / hmax, 3), round(y0, 2), round(x1 / hmax, 3), round(y1, 2)])
+lib_pos = [None] * n                                                # the network layout, by library index
+for k, i in enumerate(order): lib_pos[i] = pos[k]
+out = {'note': 'simulated for a fictional manuscript (paper-src/simulate.py)', 'programs': PROGRAMS, 'genes': GENES,
+       'perts': PERTS, 'module': module, 'effects': [[round(float(v), 2) for v in eff[i]] for i in range(n)],
+       'clusterOrder': leaves, 'dendro': dendro,
+       'edges': [[a, b, round(r, 2)] for a, b, r in edges], 'strong': [[order[a], order[b], round(r, 2)] for a, b, r in strong],
+       'pos': [[round(float(x), 3), round(float(y), 3)] for x, y in lib_pos],
        'hub': HUB, 'killing': killing, 'gain': round(gain, 1)}
 (ROOT / 'assets/data').mkdir(parents=True, exist_ok=True)
 (ROOT / 'assets/data/screen.json').write_text(json.dumps(out, separators=(',', ':')))

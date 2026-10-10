@@ -1,23 +1,259 @@
 {
-  "title": "Perturb-seq of exhaustion",
-  "style": "style.json",
-  "size": [1920, 1080],
-  "fps": 60,
-  "beatsPerBar": 4,
-  "scenes": [
-    { "id": "cut", "label": "The guide and the cut", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "keytap dur=2 fast soft" }, { "beat": 3, "from": "start", "sfx": "snap" }, { "beat": 3.05, "from": "start", "sfx": "impact" }, { "beat": 4.5, "from": "start", "sfx": "drawon dur=0.5" } ] },
-    { "id": "screen", "label": "a  The pooled screen", "minBars": 2, "maxBars": 3, "priority": 2, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "groove",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "whoosh" }, { "beat": 1, "from": "start", "sfx": "blips dur=2" }, { "beat": 3, "from": "start", "sfx": "count" } ] },
-    { "id": "heatmap", "label": "b  Effects", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "drop",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "scan dur=1" }, { "beat": 3, "from": "start", "sfx": "drawon dur=0.75" }, { "beat": 4, "from": "start", "sfx": "lock" } ] },
-    { "id": "network", "label": "c  The hub", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "drop",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "zoom" }, { "beat": 2, "from": "start", "sfx": "drawon dur=1" }, { "beat": 4, "from": "start", "sfx": "lock big" } ] },
-    { "id": "finding", "label": "d  Killing restored", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 0, "in": "cut", "music": "outro",
-      "cues": [ { "beat": 0, "from": "start", "sfx": "swell" }, { "beat": 1, "from": "start", "sfx": "count" }, { "beat": 3, "from": "start", "sfx": "ding" } ] }
-  ],
-  "cuts": { "short": { "bars": 10, "label": "short" }, "30": { "bars": 14, "label": "30 s" } },
-  "poster": 13.0,
-  "captions": { "enabled": false },
-  "audio": { "transitionSfx": false }
+ "title": "Perturb-seq: regulators of T-cell exhaustion",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "dive",
+   "label": "Into the tumour",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 3,
+   "outBeats": 1,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0.3,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 1.6,
+     "from": "start",
+     "sfx": "blip"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "blip step=2"
+    },
+    {
+     "beat": -0.2,
+     "from": "end",
+     "sfx": "zoom"
+    }
+   ]
+  },
+  {
+   "id": "cut",
+   "label": "One guide, one gene",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.2,
+     "from": "start",
+     "sfx": "whoosh"
+    },
+    {
+     "beat": 1.2,
+     "from": "start",
+     "sfx": "keytap dur=1"
+    },
+    {
+     "beat": 2.2,
+     "from": "start",
+     "sfx": "scan dur=1.5"
+    },
+    {
+     "beat": 4,
+     "from": "start",
+     "sfx": "impact"
+    },
+    {
+     "beat": 4.6,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 5.2,
+     "from": "start",
+     "sfx": "count dur=1.5"
+    }
+   ]
+  },
+  {
+   "id": "screen",
+   "label": "Pooled screen",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 2,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "blips dur=4"
+    },
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "count dur=4"
+    }
+   ]
+  },
+  {
+   "id": "heatmap",
+   "label": "Clustered effects",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "blips dur=1.5"
+    },
+    {
+     "beat": 1.9,
+     "from": "start",
+     "sfx": "whoosh"
+    },
+    {
+     "beat": 3.5,
+     "from": "start",
+     "sfx": "drawon dur=0.9"
+    },
+    {
+     "beat": 4.4,
+     "from": "start",
+     "sfx": "pop:5 gap=0.15"
+    },
+    {
+     "beat": 5.6,
+     "from": "start",
+     "sfx": "lock"
+    }
+   ]
+  },
+  {
+   "id": "network",
+   "label": "The hub",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "zap dur=1"
+    },
+    {
+     "beat": 1.4,
+     "from": "start",
+     "sfx": "drawon dur=2"
+    },
+    {
+     "beat": 3.4,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  },
+  {
+   "id": "attack",
+   "label": "They kill again",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 5,
+   "outBeats": 2,
+   "in": "cut",
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "whoosh"
+    },
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "thud"
+    },
+    {
+     "beat": 1.2,
+     "from": "start",
+     "sfx": "sparkle dur=2"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 4.2,
+     "from": "start",
+     "sfx": "count dur=1.2"
+    },
+    {
+     "beat": -2.2,
+     "from": "end",
+     "sfx": "sting"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 9,
+   "label": "short",
+   "exclude": [
+    "screen"
+   ],
+   "scenes": {
+    "dive": {
+     "bars": 1
+    },
+    "heatmap": {
+     "bars": 2
+    },
+    "network": {
+     "bars": 2
+    },
+    "attack": {
+     "bars": 2
+    }
+   }
+  },
+  "30": {
+   "bars": 15,
+   "label": "30 s"
+  }
+ },
+ "poster": 12.0,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
 }

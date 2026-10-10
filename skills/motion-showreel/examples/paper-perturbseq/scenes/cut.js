@@ -1,46 +1,56 @@
-// cut (2 bars, 3 in the 30): the guide and the cut. A DNA double helix scrolls across the frame (two strands and
-// their rungs); the 20-nt guide types above its target (beats 0-2) with the NGG PAM lit in amber; on beat 3 two
-// blades close and the helix breaks with a flash and the two halves spring apart; the title rises line by line
-// (4-5), then the authors. 30-s hold: the cut ends keep fraying, the guide blinks its PAM on the beat.
+// cut (2 bars): one guide, one gene. Inside the nucleus (opening from the dive's cyan glow): a DNA double helix drawn
+// in code turns slowly across the frame, chromatin threads drift behind it. Cas9 (a generated molecular surface with a
+// real alpha channel) slides in on the helix, which passes through its open channel; the guide RNA's sequence types in,
+// and the 20 base pairs it matches light amber on the DNA. On beat 4 Cas9 cuts: a flash at the break, sparks, and the
+// two halves of the helix swing apart. Then the method in one line, and the count of regulators knocked out.
 (() => {
-  const GUIDE = 'GACCTGTAGCTTACGCAGTA', PAM = 'TGG';
+  const GUIDE = 'GACCTTCAGCAATGTCTACG';
   SCENES['cut'] = {
     draw(ctx, t, env) {
-      const S = window.PS, B = env.beatSec, b = env.lt / B;
-      S.bg(ctx);
-      const cutK = b >= 3 ? Ease.outExpo(clamp((b - 3) / 0.6)) : 0, gap = 70 * cutK, y0 = 330, scroll = env.lt * 60;
-      // the helix
-      for (let s = 0; s < 2; s++) {
-        ctx.beginPath();
-        for (let x = 0; x <= W; x += 6) {
-          const off = x < W / 2 ? -gap : gap, ph = (x + scroll) * 0.012 + s * Math.PI, y = y0 + Math.sin(ph) * 46;
-          if (x === 0 || (x >= W / 2 && x - 6 < W / 2 && cutK > 0)) ctx.moveTo(x + off, y); else ctx.lineTo(x + off, y);
+      const B = env.beatSec, b = env.lt / B + 1e-4, lt = env.lt;
+      ctx.fillStyle = '#04070E'; ctx.fillRect(0, 0, W, H);
+      PS.glow(ctx, W * 0.5, H * 0.5, 1100, '#0E7490', 0.18);
+      // chromatin threads behind
+      ctx.save(); ctx.lineWidth = 2;
+      for (let i = 0; i < 14; i++) {
+        ctx.strokeStyle = rgba(i % 3 ? '#164E63' : '#4C1D95', 0.5); ctx.beginPath();
+        for (let x = -40; x <= W + 40; x += 30) { const y = 120 + i * 62 + Math.sin(x * 0.006 + i * 1.7 + lt * 0.3) * 36 + Math.sin(x * 0.017 + i) * 10; x === -40 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); }
+        ctx.stroke();
+      }
+      ctx.restore();
+      PS.bokeh(ctx, lt, 18, { seed: 4, a: 0.08, c1: '#22D3EE', c2: '#A78BFA' });
+      // the helix, cut on beat 4
+      const cutK = clamp((b - 4) / 1.2), open = Ease.outExpo(cutK), m = PS.meta().cas9, S = 1;
+      const cx = W / 2, cy = 560;
+      const hl = b > 2.2 && b < 4.2 ? [cx - 160, cx + 160] : null;
+      PS.helix(ctx, -60, W + 60, cy, { phase: lt * 1.3, cut: b >= 4 ? cx : undefined, gap: 90 * open, tilt: 0.1 * open, hl });
+      // Cas9 slides in along the helix and grips it; after the cut it lets go upward
+      const inK = Ease.outExpo(clamp(b / 1.4)), away = Ease.outExpo(clamp((b - 4.15) / 1.2));
+      const ix = cx + (1 - inK) * 1300 + (m.size[0] / 2 - (m.channel.x0 + m.channel.x1) / 2) * S, iy = cy + (m.size[1] / 2 - m.channel.y) * S - away * 330;
+      PS.layer(ctx, 'cas9', ix + away * 260, iy, S * (1 - 0.18 * away), { a: 1 - away * 0.55, blur: away * 3 });
+      if (b >= 4) {                                                       // the break
+        const f = Math.exp(-(b - 4) * 3.2);
+        PS.glow(ctx, cx, cy, 260, '#FDE68A', f); PS.glow(ctx, cx, cy, 90, '#FFFFFF', f);
+        for (let i = 0; i < 26; i++) {
+          const a = hash(i) * TAU, sp = 120 + hash(i + 7) * 360, k = (b - 4) * B, x = cx + Math.cos(a) * sp * k, y = cy + Math.sin(a) * sp * k * 0.7 + 60 * k * k;
+          if (k < 0.9) PS.glow(ctx, x, y, 10, i % 2 ? PS.AMBER : PS.MAG, (1 - k / 0.9) * 0.9);
         }
-        ctx.strokeStyle = s ? rgba(C.accent2, 0.85) : rgba(C.accent, 0.85); ctx.lineWidth = 4; ctx.stroke();
       }
-      for (let x = 0; x <= W; x += 22) {
-        const off = x < W / 2 ? -gap : gap, ph = (x + scroll) * 0.012, ya = y0 + Math.sin(ph) * 46, yb = y0 + Math.sin(ph + Math.PI) * 46;
-        ctx.strokeStyle = rgba(C.ink2, 0.25 + 0.2 * Math.abs(Math.cos(ph))); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x + off, ya); ctx.lineTo(x + off, yb); ctx.stroke();
+      // the guide
+      const gk = clamp((b - 1.2) / 1);
+      if (gk > 0) {
+        PS.txt(ctx, 'sgRNA · TOX', 1270, 200, { size: 26, mono: true, color: PS.AMBER, a: clamp(gk * 3), ls: 1 });
+        PS.txt(ctx, `5′-${GUIDE}-3′`, 1270, 250, { size: 36, mono: true, color: '#FDE68A', n: 3 + GUIDE.length * gk, glow: rgba(PS.AMBER, 0.5) });
+        if (hl) { ctx.save(); ctx.strokeStyle = rgba(PS.AMBER, 0.7); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(hl[0], cy + 70); ctx.lineTo(hl[0], cy + 84); ctx.lineTo(hl[1], cy + 84); ctx.lineTo(hl[1], cy + 70); ctx.stroke(); ctx.restore(); PS.txt(ctx, 'target, 20 bp', cx, cy + 116, { size: 20, mono: true, color: PS.AMBER, align: 'center' }); }
       }
-      // the guide above its target, PAM in amber
-      const gx = W / 2 - 330, n = Math.min(GUIDE.length, b * 10);
-      S.txt(ctx, "5'-", gx - 60, 200, { size: 30, mono: true, color: C.muted });
-      S.txt(ctx, GUIDE, gx, 200, { size: 30, mono: true, color: C.ink, n, ls: 6 });
-      if (n >= GUIDE.length) { const pa = b < 3 || Math.floor(b * 2) % 2 === 0 ? 1 : 0.4; S.txt(ctx, PAM, gx + 20 * 30.5, 200, { size: 30, mono: true, weight: 600, color: C.accent3, ls: 6, a: pa }); S.txt(ctx, '-3\'', gx + 23 * 30.5 + 10, 200, { size: 30, mono: true, color: C.muted }); }
-      S.txt(ctx, 'sgRNA  ·  Cas9', W / 2, 150, { size: 18, mono: true, color: C.muted, align: 'center', ls: 2, a: clamp(b) });
-      // the blades close on beat 3
-      if (b > 2.2) {
-        const c = Ease.inExpo(clamp((b - 2.2) / 0.8)), open = (1 - c) * 0.9;
-        ctx.save(); ctx.translate(W / 2, y0 - 120); ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.lineCap = 'round';
-        for (const sgn of [-1, 1]) { ctx.save(); ctx.rotate(sgn * open); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 150); ctx.stroke(); ctx.restore(); }
-        ctx.restore();
-      }
-      if (b > 3 && b < 3.5) { ctx.fillStyle = rgba('#FFFFFF', 0.5 * (1 - (b - 3) * 2)); ctx.fillRect(0, 0, W, H); }
-      // title
-      S.rise(ctx, 'Genome-scale Perturb-seq maps the', 96, 560, clamp((b - 4) * 2), { size: 66, weight: 600, ls: -1.5 });
-      S.rise(ctx, 'regulators of T-cell exhaustion', 96, 640, clamp((b - 4.3) * 2), { size: 66, weight: 600, ls: -1.5, color: C.accentInk });
-      S.rise(ctx, 'Dana R. Okafor, Lin Wei, Priya Raman & Mateo Ferreyra', 96, 712, clamp((b - 5) * 2), { size: 24, color: C.ink2 });
-      S.rise(ctx, 'PREPRINT · 2026 · FICTIONAL MANUSCRIPT, SIMULATED DATA', 96, 752, clamp((b - 5.3) * 2), { size: 17, mono: true, color: C.muted, ls: 1.5 });
+      // the method in a line, the count
+      PS.rise(ctx, 'One guide RNA, one gene knocked out.', 110, 880, (b - 4.6) / 0.6, { size: 46, weight: 600 });
+      const c = clamp((b - 5.2) / 1.6);
+      if (c > 0) { PS.txt(ctx, String(Math.round(612 * Ease.outC(c))), 110, 960, { size: 40, mono: true, weight: 600, color: PS.MAG }); PS.txt(ctx, 'transcription factors and chromatin regulators, one per cell', 222, 958, { size: 26, color: C.ink2, a: clamp(c * 3) }); }
+      PS.txt(ctx, 'a  Pooled CRISPR knockout', 110, 96, { size: 24, weight: 600, color: C.ink2, a: clamp(b * 2) });
+      // in: out of the dive's glow
+      if (b < 0.6) { ctx.fillStyle = rgba('#0B1A2A', 1 - b / 0.6); ctx.fillRect(0, 0, W, H); }
+      PS.vignette(ctx, 0.5);
     },
   };
 })();
