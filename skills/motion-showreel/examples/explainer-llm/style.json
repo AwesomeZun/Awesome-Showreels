@@ -1,0 +1,179 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "explainer",
+    "audience": "anyone who has typed into a chatbot and wondered how it chooses its words",
+    "title": "How a language model picks the next word",
+    "reviewed": "Written by hand from source/notes.md: a smooth mathematical animation on a dark navy page. Every arrow, weight, score and probability on screen comes from the two-dimensional toy in model-src/toy.py, and the reel says it is a toy."
+  },
+  "source": [
+    {
+      "path": "source/notes.md",
+      "kind": "notes",
+      "notes": "the idea in one line, the eight steps, the toy's numbers, the style"
+    },
+    {
+      "path": "model-src/toy.py",
+      "kind": "data",
+      "notes": "the toy model: fifteen word arrows placed by hand; attention, scores, probabilities and samples computed (assets/data/toy.json)"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "font",
+      "notes": "KaTeX Main (regular, bold, italic) and KaTeX Math italic, the Computer Modern look of typeset mathematics (SIL OFL 1.1)"
+    }
+  ],
+  "mood": [
+    "curious",
+    "lucid",
+    "calm",
+    "playful",
+    "exact"
+  ],
+  "rationale": {
+    "palette": "A dark navy page (#0C1424) where pastel inks read as light: one colour per kind of meaning, so the eye sorts before the words are read. Animals green (#83C167), actions red (#FC6255), people blue (#58C4DD), places gold (#F0AC5F), small words grey-blue (#A9B6C9); the arrow that context has bent is yellow (#F7D94C), and attention's messages are teal (#5CD0B3).",
+    "type": "KaTeX Main and KaTeX Math, the Computer Modern faces of typeset mathematics: words upright, variables in math italic, formulas set in code with fractions, sums, superscripts and subscripts so they can morph term by term.",
+    "motion": "Mathematical animation: a coordinate plane draws itself from the middle out, arrows grow from the origin, text writes its outlines before it fills, formulas morph with matching terms gliding to their new places, the whole plane rotates and then squashes onto a line (the dot product as a projection), vectors add tip to tail. Smooth in-out easing (ioC, ioSine) and outExpo for arrivals; no bounce. Scenes hand over without a jump: the plane and the sentence stay where they were, the camera's slow push carries across the cut, and only the overlays crossfade.",
+    "sound": "Soft pads, glass and bells playing broken chords at 96 BPM in D major (ambient preset, a soft kick, rim and shaker): a pop as each arrow grows, glassy ticks as text writes, a rising draw tone as the plane folds, a count-roll as the needle runs and a ding when it stops on mat.",
+    "visuals": "A question and a sentence; the sentence cut into tokens; tokens become arrows on a plane, words used alike pointing alike; king − man + woman landing near queen; (60) a stack of layers seen from the side, every arrow bent a little more at each; the last word looking back at the others and adding their messages tip to tail; the plane turned and squashed onto a line to score every word; softmax bars; (60) temperature sharpening and flattening them; a needle choosing mat; the sentence going on. No generated images: everything is drawn in code."
+  },
+  "palette": {
+    "bg": "#0C1424",
+    "bg2": "#111D33",
+    "surface": "#16243D",
+    "ink": "#ECF1F8",
+    "ink2": "#A9B6C9",
+    "muted": "#6F809C",
+    "accent": "#F7D94C",
+    "accent2": "#58C4DD",
+    "accent3": "#5CD0B3",
+    "ok": "#83C167",
+    "warn": "#F0AC5F",
+    "deny": "#FC6255",
+    "accentInk": "#F7D94C",
+    "onAccent": "#0C1424",
+    "line": "#2C4466",
+    "highlight": "#1D2E4D"
+  },
+  "fonts": {
+    "display": "\"KaTeX_Main\", serif",
+    "sans": "\"KaTeX_Main\", serif",
+    "serif": "\"KaTeX_Main\", serif",
+    "mono": "\"KaTeX_Main\", serif",
+    "cjk": "\"KaTeX_Main\", serif",
+    "files": [
+      {
+        "family": "KaTeX_Main",
+        "path": "source/fonts/KaTeX_Main-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "KaTeX_Main",
+        "path": "source/fonts/KaTeX_Main-Bold.ttf",
+        "weight": "700",
+        "style": "normal"
+      },
+      {
+        "family": "KaTeX_Main",
+        "path": "source/fonts/KaTeX_Main-Italic.ttf",
+        "weight": "400",
+        "style": "italic"
+      },
+      {
+        "family": "KaTeX_Math",
+        "path": "source/fonts/KaTeX_Math-Italic.ttf",
+        "weight": "400",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      22,
+      26,
+      30,
+      34,
+      40,
+      48,
+      56,
+      64,
+      80,
+      96
+    ],
+    "displayWeight": 400,
+    "bodyWeight": 400,
+    "tracking": 0,
+    "trackingLabel": 0
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false
+    },
+    "radius": 10
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2,
+      "z": 1
+    },
+    "overshoot": 0,
+    "ease": "ioC",
+    "transitions": [
+      "cut",
+      "match"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "write"
+    ]
+  },
+  "post": {
+    "grain": 0,
+    "vignette": {
+      "a": 0.25,
+      "color": "#05080F"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 96,
+    "key": "D",
+    "mode": "major",
+    "preset": "ambient",
+    "instruments": [
+      "pad",
+      "strings",
+      "bell",
+      "glass",
+      "sub",
+      "kick",
+      "rim",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.5,
+      "breakdown": 0.35,
+      "drop": 0.65,
+      "outro": 0.35
+    }
+  },
+  "narration": {
+    "recommended": false
+  },
+  "review": []
+}
