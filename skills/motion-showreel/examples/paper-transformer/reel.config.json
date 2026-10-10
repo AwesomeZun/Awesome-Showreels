@@ -1,0 +1,234 @@
+{
+ "title": "Attention Is All You Need, an unofficial explainer",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "title",
+   "label": "The paper",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 3,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "swell"
+    },
+    {
+     "beat": 0.2,
+     "from": "start",
+     "sfx": "keytap dur=1.4"
+    },
+    {
+     "beat": 1.5,
+     "from": "start",
+     "sfx": "drawon dur=0.8"
+    }
+   ]
+  },
+  {
+   "id": "embed",
+   "label": "Words become numbers",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 2,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.8,
+     "from": "start",
+     "sfx": "blips dur=1.2"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "blips dur=1.2"
+    },
+    {
+     "beat": 3.4,
+     "from": "start",
+     "sfx": "drawon dur=1.6"
+    },
+    {
+     "beat": 4.6,
+     "from": "start",
+     "sfx": "keytap dur=1.2"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "label": "Every term a matrix",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "keytap dur=1.2"
+    },
+    {
+     "beat": 1.4,
+     "from": "start",
+     "sfx": "pop step=1"
+    },
+    {
+     "beat": 1.8,
+     "from": "start",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 2.4,
+     "from": "start",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 3.2,
+     "from": "start",
+     "sfx": "pop step=4"
+    },
+    {
+     "beat": 3.8,
+     "from": "start",
+     "sfx": "pop step=5"
+    },
+    {
+     "beat": 4.6,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  },
+  {
+   "id": "heads",
+   "label": "Eight heads",
+   "minBars": 3,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 10,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0.4,
+     "from": "start",
+     "sfx": "drawon dur=8"
+    },
+    {
+     "beat": 9,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 9.6,
+     "from": "start",
+     "sfx": "keytap dur=1.4"
+    }
+   ]
+  },
+  {
+   "id": "stack",
+   "label": "Encoder and decoder",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 2,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.3,
+     "from": "start",
+     "sfx": "pop:6 gap=0.32"
+    },
+    {
+     "beat": 2.6,
+     "from": "start",
+     "sfx": "zap dur=0.8"
+    },
+    {
+     "beat": 3.4,
+     "from": "start",
+     "sfx": "keytap dur=3.2"
+    }
+   ]
+  },
+  {
+   "id": "result",
+   "label": "The result",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 5,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "drawon dur=0.9"
+    },
+    {
+     "beat": 1.8,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 3.6,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 8,
+   "label": "short",
+   "exclude": [
+    "embed",
+    "stack"
+   ],
+   "scenes": {
+    "title": {
+     "bars": 1
+    },
+    "formula": {
+     "bars": 2
+    }
+   }
+  },
+  "30": {
+   "bars": 14,
+   "label": "30 s"
+  }
+ },
+ "poster": 12.0,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
+}
