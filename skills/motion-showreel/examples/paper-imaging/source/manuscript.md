@@ -12,10 +12,11 @@ expression suggests, at 8 hpf, while they still sit among future muscle cells. T
 pipeline are open.
 
 ## Figure 1
-**a**, Light-sheet volume of a 10-hpf embryo: nuclei (magenta), membranes (cyan), notochord reporter (green).
+**a**, Light-sheet volume of a 10-hpf embryo: nuclei (H2B, magenta), membranes (CAAX, cyan), notochord reporter (green).
 **b**, A light sheet scans the embryo one plane at a time; each plane is a 2D section.
 **c**, Tracks of 4,812 cells from 6 to 24 hpf, coloured by lineage; notochord in green.
-**d**, Time of commitment by lineage.
+**d**, Time of commitment by lineage, and the lineage tree of one notochord founder: its daughters part at 8 hpf,
+the notochord marker switches on at 10 hpf.
 
 ## Key numbers (simulated)
 4,812 cells · 1.9 M positions · 6–24 hpf · every 90 s · notochord commits at 8 hpf, ~2 h early

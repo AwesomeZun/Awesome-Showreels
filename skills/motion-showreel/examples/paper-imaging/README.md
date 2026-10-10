@@ -1,31 +1,41 @@
-# Example: paper-imaging (Every cell of the zebrafish embryo)
+# Example: paper-imaging (Light-sheet tracking of the zebrafish embryo)
 
-A fictional light-sheet imaging article and its simulated embryo go in; a luminous microscopy reel comes out in the article's own figure style: 2,400 nuclei gather and the three fluorescence channels slide into register, a light sheet slices the embryo with a live 2D section, 300 lineage tracks grow from 6 to 24 hpf, and the commitment timeline makes the claim. Nothing here picks a preset: palette, type, motion and music come from `source/` and are written to `style.json` with the reasoning for every decision.
+A fictional developmental-biology article goes in; a reel built the way the microscope builds its data comes out. The
+two objectives turn a laser into a sheet of light; the sheet sweeps down through the embryo and every plane it passes
+stays lit, so the volume is stacked one section at a time; three channels come on; then the clock runs from 6 to 24
+hours and every one of the 4,812 tracked cells moves, leaving its track; one founder's lineage parts at 8 hpf, and the
+notochord glows. Nothing here picks a preset: palette, type, motion and music come from `source/` and are written to
+`style.json` with the reasoning for every decision.
 
-- Web version with every cut: [`dist/zebrafish-light-sheet-v1.0.0.html`](dist/zebrafish-light-sheet-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v1.0.0.html))
-- Cuts: `short` (8 bars = 20.9 s), `30` (11 bars = 28.7 s), all at 92 BPM.
+- Web version with every cut: [`dist/zebrafish-light-sheet-v2.0.0.html`](dist/zebrafish-light-sheet-v2.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html))
+- Cuts: `short` (8 bars = 20.9 s), `30` (12 bars = 31.3 s), all at 92 BPM.
 
-> Every cell of the zebrafish embryo is fictional. Every name, number and screen is demo content made for this example.
+> Light-sheet tracking of the zebrafish embryo is fictional. Every name, number and screen is demo content made for this example.
 
 ## Folder
 
 ```
 paper-imaging/
-  source/                 6 file(s)
+  source/                 7 file(s)
     data/nuclei_10hpf.csv
-    data/tracks.csv
+    data/tracks_sample.csv
     fonts/DMMono-Regular.ttf
     fonts/Manrope-Variable.ttf
     fonts/OFL.txt
+    gen/a/prompt.txt
     manuscript.md
-  assets/                 1 file(s)
+  assets/                 3 file(s)
     data/embryo.json
+    ill/meta.json
+    ill/objectives.webp
   modules/                1 file(s)
-    emb.js
-  scenes/                 4 file(s)
-    decision.js
-    gather.js
-    sheet.js
+    ls.js
+  scenes/                 6 file(s)
+    channels.js
+    lineage.js
+    optics.js
+    result.js
+    stack.js
     tracks.js
   paper-src/              1 file(s)
     simulate.py
@@ -44,8 +54,21 @@ python3 $S/timing/plan_cut.py --project $P --cut short,30
 for c in short 30; do python3 $S/audio/arrange.py --project $P --cut $c; done
 python3 $S/audio/verify_sync.py --wav $P/build/music-short.wav --cut $P/build/cut-short.json
 node $S/runtime/render.mjs --project $P --cut short --out out/paper-imaging-short.mp4
-node $S/runtime/build.mjs --project $P --cuts short,30 --out out/zebrafish-light-sheet.html
+node $S/runtime/build.mjs --project $P --cuts short,30 --out out/zebrafish-light-sheet-v2.html
 ```
+
+## How it was made
+
+1. **The data, computed.** `paper-src/simulate.py` places every one of the 4,812 cells at six time points (6, 8, 10,
+   13, 17 and 24 hpf): a cap of cells over half the yolk spreads over all of it and gathers on the dorsal side, then
+   the axial cells extend into the body (notochord, neural tube, muscle) while skin covers it. Lineage is read from
+   where a cell sits at 10 hpf, and one founder's lineage tree parts at 8 hpf.
+2. **Drawn by the GPU.** `modules/ls.js` moves every cell along Catmull-Rom curves through its six positions, so any
+   hpf has a position for every cell, and hands the points to `gl.js`: additive glow with HDR tone mapping, so the
+   channels add up and overlaps burn white. The light sheet's reveal is a sphere so large it acts as a plane.
+3. **One render.** The two objectives are a GPT Image 2.5 render with a real alpha channel (`source/gen/a/prompt.txt`;
+   the PNG is not committed); `gen-src/prep.py` finds each objective's axis and tip in the alpha, so the beam leaves the
+   illumination objective exactly and focuses under the detection objective.
 
 ## What the tone pass decided
 
@@ -53,11 +76,11 @@ node $S/runtime/build.mjs --project $P --cuts short,30 --out out/zebrafish-light
 
 - **type.** Manrope for sentences, DM Mono for every scale bar, time stamp and channel name, as the figure style says.
 
-- **motion.** Patient and smooth: a slow turntable, a light sheet that scans at an even pace, tracks that grow with a running hpf clock; easing ioSine, no hits except the moment the three channels register.
+- **motion.** Patient and smooth, the way the instrument works: the sheet of light sweeps down at an even pace and every plane it passes stays lit, the volume turns on a slow turntable while the channels come on one by one, and the clock runs from 6 to 24 hpf with every cell moving on its own track (Catmull-Rom between six time points). Easing ioSine; the only hits are the channels registering and the notochord's tracks flaring at 8 hpf.
 
 - **sound.** Wonder, not tension: ambient at 92 BPM in E lydian, pad, glass and bell, soft kick.
 
-- **visuals.** The embryo as 2,400 glowing nuclei: they gather and the channels register; the light sheet slices it with a live 2D section; 300 lineage tracks from 6 to 24 hpf; the commitment timeline makes the claim.
+- **visuals.** Six scenes: the two objectives (a generated render with a real alpha channel) and the laser becoming a sheet; the sheet stacking the embryo plane by plane beside a live section; three channels on a turning volume; 4,812 cells tracked from 6 to 24 hpf with 900 lineage-coloured tracks (GPU, additive, HDR); one founder's lineage tree parting at 8 hpf (30 only); the 24-hpf notochord glowing under '8 hpf'. Every position comes from paper-src/simulate.py.
 
 ## Same BPM, more bars
 
@@ -65,20 +88,26 @@ The 30-second cut is the same reel with longer holds (and optional scenes where 
 
 | Scene | short | 30 s |
 |---|---|---|
-| `gather` | 2 | 3 |
-| `sheet` | 2 | 3 |
-| `tracks` | 2 | 3 |
-| `decision` | 2 | 2 |
+| `optics` | 1 | 2 |
+| `stack` | 2 | 2 |
+| `channels` | 1 | 2 |
+| `tracks` | 2 | 2 |
+| `lineage` | - | 2 |
+| `result` | 2 | 2 |
 
 ## Scenes
 
-**`gather`**: gather (2 bars, 3 in the 30): the embryo gathers. 2,400 nuclei drift in from a loose cloud and settle onto the embryo's shell (beats 0-3) while the three channels arrive misregistered (each offset in its own direction) and slide into register on beat 3, where the overlaps flash white; the embryo turns slowly on the right; the title rises on the left (4-5), the authors and the fictional-data note (5.5). Hold: the turntable continues.
+**`optics`**: optics (1 bar, 2 in the 30): a blade of light. The microscope's two objectives (a generated render with a real alpha channel) come out of the dark as a rim light sweeps their metal; on beat 1 a laser enters the illumination objective and leaves its tip as a thin sheet of light that narrows to its waist at the focus, under the detection objective; the embryo's first plane lights there. The title rises on the left. On the last beat the camera rushes into the focus (the next scene opens on the embryo).
 
-**`sheet`**: sheet (2 bars, 3 in the 30): panel b, one plane at a time. The embryo turns slowly; a thin light sheet (a bright vertical plane from the left) scans across it and back on an even pace; the nuclei inside the sheet light up full, the rest stay dim. The inset (right) shows that plane as a 2D section, updating as the sheet moves, with a 50 um scale bar and the plane's position in DM Mono. Hold: the scan keeps going, the section keeps redrawing.
+**`stack`**: stack (2 bars): the sheet builds the embryo. A horizontal sheet of light sweeps down through the 10-hpf embryo from the animal pole; the nuclei inside the sheet flare, and every plane it has passed stays lit, so the embryo is stacked one section at a time (4,812 nuclei on the GPU, additive, HDR). On the right, the live section: the plane as the camera above sees it, a ring of nuclei that widens and closes as the sheet goes down, with its plane number and a 100 um scale bar. When the sheet leaves, the whole embryo hangs there and the count reads 4,812 cells.
 
-**`tracks`**: tracks (2 bars, 3 in the 30): panel c. The embryo seen from the back (dorsal view); 300 lineage tracks grow from 6 to 24 hpf with a running clock (beats 0-4.5), each a fading trail with a bright head, coloured by lineage (notochord green, muscle magenta, neural cyan, skin grey), converging on the midline. On beat 5 the notochord tracks lock (the others dim) and the commitment timeline below marks 8 hpf. Hold: the heads keep breathing.
+**`channels`**: channels (1 bar, 2 in the 30): three colours, one embryo. The finished 10-hpf volume turns on its axis; the channels come on one after another: nuclei magenta, then membranes cyan, then the notochord reporter green, added on top of each other so where they overlap the light burns white. The channel list ticks on like the acquisition software's, and a leader names the notochord running down the dorsal side.
 
-**`decision`**: decision (2 bars; the end card): panel d. The claim at full size: 8 hpf in reporter green with the two-hour lead counting up beside it, the four lineages' commitment times as a dot plot with marker onset shown as hollow rings (the gap is the finding), the sentence and the citation. Hold: a few notochord nuclei glow and drift at the edge.
+**`tracks`**: tracks (2 bars): 6 to 24 hours in one sweep. The clock runs and every one of the 4,812 cells moves along its own path (Catmull-Rom through the six time points): the cap of cells spreads over the yolk, gathers on the dorsal side and stretches into a body, its tail lifting off. Nine hundred of the tracks draw on behind their cells in their lineage's colour, with light pulsing along them; at 8 hpf the notochord's tracks flare once, the moment its precursors commit. The camera turns slowly to follow the axis.
+
+**`lineage`**: lineage (2 bars, the 30 only): one founder, eighteen hours. From one cell at 6 hpf the tree grows downward with the clock, each division a fork. Until 8 hpf its branches are white; at the 8-hpf division one side turns notochord green and the other muscle magenta: that is the decision. The notochord marker only switches on at 10 hpf (a dashed line), two hours later; the gap is bracketed. Commitment times of all four lineages sit on the time axis.
+
+**`result`**: result (2 bars; the end): the notochord, glowing. The 24-hpf embryo turns slowly with every cell dimmed to a haze but the notochord's, a green rod along the body; the finding comes in very large (8 hpf), the claim in a sentence under it, then the authors, the open data and the honest note: a fictional article with simulated data.
 
 ## Provenance and credits
 

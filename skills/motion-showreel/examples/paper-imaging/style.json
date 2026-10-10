@@ -1,36 +1,178 @@
 {
   "$schema": "../../templates/style.schema.json",
-  "meta": { "purpose": "paper", "audience": "developmental biologists and microscopists", "title": "Light-sheet tracking of every cell in the zebrafish embryo",
-    "reviewed": "Written by hand from source/manuscript.md: the figure style (black, true fluorescence colours added together, white scale bars and monospaced time stamps, Manrope) is the look; the legend's four panels are the scenes." },
+  "meta": {
+    "purpose": "paper",
+    "audience": "developmental biologists and microscopists",
+    "title": "Light-sheet tracking of every cell in the zebrafish embryo",
+    "reviewed": "Written by hand from source/manuscript.md: the figure style (black, true fluorescence colours added together, white scale bars and monospaced time stamps, Manrope) is the look; the legend's four panels are the scenes."
+  },
   "source": [
-    { "path": "source/manuscript.md", "kind": "paper", "notes": "fictional imaging article: abstract, Figure 1 legend (a-d), key numbers, figure style" },
-    { "path": "source/data", "kind": "other", "notes": "simulated nuclei of a 10-hpf embryo and 300 lineage tracks 6-24 hpf (paper-src/simulate.py)" },
-    { "path": "source/fonts", "kind": "other", "notes": "Manrope and DM Mono (SIL OFL 1.1)" }
+    {
+      "path": "source/manuscript.md",
+      "kind": "paper",
+      "notes": "fictional imaging article: abstract, Figure 1 legend (a-d), key numbers, figure style"
+    },
+    {
+      "path": "source/data",
+      "kind": "other",
+      "notes": "simulated nuclei of a 10-hpf embryo and 300 lineage tracks 6-24 hpf (paper-src/simulate.py)"
+    },
+    {
+      "path": "source/fonts",
+      "kind": "other",
+      "notes": "Manrope and DM Mono (SIL OFL 1.1)"
+    },
+    {
+      "path": "source/gen/",
+      "kind": "generated-art",
+      "notes": "the prompt for the GPT Image 2.5 render of the two objectives (transparent background); the PNG is not committed"
+    }
   ],
-  "mood": ["luminous", "patient", "wondrous", "precise", "quiet"],
+  "mood": [
+    "luminous",
+    "patient",
+    "wondrous",
+    "precise",
+    "quiet"
+  ],
   "rationale": {
     "palette": "Microscopy on black: nuclei magenta (#FF3EC8), membranes cyan (#2EE6FF), the notochord reporter green (#4BFF6A), added together so overlaps glow white; UI in white at reduced opacity, never coloured.",
     "type": "Manrope for sentences, DM Mono for every scale bar, time stamp and channel name, as the figure style says.",
-    "motion": "Patient and smooth: a slow turntable, a light sheet that scans at an even pace, tracks that grow with a running hpf clock; easing ioSine, no hits except the moment the three channels register.",
+    "motion": "Patient and smooth, the way the instrument works: the sheet of light sweeps down at an even pace and every plane it passes stays lit, the volume turns on a slow turntable while the channels come on one by one, and the clock runs from 6 to 24 hpf with every cell moving on its own track (Catmull-Rom between six time points). Easing ioSine; the only hits are the channels registering and the notochord's tracks flaring at 8 hpf.",
     "sound": "Wonder, not tension: ambient at 92 BPM in E lydian, pad, glass and bell, soft kick.",
-    "visuals": "The embryo as 2,400 glowing nuclei: they gather and the channels register; the light sheet slices it with a live 2D section; 300 lineage tracks from 6 to 24 hpf; the commitment timeline makes the claim."
+    "visuals": "Six scenes: the two objectives (a generated render with a real alpha channel) and the laser becoming a sheet; the sheet stacking the embryo plane by plane beside a live section; three channels on a turning volume; 4,812 cells tracked from 6 to 24 hpf with 900 lineage-coloured tracks (GPU, additive, HDR); one founder's lineage tree parting at 8 hpf (30 only); the 24-hpf notochord glowing under '8 hpf'. Every position comes from paper-src/simulate.py."
   },
   "palette": {
-    "bg": "#000000", "bg2": "#07070B", "surface": "#0E0E14", "ink": "#F2F4F8", "ink2": "#B9C0CC", "muted": "#7D8594",
-    "accent": "#4BFF6A", "accent2": "#FF3EC8", "accent3": "#2EE6FF", "ok": "#4BFF6A", "warn": "#FFD24B", "deny": "#FF3EC8",
-    "accentInk": "#7DFF95", "onAccent": "#000000", "line": "#2A2D36", "highlight": "#123B1E"
+    "bg": "#000000",
+    "bg2": "#07070B",
+    "surface": "#0E0E14",
+    "ink": "#F2F4F8",
+    "ink2": "#B9C0CC",
+    "muted": "#7D8594",
+    "accent": "#4BFF6A",
+    "accent2": "#FF3EC8",
+    "accent3": "#2EE6FF",
+    "ok": "#4BFF6A",
+    "warn": "#FFD24B",
+    "deny": "#FF3EC8",
+    "accentInk": "#7DFF95",
+    "onAccent": "#000000",
+    "line": "#2A2D36",
+    "highlight": "#123B1E"
   },
-  "fonts": { "display": "\"Manrope\", sans-serif", "sans": "\"Manrope\", sans-serif", "serif": "\"Manrope\", sans-serif", "mono": "\"DM Mono\", monospace", "cjk": "\"Manrope\", sans-serif",
-    "files": [ { "family": "Manrope", "path": "source/fonts/Manrope-Variable.ttf", "weight": "200 800", "style": "normal" },
-               { "family": "DM Mono", "path": "source/fonts/DMMono-Regular.ttf", "weight": "400", "style": "normal" } ] },
-  "type": { "scale": [16, 20, 24, 30, 38, 48, 60, 76, 96, 128], "displayWeight": 700, "bodyWeight": 400, "tracking": -0.015, "trackingLabel": 0.08 },
-  "layout": { "theme": "dark", "margin": 96, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
-    "captions": { "enabled": false, "font": "\"Manrope\", sans-serif", "size": 32, "fg": "#F2F4F8", "bg": "rgba(0,0,0,0.85)", "y": 972 }, "radius": 4 },
-  "motion": { "pace": "calm", "spring": { "f": 1.6, "z": 1 }, "overshoot": 0, "ease": "ioSine", "transitions": ["cut"], "characters": false, "dataViz": true, "visualSources": ["vector", "data"], "typeReveal": ["revealLine"] },
-  "post": { "grain": 0.02, "vignette": { "a": 0.2, "color": "#000000" }, "bloom": 0 },
-  "sound": { "bpm": 92, "key": "E", "mode": "lydian", "preset": "ambient",
-    "instruments": ["pad", "glass", "bell", "sub", "kick", "shaker"], "drums": "light", "sfx": "minimal",
-    "energy": { "intro": 0.25, "groove": 0.45, "breakdown": 0.3, "drop": 0.6, "outro": 0.3 } },
-  "narration": { "recommended": true, "voice": "Aoede", "styleTag": "[calm, curious]", "lang": "en-GB" },
+  "fonts": {
+    "display": "\"Manrope\", sans-serif",
+    "sans": "\"Manrope\", sans-serif",
+    "serif": "\"Manrope\", sans-serif",
+    "mono": "\"DM Mono\", monospace",
+    "cjk": "\"Manrope\", sans-serif",
+    "files": [
+      {
+        "family": "Manrope",
+        "path": "source/fonts/Manrope-Variable.ttf",
+        "weight": "200 800",
+        "style": "normal"
+      },
+      {
+        "family": "DM Mono",
+        "path": "source/fonts/DMMono-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      30,
+      38,
+      48,
+      60,
+      76,
+      96,
+      128
+    ],
+    "displayWeight": 700,
+    "bodyWeight": 400,
+    "tracking": -0.015,
+    "trackingLabel": 0.08
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "\"Manrope\", sans-serif",
+      "size": 32,
+      "fg": "#F2F4F8",
+      "bg": "rgba(0,0,0,0.85)",
+      "y": 972
+    },
+    "radius": 4
+  },
+  "motion": {
+    "pace": "calm",
+    "spring": {
+      "f": 1.6,
+      "z": 1
+    },
+    "overshoot": 0,
+    "ease": "ioSine",
+    "transitions": [
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector",
+      "data"
+    ],
+    "typeReveal": [
+      "revealLine"
+    ]
+  },
+  "post": {
+    "grain": 0.02,
+    "vignette": {
+      "a": 0.2,
+      "color": "#000000"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 92,
+    "key": "E",
+    "mode": "lydian",
+    "preset": "ambient",
+    "instruments": [
+      "pad",
+      "glass",
+      "bell",
+      "sub",
+      "kick",
+      "shaker"
+    ],
+    "drums": "light",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.25,
+      "groove": 0.45,
+      "breakdown": 0.3,
+      "drop": 0.6,
+      "outro": 0.3
+    }
+  },
+  "narration": {
+    "recommended": true,
+    "voice": "Aoede",
+    "styleTag": "[calm, curious]",
+    "lang": "en-GB"
+  },
   "review": []
 }
