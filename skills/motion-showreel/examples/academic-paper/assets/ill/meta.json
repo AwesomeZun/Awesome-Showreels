@@ -1,0 +1,38 @@
+{
+ "alveoli": {
+  "size": [
+   965,
+   980
+  ],
+  "injury": [
+   790,
+   690
+  ]
+ },
+ "niche": {
+  "size": [
+   1150,
+   644
+  ],
+  "cells": {
+   "fibroblast": [
+    236,
+    335
+   ],
+   "transitional": [
+    564,
+    263
+   ],
+   "macrophage": [
+    976,
+    395
+   ]
+  }
+ },
+ "airspace": {
+  "size": [
+   1920,
+   1080
+  ]
+ }
+}

@@ -1,50 +1,327 @@
 {
-  "title": "Alveolar repair atlas",
-  "style": "style.json",
-  "size": [1920, 1080],
-  "fps": 60,
-  "beatsPerBar": 4,
-  "scenes": [
-    { "id": "title", "label": "The article", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 1, "in": "cut", "music": "intro",
-      "cues": [
-        { "beat": 0, "from": "start", "sfx": "tick:6 gap=0.05s soft" },
-        { "beat": 1, "from": "start", "sfx": "swish" },
-        { "beat": 3, "from": "start", "sfx": "blips" },
-        { "beat": 5, "from": "start", "sfx": "ding soft" }
-      ] },
-    { "id": "umap", "label": "a  Cell types", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "match", "music": "groove",
-      "cues": [
-        { "beat": 0, "from": "start", "sfx": "whoosh" },
-        { "beat": 2, "from": "start", "sfx": "blip step=0" },
-        { "beat": 2.5, "from": "start", "sfx": "blip step=1" },
-        { "beat": 3, "from": "start", "sfx": "blip step=2" },
-        { "beat": 3.5, "from": "start", "sfx": "blip step=3" },
-        { "beat": 0, "from": "holdBar", "sfx": "drawon dur=0.9", "count": 1 }
-      ] },
-    { "id": "spatial", "label": "c  In tissue", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "match", "music": "drop",
-      "cues": [
-        { "beat": 0, "from": "start", "sfx": "zoom" },
-        { "beat": 2, "from": "start", "sfx": "drawon dur=0.6" },
-        { "beat": 3, "from": "start", "sfx": "pop" },
-        { "beat": 0, "from": "holdBar", "sfx": "count", "count": 1 }
-      ] },
-    { "id": "markers", "label": "d  Markers", "minBars": 1, "maxBars": 2, "priority": 2, "inBeats": 3, "outBeats": 1, "in": "cut", "music": "groove",
-      "cues": [
-        { "beat": 0, "from": "start", "sfx": "tick:16 gap=0.075s soft" },
-        { "beat": 2.5, "from": "start", "sfx": "blip step=2" }
-      ] },
-    { "id": "finding", "label": "The finding", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 0, "in": "cut", "music": "outro",
-      "cues": [
-        { "beat": 0, "from": "start", "sfx": "swell" },
-        { "beat": 1, "from": "start", "sfx": "count" },
-        { "beat": 3, "from": "start", "sfx": "ding soft" }
-      ] }
-  ],
-  "cuts": {
-    "short": { "bars": 9 },
-    "30": { "bars": 12 }
+ "title": "A spatial multiome atlas of human alveolar repair",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "title",
+   "label": "The article and the organ",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0.35,
+     "from": "start",
+     "sfx": "pop n=3 gap=0.32 step=1"
+    },
+    {
+     "beat": 1.75,
+     "from": "start",
+     "sfx": "blip step=3"
+    },
+    {
+     "beat": 2.4,
+     "from": "start",
+     "sfx": "pulse"
+    },
+    {
+     "beat": 2.6,
+     "from": "start",
+     "sfx": "pop step=4"
+    },
+    {
+     "beat": 0.2,
+     "from": "holdStart",
+     "sfx": "pop n=3 gap=0.25 step=2"
+    },
+    {
+     "beat": 1.0,
+     "from": "holdStart",
+     "sfx": "sparkle dur=1 n=4"
+    },
+    {
+     "beat": -0.4,
+     "from": "end",
+     "sfx": "zoom"
+    }
+   ]
   },
-  "poster": 12.0,
-  "captions": { "enabled": false },
-  "audio": { "transitionSfx": false }
+  {
+   "id": "tissue",
+   "label": "One section, 4,900 nuclei",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 2,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "whoosh dur=2 peak=0.5"
+    },
+    {
+     "beat": 1.0,
+     "from": "start",
+     "sfx": "tick n=2 gap=0.2"
+    },
+    {
+     "beat": 0.2,
+     "from": "holdStart",
+     "sfx": "pop step=1"
+    },
+    {
+     "beat": 0.5,
+     "from": "holdStart",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 0.8,
+     "from": "holdStart",
+     "sfx": "pop step=5"
+    },
+    {
+     "beat": 0,
+     "from": "outStart",
+     "sfx": "sparkle dur=1.8 n=10"
+    },
+    {
+     "beat": 0,
+     "from": "end",
+     "sfx": "riser dur=2"
+    }
+   ]
+  },
+  {
+   "id": "umap",
+   "label": "The atlas and the repair path",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 8,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0.25,
+     "from": "start",
+     "sfx": "blips dur=2.6 density=0.5"
+    },
+    {
+     "beat": 2.4,
+     "from": "start",
+     "sfx": "pop n=8 gap=0.16 step=1"
+    },
+    {
+     "beat": 4.6,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 5.0,
+     "from": "start",
+     "sfx": "drawon dur=1.4"
+    },
+    {
+     "beat": 5.2,
+     "from": "start",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 5.6,
+     "from": "start",
+     "sfx": "blip step=4"
+    }
+   ]
+  },
+  {
+   "id": "markers",
+   "label": "Marker genes",
+   "minBars": 1,
+   "maxBars": 1,
+   "priority": 3,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.3,
+     "from": "start",
+     "sfx": "tick n=16 gap=0.11"
+    },
+    {
+     "beat": 2.4,
+     "from": "start",
+     "sfx": "pop step=4"
+    },
+    {
+     "beat": 2.7,
+     "from": "start",
+     "sfx": "pop step=6"
+    }
+   ]
+  },
+  {
+   "id": "niche",
+   "label": "The niche",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 8,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 1.3,
+     "from": "start",
+     "sfx": "whoosh dur=2.6 peak=0.5"
+    },
+    {
+     "beat": 1.4,
+     "from": "start",
+     "sfx": "blips dur=1.2 density=0.4"
+    },
+    {
+     "beat": 3.4,
+     "from": "start",
+     "sfx": "drawon dur=0.9"
+    },
+    {
+     "beat": 4.0,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 4.3,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 4.6,
+     "from": "start",
+     "sfx": "pop n=8 gap=0.14 step=1"
+    },
+    {
+     "beat": 5.4,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  },
+  {
+   "id": "finding",
+   "label": "The claim",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 0,
+   "outBeats": 4,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0.15,
+     "from": "start",
+     "sfx": "count dur=1"
+    },
+    {
+     "beat": 1.0,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": -2.4,
+     "from": "end",
+     "sfx": "pop n=3 gap=0.25 step=2"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 7,
+   "label": "short",
+   "exclude": [
+    "markers"
+   ],
+   "scenes": {
+    "title": {
+     "bars": 1
+    },
+    "tissue": {
+     "bars": 1
+    },
+    "umap": {
+     "bars": 2
+    },
+    "niche": {
+     "bars": 2
+    },
+    "finding": {
+     "bars": 1
+    }
+   }
+  },
+  "30": {
+   "bars": 12,
+   "label": "30 s",
+   "scenes": {
+    "title": {
+     "bars": 2
+    },
+    "tissue": {
+     "bars": 2
+    },
+    "umap": {
+     "bars": 3
+    },
+    "markers": {
+     "bars": 1
+    },
+    "niche": {
+     "bars": 2
+    },
+    "finding": {
+     "bars": 2
+    }
+   }
+  }
+ },
+ "poster": 7.4,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
 }

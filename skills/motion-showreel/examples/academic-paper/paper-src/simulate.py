@@ -1,10 +1,11 @@
 """Illustrative data for the fictional manuscript in source/manuscript.md (nothing here is measured).
 
 Writes the paper's supplementary tables and the compact copy the reel reads:
-  source/data/cells.csv    one row per sampled cell: id, cluster, umap_1, umap_2, x_um, y_um, pseudotime
+  source/data/cells.csv    one row per sampled cell: id, cluster, umap_1, umap_2, x_um, y_um, pseudotime, umap_3
   source/data/markers.csv  dot-plot table: gene, cluster, mean_expr (0-1, scaled), pct_expressing
   assets/data/atlas.json   the same, quantized for the reel
-Deterministic (seed 7). Run: python3 paper-src/simulate.py
+Deterministic (seed 7; the third UMAP axis, added for the v2 reel, comes from its own stream, seed 11, drawn after
+everything else so every earlier number is unchanged). Run: python3 paper-src/simulate.py
 """
 import csv, json, math, pathlib
 import numpy as np
@@ -124,10 +125,18 @@ inside = np.array([near(np.array(c[4:6])) for c in cells])
 types = np.array([c[0] for c in cells])
 enrich = [float((types[inside] == k).mean() / max((types == k).mean(), 1e-9)) for k in range(K)]
 
+# ── a third UMAP axis (v2): the repair arc bows toward the viewer through the transitional bridge; each island sits
+#    at its own depth. Its own random stream, so nothing above changes.
+rng3 = np.random.default_rng(11)
+ZISL = {3: -3.4, 4: -2.0, 5: 1.6, 6: -1.2, 7: 2.6}
+for c in cells:
+    k = c[0]
+    c.append(float(2.4 * math.sin(math.pi * c[3]) - 0.9 + rng3.normal(0, 0.42)) if k <= 2 else float(ZISL[k] + rng3.normal(0, 0.65)))
+
 (ROOT / "source/data").mkdir(parents=True, exist_ok=True)
 with open(ROOT / "source/data/cells.csv", "w", newline="") as f:
-    w = csv.writer(f); w.writerow(["id", "cluster", "umap_1", "umap_2", "x_um", "y_um", "pseudotime"])
-    for i, c in enumerate(cells): w.writerow([i, CLUSTERS[c[0]][0], f"{c[1]:.3f}", f"{c[2]:.3f}", f"{c[4]:.1f}", f"{c[5]:.1f}", f"{c[3]:.3f}" if c[3] >= 0 else ""])
+    w = csv.writer(f); w.writerow(["id", "cluster", "umap_1", "umap_2", "x_um", "y_um", "pseudotime", "umap_3"])
+    for i, c in enumerate(cells): w.writerow([i, CLUSTERS[c[0]][0], f"{c[1]:.3f}", f"{c[2]:.3f}", f"{c[4]:.1f}", f"{c[5]:.1f}", f"{c[3]:.3f}" if c[3] >= 0 else "", f"{c[6]:.3f}"])
 with open(ROOT / "source/data/markers.csv", "w", newline="") as f:
     w = csv.writer(f); w.writerow(["gene", "cluster", "mean_expr", "pct_expressing"])
     for g, k, m, p in markers: w.writerow([g, CLUSTERS[k][0], f"{m:.3f}", f"{p:.3f}"])
@@ -137,8 +146,8 @@ atlas = {
     "clusters": [{"label": c[0], "short": c[1], "color": c[2], "n": c[3], "markers": c[4]} for c in CLUSTERS],
     "umapRange": [-11, 11, -9, 7], "section": [SW, SH], "niche": [*NICHE.tolist(), NR],
     "alveoli": [[round(a[0], 1), round(a[1], 1), round(a[2], 1)] for a in alv],
-    # k, ux, uy, sx, sy, pseudotime(-1 none)
-    "cells": [[c[0], round(c[1], 2), round(c[2], 2), round(c[4]), round(c[5]), round(c[3], 3)] for c in cells],
+    # k, ux, uy, sx, sy, pseudotime(-1 none), uz (the v2 third axis)
+    "cells": [[c[0], round(c[1], 2), round(c[2], 2), round(c[4]), round(c[5]), round(c[3], 3), round(c[6], 2)] for c in cells],
     "genes": GENES, "dot": [[GENES.index(g), k, round(m, 3), round(p, 3)] for g, k, m, p in markers],
     "enrich": [round(e, 2) for e in enrich],
 }

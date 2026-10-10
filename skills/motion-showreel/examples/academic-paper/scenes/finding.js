@@ -1,47 +1,29 @@
-// finding (2 bars, end card): the claim, as big as the data allows. The KRT8+ nuclei from the niche come back as a
-// slowly orbiting cluster on the right (their tissue positions, magnified, breathing); the number counts up to 3.2x
-// on beat 1 in the accent, the sentence rises under it (2), the hedge line in the serif (2.5), and the citation
-// block with the fictional-data notice settles at the foot (3). Hold: the cluster keeps drifting; nothing else moves.
+// finding (1 bar, 2 in the 30; the end): the claim beside the cells it is about. Left: 3.2x counting up in coral,
+// the sentence in Source Serif 4 (KRT8+ transitional cells gather at the injury niche, where differentiation
+// stalls), the figure reference and, at the foot, the citation and the notice that the manuscript is fictional and
+// its data simulated. Right: a generated illustration of the niche's three cells, a stretched coral transitional cell
+// between a sage fibroblast and a slate macrophage, floating in the airspace, each named by a pill. Slow push.
 (() => {
-  const A = window.ATLAS;
-  let NICHE = null;
   SCENES['finding'] = {
     draw(ctx, t, env) {
-      const P = env.palette, lt = env.lt, bs = env.beatSec, at = (b) => (lt - b * bs) / bs;
-      ctx.fillStyle = P.bg; ctx.fillRect(0, 0, W, H);
-      const D = A.data(), [nx, ny, nr] = D.niche;
-      if (!NICHE) { NICHE = []; for (let i = 0; i < D.n; i++) { const d = Math.hypot(D.sx[i] - nx, D.sy[i] - ny); if (d < nr * 1.25) NICHE.push(i); } }
-      // the niche, magnified 2.2x around (1470, 540), rotating very slowly; KRT8+ in full colour, the rest grey
-      const CX = 1470, CY = 540, S = 2.2, rot = lt * 0.05, c = Math.cos(rot), s = Math.sin(rot), inK = Ease.outC(clamp(at(0) * 1.2));
-      ctx.save(); ctx.globalAlpha = 0.9;
-      for (const i of NICHE) {
-        const dx = (D.sx[i] - nx) * S, dy = (D.sy[i] - ny) * S, x = CX + dx * c - dy * s, y = CY + dx * s + dy * c;
-        const k = D.k[i], b = Math.sin(t * 0.8 + i) * 2, hero = k === 1;
-        const sp = A.dot(hero ? D.colors[1] : (k === 5 || k === 7 ? toHex(mix(D.colors[k], '#FFFFFF', 0.45)) : '#D3D8E0'), hero ? 7 : 5);
-        ctx.globalAlpha = inK * (hero ? 0.95 : 0.7) * clamp(1.4 - Math.hypot(dx, dy) / (nr * S * 1.2));
-        ctx.drawImage(sp.c, x - sp.R, y - sp.R + b, sp.R * 2, sp.R * 2);
-      }
-      ctx.restore();
-      ctx.save(); ctx.setLineDash([12, 10]); ctx.lineDashOffset = -lt * 10; ctx.strokeStyle = rgba(P.accent, 0.6 * inK); ctx.lineWidth = 2.5;
-      ctx.beginPath(); ctx.ellipse(CX, CY, nr * S * 1.1, nr * S * 0.9, rot, 0, TAU); ctx.stroke(); ctx.restore();
-      A.chrome(ctx, env, 'Halden et al. 2026', 1);
-      // the number
-      const n = clamp(at(1) / 1.2);
-      if (n > 0) {
-        const v = (3.2 * Ease.outQuint(n)).toFixed(1);
-        A.rise(ctx, v + '×', 104, 470, clamp(at(1) * 3), { size: 260, weight: 780, color: P.accent, ls: -10 });
-      }
-      A.rise(ctx, 'KRT8⁺ transitional cells gather', 112, 590, clamp(at(2) * 2), { size: 54, weight: 680, color: P.ink, ls: -1.2 });
-      A.rise(ctx, 'at the injury niche.', 112, 654, clamp(at(2.2) * 2), { size: 54, weight: 680, color: P.ink, ls: -1.2 });
-      A.rise(ctx, 'Repair stalls where CTHRC1⁺ fibroblasts and SPP1⁺ macrophages crowd in.', 112, 716, clamp(at(2.5) * 2), { size: 26, weight: 400, fam: 'S', color: P.ink2, ls: 0 });
-      // citation block
-      const cb = clamp(at(3) * 1.6);
-      if (cb > 0) {
-        ctx.fillStyle = P.line; ctx.fillRect(112, 880, (W - 224) * Ease.outQuint(cb), 1);
-        A.txt(ctx, 'Halden, M. K., Seo, J., Ferreira, A. P., Lindqvist, T. & Adeyemi, R. O.  A spatial multiome atlas of human alveolar repair', 112, 924, { size: 19, weight: 400, fam: 'S', color: P.ink2, a: cb, ls: 0 });
-        A.txt(ctx, 'resolves a KRT8⁺ transitional niche.  Article, 2026.', 112, 952, { size: 19, weight: 400, fam: 'S', color: P.ink2, a: cb, ls: 0 });
-        A.txt(ctx, 'FICTIONAL MANUSCRIPT · ILLUSTRATIVE DATA', W - 112, 1010, { size: 15, weight: 650, color: P.muted, align: 'right', a: cb, ls: 1.5 });
-      }
+      const B = env.beatSec, b = env.lt / B + 1e-4, n = Math.round(env.dur / B), X = Math.max(0, n - 4), meta = ASSET('ill/meta.json').niche, M = LG.ill('niche');
+      LG.bg(ctx, t, { air: 0.7, px: b * 5 });
+      const iw = 1000, ih = iw * meta.size[1] / meta.size[0], ix = 1370 - iw / 2, iy = 520 - ih / 2 + 8 * Math.sin(t * 0.8), z = 1 + 0.02 * b / n, fk = Ease.outExpo(clamp(b / 1.2));
+      ctx.save(); ctx.translate(1370, 520); ctx.scale(z, z); ctx.translate(-1370, -520); ctx.globalAlpha = fk; if (M) ctx.drawImage(M, ix, iy + (1 - fk) * 40, iw, ih); ctx.restore();
+      const at = (p) => [1370 + (ix + p[0] * iw / meta.size[0] - 1370) * z, 520 + (iy + p[1] * ih / meta.size[1] - 520) * z];
+      const l0 = n - 2.4;
+      [['CTHRC1⁺ fibroblast', 'fibroblast', '#5E9A4B', 0, 230], ['KRT8⁺ transitional cell', 'transitional', LG.CORAL, 0.25, -190], ['SPP1⁺ macrophage', 'macrophage', '#56687C', 0.5, 210]].forEach(([s, key, col, dl, dy]) => { const p = at(meta.cells[key]); LG.pill(ctx, s, p[0], p[1] + dy, clamp((b - l0 - dl) / 0.5), { dot: col, size: 22, to: [p[0], p[1] + Math.sign(dy) * 40] }); });
+      LG.motes(ctx, t, 0.7, b * 8);
+      // the claim
+      const ck = clamp((b - 0.15) / 1.0), v = 1 + 2.23 * Ease.outC(ck);
+      LG.rise(ctx, v.toFixed(1) + '×', 150, 420, ck, { size: 200, weight: 800, color: LG.CORAL });
+      LG.rise(ctx, 'KRT8⁺ transitional cells gather', 150, 530, clamp((b - 0.7) / 0.9), { size: 48, weight: 600, serif: true });
+      LG.rise(ctx, 'at the injury niche, where', 150, 590, clamp((b - 0.9) / 0.9), { size: 48, weight: 600, serif: true });
+      LG.rise(ctx, 'differentiation stalls.', 150, 650, clamp((b - 1.1) / 0.9), { size: 48, weight: 600, serif: true });
+      LG.rise(ctx, 'Fig. 1e · within 175 µm of injury foci · 14 donors', 150, 712, clamp((b - 1.5) / 0.8), { size: 22, color: LG.INK2 });
+      const fa = clamp((b - (n - 1.8)) / 0.8);
+      LG.txt(ctx, 'Halden, M. K., Seo, J., Ferreira, A. P., Lindqvist, T. & Adeyemi, R. O. A spatial multiome atlas of human alveolar repair', 150, 960, { size: 18, color: LG.INK2, a: fa });
+      LG.txt(ctx, 'resolves a KRT8⁺ transitional niche. (2026). Fictional manuscript written for this example; all data are simulated (paper-src/simulate.py).', 150, 988, { size: 18, color: LG.MUTED, a: fa });
     },
   };
 })();

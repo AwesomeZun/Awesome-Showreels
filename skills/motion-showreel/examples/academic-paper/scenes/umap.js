@@ -1,95 +1,58 @@
-// umap (2 bars): Fig. 1a then 1b. The dissociated cells from the title page fly into their UMAP positions
-// (beats 0-2, staggered by a per-cell hash so clusters condense out of the field rather than marching); the panel
-// letter, axis arrows and the legend arrive with them; cluster names land on the plot one per eighth (2-3.75).
-// Hold (from beat 4): panel b. Everything outside the epithelium dims; the AT2 -> KRT8+ -> AT1 continuum recolours
-// by pseudotime in a sweep from its root, and the trajectory arrow draws along it with a colour bar. Out: the
-// pseudotime colours give way to cell types again (the next scene starts from this exact frame).
+// umap (2 bars, 3 in the 30): Fig. 1a then 1b. The lifted nuclei fly into a three-dimensional UMAP (each on its own
+// clock and a slight arc), turning from grey to their cell type's colour as they land, while the camera swings from
+// the tilted tissue view into a slow orbit. A small axis triad, the panel label and a pill per cluster arrive. Then
+// the repair path: everything outside the AT2, KRT8+ and AT1 continuum fades back, the continuum recolours by
+// pseudotime (AT2 blue through coral to AT1 teal), and a lit path with travelling beads runs along it from AT2 to AT1,
+// with a colour bar. The caption: AT2 cells become AT1 cells through a KRT8+ transitional state.
 (() => {
-  const A = window.ATLAS;
+  const arcP = (s) => { const a = Math.PI * (0.95 - 0.9 * s); return [-1.6 + 7.4 * Math.cos(a), 1.2 + 3.0 * Math.sin(a) - 1.2 * s, 2.4 * Math.sin(Math.PI * s) - 0.9]; };
+  const ptCol = (s) => s < 0.5 ? toHex(mix('#2F6FDB', '#E8553A', s * 2)) : toHex(mix('#E8553A', '#13A39A', (s - 0.5) * 2));
+  let CEN = null;
+  function centroids() {
+    if (CEN) return CEN; const d = LG.data(), acc = d.clusters.map(() => [0, 0, 0, 0]);
+    d.cells.forEach(c => { const p = LG.umapW(c), q = acc[c[0]]; q[0] += p[0]; q[1] += p[1]; q[2] += p[2]; q[3]++; });
+    return (CEN = acc.map(q => [q[0] / q[3], q[1] / q[3], q[2] / q[3]]));
+  }
+  const CL = { pitch: 0.9, yaw: -0.35, dist: 34, target: [0, 0, 1.5] };
   SCENES['umap'] = {
+    orbit: (b) => ({ pitch: 0.28, yaw: 0.42 + 0.035 * b, dist: 31.5, target: [0.4, 0.2, 0], cx: 860 }),
     draw(ctx, t, env) {
-      const P = env.palette, lt = env.lt, bs = env.beatSec, at = (b) => (lt - b * bs) / bs, ph = env.phase;
-      ctx.fillStyle = P.bg; ctx.fillRect(0, 0, W, H);
-      const D = A.data(), t0 = t - lt;                                         // scene start in reel time
-      const bMode = Ease.ioC(clamp(at(4) * 1.2)) * (1 - Ease.ioC(ph.out));     // 0 = cell types, 1 = pseudotime
-      A.chrome(ctx, env, 'Fig. 1 | A cell atlas of the repairing alveolus', 1);
-      A.letter(ctx, bMode > 0.5 ? 'b' : 'a', 112, 196, 1);
-      A.txt(ctx, bMode > 0.5 ? 'Pseudotime along the repair trajectory' : 'Nuclei coloured by cell type', 160, 194, { size: 24, weight: 600, color: P.ink, ls: -0.2 });
-      A.axes(ctx, 150, 950, 80, clamp(at(0.5) * 1.5));
-      const sweep = clamp(at(4.2) / 2.2);                                       // how far the pseudotime colour has run
-      A.cells(ctx, (i) => {
-        const k = D.k[i], fly = Ease.ioC(clamp(at(D.h[i] * 0.9) / 1.3));
-        const [sx, sy] = A.scatterXY(i, t0), [ux, uy] = A.umapXY(i);
-        // a curved flight: lift sideways a little, so streams cross instead of sliding in straight lines
-        const mx = (sx + ux) / 2 + (D.h[i] - 0.5) * 160, my = (sy + uy) / 2 - 60 * (1 - Math.abs(D.h[i] - 0.5));
-        const x = (1 - fly) * (1 - fly) * sx + 2 * (1 - fly) * fly * mx + fly * fly * ux, y = (1 - fly) * (1 - fly) * sy + 2 * (1 - fly) * fly * my + fly * fly * uy;
-        const epi = k <= 2, pt = D.pt[i];
-        let col = D.colors[k], a = 0.9;
-        if (bMode > 0) {
-          if (!epi) a = lerp(0.9, 0.1, bMode);
-          else if (pt <= sweep * 1.05) col = A.ptColor(pt);
-          else col = toHex(mix(D.colors[k], '#D5DAE2', 0.7 * bMode));
-        }
-        const br = fly >= 1 ? 1.2 : 0;                                         // settled cells breathe a little
-        return [x + br * Math.sin(t * 1.3 + D.h[i] * 40), y + br * Math.cos(t * 1.1 + D.h[i] * 23), col, a, 3.1 + 0.5 * fly];
+      const B = env.beatSec, b = env.lt / B + 1e-4, n = Math.round(env.dur / B);
+      const d = LG.data(), fly = Ease.ioC(clamp(b / 3.0)), cam = LG.camera(LG.lerpCam(CL, SCENES['umap'].orbit(b), fly));
+      const tr = Ease.ioC(clamp((b - 4.6) / 1.2));
+      LG.bg(ctx, t, { air: 0.6, px: b * 5 });
+      LG.cloud(ctx, cam, (i, c) => {
+        const k = Ease.ioC(clamp((b - 0.1 - 1.3 * hash(i * 7.1)) / 1.6)), A = LG.tissueW(c), U = LG.umapW(c);
+        A[2] = LG.liftOf(i); return [LG.lerp(A[0], U[0], k), LG.lerp(A[1], U[1], k) + Math.sin(Math.PI * k) * 1.2, LG.lerp(A[2], U[2], k) + Math.sin(Math.PI * k) * 2];
+      }, (i, c) => {
+        const k = clamp((b - 0.9 - 1.3 * hash(i * 7.1)) / 1.0), epi = c[0] <= 2, base = LG.colOf(c[0]);
+        if (tr > 0) return epi ? { color: base, color2: ptCol(c[5]), mix: tr, r: 0.085 + 0.02 * tr } : { color: base, a: 1 - 0.8 * tr, r: 0.085 };
+        return { color: LG.GREY, color2: base, mix: k, r: 0.085 };
       });
-      // cluster names on the plot (white halo), one per eighth
-      D.clusters.forEach((c, k) => {
-        const p = clamp(at(2 + k * 0.25) * 3), [cx, cy] = A.umapPt(D.cen[k][0], D.cen[k][1]);
-        const dim = k <= 2 ? 1 : 1 - 0.8 * bMode;
-        const off = { 0: [-30, -86], 1: [0, -70], 2: [40, -78], 3: [-20, 64], 4: [0, 70], 5: [0, 62], 6: [0, 76], 7: [0, 58] }[k];
-        if (p > 0) A.halo(ctx, c.short, cx + off[0], cy + off[1] + (1 - Ease.outQuint(p)) * 10, { size: 21, weight: 650, color: k === 1 ? P.accentInk : P.ink, a: p * dim });
-      });
-      // legend (right column): swatch, name, nucleus count
-      const LX = 1330;
-      D.clusters.forEach((c, k) => {
-        const p = Ease.outQuint(clamp(at(0.8 + k * 0.12) * 2)), y = 230 + k * 50;
-        if (p <= 0) return;
-        const dim = bMode > 0 && k > 2 ? 1 - 0.65 * bMode : 1;
-        ctx.save(); ctx.globalAlpha *= p * dim;
-        ctx.fillStyle = c.color; circle(ctx, LX + 10, y - 7, 9); ctx.fill();
-        A.txt(ctx, c.label, LX + 34, y, { size: 22, weight: k === 1 ? 650 : 500, color: P.ink, ls: -0.1 });
-        A.txt(ctx, (Math.round(c.n * 84.25)).toLocaleString('en-US'), W - 112, y, { size: 20, weight: 500, color: P.muted, align: 'right', ls: 0 });
+      // the repair path, lit, with beads running from AT2 to AT1
+      if (tr > 0) {
+        const pts = Array.from({ length: 61 }, (_, j) => cam.project(arcP(j / 60).map((v, m) => (v - [-0.6, -1.4, 0.6][m]) * 1.08)));
+        const dk = clamp((b - 5.0) / 1.4), last = Math.max(2, Math.floor(dk * 60) + 1);
+        ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        for (const [w, col] of [[18, 'rgba(255,255,255,0.55)'], [6, 'rgba(31,36,51,0.85)']]) { ctx.strokeStyle = col; ctx.lineWidth = w; ctx.beginPath(); pts.slice(0, last).forEach((p, j) => (j ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.stroke(); }
+        if (dk >= 1) { const p = pts[60], q = pts[56], ang = Math.atan2(p[1] - q[1], p[0] - q[0]); ctx.fillStyle = LG.INK; ctx.beginPath(); ctx.moveTo(p[0] + Math.cos(ang) * 16, p[1] + Math.sin(ang) * 16); ctx.lineTo(p[0] + Math.cos(ang + 2.5) * 16, p[1] + Math.sin(ang + 2.5) * 16); ctx.lineTo(p[0] + Math.cos(ang - 2.5) * 16, p[1] + Math.sin(ang - 2.5) * 16); ctx.fill(); }
+        for (let j = 0; j < 6; j++) { const s = ((t * 0.18 + j / 6) % 1) * dk, p = pts[Math.round(s * 60)]; ctx.fillStyle = '#FFFFFF'; circle(ctx, p[0], p[1], 7); ctx.fill(); ctx.fillStyle = ptCol(s); circle(ctx, p[0], p[1], 4.5); ctx.fill(); }
         ctx.restore();
-      });
-      const tot = clamp(at(1.6) * 1.2);
-      if (tot > 0) {
-        ctx.fillStyle = P.line; ctx.fillRect(LX, 640, W - 112 - LX, 1);
-        A.txt(ctx, 'Nuclei', LX, 680, { size: 20, weight: 500, color: P.muted, a: tot, ls: 0 });
-        A.txt(ctx, Math.round(412806 * Ease.outQuint(tot)).toLocaleString('en-US'), W - 112, 680, { size: 22, weight: 650, color: P.ink, align: 'right', a: tot, ls: 0 });
-        A.txt(ctx, 'Donors', LX, 716, { size: 20, weight: 500, color: P.muted, a: tot, ls: 0 });
-        A.txt(ctx, '14', W - 112, 716, { size: 22, weight: 650, color: P.ink, align: 'right', a: tot, ls: 0 });
+        // the colour bar
+        const ba = clamp((b - 5.2) / 0.6); LG.card(ctx, 1520, 300, 300, 150, ba);
+        if (ba > 0) { ctx.globalAlpha = ba; ctx.fillStyle = linear(ctx, 1550, 0, 1790, 0, [[0, '#2F6FDB'], [0.5, '#E8553A'], [1, '#13A39A']]); rr(ctx, 1550, 370, 240, 16, 8); ctx.fill(); ctx.globalAlpha = 1; LG.txt(ctx, 'pseudotime', 1550, 350, { size: 22, weight: 600, a: ba }); [['AT2', 1550, 'left'], ['KRT8⁺', 1670, 'center'], ['AT1', 1790, 'right']].forEach(([s, x, al]) => LG.txt(ctx, s, x, 420, { size: 20, color: LG.INK2, align: al, a: ba })); }
       }
-      // panel b: the trajectory arrow along the continuum and a pseudotime colour bar
-      if (bMode > 0.01) {
-        const dp = Ease.ioC(clamp(at(4.4) / 2));
-        const pts = []; for (let i = 0; i <= 60; i++) { const u = 0.03 + 0.94 * i / 60, q = A.arcUMAP(u); pts.push(A.umapPt(q[0], q[1])); }
-        ctx.save(); ctx.globalAlpha *= bMode; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-        ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 11; polyStroke(ctx, pts, dp); ctx.stroke();
-        ctx.strokeStyle = P.ink; ctx.lineWidth = 4; polyStroke(ctx, pts, dp); ctx.stroke();
-        if (dp > 0.05) {
-          const n = Math.max(1, Math.floor(dp * 60)), a = pts[n - 1], b = pts[n], ang = Math.atan2(b[1] - a[1], b[0] - a[0]);
-          ctx.save(); ctx.translate(b[0], b[1]); ctx.rotate(ang); ctx.fillStyle = P.ink; ctx.beginPath(); ctx.moveTo(10, 0); ctx.lineTo(-12, -10); ctx.lineTo(-12, 10); ctx.closePath(); ctx.fill(); ctx.restore();
-        }
-        // in the hold, a light runs along the trajectory once per bar, AT2 -> AT1
-        const cm = ((lt - 6.4 * bs) / (4 * bs)) % 1;
-        if (lt > 6.4 * bs && dp >= 1) {
-          for (let k = 0; k < 14; k++) {
-            const u = clamp(cm - k * 0.012), q = pts[Math.min(60, Math.floor(u * 60))];
-            ctx.globalAlpha = bMode * (1 - k / 14) * 0.9; ctx.fillStyle = k ? A.ptColor(u) : '#FFFFFF';
-            circle(ctx, q[0], q[1], 9 - k * 0.5); ctx.fill();
-          }
-          ctx.globalAlpha = bMode;
-        }
-        // colour bar under the legend
-        const cb = clamp(at(4.6) * 1.5), y = 790;
-        A.txt(ctx, 'Pseudotime', LX, y, { size: 20, weight: 600, color: P.ink, a: cb, ls: 0 });
-        for (let i = 0; i < 100; i++) { if (i / 100 > cb) break; ctx.fillStyle = A.ptColor(i / 99); ctx.fillRect(LX + i * ((W - 112 - LX) / 100), y + 16, (W - 112 - LX) / 100 + 0.6, 14); }
-        A.txt(ctx, 'AT2', LX, y + 58, { size: 18, weight: 600, color: P.muted, a: cb, ls: 0 });
-        A.txt(ctx, 'KRT8⁺', (LX + W - 112) / 2, y + 58, { size: 18, weight: 650, color: P.accentInk, align: 'center', a: cb, ls: 0 });
-        A.txt(ctx, 'AT1', W - 112, y + 58, { size: 18, weight: 600, color: P.muted, align: 'right', a: cb, ls: 0 });
-        ctx.restore();
-      }
+      // labels: one pill per cluster, over its centroid
+      const C = centroids();
+      d.clusters.forEach((cl, k) => { const p = cam.project(C[k]), a = clamp((b - 2.4 - k * 0.16) / 0.5) * (k <= 2 ? 1 : 1 - 0.7 * tr); LG.pill(ctx, cl.short === 'KRT8+' ? 'KRT8⁺' : cl.label, p[0], p[1] - 70, a, { dot: cl.color, size: 22 }); });
+      // panel label and the axis triad
+      const pa = clamp((b - 1.4) / 0.5); LG.panel(ctx, tr > 0.5 ? 'b' : 'a', tr > 0.5 ? 'The repair trajectory (pseudotime)' : 'Cell types, 4,900 nuclei (UMAP, three axes)', 120, 86, pa);
+      const o = [-10.5, -5.2, -3], ax = [[2.4, 0, 0, 'UMAP 1'], [0, 2.4, 0, 'UMAP 2'], [0, 0, 2.4, 'UMAP 3']], O = cam.project(o);
+      ctx.save(); ctx.globalAlpha = pa; ctx.strokeStyle = LG.INK2; ctx.lineWidth = 2.5; ctx.lineCap = 'round';
+      ax.forEach(([x, y, z, s]) => { const Q = cam.project([o[0] + x, o[1] + y, o[2] + z]); ctx.beginPath(); ctx.moveTo(O[0], O[1]); ctx.lineTo(Q[0], Q[1]); ctx.stroke(); LG.txt(ctx, s, Q[0] + 6, Q[1] - 6, { size: 18, weight: 600, color: LG.INK2 }); });
+      ctx.restore();
+      LG.caption(ctx, 'AT2 cells become AT1 cells through a KRT8⁺ transitional state.', clamp((b - 5.6) / 1.0));
+      LG.motes(ctx, t, 0.7, b * 8);
     },
   };
 })();

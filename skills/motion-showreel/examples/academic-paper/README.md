@@ -1,39 +1,50 @@
-# Example: academic-paper (Alveolar repair atlas)
+# Example: academic-paper (A spatial multiome atlas of human alveolar repair)
 
-A fictional 2026 single-cell and spatial omics manuscript and its figure data go in; a precise, data-first reel comes out: 4,900 cells keep their identity from the title page through a UMAP, a tissue section and a dot plot to the one claim. Nothing here picks a preset: palette, type, motion and music were derived from `source/` and written to `style.json` with the reasoning for every decision.
+A fictional single-cell and spatial omics manuscript and its simulated data go in; a reel that never lets go of
+a single nucleus comes out (v2). The title page sits beside a generated illustration of the alveoli, its injured sac
+pulsing; one tissue section shows all 4,900 nuclei in their places, then the tissue is dissociated and every nucleus
+lifts off it; they fly into a three-dimensional UMAP the camera orbits, the repair path from AT2 through the KRT8+
+transitional state to AT1 lights up by pseudotime; (30) the marker dot plot floats on a glass card; every nucleus
+flies home, the injury niche is ringed at 175 µm and the enrichment bars rise; the claim, 3.2x, sits beside a
+generated illustration of the niche's three cells. Nothing here picks a preset: palette, type, motion and music come
+from `source/` and are written to `style.json` with the reasoning for every decision.
 
-- Demo (short cut, with its music): [`assets/demo-academic-paper-v1.0.0.mp4`](../../../../assets/demo-academic-paper-v1.0.0.mp4)
-- Web version with every cut: [`dist/alveolar-repair-atlas-v1.0.0.html`](dist/alveolar-repair-atlas-v1.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html))
-- Cuts: `short` (9 bars = 21.6 s), `30` (12 bars = 28.8 s), all at 100 BPM.
+- Web version with every cut: [`dist/alveolar-repair-atlas-v2.0.0.html`](dist/alveolar-repair-atlas-v2.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html))
+- Cuts: `short` (7 bars = 17.5 s), `30` (12 bars = 30.0 s), all at 96 BPM.
 
-> Alveolar repair atlas is fictional. Every name, number and screen is demo content made for this example.
+> A spatial multiome atlas of human alveolar repair is fictional. Every name, number and screen is demo content made for this example.
 
 ## Folder
 
 ```
 academic-paper/
-  source/                 7 file(s)
+  source/                 8 file(s)
     data/cells.csv
     data/markers.csv
     fonts/Inter.ttf
     fonts/OFL-Inter.txt
     fonts/OFL-SourceSerif4.txt
     fonts/SourceSerif4.ttf
+    gen/v2/prompt.txt
     manuscript.md
-  assets/                 1 file(s)
+  assets/                 5 file(s)
     data/atlas.json
+    ill/airspace.webp
+    ill/alveoli.webp
+    ill/meta.json
+    ill/niche.webp
   modules/                1 file(s)
-    atlas.js
-  scenes/                 5 file(s)
+    lung.js
+  scenes/                 6 file(s)
     finding.js
     markers.js
-    spatial.js
+    niche.js
+    tissue.js
     title.js
     umap.js
   paper-src/              1 file(s)
     simulate.py
   style.json
-  style-extract.md
   reel.config.json
   STORYBOARD.md
   dist/
@@ -48,22 +59,32 @@ python3 $S/timing/plan_cut.py --project $P --cut short,30
 for c in short 30; do python3 $S/audio/arrange.py --project $P --cut $c; done
 python3 $S/audio/verify_sync.py --wav $P/build/music-short.wav --cut $P/build/cut-short.json
 node $S/runtime/render.mjs --project $P --cut short --out out/academic-paper-short.mp4
-node $S/runtime/build.mjs --project $P --cuts short,30 --out out/alveolar-repair-atlas.html
+node $S/runtime/build.mjs --project $P --cuts short,30 --out out/alveolar-repair-atlas-v2.html
 ```
+
+## How it was made
+
+1. **Data first, unchanged.** `paper-src/simulate.py` still makes the same 4,900 nuclei, dot plot and enrichment
+   (3.2x, 1.9x, 1.8x); v2 only adds a third UMAP axis from its own random stream, drawn after everything else, so
+   every earlier number is identical.
+2. **Illustrations where the paper would draw.** Three GPT Image 2.5 images (`source/gen/v2/`, alpha from Codex
+   image_gen's transparent_background option): the alveoli with an injured sac, the niche's three cells, an
+   out-of-focus airspace. `gen-src/prep.py` trims them and records where the injured sac and each cell sit, so the
+   pills point at them. Nothing that reads as data is generated.
+3. **One sphere per nucleus.** `modules/lung.js` caches a shaded sphere sprite per colour and places every nucleus
+   with one perspective camera, depth-sorted each frame, so the same object moves from tissue to atlas and back.
 
 ## What the tone pass decided
 
-- **palette.** A current life-science article reads white page, near-black ink, and the figure's categorical palette as the only colour. bg is the page (#FFFFFF) and bg2 a cool figure-panel grey (#F3F5F8). The eight cell-type colours come from the figure data (atlas.json) and carry all chroma; the accent is the hero population's colour, the KRT8+ transitional vermillion (#E8553A), used for the claim and the niche. accent2 is the AT2 blue (#2F6FDB) for the trajectory start, accent3 the AT1 teal (#13A39A) for its end. Rules and axes are a cool grey (#C9CFD8).
+- **palette.** The inside of a lung: blush and warm white (#FBF4F1 to #F1E7EE), pale pink walls, soft daylight. The eight cell types keep the figure's colours (AT2 blue #2F6FDB, KRT8+ transitional coral #E8553A, AT1 teal #13A39A, basal violet, ciliated amber, fibroblast green, endothelial magenta, macrophage slate), so a viewer who has the paper open finds the same colour in the same place; ink is a deep blue-grey (#1F2433).
 
-- **type.** Modern journals set headlines and figure labels in a grotesque and the abstract in a text serif: Inter (600-700, tight -0.02 em tracking) for title, panel letters (bold lowercase a-e, as in the legend) and axis labels; Source Serif 4 for the abstract and author line; tabular figures for counts.
+- **type.** Source Serif 4 for the title and the claim, as a journal sets them; Inter for panel letters, labels, axes and numbers, tabular; gene names in italics by convention.
 
-- **motion.** Data-first and exact: points move on purpose (dissociated cells -> UMAP -> tissue), no bounce, outQuint, short staggers by cell type. Every scene is one figure panel; transitions are match cuts on the same points.
+- **motion.** Every nucleus is one shaded sphere for the whole reel: it sits in the tissue, lifts off when the tissue is dissociated, flies into a three-dimensional UMAP the camera orbits, lights up by pseudotime along the repair path, and flies home to its place in the section, where the injury niche is ringed. The camera is always moving (push, orbit, pull back); depth from three layers (out-of-focus airspace behind, data in the middle, drifting motes in front). Ease ioC and outExpo; labels spring open with a little overshoot.
 
-- **sound.** Clean, modern, slightly luminous: ambient preset at 100 BPM in D dorian (open, curious, not dark). Marimba for the precise motion line (cells landing), glass top, soft pad, sub, light kick/rim/shaker. SFX minimal: blips and ticks for points and labels, drawon for trajectories.
+- **sound.** A light, hopeful bed at 96 BPM in F major (corporate preset: piano broken chords, marimba, strings, glockenspiel, a light kit): glass ticks as nuclei arrive, a rising draw tone as the trajectory lights, pops for labels, a chime on 3.2x.
 
-- **narration.** Recommended for a paper explainer; this example ships music-led with captions off.
-
-- **visuals.** No photos or characters. The figure is the hero: 4,900 cells drawn as dots that keep their identity across UMAP, pseudotime, the tissue section and the dot plot.
+- **visuals.** Six moments: the title page beside a generated illustration of the alveoli; one tissue section with its 4,900 nuclei, dissociated; the 3D UMAP and the repair trajectory (Fig. 1a, b); (30) the marker dot plot as a floating card (Fig. 1d); back in the tissue, the injury niche ringed at 175 um and the enrichment bars (Fig. 1c, e); the claim, 3.2x, beside a generated illustration of the niche's three cells. Illustrations are drawn as illustrations; every data panel is computed from the simulated data.
 
 ## Same BPM, more bars
 
@@ -71,23 +92,26 @@ The 30-second cut is the same reel with longer holds (and optional scenes where 
 
 | Scene | short | 30 s |
 |---|---|---|
-| `title` | 2 | 2 |
+| `title` | 1 | 2 |
+| `tissue` | 1 | 2 |
 | `umap` | 2 | 3 |
-| `spatial` | 2 | 3 |
-| `markers` | 1 | 2 |
-| `finding` | 2 | 2 |
+| `markers` | - | 1 |
+| `niche` | 2 | 2 |
+| `finding` | 1 | 2 |
 
 ## Scenes
 
-**`title`**: title (2 bars): the article's first page as a modern journal sets it. Running head and the ARTICLE tag tick in (beat 0); the title rises line by line out of a mask (beats 1-2.5), the author line and affiliations follow (3-3.5), then the first sentence of the abstract. On the right the 4,900 dissociated nuclei of the atlas hang in a loose field, drifting, all one neutral grey: from beat 4 their identities light up type by type (the colours of Fig. 1a), which is what the next scene sorts. Out: the text column slides away; the cells stay (match cut).
+**`title`**: title (1 bar, 2 in the 30): the article's first page beside the organ it is about. On the left, as a journal sets it: the ARTICLE tag and running head, the title rising line by line in Source Serif 4 (KRT8+ in coral), authors and affiliations. On the right a generated illustration of the alveoli floats in soft daylight over an out-of-focus airspace, motes drifting in front; its injured sac pulses coral and a pill names it. In the 30 three chips give the atlas's size and the abstract's first sentence follows. In the last beat the camera pushes toward the injury.
 
-**`umap`**: umap (2 bars): Fig. 1a then 1b. The dissociated cells from the title page fly into their UMAP positions (beats 0-2, staggered by a per-cell hash so clusters condense out of the field rather than marching); the panel letter, axis arrows and the legend arrive with them; cluster names land on the plot one per eighth (2-3.75). Hold (from beat 4): panel b. Everything outside the epithelium dims; the AT2 -> KRT8+ -> AT1 continuum recolours by pseudotime in a sweep from its root, and the trajectory arrow draws along it with a colour bar. Out: the pseudotime colours give way to cell types again (the next scene starts from this exact frame).
+**`tissue`**: tissue (1 bar, 2 in the 30): Fig. 1c, the place. One section of repairing lung (1.6 x 0.9 mm) seen from above: alveolar airspaces cut out of pink walls, the airway at the left, the thickened injury niche; on it all 4,900 nuclei as grey shaded spheres, their identities not yet known. The camera pulls back from the niche to the whole section; panel label and a 200 um scale bar arrive. In the 30 pills name the airway, an alveolus and the injury and a caption says what is measured. In the last two beats the tissue is dissociated: the camera tilts away, the section fades and every nucleus lifts off it, each to its own height.
 
-**`spatial`**: spatial (2 bars): Fig. 1c and 1e. Opens on the UMAP exactly as the last scene left it; on beat 0 every nucleus leaves its UMAP position for its place in the tissue section (beats 0-2, staggered by distance so the section fills in from the injury niche outward). The section's frame, scale bar and the alveolar sac outlines draw on (beat 2); on beat 3 the injury niche is ringed (dashed) and everything but the niche's three cell types dims. Hold: panel e, the niche enrichment per cell type, bars growing one per eighth with the KRT8+ bar last and labelled 3.2x. Out (1 beat): cut to the dot plot.
+**`umap`**: umap (2 bars, 3 in the 30): Fig. 1a then 1b. The lifted nuclei fly into a three-dimensional UMAP (each on its own clock and a slight arc), turning from grey to their cell type's colour as they land, while the camera swings from the tilted tissue view into a slow orbit. A small axis triad, the panel label and a pill per cluster arrive. Then the repair path: everything outside the AT2, KRT8+ and AT1 continuum fades back, the continuum recolours by pseudotime (AT2 blue through coral to AT1 teal), and a lit path with travelling beads runs along it from AT2 to AT1, with a colour bar. The caption: AT2 cells become AT1 cells through a KRT8+ transitional state.
 
-**`markers`**: markers (1 bar): Fig. 1d, the marker dot plot. Rows are the eight cell types, columns the sixteen marker genes in italics (gene-name convention). The columns fill left to right, one per sixteenth (beats 0-2), each dot growing to its fraction-expressing size and darkening with mean expression; on beat 2.5 the KRT8 / CLDN4 / SFN block is boxed in the accent and its row label lights up. Size and colour legends sit under the plot.
+**`markers`**: markers (1 bar, the 30 only): Fig. 1d, the marker dot plot, on a glass card floating over the atlas (the UMAP still turning behind it, out of focus). Rows are the eight cell types with their colours, columns the sixteen marker genes in italics; each dot is a shaded sphere sized by the fraction of nuclei expressing the gene and darkened by its mean expression. The columns fill left to right; then the KRT8, CLDN4 and SFN block and the KRT8+ row are boxed in coral, with size and colour legends under the plot.
 
-**`finding`**: finding (2 bars, end card): the claim, as big as the data allows. The KRT8+ nuclei from the niche come back as a slowly orbiting cluster on the right (their tissue positions, magnified, breathing); the number counts up to 3.2x on beat 1 in the accent, the sentence rises under it (2), the hedge line in the serif (2.5), and the citation block with the fictional-data notice settles at the foot (3). Hold: the cluster keeps drifting; nothing else moves.
+**`niche`**: niche (2 bars): Fig. 1c and 1e, back in the tissue. Every nucleus flies home from the UMAP to its place in the section, in its type's colour now, as the camera settles level over the tissue and the section fades in under them. The camera closes in on the injury: a dashed ring at 175 um draws round it, everything but the niche's three types (KRT8+ transitional cells, fibroblasts, macrophages) dims, and the transitional cells swell a little. On the right, panel e: enrichment inside the ring for each type, bars growing against a dashed line at 1x, the KRT8+ bar last and labelled 3.2x. The caption gives the claim with its numbers.
+
+**`finding`**: finding (1 bar, 2 in the 30; the end): the claim beside the cells it is about. Left: 3.2x counting up in coral, the sentence in Source Serif 4 (KRT8+ transitional cells gather at the injury niche, where differentiation stalls), the figure reference and, at the foot, the citation and the notice that the manuscript is fictional and its data simulated. Right: a generated illustration of the niche's three cells, a stretched coral transitional cell between a sage fibroblast and a slate macrophage, floating in the airspace, each named by a pill. Slow push.
 
 ## Provenance and credits
 
