@@ -1,0 +1,612 @@
+{
+ "title": "Sunlight for Breakfast",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "core",
+   "label": "Where light is made",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "sparkle dur=0.9 n=6"
+    },
+    {
+     "beat": 0.9,
+     "from": "start",
+     "sfx": "shimmer"
+    },
+    {
+     "beat": 1.0,
+     "from": "start",
+     "sfx": "sparkle dur=1.2 n=8"
+    },
+    {
+     "beat": 2.1,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 0.4,
+     "from": "holdStart",
+     "sfx": "blip step=3"
+    },
+    {
+     "beat": 0.5,
+     "from": "holdStart",
+     "sfx": "pulse",
+     "every": 1,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "id": "walk",
+   "label": "The random walk",
+   "minBars": 4,
+   "maxBars": 4,
+   "priority": 3,
+   "inBeats": 16,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "drawon dur=1.2"
+    },
+    {
+     "beat": 1.0,
+     "from": "start",
+     "sfx": "pop n=3 gap=0.2"
+    },
+    {
+     "beat": 1.25,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "blips dur=7 density=0.35"
+    },
+    {
+     "beat": 9.25,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 9.75,
+     "from": "start",
+     "sfx": "whoosh dur=1.5 peak=0.5 up"
+    },
+    {
+     "beat": 13.5,
+     "from": "start",
+     "sfx": "reveal"
+    }
+   ]
+  },
+  {
+   "id": "surface",
+   "label": "The surface",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 2,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "downlifter dur=2"
+    },
+    {
+     "beat": 1.25,
+     "from": "start",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 0.4,
+     "from": "holdStart",
+     "sfx": "blip step=4"
+    },
+    {
+     "beat": 1.0,
+     "from": "outStart",
+     "sfx": "whoosh dur=1.5 peak=0.6"
+    }
+   ]
+  },
+  {
+   "id": "space",
+   "label": "8 minutes 20 seconds",
+   "minBars": 2,
+   "maxBars": 4,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 1.5,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "air"
+    },
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "tick",
+     "every": 1,
+     "until": "outStart"
+    },
+    {
+     "beat": 1.25,
+     "from": "start",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 0,
+     "from": "outStart",
+     "sfx": "chime"
+    },
+    {
+     "beat": 0.25,
+     "from": "outStart",
+     "sfx": "pop step=5"
+    }
+   ]
+  },
+  {
+   "id": "aurora",
+   "label": "The solar wind",
+   "minBars": 4,
+   "maxBars": 4,
+   "priority": 3,
+   "inBeats": 16,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.75,
+     "from": "start",
+     "sfx": "sparkle dur=2 n=10"
+    },
+    {
+     "beat": 1.0,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 1.75,
+     "from": "start",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 2.0,
+     "from": "start",
+     "sfx": "pop step=4"
+    },
+    {
+     "beat": 2.5,
+     "from": "start",
+     "sfx": "pulse"
+    },
+    {
+     "beat": 6.25,
+     "from": "start",
+     "sfx": "whoosh dur=1.2 peak=0.5"
+    },
+    {
+     "beat": 7.25,
+     "from": "start",
+     "sfx": "shimmer"
+    },
+    {
+     "beat": 8.75,
+     "from": "start",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 9.75,
+     "from": "start",
+     "sfx": "pop step=4"
+    }
+   ]
+  },
+  {
+   "id": "sky",
+   "label": "The air",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 2,
+   "inBeats": 8,
+   "outBeats": 0,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.25,
+     "from": "start",
+     "sfx": "sparkle dur=1 n=6"
+    },
+    {
+     "beat": 1.25,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 1.75,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 3.75,
+     "from": "start",
+     "sfx": "whoosh dur=2 peak=0.6 down"
+    },
+    {
+     "beat": 4.75,
+     "from": "start",
+     "sfx": "blips dur=1.4 density=0.4"
+    },
+    {
+     "beat": 0.5,
+     "from": "holdStart",
+     "sfx": "sparkle dur=1.2 n=5"
+    }
+   ]
+  },
+  {
+   "id": "leaf",
+   "label": "Light becomes sugar",
+   "minBars": 1,
+   "maxBars": 5,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 2,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 0.9,
+     "from": "start",
+     "sfx": "pulse"
+    },
+    {
+     "beat": 2.0,
+     "from": "start",
+     "sfx": "zoom"
+    },
+    {
+     "beat": 0.25,
+     "from": "holdStart",
+     "sfx": "pop"
+    },
+    {
+     "beat": 0.75,
+     "from": "holdStart",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 2.5,
+     "from": "holdStart",
+     "sfx": "zoom"
+    },
+    {
+     "beat": 3.0,
+     "from": "holdStart",
+     "sfx": "zap dur=0.8"
+    },
+    {
+     "beat": 3.75,
+     "from": "holdStart",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 4.25,
+     "from": "holdStart",
+     "sfx": "pop step=5"
+    },
+    {
+     "beat": 4.75,
+     "from": "holdStart",
+     "sfx": "blip"
+    },
+    {
+     "beat": 5.5,
+     "from": "holdStart",
+     "sfx": "pop"
+    },
+    {
+     "beat": 5.75,
+     "from": "holdStart",
+     "sfx": "blips dur=1.2 density=0.5"
+    },
+    {
+     "beat": 7.5,
+     "from": "holdStart",
+     "sfx": "ding"
+    },
+    {
+     "beat": 8.0,
+     "from": "holdStart",
+     "sfx": "swish"
+    },
+    {
+     "beat": 8.5,
+     "from": "holdStart",
+     "sfx": "sparkle dur=2 n=8"
+    },
+    {
+     "beat": 9.0,
+     "from": "holdStart",
+     "sfx": "pop step=2"
+    },
+    {
+     "beat": 0,
+     "from": "outStart",
+     "sfx": "chime"
+    },
+    {
+     "beat": 0.25,
+     "from": "outStart",
+     "sfx": "pop step=4"
+    }
+   ]
+  },
+  {
+   "id": "wheat",
+   "label": "A season of sunlight",
+   "minBars": 1,
+   "maxBars": 4,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 2,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "sparkle dur=2 n=10"
+    },
+    {
+     "beat": 0.75,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 2.25,
+     "from": "holdStart",
+     "sfx": "swell"
+    },
+    {
+     "beat": 2.5,
+     "from": "holdStart",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 6.0,
+     "from": "holdStart",
+     "sfx": "sparkle dur=1.5 n=6"
+    },
+    {
+     "beat": 0,
+     "from": "outStart",
+     "sfx": "pop n=3 gap=0.45 step=2"
+    }
+   ]
+  },
+  {
+   "id": "toast",
+   "label": "Breakfast",
+   "minBars": 2,
+   "maxBars": 4,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 4,
+   "in": "match",
+   "inParams": {
+    "fade": 0.35
+   },
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0.9,
+     "from": "start",
+     "sfx": "send"
+    },
+    {
+     "beat": 1.25,
+     "from": "start",
+     "sfx": "pop"
+    },
+    {
+     "beat": 2.0,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 0.75,
+     "from": "holdStart",
+     "sfx": "bloop"
+    },
+    {
+     "beat": 2.0,
+     "from": "holdStart",
+     "sfx": "charge"
+    },
+    {
+     "beat": 2.25,
+     "from": "holdStart",
+     "sfx": "pop step=3"
+    },
+    {
+     "beat": 0.2,
+     "from": "outStart",
+     "sfx": "pop n=5 gap=0.45 step=1"
+    },
+    {
+     "beat": 0.5,
+     "from": "outStart",
+     "sfx": "sparkle dur=1.2 n=8"
+    },
+    {
+     "beat": 1.75,
+     "from": "outStart",
+     "sfx": "chime"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 8,
+   "label": "15 s",
+   "exclude": [
+    "walk",
+    "aurora",
+    "sky"
+   ],
+   "scenes": {
+    "core": {
+     "bars": 1
+    },
+    "surface": {
+     "bars": 1
+    },
+    "space": {
+     "bars": 2
+    },
+    "leaf": {
+     "bars": 1
+    },
+    "wheat": {
+     "bars": 1
+    },
+    "toast": {
+     "bars": 2
+    }
+   }
+  },
+  "30": {
+   "bars": 16,
+   "label": "30 s",
+   "exclude": [
+    "walk",
+    "aurora"
+   ],
+   "scenes": {
+    "core": {
+     "bars": 2
+    },
+    "surface": {
+     "bars": 2
+    },
+    "space": {
+     "bars": 3
+    },
+    "sky": {
+     "bars": 2
+    },
+    "leaf": {
+     "bars": 3
+    },
+    "wheat": {
+     "bars": 2
+    },
+    "toast": {
+     "bars": 2
+    }
+   }
+  },
+  "60": {
+   "bars": 32,
+   "label": "60 s",
+   "scenes": {
+    "core": {
+     "bars": 2
+    },
+    "walk": {
+     "bars": 4
+    },
+    "surface": {
+     "bars": 2
+    },
+    "space": {
+     "bars": 4
+    },
+    "aurora": {
+     "bars": 4
+    },
+    "sky": {
+     "bars": 3
+    },
+    "leaf": {
+     "bars": 5
+    },
+    "wheat": {
+     "bars": 4
+    },
+    "toast": {
+     "bars": 4
+    }
+   }
+  }
+ },
+ "poster": 5.4,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false,
+  "tweaks": {
+   "bassPattern": "eighths"
+  }
+ }
+}

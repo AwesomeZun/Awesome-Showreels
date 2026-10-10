@@ -1,0 +1,156 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "explainer",
+    "audience": "anyone who has eaten toast and wondered where its energy came from",
+    "title": "Sunlight for Breakfast",
+    "reviewed": "Written by hand from source/notes.md: saturated flat vector shapes with rounded corners and layered depth on a dark violet universe. Every number on screen is a rounded textbook value from the notes; where estimates differ, the range is shown."
+  },
+  "source": [
+    {
+      "path": "source/notes.md",
+      "kind": "notes",
+      "notes": "the journey in nine steps with its numbers (rounded textbook values, ranges where estimates differ), the style"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "font",
+      "notes": "Nunito (variable weight, SIL OFL 1.1): rounded terminals that match the rounded shapes"
+    }
+  ],
+  "mood": [
+    "wondrous",
+    "bright",
+    "curious",
+    "warm",
+    "energetic"
+  ],
+  "rationale": {
+    "palette": "A dark violet universe (#140C2E to #3B2275) so every light source can glow; the Sun in bands of yellow, orange and red (#FFD84A, #FFA22B, #FF6A2B, #E8432E); the travelling light a warm white (#FFFBE8) with a gold halo; then the colours of the morning it ends in: ocean blue, leaf greens (#56BE45, #26742A), wheat gold (#F3C04C) and toast brown (#B8662B). Labels are white pills with violet ink.",
+    "type": "Nunito, a rounded sans whose terminals match the rounded shapes: Black (900) capitals with wide tracking for titles, ExtraBold for labels and captions, numbers set large where the number is the point (8:20).",
+    "motion": "Flat layers move at different speeds for depth (stars, planets, foreground bokeh); round things pop in with a little overshoot, labels spring open; the camera zooms through scales (core, Sun, space, Earth, leaf, cell, chloroplast, field, table) and each scene picks up the previous one's last move. Ease ioC and outBack.",
+    "sound": "A bright synth-pop bed at 128 BPM in E major (pad, plucked arpeggios, bells, a driving eighth-note bass, the full kit at the busy parts): a shimmer on the fusion flash, a whoosh as the light leaves the Sun, a tick on every beat while the clock runs, a chime at 8:20, pops for the labels.",
+    "visuals": "Nine moments: the Sun's core with nuclei fusing and the first light (title); (60) the random walk out through the dense interior; the Sun's surface; the trip through space past Mercury and Venus with a clock to 8:20; (60) the solar wind and an aurora; the sky, where 3 rays in 10 bounce back and blue scatters; a wheat leaf, its cells and a chloroplast where light becomes sugar; a field growing gold, grain, flour, bread; toast on a plate and the end card. No generated images, no characters: everything is drawn in code."
+  },
+  "palette": {
+    "bg": "#140C2E",
+    "bg2": "#231551",
+    "surface": "#3B2275",
+    "ink": "#FFFFFF",
+    "ink2": "#D9CCFF",
+    "muted": "#9C8BD1",
+    "accent": "#FFD84A",
+    "accent2": "#FF6A2B",
+    "accent3": "#56BE45",
+    "ok": "#56BE45",
+    "warn": "#FFA22B",
+    "deny": "#E8432E",
+    "accentInk": "#1B1240",
+    "onAccent": "#1B1240",
+    "line": "#5A3FA0",
+    "highlight": "#2B1B5C"
+  },
+  "fonts": {
+    "display": "\"Nunito\", sans-serif",
+    "sans": "\"Nunito\", sans-serif",
+    "serif": "\"Nunito\", sans-serif",
+    "mono": "\"Nunito\", sans-serif",
+    "cjk": "\"Nunito\", sans-serif",
+    "files": [
+      {
+        "family": "Nunito",
+        "path": "source/fonts/Nunito-Variable.ttf",
+        "weight": "200 1000",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      24,
+      28,
+      32,
+      40,
+      48,
+      56,
+      72,
+      96,
+      120,
+      160
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 800,
+    "tracking": 0,
+    "trackingLabel": 0.12
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false
+    },
+    "radius": 24
+  },
+  "motion": {
+    "pace": "lively",
+    "spring": {
+      "f": 2.4,
+      "z": 0.7
+    },
+    "overshoot": 0.12,
+    "ease": "ioC",
+    "transitions": [
+      "cut",
+      "match"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector"
+    ],
+    "typeReveal": [
+      "pop"
+    ]
+  },
+  "post": {
+    "grain": 0.03,
+    "vignette": {
+      "a": 0.3,
+      "color": "#0A0618"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 128,
+    "key": "E",
+    "mode": "major",
+    "preset": "bright-pop",
+    "instruments": [
+      "pad",
+      "pluck",
+      "bell",
+      "bass",
+      "kick",
+      "clap",
+      "hats",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.55,
+      "breakdown": 0.35,
+      "drop": 0.75,
+      "outro": 0.35
+    }
+  },
+  "narration": {
+    "recommended": false
+  },
+  "review": []
+}
