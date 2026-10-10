@@ -1,26 +1,25 @@
-// opening (2 bars; the end card): a big pixel cup with a latte-art heart and steam on the left; the sign, the
-// opening day and address, the first-50-cups line type on; the fictional-shop note. Hold: steam keeps rising, the
-// heart's foam shimmers a pixel each beat.
+// opening (1 bar, 2 in the 30; the end card): the camera steps back to the whole corner in the rain, sign lit, and a
+// card rises in whole steps: Pebble & Bean, then on the half beats the opening in large type (Saturday, 8 am), the
+// address (14 Elm Street, by the bakery) and the offer (the first 50 cups are on us). The rain keeps falling and the
+// windows keep glowing on the hold; a line at the foot says the shop is fictional.
 (() => {
-  const CUP = [
-    '..eeeeeeeeeeee....', '.ecccccccccccce...', '.ecccchhcchhcce...', '.ecccchhhhhhcce...', '.eccccchhhhccce.ll',
-    '.ecccccchhcccce.l.l', '.ecccccccccccce.l.l', '..eccccccccccce.ll.', '..ewwwwwwwwwwwe....', '...ewwwwwwwwwe.....', '....eeeeeeeee......',
-  ];
+  const D = DIO, I = D.I;
+  const LINES = [['14 Elm Street, by the bakery', I.caramel], ['The first 50 cups are on us', I.brick]];
   SCENES['opening'] = {
     draw(ctx, t, env) {
-      const K = window.BEAN;
-      K.present(ctx, env, (g, T, b) => {
-        K.rect(g, 0, 0, K.GW, K.GH, 'cream');
-        for (let y = 0; y < K.GH; y += 6) for (let x = (y / 6) % 2 ? 3 : 0; x < K.GW; x += 12) K.rect(g, x, y, 1, 1, 'latte');
-        const sh = Math.floor(b) % 2 ? 'cream' : 'sand';
-        K.sprite(g, CUP, { e: 'espresso', c: 'caramel', h: sh, w: 'cream', l: 'espresso' }, 26, 70, 4);
-        K.steam(g, 50, 66, T, 8, 4); K.steam(g, 74, 62, T + 0.5, 8, 4);
-        K.text(g, 'PEBBLE & BEAN', 112, 40, 'espresso', 3, Math.floor(b * 26) + 1, true);
-        if (b >= 1) K.text(g, 'OPENING SATURDAY 8 AM', 114, 78, 'brick', 1, Math.floor((b - 1) * 40), true);
-        if (b >= 1.6) K.text(g, '14 ELM STREET', 114, 92, 'espresso', 1, Math.floor((b - 1.6) * 40));
-        if (b >= 2.2) K.text(g, 'FIRST 50 CUPS ON US', 114, 106, 'espresso', 1, Math.floor((b - 2.2) * 40));
-        if (b >= 3) K.text(g, 'FICTIONAL SHOP ` DEMO', 114, 160, 'plum', 1);
-      });
+      const B = env.beatSec, b = env.lt / B + 1e-4;
+      const halos = EVENING(b + 8, { letters: 13 });
+      D.target('ui');
+      const k = D.span(b, 0, 0.5), y = Math.round(216 - 176 * (1 - (1 - k) * (1 - k)));
+      if (k > 0) {
+        D.win(62, y, 260, 134);
+        D.text('Pebble & Bean', 192, y + 10, { size: 20, align: 'c', c: I.espresso, shadow: I.caramel });
+        for (let i = 112; i < 272; i += 3) D.px(i, y + 38, I.latte);
+        if (b >= 0.5) D.text('Opening Saturday, 8 am', 192, y + 46, { size: 20, align: 'c', c: I.brick, shadow: null, n: D.span(b, 0.5, 0.9) * 22 });
+        LINES.forEach(([s, c], i) => { if (b >= 1 + i * 0.5) D.text(s, 192, y + 78 + i * 15, { align: 'c', c, shadow: null, n: D.span(b, 1 + i * 0.5, 1.4 + i * 0.5) * s.length }); });
+        if (b >= 2) D.text('A fictional shop made for this example', 192, y + 116, { align: 'c', c: I.latte, shadow: null });
+      }
+      D.present(ctx, { s: 3, cx: 320, cy: 180 }, halos);
     },
   };
 })();

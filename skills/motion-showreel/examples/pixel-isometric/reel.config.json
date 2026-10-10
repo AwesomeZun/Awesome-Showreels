@@ -1,131 +1,202 @@
 {
-  "title": "Pebble & Bean",
-  "style": "style.json",
-  "size": [
-    1920,
-    1080
-  ],
-  "fps": 60,
-  "beatsPerBar": 4,
-  "scenes": [
+ "title": "Pebble & Bean",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "lights",
+   "label": "Moving day",
+   "minBars": 1,
+   "maxBars": 1,
+   "priority": 1,
+   "inBeats": 2.2,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
     {
-      "id": "build",
-      "label": "The shop builds itself",
-      "minBars": 2,
-      "maxBars": 3,
-      "priority": 1,
-      "inBeats": 7,
-      "outBeats": 1,
-      "in": "cut",
-      "music": "intro",
-      "cues": [
-        {
-          "beat": 0,
-          "from": "start",
-          "sfx": "pop:6 gap=0.5b soft"
-        },
-        {
-          "beat": 4,
-          "from": "start",
-          "sfx": "thud"
-        },
-        {
-          "beat": 6,
-          "from": "start",
-          "sfx": "chime"
-        }
-      ]
+     "beat": 1,
+     "from": "start",
+     "sfx": "click"
     },
     {
-      "id": "inside",
-      "label": "Inside",
-      "minBars": 2,
-      "maxBars": 3,
-      "priority": 1,
-      "inBeats": 5,
-      "outBeats": 1,
-      "in": "cut",
-      "music": "groove",
-      "cues": [
-        {
-          "beat": 0,
-          "from": "start",
-          "sfx": "swish"
-        },
-        {
-          "beat": 2,
-          "from": "start",
-          "sfx": "bloop"
-        },
-        {
-          "beat": 4,
-          "from": "start",
-          "sfx": "ding soft"
-        }
-      ]
-    },
-    {
-      "id": "street",
-      "label": "Elm Street at dusk",
-      "minBars": 1,
-      "maxBars": 2,
-      "priority": 2,
-      "inBeats": 3,
-      "outBeats": 1,
-      "in": "cut",
-      "music": "groove",
-      "cues": [
-        {
-          "beat": 0,
-          "from": "start",
-          "sfx": "swish"
-        },
-        {
-          "beat": 2,
-          "from": "start",
-          "sfx": "sparkle dur=1 soft"
-        }
-      ]
-    },
-    {
-      "id": "opening",
-      "label": "Opening",
-      "minBars": 2,
-      "maxBars": 2,
-      "priority": 1,
-      "inBeats": 3,
-      "outBeats": 0,
-      "in": "cut",
-      "music": "outro",
-      "cues": [
-        {
-          "beat": 0,
-          "from": "start",
-          "sfx": "stamp"
-        },
-        {
-          "beat": 2,
-          "from": "start",
-          "sfx": "chime"
-        }
-      ]
+     "beat": 3,
+     "from": "start",
+     "sfx": "bloop"
     }
-  ],
-  "cuts": {
-    "short": {
-      "bars": 7,
-      "label": "short"
+   ]
+  },
+  {
+   "id": "unpack",
+   "label": "Unpacking",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 7,
+   "outBeats": 1,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "pop",
+     "every": 1
     },
-    "30": {
-      "bars": 10,
-      "label": "30 s"
+    {
+     "beat": -1,
+     "from": "end",
+     "sfx": "ding"
     }
+   ]
   },
-  "poster": 12.0,
-  "captions": {
-    "enabled": false
+  {
+   "id": "day",
+   "label": "Open for business",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 6,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "ding"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 2.5,
+     "from": "start",
+     "sfx": "tick:4 gap=0.5"
+    },
+    {
+     "beat": 4,
+     "from": "start",
+     "sfx": "bloop"
+    },
+    {
+     "beat": 5,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 5.5,
+     "from": "start",
+     "sfx": "tick:6 gap=0.06s soft"
+    }
+   ]
   },
-  "audio": {
-    "transitionSfx": false
+  {
+   "id": "latte",
+   "label": "Flat white",
+   "minBars": 1,
+   "maxBars": 1,
+   "priority": 2,
+   "inBeats": 3,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.25,
+     "from": "start",
+     "sfx": "drawon dur=2.7"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  },
+  {
+   "id": "evening",
+   "label": "Rain on Elm Street",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 2.5,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "drop",
+   "cues": [
+    {
+     "beat": 1,
+     "from": "start",
+     "sfx": "sparkle dur=1.5"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "swish"
+    }
+   ]
+  },
+  {
+   "id": "opening",
+   "label": "Opening Saturday",
+   "minBars": 1,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 2,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "tick:3 gap=0.5"
+    }
+   ]
   }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 7,
+   "label": "short",
+   "exclude": [
+    "latte"
+   ],
+   "scenes": {
+    "unpack": {
+     "bars": 2
+    },
+    "evening": {
+     "bars": 1
+    },
+    "opening": {
+     "bars": 1
+    }
+   }
+  },
+  "30": {
+   "bars": 11,
+   "label": "30 s"
+  }
+ },
+ "poster": 8.4,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
 }
