@@ -1,0 +1,171 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "article",
+    "audience": "neuroscientists and readers of the journal",
+    "title": "A gut bacterial metabolite eases anxiety-like behaviour",
+    "reviewed": "Written by hand from source/manuscript.md, whose figure style fixes the colours (treatment blue, vehicle slate), the type and the welfare note on every figure."
+  },
+  "source": [
+    {
+      "path": "source/manuscript.md",
+      "kind": "manuscript",
+      "notes": "fictional article: open field, occupancy, water maze, the 3Rs; the figure style"
+    },
+    {
+      "path": "source/data/",
+      "kind": "data",
+      "notes": "open field per mouse (centre time, distance) and water-maze latencies, from paper-src/simulate.py"
+    },
+    {
+      "path": "source/gen/",
+      "kind": "generated-art",
+      "notes": "prompts for the three GPT Image 2.5 illustrations with transparent backgrounds: the mouse from the side and from above, the gut bacteria; the PNGs are not committed"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "font",
+      "notes": "Instrument Sans and JetBrains Mono (SIL OFL 1.1)"
+    }
+  ],
+  "mood": [
+    "clean",
+    "precise",
+    "calm",
+    "careful",
+    "humane"
+  ],
+  "rationale": {
+    "palette": "The figure style's own: clean white panels on a faint grid, the treatment in blue (#2563EB) and the vehicle in slate grey (#64748B) in every panel; the occupancy heatmaps run from white through the group colour to deep navy; the water is a pale blue.",
+    "type": "Instrument Sans for words and JetBrains Mono for every number (times, percentages, the p value), as the manuscript asks.",
+    "motion": "Like the tracking software: mice run their simulated tracks with a clock and live counters, paths draw behind them, heatmaps bloom from the walls inward, curves draw day by day; ease outExpo, no bounce. The welfare note sits at the foot of every panel.",
+    "sound": "Careful and light: corporate preset at 104 BPM in A major, marimba and soft strings, light drums; blips for tracking, a lock on the statistics.",
+    "visuals": "Five scenes: the question with the mouse and the gut bacteria; the open field side by side; the occupancy heatmaps and every mouse's centre time; the water maze, day 1 and day 5 (30 only); the finding and the 3Rs. The mice and bacteria are GPT Image 2.5 illustrations with a real alpha channel; every track, bin and number comes from paper-src/simulate.py."
+  },
+  "palette": {
+    "bg": "#F5F7FA",
+    "bg2": "#FFFFFF",
+    "surface": "#FFFFFF",
+    "ink": "#0F172A",
+    "ink2": "#475569",
+    "muted": "#94A3B8",
+    "accent": "#2563EB",
+    "accent2": "#64748B",
+    "accent3": "#0EA5E9",
+    "ok": "#16A34A",
+    "warn": "#D97706",
+    "deny": "#DC2626",
+    "accentInk": "#1D4ED8",
+    "onAccent": "#FFFFFF",
+    "line": "#E2E8F0",
+    "highlight": "#DBEAFE"
+  },
+  "fonts": {
+    "display": "\"Instrument Sans\", sans-serif",
+    "sans": "\"Instrument Sans\", sans-serif",
+    "serif": "\"Instrument Sans\", sans-serif",
+    "mono": "\"JetBrains Mono\", monospace",
+    "cjk": "\"Instrument Sans\", sans-serif",
+    "files": [
+      {
+        "family": "Instrument Sans",
+        "path": "source/fonts/InstrumentSans-Variable.ttf",
+        "weight": "400 700",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-Variable.ttf",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      16,
+      20,
+      24,
+      32,
+      40,
+      48,
+      64,
+      80,
+      96,
+      128
+    ],
+    "displayWeight": 700,
+    "bodyWeight": 500,
+    "tracking": 0,
+    "trackingLabel": 0.04
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 96,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false
+    },
+    "radius": 18
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2,
+      "z": 1
+    },
+    "overshoot": 0,
+    "ease": "outExpo",
+    "transitions": [
+      "cut"
+    ],
+    "characters": true,
+    "dataViz": true,
+    "visualSources": [
+      "illustration",
+      "vector"
+    ],
+    "typeReveal": [
+      "rise"
+    ]
+  },
+  "post": {
+    "grain": 0,
+    "vignette": {
+      "a": 0,
+      "color": "#0F172A"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 104,
+    "key": "A",
+    "mode": "major",
+    "preset": "corporate",
+    "instruments": [
+      "strings",
+      "marimba",
+      "bell",
+      "bass",
+      "kick",
+      "rim",
+      "shaker"
+    ],
+    "drums": "light",
+    "sfx": "organic",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.55,
+      "breakdown": 0.35,
+      "drop": 0.65,
+      "outro": 0.35
+    }
+  },
+  "narration": {
+    "recommended": false
+  },
+  "review": []
+}

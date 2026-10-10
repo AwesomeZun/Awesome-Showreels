@@ -1,0 +1,182 @@
+{
+ "title": "A gut bacterial metabolite eases anxiety-like behaviour",
+ "style": "style.json",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 60,
+ "beatsPerBar": 4,
+ "scenes": [
+  {
+   "id": "title",
+   "label": "The question",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 3,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "intro",
+   "cues": [
+    {
+     "beat": 0.3,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 1.2,
+     "from": "start",
+     "sfx": "tick:3 gap=0.1s soft"
+    }
+   ]
+  },
+  {
+   "id": "field",
+   "label": "Open field",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0,
+     "from": "start",
+     "sfx": "swish"
+    },
+    {
+     "beat": 0.5,
+     "from": "start",
+     "sfx": "blips dur=6"
+    }
+   ]
+  },
+  {
+   "id": "heat",
+   "label": "Occupancy",
+   "minBars": 2,
+   "maxBars": 2,
+   "priority": 1,
+   "inBeats": 5,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "groove",
+   "cues": [
+    {
+     "beat": 0.2,
+     "from": "start",
+     "sfx": "swell"
+    },
+    {
+     "beat": 2,
+     "from": "start",
+     "sfx": "pop:6 gap=0.1"
+    },
+    {
+     "beat": 2.6,
+     "from": "start",
+     "sfx": "drawon dur=0.6"
+    },
+    {
+     "beat": 3.6,
+     "from": "start",
+     "sfx": "lock"
+    }
+   ]
+  },
+  {
+   "id": "maze",
+   "label": "Water maze",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 2,
+   "inBeats": 5,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "breakdown",
+   "cues": [
+    {
+     "beat": 0.3,
+     "from": "start",
+     "sfx": "drawon dur=1.6"
+    },
+    {
+     "beat": 1.4,
+     "from": "start",
+     "sfx": "drawon dur=1.4"
+    },
+    {
+     "beat": 2.2,
+     "from": "start",
+     "sfx": "drawon dur=1.6"
+    },
+    {
+     "beat": 4.4,
+     "from": "start",
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "label": "The finding",
+   "minBars": 2,
+   "maxBars": 3,
+   "priority": 1,
+   "inBeats": 4,
+   "outBeats": 0,
+   "in": "cut",
+   "music": "outro",
+   "cues": [
+    {
+     "beat": 0.2,
+     "from": "start",
+     "sfx": "reveal"
+    },
+    {
+     "beat": 1.4,
+     "from": "start",
+     "sfx": "tick:3 gap=0.4"
+    },
+    {
+     "beat": 3,
+     "from": "start",
+     "sfx": "chime"
+    }
+   ]
+  }
+ ],
+ "cuts": {
+  "short": {
+   "bars": 8,
+   "label": "short",
+   "exclude": [
+    "maze"
+   ],
+   "scenes": {
+    "field": {
+     "bars": 2
+    }
+   }
+  },
+  "30": {
+   "bars": 13,
+   "label": "30 s"
+  }
+ },
+ "poster": 8.0,
+ "captions": {
+  "enabled": false
+ },
+ "audio": {
+  "transitionSfx": false
+ }
+}
