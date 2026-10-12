@@ -23,15 +23,15 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 
 ## 예제
 
-서로 다른 원본으로 만든 예제 열네 개입니다. 쇼릴마다 팔레트, 서체, 모션, 음악을 테마 목록이 아니라 원본에서 가져왔습니다.
+서로 다른 원본으로 만든 예제 24개입니다. 쇼릴마다 팔레트, 서체, 모션, 음악을 테마 목록이 아니라 원본에서 가져왔습니다.
 
 <table>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html"><img src="assets/readme/moment-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
-<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
-<br/><sub>싱글셀 논문 → 데이터로 움직이는 세포 4,900개 · 100 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">▶ 재생</a> · <a href="assets/demo-academic-paper-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">원본·코드</a></sub>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html"><img src="assets/readme/moment-academic-paper-v2.webp" width="100%" alt="Alveolar repair atlas v2: 4,900 nuclei as shaded spheres lift off a tissue section and fly into a three-dimensional UMAP the camera orbits"/></a>
+<br/><b>Alveolar repair atlas v2</b> · <code>academic-paper</code>
+<br/><sub>싱글셀 논문 → 핵 하나가 조직에서 3D 아틀라스로, 다시 조직으로 · 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html"><img src="assets/readme/moment-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
@@ -56,6 +56,20 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html"><img src="assets/readme/moment-explainer-llm.webp" width="100%" alt="The plane turns and squashes onto the context arrow: every word lands at its score, rises as a bar and settles into softmax"/></a>
+<br/><b>How a language model picks the next word</b> · <code>explainer-llm</code>
+<br/><sub>LLM 해설 → 화살표가 된 단어, 수학 애니메이션 · 15/30/60초 · 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/explainer-llm">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html"><img src="assets/readme/moment-explainer-sunlight.webp" width="100%" alt="Sunlight crosses space as a clock runs toward 8:20, Venus sliding by, a progress line from the Sun to the Earth"/></a>
+<br/><b>Sunlight for Breakfast</b> · <code>explainer-sunlight</code>
+<br/><sub>과학 해설 → 평면 벡터, 태양에서 토스트까지 · 15/30/60초 · 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/explainer-sunlight">원본·코드</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html"><img src="assets/readme/moment-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
 <br/><b>kablok</b> · <code>neo-brutal</code>
 <br/><sub>랜딩 페이지 → 하드 섀도, 슬래브 · 펑크 112 BPM</sub>
@@ -70,10 +84,66 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html"><img src="assets/readme/moment-paper-behaviour.webp" width="100%" alt="Two open-field arenas side by side, vehicle and treated mice running their tracks while centre time counts up"/></a>
+<br/><b>Gut metabolite and anxiety</b> · <code>paper-behaviour</code>
+<br/><sub>생쥐 행동 논문 → 위에서 본 이동 궤적 · 104 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-behaviour">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html"><img src="assets/readme/moment-paper-imaging.webp" width="100%" alt="A sheet of light scans the zebrafish embryo and every plane it passes stays lit, thousands of nuclei glowing"/></a>
+<br/><b>Light-sheet zebrafish embryo</b> · <code>paper-imaging</code>
+<br/><sub>현미경 논문 → 빛의 막이 배아를 한 층씩 쌓음 · 92 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-imaging">원본·코드</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html"><img src="assets/readme/moment-paper-organoid.webp" width="100%" alt="A lab notebook: a brightfield photo of a growing organoid taped in, a pen writes the notes, a growth curve draws itself"/></a>
+<br/><b>WNT-pulse organoids</b> · <code>paper-organoid</code>
+<br/><sub>오가노이드 논문 → 스스로 써지는 실험 노트 · 100 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-organoid">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html"><img src="assets/readme/moment-paper-perturbseq.webp" width="100%" alt="A dive into the tumour microenvironment: exhausted T cells and tumour cells as 3D illustration under the paper title"/></a>
+<br/><b>Perturb-seq: T-cell exhaustion</b> · <code>paper-perturbseq</code>
+<br/><sub>CRISPR 스크린 논문 → 일러스트, 데이터, 다시 일러스트 · 116 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-perturbseq">원본·코드</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html"><img src="assets/readme/moment-paper-transformer.webp" width="100%" alt="Eight attention heads draw their arcs over one sentence, typeset on cream paper like the original article"/></a>
+<br/><b>Attention Is All You Need, explained</b> · <code>paper-transformer</code>
+<br/><sub>기념비적 논문 → 논문처럼 조판, 어텐션은 실제 계산 · 110 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-transformer">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html"><img src="assets/readme/moment-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
 <br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
 <br/><sub>게임잼 → 픽셀 아트, CRT · 칩튠 144 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">▶ 재생</a> · <a href="assets/demo-pixel-arcade-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-arcade">원본·코드</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html"><img src="assets/readme/moment-pixel-isometric.webp" width="100%" alt="An isometric pixel-art café unpacks itself: crates open, shelves fill, an espresso machine lands on the counter"/></a>
+<br/><b>Pebble & Bean</b> · <code>pixel-isometric</code>
+<br/><sub>카페 오픈 → 16색 파스텔 아이소메트릭 픽셀 · 로파이 86 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-isometric">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html"><img src="assets/readme/moment-pixel-jrpg.webp" width="100%" alt="A pixel-art party fights the Bug Boss under a full moon, a damage number pops and a JRPG menu lists the engine features"/></a>
+<br/><b>Lanternforge 2.0</b> · <code>pixel-jrpg</code>
+<br/><sub>게임 엔진 출시 → HD-2D JRPG 트레일러, 도트에 진짜 빛 · 120 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-jrpg">원본·코드</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html"><img src="assets/readme/moment-pixel-pocket.webp" width="100%" alt="A four-green handheld screen: the hiker reaches the summit, SUMMIT! Pika Point 1,847 m"/></a>
+<br/><b>Ridgeline Pocket</b> · <code>pixel-pocket</code>
+<br/><sub>등산 앱 → 초록 4단계 휴대용 게임기 · 칩튠 108 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-pocket">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html"><img src="assets/readme/moment-mochi-hook.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
@@ -126,20 +196,30 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 </tr>
 </table>
 
-<sub>미리보기는 쇼릴의 한 장면을 실제 속도, 무음으로 보여 줍니다. <b>▶ 재생</b>을 누르면 브라우저에서 음악과 함께 전체 쇼릴이 열리고, 길이를 바꿔 볼 수 있습니다(같은 파일이 각 폴더의 <code>dist/</code>에 있습니다. 1–2MB이고 인터넷 없이 열리며 숫자 키로 길이를 바꿉니다). 모든 프로젝트와 데이터는 가상이며 화면에도 그렇게 표시됩니다.</sub>
+<sub>미리보기는 쇼릴의 한 장면을 실제 속도, 무음으로 보여 줍니다. <b>▶ 재생</b>을 누르면 브라우저에서 음악과 함께 전체 쇼릴이 열리고, 길이를 바꿔 볼 수 있습니다(같은 파일이 각 폴더의 <code>dist/</code>에 있습니다. 1–2MB이고 인터넷 없이 열리며 숫자 키로 길이를 바꿉니다). 프로젝트와 데이터는 가상이며 화면에도 그렇게 표시됩니다. 해설 두 편과 Transformer 해설은 실제 개념을 다루며, 토이 모델이나 반올림한 교과서 값을 쓴다고 화면에 밝힙니다.</sub>
 
 <details>
 <summary><b>예제별 스타일 결정</b></summary>
 
 | 예제 | 원본 | 분위기 | 팔레트 | 서체 | 모션 | 음악 (BPM) |
 |---|---|---|---|---|---|---|
-| `academic-paper` | single-cell paper | precise, data-dense | white · vermilion | Inter | measured | ambient 100 |
+| `academic-paper` | single-cell paper | airy, precise | blush · coral | Source Serif 4 | 3D nuclei, tissue ↔ atlas | corporate 96 |
 | `art-deco` | invitation | opulent, nocturnal | black · gold | Limelight | symmetrical | swing 112 |
 | `botanical-organic` | tea brand story | calm, earthy | oat · leaf green | Fraunces | slow | guitar 96 |
 | `editorial-luxe` | press release | elegant, quiet | ivory · champagne | Bodoni Moda | slow | piano 80 |
+| `explainer-llm` | LLM explainer notes | curious, lucid | navy · yellow | KaTeX Main | maths animation | ambient 96 |
+| `explainer-sunlight` | science notes | wondrous, bright | violet · sun gold | Nunito | flat-vector dives | bright pop 128 |
 | `neo-brutal` | landing page | loud, blunt | cream · lemon | Archivo | hard snaps | funk 112 |
 | `newsprint` | newspaper | factual, civic | newsprint · red | Newsreader | steady | piano 96 |
+| `paper-behaviour` | mouse-behaviour paper | clean, precise | white · blue | Instrument Sans | tracked from above | corporate 104 |
+| `paper-imaging` | light-sheet paper | luminous, patient | black · green | Manrope | GPU nuclei | ambient 92 |
+| `paper-organoid` | organoid paper | warm, hands-on | paper · magenta | Literata | handwritten notebook | corporate 100 |
+| `paper-perturbseq` | CRISPR-screen paper | precise, nocturnal | night · orchid | IBM Plex Sans | illustration ↔ data | dark synth 116 |
+| `paper-transformer` | landmark paper | elegant, exact | cream · vermilion | STIX Two | typeset | cinematic 110 |
 | `pixel-arcade` | game jam | chunky, punchy | night · gold | Press Start 2P | stepped | chiptune 144 |
+| `pixel-isometric` | café opening | cosy, warm | cream · latte | Jersey 10 | isometric pixel | lo-fi 86 |
+| `pixel-jrpg` | engine release | heroic, nostalgic | night · lantern gold | Pixelify Sans | HD-2D light | cinematic 120 |
+| `pixel-pocket` | hiking app | calm, outdoorsy | four greens | 5×7 bitmap | dithered tone steps | chiptune 108 |
 | `playful-app` | app README | playful, bouncy | light · pink | Nunito | springy | bright pop 120 |
 | `research-cli` | research CLI | technical, cool | dark · cyan | Space Grotesk | damped | dark synth 128 |
 | `riso-zine` | zine | loud, scrappy | newsprint · fluo pink | Anton | jumpy | lo-fi 160 |

@@ -281,15 +281,23 @@ out.
   (128 BPM, dark-synth, GPU point cloud, real terminal capture tilted in 3D, data viz from the CLI's own JSON;
   narration script dry-run tested; cuts `15`, `30` and `60`).
 
-Twelve more examples show the range, each derived from its own source and none reusable as a preset:
+Twenty-two more examples show the range, each derived from its own source and none reusable as a preset:
 `editorial-luxe` (fashion lookbook -> Bodoni hairlines, piano and strings), `swiss-grid` (competition brief ->
 12-column grid, one red), `riso-zine` (zine -> misregistered riso inks), `pixel-arcade` (game jam -> pixel art,
 chiptune), `botanical-organic` (tea garden -> watercolour, a botanically real growth time-lapse), `academic-paper`
-(single-cell omics manuscript -> 4,900 cells across UMAP, tissue and dot plot), `sketchnote` (workshop notes ->
-self-writing markers on one whiteboard), `neo-brutal` (landing page -> hard shadows, funk), `sumi-wabi` (ryokan ->
-sumi ink, koto in hirajōshi), `art-deco` (invitation -> gilded frames, swing), `newsprint` (front page -> printing
-press, halftone) and `sports-kinetic` (race-timing app -> broadcast type, drum and bass). Their `short` cuts are
-the README's style wall.
+(single-cell omics manuscript -> v2: every nucleus a shaded sphere from tissue to a 3D UMAP and back, generated
+illustrations), `sketchnote` (workshop notes -> self-writing markers on one whiteboard), `neo-brutal` (landing page
+-> hard shadows, funk), `sumi-wabi` (ryokan -> sumi ink, koto in hirajōshi), `art-deco` (invitation -> gilded
+frames, swing), `newsprint` (front page -> printing press, halftone) and `sports-kinetic` (race-timing app ->
+broadcast type, drum and bass). Pixel art from GPT Image 2.5 originals: `pixel-jrpg` (engine release -> HD-2D JRPG
+trailer under real light), `pixel-pocket` (hiking app -> a four-green handheld) and `pixel-isometric` (café opening
+-> isometric room in 16 pastels). Papers, data computed by each folder's `paper-src/`: `paper-perturbseq` (CRISPR
+screen -> illustration, data, illustration), `paper-imaging` (light-sheet microscopy -> GPU nuclei, the sheet builds
+the volume), `paper-organoid` (organoid study -> a lab notebook that keeps itself), `paper-behaviour` (mouse
+behaviour -> tracks from above) and `paper-transformer` (Attention Is All You Need -> typeset like the paper,
+attention computed by a toy model). Explainers with 15, 30 and 60-second cuts: `explainer-llm` (how a language
+model picks the next word -> maths animation, words as arrows) and `explainer-sunlight` (from the Sun's core to
+breakfast -> flat vector). Their `short` cuts are the README's style wall.
 
 The two first examples have their source, reviewed `style.json` with the extraction log, STORYBOARD, scenes and a
 built player in `dist/`. Re-plan before rendering (`build/` is generated): `python3 "$S/timing/plan_cut.py" --project

@@ -23,15 +23,15 @@ An agent skill for Claude Code, Codex CLI, Gemini CLI or any coding agent. Deliv
 
 ## Examples
 
-Fourteen example projects, each made from a different kind of source. The style of every reel (palette, type, motion, music) comes from its source, not from a theme list.
+Twenty-four example projects, each made from a different kind of source. The style of every reel (palette, type, motion, music) comes from its source, not from a theme list.
 
 <table>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html"><img src="assets/readme/moment-academic-paper.webp" width="100%" alt="Alveolar repair atlas: 4,900 cells fly from a title page into a UMAP, then into a tissue section, then a 3.2x claim"/></a>
-<br/><b>Alveolar repair atlas</b> · <code>academic-paper</code>
-<br/><sub>a single-cell paper → 4,900 cells as live data · 100 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">▶ Play</a> · <a href="assets/demo-academic-paper-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">Source</a></sub>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html"><img src="assets/readme/moment-academic-paper-v2.webp" width="100%" alt="Alveolar repair atlas v2: 4,900 nuclei as shaded spheres lift off a tissue section and fly into a three-dimensional UMAP the camera orbits"/></a>
+<br/><b>Alveolar repair atlas v2</b> · <code>academic-paper</code>
+<br/><sub>a single-cell paper → one nucleus, tissue to 3D atlas and back · 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/academic-paper/dist/alveolar-repair-atlas-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/academic-paper">Source</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/art-deco/dist/the-emerald-fan-v1.0.0.html"><img src="assets/readme/moment-art-deco.webp" width="100%" alt="THE EMERALD FAN: gold rules draw an emerald door, a fan opens, a gilded invitation"/></a>
@@ -56,6 +56,20 @@ Fourteen example projects, each made from a different kind of source. The style 
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html"><img src="assets/readme/moment-explainer-llm.webp" width="100%" alt="The plane turns and squashes onto the context arrow: every word lands at its score, rises as a bar and settles into softmax"/></a>
+<br/><b>How a language model picks the next word</b> · <code>explainer-llm</code>
+<br/><sub>an LLM explainer → words as arrows, maths animation · 15/30/60 s · 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/explainer-llm/dist/next-word-explainer-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/explainer-llm">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html"><img src="assets/readme/moment-explainer-sunlight.webp" width="100%" alt="Sunlight crosses space as a clock runs toward 8:20, Venus sliding by, a progress line from the Sun to the Earth"/></a>
+<br/><b>Sunlight for Breakfast</b> · <code>explainer-sunlight</code>
+<br/><sub>a science explainer → flat vector, from the Sun to toast · 15/30/60 s · 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/explainer-sunlight/dist/sunlight-for-breakfast-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/explainer-sunlight">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html"><img src="assets/readme/moment-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
 <br/><b>kablok</b> · <code>neo-brutal</code>
 <br/><sub>a landing page → hard shadows, slabs · funk 112 BPM</sub>
@@ -70,10 +84,66 @@ Fourteen example projects, each made from a different kind of source. The style 
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html"><img src="assets/readme/moment-paper-behaviour.webp" width="100%" alt="Two open-field arenas side by side, vehicle and treated mice running their tracks while centre time counts up"/></a>
+<br/><b>Gut metabolite and anxiety</b> · <code>paper-behaviour</code>
+<br/><sub>a mouse-behaviour paper → tracks seen from above · 104 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/paper-behaviour/dist/gut-metabolite-anxiety-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-behaviour">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html"><img src="assets/readme/moment-paper-imaging.webp" width="100%" alt="A sheet of light scans the zebrafish embryo and every plane it passes stays lit, thousands of nuclei glowing"/></a>
+<br/><b>Light-sheet zebrafish embryo</b> · <code>paper-imaging</code>
+<br/><sub>a microscopy paper → a sheet of light stacks the embryo · 92 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/paper-imaging/dist/zebrafish-light-sheet-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-imaging">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html"><img src="assets/readme/moment-paper-organoid.webp" width="100%" alt="A lab notebook: a brightfield photo of a growing organoid taped in, a pen writes the notes, a growth curve draws itself"/></a>
+<br/><b>WNT-pulse organoids</b> · <code>paper-organoid</code>
+<br/><sub>an organoid paper → a lab notebook that keeps itself · 100 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/paper-organoid/dist/wnt-pulse-organoids-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-organoid">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html"><img src="assets/readme/moment-paper-perturbseq.webp" width="100%" alt="A dive into the tumour microenvironment: exhausted T cells and tumour cells as 3D illustration under the paper title"/></a>
+<br/><b>Perturb-seq: T-cell exhaustion</b> · <code>paper-perturbseq</code>
+<br/><sub>a CRISPR-screen paper → illustration, data, illustration · 116 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/paper-perturbseq/dist/perturb-seq-exhaustion-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-perturbseq">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html"><img src="assets/readme/moment-paper-transformer.webp" width="100%" alt="Eight attention heads draw their arcs over one sentence, typeset on cream paper like the original article"/></a>
+<br/><b>Attention Is All You Need, explained</b> · <code>paper-transformer</code>
+<br/><sub>a landmark paper → typeset like the paper, attention computed · 110 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/paper-transformer/dist/attention-explainer-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/paper-transformer">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html"><img src="assets/readme/moment-pixel-arcade.webp" width="100%" alt="ONE CREDIT JAM: pixel art on a CRT, insert coin, a high-score end card"/></a>
 <br/><b>ONE CREDIT JAM</b> · <code>pixel-arcade</code>
 <br/><sub>a game jam → pixel art, CRT · chiptune 144 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">▶ Play</a> · <a href="assets/demo-pixel-arcade-v1.0.0.mp4">MP4</a> · <a href="skills/motion-showreel/examples/pixel-arcade/dist/one-credit-jam-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-arcade">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html"><img src="assets/readme/moment-pixel-isometric.webp" width="100%" alt="An isometric pixel-art café unpacks itself: crates open, shelves fill, an espresso machine lands on the counter"/></a>
+<br/><b>Pebble & Bean</b> · <code>pixel-isometric</code>
+<br/><sub>a café opening → cosy isometric pixel art in 16 pastels · lo-fi 86 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-isometric">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html"><img src="assets/readme/moment-pixel-jrpg.webp" width="100%" alt="A pixel-art party fights the Bug Boss under a full moon, a damage number pops and a JRPG menu lists the engine features"/></a>
+<br/><b>Lanternforge 2.0</b> · <code>pixel-jrpg</code>
+<br/><sub>a game-engine release → HD-2D JRPG trailer, real light on pixel art · 120 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-jrpg">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html"><img src="assets/readme/moment-pixel-pocket.webp" width="100%" alt="A four-green handheld screen: the hiker reaches the summit, SUMMIT! Pika Point 1,847 m"/></a>
+<br/><b>Ridgeline Pocket</b> · <code>pixel-pocket</code>
+<br/><sub>a hiking app → a four-green handheld game · chiptune 108 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/pixel-pocket/dist/ridgeline-pocket-v2.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-pocket">Source</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html"><img src="assets/readme/moment-mochi-hook.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
@@ -126,20 +196,30 @@ Fourteen example projects, each made from a different kind of source. The style 
 </tr>
 </table>
 
-<sub>Each loop is one moment of the reel at real speed, without sound. <b>▶ Play</b> opens the full reel in your browser with music, where you can switch between its lengths (the same file is in each folder's <code>dist/</code>: 1–2 MB, opens offline, number keys switch lengths). All projects and data are fictional and labelled as such on screen.</sub>
+<sub>Each loop is one moment of the reel at real speed, without sound. <b>▶ Play</b> opens the full reel in your browser with music, where you can switch between its lengths (the same file is in each folder's <code>dist/</code>: 1–2 MB, opens offline, number keys switch lengths). Projects and data are fictional and labelled as such on screen; the two explainers and the Transformer explainer cover real ideas, with toy models or rounded textbook values, and say so.</sub>
 
 <details>
 <summary><b>Style decisions per example</b></summary>
 
 | Example | Source | Mood | Palette | Type | Motion | Music (BPM) |
 |---|---|---|---|---|---|---|
-| `academic-paper` | single-cell paper | precise, data-dense | white · vermilion | Inter | measured | ambient 100 |
+| `academic-paper` | single-cell paper | airy, precise | blush · coral | Source Serif 4 | 3D nuclei, tissue ↔ atlas | corporate 96 |
 | `art-deco` | invitation | opulent, nocturnal | black · gold | Limelight | symmetrical | swing 112 |
 | `botanical-organic` | tea brand story | calm, earthy | oat · leaf green | Fraunces | slow | guitar 96 |
 | `editorial-luxe` | press release | elegant, quiet | ivory · champagne | Bodoni Moda | slow | piano 80 |
+| `explainer-llm` | LLM explainer notes | curious, lucid | navy · yellow | KaTeX Main | maths animation | ambient 96 |
+| `explainer-sunlight` | science notes | wondrous, bright | violet · sun gold | Nunito | flat-vector dives | bright pop 128 |
 | `neo-brutal` | landing page | loud, blunt | cream · lemon | Archivo | hard snaps | funk 112 |
 | `newsprint` | newspaper | factual, civic | newsprint · red | Newsreader | steady | piano 96 |
+| `paper-behaviour` | mouse-behaviour paper | clean, precise | white · blue | Instrument Sans | tracked from above | corporate 104 |
+| `paper-imaging` | light-sheet paper | luminous, patient | black · green | Manrope | GPU nuclei | ambient 92 |
+| `paper-organoid` | organoid paper | warm, hands-on | paper · magenta | Literata | handwritten notebook | corporate 100 |
+| `paper-perturbseq` | CRISPR-screen paper | precise, nocturnal | night · orchid | IBM Plex Sans | illustration ↔ data | dark synth 116 |
+| `paper-transformer` | landmark paper | elegant, exact | cream · vermilion | STIX Two | typeset | cinematic 110 |
 | `pixel-arcade` | game jam | chunky, punchy | night · gold | Press Start 2P | stepped | chiptune 144 |
+| `pixel-isometric` | café opening | cosy, warm | cream · latte | Jersey 10 | isometric pixel | lo-fi 86 |
+| `pixel-jrpg` | engine release | heroic, nostalgic | night · lantern gold | Pixelify Sans | HD-2D light | cinematic 120 |
+| `pixel-pocket` | hiking app | calm, outdoorsy | four greens | 5×7 bitmap | dithered tone steps | chiptune 108 |
 | `playful-app` | app README | playful, bouncy | light · pink | Nunito | springy | bright pop 120 |
 | `research-cli` | research CLI | technical, cool | dark · cyan | Space Grotesk | damped | dark synth 128 |
 | `riso-zine` | zine | loud, scrappy | newsprint · fluo pink | Anton | jumpy | lo-fi 160 |
