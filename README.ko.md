@@ -23,9 +23,23 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 
 ## 예제
 
-서로 다른 원본으로 만든 예제 40개입니다. 그중 16개(<code>toyz-*</code>)는 실제로 배포된 웹앱을 각자의 프로덕션 빌드에서 캡처해 만들었습니다. 쇼릴마다 팔레트, 서체, 모션, 음악을 테마 목록이 아니라 원본에서 가져왔습니다.
+서로 다른 원본으로 만든 예제 40개입니다. 그중 16개는 toyz.kr에 실제로 배포된 웹앱을 각자의 프로덕션 빌드에서 캡처해 만들었습니다. 쇼릴마다 팔레트, 서체, 모션, 음악을 테마 목록이 아니라 원본에서 가져왔습니다.
 
 <table>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html"><img src="assets/readme/moment-toyz-orbit-note.webp" width="100%" alt="Orbit Note: note cards linked by drawn wiki paths on electric blue, the graph lighting up"/></a>
+<br/><b>Orbit Note</b> · <code>orbit-note</code>
+<br/><sub>연결 노트 앱 → 홀로그램 위키 그래프 · 시네마틱 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note">원본·코드</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html"><img src="assets/readme/moment-toyz-offgrid.webp" width="100%" alt="OFFGRID: a lime walking route draws itself over a dark OpenStreetMap of Seongsu, pins lighting as it passes"/></a>
+<br/><b>OFFGRID</b> · <code>offgrid</code>
+<br/><sub>동네 지도 → 서울에서 골목 산책로까지 한 번에 · 스윙 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-offgrid">원본·코드</a></sub>
+</td>
+</tr>
 <tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/playful-app/dist/mochi-notes-v1.1.0.html"><img src="assets/readme/moment-mochi-hook.webp" width="100%" alt="Mochi Notes: kinetic headline in a storm of notes, blob wipe, the mascot springs up, typing into the real app UI, the four-flavor lineup"/></a>
@@ -113,83 +127,69 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 <tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html"><img src="assets/readme/moment-toyz-trove.webp" width="100%" alt="Trove: scattered links are pulled into a spinning chrome torus as the name lands in chrome type"/></a>
-<br/><b>Trove</b> · <code>toyz-trove</code>
+<br/><b>Trove</b> · <code>trove</code>
 <br/><sub>북마크 앱 → 크롬 토러스, 궤도로 빨려 드는 링크 · 다크 신스 128 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-trove">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html"><img src="assets/readme/moment-toyz-pulse.webp" width="100%" alt="Pulse: tasks and releases on one brushed-aluminium dashboard, counters and level meters ticking"/></a>
-<br/><b>Pulse</b> · <code>toyz-pulse</code>
+<br/><b>Pulse</b> · <code>pulse</code>
 <br/><sub>메이커 대시보드 → 브러시드 알루미늄, 움직이는 계기판 · 브라이트 팝 112 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pulse">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html"><img src="assets/readme/moment-toyz-orbit-note.webp" width="100%" alt="Orbit Note: note cards linked by drawn wiki paths on electric blue, the graph lighting up"/></a>
-<br/><b>Orbit Note</b> · <code>toyz-orbit-note</code>
-<br/><sub>연결 노트 앱 → 홀로그램 위키 그래프 · 시네마틱 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note">원본·코드</a></sub>
-</td>
-<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html"><img src="assets/readme/moment-toyz-frame.webp" width="100%" alt="Frame: a name typed into the form appears in the live portfolio preview at once"/></a>
-<br/><b>Frame</b> · <code>toyz-frame</code>
+<br/><b>Frame</b> · <code>frame</code>
 <br/><sub>포트폴리오 빌더 → 입력하는 대로 바뀌는 미리보기 · 코퍼레이트 112 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-frame">원본·코드</a></sub>
 </td>
-</tr>
-<tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html"><img src="assets/readme/moment-toyz-tiny-beat.webp" width="100%" alt="Tiny Beat: lime pads light up on a step sequencer as the playhead sweeps the bar"/></a>
-<br/><b>Tiny Beat</b> · <code>toyz-tiny-beat</code>
+<br/><b>Tiny Beat</b> · <code>tiny-beat</code>
 <br/><sub>하루 한 곡 비트 메이커 → 빛나는 스텝 시퀀서 · 로파이 80 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat">원본·코드</a></sub>
 </td>
+</tr>
+<tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html"><img src="assets/readme/moment-toyz-deploy-kit.webp" width="100%" alt="Deploy Kit: the kit's real files stream into one ZIP, its count ticking up"/></a>
-<br/><b>Deploy Kit</b> · <code>toyz-deploy-kit</code>
+<br/><b>Deploy Kit</b> · <code>deploy-kit</code>
 <br/><sub>출시 키트 → 파일들이 ZIP 하나로 · 드럼앤베이스 176 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit">원본·코드</a></sub>
 </td>
-</tr>
-<tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html"><img src="assets/readme/moment-toyz-read-room.webp" width="100%" alt="Read Room: an essay page where highlights are drawn in and margin notes appear"/></a>
-<br/><b>Read Room</b> · <code>toyz-read-room</code>
+<br/><b>Read Room</b> · <code>read-room</code>
 <br/><sub>함께 읽는 열람실 → 펜 속도로 그어지는 밑줄 · 앰비언트 96 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-read-room">원본·코드</a></sub>
 </td>
-<td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-motion-kit.webp" width="100%" alt="Motion Kit: a cursor taps the real confetti demo and the burst plays out"/></a>
-<br/><b>Motion Kit</b> · <code>toyz-motion-kit</code>
-<br/><sub>마이크로 인터랙션 모음 → 앱의 애니메이션을 프레임 단위로 · 브라이트 팝 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit">원본·코드</a></sub>
-</td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html"><img src="assets/readme/moment-toyz-layr.webp" width="100%" alt="LAYR: notes fly onto five exploded glass layers and each layer's count ticks up"/></a>
-<br/><b>LAYR</b> · <code>toyz-layr</code>
-<br/><sub>메모 워크스페이스 → 다섯 장의 유리판으로 떨어지는 메모 · 다크 신스 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-layr">원본·코드</a></sub>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-motion-kit.webp" width="100%" alt="Motion Kit: a cursor taps the real confetti demo and the burst plays out"/></a>
+<br/><b>Motion Kit</b> · <code>motion-kit</code>
+<br/><sub>마이크로 인터랙션 모음 → 앱의 애니메이션을 프레임 단위로 · 브라이트 팝 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html"><img src="assets/readme/moment-toyz-offgrid.webp" width="100%" alt="OFFGRID: a lime walking route draws itself over a dark OpenStreetMap of Seongsu, pins lighting as it passes"/></a>
-<br/><b>OFFGRID</b> · <code>toyz-offgrid</code>
-<br/><sub>동네 지도 → 서울에서 골목 산책로까지 한 번에 · 스윙 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-offgrid">원본·코드</a></sub>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html"><img src="assets/readme/moment-toyz-layr.webp" width="100%" alt="LAYR: notes fly onto five exploded glass layers and each layer's count ticks up"/></a>
+<br/><b>LAYR</b> · <code>layr</code>
+<br/><sub>메모 워크스페이스 → 다섯 장의 유리판으로 떨어지는 메모 · 다크 신스 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-layr">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html"><img src="assets/readme/moment-toyz-tiny-tools.webp" width="100%" alt="tiny.tools: clippings land in the smart paste pad and it names the right tool each time"/></a>
-<br/><b>tiny.tools</b> · <code>toyz-tiny-tools</code>
+<br/><b>tiny.tools</b> · <code>tiny-tools</code>
 <br/><sub>개발 도구 모음 → 붙여넣으면 알맞은 도구를 · 칩튠 128 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html"><img src="assets/readme/moment-toyz-mood-fm.webp" width="100%" alt="MOOD FM: the dial turns from 몽글 to 들뜸 and the whole frame changes colour with it"/></a>
-<br/><b>MOOD FM</b> · <code>toyz-mood-fm</code>
+<br/><b>MOOD FM</b> · <code>mood-fm</code>
 <br/><sub>기분 라디오 → 화면이 기분의 색으로 · 로파이 96 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm">원본·코드</a></sub>
 </td>
@@ -197,13 +197,13 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 <tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html"><img src="assets/readme/moment-toyz-form-01.webp" width="100%" alt="FORM / 01: reviewers' pins and a region land on a landing page as their comment cards slide in"/></a>
-<br/><b>FORM / 01</b> · <code>toyz-form-01</code>
+<br/><b>FORM / 01</b> · <code>form-01</code>
 <br/><sub>디자인 피드백 보드 → 작업물 위의 핀과 버전 · 시네마틱 112 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-form-01">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html"><img src="assets/readme/moment-toyz-loop.webp" width="100%" alt="LOOP: a tap checks off a routine and the chrome ring fills to 2/3"/></a>
-<br/><b>LOOP</b> · <code>toyz-loop</code>
+<br/><b>LOOP</b> · <code>loop</code>
 <br/><sub>습관 앱 → 탭할 때마다 차오르는 크롬 링 · 코퍼레이트 128 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-loop">원본·코드</a></sub>
 </td>
@@ -211,13 +211,13 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 <tr>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html"><img src="assets/readme/moment-toyz-focus-space.webp" width="100%" alt="FOCUS SPACE: the clock runs down in time-lapse as the chrome ring closes round one task"/></a>
-<br/><b>FOCUS SPACE</b> · <code>toyz-focus-space</code>
+<br/><b>FOCUS SPACE</b> · <code>focus-space</code>
 <br/><sub>집중 타이머 → 아치형 문 안에서 빨리 감는 25분 · 앰비언트 96 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-focus-space">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-pixel-kit.webp" width="100%" alt="PIXEL KIT: six sizes of one design turn over together to the next brand kit"/></a>
-<br/><b>PIXEL KIT</b> · <code>toyz-pixel-kit</code>
+<br/><b>PIXEL KIT</b> · <code>pixel-kit</code>
 <br/><sub>브랜드 이미지 도구 → 디자인 하나를 여섯 크기로, 킷 셋 · 스윙 128 BPM</sub>
 <br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit">원본·코드</a></sub>
 </td>
@@ -308,7 +308,7 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 </tr>
 </table>
 
-<sub>미리보기는 쇼릴의 한 장면을 실제 속도, 무음으로 보여 줍니다. <b>▶ 재생</b>을 누르면 브라우저에서 음악과 함께 전체 쇼릴이 열리고, 길이를 바꿔 볼 수 있습니다(같은 파일이 각 폴더의 <code>dist/</code>에 있습니다. 1–5MB이고 인터넷 없이 열리며 숫자 키로 길이를 바꿉니다). 프로젝트와 데이터는 가상이며 화면에도 그렇게 표시됩니다. <code>toyz-*</code> 앱은 실제 앱이고, 화면 속 데이터는 앱에 들어 있는 가상의 예시 데이터입니다. 해설 두 편과 Transformer 해설은 실제 개념을 다루며, 토이 모델이나 반올림한 교과서 값을 쓴다고 화면에 밝힙니다.</sub>
+<sub>미리보기는 쇼릴의 한 장면을 실제 속도, 무음으로 보여 줍니다. <b>▶ 재생</b>을 누르면 브라우저에서 음악과 함께 전체 쇼릴이 열리고, 길이를 바꿔 볼 수 있습니다(같은 파일이 각 폴더의 <code>dist/</code>에 있습니다. 1–5MB이고 인터넷 없이 열리며 숫자 키로 길이를 바꿉니다). 프로젝트와 데이터는 가상이며 화면에도 그렇게 표시됩니다. toyz.kr의 앱 16개는 실제 앱이고, 화면 속 데이터는 앱에 들어 있는 가상의 예시 데이터입니다. 해설 두 편과 Transformer 해설은 실제 개념을 다루며, 토이 모델이나 반올림한 교과서 값을 쓴다고 화면에 밝힙니다.</sub>
 
 <details>
 <summary><b>예제별 스타일 결정</b></summary>
@@ -318,11 +318,21 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 | `academic-paper` | single-cell paper | airy, precise | blush · coral | Source Serif 4 | 3D nuclei, tissue ↔ atlas | corporate 96 |
 | `art-deco` | invitation | opulent, nocturnal | black · gold | Limelight | symmetrical | swing 112 |
 | `botanical-organic` | tea brand story | calm, earthy | oat · leaf green | Fraunces | slow | guitar 96 |
+| `deploy-kit` | launch kit | brisk, technical | paper · cobalt | Pretendard | file streams | drum and bass 176 |
 | `editorial-luxe` | press release | elegant, quiet | ivory · champagne | Bodoni Moda | slow | piano 80 |
 | `explainer-llm` | LLM explainer notes | curious, lucid | navy · yellow | KaTeX Main | maths animation | ambient 96 |
 | `explainer-sunlight` | science notes | wondrous, bright | violet · sun gold | Nunito | flat-vector dives | bright pop 128 |
+| `focus-space` | focus timer | quiet, deep | deep green · chrome | Pretendard | time-lapse | ambient 96 |
+| `form-01` | feedback board | precise, editorial | ink · metal · pin colours | Pretendard | pins, versions | cinematic 112 |
+| `frame` | portfolio builder | clean, quick | paper · orange | Pretendard | live typing | corporate 112 |
+| `layr` | notes workspace | calm, structured | near-black · steel · lime | Pretendard | glass layers | dark synth 112 |
+| `loop` | habit app | steady, friendly | periwinkle · navy | Pretendard | a ring that fills | corporate 128 |
+| `mood-fm` | mood radio | warm, chromatic | the mood's own colour | Pretendard | dial sweeps | lo-fi 96 |
+| `motion-kit` | interaction kit | playful, exact | electric blue · orange | Pretendard | app animations replayed | bright pop 128 |
 | `neo-brutal` | landing page | loud, blunt | cream · lemon | Archivo | hard snaps | funk 112 |
 | `newsprint` | newspaper | factual, civic | newsprint · red | Newsreader | steady | piano 96 |
+| `offgrid` | local map app | nocturnal, local | night map · lime | Pretendard | one camera push | swing 96 |
+| `orbit-note` | linked-notes app | luminous, connected | electric blue · holo | Pretendard | drawn links | cinematic 96 |
 | `paper-behaviour` | mouse-behaviour paper | clean, precise | white · blue | Instrument Sans | tracked from above | corporate 104 |
 | `paper-imaging` | light-sheet paper | luminous, patient | black · green | Manrope | GPU nuclei | ambient 92 |
 | `paper-organoid` | organoid paper | warm, hands-on | paper · magenta | Literata | handwritten notebook | corporate 100 |
@@ -331,30 +341,20 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 | `pixel-arcade` | game jam | chunky, punchy | night · gold | Press Start 2P | stepped | chiptune 144 |
 | `pixel-isometric` | café opening | cosy, warm | cream · latte | Jersey 10 | isometric pixel | lo-fi 86 |
 | `pixel-jrpg` | engine release | heroic, nostalgic | night · lantern gold | Pixelify Sans | HD-2D light | cinematic 120 |
+| `pixel-kit` | brand-image tool | crafty, consistent | near-black · orchid | Pretendard | a wall that turns over | swing 128 |
 | `pixel-pocket` | hiking app | calm, outdoorsy | four greens | 5×7 bitmap | dithered tone steps | chiptune 108 |
 | `playful-app` | app README | playful, bouncy | light · pink | Nunito | springy | bright pop 120 |
+| `pulse` | maker dashboard | crisp, instrumental | aluminium · orange | Pretendard | meters, snaps | bright pop 112 |
+| `read-room` | reading room | quiet, literary | paper · marker orange | Pretendard | pen-speed highlights | ambient 96 |
 | `research-cli` | research CLI | technical, cool | dark · cyan | Space Grotesk | damped | dark synth 128 |
 | `riso-zine` | zine | loud, scrappy | newsprint · fluo pink | Anton | jumpy | lo-fi 160 |
 | `sketchnote` | workshop handout | hand-drawn, friendly | whiteboard · orange | Shantell Sans | handwritten | bright 104 |
 | `sports-kinetic` | race-timing app | energetic, exact | track black · orange | Barlow Condensed | fast | drum and bass 176 |
 | `sumi-wabi` | ryokan site | quiet, restrained | washi · one vermilion | Shippori Mincho | very slow | koto 72 |
 | `swiss-grid` | architecture brief | precise, ordered | paper · one red | Schibsted Grotesk | on the grid | synth 124 |
-| `toyz-deploy-kit` | launch kit | brisk, technical | paper · cobalt | Pretendard | file streams | drum and bass 176 |
-| `toyz-focus-space` | focus timer | quiet, deep | deep green · chrome | Pretendard | time-lapse | ambient 96 |
-| `toyz-form-01` | feedback board | precise, editorial | ink · metal · pin colours | Pretendard | pins, versions | cinematic 112 |
-| `toyz-frame` | portfolio builder | clean, quick | paper · orange | Pretendard | live typing | corporate 112 |
-| `toyz-layr` | notes workspace | calm, structured | near-black · steel · lime | Pretendard | glass layers | dark synth 112 |
-| `toyz-loop` | habit app | steady, friendly | periwinkle · navy | Pretendard | a ring that fills | corporate 128 |
-| `toyz-mood-fm` | mood radio | warm, chromatic | the mood's own colour | Pretendard | dial sweeps | lo-fi 96 |
-| `toyz-motion-kit` | interaction kit | playful, exact | electric blue · orange | Pretendard | app animations replayed | bright pop 128 |
-| `toyz-offgrid` | local map app | nocturnal, local | night map · lime | Pretendard | one camera push | swing 96 |
-| `toyz-orbit-note` | linked-notes app | luminous, connected | electric blue · holo | Pretendard | drawn links | cinematic 96 |
-| `toyz-pixel-kit` | brand-image tool | crafty, consistent | near-black · orchid | Pretendard | a wall that turns over | swing 128 |
-| `toyz-pulse` | maker dashboard | crisp, instrumental | aluminium · orange | Pretendard | meters, snaps | bright pop 112 |
-| `toyz-read-room` | reading room | quiet, literary | paper · marker orange | Pretendard | pen-speed highlights | ambient 96 |
-| `toyz-tiny-beat` | beat maker | warm, rhythmic | black · lime | Pretendard | on the step grid | lo-fi 80 |
-| `toyz-tiny-tools` | developer toolbox | crisp, nimble | night · violet | Pretendard | paste and answer | chiptune 128 |
-| `toyz-trove` | bookmark app | sleek, nocturnal | black · lime | Pretendard | orbit, chrome | dark synth 128 |
+| `tiny-beat` | beat maker | warm, rhythmic | black · lime | Pretendard | on the step grid | lo-fi 80 |
+| `tiny-tools` | developer toolbox | crisp, nimble | night · violet | Pretendard | paste and answer | chiptune 128 |
+| `trove` | bookmark app | sleek, nocturnal | black · lime | Pretendard | orbit, chrome | dark synth 128 |
 
 폴더마다 <code>style.json</code>에 모든 결정과 그 근거가 된 원본 내용을 적어 두었습니다.
 
