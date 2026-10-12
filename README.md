@@ -23,7 +23,7 @@ An agent skill for Claude Code, Codex CLI, Gemini CLI or any coding agent. Deliv
 
 ## Examples
 
-Twenty-four example projects, each made from a different kind of source. The style of every reel (palette, type, motion, music) comes from its source, not from a theme list.
+Forty example projects, each made from a different kind of source. Sixteen of them (<code>toyz-*</code>) are real, deployed web apps, captured from their own production builds. The style of every reel (palette, type, motion, music) comes from its source, not from a theme list.
 
 <table>
 <tr>
@@ -112,6 +112,118 @@ Twenty-four example projects, each made from a different kind of source. The sty
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html"><img src="assets/readme/moment-toyz-trove.webp" width="100%" alt="Trove: scattered links are pulled into a spinning chrome torus as the name lands in chrome type"/></a>
+<br/><b>Trove</b> · <code>toyz-trove</code>
+<br/><sub>a bookmark app → chrome torus, links pulled into orbit · dark synth 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-trove">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html"><img src="assets/readme/moment-toyz-pulse.webp" width="100%" alt="Pulse: tasks and releases on one brushed-aluminium dashboard, counters and level meters ticking"/></a>
+<br/><b>Pulse</b> · <code>toyz-pulse</code>
+<br/><sub>a maker dashboard → brushed aluminium, live meters · bright pop 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pulse">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html"><img src="assets/readme/moment-toyz-orbit-note.webp" width="100%" alt="Orbit Note: note cards linked by drawn wiki paths on electric blue, the graph lighting up"/></a>
+<br/><b>Orbit Note</b> · <code>toyz-orbit-note</code>
+<br/><sub>a linked-notes app → holographic wiki graph · cinematic 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html"><img src="assets/readme/moment-toyz-frame.webp" width="100%" alt="Frame: a name typed into the form appears in the live portfolio preview at once"/></a>
+<br/><b>Frame</b> · <code>toyz-frame</code>
+<br/><sub>a portfolio builder → live preview as you type · corporate 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-frame">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html"><img src="assets/readme/moment-toyz-tiny-beat.webp" width="100%" alt="Tiny Beat: lime pads light up on a step sequencer as the playhead sweeps the bar"/></a>
+<br/><b>Tiny Beat</b> · <code>toyz-tiny-beat</code>
+<br/><sub>a daily beat maker → a glowing step sequencer · lo-fi 80 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html"><img src="assets/readme/moment-toyz-deploy-kit.webp" width="100%" alt="Deploy Kit: the kit's real files stream into one ZIP, its count ticking up"/></a>
+<br/><b>Deploy Kit</b> · <code>toyz-deploy-kit</code>
+<br/><sub>a launch kit → the files fly into one ZIP · drum and bass 176 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html"><img src="assets/readme/moment-toyz-read-room.webp" width="100%" alt="Read Room: an essay page where highlights are drawn in and margin notes appear"/></a>
+<br/><b>Read Room</b> · <code>toyz-read-room</code>
+<br/><sub>a shared reading room → highlights drawn at pen speed · ambient 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-read-room">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-motion-kit.webp" width="100%" alt="Motion Kit: a cursor taps the real confetti demo and the burst plays out"/></a>
+<br/><b>Motion Kit</b> · <code>toyz-motion-kit</code>
+<br/><sub>a micro-interaction kit → its own animations, frame by frame · bright pop 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html"><img src="assets/readme/moment-toyz-layr.webp" width="100%" alt="LAYR: notes fly onto five exploded glass layers and each layer's count ticks up"/></a>
+<br/><b>LAYR</b> · <code>toyz-layr</code>
+<br/><sub>a notes workspace → notes falling onto five glass layers · dark synth 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-layr">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html"><img src="assets/readme/moment-toyz-offgrid.webp" width="100%" alt="OFFGRID: a lime walking route draws itself over a dark OpenStreetMap of Seongsu, pins lighting as it passes"/></a>
+<br/><b>OFFGRID</b> · <code>toyz-offgrid</code>
+<br/><sub>a local map → one push from Seoul into an alley walk · swing 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-offgrid">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html"><img src="assets/readme/moment-toyz-tiny-tools.webp" width="100%" alt="tiny.tools: clippings land in the smart paste pad and it names the right tool each time"/></a>
+<br/><b>tiny.tools</b> · <code>toyz-tiny-tools</code>
+<br/><sub>a developer toolbox → smart paste picks the tool · chiptune 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html"><img src="assets/readme/moment-toyz-mood-fm.webp" width="100%" alt="MOOD FM: the dial turns from 몽글 to 들뜸 and the whole frame changes colour with it"/></a>
+<br/><b>MOOD FM</b> · <code>toyz-mood-fm</code>
+<br/><sub>a mood radio → the frame takes the colour of the mood · lo-fi 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html"><img src="assets/readme/moment-toyz-form-01.webp" width="100%" alt="FORM / 01: reviewers' pins and a region land on a landing page as their comment cards slide in"/></a>
+<br/><b>FORM / 01</b> · <code>toyz-form-01</code>
+<br/><sub>a design feedback board → pins and versions on the work · cinematic 112 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-form-01">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html"><img src="assets/readme/moment-toyz-loop.webp" width="100%" alt="LOOP: a tap checks off a routine and the chrome ring fills to 2/3"/></a>
+<br/><b>LOOP</b> · <code>toyz-loop</code>
+<br/><sub>a habit app → taps fill a chrome ring · corporate 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-loop">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html"><img src="assets/readme/moment-toyz-focus-space.webp" width="100%" alt="FOCUS SPACE: the clock runs down in time-lapse as the chrome ring closes round one task"/></a>
+<br/><b>FOCUS SPACE</b> · <code>toyz-focus-space</code>
+<br/><sub>a focus timer → a session in time-lapse inside an arched door · ambient 96 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-focus-space">Source</a></sub>
+</td>
+<td align="center" valign="top" width="50%">
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-pixel-kit.webp" width="100%" alt="PIXEL KIT: six sizes of one design turn over together to the next brand kit"/></a>
+<br/><b>PIXEL KIT</b> · <code>toyz-pixel-kit</code>
+<br/><sub>a brand-image tool → one design in six sizes, three kits · swing 128 BPM</sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">▶ Play</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit">Source</a></sub>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" width="50%">
 <a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/neo-brutal/dist/kablok-v1.0.0.html"><img src="assets/readme/moment-neo-brutal.webp" width="100%" alt="kablok: neo-brutalist slabs with hard shadows, a cursor picks and stacks blocks"/></a>
 <br/><b>kablok</b> · <code>neo-brutal</code>
 <br/><sub>a landing page → hard shadows, slabs · funk 112 BPM</sub>
@@ -196,7 +308,7 @@ Twenty-four example projects, each made from a different kind of source. The sty
 </tr>
 </table>
 
-<sub>Each loop is one moment of the reel at real speed, without sound. <b>▶ Play</b> opens the full reel in your browser with music, where you can switch between its lengths (the same file is in each folder's <code>dist/</code>: 1–2 MB, opens offline, number keys switch lengths). Projects and data are fictional and labelled as such on screen; the two explainers and the Transformer explainer cover real ideas, with toy models or rounded textbook values, and say so.</sub>
+<sub>Each loop is one moment of the reel at real speed, without sound. <b>▶ Play</b> opens the full reel in your browser with music, where you can switch between its lengths (the same file is in each folder's <code>dist/</code>: 1–5 MB, opens offline, number keys switch lengths). Projects and data are fictional and labelled as such on screen (the <code>toyz-*</code> apps are real; the data they show is their own fictional sample data); the two explainers and the Transformer explainer cover real ideas, with toy models or rounded textbook values, and say so.</sub>
 
 <details>
 <summary><b>Style decisions per example</b></summary>
@@ -227,6 +339,22 @@ Twenty-four example projects, each made from a different kind of source. The sty
 | `sports-kinetic` | race-timing app | energetic, exact | track black · orange | Barlow Condensed | fast | drum and bass 176 |
 | `sumi-wabi` | ryokan site | quiet, restrained | washi · one vermilion | Shippori Mincho | very slow | koto 72 |
 | `swiss-grid` | architecture brief | precise, ordered | paper · one red | Schibsted Grotesk | on the grid | synth 124 |
+| `toyz-deploy-kit` | launch kit | brisk, technical | paper · cobalt | Pretendard | file streams | drum and bass 176 |
+| `toyz-focus-space` | focus timer | quiet, deep | deep green · chrome | Pretendard | time-lapse | ambient 96 |
+| `toyz-form-01` | feedback board | precise, editorial | ink · metal · pin colours | Pretendard | pins, versions | cinematic 112 |
+| `toyz-frame` | portfolio builder | clean, quick | paper · orange | Pretendard | live typing | corporate 112 |
+| `toyz-layr` | notes workspace | calm, structured | near-black · steel · lime | Pretendard | glass layers | dark synth 112 |
+| `toyz-loop` | habit app | steady, friendly | periwinkle · navy | Pretendard | a ring that fills | corporate 128 |
+| `toyz-mood-fm` | mood radio | warm, chromatic | the mood's own colour | Pretendard | dial sweeps | lo-fi 96 |
+| `toyz-motion-kit` | interaction kit | playful, exact | electric blue · orange | Pretendard | app animations replayed | bright pop 128 |
+| `toyz-offgrid` | local map app | nocturnal, local | night map · lime | Pretendard | one camera push | swing 96 |
+| `toyz-orbit-note` | linked-notes app | luminous, connected | electric blue · holo | Pretendard | drawn links | cinematic 96 |
+| `toyz-pixel-kit` | brand-image tool | crafty, consistent | near-black · orchid | Pretendard | a wall that turns over | swing 128 |
+| `toyz-pulse` | maker dashboard | crisp, instrumental | aluminium · orange | Pretendard | meters, snaps | bright pop 112 |
+| `toyz-read-room` | reading room | quiet, literary | paper · marker orange | Pretendard | pen-speed highlights | ambient 96 |
+| `toyz-tiny-beat` | beat maker | warm, rhythmic | black · lime | Pretendard | on the step grid | lo-fi 80 |
+| `toyz-tiny-tools` | developer toolbox | crisp, nimble | night · violet | Pretendard | paste and answer | chiptune 128 |
+| `toyz-trove` | bookmark app | sleek, nocturnal | black · lime | Pretendard | orbit, chrome | dark synth 128 |
 
 Each folder's <code>style.json</code> records every decision and the evidence from the source behind it.
 
