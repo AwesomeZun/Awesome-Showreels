@@ -71,7 +71,7 @@
       // damage numbers: pop up with a bounce, hang, fade
       const dmg = (txt, b0, x, y, col = '#FFFFFF') => { if (b < b0 || b > b0 + 1.6) return; const u = (b - b0) / 1.6, bounce = Math.round(Math.abs(Math.sin(Math.min(1, u * 3) * Math.PI)) * 8 * (1 - u)) * S; HD.ptext(ctx, txt, x, y - bounce - u * 40, { fam: 'DotGothic16', size: 16, k: 2, fill: col, outline: '#2A1208', align: 'center', a: 1 - Math.max(0, u - 0.7) / 0.3 }); };
       dmg('1,200', 2.55, BX + 420, BY + 120); dmg('2,700', 4.65, BX + 480, BY + 160);
-      if (long) dmg('+57 GAMES', healAt + 0.2, 1580, 300, '#8CFFB0');
+      if (long) dmg('+57 GAMES', healAt + 0.2, 1500, 300, '#8CFFB0');
       dmg('0.9 MS', finAt + 0.05, BX + 420, BY + 100, '#F7C948');
       // windows: commands (left) and the boss's HP (right)
       const ui = Ease.outC(clamp((b - 0.5) / 0.4)); ctx.save(); ctx.translate(0, (1 - ui) * 340);

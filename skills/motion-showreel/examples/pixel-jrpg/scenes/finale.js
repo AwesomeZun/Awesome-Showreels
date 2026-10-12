@@ -29,7 +29,7 @@
         }
       }
       if (b >= 2) HD.ptext(ctx, 'Make the RPG you grew up with.', 960, 400, { size: 12, weight: 500, fill: '#F4EBD9', outline: '#120804', align: 'center', reveal: clamp((b - 2) * 1.5) });
-      if (b >= 3) { HD.ptext(ctx, 'OPEN SOURCE · MIT', 960, 480, { fam: 'DotGothic16', size: 16, fill: '#F7C948', outline: '#120804', align: 'center' }); HD.ptext(ctx, 'FICTIONAL PROJECT · DEMO NUMBERS', 1820, 1030, { size: 8, weight: 500, fill: '#9AA3B8', outline: '#120804', align: 'right', a: 0.85 }); }
+      if (b >= 3) { HD.ptext(ctx, 'OPEN SOURCE · MIT', 960, 480, { fam: 'DotGothic16', size: 16, fill: '#F7C948', outline: '#120804', align: 'center' }); HD.ptext(ctx, 'FICTIONAL PROJECT · DEMO NUMBERS', 1820, 1020, { size: 10, weight: 500, fill: '#9AA3B8', outline: '#120804', align: 'right', a: 0.85 }); }
     },
   };
 })();

@@ -3,7 +3,7 @@
 // neighbour and cached, so its pixels stay square and crisp; the camera then moves over those layers smoothly, the way
 // a 3D camera moves over pixel sprites. On top: a light map (ambient + coloured lights, multiplied), bloom (additive
 // glows), light shafts, dust that is visible only inside the light, depth-of-field blur per layer, a teal-and-amber
-// grade and a vignette. Text is pixel text: drawn at art size, thresholded, scaled 5x. Exposes window.HD.
+// grade and a vignette. Text is pixel text: the pixel faces drawn at screen size and thresholded. Exposes window.HD.
 (() => {
   const S = 5;                                              // screen pixels per art pixel
   const cache = new Map();
@@ -89,33 +89,48 @@
     ctx.fillStyle = radial(ctx, W / 2, H / 2, H * 0.35, W * 0.75, [[0, 'rgba(255,255,255,1)'], [1, rgba('#1B1530', o.vig ?? 0.85)]]); ctx.fillRect(0, 0, W, H);
     ctx.restore();
   }
-  // ───────── pixel text: drawn at art size, thresholded, scaled S (cached per string and style)
+  // ───────── pixel text, cached per string and style. The face is drawn at screen size and thresholded there: these
+  // faces' own blocks are not one art pixel (DotGothic16 draws on a 74/1000 em grid that its advances leave, Pixelify
+  // Sans has no exact grid), so drawn at art size and scaled up their letters break. DotGothic16's size is nudged
+  // until one of its dots is a whole number of screen pixels. The outline, the shadow, the padding and the gold bands
+  // stay in art pixels (K screen pixels each).
+  const GRID = { DotGothic16: 74 / 1000 };
   const tc = new Map();
+  // grow a mask by r pixels in every direction (a square, like the eight neighbours of one art pixel): rows, then columns
+  function dilate(on, w, h, r) {
+    const a = new Uint8Array(w * h), out = new Uint8Array(w * h);
+    for (let y = 0; y < h; y++) { let last = -1e9; for (let x = 0; x < w; x++) { if (on[y * w + x]) last = x; if (x - last <= r) a[y * w + x] = 1; }
+      last = 1e9; for (let x = w - 1; x >= 0; x--) { if (on[y * w + x]) last = x; if (last - x <= r) a[y * w + x] = 1; } }
+    for (let x = 0; x < w; x++) { let last = -1e9; for (let y = 0; y < h; y++) { if (a[y * w + x]) last = y; if (y - last <= r) out[y * w + x] = 1; }
+      last = 1e9; for (let y = h - 1; y >= 0; y--) { if (a[y * w + x]) last = y; if (last - y <= r) out[y * w + x] = 1; } }
+    return out;
+  }
   function ptext(ctx, s, x, y, o = {}) {
     const fam = o.fam || 'Pixelify Sans', size = o.size || 12, wt = o.weight || 600, K = S * (o.k || 1), key = [s, fam, size, wt, o.fill, o.outline, o.shadow, o.gold, K].join('|');
     let v = tc.get(key);
     if (!v) {
-      const m = makeBuf(4, 4); m.g.font = `${wt} ${size}px "${fam}"`; const w = Math.ceil(m.g.measureText(s).width) + 6, h = Math.ceil(size * 1.5) + 6;
-      const b = makeBuf(w, h), g = b.g; g.font = `${wt} ${size}px "${fam}"`; g.textBaseline = 'top'; g.fillStyle = '#000'; g.fillText(s, 3, 3);
+      const P = 3 * K, gr = GRID[fam], fs = gr ? Math.round(size * K * gr) / gr : size * K, font = `${wt} ${fs}px "${fam}"`;
+      const m = makeBuf(4, 4); m.g.font = font; const tw = Math.ceil(m.g.measureText(s).width), w = tw + 2 * P, h = Math.ceil(size * 1.5 * K) + 2 * P;
+      const b = makeBuf(w, h), g = b.g; g.font = font; g.textBaseline = 'top'; g.fillStyle = '#000'; g.fillText(s, P, P);
       const id = g.getImageData(0, 0, w, h), d = id.data, on = new Uint8Array(w * h);
-      for (let i = 0; i < w * h; i++) on[i] = d[i * 4 + 3] > 120 ? 1 : 0;
+      for (let i = 0; i < w * h; i++) on[i] = d[i * 4 + 3] > 127 ? 1 : 0;
+      const near = o.outline ? dilate(on, w, h, K) : null;
       const out = g.createImageData(w, h), od = out.data, put = (i, c) => { const [r, gg, bb] = parseColor(c); od[i * 4] = r; od[i * 4 + 1] = gg; od[i * 4 + 2] = bb; od[i * 4 + 3] = 255; };
       let top = h, bot = 0; for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if (on[y * w + x]) { top = Math.min(top, y); bot = Math.max(bot, y); }
+      const rows = Math.max(1, Math.floor((bot - top) / K));
       for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
         const i = y * w + x;
         if (on[i]) {
           let c = o.fill || '#FFFFFF';
-          if (o.gold) { const u = (y - top) / Math.max(1, bot - top); c = u < 0.18 ? '#FFF3B0' : u < 0.5 ? '#F7C948' : u < 0.8 ? '#E08A1E' : '#A8461E'; }
+          if (o.gold) { const u = Math.floor((y - top) / K) / rows; c = u < 0.18 ? '#FFF3B0' : u < 0.5 ? '#F7C948' : u < 0.8 ? '#E08A1E' : '#A8461E'; }
           put(i, c);
         } else if (o.outline) {
-          let n = 0; for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]]) { const X = x + dx, Y = y + dy; if (X >= 0 && Y >= 0 && X < w && Y < h && on[Y * w + X]) n++; }
-          if (n) put(i, o.outline);
-          else if (o.shadow && y > 0 && x > 0 && on[(y - 2) * w + (x - 1)] && y > 1) put(i, o.shadow);
+          if (near[i]) put(i, o.outline);
+          else if (o.shadow && y >= 2 * K && x >= K && on[(y - 2 * K) * w + (x - K)]) put(i, o.shadow);
         }
       }
       g.clearRect(0, 0, w, h); g.putImageData(out, 0, 0);
-      const k = makeBuf(w * K, h * K); k.g.imageSmoothingEnabled = false; k.g.drawImage(b.c, 0, 0, w * K, h * K);
-      v = { c: k.c, w: (w - 6) * K, h: h * K, K }; tc.set(key, v);
+      v = { c: b.c, w: tw, h, K }; tc.set(key, v);
     }
     const x0 = o.align === 'center' ? x - v.w / 2 : o.align === 'right' ? x - v.w : x;
     ctx.save(); ctx.globalAlpha *= o.a ?? 1;

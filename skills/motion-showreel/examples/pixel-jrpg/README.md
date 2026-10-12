@@ -7,7 +7,7 @@ takes the release's numbers as damage and breaks into its own pixels, and the pa
 preset: palette, type, motion and music come from `source/` and are written to `style.json` with the reasoning for
 every decision.
 
-- Web version with every cut: [`dist/lanternforge-v2.0.0.html`](dist/lanternforge-v2.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.0.0.html))
+- Web version with every cut: [`dist/lanternforge-v2.1.0.html`](dist/lanternforge-v2.1.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-jrpg/dist/lanternforge-v2.1.0.html))
 - Cuts: `short` (9 bars = 18.0 s), `30` (15 bars = 30.0 s), all at 120 BPM.
 
 > Lanternforge 2.0 is fictional. Every name, number and screen is demo content made for this example.
@@ -80,7 +80,7 @@ node $S/runtime/build.mjs --project $P --cuts short,30 --out out/lanternforge-v2
 
 - **palette.** One 40-colour palette shared by every asset (median cut over all of them), so every scene sits in the same 16-bit world; lighting is a light map multiplied over the pixels (cool navy ambient, amber lights), bloom adds on top, and a teal/amber grade ties it together.
 
-- **type.** Pixelify Sans (bold, gold stepped fill, dark outline) for the logo and numbers; DotGothic16 for dialog. Both are drawn at art size, thresholded and scaled 5x, so every glyph pixel is square.
+- **type.** Pixelify Sans (bold, gold stepped fill, dark outline) for the logo and numbers; DotGothic16 for dialog. Neither face's blocks are one art pixel, so drawn at art size and scaled up their letters break: both are drawn at screen size and thresholded there, DotGothic16 at a size that makes each of its dots a whole number of screen pixels, while the outline and the gold bands stay in art pixels.
 
 - **motion.** A 16-bit trailer: a Mode-7 world map that rotates and tilts under the logo, a town walk with a typewriter dialog, a turn-based battle where the engine's features are the attacks and the numbers are damage, and a victory fanfare. Sprites animate on a 10-fps step clock.
 
