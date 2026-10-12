@@ -28,10 +28,10 @@
       D.shade();
       // the progress card
       D.target('ui');
-      D.win(10, 8, 110, 30);
-      D.text(landed >= total ? 'All unpacked!' : 'Unpacking', 17, 12, { c: I.espresso });
-      D.text(`${landed}/${total}`, 113, 12, { c: I.caramel, shadow: null, align: 'r' });
-      D.rect(17, 27, 96, 5, I.sand); D.rect(17, 27, Math.round(96 * landed / total), 5, I.caramel); D.rect(17, 27, Math.round(96 * landed / total), 1, I.peach);
+      D.win(10, 8, 140, 36);
+      D.text(landed >= total ? 'All unpacked!' : 'Unpacking', 17, 14, { c: I.espresso });
+      D.text(`${landed}/${total}`, 143, 14, { c: I.caramel, shadow: null, align: 'r' });
+      D.rect(17, 31, 126, 5, I.sand); D.rect(17, 31, Math.round(126 * landed / total), 5, I.caramel); D.rect(17, 31, Math.round(126 * landed / total), 1, I.peach);
       D.present(ctx, { s: 4, cx: 320, cy: 186 });
     },
   };

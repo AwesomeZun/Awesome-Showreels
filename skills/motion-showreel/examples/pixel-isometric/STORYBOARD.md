@@ -68,5 +68,5 @@ evening (1 bar, 2 in the 30): rain on Elm Street. The outside of the shop at nig
 - Bars: short 1 · 30 s 2 (min 1, max 2) · in 2 beats, out 0 beats · entrance `cut` · music part `outro`
 - Cues: reveal @ start+0b, tick:3 gap=0.5 @ start+0.5b
 
-opening (1 bar, 2 in the 30; the end card): the camera steps back to the whole corner in the rain, sign lit, and a card rises in whole steps: Pebble & Bean, then on the half beats the opening in large type (Saturday, 8 am), the address (14 Elm Street, by the bakery) and the offer (the first 50 cups are on us). The rain keeps falling and the windows keep glowing on the hold; a line at the foot says the shop is fictional.
+opening (1 bar, 2 in the 30; the end card): the camera steps back to the whole corner in the rain, sign lit, and a card rises in whole steps: Pebble & Bean in double-size type, then on the half beats the opening (Saturday, 8 am), the address (14 Elm Street, by the bakery) and the offer (the first 50 cups are on us). The rain keeps falling and the windows keep glowing on the hold; a line at the foot says the shop is fictional.
 

@@ -39,7 +39,7 @@
       if (b > 3) for (let i = 0; i < 10; i++) { const life = (b * 0.7 + i / 10) % 1; D.px(C[0] - 12 + i * 3 + Math.sin(life * 6 + i) * 2, C[1] - RC - 6 - life * 22, life < 0.5 ? I.cream : I.sand); }
       D.target('ui');
       const k = D.span(b, 3, 3.3);
-      if (k > 0) { const x = Math.round(-100 + 110 * k); D.win(x, 178, 92, 26); D.text('Flat white', x + 8, 183); D.text('4.5', x + 84, 183, { c: I.brick, shadow: null, align: 'r' }); }
+      if (k > 0) { const x = Math.round(-120 + 130 * k); D.win(x, 176, 112, 26); D.text('Flat white', x + 8, 184); D.text('4.5', x + 104, 184, { c: I.brick, shadow: null, align: 'r' }); }
       D.present(ctx, { s: 6, cx: 320, cy: 180 });
     },
   };

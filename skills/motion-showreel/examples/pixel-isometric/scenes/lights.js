@@ -16,7 +16,7 @@
       D.shade();
       D.target('ui');
       const k = D.span(b, 0.2, 0.6);
-      if (k > 0) { const y = Math.round(-32 + 40 * k); D.win(10, y, 92, 30); D.text('14 Elm Street', 17, y + 5, { c: I.espresso }); D.text('Moving day', 17, y + 16, { c: I.caramel, shadow: null }); }
+      if (k > 0) { const y = Math.round(-40 + 48 * k); D.win(10, y, 100, 36); D.text('14 Elm Street', 17, y + 6, { c: I.espresso }); D.text('Moving day', 17, y + 20, { c: I.caramel, shadow: null }); }
       D.present(ctx, { s: 4, cx: 320, cy: 186 });
     },
   };

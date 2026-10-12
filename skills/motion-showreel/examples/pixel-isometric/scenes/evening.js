@@ -8,7 +8,10 @@
   const OX = 10, OY = 6, E = (x, y) => [OX + x, OY + y];
   const WINDOWS = [[E(200, 178), E(281, 186), E(281, 240), E(200, 232)], [E(325, 197), E(371, 199), E(371, 238), E(325, 236)],
     [E(292, 197), E(322, 197), E(322, 256), E(292, 256)], [E(400, 187), E(446, 185), E(446, 230), E(400, 232)]];
-  const LAMP = E(156, 133), PUDDLE = E(312, 296), SIGN = { x: E(296, 0)[0], y: E(0, 146)[1], skew: 0.09 };
+  const LAMP = E(156, 133), PUDDLE = E(312, 296), SIGN = { x: E(296, 0)[0], y: E(0, 144)[1], skew: 0.11 };
+  // the art hangs two gooseneck lamps over the board with their bulbs inside its face, where the name has to go: the
+  // face under them is painted over in the board's brick, and the arms stay above it as brackets
+  const BULBS = [[256, 140, 266, 147], [324, 148, 338, 156]];
   function rain(b, n = 170) {
     for (let i = 0; i < n; i++) {
       const sp = 0.9 + D.hash(i) * 0.4, life = (b * sp * 1.4 + D.hash(i + 99)) % 1;
@@ -20,6 +23,7 @@
     D.target('world'); D.fill(I.dusk);
     for (let y = 0; y < D.AH; y++) for (let x = 0; x < D.AW; x++) if (D.TH[y * D.AW + x] < y / D.AH * 0.8) D.px(x, y, I.plum);
     D.layer('exterior', OX, OY);
+    for (const [x0, y0, x1, y1] of BULBS) for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) { const [X, Y] = E(x, y); D.px(X, Y, I.brick); }
     const n = o.letters ?? 13;
     D.text('Pebble & Bean', SIGN.x, SIGN.y, { align: 'c', skew: SIGN.skew, n, c: I.glow, shadow: I.caramel, em: true });
     D.ambient(-2);

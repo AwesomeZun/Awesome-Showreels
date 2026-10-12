@@ -41,19 +41,19 @@
       D.shade();
       // the note at the roaster
       if (b >= 5.5) {
-        const ro = R.AT.roaster, x = ro[0] - 70, y = ro[1] - 112, n = Math.floor(D.span(b, 5.5, 6.3) * 30 + 1e-6);
-        D.win(x, y, 96, 26); D.text('Roasted here', x + 6, y + 3, { n }); D.text('7-9 every morning', x + 6, y + 13, { c: I.caramel, shadow: null, n: n - 12 });
-        D.line(x + 70, y + 25, ro[0] - 6, ro[1] - 86, I.caramel);
+        const ro = R.AT.roaster, x = ro[0] - 120, y = ro[1] - 124, n = Math.floor(D.span(b, 5.5, 6.3) * 30 + 1e-6);
+        D.win(x, y, 136, 36); D.text('Roasted here', x + 7, y + 6, { n }); D.text('7-9 every morning', x + 7, y + 20, { c: I.caramel, shadow: null, n: n - 12 });
+        D.line(ro[0] - 6, y + 36, ro[0] - 6, ro[1] - 86, I.caramel);
       }
       // the menu card, fixed on screen
       D.target('ui');
       const k = D.span(b, 2, 2.5);
       if (k > 0) {
-        const x = Math.round(384 - 128 * k);
-        D.win(x, 46, 118, 86); D.text('Menu', x + 8, 51, { c: I.espresso });
+        const x = Math.round(384 - 160 * k);
+        D.win(x, 40, 152, 90); D.text('Menu', x + 8, 47, { c: I.espresso });
         MENU.forEach(([name, price], i) => {
           if (b < 2.5 + i * 0.5) return;
-          D.text(name, x + 8, 68 + i * 14, { c: I.espresso, shadow: null }); D.text(price, x + 110, 68 + i * 14, { c: I.brick, shadow: null, align: 'r' });
+          D.text(name, x + 8, 65 + i * 15, { c: I.espresso, shadow: null }); D.text(price, x + 144, 65 + i * 15, { c: I.brick, shadow: null, align: 'r' });
         });
       }
       const cam = b < 2 ? { s: 4, cx: 320 - 3 * b, cy: 186 } : b < 5 ? { s: 5, cx: 304 - 5 * (b - 2), cy: 190 } : { s: 6, cx: 256 - 4 * (b - 5), cy: 175 };

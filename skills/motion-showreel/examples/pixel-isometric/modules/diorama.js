@@ -117,28 +117,34 @@
     L.fill(0);
   }
 
-  // ───────── pixel text in Jersey 10 (drawn at art size and thresholded), with the house sign's caramel shadow
+  // ───────── pixel text in Jersey 10 on its own grid, with the house sign's caramel shadow. One font pixel is 75 of
+  // the face's 1400 units, so it is drawn at 1400/75 px with the baseline on a whole pixel: every edge lands on a pixel
+  // and the threshold keeps the letters exactly as drawn (at any other size they break). Cap height 10, x-height 8,
+  // descenders 2; y is the top of the capitals. o.x2 doubles every pixel (the end card's title).
+  const FPX = 1400 / 75, ASC = 15, CAP = 10, DESC = 2;
   const TXT = new Map();
-  function mask(s, size) {
-    const key = s + '|' + size; let m = TXT.get(key); if (m) return m;
-    const b = makeBuf(1024, size * 2), g = b.g;
-    g.font = `${size}px "Jersey 10"`; g.textBaseline = 'top'; g.fillStyle = '#fff'; g.fillText(s, 0, 0);
-    const w = Math.min(1024, Math.ceil(g.measureText(s).width) + 1), d = g.getImageData(0, 0, w, size * 2).data;
-    const a = new Uint8Array(w * size * 2); let y1 = 0;
-    for (let j = 0; j < size * 2; j++) for (let i = 0; i < w; i++) if (d[(j * w + i) * 4 + 3] >= 128) { a[j * w + i] = 1; y1 = Math.max(y1, j); }
-    m = { w, h: y1 + 1, a }; TXT.set(key, m); return m;
+  function mask(s) {
+    let m = TXT.get(s); if (m) return m;
+    const b = makeBuf(1024, ASC + 5), g = b.g;
+    g.font = `${FPX}px "Jersey 10"`; g.textBaseline = 'alphabetic'; g.fillStyle = '#fff'; g.fillText(s, 0, ASC);
+    const w = Math.min(1024, R(g.measureText(s).width)), h = CAP + DESC, d = g.getImageData(0, ASC - CAP, w, h).data;
+    const a = new Uint8Array(w * h);
+    for (let i = 0; i < w * h; i++) a[i] = d[i * 4 + 3] >= 128 ? 1 : 0;
+    m = { w, h, a }; TXT.set(s, m); return m;
   }
-  const textW = (s, size = 10) => mask(s, size).w;
-  // o: size (10 or 20), c colour, shadow colour or null, n characters (a typewriter), align 'l' | 'c' | 'r',
-  // skew (y per x), em
+  const textW = (s, o = {}) => mask(s).w * (o.x2 ? 2 : 1);
+  // o: x2, c colour, shadow colour or null, n characters (a typewriter), align 'l' | 'c' | 'r', skew (y per x), em
   function text(s, x, y, o = {}) {
-    const size = o.size || 10, c = o.c ?? I.espresso, sh = o.shadow === undefined ? I.caramel : o.shadow;
+    const c = o.c ?? I.espresso, sh = o.shadow === undefined ? I.caramel : o.shadow, k = o.x2 ? 2 : 1;
     const str = o.n === undefined ? s : s.slice(0, Math.max(0, Math.floor(o.n)));
     if (!str) return;
-    const m = mask(str, size), full = mask(s, size), w = full.w;
-    const x0 = R(o.align === 'c' ? x - w / 2 : o.align === 'r' ? x - w : x), sk = o.skew || 0;
-    const put = (dx, dy, col) => { for (let j = 0; j < m.h; j++) for (let i = 0; i < m.w; i++) if (m.a[j * m.w + i]) px(x0 + i + dx, R(y + j + dy + i * sk), col, o.em ? 1 : 0); };
-    if (sh !== null) put(1, 1, sh);
+    const m = mask(str), w = textW(s, o);
+    const x0 = R(o.align === 'c' ? x - w / 2 : o.align === 'r' ? x - w : x), y0 = R(y), sk = o.skew || 0;
+    const put = (dx, dy, col) => {
+      for (let j = 0; j < m.h * k; j++) for (let i = 0; i < m.w * k; i++)
+        if (m.a[((j / k) | 0) * m.w + ((i / k) | 0)]) px(x0 + i + dx, y0 + j + dy + R(i * sk), col, o.em ? 1 : 0);
+    };
+    if (sh !== null) put(k, k, sh);
     put(0, 0, c);
   }
   // a cosy-game window: caramel frame, cream inside, a sand inner line, rounded corners

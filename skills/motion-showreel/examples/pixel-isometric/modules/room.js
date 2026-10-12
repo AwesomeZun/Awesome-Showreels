@@ -67,14 +67,14 @@
   const S = (x, y) => [OX + x, OY + y];
   const GLASS = [[S(173, 100), S(281, 50), S(281, 150), S(173, 200)], [S(136, 114), S(163, 102), S(163, 196), S(136, 208)]];
   // the house sign, painted on a board along the right wall (sheared 0.46 like the wall): n letters written so far
-  const SIGN = { x: OX + 346, y: OY + 58, w: 74, h: 17, skew: 0.46 };
+  const SIGN = { x: OX + 340, y: OY + 52, w: 104, h: 18, skew: 0.46 };
   function signBoard(n, lit) {
     const { x, y, w, h, skew } = SIGN;
     for (let i = 0; i < w; i++) for (let j = 0; j < h; j++) {
       const edge = i === 0 || i === w - 1 || j === 0 || j === h - 1;
       D.px(x + i, y + j + Math.round(i * skew), edge ? I.espresso : j === 1 ? I.cream : I.latte);
     }
-    if (n > 0) D.text('Pebble & Bean', x + w / 2, y + 4, { align: 'c', skew, n, c: lit ? I.glow : I.espresso, shadow: lit ? I.caramel : I.caramel, em: !!lit });
+    if (n > 0) D.text('Pebble & Bean', x + w / 2, y + 4 + Math.round((w / 2 - 47) * skew), { align: 'c', skew, n, c: lit ? I.glow : I.espresso, shadow: lit ? I.caramel : I.caramel, em: !!lit });
   }
   window.ROOM = { OX, OY, fp, AT, UNPACK, DOOR, GLASS, SIGN, draw, hop, puff };
 })();

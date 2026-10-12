@@ -7,7 +7,7 @@ the roaster turns, the cat stretches), a flat white gets its heart, and the corn
 the sign lights letter by letter. Nothing here picks a preset: palette, type, motion and music come from `source/`
 and are written to `style.json` with the reasoning for every decision.
 
-- Web version with every cut: [`dist/pebble-and-bean-v2.0.0.html`](dist/pebble-and-bean-v2.0.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.0.0.html))
+- Web version with every cut: [`dist/pebble-and-bean-v2.1.0.html`](dist/pebble-and-bean-v2.1.0.html) ([play in the browser](https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-isometric/dist/pebble-and-bean-v2.1.0.html))
 - Cuts: `short` (7 bars = 19.5 s), `30` (11 bars = 30.7 s), all at 86 BPM.
 
 > Pebble & Bean is fictional. Every name, number and screen is demo content made for this example.
@@ -84,7 +84,7 @@ node $S/runtime/build.mjs --project $P --cuts short,30 --out out/pebble-and-bean
 
 - **palette.** The shop's 16 pastels (palette.txt) and nothing else: every asset is stored in them and read back as palette indices. Dusk does not tint; it moves each colour one stop along a hand-made cool ramp (cream to sky, latte to dusk, caramel to plum), and lamplight one stop along a warm one (latte to sand, sand to cream, cream to glow), through a 4x4 ordered dither, so evenings and lamp pools stay inside the palette. Glow pixels are lamps and never darken; only soft halos on bulbs, windows and the sign add light on top.
 
-- **type.** Jersey 10 (OFL), a soft pixel face with lower case, drawn at art size and thresholded, with the house sign's one-pixel caramel shadow. The sign on the wall and on the facade is sheared along the wall like paint; the interface (cards, the menu, progress) sits on its own layer at 5x.
+- **type.** Jersey 10 (OFL), a soft pixel face with lower case, drawn on its own grid (one font pixel is one art pixel: 1400/75 px, capitals 10 high) and thresholded, with the house sign's one-pixel caramel shadow; at any other size its letters break. The end card's title doubles every pixel. The sign on the wall and on the facade is sheared along the wall like paint; the interface (cards, the menu, progress) sits on its own layer at 5x.
 
 - **motion.** A cosy building game: one thing out of the box per beat (a hop that grows from 40% to full size, a squash and stretch on the off-beat landing, a puff of dust), people and the cat on a step clock of six steps per beat, the camera stepping between whole-number scales (4x, 5x, 6x) and drifting a whole art pixel at a time.
 
@@ -117,7 +117,7 @@ The 30-second cut is the same reel with longer holds (and optional scenes where 
 
 **`evening`**: evening (1 bar, 2 in the 30): rain on Elm Street. The outside of the shop at night: the light field takes everything two stops down the dusk ramp, while the windows stay warm (the lit room behind them is lifted a stop) and the street lamp throws a warm pool on the wet pavement, its glow mirrored in the puddle. Rain falls in pale streaks, rings open in the puddle. The house sign lights letter by letter (beats 1 to 2.5, glow pixels with the caramel shadow), and the camera steps in to 6x on it. Halos sit on the lamp, the windows and the sign.
 
-**`opening`**: opening (1 bar, 2 in the 30; the end card): the camera steps back to the whole corner in the rain, sign lit, and a card rises in whole steps: Pebble & Bean, then on the half beats the opening in large type (Saturday, 8 am), the address (14 Elm Street, by the bakery) and the offer (the first 50 cups are on us). The rain keeps falling and the windows keep glowing on the hold; a line at the foot says the shop is fictional.
+**`opening`**: opening (1 bar, 2 in the 30; the end card): the camera steps back to the whole corner in the rain, sign lit, and a card rises in whole steps: Pebble & Bean in double-size type, then on the half beats the opening (Saturday, 8 am), the address (14 Elm Street, by the bakery) and the offer (the first 50 cups are on us). The rain keeps falling and the windows keep glowing on the hold; a line at the foot says the shop is fictional.
 
 ## Provenance and credits
 
