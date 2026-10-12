@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://gitreels.com/AwesomeZun/Awesome-Showreels"><img src="https://gitreels.com/AwesomeZun/Awesome-Showreels.webp" alt="AwesomeZun/Awesome-Showreels in 15 seconds" width="100%"></a>
+  <br>
+  <a href="https://gitreels.com"><img src="https://gitreels.com/badge.svg" alt="Made with GitReels" height="24"></a>
+</p>
+
 <div align="center">
 
 <img src="assets/readme/hero.webp" width="100%" alt="Awesome Showreels sizzle made with motion-showreel: source files drop in and are pulled into one point, the title lands, fourteen example reels pass one per beat and gather into a mosaic, the four real productions it was distilled from (FDDD, CC-statusline, K-BeautyGate, FlyGate) take the light in turn, and all eighteen drift behind the install command"/>
