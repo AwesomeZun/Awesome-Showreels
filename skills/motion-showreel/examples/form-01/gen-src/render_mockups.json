@@ -1,0 +1,7 @@
+{"name":"mockups","serve":"/private/tmp/claude-501/-Users-kang-orca-projects-Awesome-Showreels/d18ad192-2915-4301-8b0c-711e05a3a33d/scratchpad/f1/page","url":"/landing-v1.html","out":"/Users/kang/orca/projects/Awesome-Showreels/skills/motion-showreel/examples/form-01/assets/captures/ui/app",
+ "note":"The app's own sample mockups (source/mockups/*.svg, written by sampleMockups() and buildSampleBoard() in the app's domain/sample.ts) rendered at their natural size with Pretendard.",
+ "device":{"screen":[1500,1750],"statusBar":0,"homeIndicator":0,"dpr":1,"mobile":false,"touch":false},"wait":{"until":"load","settle":800},
+ "steps":[{"do":"layer","name":"mock_landing_v1","selector":"#m svg","alpha":false,"pad":0},
+  {"do":"goto","url":"/landing-v2.html"},{"do":"layer","name":"mock_landing_v2","selector":"#m svg","alpha":false,"pad":0},
+  {"do":"goto","url":"/dashboard.html"},{"do":"layer","name":"mock_dashboard","selector":"#m svg","alpha":false,"pad":0},
+  {"do":"goto","url":"/mobile.html"},{"do":"layer","name":"mock_mobile","selector":"#m svg","alpha":false,"pad":0}]}

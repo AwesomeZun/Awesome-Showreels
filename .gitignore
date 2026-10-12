@@ -38,4 +38,19 @@ skills/motion-showreel/examples/*/source/gen/**/*.png
 skills/motion-showreel/examples/*/source/gen/**/codex.log
 
 # toyz app builds used only to capture their real UI (the apps' repos are private; captures are committed)
-skills/motion-showreel/examples/toyz-*/source/app/
+skills/motion-showreel/examples/deploy-kit/source/app/
+skills/motion-showreel/examples/focus-space/source/app/
+skills/motion-showreel/examples/form-01/source/app/
+skills/motion-showreel/examples/frame/source/app/
+skills/motion-showreel/examples/layr/source/app/
+skills/motion-showreel/examples/loop/source/app/
+skills/motion-showreel/examples/mood-fm/source/app/
+skills/motion-showreel/examples/motion-kit/source/app/
+skills/motion-showreel/examples/offgrid/source/app/
+skills/motion-showreel/examples/orbit-note/source/app/
+skills/motion-showreel/examples/pixel-kit/source/app/
+skills/motion-showreel/examples/pulse/source/app/
+skills/motion-showreel/examples/read-room/source/app/
+skills/motion-showreel/examples/tiny-beat/source/app/
+skills/motion-showreel/examples/tiny-tools/source/app/
+skills/motion-showreel/examples/trove/source/app/

@@ -28,16 +28,16 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 <table>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html"><img src="assets/readme/moment-toyz-orbit-note.webp" width="100%" alt="Orbit Note: note cards linked by drawn wiki paths on electric blue, the graph lighting up"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/orbit-note/dist/orbit-note-v1.0.1.html"><img src="assets/readme/moment-orbit-note.webp" width="100%" alt="Orbit Note: note cards linked by drawn wiki paths on electric blue, the graph lighting up"/></a>
 <br/><b>Orbit Note</b> · <code>orbit-note</code>
 <br/><sub>연결 노트 앱 → 홀로그램 위키 그래프 · 시네마틱 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note/dist/orbit-note-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-orbit-note">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/orbit-note/dist/orbit-note-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/orbit-note/dist/orbit-note-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/orbit-note">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html"><img src="assets/readme/moment-toyz-offgrid.webp" width="100%" alt="OFFGRID: a lime walking route draws itself over a dark OpenStreetMap of Seongsu, pins lighting as it passes"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/offgrid/dist/offgrid-v1.0.0.html"><img src="assets/readme/moment-offgrid.webp" width="100%" alt="OFFGRID: a lime walking route draws itself over a dark OpenStreetMap of Seongsu, pins lighting as it passes"/></a>
 <br/><b>OFFGRID</b> · <code>offgrid</code>
 <br/><sub>동네 지도 → 서울에서 골목 산책로까지 한 번에 · 스윙 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-offgrid/dist/offgrid-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-offgrid">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/offgrid/dist/offgrid-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/offgrid/dist/offgrid-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/offgrid">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
@@ -126,100 +126,100 @@ Claude Code, Codex CLI, Gemini CLI 등 어떤 코딩 에이전트에서도 쓰�
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html"><img src="assets/readme/moment-toyz-trove.webp" width="100%" alt="Trove: scattered links are pulled into a spinning chrome torus as the name lands in chrome type"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/trove/dist/trove-v1.0.1.html"><img src="assets/readme/moment-trove.webp" width="100%" alt="Trove: scattered links are pulled into a spinning chrome torus as the name lands in chrome type"/></a>
 <br/><b>Trove</b> · <code>trove</code>
 <br/><sub>북마크 앱 → 크롬 토러스, 궤도로 빨려 드는 링크 · 다크 신스 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-trove/dist/trove-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-trove">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/trove/dist/trove-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/trove/dist/trove-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/trove">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html"><img src="assets/readme/moment-toyz-pulse.webp" width="100%" alt="Pulse: tasks and releases on one brushed-aluminium dashboard, counters and level meters ticking"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pulse/dist/pulse-v1.0.1.html"><img src="assets/readme/moment-pulse.webp" width="100%" alt="Pulse: tasks and releases on one brushed-aluminium dashboard, counters and level meters ticking"/></a>
 <br/><b>Pulse</b> · <code>pulse</code>
 <br/><sub>메이커 대시보드 → 브러시드 알루미늄, 움직이는 계기판 · 브라이트 팝 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-pulse/dist/pulse-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pulse">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pulse/dist/pulse-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/pulse/dist/pulse-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/pulse">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html"><img src="assets/readme/moment-toyz-frame.webp" width="100%" alt="Frame: a name typed into the form appears in the live portfolio preview at once"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/frame/dist/frame-v1.0.1.html"><img src="assets/readme/moment-frame.webp" width="100%" alt="Frame: a name typed into the form appears in the live portfolio preview at once"/></a>
 <br/><b>Frame</b> · <code>frame</code>
 <br/><sub>포트폴리오 빌더 → 입력하는 대로 바뀌는 미리보기 · 코퍼레이트 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-frame/dist/frame-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-frame">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/frame/dist/frame-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/frame/dist/frame-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/frame">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html"><img src="assets/readme/moment-toyz-tiny-beat.webp" width="100%" alt="Tiny Beat: lime pads light up on a step sequencer as the playhead sweeps the bar"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/tiny-beat/dist/tiny-beat-v1.0.1.html"><img src="assets/readme/moment-tiny-beat.webp" width="100%" alt="Tiny Beat: lime pads light up on a step sequencer as the playhead sweeps the bar"/></a>
 <br/><b>Tiny Beat</b> · <code>tiny-beat</code>
 <br/><sub>하루 한 곡 비트 메이커 → 빛나는 스텝 시퀀서 · 로파이 80 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat/dist/tiny-beat-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-beat">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/tiny-beat/dist/tiny-beat-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/tiny-beat/dist/tiny-beat-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/tiny-beat">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html"><img src="assets/readme/moment-toyz-deploy-kit.webp" width="100%" alt="Deploy Kit: the kit's real files stream into one ZIP, its count ticking up"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/deploy-kit/dist/deploy-kit-v1.0.1.html"><img src="assets/readme/moment-deploy-kit.webp" width="100%" alt="Deploy Kit: the kit's real files stream into one ZIP, its count ticking up"/></a>
 <br/><b>Deploy Kit</b> · <code>deploy-kit</code>
 <br/><sub>출시 키트 → 파일들이 ZIP 하나로 · 드럼앤베이스 176 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit/dist/deploy-kit-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-deploy-kit">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/deploy-kit/dist/deploy-kit-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/deploy-kit/dist/deploy-kit-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/deploy-kit">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html"><img src="assets/readme/moment-toyz-read-room.webp" width="100%" alt="Read Room: an essay page where highlights are drawn in and margin notes appear"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/read-room/dist/read-room-v1.0.1.html"><img src="assets/readme/moment-read-room.webp" width="100%" alt="Read Room: an essay page where highlights are drawn in and margin notes appear"/></a>
 <br/><b>Read Room</b> · <code>read-room</code>
 <br/><sub>함께 읽는 열람실 → 펜 속도로 그어지는 밑줄 · 앰비언트 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-read-room/dist/read-room-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-read-room">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/read-room/dist/read-room-v1.0.1.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/read-room/dist/read-room-v1.0.1.html">HTML</a> · <a href="skills/motion-showreel/examples/read-room">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-motion-kit.webp" width="100%" alt="Motion Kit: a cursor taps the real confetti demo and the burst plays out"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/motion-kit/dist/motion-kit-v1.0.0.html"><img src="assets/readme/moment-motion-kit.webp" width="100%" alt="Motion Kit: a cursor taps the real confetti demo and the burst plays out"/></a>
 <br/><b>Motion Kit</b> · <code>motion-kit</code>
 <br/><sub>마이크로 인터랙션 모음 → 앱의 애니메이션을 프레임 단위로 · 브라이트 팝 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit/dist/motion-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-motion-kit">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/motion-kit/dist/motion-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/motion-kit/dist/motion-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/motion-kit">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html"><img src="assets/readme/moment-toyz-layr.webp" width="100%" alt="LAYR: notes fly onto five exploded glass layers and each layer's count ticks up"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/layr/dist/layr-v1.0.0.html"><img src="assets/readme/moment-layr.webp" width="100%" alt="LAYR: notes fly onto five exploded glass layers and each layer's count ticks up"/></a>
 <br/><b>LAYR</b> · <code>layr</code>
 <br/><sub>메모 워크스페이스 → 다섯 장의 유리판으로 떨어지는 메모 · 다크 신스 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-layr/dist/layr-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-layr">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/layr/dist/layr-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/layr/dist/layr-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/layr">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html"><img src="assets/readme/moment-toyz-tiny-tools.webp" width="100%" alt="tiny.tools: clippings land in the smart paste pad and it names the right tool each time"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/tiny-tools/dist/tiny-tools-v1.0.0.html"><img src="assets/readme/moment-tiny-tools.webp" width="100%" alt="tiny.tools: clippings land in the smart paste pad and it names the right tool each time"/></a>
 <br/><b>tiny.tools</b> · <code>tiny-tools</code>
 <br/><sub>개발 도구 모음 → 붙여넣으면 알맞은 도구를 · 칩튠 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools/dist/tiny-tools-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-tiny-tools">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/tiny-tools/dist/tiny-tools-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/tiny-tools/dist/tiny-tools-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/tiny-tools">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html"><img src="assets/readme/moment-toyz-mood-fm.webp" width="100%" alt="MOOD FM: the dial turns from 몽글 to 들뜸 and the whole frame changes colour with it"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/mood-fm/dist/mood-fm-v1.0.0.html"><img src="assets/readme/moment-mood-fm.webp" width="100%" alt="MOOD FM: the dial turns from 몽글 to 들뜸 and the whole frame changes colour with it"/></a>
 <br/><b>MOOD FM</b> · <code>mood-fm</code>
 <br/><sub>기분 라디오 → 화면이 기분의 색으로 · 로파이 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm/dist/mood-fm-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-mood-fm">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/mood-fm/dist/mood-fm-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/mood-fm/dist/mood-fm-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/mood-fm">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html"><img src="assets/readme/moment-toyz-form-01.webp" width="100%" alt="FORM / 01: reviewers' pins and a region land on a landing page as their comment cards slide in"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/form-01/dist/form-01-v1.0.0.html"><img src="assets/readme/moment-form-01.webp" width="100%" alt="FORM / 01: reviewers' pins and a region land on a landing page as their comment cards slide in"/></a>
 <br/><b>FORM / 01</b> · <code>form-01</code>
 <br/><sub>디자인 피드백 보드 → 작업물 위의 핀과 버전 · 시네마틱 112 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-form-01/dist/form-01-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-form-01">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/form-01/dist/form-01-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/form-01/dist/form-01-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/form-01">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html"><img src="assets/readme/moment-toyz-loop.webp" width="100%" alt="LOOP: a tap checks off a routine and the chrome ring fills to 2/3"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/loop/dist/loop-v1.0.0.html"><img src="assets/readme/moment-loop.webp" width="100%" alt="LOOP: a tap checks off a routine and the chrome ring fills to 2/3"/></a>
 <br/><b>LOOP</b> · <code>loop</code>
 <br/><sub>습관 앱 → 탭할 때마다 차오르는 크롬 링 · 코퍼레이트 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-loop/dist/loop-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-loop">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/loop/dist/loop-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/loop/dist/loop-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/loop">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html"><img src="assets/readme/moment-toyz-focus-space.webp" width="100%" alt="FOCUS SPACE: the clock runs down in time-lapse as the chrome ring closes round one task"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/focus-space/dist/focus-space-v1.0.0.html"><img src="assets/readme/moment-focus-space.webp" width="100%" alt="FOCUS SPACE: the clock runs down in time-lapse as the chrome ring closes round one task"/></a>
 <br/><b>FOCUS SPACE</b> · <code>focus-space</code>
 <br/><sub>집중 타이머 → 아치형 문 안에서 빨리 감는 25분 · 앰비언트 96 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-focus-space/dist/focus-space-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-focus-space">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/focus-space/dist/focus-space-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/focus-space/dist/focus-space-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/focus-space">원본·코드</a></sub>
 </td>
 <td align="center" valign="top" width="50%">
-<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html"><img src="assets/readme/moment-toyz-pixel-kit.webp" width="100%" alt="PIXEL KIT: six sizes of one design turn over together to the next brand kit"/></a>
+<a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-kit/dist/pixel-kit-v1.0.0.html"><img src="assets/readme/moment-pixel-kit.webp" width="100%" alt="PIXEL KIT: six sizes of one design turn over together to the next brand kit"/></a>
 <br/><b>PIXEL KIT</b> · <code>pixel-kit</code>
 <br/><sub>브랜드 이미지 도구 → 디자인 하나를 여섯 크기로, 킷 셋 · 스윙 128 BPM</sub>
-<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit/dist/pixel-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/toyz-pixel-kit">원본·코드</a></sub>
+<br/><sub><a href="https://raw.githack.com/AwesomeZun/Awesome-Showreels/main/skills/motion-showreel/examples/pixel-kit/dist/pixel-kit-v1.0.0.html">▶ 재생</a> · <a href="skills/motion-showreel/examples/pixel-kit/dist/pixel-kit-v1.0.0.html">HTML</a> · <a href="skills/motion-showreel/examples/pixel-kit">원본·코드</a></sub>
 </td>
 </tr>
 <tr>
