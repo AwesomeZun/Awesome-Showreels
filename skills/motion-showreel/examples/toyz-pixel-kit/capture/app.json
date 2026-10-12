@@ -1,0 +1,191 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-pixel-kit); it is not committed. The same screens are live at https://pixel-kit.toyz.kr. The app's first-run library holds sample designs for its three fictional kits (숨결 요가 스튜디오, 모래알 베이커리, PADO Coffee Roasters); each of three is opened from the library and its consistency board (일관성 보기) is captured: the app's own renderer drawing the same design in six sizes. The template list (13 templates in the 숨결 kit) and the kit cards are captured too.",
+ "device": {
+  "screen": [
+   2400,
+   1500
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 3000
+ },
+ "css": "[class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "eval",
+   "js": "location.hash = '#/library'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = document.querySelector('[aria-label=\"10월 저녁 클래스 소개 이어서 편집\"]'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/sizes'"
+  },
+  {
+   "do": "wait",
+   "ms": 3500
+  },
+  {
+   "do": "layer",
+   "name": "soom",
+   "selector": ".sizes-board .size-card canvas",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/library'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = document.querySelector('[aria-label=\"가을 신메뉴 포스터 이어서 편집\"]'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/sizes'"
+  },
+  {
+   "do": "wait",
+   "ms": 3500
+  },
+  {
+   "do": "layer",
+   "name": "morae",
+   "selector": ".sizes-board .size-card canvas",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/library'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = document.querySelector('[aria-label=\"금요일 로스팅 소식 이어서 편집\"]'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/sizes'"
+  },
+  {
+   "do": "wait",
+   "ms": 3500
+  },
+  {
+   "do": "layer",
+   "name": "pado",
+   "selector": ".sizes-board .size-card canvas",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/library'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = document.querySelector('[aria-label=\"10월 저녁 클래스 소개 이어서 편집\"]'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/sizes'"
+  },
+  {
+   "do": "wait",
+   "ms": 3500
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/'"
+  },
+  {
+   "do": "wait",
+   "ms": 2500
+  },
+  {
+   "do": "css",
+   "id": "tall",
+   "css": ".tpl-grid{max-height:none!important;overflow:visible!important} aside, .rail, [class*='rail']{max-height:none!important;overflow:visible!important}"
+  },
+  {
+   "do": "layer",
+   "name": "tpl",
+   "selector": ".tpl-grid .tpl .thumb canvas",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the thirteen templates"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/kits'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "kitcards",
+   "selector": ".kit-list > *, [class*='kit-card']",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "optional": true,
+   "note": "the three kits"
+  }
+ ]
+}

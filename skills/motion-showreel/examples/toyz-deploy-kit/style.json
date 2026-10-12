@@ -1,0 +1,36 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {"purpose": "launch", "audience": "makers about to ship a side project", "title": "Deploy Kit", "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/styles/base.css in the app repository) and its captured screens. A light launch bench (#ECEEF5) with black type, electric blue #0B2FE6 for what ships, a navy output tray and a little lime; the reel moves like a launch: files stream, pack and leave.", "draft": false},
+  "source": [
+    {"path": "source/README.md", "kind": "readme", "notes": "a launch bench: one form makes README, LICENSE, CI, deploy config, SEO tags, OG image, favicon and more, live, and packs the chosen ones in one ZIP"},
+    {"path": "assets/captures/ui/app/", "kind": "images", "notes": "the real app (its production build, served locally) captured by capture/app.json, including the output tray before and after a rename; the kit 'Orbit Note' is the app's own fictional example"},
+    {"path": "source/fonts/", "kind": "other", "notes": "Pretendard Variable (the app's face) and JetBrains Mono (file names, labels); SIL OFL 1.1"}
+  ],
+  "mood": ["fast", "precise", "launch-ready", "clean", "energetic"],
+  "rationale": {
+    "palette": "The app's tokens: bench #ECEEF5 / #F6F7FB, white panels, ink #0A0B10 / #3A3E4C / #5C6172, electric blue #0B2FE6 (the ZIP button, the ZIP tile, the selected stack) with #2748FF and #0720B0, the navy output tray, and lime #D4FF3A for the live dot.",
+    "type": "Pretendard Variable at 900 for headlines, black with the second line blue; JetBrains Mono for every file name and label, as the app's tray and stamps use mono ('SHIP CLUB — DEPLOY KIT · LAUNCH BENCH', 'LIVE OUTPUT').",
+    "motion": "Launch speed: file names stream upward like exhaust, rows flash UPDATED as the app re-makes them, twenty-five files arc into one ZIP crate on the beat and the crate stamps shut. Fast but readable: every headline holds for most of its scene.",
+    "sound": "Drum and bass in G minor at 176 BPM (11 bars in 15 s, 22 in 30 s): the energy of shipping, with digital SFX (key taps, blips as files update, a stamp as the ZIP closes).",
+    "visuals": "Four scenes in the 15 s cut: file names stream past the app's logo; a renamed project re-makes twelve files live in the app's real output tray; twenty-five files pack into one ZIP under the app's real bench stats; the end card. The 30 s cut adds the OG image and favicon generators and the launch checklist.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {"bg": "#ECEEF5", "bg2": "#F6F7FB", "surface": "#FFFFFF", "ink": "#0A0B10", "ink2": "#3A3E4C", "muted": "#5C6172",
+    "accent": "#0B2FE6", "accent2": "#2748FF", "accent3": "#D4FF3A", "ok": "#0C8A4C", "warn": "#C8261B", "deny": "#C8261B",
+    "accentInk": "#0720B0", "onAccent": "#FFFFFF", "line": "#DCDFE8", "highlight": "#DFE4FF"},
+  "fonts": {"display": "\"Pretendard Variable\", sans-serif", "sans": "\"Pretendard Variable\", sans-serif", "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace", "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [{"family": "Pretendard Variable", "path": "source/fonts/PretendardVariable.woff2", "weight": "45 920", "style": "normal"},
+              {"family": "JetBrains Mono", "path": "source/fonts/JetBrainsMono-latin-wght.woff2", "weight": "100 800", "style": "normal"}]},
+  "type": {"scale": [18, 22, 28, 36, 48, 64, 84, 112, 150, 200], "displayWeight": 900, "bodyWeight": 500, "tracking": -0.04, "trackingLabel": 0.15},
+  "layout": {"theme": "light", "margin": 120, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": {"enabled": false, "font": "sans", "size": 40, "fg": "#0A0B10", "bg": "none", "y": 960}, "radius": 10},
+  "motion": {"pace": "energetic", "spring": {"f": 3.2, "z": 0.55}, "overshoot": 0.06, "ease": "outC", "transitions": ["whip", "impact", "cut"],
+    "characters": false, "dataViz": false, "visualSources": ["vector", "app-ui"], "typeReveal": ["kinetic"]},
+  "post": {"grain": 0.02, "vignette": {"a": 0.12, "color": "#3A3E4C"}, "bloom": 0},
+  "sound": {"bpm": 176, "key": "G", "mode": "minor", "preset": "dnb", "instruments": ["pad", "reese", "sub", "stab", "kick", "snare", "hats"],
+    "drums": "full", "sfx": "digital", "energy": {"intro": 0.5, "groove": 0.8, "breakdown": 0.45, "drop": 1.0, "outro": 0.55}},
+  "narration": {"recommended": false, "voice": "Kore", "styleTag": "[quick, upbeat]", "lang": "ko-KR"},
+  "review": []
+}

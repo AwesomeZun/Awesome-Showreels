@@ -1,0 +1,199 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "people who want to sit down with one task and nothing else",
+  "title": "FOCUS SPACE",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository, the deep green dark theme), its timer ring code (TimerCard.tsx), its wordmark and its captured room, mixer and log. Deep green #14241A / #0E1A12, sage text #E9EDE3 / #D6DCCD, the chrome of the ring and of SPACE (white to #6E7D6A), the sage heat scale #4B6F4F to #D0DCC5.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "a small room where only one task and the time remain: a pomodoro timer, a task list, synthesised ambient sound and a weekly log, offline as a PWA"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/app.json: the arched room ready and running (its ring and clock hidden, drawn by the reel), the ambient mixer in three states, the log's seven days and twelve weeks"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "quiet",
+  "deep",
+  "focused",
+  "warm",
+  "still"
+ ],
+ "rationale": {
+  "palette": "The app's deep green dark theme: grounds #14241A / #0E1A12 / #1A2E20, text #E9EDE3 / #D6DCCD / #BCC7B6, the ring's chrome (#FFFFFF, #99A296, #F7F9F4, #5F6A5E, #E2E6DD) and SPACE's chrome gradient, the heat scale #4B6F4F / #82A17D / #D0DCC5.",
+  "type": "Pretendard Variable at 900 with -0.06em for the stacked FOCUS / SPACE (SPACE in chrome), 750 with -0.05em for the clock (the app's 25:00), 800 for headlines; mono capitals for its labels (FOCUS / READY, AMBIENT / 배경 소리).",
+  "motion": "Slow and steady: a door that opens onto one task, a clock that runs in time-lapse while the chrome ring closes round it, sliders easing up one by one, the log filling in.",
+  "sound": "Ambient in F major at 96 BPM (6 bars in 15 s, 12 in 30 s): pads, glass and a soft pulse, a quiet room for one task.",
+  "visuals": "Four scenes in the 15 s cut: the name and the app's line beside its arched room at 25:00; the session starting and running in time-lapse as the ring closes; the log of days and weeks; the end card. The 30 s cut adds the ambient mixer.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#14241A",
+  "bg2": "#0E1A12",
+  "surface": "#1A2E20",
+  "ink": "#E9EDE3",
+  "ink2": "#D6DCCD",
+  "muted": "#BCC7B6",
+  "accent": "#D0DCC5",
+  "accent2": "#82A17D",
+  "accent3": "#4B6F4F",
+  "ok": "#82A17D",
+  "warn": "#E5C07B",
+  "deny": "#E89A8A",
+  "accentInk": "#15261A",
+  "onAccent": "#15261A",
+  "line": "#27402B",
+  "highlight": "#D0DCC5"
+ },
+ "paletteAlt": {
+  "bg": "#D6DCCD",
+  "bg2": "#E9EDE3",
+  "surface": "#EEF2E8",
+  "ink": "#1A2C1E",
+  "ink2": "#27402B",
+  "muted": "#3D5541",
+  "accent": "#27402B",
+  "accent2": "#46644C",
+  "accent3": "#6B8A70",
+  "ok": "#27402B",
+  "warn": "#7A5A12",
+  "deny": "#9B2C1B",
+  "accentInk": "#EEF2E8",
+  "onAccent": "#EEF2E8",
+  "line": "#B9C3B1",
+  "highlight": "#27402B",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.04,
+  "trackingLabel": 0.14
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#E9EDE3",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 28
+ },
+ "motion": {
+  "pace": "calm",
+  "spring": {
+   "f": 1.8,
+   "z": 0.72
+  },
+  "overshoot": 0.03,
+  "ease": "ioC",
+  "transitions": [
+   "cut",
+   "zoomInto",
+   "flash"
+  ],
+  "characters": false,
+  "dataViz": true,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.04,
+  "vignette": {
+   "a": 0.4,
+   "color": "#000000"
+  },
+  "bloom": 0.06
+ },
+ "sound": {
+  "bpm": 96,
+  "key": "F",
+  "mode": "major",
+  "preset": "ambient",
+  "drums": "light",
+  "sfx": "organic",
+  "energy": {
+   "intro": 0.35,
+   "groove": 0.55,
+   "breakdown": 0.4,
+   "drop": 0.7,
+   "outro": 0.4
+  },
+  "instruments": [
+   "pad",
+   "strings",
+   "bell",
+   "glass",
+   "sub",
+   "kick",
+   "rim",
+   "shaker"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[calm, low]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the one-page brief the app writes for the first project",
+ "selector": ".brief-sheet",
+ "file": "brief.png",
+ "kind": "element",
+ "px": [
+  1760,
+  1236
+ ],
+ "dpr": 2,
+ "sha1": "cf1e5f7646a8",
+ "rect": {
+  "x": 308,
+  "y": 408.45,
+  "w": 880,
+  "h": 617.97
+ },
+ "screen": {
+  "x": 308,
+  "y": 408.45,
+  "w": 880,
+  "h": 617.97
+ },
+ "page": {
+  "x": 308,
+  "y": 408.45,
+  "w": 880,
+  "h": 617.97
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 880,
+  "h": 617.97
+ },
+ "pad": 0,
+ "radius": [
+  6,
+  6,
+  6,
+  6
+ ],
+ "bg": "rgb(243, 245, 248)",
+ "color": "rgb(18, 20, 25)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "ONE-PAGE BRIEF · 2026-10-12\n러닝 · 크루 · 페이스\n메모 10개 · 로컬 분석 초안\n01\n목표 요약\n\n동네에서 같이 달릴 러닝 크루를 찾기가 어렵다는 게 문제. 크루 소개에 페이스 대신 분위기를 먼저 보여 주자.\n↗\n↗\n\n02\n핵심 아이디어\n러닝 크루 매칭 아이디어: 출발 장소, 요일, 페이스(km당 분)를 기준으로 근처 크루를 추천\n↗\n러닝 후 함께 가는 카페나 브런치 장소를 크루 페이지에 남기면 모임이 더 이어질 듯.\n↗\n러닝 크루 출석 체크와 누적 거리 기록 기능.\n↗\n03\n다음 할 일\n동네 러닝 모임 첫 공지 문구 작성하기.\n↗\n러닝 코스를 지도에 표시하기 (GPX 파일 업로드)\n↗\n첫 모임 날짜 정하기\n↗\n04\n열린 질문\n주말 아침 한강 코스 5km, 페이스 6분대 크루 모집",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T11:51:59.953Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,179 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-deploy-kit); it is not committed. The same screens are live at https://deploy-kit.toyz.kr.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1600
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "brand",
+   "selector": ".brand",
+   "alpha": true,
+   "pad": 10
+  },
+  {
+   "do": "layer",
+   "name": "live",
+   "selector": ".live",
+   "alpha": true,
+   "pad": 16,
+   "note": "the live output tray: the kit's 25 items"
+  },
+  {
+   "do": "text",
+   "name": "files",
+   "selector": ".live__files"
+  },
+  {
+   "do": "layer",
+   "name": "identity",
+   "selector": ".setup__form fieldset.group",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "fill",
+   "selector": ".setup__form input",
+   "value": ""
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "layer",
+   "name": "identity_0",
+   "selector": ".setup__form fieldset.group",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "layer",
+   "name": "live_0",
+   "selector": ".live",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "fill",
+   "selector": ".setup__form input",
+   "value": "Moss"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "layer",
+   "name": "identity_1",
+   "selector": ".setup__form fieldset.group",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "fill",
+   "selector": ".setup__form input",
+   "value": "Moss Timer"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "identity_2",
+   "selector": ".setup__form fieldset.group",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "layer",
+   "name": "live_2",
+   "selector": ".live",
+   "alpha": true,
+   "pad": 16,
+   "note": "the tray after the rename: README title, OG image and slug follow"
+  },
+  {
+   "do": "layer",
+   "name": "bench_2",
+   "selector": ".bench",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "fill",
+   "selector": ".setup__form input",
+   "value": "Orbit Note"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelectorAll('.nav a, .nav button')[1].click()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelectorAll('.nav a, .nav button')[2].click()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "shot",
+   "name": "og_page"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelectorAll('.nav a, .nav button')[3].click()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "shot",
+   "name": "fav_page"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelectorAll('.nav a, .nav button')[4].click()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "shot",
+   "name": "check_page"
+  }
+ ]
+}

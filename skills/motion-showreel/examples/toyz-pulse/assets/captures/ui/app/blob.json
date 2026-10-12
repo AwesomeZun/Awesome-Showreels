@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the app's chrome X (its ChromeBlob SVG)",
+ "selector": ".hero__blob",
+ "file": "blob.png",
+ "kind": "element",
+ "px": [
+  730,
+  767
+ ],
+ "dpr": 2,
+ "sha1": "9b86b856a7b9",
+ "rect": {
+  "x": 1177.94,
+  "y": 56.57,
+  "w": 364.89,
+  "h": 383.35
+ },
+ "screen": {
+  "x": 1177.94,
+  "y": 56.57,
+  "w": 364.89,
+  "h": 383.35
+ },
+ "page": {
+  "x": 1177.94,
+  "y": 56.57,
+  "w": 364.89,
+  "h": 383.35
+ },
+ "element": {
+  "x": 30,
+  "y": 30,
+  "w": 304.89,
+  "h": 323.35
+ },
+ "pad": 30,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(13, 14, 17)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:03:11.310Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

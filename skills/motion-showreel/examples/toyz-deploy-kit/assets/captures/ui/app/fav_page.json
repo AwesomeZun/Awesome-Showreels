@@ -1,0 +1,31 @@
+{
+ "step": "shot",
+ "file": "fav_page.png",
+ "kind": "screen",
+ "px": [
+  3200,
+  2000
+ ],
+ "dpr": 2,
+ "sha1": "3d4661e3d7f5",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 1000
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 1000
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:40:13.872Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

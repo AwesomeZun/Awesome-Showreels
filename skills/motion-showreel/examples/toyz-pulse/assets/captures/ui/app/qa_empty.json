@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".hero .qa",
+ "file": "qa_empty.png",
+ "kind": "element",
+ "px": [
+  1706,
+  294
+ ],
+ "dpr": 2,
+ "sha1": "70cada52c8d5",
+ "rect": {
+  "x": 297,
+  "y": 254.3,
+  "w": 852.8,
+  "h": 146.75
+ },
+ "screen": {
+  "x": 297,
+  "y": 254.3,
+  "w": 852.8,
+  "h": 146.75
+ },
+ "page": {
+  "x": 297,
+  "y": 254.3,
+  "w": 852.8,
+  "h": 146.75
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 820.8,
+  "h": 114.75
+ },
+ "pad": 16,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(13, 14, 17)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "QUICK ADD\n할 일 빠른 추가\n추가\n\n!높음 우선순위 · @프로젝트 · 내일 금요일 9/30 3일 뒤 마감",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:03:17.517Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

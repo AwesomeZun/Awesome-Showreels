@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the essay with the sample readers' highlights",
+ "selector": ".sheet",
+ "file": "paper.png",
+ "kind": "element",
+ "px": [
+  1696,
+  4109
+ ],
+ "dpr": 2,
+ "sha1": "bbae354ed527",
+ "rect": {
+  "x": 187,
+  "y": 73,
+  "w": 848,
+  "h": 2054.28
+ },
+ "screen": {
+  "x": 187,
+  "y": 73,
+  "w": 848,
+  "h": 2054.28
+ },
+ "page": {
+  "x": 187,
+  "y": 73,
+  "w": 848,
+  "h": 2054.28
+ },
+ "element": {
+  "x": 24,
+  "y": 24,
+  "w": 800,
+  "h": 2006.28
+ },
+ "pad": 24,
+ "radius": [
+  4,
+  4,
+  4,
+  4
+ ],
+ "bg": "rgb(247, 241, 229)",
+ "color": "rgb(40, 35, 27)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "D-3\n10월 15일 (목) 오후 8:00\n\n느리게 읽는 방\n+\n\n한서윤, 「느리게 읽는 방」 (가상의 필자가 쓴 창작 에세이)\n\n약 2분\n885자\n문단 15\n민\n태\n\n드래그해서 밑줄을 긋고, 문단 옆  로 메모를 나눠요.\n\n02\n같은 페이지에 머무는 시간\n+\n03\n\n혼자 읽을 때 저는 자주 빨라집니다. 눈이 문장을 앞질러 가고, 마음은 벌써 다음 장을 넘기고 있어요. 그런데 누군가와 같은 글을 같은 시간에 읽기로 약속하면, 이상하게도 속도가 느려집니다. 상대가 어디쯤 읽고 있을지 상상하게 되고, 그 상상이 저를 문장 앞에 붙들어 둡니다.\n\n+\n04\n\n읽기 모임을 처음 시작했을 때 우리는 규칙을 하나만 정했습니다. 한 번에 한 편만 읽고, 그 글에 대해서만 이야기하기. 짧은 글이면 충분했습니다. 길이가 짧을",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:48:30.279Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,123 @@
+{
+ "name": "ui",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "The app's own panels at 2x: its lime title slab, the neighbourhood bar, a place's detail, the Seongsu walk's detail (distance, time, the places on the way) and its share dialog. In the share dialog the link's local capture address is replaced by the deployed address, and its length updated.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "reducedMotion": "reduce",
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 2500
+ },
+ "css": ".leaflet-tile{opacity:1!important} [class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "slab",
+   "selector": ".slab",
+   "alpha": true,
+   "pad": 0,
+   "note": "the app's lime title slab"
+  },
+  {
+   "do": "layer",
+   "name": "hoods",
+   "selector": ".hoods",
+   "alpha": true,
+   "pad": 0,
+   "note": "the neighbourhood bar"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('button')].find(b => /SEONGSU/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const m = [...document.querySelectorAll('.leaflet-marker-icon')].find(m => /붉은벽돌 커피/.test(m.textContent || '')); if (m) m.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "detail",
+   "selector": ".side-panel",
+   "alpha": true,
+   "pad": 0,
+   "note": "a place's detail: 붉은벽돌 커피"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.side-panel button')].find(b => /목록/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 800
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('button,[role=tab]')].find(b => /^\\s*코스\\s*\\d/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1000
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.item--route .item__main')].find(b => /붉은벽돌 골목 한 바퀴/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 2500
+  },
+  {
+   "do": "layer",
+   "name": "route",
+   "selector": ".side-panel",
+   "alpha": true,
+   "pad": 0,
+   "note": "the walk's detail: distance, time, the places on the way"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.side-panel button')].find(b => /공유/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const dl = document.querySelector('dialog[open]'); if (!dl) return; const ta = dl.querySelector('textarea, input'); if (ta) { ta.value = ta.value.replace('http://capture.local/index.html', 'https://offgrid.toyz.kr/'); ta.scrollTop = 0; const n = ta.value.length.toLocaleString('en-US') + '자'; [...dl.querySelectorAll('*')].forEach(e => { if (e.children.length === 0 && /^[\\d,]+자$/.test(e.textContent.trim())) e.textContent = n; }); } if (document.activeElement) document.activeElement.blur(); })()",
+   "note": "the link as it reads on the deployed app (https://offgrid.toyz.kr/), not the capture's local server"
+  },
+  {
+   "do": "layer",
+   "name": "share",
+   "selector": "dialog[open]",
+   "alpha": true,
+   "pad": 0,
+   "optional": true,
+   "note": "the share dialog: one link carries the walk"
+  }
+ ]
+}

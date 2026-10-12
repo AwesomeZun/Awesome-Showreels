@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "after choosing 포커스 모드: the wiki link is in the outgoing list",
+ "selector": ".inspector",
+ "file": "insp_linked.png",
+ "kind": "element",
+ "px": [
+  824,
+  1808
+ ],
+ "dpr": 2,
+ "sha1": "bceb3deee679",
+ "rect": {
+  "x": 1188,
+  "y": 68,
+  "w": 412,
+  "h": 904
+ },
+ "screen": {
+  "x": 1188,
+  "y": 68,
+  "w": 412,
+  "h": 904
+ },
+ "page": {
+  "x": 1188,
+  "y": 68,
+  "w": 412,
+  "h": 904
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 380,
+  "h": 872
+ },
+ "pad": 16,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(10, 15, 46)",
+ "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "CARD / N°09\n카드 제목\n카드 본문\n아직 없는 카드\n[[달의 정원 프로젝트]]\n카드 만들기\n색\n백링크\n0\n\n아직 이 카드를 가리키는 카드가 없어요.\n\n나가는 연결\n1\n포커스 모드\n위키\n연결 추가\n이을 카드 고르기\n검색\n단축키\n백링크\n여기서 시작해요\n위키 링크\n자동 정렬\n저장과 내보내기\n포커스 모드\n잇기\n\n만든 날 10월 12일 오전 09:59 · 고친 날 10월 12일 오전 10:00",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:13:23.868Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the walk's detail: distance, time, the places on the way",
+ "selector": ".side-panel",
+ "file": "route.png",
+ "kind": "element",
+ "px": [
+  792,
+  1936
+ ],
+ "dpr": 2,
+ "sha1": "60c3d2779ba4",
+ "rect": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "screen": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "page": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 396,
+  "h": 968
+ },
+ "pad": 0,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 238)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "목록\n\n산책 코스 · 쉬움\n예시\n\n성수 붉은벽돌 골목 한 바퀴\n총 거리\n1.39km\n예상 시간\n19분\n경유점\n10\n\n도보 시속 4.5km 기준\n\n공장 골목을 돌아 옥상에서 끝나는 짧은 코스예요. 평일 오후가 한산합니다.\n\n경유 장소\n5\n01\n연무장길 옥상\n02\n붉은벽돌 커피\n03\n낮은지붕 식탁\n04\n스틸앤우드 공방\n05\n골목 구두집\n구간별 거리\n9구간\n내보내기\nGPX\nGeoJSON\n인쇄용 카드\n코스 수정\n삭제",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:48.424Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

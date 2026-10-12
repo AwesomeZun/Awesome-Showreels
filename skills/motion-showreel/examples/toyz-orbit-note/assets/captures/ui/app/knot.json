@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the app's holographic trefoil knot (HoloKnot SVG)",
+ "selector": ".ambient-knot",
+ "file": "knot.png",
+ "kind": "element",
+ "px": [
+  875,
+  845
+ ],
+ "dpr": 2,
+ "sha1": "9a7a752454fb",
+ "rect": {
+  "x": 0,
+  "y": 577.38,
+  "w": 437.62,
+  "h": 422.62
+ },
+ "screen": {
+  "x": 0,
+  "y": 577.38,
+  "w": 437.62,
+  "h": 422.62
+ },
+ "page": {
+  "x": 0,
+  "y": 577.38,
+  "w": 437.62,
+  "h": 422.62
+ },
+ "element": {
+  "x": -217.62,
+  "y": 0,
+  "w": 655.24,
+  "h": 655.24
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(10, 15, 46)",
+ "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:13:18.185Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

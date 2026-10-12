@@ -1,0 +1,36 @@
+{
+  "title": "PIXEL KIT",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "PIXEL KIT", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 0.5, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "pop x4 gap=0.125b"},
+      {"beat": 0.5, "from": "start", "sfx": "flip x3 gap=0.5b"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "sizes", "label": "같은 얼굴", "minBars": 3, "maxBars": 4, "priority": 1, "inBeats": 10, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "groove", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "snap x6 gap=0.5b"},
+      {"beat": 4, "from": "start", "sfx": "sparkle dur=2b"}
+    ]},
+    {"id": "kits", "label": "킷", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "drop", "cues": [
+      {"beat": 1, "from": "start", "sfx": "flip x6 gap=0.25b"},
+      {"beat": 5, "from": "start", "sfx": "flip x6 gap=0.25b"}
+    ]},
+    {"id": "templates", "label": "템플릿", "minBars": 4, "maxBars": 4, "priority": 3, "optional": true, "inBeats": 13, "outBeats": 1, "in": "cut", "music": "breakdown", "cues": [
+      {"beat": 0.25, "from": "start", "sfx": "flip x13 gap=0.25b"},
+      {"beat": 12, "from": "start", "sfx": "tick x8 gap=0.25b"}
+    ]},
+    {"id": "end", "label": "PIXEL KIT", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 0, "from": "start", "sfx": "pop x4 gap=0.125b"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["templates"], "scenes": {"hook": {"bars": 2}, "sizes": {"bars": 3}, "kits": {"bars": 2}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "sizes": {"bars": 4}, "kits": {"bars": 3}, "templates": {"bars": 4}, "end": {"bars": 3}}}
+  },
+  "poster": 5.6,
+  "captions": {"enabled": false}
+}

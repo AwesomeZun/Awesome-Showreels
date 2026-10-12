@@ -1,0 +1,1253 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "cards_0.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "70311df7af8a",
+   "rect": {
+    "x": 114,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 114,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "01\n\nMAGNETIC BUTTON\n4 PARAMS\n\n마그네틱 버튼\n\n커서가 가까워지면 버튼이 살짝 끌려와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_1.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "8d60de028781",
+   "rect": {
+    "x": 456.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\n\nRIPPLE\n3 PARAMS\n\n리플 버튼\n\n누른 자리에서 물결이 퍼져 나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_2.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "18d139a04ee9",
+   "rect": {
+    "x": 799,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 799,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 799,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "03\n\nCONFETTI BURST\n4 PARAMS\n\n컨페티 버스트\n\n누르면 종이 조각이 팡 터져 흩날려요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_3.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "6de6bf3773da",
+   "rect": {
+    "x": 1141.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "04\n\nHOLD TO CONFIRM\n3 PARAMS\n\n길게 눌러 확인\n\n실수로 누르지 않게, 꾹 눌러야 실행돼요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_4.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "013c2f40212a",
+   "rect": {
+    "x": 114,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "05\n\nJELLY PRESS\n3 PARAMS\n\n젤리 프레스\n\n누르면 말랑하게 눌렸다가 탱글하게 튀어나와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_5.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "241153b7b299",
+   "rect": {
+    "x": 456.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "06\n\nSHINE SWEEP\n4 PARAMS\n\n샤인 스윕\n\n빛줄기가 버튼 표면을 쓱 훑고 지나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_6.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "9bc8989d01d9",
+   "rect": {
+    "x": 799,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 799,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 799,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "07\n\nLOADING TO SUCCESS\n4 PARAMS\n\n로딩 → 성공 모핑\n\n버튼이 동그랗게 말려 로딩하다가 체크로 바뀌어요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_7.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "a8d4b6474ea0",
+   "rect": {
+    "x": 1141.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "08\n\nHEART BURST\n4 PARAMS\n\n좋아요 하트 파티클\n\n하트가 톡 튀어 오르며 작은 입자가 퍼져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_8.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "e34212c0287b",
+   "rect": {
+    "x": 114,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 114,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 114,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "09\n\n3D TILT + GLARE\n4 PARAMS\n\n3D 틸트와 글레어\n\n커서를 따라 카드가 기울고 빛이 미끄러져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_9.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "2a6e026eebb0",
+   "rect": {
+    "x": 456.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 456.5,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "10\n\nHOLOGRAPHIC FOIL\n4 PARAMS\n\n홀로그래픽 포일\n\n보는 각도에 따라 무지갯빛 포일이 흘러요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_10.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "49fe2541ccf0",
+   "rect": {
+    "x": 799,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 799,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 799,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "11\n\nFLIP CARD\n4 PARAMS\n\n플립 카드\n\n누르면 카드가 빙글 돌아 뒷면을 보여 줘요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_11.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "b0677b6bc6a9",
+   "rect": {
+    "x": 1141.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "12\n\nSTACK SWIPE\n3 PARAMS\n\n스택 스와이프\n\n카드 더미를 옆으로 밀어 한 장씩 넘겨요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_12.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "45ef48525ef5",
+   "rect": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 2608.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "13\n\nSPOTLIGHT BORDER\n3 PARAMS\n\n스포트라이트 테두리\n\n커서 근처의 테두리만 은은하게 빛나요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_13.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "baddad634dc7",
+   "rect": {
+    "x": 456.5,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 2608.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "14\n\nSPRING DRAG\n3 PARAMS\n\n스프링 드래그\n\n끌었다 놓으면 고무줄처럼 튕겨 제자리로 와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_14.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "f74c9f27a4b9",
+   "rect": {
+    "x": 114,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 114,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 114,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "15\n\nTOGGLE MORPH\n4 PARAMS\n\n토글 모핑\n\n손잡이가 늘어났다 줄어들며 반대편으로 건너가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_15.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "c1cbf2a4d82d",
+   "rect": {
+    "x": 456.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 456.5,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "16\n\nCHECK DRAW\n3 PARAMS\n\n체크 그리기\n\n체크 표시가 펜으로 긋듯 그려지고 할 일에 줄이 그어져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_16.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "a5a183d10655",
+   "rect": {
+    "x": 799,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 799,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 799,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "17\n\nFLOATING LABEL\n3 PARAMS\n\n플로팅 라벨\n\n입력을 시작하면 라벨이 위로 떠올라 자리를 비켜요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_17.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "7821d908d171",
+   "rect": {
+    "x": 1141.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "18\n\nERROR SHAKE\n4 PARAMS\n\n오류 흔들림\n\n잘못 입력하면 칸이 도리도리 고개를 저어요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_18.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "d3c498f51198",
+   "rect": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 3651.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "19\n\nSEGMENTED CONTROL\n3 PARAMS\n\n세그먼트 슬라이드\n\n고른 항목 뒤로 알약 배경이 미끄러져 따라와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_19.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "dc6dd8f631a6",
+   "rect": {
+    "x": 114,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 114,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 114,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "20\n\nTEXT SCRAMBLE\n3 PARAMS\n\n텍스트 스크램블\n\n뒤섞인 기호가 한 글자씩 제자리를 찾아가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_20.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "ea6d975695a8",
+   "rect": {
+    "x": 456.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 456.5,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "21\n\nCOUNTER ROLL\n3 PARAMS\n\n카운터 롤\n\n숫자가 자리마다 주르륵 굴러 새 값에 멈춰요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_21.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "59aeaf97b482",
+   "rect": {
+    "x": 799,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 799,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 799,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "22\n\nLETTER REVEAL\n4 PARAMS\n\n글자별 등장\n\n제목이 한 글자씩 흐릿하게 떠올라 또렷해져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_22.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "3b756ba5f0a9",
+   "rect": {
+    "x": 1141.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "23\n\nTYPEWRITER\n4 PARAMS\n\n타자기\n\n문구를 또각또각 쳤다가 지우고 다음 문구를 쳐요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_23.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "cf8ed6ead164",
+   "rect": {
+    "x": 114,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 114,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 114,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "24\n\nTOAST STACK\n3 PARAMS\n\n토스트 스택\n\n알림이 겹겹이 쌓이고, 가리키면 부채처럼 펼쳐져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_24.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "5bb7fc68f1f7",
+   "rect": {
+    "x": 456.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 456.5,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "25\n\nSKELETON SHIMMER\n3 PARAMS\n\n스켈레톤 시머\n\n불러오는 동안 뼈대 위로 은빛 물결이 지나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_25.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "18ac2dba53e4",
+   "rect": {
+    "x": 799,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 799,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 799,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "26\n\nTOOLTIP POP\n4 PARAMS\n\n툴팁 팝\n\n아이콘 위에 말풍선이 톡 튀어나와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  {
+   "file": "cards_26.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "a3aaf1bc62b3",
+   "rect": {
+    "x": 1141.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "27\n\nBELL + BADGE\n3 PARAMS\n\n벨 흔들림 배지\n\n알림이 오면 종이 딸랑 흔들리고 숫자가 톡 커져요.\n\n조절·코드 보기",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:56:42.562Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".card"
+}

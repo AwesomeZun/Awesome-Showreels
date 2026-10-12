@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "today's lo-fi beat, pattern A",
+ "selector": ".module--seq",
+ "file": "seq_lofi.png",
+ "kind": "element",
+ "px": [
+  2084,
+  986
+ ],
+ "dpr": 2,
+ "sha1": "264cc240046d",
+ "rect": {
+  "x": 411,
+  "y": 507.02,
+  "w": 1042,
+  "h": 492.98
+ },
+ "screen": {
+  "x": 411,
+  "y": 507.02,
+  "w": 1042,
+  "h": 492.98
+ },
+ "page": {
+  "x": 411,
+  "y": 702.02,
+  "w": 1042,
+  "h": 492.98
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 1010,
+  "h": 477.03
+ },
+ "pad": 16,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "02\nSEQUENCE\n시퀀스 · 패턴 A\n\n누르거나 끌어서 찍어요 · 강세 버튼이나 Shift로 강하게\n\n확률 편집\nKICK\n킥\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nSNARE\n스네어\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nHAT\n하이햇\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nCLAP\n클랩\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nBASS\n베이스\n1\nA2\n2\n3\n4\n5\n6\n7\nC3\n8\n9\nA2\n10\n11\n12\n13\n14\n15\n16\nLEAD\n리드\n1\n2\n3\n4\nA5\n5\n6\n7\n8\n9\nC6\n10\n11\n12\nD6\n13\n14\n15\nB5\n16\n일반\n강세\n확률\n재생 위치\nSPACE 재생 · 1–4 ",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:29:18.177Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

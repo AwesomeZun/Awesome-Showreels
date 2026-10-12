@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "a place's detail: 붉은벽돌 커피",
+ "selector": ".side-panel",
+ "file": "detail.png",
+ "kind": "element",
+ "px": [
+  792,
+  1936
+ ],
+ "dpr": 2,
+ "sha1": "3dcfca512b02",
+ "rect": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "screen": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "page": {
+  "x": 16,
+  "y": 16,
+  "w": 396,
+  "h": 968
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 396,
+  "h": 968
+ },
+ "pad": 0,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 238)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "목록\n\n카페\n예시\n\n붉은벽돌 커피\n\n옛 공장 2층, 창가 자리가 넓어요.\n\n표시 없음\n가 봤어요\n가고 싶어요\n#조용함\n#넓은자리\n상세 메모\n\n오전 11시 전에는 조용합니다. 드립은 산미가 있는 쪽이 많아요.\n\n이 장소를 지나는 코스\n성수 붉은벽돌 골목 한 바퀴\n\n37.54510, 127.05320\n\n지도에서 이 마커를 끌면 위치를 옮길 수 있어요.\n\n수정\n삭제",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:43.507Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

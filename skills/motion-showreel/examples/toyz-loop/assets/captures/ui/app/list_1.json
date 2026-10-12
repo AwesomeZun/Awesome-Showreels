@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".today-list",
+ "file": "list_1.png",
+ "kind": "element",
+ "px": [
+  1330,
+  1354
+ ],
+ "dpr": 2,
+ "sha1": "40a58dda8ed4",
+ "rect": {
+  "x": 715,
+  "y": 135,
+  "w": 665,
+  "h": 677.09
+ },
+ "screen": {
+  "x": 715,
+  "y": 135,
+  "w": 665,
+  "h": 677.09
+ },
+ "page": {
+  "x": 715,
+  "y": 135,
+  "w": 665,
+  "h": 677.09
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 665,
+  "h": 677.09
+ },
+ "pad": 0,
+ "radius": [
+  24,
+  24,
+  24,
+  24
+ ],
+ "bg": "rgba(247, 249, 253, 0.9)",
+ "color": "rgb(22, 38, 74)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "CHECK-IN\n\n오늘의 고리\n오늘\n10.12\n어제\n10.11\n오늘 쉬어가기\n\n이번 달 2/2회 남음\n쉬어가는 날은 모든 루틴이 면제되어 스트릭이 끊기지 않아요.\n\n3\n물 8잔\n\n매일\n하루 8잔\n3일 연속\n\n3/8잔\n아침 스트레칭\n\n매일\n15일 연속\n\n“출근 전에 5분.”\n\n책 20쪽\n\n평일\n5일 연속\n\n주 N회 · 여유 있는 루틴\n하면 보너스로 세고, 안 해도 오늘 달성률은 그대로예요.\n\n달리기\n오늘은 선택\n\n주 3회\n이번 주 0/3\n4주 연속\n\n루틴 추가",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:45:51.855Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

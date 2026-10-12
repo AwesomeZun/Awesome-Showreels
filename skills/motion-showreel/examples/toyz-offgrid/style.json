@@ -1,0 +1,199 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "people who keep their own neighbourhood map: the alley café, the bakery, the walk between them",
+  "title": "OFFGRID",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css, src/styles in the app repository), its sample places and walks and its captured screens. Lime #D7F75B on near-black #0B0B0C, the map darkened by the app's own filter (grayscale(1) invert(1) brightness(0.76) contrast(1.24)) over OpenStreetMap tiles; pins, lines and the title slab drawn from the app's own CSS and icon paths.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "a local map off the tourist grid: alley shops and walks left by locals, a walk drawn point by point with its distance and time, shared in one link"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/map.json (its dark map at three zooms with the app's own marker positions, geo_*.txt) and capture/ui.json (its title slab, neighbourhood bar, a place, the Seongsu walk and its share dialog)"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "nocturnal",
+  "local",
+  "precise",
+  "walkable",
+  "quiet"
+ ],
+ "rationale": {
+  "palette": "The app's two colours: lime #D7F75B (pins, the walk, the title slab) on near-black #0B0B0C / #141416 / #1B1B1E, text #F3F3EE / #C4C4BC / #95958D; the second walk's cyan #7DF9FF appears only on the overview.",
+  "type": "Pretendard Variable at 900 for the name in the app's slab (black on lime, -0.062em) and 800 for headlines in warm white over the dark map; JetBrains Mono capitals for the app's labels (LOCAL MAP / SEOUL, 01 SEONGSU).",
+  "motion": "A camera over a real map: one continuous push from Seoul to an alley in Seongsu across three captured zoom levels, pins that drop in, a walk that draws itself at walking pace while a dot walks it and the distance counts up.",
+  "sound": "Swing in Bb major at 96 BPM (6 bars in 15 s, 12 in 30 s): an unhurried walking groove for a map of strolls, with soft organic SFX for pins and steps.",
+  "visuals": "Four scenes in the 15 s cut: the push from Seoul into Seongsu under the name and the app's line; the alley places dropping onto the map with a place's own card; the Seongsu walk drawing itself with its distance and time; the end card. The 30 s cut adds the share link.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#0B0B0C",
+  "bg2": "#141416",
+  "surface": "#1B1B1E",
+  "ink": "#F3F3EE",
+  "ink2": "#C4C4BC",
+  "muted": "#95958D",
+  "accent": "#D7F75B",
+  "accent2": "#7DF9FF",
+  "accent3": "#C4E641",
+  "ok": "#D7F75B",
+  "warn": "#FFC86B",
+  "deny": "#FF8A6B",
+  "accentInk": "#0B0B0C",
+  "onAccent": "#0B0B0C",
+  "line": "#26262A",
+  "highlight": "#D7F75B"
+ },
+ "paletteAlt": {
+  "bg": "#D7F75B",
+  "bg2": "#C4E641",
+  "surface": "#E7FB97",
+  "ink": "#0B0B0C",
+  "ink2": "#26262A",
+  "muted": "#3F4A12",
+  "accent": "#0B0B0C",
+  "accent2": "#26262A",
+  "accent3": "#1B1B1E",
+  "ok": "#0B0B0C",
+  "warn": "#5C3D00",
+  "deny": "#8A1C00",
+  "accentInk": "#D7F75B",
+  "onAccent": "#D7F75B",
+  "line": "#9DB73A",
+  "highlight": "#0B0B0C",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.03,
+  "trackingLabel": 0.12
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#F3F3EE",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 14
+ },
+ "motion": {
+  "pace": "medium",
+  "spring": {
+   "f": 2.2,
+   "z": 0.62
+  },
+  "overshoot": 0.08,
+  "ease": "ioC",
+  "transitions": [
+   "cut",
+   "zoomInto",
+   "whip"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui",
+   "web-shots"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.03,
+  "vignette": {
+   "a": 0.4,
+   "color": "#000000"
+  },
+  "bloom": 0.08
+ },
+ "sound": {
+  "bpm": 96,
+  "key": "Bb",
+  "mode": "major",
+  "preset": "swing",
+  "drums": "light",
+  "sfx": "organic",
+  "energy": {
+   "intro": 0.4,
+   "groove": 0.65,
+   "breakdown": 0.45,
+   "drop": 0.85,
+   "outro": 0.45
+  },
+  "instruments": [
+   "piano",
+   "upright",
+   "clarinet",
+   "ride",
+   "brush",
+   "kick",
+   "hats"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[warm, easy]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

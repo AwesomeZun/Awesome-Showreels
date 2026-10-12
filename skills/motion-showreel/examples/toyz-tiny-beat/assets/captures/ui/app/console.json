@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".console",
+ "file": "console.png",
+ "kind": "element",
+ "px": [
+  2612,
+  553
+ ],
+ "dpr": 2,
+ "sha1": "e1b669863ffd",
+ "rect": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "screen": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "page": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 1274,
+  "h": 244.55
+ },
+ "pad": 16,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "73\nBPM\n템포\n−\n+\nSONG\n10월 12일의 로파이\n저장 안 됨\nBPM\n073\nSWING\n37%\nPAT\nA\nSTEP\n--/16\nKEY A minor\nCHAIN AB\n로파이\n탭하면 소리가 켜져요\n강세 ACC\n스윙\n37%\n새 곡\n저장\n공유\nWAV",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:29:17.023Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

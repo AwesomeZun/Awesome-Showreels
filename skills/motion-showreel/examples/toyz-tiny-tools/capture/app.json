@@ -1,0 +1,230 @@
+{
+ "name": "ui",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-tiny-tools); it is not committed. The same screens are live at https://tiny-tools.toyz.kr. The smart paste pad is filled with four kinds of text (JSON, a JWT, a colour, a Unix time) and captured as the app answers each; the JSON tool is captured with a minified input before and after 정리하기. The JSON is the app's own example (tools/presets.ts, fictional studio 달빛 공방) minified; the JWT is made up for the reel.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 1500
+ },
+ "css": "[class*='toast']{display:none!important} .caret{animation:none!important}",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "smart_idle",
+   "selector": ".smart",
+   "alpha": true,
+   "pad": 0,
+   "note": "the smart paste pad, waiting"
+  },
+  {
+   "do": "fill",
+   "selector": "#smart-input",
+   "value": "{\"studio\":\"달빛 공방\",\"project\":\"tiny.tools\",\"version\":\"1.0.0\",\"released\":true,\"members\":[{\"id\":1,\"name\":\"김하늘\",\"email\":\"haneul@moonlight.example\",\"roles\":[\"admin\",\"editor\"],\"active\":true},{\"id\":2,\"name\":\"박도윤\",\"email\":\"doyun@moonlight.example\",\"roles\":[\"viewer\"],\"active\":false,\"lastLogin\":null},{\"id\":3,\"name\":\"이서아\",\"email\":\"seoa@moonlight.example\",\"roles\":[\"editor\"],\"active\":true}],\"settings\":{\"theme\":\"dark\",\"accent color\":\"#5B45F0\",\"limits\":{\"requests\":1000,\"burst\":50}}}"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('#smart-input'); a.scrollTop = 0; a.blur(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "smart_json",
+   "selector": ".smart",
+   "alpha": true,
+   "pad": 0,
+   "note": "a minified JSON pasted: the app suggests its JSON tool"
+  },
+  {
+   "do": "fill",
+   "selector": "#smart-input",
+   "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDI0IiwibmFtZSI6IuuLrOu5myDqs7XrsKkiLCJpYXQiOjE3OTE3NjY4MDAsImV4cCI6MTc5MTg1MzIwMH0.kM2v7R0yQ3f9sXc1uLwP5dH8aJ6nT4bE0gZiYoVrWqA"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('#smart-input'); a.scrollTop = 0; a.blur(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "smart_jwt",
+   "selector": ".smart",
+   "alpha": true,
+   "pad": 0,
+   "note": "a JWT pasted"
+  },
+  {
+   "do": "fill",
+   "selector": "#smart-input",
+   "value": "#5B45F0"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('#smart-input'); a.scrollTop = 0; a.blur(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "smart_color",
+   "selector": ".smart",
+   "alpha": true,
+   "pad": 0,
+   "note": "a colour pasted"
+  },
+  {
+   "do": "fill",
+   "selector": "#smart-input",
+   "value": "1791766800"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('#smart-input'); a.scrollTop = 0; a.blur(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "smart_epoch",
+   "selector": ".smart",
+   "alpha": true,
+   "pad": 0,
+   "note": "a Unix time pasted"
+  },
+  {
+   "do": "fill",
+   "selector": "#smart-input",
+   "value": ""
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/json'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "fill",
+   "selector": ".code-area",
+   "value": "{\"studio\":\"달빛 공방\",\"project\":\"tiny.tools\",\"version\":\"1.0.0\",\"released\":true,\"members\":[{\"id\":1,\"name\":\"김하늘\",\"email\":\"haneul@moonlight.example\",\"roles\":[\"admin\",\"editor\"],\"active\":true},{\"id\":2,\"name\":\"박도윤\",\"email\":\"doyun@moonlight.example\",\"roles\":[\"viewer\"],\"active\":false,\"lastLogin\":null},{\"id\":3,\"name\":\"이서아\",\"email\":\"seoa@moonlight.example\",\"roles\":[\"editor\"],\"active\":true}],\"settings\":{\"theme\":\"dark\",\"accent color\":\"#5B45F0\",\"limits\":{\"requests\":1000,\"burst\":50}}}"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('.code-area'); a.scrollLeft = 0; a.scrollTop = 0; a.blur(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "json_before",
+   "selector": ".tool-grid",
+   "alpha": true,
+   "pad": 0,
+   "note": "the JSON tool with the minified input; the tree already reads it"
+  },
+  {
+   "do": "click",
+   "selector": ".toolbar .btn-primary"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "json_after",
+   "selector": ".tool-grid",
+   "alpha": true,
+   "pad": 0,
+   "note": "after 정리하기"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/color'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "tool_color",
+   "selector": ".tool-page",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/diff'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "tool_diff",
+   "selector": ".tool-page",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/regex'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "tool_regex",
+   "selector": ".tool-page",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/cron'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "tool_cron",
+   "selector": ".tool-page",
+   "alpha": true,
+   "pad": 0
+  }
+ ]
+}

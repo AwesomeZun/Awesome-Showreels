@@ -1,0 +1,46 @@
+{
+  "title": "Tiny Beat",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Tiny Beat.", "minBars": 1, "maxBars": 1, "priority": 1, "inBeats": 2.5, "outBeats": 0.5, "in": "cut", "music": "intro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "thud"},
+      {"beat": 0.5, "from": "start", "sfx": "reveal"},
+      {"beat": 2, "from": "start", "sfx": "tick x8 gap=0.25b"},
+      {"beat": 0, "from": "outStart", "sfx": "swish"}
+    ]},
+    {"id": "sequence", "label": "찍으면 바로", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0.5, "in": "cut", "music": "groove", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "thud"},
+      {"beat": 0.5, "from": "start", "sfx": "click x4 gap=0.25b"},
+      {"beat": 0, "from": "holdBar", "sfx": "pop"},
+      {"beat": 0, "from": "outStart", "sfx": "swish"}
+    ]},
+    {"id": "daily", "label": "오늘의 비트", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3.5, "outBeats": 0.5, "in": "whip", "inParams": {"dir": "left"}, "music": "drop", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 1, "from": "start", "sfx": "click"},
+      {"beat": 2, "from": "start", "sfx": "click"},
+      {"beat": 3, "from": "start", "sfx": "click"},
+      {"beat": 0, "from": "holdBar", "sfx": "click x4 gap=1b"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "mix", "label": "WAV", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "groove", "dark": true, "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 2, "from": "start", "sfx": "drawon dur=2b"},
+      {"beat": 4.5, "from": "start", "sfx": "click"},
+      {"beat": 5, "from": "start", "sfx": "confirm"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "end", "label": "Tiny Beat.", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 1.5, "from": "start", "sfx": "bloop"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["mix"], "scenes": {"hook": {"bars": 1}, "sequence": {"bars": 2}, "daily": {"bars": 1}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 1}, "sequence": {"bars": 3}, "daily": {"bars": 2}, "mix": {"bars": 2}, "end": {"bars": 2}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

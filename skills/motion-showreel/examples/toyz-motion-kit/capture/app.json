@@ -1,0 +1,806 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-motion-kit); it is not committed. The same screens are live at https://motion-kit.toyz.kr. Animation frames are the app's own snippet animations, paused and stepped through document.getAnimations() in the demo iframe. The cubic-bezier editor and the lanes are drawn from the app's own code and styles (EasingPage.tsx, index.css), not captured.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1600
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "scroll",
+   "y": 560
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "cards",
+   "selector": ".card",
+   "all": true,
+   "alpha": true,
+   "pad": 10,
+   "optional": true
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/i/confetti'"
+  },
+  {
+   "do": "wait",
+   "ms": 1600
+  },
+  {
+   "do": "layer",
+   "name": "confetti_still",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: before"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const d = document.querySelector('.frame__iframe').contentDocument; d.querySelector('button').click(); d.getAnimations().forEach(a => a.pause()); })()"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 0; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_0",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 0 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 50; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_1",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 50 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 100; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_2",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 100 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 150; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_3",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 150 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 200; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_4",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 200 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 250; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_5",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 250 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 300; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_6",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 300 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 350; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_7",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 350 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 400; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_8",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 400 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 450; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_9",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 450 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 500; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_10",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 500 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 550; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_11",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 550 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 600; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_12",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 600 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 650; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_13",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 650 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 700; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_14",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 700 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 750; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_15",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 750 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 800; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_16",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 800 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 850; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_17",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 850 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 900; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_18",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 900 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 950; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_19",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 950 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 1000; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_20",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 1000 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 1050; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_21",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 1050 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 1100; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_22",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 1100 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 1150; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_23",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 1150 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 1200; })"
+  },
+  {
+   "do": "layer",
+   "name": "confetti_24",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "confetti burst: 1200 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/i/ripple'"
+  },
+  {
+   "do": "wait",
+   "ms": 1600
+  },
+  {
+   "do": "layer",
+   "name": "ripple_still",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: before"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const d = document.querySelector('.frame__iframe').contentDocument; const b = d.querySelector('button'), r = b.getBoundingClientRect(); for (const ty of ['pointerdown', 'pointerup']) b.dispatchEvent(new PointerEvent(ty, {bubbles: true, clientX: r.left + r.width * 0.3, clientY: r.top + r.height * 0.5})); b.click(); d.getAnimations().forEach(a => a.pause()); })()"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 0; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_0",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 0 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 50; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_1",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 50 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 100; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_2",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 100 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 150; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_3",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 150 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 200; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_4",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 200 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 250; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_5",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 250 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 300; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_6",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 300 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 350; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_7",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 350 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 400; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_8",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 400 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 450; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_9",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 450 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 500; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_10",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 500 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 550; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_11",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 550 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 600; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_12",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 600 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 650; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_13",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 650 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 700; })"
+  },
+  {
+   "do": "layer",
+   "name": "ripple_14",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "ripple: 700 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/i/heart'"
+  },
+  {
+   "do": "wait",
+   "ms": 1600
+  },
+  {
+   "do": "layer",
+   "name": "heart_still",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: before"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const d = document.querySelector('.frame__iframe').contentDocument; d.querySelector('button').click(); d.getAnimations().forEach(a => a.pause()); })()"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 0; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_0",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 0 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 50; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_1",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 50 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 100; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_2",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 100 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 150; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_3",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 150 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 200; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_4",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 200 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 250; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_5",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 250 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 300; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_6",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 300 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 350; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_7",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 350 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 400; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_8",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 400 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 450; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_9",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 450 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 500; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_10",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 500 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 550; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_11",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 550 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 600; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_12",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 600 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 650; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_13",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 650 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 700; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_14",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 700 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 750; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_15",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 750 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 800; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_16",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 800 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 850; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_17",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 850 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.frame__iframe').contentDocument.getAnimations().forEach(a => { a.currentTime = 900; })"
+  },
+  {
+   "do": "layer",
+   "name": "heart_18",
+   "selector": ".frame",
+   "alpha": true,
+   "note": "like heart particles: 900 ms (the app's own animation, paused and stepped)"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/i/confetti'"
+  },
+  {
+   "do": "wait",
+   "ms": 1600
+  },
+  {
+   "do": "layer",
+   "name": "controls_36",
+   "selector": ".panel",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "click",
+   "text": "JS"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "code_36",
+   "selector": ".code",
+   "alpha": true,
+   "pad": 12
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = document.querySelector('.control--range input'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(r, '72'); r.dispatchEvent(new Event('input', {bubbles: true})); r.dispatchEvent(new Event('change', {bubbles: true})); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "layer",
+   "name": "controls_72",
+   "selector": ".panel",
+   "alpha": true,
+   "pad": 12,
+   "note": "조각 수 set to 72"
+  },
+  {
+   "do": "layer",
+   "name": "code_72",
+   "selector": ".code",
+   "alpha": true,
+   "pad": 12,
+   "note": "the code shows count: 72"
+  }
+ ]
+}

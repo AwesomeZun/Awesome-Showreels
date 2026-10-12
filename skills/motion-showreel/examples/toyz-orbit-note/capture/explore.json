@@ -1,0 +1,9 @@
+{"name": "explore", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+ "device": {"screen": [1600, 1000], "statusBar": 0, "homeIndicator": 0, "dpr": 1, "mobile": false, "touch": false},
+ "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "light", "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {"until": "load", "settle": 1600},
+ "steps": [
+  {"do": "shot", "name": "home"},
+  {"do": "click", "selector": ".card", "optional": true}, {"do": "wait", "ms": 800}, {"do": "shot", "name": "selected"},
+  {"do": "press", "key": "Escape"}, {"do": "press", "key": "/"}, {"do": "wait", "ms": 500}, {"do": "shot", "name": "search"}
+ ]}

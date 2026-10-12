@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "the board filtered by a search, with the app's highlight marks",
+ "file": "search.png",
+ "kind": "screen",
+ "px": [
+  3200,
+  2400
+ ],
+ "dpr": 2,
+ "sha1": "a35f090a9583",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 1200
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 1200
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:00:11.137Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

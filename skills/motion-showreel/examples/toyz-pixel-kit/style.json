@@ -1,0 +1,198 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "small brands that make their own social images",
+  "title": "PIXEL KIT",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository), its logo mark (Icon.tsx), its three fictional sample kits and designs, and its captured consistency boards (its own renderer drawing each design in six sizes). Near-black #0B0A0C with orchid #E5B5E0 and plum #6B1F5C, chrome greys for the mark.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "a brand kit (colours, type, logo) set once, then 13 templates exported in every size with the same face; all in the browser"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/app.json: three sample designs in six sizes each from its consistency board, the thirteen templates, the three kit cards"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "crafty",
+  "confident",
+  "consistent",
+  "polished",
+  "warm"
+ ],
+ "rationale": {
+  "palette": "The app's tokens: grounds #0B0A0C / #111013 / #17151A, text #F3EFF4 / #BDB5C1 / #958C9B, orchid #E5B5E0 / #F0CDEB and plum #6B1F5C, the chrome of its mark (#FBFBFD to #6F6F7A); everything else is the sample kits' own colours, drawn by the app.",
+  "type": "Pretendard Variable at 800 for headlines and the name (the app's own heading 같은 얼굴, 모든 크기.), mono capitals for its labels (02 · CONSISTENCY BOARD, sizes like 1080×1350).",
+  "motion": "A layout snapping into place: six frames of different proportions fly in and settle on a grid on the beat, then the whole wall turns over to the next kit together; templates deal out like cards.",
+  "sound": "Swing in Bb major at 128 BPM (8 bars in 15 s, 16 in 30 s): a lively shuffle for a tool that makes small brands look put together, with crisp glassy SFX for every frame that lands.",
+  "visuals": "Four scenes in the 15 s cut: the name and the app's line with its mark; one design dealt into six sizes (같은 얼굴, 모든 크기); the wall turning over to the bakery and the coffee kits; the end card. The 30 s cut adds the thirteen templates.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#0B0A0C",
+  "bg2": "#111013",
+  "surface": "#17151A",
+  "ink": "#F3EFF4",
+  "ink2": "#BDB5C1",
+  "muted": "#958C9B",
+  "accent": "#E5B5E0",
+  "accent2": "#6B1F5C",
+  "accent3": "#F0CDEB",
+  "ok": "#9FE3AE",
+  "warn": "#FFD27A",
+  "deny": "#FF8F9C",
+  "accentInk": "#0B0A0C",
+  "onAccent": "#0B0A0C",
+  "line": "#2A262E",
+  "highlight": "#E5B5E0"
+ },
+ "paletteAlt": {
+  "bg": "#F3EFF4",
+  "bg2": "#E9E2EB",
+  "surface": "#FFFFFF",
+  "ink": "#0B0A0C",
+  "ink2": "#2A262E",
+  "muted": "#5E5563",
+  "accent": "#6B1F5C",
+  "accent2": "#8E3A7F",
+  "accent3": "#B0679F",
+  "ok": "#2F7A47",
+  "warn": "#8A6000",
+  "deny": "#B3263A",
+  "accentInk": "#F3EFF4",
+  "onAccent": "#F3EFF4",
+  "line": "#D6CCD9",
+  "highlight": "#6B1F5C",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.04,
+  "trackingLabel": 0.14
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#F3EFF4",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 10
+ },
+ "motion": {
+  "pace": "energetic",
+  "spring": {
+   "f": 2.6,
+   "z": 0.55
+  },
+  "overshoot": 0.08,
+  "ease": "outQuint",
+  "transitions": [
+   "cut",
+   "whip",
+   "blobWipe"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.03,
+  "vignette": {
+   "a": 0.25,
+   "color": "#000000"
+  },
+  "bloom": 0.06
+ },
+ "sound": {
+  "bpm": 128,
+  "key": "Bb",
+  "mode": "major",
+  "preset": "swing",
+  "drums": "full",
+  "sfx": "glassy",
+  "energy": {
+   "intro": 0.4,
+   "groove": 0.7,
+   "breakdown": 0.45,
+   "drop": 0.9,
+   "outro": 0.5
+  },
+  "instruments": [
+   "piano",
+   "upright",
+   "clarinet",
+   "ride",
+   "brush",
+   "kick",
+   "hats"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[bright, crisp]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "a JWT pasted",
+ "selector": ".smart",
+ "file": "smart_jwt.png",
+ "kind": "element",
+ "px": [
+  1182,
+  1016
+ ],
+ "dpr": 2,
+ "sha1": "2d7443d96b46",
+ "rect": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 507.8
+ },
+ "screen": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 507.8
+ },
+ "page": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 507.8
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 591.23,
+  "h": 507.8
+ },
+ "pad": 0,
+ "radius": [
+  20,
+  20,
+  20,
+  20
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "SMART PASTE\n감지 · JWT\n붙여넣으면, 알맞은 도구를 골라 드려요.\n스마트 붙여넣기 입력\n06\nJWT\n점(.)으로 나뉜 세 부분과 alg 헤더가 있어요\nJWT에서 열기\n\n알아보는 형식\n\nJSON\n01 정리·검증\nJWT\n06 토큰 해석\nURL\n05 파라미터 표\nBASE64\n04 디코딩\nEPOCH\n11 날짜 변환\nCOLOR\n02 색 변환\nUUID\n13 버전 해석\nTEXT\n10 글자 수",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:23:59.576Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

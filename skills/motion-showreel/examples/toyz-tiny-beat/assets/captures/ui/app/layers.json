@@ -1,0 +1,807 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:30:19.354Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "title": {
+   "step": "layer",
+   "note": "the app's chrome wordmark",
+   "selector": ".intro__title",
+   "file": "title.png",
+   "kind": "element",
+   "px": [
+    1422,
+    585
+   ],
+   "dpr": 2,
+   "sha1": "115b9d92824d",
+   "rect": {
+    "x": 124,
+    "y": 136.05,
+    "w": 710.84,
+    "h": 292.42
+   },
+   "screen": {
+    "x": 124,
+    "y": 136.05,
+    "w": 710.84,
+    "h": 292.42
+   },
+   "page": {
+    "x": 124,
+    "y": 136.05,
+    "w": 710.84,
+    "h": 292.42
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 678.84,
+    "h": 260.42
+   },
+   "pad": 16,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "TOYZ — WEB AUDIO GROOVEBOX\n\nTiny Beat.\n\n매일 한 곡, 나만의 리듬.\n\n연속 기록\n3일\n보관함\n4곡\n단축키\nSPACE · 1–4",
+   "alpha": true
+  },
+  "daily": {
+   "step": "layer",
+   "selector": ".daily",
+   "file": "daily.png",
+   "kind": "element",
+   "px": [
+    1298,
+    590
+   ],
+   "dpr": 2,
+   "sha1": "afdc957d24b8",
+   "rect": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "screen": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "page": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 617.16,
+    "h": 262.83
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DAILY SEED\n\n오늘의 비트\n\n10월 12일 월요일\n\n로파이\n느긋한 스윙, 먼지 낀 드럼\n하우스\n네 박자 킥, 오프비트 햇\n브레이크\n엇박 킥, 잘게 쪼갠 햇\n앰비언트\n드문 타격, 긴 잔향\n\nSEED 901A35DB · #1\n\n불러오기\n다시 굴리기\n\n같은 날, 같은 장르, 같은 굴림 번호는 언제나 같은 비트가 나와요.",
+   "alpha": true
+  },
+  "console": {
+   "step": "layer",
+   "selector": ".console",
+   "file": "console.png",
+   "kind": "element",
+   "px": [
+    2612,
+    553
+   ],
+   "dpr": 2,
+   "sha1": "e1b669863ffd",
+   "rect": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "screen": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "page": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 244.55
+   },
+   "pad": 16,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "73\nBPM\n템포\n−\n+\nSONG\n10월 12일의 로파이\n저장 안 됨\nBPM\n073\nSWING\n37%\nPAT\nA\nSTEP\n--/16\nKEY A minor\nCHAIN AB\n로파이\n탭하면 소리가 켜져요\n강세 ACC\n스윙\n37%\n새 곡\n저장\n공유\nWAV",
+   "alpha": true
+  },
+  "dial": {
+   "step": "layer",
+   "selector": ".knob--donut",
+   "file": "dial.png",
+   "kind": "element",
+   "px": [
+    348,
+    389
+   ],
+   "dpr": 2,
+   "sha1": "d7515e2517c3",
+   "rect": {
+    "x": 157,
+    "y": 465.55,
+    "w": 174,
+    "h": 194.39
+   },
+   "screen": {
+    "x": 157,
+    "y": 465.55,
+    "w": 174,
+    "h": 194.39
+   },
+   "page": {
+    "x": 157,
+    "y": 465.55,
+    "w": 174,
+    "h": 194.39
+   },
+   "element": {
+    "x": 12,
+    "y": 12,
+    "w": 150,
+    "h": 170.39
+   },
+   "pad": 12,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "73\nBPM\n템포",
+   "alpha": true
+  },
+  "seq_lofi": {
+   "step": "layer",
+   "note": "today's lo-fi beat, pattern A",
+   "selector": ".module--seq",
+   "file": "seq_lofi.png",
+   "kind": "element",
+   "px": [
+    2084,
+    986
+   ],
+   "dpr": 2,
+   "sha1": "264cc240046d",
+   "rect": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "screen": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "page": {
+    "x": 411,
+    "y": 702.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1010,
+    "h": 477.03
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\nSEQUENCE\n시퀀스 · 패턴 A\n\n누르거나 끌어서 찍어요 · 강세 버튼이나 Shift로 강하게\n\n확률 편집\nKICK\n킥\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nSNARE\n스네어\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nHAT\n하이햇\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nCLAP\n클랩\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nBASS\n베이스\n1\nA2\n2\n3\n4\n5\n6\n7\nC3\n8\n9\nA2\n10\n11\n12\n13\n14\n15\n16\nLEAD\n리드\n1\n2\n3\n4\nA5\n5\n6\n7\n8\n9\nC6\n10\n11\n12\nD6\n13\n14\n15\nB5\n16\n일반\n강세\n확률\n재생 위치\nSPACE 재생 · 1–4 ",
+   "alpha": true
+  },
+  "roll": {
+   "step": "layer",
+   "selector": ".module--roll",
+   "file": "roll.png",
+   "kind": "element",
+   "px": [
+    2612,
+    1152
+   ],
+   "dpr": 2,
+   "sha1": "3d1ad41002cd",
+   "rect": {
+    "x": 147,
+    "y": 212.05,
+    "w": 1306,
+    "h": 575.95
+   },
+   "screen": {
+    "x": 147,
+    "y": 212.05,
+    "w": 1306,
+    "h": 575.95
+   },
+   "page": {
+    "x": 147,
+    "y": 1193.05,
+    "w": 1306,
+    "h": 575.95
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 543.95
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "03\nMELODY\n피아노롤\n\nBASS 베이스\nLEAD 리드\n으뜸음\nC\nC#\nD\nD#\nE\nF\nF#\nG\nG#\nA\nA#\nB\n스케일\n마이너 펜타토닉\n메이저 펜타토닉\n내추럴 마이너\n메이저\n도리안\n블루스\n리디안\n1옥타브\n2옥타브\nA6\nG6\nF6\nE6\nD6\nC6\nB5\nA5\nG5\nF5\nE5\nD5\nC5\nB4\nA4",
+   "alpha": true
+  },
+  "mix": {
+   "step": "layer",
+   "selector": ".module--mix",
+   "file": "mix.png",
+   "kind": "element",
+   "px": [
+    2612,
+    752
+   ],
+   "dpr": 2,
+   "sha1": "751162021da5",
+   "rect": {
+    "x": 147,
+    "y": 624,
+    "w": 1306,
+    "h": 376
+   },
+   "screen": {
+    "x": 147,
+    "y": 624,
+    "w": 1306,
+    "h": 376
+   },
+   "page": {
+    "x": 147,
+    "y": 1751,
+    "w": 1306,
+    "h": 376
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 360.02
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "04\nMIXER\n믹서\n\nKICK\n킥\n808\n타이트\n딥\n90\nM\nS\nSNARE\n스네어\n클래식\n스냅\n루즈\n80\nM\nS\nHAT\n하이햇\n클로즈드\n브라이트\n더스티\n50\nM\nS\nCLAP\n클랩\n룸\n타이트\n와이드\n60\nM\nS\nBASS\n베이스\n애시드\n서브\n스퀘어\n80\nM\nS\nLEAD\n리드\n플럭\n글래스\n소우\n65\nM\nS\n\nLEAD SEND\n\n딜레이\n30%\n리버브\n50%\n\n점 8분 딜레이 · 절차적 임펄스 리버브\n\nMASTER\n\n85\nOUT\nGR\n−0.0dB\n컴프\n40%",
+   "alpha": true
+  },
+  "daily_house": {
+   "step": "layer",
+   "selector": ".daily",
+   "file": "daily_house.png",
+   "kind": "element",
+   "px": [
+    1298,
+    590
+   ],
+   "dpr": 2,
+   "sha1": "13cdbe8ef250",
+   "rect": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "screen": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "page": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 617.16,
+    "h": 262.83
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DAILY SEED\n\n오늘의 비트\n\n10월 12일 월요일\n\n로파이\n느긋한 스윙, 먼지 낀 드럼\n하우스\n네 박자 킥, 오프비트 햇\n브레이크\n엇박 킥, 잘게 쪼갠 햇\n앰비언트\n드문 타격, 긴 잔향\n\nSEED 3BC9130D · #1\n\n불러오기\n다시 굴리기\n\n같은 날, 같은 장르, 같은 굴림 번호는 언제나 같은 비트가 나와요.",
+   "alpha": true
+  },
+  "console_house": {
+   "step": "layer",
+   "selector": ".console",
+   "file": "console_house.png",
+   "kind": "element",
+   "px": [
+    2612,
+    553
+   ],
+   "dpr": 2,
+   "sha1": "861a58089733",
+   "rect": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "screen": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "page": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 244.55
+   },
+   "pad": 16,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "125\nBPM\n템포\n−\n+\nSONG\n10월 12일의 하우스\n저장 안 됨\nBPM\n125\nSWING\n07%\nPAT\nA\nSTEP\n--/16\nKEY F dorian\nCHAIN AB\n하우스\n● AUDIO ON\n강세 ACC\n스윙\n7%\n새 곡\n저장\n공유\nWAV",
+   "alpha": true
+  },
+  "seq_house": {
+   "step": "layer",
+   "note": "today's house beat loaded from the daily seed",
+   "selector": ".module--seq",
+   "file": "seq_house.png",
+   "kind": "element",
+   "px": [
+    2084,
+    986
+   ],
+   "dpr": 2,
+   "sha1": "14b6650f1809",
+   "rect": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "screen": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "page": {
+    "x": 411,
+    "y": 702.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1010,
+    "h": 477.03
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\nSEQUENCE\n시퀀스 · 패턴 A\n\n누르거나 끌어서 찍어요 · 강세 버튼이나 Shift로 강하게\n\n확률 편집\nKICK\n킥\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nSNARE\n스네어\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nHAT\n하이햇\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nCLAP\n클랩\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nBASS\n베이스\n1\n2\n3\nF2\n4\n5\n6\n7\nF2\n8\nC3\n9\n10\n11\nF2\n12\nF2\n13\n14\n15\nF2\n16\nC3\nLEAD\n리드\n1\nG5\n2\n3\n4\nC5\n5\n6\n7\nC5\n8\n9\n10\n11\nC5\n12\n13\n14\n15\n16\n일반\n강세\n확률\n재생 위치\nSPA",
+   "alpha": true
+  },
+  "daily_break": {
+   "step": "layer",
+   "selector": ".daily",
+   "file": "daily_break.png",
+   "kind": "element",
+   "px": [
+    1298,
+    590
+   ],
+   "dpr": 2,
+   "sha1": "9671ffdadc3a",
+   "rect": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "screen": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "page": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 617.16,
+    "h": 262.83
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DAILY SEED\n\n오늘의 비트\n\n10월 12일 월요일\n\n로파이\n느긋한 스윙, 먼지 낀 드럼\n하우스\n네 박자 킥, 오프비트 햇\n브레이크\n엇박 킥, 잘게 쪼갠 햇\n앰비언트\n드문 타격, 긴 잔향\n\nSEED 088A7A17 · #1\n\n불러오기\n다시 굴리기\n\n같은 날, 같은 장르, 같은 굴림 번호는 언제나 같은 비트가 나와요.",
+   "alpha": true
+  },
+  "console_break": {
+   "step": "layer",
+   "selector": ".console",
+   "file": "console_break.png",
+   "kind": "element",
+   "px": [
+    2612,
+    553
+   ],
+   "dpr": 2,
+   "sha1": "8e41aa9ebe89",
+   "rect": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "screen": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "page": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 244.55
+   },
+   "pad": 16,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "157\nBPM\n템포\n−\n+\nSONG\n10월 12일의 브레이크\n저장 안 됨\nBPM\n157\nSWING\n19%\nPAT\nA\nSTEP\n--/16\nKEY C minor\nCHAIN AB\n브레이크\n● AUDIO ON\n강세 ACC\n스윙\n19%\n새 곡\n저장\n공유\nWAV",
+   "alpha": true
+  },
+  "seq_break": {
+   "step": "layer",
+   "note": "today's break beat loaded from the daily seed",
+   "selector": ".module--seq",
+   "file": "seq_break.png",
+   "kind": "element",
+   "px": [
+    2084,
+    986
+   ],
+   "dpr": 2,
+   "sha1": "b9ce0a9bc1f7",
+   "rect": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "screen": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "page": {
+    "x": 411,
+    "y": 702.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1010,
+    "h": 477.03
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\nSEQUENCE\n시퀀스 · 패턴 A\n\n누르거나 끌어서 찍어요 · 강세 버튼이나 Shift로 강하게\n\n확률 편집\nKICK\n킥\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nSNARE\n스네어\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nHAT\n하이햇\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nCLAP\n클랩\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nBASS\n베이스\n1\nC2\n2\n3\n4\nC2\n5\n6\n7\nC2\n8\n9\n10\n11\nC2\n12\n13\n14\n15\n16\nLEAD\n리드\n1\n2\n3\n4\n5\n6\nC6\n7\n8\n9\nA#5\n10\n11\n12\nC5\n13\n14\n15\nC5\n16\n일반\n강세\n확률\n재생 위치\nSPACE 재생 · ",
+   "alpha": true
+  },
+  "daily_ambient": {
+   "step": "layer",
+   "selector": ".daily",
+   "file": "daily_ambient.png",
+   "kind": "element",
+   "px": [
+    1298,
+    590
+   ],
+   "dpr": 2,
+   "sha1": "fead1b9193d8",
+   "rect": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "screen": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "page": {
+    "x": 826.84,
+    "y": 137.64,
+    "w": 649.16,
+    "h": 294.83
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 617.16,
+    "h": 262.83
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DAILY SEED\n\n오늘의 비트\n\n10월 12일 월요일\n\n로파이\n느긋한 스윙, 먼지 낀 드럼\n하우스\n네 박자 킥, 오프비트 햇\n브레이크\n엇박 킥, 잘게 쪼갠 햇\n앰비언트\n드문 타격, 긴 잔향\n\nSEED 85DF835D · #1\n\n불러오기\n다시 굴리기\n\n같은 날, 같은 장르, 같은 굴림 번호는 언제나 같은 비트가 나와요.",
+   "alpha": true
+  },
+  "console_ambient": {
+   "step": "layer",
+   "selector": ".console",
+   "file": "console_ambient.png",
+   "kind": "element",
+   "px": [
+    2612,
+    553
+   ],
+   "dpr": 2,
+   "sha1": "0c7543882f02",
+   "rect": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "screen": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "page": {
+    "x": 147,
+    "y": 443.47,
+    "w": 1306,
+    "h": 276.55
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1274,
+    "h": 244.55
+   },
+   "pad": 16,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "64\nBPM\n템포\n−\n+\nSONG\n10월 12일의 앰비언트\n저장 안 됨\nBPM\n064\nSWING\n00%\nPAT\nA\nSTEP\n--/16\nKEY D major\nCHAIN AB\n앰비언트\n● AUDIO ON\n강세 ACC\n스윙\n0%\n새 곡\n저장\n공유\nWAV",
+   "alpha": true
+  },
+  "seq_ambient": {
+   "step": "layer",
+   "note": "today's ambient beat loaded from the daily seed",
+   "selector": ".module--seq",
+   "file": "seq_ambient.png",
+   "kind": "element",
+   "px": [
+    2084,
+    986
+   ],
+   "dpr": 2,
+   "sha1": "0a1bae401cec",
+   "rect": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "screen": {
+    "x": 411,
+    "y": 507.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "page": {
+    "x": 411,
+    "y": 702.02,
+    "w": 1042,
+    "h": 492.98
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 1010,
+    "h": 477.03
+   },
+   "pad": 16,
+   "radius": [
+    16,
+    16,
+    16,
+    16
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 241)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\nSEQUENCE\n시퀀스 · 패턴 A\n\n누르거나 끌어서 찍어요 · 강세 버튼이나 Shift로 강하게\n\n확률 편집\nKICK\n킥\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nSNARE\n스네어\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nHAT\n하이햇\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nCLAP\n클랩\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\nBASS\n베이스\n1\nD2\n2\n3\n4\n5\n6\n7\n8\n9\nA2\n10\n11\n12\n13\n14\n15\n16\nLEAD\n리드\n1\nD5\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\nG4\n15\n16\n일반\n강세\n확률\n재생 위치\nSPACE 재생 · 1–4 패턴 · ←→ 이",
+   "alpha": true
+  }
+ },
+ "warnings": [
+  "step failed: 25 click .dialog button.btn--primary, .dialog [data-confirm], .dialog button:last-child: locator.click: Timeout 15000ms exceeded.",
+  "step failed: 40 click .dialog button.btn--primary, .dialog [data-confirm], .dialog button:last-child: locator.click: Timeout 15000ms exceeded.",
+  "step failed: 55 click .dialog button.btn--primary, .dialog [data-confirm], .dialog button:last-child: locator.click: Timeout 15000ms exceeded."
+ ]
+}

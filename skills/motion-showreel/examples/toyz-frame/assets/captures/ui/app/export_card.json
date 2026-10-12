@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".panel section, .panel .card, .panel [class*='export']",
+ "file": "export_card.png",
+ "kind": "element",
+ "px": [
+  926,
+  551
+ ],
+ "dpr": 2,
+ "sha1": "5c9343867688",
+ "rect": {
+  "x": 18,
+  "y": 287.28,
+  "w": 463,
+  "h": 275.25
+ },
+ "screen": {
+  "x": 18,
+  "y": 287.28,
+  "w": 463,
+  "h": 275.25
+ },
+ "page": {
+  "x": 18,
+  "y": 287.28,
+  "w": 463,
+  "h": 275.25
+ },
+ "element": {
+  "x": 10,
+  "y": 10,
+  "w": 443,
+  "h": 255.25
+ },
+ "pad": 10,
+ "radius": [
+  6,
+  6,
+  6,
+  6
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(11, 11, 13)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "예상 파일 크기\nESTIMATED SIZE\n예상 파일 크기\n2.02 MB\nHTML 1 · 이미지 12장 (985 KB) · 외부 참조 0\nHTML 파일 내려받기\n\n이로아-portfolio.html",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:22:51.472Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

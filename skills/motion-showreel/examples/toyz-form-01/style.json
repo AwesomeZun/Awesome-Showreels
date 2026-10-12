@@ -1,0 +1,202 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "designers and the people who review their work",
+  "title": "FORM / 01",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css, src/styles in the app repository), its sample board (domain/sample.ts: the SVG mockups, three reviewers, their pins and threads) and its captured panels. A precise inspection desk: near-black #0B0B0C and metal greys #D9DADC to #8E9096, vivid colour only on the reviewers' pins (#FF5A1F, #3D7BFF, #C6FF3D).",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "a light feedback board for designers: upload work, drop numbered pins and regions on it, keep versions and compare them, export a report"
+  },
+  {
+   "path": "source/mockups/",
+   "kind": "images",
+   "notes": "the app's own sample mockups (SVG, written by its domain/sample.ts): the Sonar Notes landing v1 and v2, the dashboard, the mobile onboarding"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/app.json: the comment cards on v1 and v2, a thread, the version bar, the panel's stats; and the mockups rendered by gen-src/render_mockups.json"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "precise",
+  "editorial",
+  "metallic",
+  "calm",
+  "exact"
+ ],
+ "rationale": {
+  "palette": "The app's tokens: ink #0B0B0C / #101012 / #1C1C20, text #EDEDEF / #B6B7BC / #8C8D93, the metal plate (118deg #E7E8EA to #8E9096 with a white sheen), and the three reviewers' pin colours, orange #FF5A1F, blue #3D7BFF and lime #C6FF3D, the only vivid colour on screen.",
+  "type": "Pretendard Variable at 860 with -0.058em for FORM / 01 (its slash at 300 in half-black), 800 for headlines; mono capitals for the app's labels (DESIGN REVIEW BOARD — PIN · THREAD · VERSION, VER, OPEN, RESOLVED) and the dimension lines.",
+  "motion": "An inspection desk: rulers and crop marks, dimension lines that measure the artboard, pins that drop and settle on their anchor corner, a region drawn by dragging, a comparison divider that sweeps between versions.",
+  "sound": "Cinematic-lite in E minor at 112 BPM (7 bars in 15 s, 14 in 30 s): piano and soft strings over toms, measured and calm, with a soft tick for every pin.",
+  "visuals": "Four scenes in the 15 s cut: the app's metal hero with its mockups, dimension lines and pins under the name; three reviewers' pins and region landing on the real landing page with their real comment cards; v1 and v2 compared under a sweeping divider; the end card. The 30 s cut adds a thread being answered and resolved.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#0B0B0C",
+  "bg2": "#101012",
+  "surface": "#1C1C20",
+  "ink": "#EDEDEF",
+  "ink2": "#B6B7BC",
+  "muted": "#8C8D93",
+  "accent": "#D9DADC",
+  "accent2": "#FF5A1F",
+  "accent3": "#3D7BFF",
+  "ok": "#C6FF3D",
+  "warn": "#FFB020",
+  "deny": "#FF5A1F",
+  "accentInk": "#0B0B0C",
+  "onAccent": "#0B0B0C",
+  "line": "#26262B",
+  "highlight": "#C6FF3D"
+ },
+ "paletteAlt": {
+  "bg": "#D9DADC",
+  "bg2": "#C1C3C7",
+  "surface": "#ECEEF0",
+  "ink": "#0B0B0C",
+  "ink2": "#2A2B2F",
+  "muted": "#4C4D52",
+  "accent": "#0B0B0C",
+  "accent2": "#B8400F",
+  "accent3": "#2357C9",
+  "ok": "#3D6B00",
+  "warn": "#8A5A00",
+  "deny": "#B8400F",
+  "accentInk": "#ECEEF0",
+  "onAccent": "#ECEEF0",
+  "line": "#A3A5AA",
+  "highlight": "#0B0B0C",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.04,
+  "trackingLabel": 0.14
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#EDEDEF",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 12
+ },
+ "motion": {
+  "pace": "medium",
+  "spring": {
+   "f": 2.2,
+   "z": 0.66
+  },
+  "overshoot": 0.06,
+  "ease": "ioC",
+  "transitions": [
+   "cut",
+   "whip",
+   "match"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.03,
+  "vignette": {
+   "a": 0.25,
+   "color": "#000000"
+  },
+  "bloom": 0.04
+ },
+ "sound": {
+  "bpm": 112,
+  "key": "E",
+  "mode": "minor",
+  "preset": "cinematic-lite",
+  "drums": "light",
+  "sfx": "minimal",
+  "energy": {
+   "intro": 0.4,
+   "groove": 0.65,
+   "breakdown": 0.45,
+   "drop": 0.85,
+   "outro": 0.45
+  },
+  "instruments": [
+   "strings",
+   "piano",
+   "sub",
+   "toms",
+   "kick",
+   "snare"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[calm, exact]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

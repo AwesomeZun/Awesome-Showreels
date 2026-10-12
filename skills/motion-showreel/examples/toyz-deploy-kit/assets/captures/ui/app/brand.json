@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".brand",
+ "file": "brand.png",
+ "kind": "element",
+ "px": [
+  418,
+  128
+ ],
+ "dpr": 2,
+ "sha1": "1068f2d321b2",
+ "rect": {
+  "x": 38,
+  "y": 38,
+  "w": 208.92,
+  "h": 64
+ },
+ "screen": {
+  "x": 38,
+  "y": 38,
+  "w": 208.92,
+  "h": 64
+ },
+ "page": {
+  "x": 38,
+  "y": 38,
+  "w": 208.92,
+  "h": 64
+ },
+ "element": {
+  "x": 10,
+  "y": 10,
+  "w": 188.92,
+  "h": 44
+ },
+ "pad": 10,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(10, 11, 16)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "Deploy KitDK",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:40:04.610Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

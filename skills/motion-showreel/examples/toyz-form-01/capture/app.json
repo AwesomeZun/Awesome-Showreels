@@ -1,0 +1,108 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-form-01); it is not committed. The same screens are live at https://form-01.toyz.kr. The sample board (Sonar Notes 런칭 QA, a fictional service) is the app's first-run data: its comment cards for the landing page v1 and v2, the first card's thread, the version bar and the panel's stats are captured. The mockups themselves are the app's own SVGs (source/mockups, written by domain/sample.ts) rendered by gen-src/render_mockups.json.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 2500
+ },
+ "css": "[class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "eval",
+   "js": "(() => { const a = document.querySelector('a[href*=\"#/board/\"]'); if (a) location.hash = a.getAttribute('href'); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 2500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.version-bar button')].find(b => /^v1/.test((b.textContent || '').trim())); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "cards_v1",
+   "selector": ".comment-list > li",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the four comments on the landing page v1"
+  },
+  {
+   "do": "layer",
+   "name": "stats",
+   "selector": ".panel-stats",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.version-bar button')].find(b => /^v2/.test((b.textContent || '').trim())); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "cards_v2",
+   "selector": ".comment-list > li",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the three comments on v2 (two carried over from v1)"
+  },
+  {
+   "do": "layer",
+   "name": "versions",
+   "selector": ".version-bar",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.version-bar button')].find(b => /^v1/.test((b.textContent || '').trim())); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1000
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const c = document.querySelector('.comment-list .ccard-main'); if (c) c.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "thread",
+   "selector": ".bv-panel",
+   "alpha": true,
+   "pad": 0,
+   "note": "the first comment's thread: 하은 asks, 준서 answers, resolved"
+  }
+ ]
+}

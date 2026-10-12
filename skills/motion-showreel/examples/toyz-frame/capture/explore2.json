@@ -1,0 +1,11 @@
+{"name": "explore2", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+ "device": {"screen": [1600, 1000], "statusBar": 0, "homeIndicator": 0, "dpr": 1, "mobile": false, "touch": false},
+ "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "light", "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {"until": "load", "settle": 2000},
+ "steps": [
+  {"do": "click", "text": "디자인"}, {"do": "wait", "ms": 900}, {"do": "shot", "name": "design"},
+  {"do": "click", "text": "EDITORIAL", "optional": true}, {"do": "wait", "ms": 1200}, {"do": "shot", "name": "editorial"},
+  {"do": "click", "text": "MONO", "optional": true}, {"do": "wait", "ms": 1200}, {"do": "shot", "name": "mono"},
+  {"do": "click", "text": "내보내기"}, {"do": "wait", "ms": 900}, {"do": "shot", "name": "export"},
+  {"do": "click", "text": "작업"}, {"do": "wait", "ms": 900}, {"do": "shot", "name": "works"}
+ ]}

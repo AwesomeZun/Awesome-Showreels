@@ -1,0 +1,134 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-focus-space); it is not committed. The same screens are live at https://focus-space.toyz.kr. The arched room is captured ready and running with its chrome ring and clock hidden (the reel draws them from the app's own ring code, TimerCard.tsx and index.css, so the countdown can run); the ambient mixer and the log cards are captured as the app shows its first-run sample (three tasks, a fictional proposal for 모래섬 스튜디오). The mixer is captured off, on, and with its sliders moved (rain 70, wind 30, cafe 40) through the inputs' own events. After capture, gen-src/uncomposite.py removes the translucent backdrop the app paints behind everything from the mixer and room captures.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 2000
+ },
+ "css": "[class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "css",
+   "id": "nocore",
+   "css": ".arch .ring, .arch .ring-center__time{visibility:hidden!important}"
+  },
+  {
+   "do": "layer",
+   "name": "arch_ready",
+   "selector": ".arch",
+   "alpha": true,
+   "pad": 40,
+   "note": "the room, ready (ring and clock drawn by the reel)"
+  },
+  {
+   "do": "click",
+   "selector": ".chrome-btn--main"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "arch_run",
+   "selector": ".arch",
+   "alpha": true,
+   "pad": 40,
+   "note": "the room, running"
+  },
+  {
+   "do": "click",
+   "selector": ".chrome-btn--main"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "uncss",
+   "id": "nocore"
+  },
+  {
+   "do": "layer",
+   "name": "mixer_0",
+   "selector": ".mixer",
+   "alpha": true,
+   "pad": 0,
+   "note": "the ambient mixer, off"
+  },
+  {
+   "do": "click",
+   "selector": ".mixer [role=switch]"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "layer",
+   "name": "mixer_1",
+   "selector": ".mixer",
+   "alpha": true,
+   "pad": 0,
+   "note": "on: rain 45, fire 25"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; const r = [...document.querySelectorAll('.mixer input[type=range]')]; [70, null, 30, null, 40].forEach((v, i) => { if (r[i] && v !== null) { set.call(r[i], String(v)); r[i].dispatchEvent(new Event('input', { bubbles: true })); r[i].dispatchEvent(new Event('change', { bubbles: true })); } }); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "layer",
+   "name": "mixer_2",
+   "selector": ".mixer",
+   "alpha": true,
+   "pad": 0,
+   "note": "rain 70, wind 30, fire 25, cafe 40"
+  },
+  {
+   "do": "click",
+   "selector": ".mixer [role=switch]"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/log'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "logcards",
+   "selector": "main .card",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the log: the last seven days and the last twelve weeks (the first two cards)"
+  }
+ ]
+}

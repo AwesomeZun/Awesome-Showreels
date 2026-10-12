@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".module--mix",
+ "file": "mix.png",
+ "kind": "element",
+ "px": [
+  2612,
+  752
+ ],
+ "dpr": 2,
+ "sha1": "751162021da5",
+ "rect": {
+  "x": 147,
+  "y": 624,
+  "w": 1306,
+  "h": 376
+ },
+ "screen": {
+  "x": 147,
+  "y": 624,
+  "w": 1306,
+  "h": 376
+ },
+ "page": {
+  "x": 147,
+  "y": 1751,
+  "w": 1306,
+  "h": 376
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 1274,
+  "h": 360.02
+ },
+ "pad": 16,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "04\nMIXER\n믹서\n\nKICK\n킥\n808\n타이트\n딥\n90\nM\nS\nSNARE\n스네어\n클래식\n스냅\n루즈\n80\nM\nS\nHAT\n하이햇\n클로즈드\n브라이트\n더스티\n50\nM\nS\nCLAP\n클랩\n룸\n타이트\n와이드\n60\nM\nS\nBASS\n베이스\n애시드\n서브\n스퀘어\n80\nM\nS\nLEAD\n리드\n플럭\n글래스\n소우\n65\nM\nS\n\nLEAD SEND\n\n딜레이\n30%\n리버브\n50%\n\n점 8분 딜레이 · 절차적 임펄스 리버브\n\nMASTER\n\n85\nOUT\nGR\n−0.0dB\n컴프\n40%",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:29:20.312Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

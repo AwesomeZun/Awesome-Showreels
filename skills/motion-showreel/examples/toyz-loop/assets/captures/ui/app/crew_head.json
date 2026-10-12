@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".page-head--board",
+ "file": "crew_head.png",
+ "kind": "element",
+ "px": [
+  2320,
+  357
+ ],
+ "dpr": 2,
+ "sha1": "78c6c941491f",
+ "rect": {
+  "x": 220,
+  "y": 135,
+  "w": 1160,
+  "h": 178.52
+ },
+ "screen": {
+  "x": 220,
+  "y": 135,
+  "w": 1160,
+  "h": 178.52
+ },
+ "page": {
+  "x": 220,
+  "y": 135,
+  "w": 1160,
+  "h": 178.52
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1160,
+  "h": 178.52
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(22, 38, 74)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "TOGETHER\n/ CREW BOARD / 10.12 – 10.18\n예시 크루\n\n새벽 루프\n물 8잔\n매일\n아침 스트레칭\n매일\n달리기\n주 3회\n책 20쪽\n평일\n초대 링크\n내 체크인 카드 보내기\n카드 가져오기\n요약 이미지\n이름 바꾸기\n크루 지우기",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:46:00.457Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

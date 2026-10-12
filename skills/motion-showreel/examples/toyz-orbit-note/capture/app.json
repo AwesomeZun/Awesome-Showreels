@@ -1,0 +1,188 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-orbit-note); it is not committed. The same screens are live at https://orbit-note.toyz.kr.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1800
+ },
+ "css": "[class*='toast'] { display: none !important; } .card-pulse { display: none !important; }",
+ "steps": [
+  {
+   "do": "eval",
+   "js": "(() => { const out = {cards: [], links: [], labels: []};\n document.querySelectorAll('[data-card-id]').forEach(el => { if (!el.matches('article')) return; const r = el.getBoundingClientRect();\n   out.cards.push({id: el.dataset.cardId, color: el.dataset.color, x: r.x, y: r.y, w: r.width, h: r.height, title: (el.querySelector('.card-title, h3, h2') || el).innerText.split('\\n')[0]}); });\n document.querySelectorAll('g.link').forEach(g => { const p = g.querySelector('.link-line'), a = g.querySelector('.link-arrow'), m = p.getScreenCTM();\n   out.links.push({id: g.dataset.linkId, kind: g.classList.contains('link-wiki') ? 'wiki' : 'direct', from: g.dataset.from, to: g.dataset.to,\n     d: p.getAttribute('d'), arrow: a ? a.getAttribute('d') : '', m: [m.a, m.b, m.c, m.d, m.e, m.f], len: p.getTotalLength()}); });\n document.querySelectorAll('.link-label').forEach(el => { const r = el.getBoundingClientRect(); out.labels.push({id: el.dataset.linkId, text: el.innerText, x: r.x, y: r.y, w: r.width, h: r.height}); });\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify(out); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo",
+   "selector": "#__dump",
+   "note": "card rects, link paths (d, screen CTM, length) and label boxes of the sample space"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "layer",
+   "name": "card",
+   "selector": "article[data-card-id]",
+   "all": true,
+   "alpha": true,
+   "pad": 22,
+   "note": "every card of the sample space '생각의 궤도' (fictional)"
+  },
+  {
+   "do": "layer",
+   "name": "label",
+   "selector": ".link-label",
+   "all": true,
+   "alpha": true,
+   "pad": 4
+  },
+  {
+   "do": "layer",
+   "name": "knot",
+   "selector": ".ambient-knot",
+   "alpha": true,
+   "note": "the app's holographic trefoil knot (HoloKnot SVG)"
+  },
+  {
+   "do": "hide",
+   "id": "all",
+   "selector": "article[data-card-id], svg.links, .link-label, .ambient-knot, .topbar, .dock, .zoom, .minimap, .statusbar, [class*='toast']"
+  },
+  {
+   "do": "shot",
+   "name": "space",
+   "note": "the empty space: blue grid and orbit ribbons"
+  },
+  {
+   "do": "show",
+   "id": "all"
+  },
+  {
+   "do": "click",
+   "selector": "article[data-card-id]:nth-of-type(9)",
+   "optional": true
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "insp",
+   "selector": ".inspector",
+   "alpha": true,
+   "pad": 16,
+   "note": "card N°09 in the inspector"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const t = document.querySelector('.insp-body'); t.focus(); t.setSelectionRange(t.value.length, t.value.length); })()"
+  },
+  {
+   "do": "type",
+   "selector": ".insp-body",
+   "value": " [[포",
+   "delay": 60
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "layer",
+   "name": "insp_suggest",
+   "selector": ".inspector",
+   "alpha": true,
+   "pad": 16,
+   "note": "[[ typed: the app suggests card titles"
+  },
+  {
+   "do": "press",
+   "key": "Enter"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "insp_linked",
+   "selector": ".inspector",
+   "alpha": true,
+   "pad": 16,
+   "note": "after choosing 포커스 모드: the wiki link is in the outgoing list"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const out = {cards: [], links: [], labels: []};\n document.querySelectorAll('[data-card-id]').forEach(el => { if (!el.matches('article')) return; const r = el.getBoundingClientRect();\n   out.cards.push({id: el.dataset.cardId, color: el.dataset.color, x: r.x, y: r.y, w: r.width, h: r.height, title: (el.querySelector('.card-title, h3, h2') || el).innerText.split('\\n')[0]}); });\n document.querySelectorAll('g.link').forEach(g => { const p = g.querySelector('.link-line'), a = g.querySelector('.link-arrow'), m = p.getScreenCTM();\n   out.links.push({id: g.dataset.linkId, kind: g.classList.contains('link-wiki') ? 'wiki' : 'direct', from: g.dataset.from, to: g.dataset.to,\n     d: p.getAttribute('d'), arrow: a ? a.getAttribute('d') : '', m: [m.a, m.b, m.c, m.d, m.e, m.f], len: p.getTotalLength()}); });\n document.querySelectorAll('.link-label').forEach(el => { const r = el.getBoundingClientRect(); out.labels.push({id: el.dataset.linkId, text: el.innerText, x: r.x, y: r.y, w: r.width, h: r.height}); });\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify(out); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo_linked",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "press",
+   "key": "Escape"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "selector": ".canvas, main",
+   "optional": true
+  },
+  {
+   "do": "press",
+   "key": "/"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "type",
+   "selector": ".palette-input input",
+   "value": "정렬",
+   "delay": 80
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "layer",
+   "name": "palette",
+   "selector": ".palette",
+   "alpha": true,
+   "pad": 24,
+   "note": "search: the app's own results for 정렬"
+  }
+ ]
+}

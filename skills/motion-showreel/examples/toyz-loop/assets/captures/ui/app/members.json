@@ -1,0 +1,195 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "members_0.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "8df3e6501b0d",
+   "rect": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "나\n나\n\n내 기록으로 실시간 계산\n\n100%\n\n이번 주 달성률\n\n15일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5",
+   "alpha": true
+  },
+  {
+   "file": "members_1.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "714d3ea4e30b",
+   "rect": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "하\n하늘\n예시\n\n47분 전 카드\n\n100%\n\n이번 주 달성률\n\n21일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5\n응원 보내기",
+   "alpha": true
+  },
+  {
+   "file": "members_2.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "02e9106c3267",
+   "rect": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "도\n도윤\n예시\n\n3시간 전 카드\n\n50%\n\n이번 주 달성률\n\n4일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n0/5\n응원 보내기",
+   "alpha": true
+  },
+  {
+   "file": "members_3.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "af21f5bef74c",
+   "rect": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "서\n서아\n예시\n\n5시간 전 카드\n\n75%\n\n이번 주 달성률\n\n9일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5\n응원 보내기",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:46:00.237Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".board > li"
+}

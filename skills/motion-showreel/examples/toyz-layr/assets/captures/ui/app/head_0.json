@@ -1,0 +1,53 @@
+{
+ "file": "head_0.png",
+ "kind": "element",
+ "px": [
+  2480,
+  1927
+ ],
+ "dpr": 2,
+ "sha1": "5928ab3b97e5",
+ "rect": {
+  "x": 308,
+  "y": 353.55,
+  "w": 328,
+  "h": 205
+ },
+ "screen": {
+  "x": 308,
+  "y": 353.55,
+  "w": 1240,
+  "h": 963.5
+ },
+ "page": {
+  "x": 308,
+  "y": 353.55,
+  "w": 1240,
+  "h": 963.5
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1240,
+  "h": 963.5
+ },
+ "pad": 0,
+ "radius": [
+  14,
+  14,
+  14,
+  14
+ ],
+ "bg": "rgb(18, 19, 23)",
+ "color": "rgb(243, 245, 248)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "BUNDLE / 01\n메모 10\n묶음 이름\n러닝 · 크루 · 페이스\n응집도\n0.28\n묶인 근거\n러닝\n크루\n러닝크루\n페이스\n장소\n혼자 달리면 꾸준히 못 한다. 동네에서 같이 달릴 러닝 크루를 찾기가 어렵다는 게 문제 #러닝크루\n러닝크루\n크루\n러닝\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n러닝 크루 매칭 아이디어: 출발 장소, 요일, 페이스(km당 분)를 기준으로 근처 크루를 추천 #러닝크루\n러닝크루\n크루\n페이스\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n러닝 크루 매칭: 출발 장소, 요일, 페이스 기준으로 근처 크루 추천하기 #러닝크루\n러닝크루\n크루\n페이스\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n동네 러닝 모임 첫",
+ "alpha": true,
+ "cropped": [
+  0,
+  0,
+  328,
+  205
+ ],
+ "note": "the head of the bundle the app proposes (name, cohesion, the words that tied it), cut from the bundle row"
+}

@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".version-bar",
+ "file": "versions.png",
+ "kind": "element",
+ "px": [
+  855,
+  80
+ ],
+ "dpr": 2,
+ "sha1": "b1ec58fffeed",
+ "rect": {
+  "x": 246,
+  "y": 66,
+  "w": 427.69,
+  "h": 40
+ },
+ "screen": {
+  "x": 246,
+  "y": 66,
+  "w": 427.69,
+  "h": 40
+ },
+ "page": {
+  "x": 246,
+  "y": 66,
+  "w": 427.69,
+  "h": 40
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 427.69,
+  "h": 40
+ },
+ "pad": 0,
+ "radius": [
+  12,
+  12,
+  12,
+  12
+ ],
+ "bg": "rgba(20, 20, 23, 0.88)",
+ "color": "rgb(237, 237, 239)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "VER\nv1\nv2\n새 버전\n비교\nv1 핀 가져오기\n2",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:39.287Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

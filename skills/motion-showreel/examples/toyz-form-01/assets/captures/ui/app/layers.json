@@ -1,0 +1,740 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:41.888Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "cards_v1": {
+   "step": "layer",
+   "all": true,
+   "layers": [
+    {
+     "file": "cards_v1_0.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "e99b4beaced1",
+     "rect": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "하은\n2일 전\n해결됨\n1번 코멘트:\n헤드라인 두 줄이 너무 무겁게 느껴져요. 첫 줄을 조금 가볍게 가면 어떨까요? @준서 의견 주세요.\n타이포\n높음\n답글 1",
+     "alpha": true
+    },
+    {
+     "file": "cards_v1_1.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "10eef6ffa6c9",
+     "rect": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "민지\n2일 전\n해결됨\n2번 코멘트:\nCTA 문구를 \"무료로 시작하기\"보다 체험 기간이 보이게 바꾸면 전환에 도움이 될 것 같아요.\n카피\n보통",
+     "alpha": true
+    },
+    {
+     "file": "cards_v1_2.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "c4bc6b608974",
+     "rect": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "3\n준서\n2일 전\n열림\n3번 코멘트:\n메탈 카드가 히어로 텍스트와 폭을 다투고 있어요. 카드를 조금 줄이거나 아래로 내려 보면 좋겠어요.\n레이아웃\n보통\n영역",
+     "alpha": true
+    },
+    {
+     "file": "cards_v1_3.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "3f3012867107",
+     "rect": {
+      "x": 1239,
+      "y": 605.19,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 605.19,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 605.19,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "4\n하은\n2일 전\n열림\n4번 코멘트:\n고객사 로고 회색이 배경과 대비가 낮아요. #5C5D62 → #8E9096 정도로 올려 주세요.\n색\n낮음",
+     "alpha": true
+    }
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:38:37.305Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "selector": ".comment-list > li"
+  },
+  "cards_v2": {
+   "step": "layer",
+   "all": true,
+   "layers": [
+    {
+     "file": "cards_v2_0.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "034da472dc29",
+     "rect": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 233.94,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "5\n준서\n23시간 전\n열림\n5번 코멘트:\n메탈 카드가 히어로 텍스트와 폭을 다투고 있어요. 카드를 조금 줄이거나 아래로 내려 보면 좋겠어요.\n레이아웃\n보통\n영역\n가져옴",
+     "alpha": true
+    },
+    {
+     "file": "cards_v2_1.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "14743c1b39ad",
+     "rect": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 357.69,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "6\n하은\n23시간 전\n열림\n6번 코멘트:\n고객사 로고 회색이 배경과 대비가 낮아요. #5C5D62 → #8E9096 정도로 올려 주세요.\n색\n낮음\n가져옴",
+     "alpha": true
+    },
+    {
+     "file": "cards_v2_2.png",
+     "kind": "element",
+     "px": [
+      702,
+      244
+     ],
+     "dpr": 2,
+     "sha1": "c05b48cb3207",
+     "rect": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "screen": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "page": {
+      "x": 1239,
+      "y": 481.44,
+      "w": 351,
+      "h": 121.75
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 351,
+      "h": 121.75
+     },
+     "pad": 0,
+     "radius": [
+      12,
+      12,
+      12,
+      12
+     ],
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(237, 237, 239)",
+     "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "7\n민지\n23시간 전\n열림\n7번 코멘트:\n로그인 버튼까지 라임이면 CTA와 경쟁해요. 로그인은 고스트 버튼으로 가는 게 어떨까요?\n인터랙션\n높음\n답글 1",
+     "alpha": true
+    }
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:38:39.155Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "selector": ".comment-list > li"
+  },
+  "mock_dashboard": {
+   "step": "layer",
+   "selector": "#m svg",
+   "file": "mock_dashboard.png",
+   "kind": "element",
+   "px": [
+    1440,
+    1024
+   ],
+   "dpr": 1,
+   "sha1": "bdb2849c0e77",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(0, 0, 0)",
+   "font": "400 16px/normal Times",
+   "text": "",
+   "alpha": false,
+   "url": "(served)/dashboard.html",
+   "capturedAt": "2026-10-12T12:37:57.800Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "mock_landing_v1": {
+   "step": "layer",
+   "selector": "#m svg",
+   "file": "mock_landing_v1.png",
+   "kind": "element",
+   "px": [
+    1440,
+    1024
+   ],
+   "dpr": 1,
+   "sha1": "75e847babd38",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(0, 0, 0)",
+   "font": "400 16px/normal Times",
+   "text": "",
+   "alpha": false,
+   "url": "(served)/landing-v1.html",
+   "capturedAt": "2026-10-12T12:37:55.870Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "mock_landing_v2": {
+   "step": "layer",
+   "selector": "#m svg",
+   "file": "mock_landing_v2.png",
+   "kind": "element",
+   "px": [
+    1440,
+    1024
+   ],
+   "dpr": 1,
+   "sha1": "d4a48d04b165",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 1024
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(0, 0, 0)",
+   "font": "400 16px/normal Times",
+   "text": "",
+   "alpha": false,
+   "url": "(served)/landing-v2.html",
+   "capturedAt": "2026-10-12T12:37:56.853Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "mock_mobile": {
+   "step": "layer",
+   "selector": "#m svg",
+   "file": "mock_mobile.png",
+   "kind": "element",
+   "px": [
+    780,
+    1688
+   ],
+   "dpr": 1,
+   "sha1": "8e8f73450b04",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 780,
+    "h": 1688
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 780,
+    "h": 1688
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 780,
+    "h": 1688
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 780,
+    "h": 1688
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(0, 0, 0)",
+   "font": "400 16px/normal Times",
+   "text": "",
+   "alpha": false,
+   "url": "(served)/mobile.html",
+   "capturedAt": "2026-10-12T12:37:58.799Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "stats": {
+   "step": "layer",
+   "selector": ".panel-stats",
+   "file": "stats.png",
+   "kind": "element",
+   "px": [
+    678,
+    140
+   ],
+   "dpr": 2,
+   "sha1": "0163cd1e41ca",
+   "rect": {
+    "x": 1245,
+    "y": 112,
+    "w": 339,
+    "h": 69.94
+   },
+   "screen": {
+    "x": 1245,
+    "y": 112,
+    "w": 339,
+    "h": 69.94
+   },
+   "page": {
+    "x": 1245,
+    "y": 112,
+    "w": 339,
+    "h": 69.94
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 339,
+    "h": 69.94
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "OPEN\n02\nRESOLVED\n02\nBOARD RESOLUTION · 3D\n20%",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:38:37.436Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "thread": {
+   "step": "layer",
+   "note": "the first comment's thread: 하은 asks, 준서 answers, resolved",
+   "selector": ".bv-panel",
+   "file": "thread.png",
+   "kind": "element",
+   "px": [
+    744,
+    1892
+   ],
+   "dpr": 2,
+   "sha1": "8b9d1ded971d",
+   "rect": {
+    "x": 1228,
+    "y": 54,
+    "w": 372,
+    "h": 946
+   },
+   "screen": {
+    "x": 1228,
+    "y": 54,
+    "w": 372,
+    "h": 946
+   },
+   "page": {
+    "x": 1228,
+    "y": 54,
+    "w": 372,
+    "h": 946
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 372,
+    "h": 946
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(11, 11, 12)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "코멘트\n2\nV1 · 이전 버전\n번호순\n최신순\nOPEN\n02\nRESOLVED\n02\nBOARD RESOLUTION · 3D\n20%\n상태\n상태 전체\n열림\n해결됨\n라벨\n라벨 전체\n레이아웃\n타이포\n색\n카피\n인터랙션\n기타\n작성자\n작성자 전체\n하은\n민지\n준서\n하은\n2일 전\n해결됨\n1번 코멘트:\n헤드라인 두 줄이 너무 무겁게 느껴져요. 첫 줄을 조금 가볍게 가면 어떨까요? @준서 의견 주세요.\n타이포\n높음\n답글 1\n다시 열기\n라벨\n레이아웃\n타이포\n색\n카피\n인터랙션\n기타\n우선순위\n우선순위 낮음\n우선순위 보통\n우선순위 높음\n준서\n2일 전\n\n두 번째 줄만 라임으로 남기고 첫 줄은 흰색 유지하는 안으로 v2에 반영했어요.\n\n답글\n답글\n민지\n2일 전\n해결됨\n2번 코멘트:\nCTA 문구를 \"무료로 시작하기\"보다 체험 기간이 보이게 바",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:38:41.888Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "versions": {
+   "step": "layer",
+   "selector": ".version-bar",
+   "file": "versions.png",
+   "kind": "element",
+   "px": [
+    855,
+    80
+   ],
+   "dpr": 2,
+   "sha1": "b1ec58fffeed",
+   "rect": {
+    "x": 246,
+    "y": 66,
+    "w": 427.69,
+    "h": 40
+   },
+   "screen": {
+    "x": 246,
+    "y": 66,
+    "w": 427.69,
+    "h": 40
+   },
+   "page": {
+    "x": 246,
+    "y": 66,
+    "w": 427.69,
+    "h": 40
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 427.69,
+    "h": 40
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(20, 20, 23, 0.88)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "VER\nv1\nv2\n새 버전\n비교\nv1 핀 가져오기\n2",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:38:39.287Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  }
+ },
+ "warnings": [],
+ "note": "merged index of capture/app.json (the board, dpr 2) and gen-src/render_mockups.json (the app's SVG mockups at 1x)"
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the first comment's thread: 하은 asks, 준서 answers, resolved",
+ "selector": ".bv-panel",
+ "file": "thread.png",
+ "kind": "element",
+ "px": [
+  744,
+  1892
+ ],
+ "dpr": 2,
+ "sha1": "8b9d1ded971d",
+ "rect": {
+  "x": 1228,
+  "y": 54,
+  "w": 372,
+  "h": 946
+ },
+ "screen": {
+  "x": 1228,
+  "y": 54,
+  "w": 372,
+  "h": 946
+ },
+ "page": {
+  "x": 1228,
+  "y": 54,
+  "w": 372,
+  "h": 946
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 372,
+  "h": 946
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgb(11, 11, 12)",
+ "color": "rgb(237, 237, 239)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "코멘트\n2\nV1 · 이전 버전\n번호순\n최신순\nOPEN\n02\nRESOLVED\n02\nBOARD RESOLUTION · 3D\n20%\n상태\n상태 전체\n열림\n해결됨\n라벨\n라벨 전체\n레이아웃\n타이포\n색\n카피\n인터랙션\n기타\n작성자\n작성자 전체\n하은\n민지\n준서\n하은\n2일 전\n해결됨\n1번 코멘트:\n헤드라인 두 줄이 너무 무겁게 느껴져요. 첫 줄을 조금 가볍게 가면 어떨까요? @준서 의견 주세요.\n타이포\n높음\n답글 1\n다시 열기\n라벨\n레이아웃\n타이포\n색\n카피\n인터랙션\n기타\n우선순위\n우선순위 낮음\n우선순위 보통\n우선순위 높음\n준서\n2일 전\n\n두 번째 줄만 라임으로 남기고 첫 줄은 흰색 유지하는 안으로 v2에 반영했어요.\n\n답글\n답글\n민지\n2일 전\n해결됨\n2번 코멘트:\nCTA 문구를 \"무료로 시작하기\"보다 체험 기간이 보이게 바",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:41.888Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

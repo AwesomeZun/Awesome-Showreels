@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": "#m svg",
+ "file": "mock_mobile.png",
+ "kind": "element",
+ "px": [
+  780,
+  1688
+ ],
+ "dpr": 1,
+ "sha1": "8e8f73450b04",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 780,
+  "h": 1688
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 780,
+  "h": 1688
+ },
+ "page": {
+  "x": 0,
+  "y": 0,
+  "w": 780,
+  "h": 1688
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 780,
+  "h": 1688
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(0, 0, 0)",
+ "font": "400 16px/normal Times",
+ "text": "",
+ "alpha": false,
+ "url": "(served)/mobile.html",
+ "capturedAt": "2026-10-12T12:37:58.799Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

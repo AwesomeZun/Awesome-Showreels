@@ -1,0 +1,31 @@
+{
+ "step": "shot",
+ "file": "home.png",
+ "kind": "screen",
+ "px": [
+  3200,
+  4400
+ ],
+ "dpr": 2,
+ "sha1": "0db4f544183b",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 2200
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 1600,
+  "h": 2200
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:48:27.921Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

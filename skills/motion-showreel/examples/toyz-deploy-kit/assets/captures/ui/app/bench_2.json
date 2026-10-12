@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".bench",
+ "file": "bench_2.png",
+ "kind": "element",
+ "px": [
+  832,
+  199
+ ],
+ "dpr": 2,
+ "sha1": "43c3f4997a69",
+ "rect": {
+  "x": 1148.22,
+  "y": 185.52,
+  "w": 415.78,
+  "h": 99.59
+ },
+ "screen": {
+  "x": 1148.22,
+  "y": 185.52,
+  "w": 415.78,
+  "h": 99.59
+ },
+ "page": {
+  "x": 1148.22,
+  "y": 185.52,
+  "w": 415.78,
+  "h": 99.59
+ },
+ "element": {
+  "x": 12,
+  "y": 12,
+  "w": 391.78,
+  "h": 75.59
+ },
+ "pad": 12,
+ "radius": [
+  12,
+  12,
+  12,
+  12
+ ],
+ "bg": "rgb(255, 255, 255)",
+ "color": "rgb(10, 11, 16)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "입력\n7/7\n파일\n19\n이미지\n6\nmoss-timer-deploy-kit\nZIP",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:40:08.826Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

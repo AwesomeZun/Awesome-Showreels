@@ -1,0 +1,287 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "morae_0.png",
+   "kind": "element",
+   "px": [
+    700,
+    700
+   ],
+   "dpr": 2,
+   "sha1": "cf3c424b38f8",
+   "rect": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "screen": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "page": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 350
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "morae_1.png",
+   "kind": "element",
+   "px": [
+    700,
+    876
+   ],
+   "dpr": 2,
+   "sha1": "cab1ba22b5a6",
+   "rect": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "screen": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "page": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 438
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "morae_2.png",
+   "kind": "element",
+   "px": [
+    494,
+    878
+   ],
+   "dpr": 2,
+   "sha1": "6fc772fa4f50",
+   "rect": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "screen": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "page": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 247,
+    "h": 439
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "morae_3.png",
+   "kind": "element",
+   "px": [
+    1120,
+    588
+   ],
+   "dpr": 2,
+   "sha1": "c172e08ed8c7",
+   "rect": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "screen": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "page": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 294
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "morae_4.png",
+   "kind": "element",
+   "px": [
+    1120,
+    630
+   ],
+   "dpr": 2,
+   "sha1": "2e8879580220",
+   "rect": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "screen": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "page": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 315
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "morae_5.png",
+   "kind": "element",
+   "px": [
+    2000,
+    666
+   ],
+   "dpr": 2,
+   "sha1": "2d4e546b2b0b",
+   "rect": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "screen": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "page": {
+    "x": 700,
+    "y": 1417.53,
+    "w": 1000,
+    "h": 333
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1000,
+    "h": 333
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T13:02:58.172Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".sizes-board .size-card canvas"
+}

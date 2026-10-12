@@ -1,0 +1,12 @@
+{"name": "explore", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+ "device": {"screen": [1600, 1000], "statusBar": 0, "homeIndicator": 0, "dpr": 1, "mobile": false, "touch": false},
+ "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "light", "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {"until": "load", "settle": 1200},
+ "steps": [
+  {"do": "shot", "name": "dash", "full": true},
+  {"do": "press", "key": "Meta+k"}, {"do": "wait", "ms": 500}, {"do": "shot", "name": "palette"},
+  {"do": "press", "key": "Escape"}, {"do": "wait", "ms": 300},
+  {"do": "click", "text": "프로젝트", "optional": true}, {"do": "wait", "ms": 600}, {"do": "shot", "name": "projects"},
+  {"do": "eval", "js": "location.hash = '#/board'"}, {"do": "wait", "ms": 700}, {"do": "shot", "name": "board"},
+  {"do": "eval", "js": "location.hash = '#/releases'"}, {"do": "wait", "ms": 700}, {"do": "shot", "name": "releases"}
+ ]}

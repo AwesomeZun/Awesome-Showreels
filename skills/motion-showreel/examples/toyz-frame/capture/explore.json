@@ -1,0 +1,5 @@
+{"name": "explore", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+ "device": {"screen": [1600, 1000], "statusBar": 0, "homeIndicator": 0, "dpr": 1, "mobile": false, "touch": false},
+ "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "light", "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {"until": "load", "settle": 2000},
+ "steps": [ {"do": "shot", "name": "home"}, {"do": "dom", "name": "dom"} ]}

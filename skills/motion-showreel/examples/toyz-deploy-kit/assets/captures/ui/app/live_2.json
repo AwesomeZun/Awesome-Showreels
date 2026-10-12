@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the tray after the rename: README title, OG image and slug follow",
+ "selector": ".live",
+ "file": "live_2.png",
+ "kind": "element",
+ "px": [
+  744,
+  1800
+ ],
+ "dpr": 2,
+ "sha1": "a2ac00fc42b9",
+ "rect": {
+  "x": 1196,
+  "y": 100.11,
+  "w": 372,
+  "h": 899.89
+ },
+ "screen": {
+  "x": 1196,
+  "y": 100.11,
+  "w": 372,
+  "h": 899.89
+ },
+ "page": {
+  "x": 1196,
+  "y": 304.11,
+  "w": 372,
+  "h": 899.89
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 340,
+  "h": 884
+ },
+ "pad": 16,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgb(10, 11, 16)",
+ "color": "rgb(231, 233, 240)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "LIVE OUTPUT\n25 items · 21.5 KB\n\n방금 12개 파일이 다시 만들어졌어요.\n\nog.png · 1200×630\nfavicon\nREADME.md\nUPDATED\nLICENSE\n1.1 KB\n.gitignore\n315 B\n.env.example\nUPDATED\n.editorconfig\n246 B\nvercel.json\n834 B\n.github/workflows/ci.yml\nUPDATED\nCHANGELOG.md\nUPDATED\nCONTRIBUTING.md\nUPDATED\n.github/ISSUE_TEMPLATE/bug_report.md\nUPDATED\n.github/ISSUE_TEMPLATE/feature_request.md\nUPDATED\n.github/PULL_REQUEST_TEMPLATE.md\n258 ",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:40:08.558Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

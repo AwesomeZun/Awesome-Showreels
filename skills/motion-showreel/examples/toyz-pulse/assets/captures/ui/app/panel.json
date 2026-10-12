@@ -1,0 +1,241 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "panel_0.png",
+   "kind": "element",
+   "px": [
+    1564,
+    1390
+   ],
+   "dpr": 2,
+   "sha1": "39a2068518ac",
+   "rect": {
+    "x": 260,
+    "y": 140.05,
+    "w": 782,
+    "h": 694.75
+   },
+   "screen": {
+    "x": 260,
+    "y": 140.05,
+    "w": 782,
+    "h": 694.75
+   },
+   "page": {
+    "x": 260,
+    "y": 560.05,
+    "w": 782,
+    "h": 694.75
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 742,
+    "h": 654.75
+   },
+   "pad": 20,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(244, 245, 247)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DUE RADAR\n\n마감 레이더\n전체 할 일\n지난 마감\n3\n주간 통계 화면 성능 개선\nMoss Timer\n!높음\n5일 지남\n보드 공유 링크 만료 버그 고치기\nLoopdeck\n!높음\n진행 중\n2일 지남\n접근성 점검(키보드 이동)\nKite Forms\n!높음\n1일 지남\n오늘\n2\n조건부 질문 분기\nKite Forms\n!높음\n진행 중\n오늘\n태그 자동완성 붙이기\nLoopdeck\n오늘\n이번 주 남은 날\n5\n알림음 볼륨 설정 추가\nMoss Timer\n내일\n응답 CSV 내보내기\nKite Forms\n2일 뒤 · 수\n드래그로 카드 정렬\nLoopdeck\n!높음\n3일 뒤 · 목\n1.5 릴리스 노트 초안\nMoss Timer\n진행 중\n4일 뒤 · 금\n에디터 기술 검토(contenteditable vs textarea)\nPapercut",
+   "alpha": true
+  },
+  {
+   "file": "panel_1.png",
+   "kind": "element",
+   "px": [
+    1140,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "7cad2a6f554b",
+   "rect": {
+    "x": 1018,
+    "y": 140.05,
+    "w": 570,
+    "h": 446.14
+   },
+   "screen": {
+    "x": 1018,
+    "y": 140.05,
+    "w": 570,
+    "h": 446.14
+   },
+   "page": {
+    "x": 1018,
+    "y": 560.05,
+    "w": 570,
+    "h": 446.14
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 530,
+    "h": 406.14
+   },
+   "pad": 20,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(244, 245, 247)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "ACTIVITY · 12 WEEKS\n\n활동 히트맵\n\n완료 28 · 배포 15\n\n8월\n9월\n10월\n월\n수\n금\n일\n\n가장 바빴던 날 8월 7일 (금) · 2건\n\n적음\n많음\n배포",
+   "alpha": true
+  },
+  {
+   "file": "panel_2.png",
+   "kind": "element",
+   "px": [
+    1140,
+    465
+   ],
+   "dpr": 2,
+   "sha1": "7e1b4f7ba99c",
+   "rect": {
+    "x": 1018,
+    "y": 562.19,
+    "w": 570,
+    "h": 232.25
+   },
+   "screen": {
+    "x": 1018,
+    "y": 562.19,
+    "w": 570,
+    "h": 232.25
+   },
+   "page": {
+    "x": 1018,
+    "y": 982.19,
+    "w": 570,
+    "h": 232.25
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 530,
+    "h": 192.25
+   },
+   "pad": 20,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(244, 245, 247)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "PORTFOLIO\n\n프로젝트 상태 분포\n\n진행 5 · 보관 1\n\n아이디어\n1\n20%\n개발 중\n2\n40%\n출시\n1\n20%\n보류\n1\n20%",
+   "alpha": true
+  },
+  {
+   "file": "panel_3.png",
+   "kind": "element",
+   "px": [
+    1564,
+    680
+   ],
+   "dpr": 2,
+   "sha1": "aeb07a4ff1e4",
+   "rect": {
+    "x": 260,
+    "y": 659.8,
+    "w": 782,
+    "h": 340.2
+   },
+   "screen": {
+    "x": 260,
+    "y": 659.8,
+    "w": 782,
+    "h": 340.2
+   },
+   "page": {
+    "x": 260,
+    "y": 1230.8,
+    "w": 782,
+    "h": 340.2
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 742,
+    "h": 320
+   },
+   "pad": 20,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(244, 245, 247)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "PROGRESS\n\n프로젝트별 진행률\n프로젝트\n67\nLoopdeck\n8/12 DONE · 1 WIP\n개발 중\n73\nMoss Timer\n8/11 DONE · 1 WIP\n출시\n0\nPapercut\n0/2 DONE\n아이디어\n50\nSignal Bay\n1/2 DONE\n보류\n79\nKite Forms\n11/14 DONE · 1 WIP\n개발 중",
+   "alpha": true
+  },
+  {
+   "file": "panel_4.png",
+   "kind": "element",
+   "px": [
+    1140,
+    888
+   ],
+   "dpr": 2,
+   "sha1": "46c807bb7f81",
+   "rect": {
+    "x": 1018,
+    "y": 555.8,
+    "w": 570,
+    "h": 444.2
+   },
+   "screen": {
+    "x": 1018,
+    "y": 555.8,
+    "w": 570,
+    "h": 444.2
+   },
+   "page": {
+    "x": 1018,
+    "y": 1230.8,
+    "w": 570,
+    "h": 444.2
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 530,
+    "h": 424.25
+   },
+   "pad": 20,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(244, 245, 247)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "RELEASE LOG\n\n최근 배포\n타임라인\n10.11\nv1.4.2\nMoss Timer\nproduction\n성공\n어제\n10.10\nv0.9.0\nKite Forms\npreview\n성공\n2일 전\n10.08\nv0.6.1\nLoopdeck\nproduction\n성공\n4일 전\n10.06\nv1.4.1\nMoss Timer\nproduction\n롤백\n6일 전\n10.05\nv1.4.0\nMoss Timer\nproduction\n성공\n1주 전\n배포 메모 추가",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:03:14.308Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".panel"
+}

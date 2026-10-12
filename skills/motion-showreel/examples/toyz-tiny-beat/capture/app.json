@@ -1,0 +1,309 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-tiny-beat); it is not committed. The same screens are live at https://tiny-beat.toyz.kr. Today's beats depend on the date: fixedTime pins 2026-10-12.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 2000
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "title",
+   "selector": ".intro__title",
+   "alpha": true,
+   "pad": 16,
+   "note": "the app's chrome wordmark"
+  },
+  {
+   "do": "layer",
+   "name": "daily",
+   "selector": ".daily",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".console"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "console",
+   "selector": ".console",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".module--seq"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "seq_lofi",
+   "selector": ".module--seq",
+   "alpha": true,
+   "pad": 16,
+   "note": "today's lo-fi beat, pattern A"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const seq = document.querySelector('.module--seq'), sr = seq.getBoundingClientRect(); const rows = [];\n seq.querySelectorAll('.seq__row').forEach(r => { const name = (r.querySelector('.seq__head') || r).innerText.split('\\n')[0]; const pads = [];\n   r.querySelectorAll('.seq__pads > *').forEach(p => { const b = p.getBoundingClientRect(); pads.push({x: b.x - sr.x, y: b.y - sr.y, w: b.width, h: b.height, cls: p.className, label: p.innerText.replace(/\\s+/g,' ').trim()}); });\n   rows.push({name, pads}); });\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({w: sr.width, h: sr.height, rows}); })()"
+  },
+  {
+   "do": "text",
+   "name": "seq_geo",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "scroll",
+   "to": ".module--roll"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "scroll",
+   "to": ".module--mix"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "mix",
+   "selector": ".module--mix",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "y": 0
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "하우스"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "불러오기"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "daily_house",
+   "selector": ".daily",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".console"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "console_house",
+   "selector": ".console",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".module--seq"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "seq_house",
+   "selector": ".module--seq",
+   "alpha": true,
+   "pad": 16,
+   "note": "today's house beat loaded from the daily seed"
+  },
+  {
+   "do": "scroll",
+   "y": 0
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "브레이크"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "불러오기"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "daily_break",
+   "selector": ".daily",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".console"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "console_break",
+   "selector": ".console",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".module--seq"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "seq_break",
+   "selector": ".module--seq",
+   "alpha": true,
+   "pad": 16,
+   "note": "today's break beat loaded from the daily seed"
+  },
+  {
+   "do": "scroll",
+   "y": 0
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "앰비언트"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "text": "불러오기"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "wait",
+   "ms": 700
+  },
+  {
+   "do": "layer",
+   "name": "daily_ambient",
+   "selector": ".daily",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".console"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "console_ambient",
+   "selector": ".console",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "scroll",
+   "to": ".module--seq"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "seq_ambient",
+   "selector": ".module--seq",
+   "alpha": true,
+   "pad": 16,
+   "note": "today's ambient beat loaded from the daily seed"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".daily",
+ "file": "daily.png",
+ "kind": "element",
+ "px": [
+  1298,
+  590
+ ],
+ "dpr": 2,
+ "sha1": "afdc957d24b8",
+ "rect": {
+  "x": 826.84,
+  "y": 137.64,
+  "w": 649.16,
+  "h": 294.83
+ },
+ "screen": {
+  "x": 826.84,
+  "y": 137.64,
+  "w": 649.16,
+  "h": 294.83
+ },
+ "page": {
+  "x": 826.84,
+  "y": 137.64,
+  "w": 649.16,
+  "h": 294.83
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 617.16,
+  "h": 262.83
+ },
+ "pad": 16,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "DAILY SEED\n\n오늘의 비트\n\n10월 12일 월요일\n\n로파이\n느긋한 스윙, 먼지 낀 드럼\n하우스\n네 박자 킥, 오프비트 햇\n브레이크\n엇박 킥, 잘게 쪼갠 햇\n앰비언트\n드문 타격, 긴 잔향\n\nSEED 901A35DB · #1\n\n불러오기\n다시 굴리기\n\n같은 날, 같은 장르, 같은 굴림 번호는 언제나 같은 비트가 나와요.",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:29:16.094Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

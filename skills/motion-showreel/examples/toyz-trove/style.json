@@ -1,0 +1,180 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "launch",
+    "audience": "people who save more links than they ever read again",
+    "title": "Trove",
+    "lang": "ko",
+    "reviewed": "Written by hand from the app itself: source/README.md and the app's own design tokens (src/index.css, read in the app repository), plus its first screen as captured. Black stage, chrome silver and one lime, Pretendard with tight tracking, monospaced upper-case labels; the chrome torus is the app's own drawing (lib/torus.ts), ported to the reel.",
+    "draft": false
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "what the app does: paste, auto tags and summary, boards, related links by cosine similarity"
+    },
+    {
+      "path": "assets/captures/ui/app/",
+      "kind": "images",
+      "notes": "the real app (its built dist, served locally) captured by capture/app.json; sample data is the app's own fictional data"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Pretendard Variable (the app's body face) and JetBrains Mono (labels); both SIL OFL 1.1"
+    }
+  ],
+  "mood": [
+    "dark",
+    "metallic",
+    "precise",
+    "quietly clever",
+    "nocturnal"
+  ],
+  "rationale": {
+    "palette": "The app's dark theme tokens as they are: bg #08090A, surface #111215/#17191D, text #EEEFF1/#B7BAC1/#8E929B and the single lime #C6F432 that marks what is new or important (the second line of its headline, 'new link' badges, the add button). The topic colours of the sample board (sky #8FD3FF, yellow #FFC94D, lilac #C9A8FF, mint #7EF0C4) are the supporting hues, used only where a topic is meant.",
+    "type": "Pretendard Variable, as in the app: headlines at 800 with -0.04em tracking, the second line in lime like the app's own masthead ('링크가 이어지면 / 지식이 돼요.'); labels in monospace capitals with wide tracking ('SCATTERED LINKS → ONE TROVE').",
+    "motion": "Precise and weighty rather than bouncy: things are pulled, not thrown. Link chips drift in depth and get drawn into the torus's orbit; real cards settle with a short damped spring; connection lines draw on with a lime pulse travelling along them. Camera pushes are slow and continuous so no hold sits still.",
+    "sound": "Dark synth in A minor at 128 BPM (exactly 8 bars in 15 s, 16 in 30 s): a cool, minor-ish pulse that suits a black-and-lime tool, with digital SFX (ticks for chips, blips for found URLs, draw-on tones for the connections).",
+    "visuals": "Four scenes in the 15 s cut: scattered links pulled into the chrome torus as the name lands; the real paste dialog finding the URLs in a chat; real cards joined by lime lines through the tags they share; the end card. The 30 s cut adds auto tags and summary from the real link form, and the real search.",
+    "narration": "Not recommended: a short launch reel for a personal tool whose copy is slogan-length Korean, shown as type; it plays muted at the top of a README or a market card."
+  },
+  "palette": {
+    "bg": "#08090A",
+    "bg2": "#0C0D0F",
+    "surface": "#17191D",
+    "ink": "#EEEFF1",
+    "ink2": "#B7BAC1",
+    "muted": "#8E929B",
+    "accent": "#C6F432",
+    "accent2": "#8FD3FF",
+    "accent3": "#FFC94D",
+    "ok": "#7EF0C4",
+    "warn": "#FFC94D",
+    "deny": "#FF7A6B",
+    "accentInk": "#0D1100",
+    "onAccent": "#0D1100",
+    "line": "#1B1D21",
+    "highlight": "#C9A8FF"
+  },
+  "fonts": {
+    "display": "\"Pretendard Variable\", sans-serif",
+    "sans": "\"Pretendard Variable\", sans-serif",
+    "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+    "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [
+      {
+        "family": "Pretendard Variable",
+        "path": "source/fonts/PretendardVariable.woff2",
+        "weight": "45 920",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      84,
+      112,
+      150,
+      200
+    ],
+    "displayWeight": 800,
+    "bodyWeight": 500,
+    "tracking": -0.04,
+    "trackingLabel": 0.15
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#EEEFF1",
+      "bg": "none",
+      "y": 960
+    },
+    "radius": 10
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.0,
+      "z": 0.62
+    },
+    "overshoot": 0.04,
+    "ease": "outC",
+    "transitions": [
+      "match",
+      "zoomInto",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.035,
+    "vignette": {
+      "a": 0.35,
+      "color": "#000000"
+    },
+    "bloom": 0.12
+  },
+  "sound": {
+    "bpm": 128,
+    "key": "A",
+    "mode": "minor",
+    "preset": "dark-synth",
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.35,
+      "groove": 0.7,
+      "breakdown": 0.4,
+      "drop": 1.0,
+      "outro": 0.5
+    },
+    "instruments": [
+      "pad",
+      "saw-pluck",
+      "saw-bass",
+      "stab",
+      "lead",
+      "kick",
+      "clap",
+      "hats"
+    ]
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[calm, clear]",
+    "lang": "ko-KR"
+  },
+  "review": []
+}

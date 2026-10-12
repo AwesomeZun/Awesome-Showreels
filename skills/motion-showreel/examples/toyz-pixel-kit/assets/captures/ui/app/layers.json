@@ -1,0 +1,1662 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T13:03:20.894Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   2400,
+   1500
+  ]
+ },
+ "viewport": [
+  2400,
+  1500
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "soom_0": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_0.png",
+   "kind": "element",
+   "px": [
+    700,
+    700
+   ],
+   "dpr": 2,
+   "sha1": "dad3a6719f26",
+   "rect": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "screen": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "page": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 350
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "soom_1": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_1.png",
+   "kind": "element",
+   "px": [
+    700,
+    876
+   ],
+   "dpr": 2,
+   "sha1": "cbdf4cf29089",
+   "rect": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "screen": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "page": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 438
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "soom_2": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_2.png",
+   "kind": "element",
+   "px": [
+    494,
+    878
+   ],
+   "dpr": 2,
+   "sha1": "143a0f2cd0b9",
+   "rect": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "screen": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "page": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 247,
+    "h": 439
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "soom_3": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_3.png",
+   "kind": "element",
+   "px": [
+    1120,
+    588
+   ],
+   "dpr": 2,
+   "sha1": "fa4aeb9209de",
+   "rect": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "screen": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "page": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 294
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "soom_4": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_4.png",
+   "kind": "element",
+   "px": [
+    1120,
+    630
+   ],
+   "dpr": 2,
+   "sha1": "6363eeb01b64",
+   "rect": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "screen": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "page": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 315
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "soom_5": {
+   "step": "layer",
+   "note": "숨결 요가 스튜디오: 10월 저녁 클래스 소개 (분할 레이아웃), six sizes",
+   "file": "soom_5.png",
+   "kind": "element",
+   "px": [
+    2000,
+    666
+   ],
+   "dpr": 2,
+   "sha1": "5e21c806b740",
+   "rect": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "screen": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "page": {
+    "x": 700,
+    "y": 1417.53,
+    "w": 1000,
+    "h": 333
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1000,
+    "h": 333
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_0": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_0.png",
+   "kind": "element",
+   "px": [
+    700,
+    700
+   ],
+   "dpr": 2,
+   "sha1": "cf3c424b38f8",
+   "rect": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "screen": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "page": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 350
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_1": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_1.png",
+   "kind": "element",
+   "px": [
+    700,
+    876
+   ],
+   "dpr": 2,
+   "sha1": "cab1ba22b5a6",
+   "rect": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "screen": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "page": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 438
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_2": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_2.png",
+   "kind": "element",
+   "px": [
+    494,
+    878
+   ],
+   "dpr": 2,
+   "sha1": "6fc772fa4f50",
+   "rect": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "screen": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "page": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 247,
+    "h": 439
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_3": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_3.png",
+   "kind": "element",
+   "px": [
+    1120,
+    588
+   ],
+   "dpr": 2,
+   "sha1": "c172e08ed8c7",
+   "rect": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "screen": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "page": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 294
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_4": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_4.png",
+   "kind": "element",
+   "px": [
+    1120,
+    630
+   ],
+   "dpr": 2,
+   "sha1": "2e8879580220",
+   "rect": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "screen": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "page": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 315
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "morae_5": {
+   "step": "layer",
+   "note": "모래알 베이커리: 가을 신메뉴 포스터 (타이포 포스터), six sizes",
+   "file": "morae_5.png",
+   "kind": "element",
+   "px": [
+    2000,
+    666
+   ],
+   "dpr": 2,
+   "sha1": "2d4e546b2b0b",
+   "rect": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "screen": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "page": {
+    "x": 700,
+    "y": 1417.53,
+    "w": 1000,
+    "h": 333
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1000,
+    "h": 333
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_0": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_0.png",
+   "kind": "element",
+   "px": [
+    700,
+    700
+   ],
+   "dpr": 2,
+   "sha1": "aac94a37bdec",
+   "rect": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "screen": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "page": {
+    "x": 595,
+    "y": 392.03,
+    "w": 350,
+    "h": 350
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 350
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_1": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_1.png",
+   "kind": "element",
+   "px": [
+    700,
+    876
+   ],
+   "dpr": 2,
+   "sha1": "65342238550d",
+   "rect": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "screen": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "page": {
+    "x": 1025,
+    "y": 348.03,
+    "w": 350,
+    "h": 438
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 350,
+    "h": 438
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_2": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_2.png",
+   "kind": "element",
+   "px": [
+    494,
+    878
+   ],
+   "dpr": 2,
+   "sha1": "468b8b9da042",
+   "rect": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "screen": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "page": {
+    "x": 1506.5,
+    "y": 347.53,
+    "w": 247,
+    "h": 439
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 247,
+    "h": 439
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_3": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_3.png",
+   "kind": "element",
+   "px": [
+    1120,
+    588
+   ],
+   "dpr": 2,
+   "sha1": "fbb434b0b85b",
+   "rect": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "screen": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "page": {
+    "x": 597.5,
+    "y": 955.03,
+    "w": 560,
+    "h": 294
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 294
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_4": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_4.png",
+   "kind": "element",
+   "px": [
+    1120,
+    630
+   ],
+   "dpr": 2,
+   "sha1": "3c76ec8c0c73",
+   "rect": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "screen": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "page": {
+    "x": 1242.5,
+    "y": 944.53,
+    "w": 560,
+    "h": 315
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 315
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "pado_5": {
+   "step": "layer",
+   "note": "PADO Coffee Roasters: 금요일 로스팅 소식 (사진 오버레이), six sizes",
+   "file": "pado_5.png",
+   "kind": "element",
+   "px": [
+    2000,
+    666
+   ],
+   "dpr": 2,
+   "sha1": "2ee0c2b926d8",
+   "rect": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "screen": {
+    "x": 700,
+    "y": 1166.53,
+    "w": 1000,
+    "h": 333
+   },
+   "page": {
+    "x": 700,
+    "y": 1417.53,
+    "w": 1000,
+    "h": 333
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1000,
+    "h": 333
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/0px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_0": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_0.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "ca383367700a",
+   "rect": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_1": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_1.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "fe3dafeaca1d",
+   "rect": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_2": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_2.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "6654009b6e37",
+   "rect": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_3": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_3.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "94cfd901900e",
+   "rect": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_4": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_4.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "0fa4acf640a4",
+   "rect": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_5": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_5.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "d64421f01de7",
+   "rect": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_6": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_6.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "ecfa13144e09",
+   "rect": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_7": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_7.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "9315d36cd340",
+   "rect": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_8": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_8.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "b93d7aca3684",
+   "rect": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_9": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_9.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "da4c85c40592",
+   "rect": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_10": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_10.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "55cac7bc306f",
+   "rect": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_11": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_11.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "a4d57f699338",
+   "rect": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_12": {
+   "step": "layer",
+   "note": "the thirteen templates",
+   "file": "tpl_12.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "a19275de7892",
+   "rect": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "kitcards_0": {
+   "step": "layer",
+   "note": "the three kits",
+   "file": "kitcards_0.png",
+   "kind": "element",
+   "px": [
+    600,
+    189
+   ],
+   "dpr": 2,
+   "sha1": "4a03c6df8bb1",
+   "rect": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "screen": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "page": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 94.39
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(17, 16, 19)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "모래알 베이커리\n고운바탕 / Pretendard",
+   "alpha": true
+  },
+  "kitcards_1": {
+   "step": "layer",
+   "note": "the three kits",
+   "file": "kitcards_1.png",
+   "kind": "element",
+   "px": [
+    600,
+    197
+   ],
+   "dpr": 2,
+   "sha1": "befd591dd048",
+   "rect": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "screen": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "page": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 98.64
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(23, 21, 26)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "숨결 요가 스튜디오\n사용 중\nPretendard / Pretendard",
+   "alpha": true
+  },
+  "kitcards_2": {
+   "step": "layer",
+   "note": "the three kits",
+   "file": "kitcards_2.png",
+   "kind": "element",
+   "px": [
+    600,
+    205
+   ],
+   "dpr": 2,
+   "sha1": "d462c9f23e94",
+   "rect": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "screen": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "page": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 102.25
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(17, 16, 19)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "PADO Coffee Roasters\nPretendard / 시스템 고딕\n대비 1",
+   "alpha": true
+  }
+ },
+ "warnings": []
+}

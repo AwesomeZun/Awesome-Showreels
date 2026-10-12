@@ -1,0 +1,392 @@
+{
+ "name": "ui",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:50.451Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "detail": {
+   "step": "layer",
+   "note": "a place's detail: 붉은벽돌 커피",
+   "selector": ".side-panel",
+   "file": "detail.png",
+   "kind": "element",
+   "px": [
+    792,
+    1936
+   ],
+   "dpr": 2,
+   "sha1": "3dcfca512b02",
+   "rect": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "screen": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "page": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 396,
+    "h": 968
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 238)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "목록\n\n카페\n예시\n\n붉은벽돌 커피\n\n옛 공장 2층, 창가 자리가 넓어요.\n\n표시 없음\n가 봤어요\n가고 싶어요\n#조용함\n#넓은자리\n상세 메모\n\n오전 11시 전에는 조용합니다. 드립은 산미가 있는 쪽이 많아요.\n\n이 장소를 지나는 코스\n성수 붉은벽돌 골목 한 바퀴\n\n37.54510, 127.05320\n\n지도에서 이 마커를 끌면 위치를 옮길 수 있어요.\n\n수정\n삭제",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:08:43.507Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "hoods": {
+   "step": "layer",
+   "note": "the neighbourhood bar",
+   "selector": ".hoods",
+   "file": "hoods.png",
+   "kind": "element",
+   "px": [
+    1276,
+    92
+   ],
+   "dpr": 2,
+   "sha1": "7bc5edc1bbb8",
+   "rect": {
+    "x": 428,
+    "y": 16,
+    "w": 638.16,
+    "h": 46
+   },
+   "screen": {
+    "x": 428,
+    "y": 16,
+    "w": 638.16,
+    "h": 46
+   },
+   "page": {
+    "x": 428,
+    "y": 16,
+    "w": 638.16,
+    "h": 46
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 638.16,
+    "h": 46
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 238)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "01\nSEONGSU\n성수\n02\nYEONNAM\n연남\n03\nEULJIRO\n을지로\n04\nSEOCHON\n서촌\nALL\n전체 보기",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:08:40.047Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "map_route": {
+   "step": "shot",
+   "note": "the Seongsu walk 성수 붉은벽돌 골목 한 바퀴, framed by the app",
+   "file": "map_route.png",
+   "kind": "screen",
+   "px": [
+    2600,
+    1500
+   ],
+   "dpr": 1,
+   "sha1": "7c0411b957e7",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "scroll": [
+    0,
+    0
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:06:20.437Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "map_z16": {
+   "step": "shot",
+   "note": "Seongsu at zoom 16",
+   "file": "map_z16.png",
+   "kind": "screen",
+   "px": [
+    2600,
+    1500
+   ],
+   "dpr": 1,
+   "sha1": "aafddbf25f31",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "scroll": [
+    0,
+    0
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:06:14.141Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "route": {
+   "step": "layer",
+   "note": "the walk's detail: distance, time, the places on the way",
+   "selector": ".side-panel",
+   "file": "route.png",
+   "kind": "element",
+   "px": [
+    792,
+    1936
+   ],
+   "dpr": 2,
+   "sha1": "60c3d2779ba4",
+   "rect": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "screen": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "page": {
+    "x": 16,
+    "y": 16,
+    "w": 396,
+    "h": 968
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 396,
+    "h": 968
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 238)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "목록\n\n산책 코스 · 쉬움\n예시\n\n성수 붉은벽돌 골목 한 바퀴\n총 거리\n1.39km\n예상 시간\n19분\n경유점\n10\n\n도보 시속 4.5km 기준\n\n공장 골목을 돌아 옥상에서 끝나는 짧은 코스예요. 평일 오후가 한산합니다.\n\n경유 장소\n5\n01\n연무장길 옥상\n02\n붉은벽돌 커피\n03\n낮은지붕 식탁\n04\n스틸앤우드 공방\n05\n골목 구두집\n구간별 거리\n9구간\n내보내기\nGPX\nGeoJSON\n인쇄용 카드\n코스 수정\n삭제",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:08:48.424Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "share": {
+   "step": "layer",
+   "note": "the share dialog: one link carries the walk",
+   "selector": "dialog[open]",
+   "file": "share.png",
+   "kind": "element",
+   "px": [
+    1120,
+    829
+   ],
+   "dpr": 2,
+   "sha1": "623570dadd9b",
+   "rect": {
+    "x": 520,
+    "y": 292.8,
+    "w": 560,
+    "h": 414.41
+   },
+   "screen": {
+    "x": 520,
+    "y": 292.8,
+    "w": 560,
+    "h": 414.41
+   },
+   "page": {
+    "x": 520,
+    "y": 292.8,
+    "w": 560,
+    "h": 414.41
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 560,
+    "h": 414.41
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(243, 243, 238)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "SHARE /\n성수 붉은벽돌 골목 한 바퀴\n\n공유 링크\n\n코스 1개 · 장소 5곳을 링크 하나에 담았어요. 받은 사람은 미리 본 뒤 자기 지도에 추가할 수 있어요.\n\n링크\n2,046자\n\n서버에 올리지 않고 링크 주소 안에 데이터를 담아요. 링크를 가진 사람은 누구나 내용을 볼 수 있어요.\n\n링크 복사\n닫기",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:08:50.451Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "slab": {
+   "step": "layer",
+   "note": "the app's lime title slab",
+   "selector": ".slab",
+   "file": "slab.png",
+   "kind": "element",
+   "px": [
+    788,
+    433
+   ],
+   "dpr": 2,
+   "sha1": "99621a2022e9",
+   "rect": {
+    "x": 17,
+    "y": 17,
+    "w": 394,
+    "h": 216.33
+   },
+   "screen": {
+    "x": 17,
+    "y": 17,
+    "w": 394,
+    "h": 216.33
+   },
+   "page": {
+    "x": 17,
+    "y": 17,
+    "w": 394,
+    "h": 216.33
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 394,
+    "h": 216.33
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(215, 247, 91)",
+   "color": "rgb(11, 11, 12)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "LOCAL MAP / SEOUL\nOFF THE TOURIST GRID\nOFFGRID\n\n관광지 밖에서 찾는 나만의 로컬 지도.\n\n장소 추가\n코스 그리기",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:08:39.838Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  },
+  "map_z14": {
+   "step": "shot",
+   "note": "Seoul at zoom 13 (the app's first view)",
+   "file": "map_z14.png",
+   "kind": "screen",
+   "px": [
+    2600,
+    1500
+   ],
+   "dpr": 1,
+   "sha1": "b6dae4ad710c",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 2600,
+    "h": 1500
+   },
+   "scroll": [
+    0,
+    0
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:06:08.009Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0"
+  }
+ },
+ "warnings": [],
+ "note": "merged index of capture/map.json (map_*, dpr 1, 2600 x 1500) and capture/ui.json (panels, dpr 2, 1600 x 1000)"
+}

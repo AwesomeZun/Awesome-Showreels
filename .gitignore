@@ -36,3 +36,6 @@ docs/readme-reel/hero/assets/clips/
 # gpt-image-2 originals and Codex logs (the prompts and the pixelized assets are committed)
 skills/motion-showreel/examples/*/source/gen/**/*.png
 skills/motion-showreel/examples/*/source/gen/**/codex.log
+
+# toyz app builds used only to capture their real UI (the apps' repos are private; captures are committed)
+skills/motion-showreel/examples/toyz-*/source/app/

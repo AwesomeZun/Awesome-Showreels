@@ -1,0 +1,199 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "people who want music that fits the mood they are in, and a diary of those moods",
+  "title": "MOOD FM",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/app.css in the app repository), its colour and mood code (domain/color.ts, domain/mood.ts: eight stations, OKLCH palettes mixed by inverse distance), its track names (domain/music.ts) and its captured archive. The stage colour in every frame is computed by the app's own paletteAt for the mood on screen; coral #F08464 is the on-air lamp.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "a small radio tuned to your mood: a 2-axis mood pad and an FM dial with eight stations; colour and generative music follow the mood; moods are kept as a colour diary"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app's archive (its production build, served locally) captured by capture/app.json: September 2026 with each day painted in that day's mood, and the year in pixels"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "warm",
+  "nocturnal",
+  "dreamy",
+  "intimate",
+  "chromatic"
+ ],
+ "rationale": {
+  "palette": "No fixed palette: the background is the app's stage gradient (radial m3 at 82% 18%, radial m1 at 12% 92%, linear 135deg m1 to m2 to m3) for the mood on screen, computed by the app's own paletteAt over its eight stations and four corner anchors in OKLab; text takes the app's ink (#0B0B0C or #F6F2EE) for contrast; coral #F08464 is the on-air lamp and the dial's needle.",
+  "type": "Pretendard Variable at 900 with -0.065em for the frequency (the app's 93.1), 800 for headlines and station names; JetBrains Mono capitals for the ticker and labels (MHz, STATION 03 OF 08).",
+  "motion": "A radio being tuned: the coral needle sweeps the FM scale and settles on stations, the frequency rolls, the whole frame's colour glides with it; the mood pad's puck is dragged and the colour follows; the diary's days light up one by one.",
+  "sound": "Lo-fi in F major at 96 BPM (6 bars in 15 s, 12 in 30 s): warm keys and dusty drums, a late-night radio under a mood dial, soft organic SFX for the needle and the lamp.",
+  "visuals": "Four scenes in the 15 s cut: the name and the app's line on the stage as the lamp goes on air; the dial swept from 비 to 들뜸 with the colour following; September's diary lighting up in its moods; the end card. The 30 s cut adds the mood pad.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#0B0B0C",
+  "bg2": "#141416",
+  "surface": "#1C1C20",
+  "ink": "#F6F2EE",
+  "ink2": "#D2CCC6",
+  "muted": "#9E9893",
+  "accent": "#F08464",
+  "accent2": "#5D8FA8",
+  "accent3": "#E3B04B",
+  "ok": "#7FD1A8",
+  "warn": "#E3B04B",
+  "deny": "#F07C7C",
+  "accentInk": "#0B0B0C",
+  "onAccent": "#0B0B0C",
+  "line": "#2A2A2E",
+  "highlight": "#F08464"
+ },
+ "paletteAlt": {
+  "bg": "#F6F2EE",
+  "bg2": "#EDE6DF",
+  "surface": "#FFFFFF",
+  "ink": "#0B0B0C",
+  "ink2": "#33302D",
+  "muted": "#6B655F",
+  "accent": "#C2502F",
+  "accent2": "#2F6278",
+  "accent3": "#8A6418",
+  "ok": "#2F7A55",
+  "warn": "#8A6418",
+  "deny": "#B3261E",
+  "accentInk": "#FFFFFF",
+  "onAccent": "#FFFFFF",
+  "line": "#D8D0C8",
+  "highlight": "#C2502F",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.04,
+  "trackingLabel": 0.12
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#F6F2EE",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 28
+ },
+ "motion": {
+  "pace": "calm",
+  "spring": {
+   "f": 1.8,
+   "z": 0.7
+  },
+  "overshoot": 0.04,
+  "ease": "ioC",
+  "transitions": [
+   "cut",
+   "flash",
+   "zoomInto"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.05,
+  "vignette": {
+   "a": 0.3,
+   "color": "#000000"
+  },
+  "bloom": 0.1
+ },
+ "sound": {
+  "bpm": 96,
+  "key": "F",
+  "mode": "major",
+  "preset": "lofi",
+  "drums": "light",
+  "sfx": "organic",
+  "energy": {
+   "intro": 0.4,
+   "groove": 0.65,
+   "breakdown": 0.45,
+   "drop": 0.8,
+   "outro": 0.45
+  },
+  "instruments": [
+   "epiano",
+   "pad",
+   "bass",
+   "kick",
+   "snare",
+   "hats",
+   "rim",
+   "crackle"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[warm, soft]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

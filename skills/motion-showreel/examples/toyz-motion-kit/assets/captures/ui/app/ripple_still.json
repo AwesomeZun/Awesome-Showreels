@@ -1,0 +1,59 @@
+{
+ "step": "layer",
+ "note": "ripple: before",
+ "selector": ".frame",
+ "file": "ripple_still.png",
+ "kind": "element",
+ "px": [
+  1904,
+  1156
+ ],
+ "dpr": 2,
+ "sha1": "7bcce28a76b1",
+ "rect": {
+  "x": 281.0,
+  "y": 338.61,
+  "w": 640.0,
+  "h": 420.0
+ },
+ "screen": {
+  "x": 125,
+  "y": 314.61,
+  "w": 952,
+  "h": 578
+ },
+ "page": {
+  "x": 125,
+  "y": 314.61,
+  "w": 952,
+  "h": 578
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 952,
+  "h": 578
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(10, 13, 31)",
+ "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:56:53.075Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "cropped": [
+  156.0,
+  24.0,
+  640.0,
+  420.0
+ ]
+}

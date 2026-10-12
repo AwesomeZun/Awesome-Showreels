@@ -1,0 +1,38 @@
+README.md
+1.2 KB
+LICENSE
+1.1 KB
+.gitignore
+315 B
+.env.example
+408 B
+.editorconfig
+246 B
+vercel.json
+834 B
+.github/workflows/ci.yml
+867 B
+CHANGELOG.md
+559 B
+CONTRIBUTING.md
+1.0 KB
+.github/ISSUE_TEMPLATE/bug_report.md
+381 B
+.github/ISSUE_TEMPLATE/feature_request.md
+223 B
+.github/PULL_REQUEST_TEMPLATE.md
+258 B
+public/robots.txt
+76 B
+public/sitemap.xml
+347 B
+public/site.webmanifest
+607 B
+public/404.html
+1.6 KB
+snippets/meta-tags.html
+1.9 KB
+styles/tokens.css
+1.4 KB
+styles/components.css
+8.1 KB

@@ -1,0 +1,512 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:46:02.583Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "list_1": {
+   "step": "layer",
+   "selector": ".today-list",
+   "file": "list_1.png",
+   "kind": "element",
+   "px": [
+    1330,
+    1354
+   ],
+   "dpr": 2,
+   "sha1": "40a58dda8ed4",
+   "rect": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "screen": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "page": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 665,
+    "h": 677.09
+   },
+   "pad": 0,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CHECK-IN\n\n오늘의 고리\n오늘\n10.12\n어제\n10.11\n오늘 쉬어가기\n\n이번 달 2/2회 남음\n쉬어가는 날은 모든 루틴이 면제되어 스트릭이 끊기지 않아요.\n\n3\n물 8잔\n\n매일\n하루 8잔\n3일 연속\n\n3/8잔\n아침 스트레칭\n\n매일\n15일 연속\n\n“출근 전에 5분.”\n\n책 20쪽\n\n평일\n5일 연속\n\n주 N회 · 여유 있는 루틴\n하면 보너스로 세고, 안 해도 오늘 달성률은 그대로예요.\n\n달리기\n오늘은 선택\n\n주 3회\n이번 주 0/3\n4주 연속\n\n루틴 추가",
+   "alpha": true
+  },
+  "list_2": {
+   "step": "layer",
+   "selector": ".today-list",
+   "file": "list_2.png",
+   "kind": "element",
+   "px": [
+    1330,
+    1354
+   ],
+   "dpr": 2,
+   "sha1": "bcea5293c8f2",
+   "rect": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "screen": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "page": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 665,
+    "h": 677.09
+   },
+   "pad": 0,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CHECK-IN\n\n오늘의 고리\n오늘\n10.12\n어제\n10.11\n오늘 쉬어가기\n\n이번 달 2/2회 남음\n쉬어가는 날은 모든 루틴이 면제되어 스트릭이 끊기지 않아요.\n\n물 8잔\n\n매일\n하루 8잔\n4일 연속\n\n8/8잔\n아침 스트레칭\n\n매일\n15일 연속\n\n“출근 전에 5분.”\n\n책 20쪽\n\n평일\n5일 연속\n\n주 N회 · 여유 있는 루틴\n하면 보너스로 세고, 안 해도 오늘 달성률은 그대로예요.\n\n달리기\n오늘은 선택\n\n주 3회\n이번 주 0/3\n4주 연속\n\n루틴 추가",
+   "alpha": true
+  },
+  "list_3": {
+   "step": "layer",
+   "selector": ".today-list",
+   "file": "list_3.png",
+   "kind": "element",
+   "px": [
+    1330,
+    1354
+   ],
+   "dpr": 2,
+   "sha1": "ec439d2da6a5",
+   "rect": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "screen": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "page": {
+    "x": 715,
+    "y": 135,
+    "w": 665,
+    "h": 677.09
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 665,
+    "h": 677.09
+   },
+   "pad": 0,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CHECK-IN\n\n오늘의 고리\n오늘\n10.12\n어제\n10.11\n오늘 쉬어가기\n\n이번 달 2/2회 남음\n쉬어가는 날은 모든 루틴이 면제되어 스트릭이 끊기지 않아요.\n\n물 8잔\n\n매일\n하루 8잔\n4일 연속\n\n8/8잔\n아침 스트레칭\n\n매일\n15일 연속\n\n“출근 전에 5분.”\n\n책 20쪽\n\n평일\n6일 연속\n\n주 N회 · 여유 있는 루틴\n하면 보너스로 세고, 안 해도 오늘 달성률은 그대로예요.\n\n달리기\n오늘은 선택\n\n주 3회\n이번 주 0/3\n4주 연속\n\n루틴 추가",
+   "alpha": true
+  },
+  "cheer": {
+   "step": "layer",
+   "note": "a cheer from the example crew",
+   "selector": ".side-card--cheer",
+   "file": "cheer.png",
+   "kind": "element",
+   "px": [
+    752,
+    360
+   ],
+   "dpr": 2,
+   "sha1": "c8a07f41c6b6",
+   "rect": {
+    "x": 1004,
+    "y": 820.09,
+    "w": 376,
+    "h": 179.91
+   },
+   "screen": {
+    "x": 1004,
+    "y": 820.09,
+    "w": 376,
+    "h": 179.91
+   },
+   "page": {
+    "x": 1004,
+    "y": 832.09,
+    "w": 376,
+    "h": 179.91
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 376,
+    "h": 180
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(247, 249, 253, 0.86)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CHEERS\n\n응원함\n스트레칭 2주째라니, 대단해요. 저도 오늘부터 따라갈게요.\n서\n서아 · 새벽 루프 · 5시간 전예시",
+   "alpha": true
+  },
+  "members_0": {
+   "step": "layer",
+   "note": "the crew board: me and the three example members, this week",
+   "file": "members_0.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "8df3e6501b0d",
+   "rect": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 220,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "나\n나\n\n내 기록으로 실시간 계산\n\n100%\n\n이번 주 달성률\n\n15일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5",
+   "alpha": true
+  },
+  "members_1": {
+   "step": "layer",
+   "note": "the crew board: me and the three example members, this week",
+   "file": "members_1.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "714d3ea4e30b",
+   "rect": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 514,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "하\n하늘\n예시\n\n47분 전 카드\n\n100%\n\n이번 주 달성률\n\n21일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5\n응원 보내기",
+   "alpha": true
+  },
+  "members_2": {
+   "step": "layer",
+   "note": "the crew board: me and the three example members, this week",
+   "file": "members_2.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "02e9106c3267",
+   "rect": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 808,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "도\n도윤\n예시\n\n3시간 전 카드\n\n50%\n\n이번 주 달성률\n\n4일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n0/5\n응원 보내기",
+   "alpha": true
+  },
+  "members_3": {
+   "step": "layer",
+   "note": "the crew board: me and the three example members, this week",
+   "file": "members_3.png",
+   "kind": "element",
+   "px": [
+    556,
+    970
+   ],
+   "dpr": 2,
+   "sha1": "af21f5bef74c",
+   "rect": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "screen": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "page": {
+    "x": 1102,
+    "y": 492.27,
+    "w": 278,
+    "h": 484.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 278,
+    "h": 484.75
+   },
+   "pad": 0,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgba(247, 249, 253, 0.9)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "서\n서아\n예시\n\n5시간 전 카드\n\n75%\n\n이번 주 달성률\n\n9일\n\n최고 스트릭\n\n월\n화\n수\n목\n금\n토\n일\n물 8잔\n1/7\n아침 스트레칭\n1/7\n달리기\n0/3\n책 20쪽\n1/5\n응원 보내기",
+   "alpha": true
+  },
+  "crew_head": {
+   "step": "layer",
+   "selector": ".page-head--board",
+   "file": "crew_head.png",
+   "kind": "element",
+   "px": [
+    2320,
+    357
+   ],
+   "dpr": 2,
+   "sha1": "78c6c941491f",
+   "rect": {
+    "x": 220,
+    "y": 135,
+    "w": 1160,
+    "h": 178.52
+   },
+   "screen": {
+    "x": 220,
+    "y": 135,
+    "w": 1160,
+    "h": 178.52
+   },
+   "page": {
+    "x": 220,
+    "y": 135,
+    "w": 1160,
+    "h": 178.52
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1160,
+    "h": 178.52
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "TOGETHER\n/ CREW BOARD / 10.12 – 10.18\n예시 크루\n\n새벽 루프\n물 8잔\n매일\n아침 스트레칭\n매일\n달리기\n주 3회\n책 20쪽\n평일\n초대 링크\n내 체크인 카드 보내기\n카드 가져오기\n요약 이미지\n이름 바꾸기\n크루 지우기",
+   "alpha": true
+  },
+  "heatmap": {
+   "step": "layer",
+   "note": "the last sixteen weeks",
+   "selector": "#__heat",
+   "file": "heatmap.png",
+   "kind": "element",
+   "px": [
+    2320,
+    1045
+   ],
+   "dpr": 2,
+   "sha1": "c9b826e5e60c",
+   "rect": {
+    "x": 220,
+    "y": 477.25,
+    "w": 1160,
+    "h": 522.5
+   },
+   "screen": {
+    "x": 220,
+    "y": 477.25,
+    "w": 1160,
+    "h": 522.5
+   },
+   "page": {
+    "x": 220,
+    "y": 548.25,
+    "w": 1160,
+    "h": 522.5
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1160,
+    "h": 522.5
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(247, 249, 253, 0.86)",
+   "color": "rgb(22, 38, 74)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "최근 16주\n6.29 – 10.18\n6월\n7월\n8월\n9월\n10월\n월\n수\n금\n최근 16주 동안 기록이 있는 35일 중 20일을 모두 채웠어요.\n적음\n모두\n쉼",
+   "alpha": true
+  }
+ },
+ "warnings": []
+}

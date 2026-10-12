@@ -1,0 +1,609 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "tpl_0.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "ca383367700a",
+   "rect": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_1.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "fe3dafeaca1d",
+   "rect": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 237,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_2.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "6654009b6e37",
+   "rect": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_3.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "94cfd901900e",
+   "rect": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 412.59,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_4.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "0fa4acf640a4",
+   "rect": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_5.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "d64421f01de7",
+   "rect": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 588.19,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_6.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "ecfa13144e09",
+   "rect": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_7.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "9315d36cd340",
+   "rect": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 763.78,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_8.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "b93d7aca3684",
+   "rect": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_9.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "da4c85c40592",
+   "rect": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 939.38,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_10.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "55cac7bc306f",
+   "rect": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_11.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "a4d57f699338",
+   "rect": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 141.25,
+    "y": 1114.97,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  {
+   "file": "tpl_12.png",
+   "kind": "element",
+   "px": [
+    230,
+    288
+   ],
+   "dpr": 2,
+   "sha1": "a19275de7892",
+   "rect": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "screen": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "page": {
+    "x": 14.75,
+    "y": 1290.56,
+    "w": 115,
+    "h": 144
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 115,
+    "h": 144
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(189, 181, 193)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T13:03:18.827Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".tpl-grid .tpl .thumb canvas"
+}

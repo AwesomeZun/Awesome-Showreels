@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "a cheer from the example crew",
+ "selector": ".side-card--cheer",
+ "file": "cheer.png",
+ "kind": "element",
+ "px": [
+  752,
+  360
+ ],
+ "dpr": 2,
+ "sha1": "c8a07f41c6b6",
+ "rect": {
+  "x": 1004,
+  "y": 820.09,
+  "w": 376,
+  "h": 179.91
+ },
+ "screen": {
+  "x": 1004,
+  "y": 820.09,
+  "w": 376,
+  "h": 179.91
+ },
+ "page": {
+  "x": 1004,
+  "y": 832.09,
+  "w": 376,
+  "h": 179.91
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 376,
+  "h": 180
+ },
+ "pad": 0,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(247, 249, 253, 0.86)",
+ "color": "rgb(22, 38, 74)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "CHEERS\n\n응원함\n스트레칭 2주째라니, 대단해요. 저도 오늘부터 따라갈게요.\n서\n서아 · 새벽 루프 · 5시간 전예시",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:45:56.323Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

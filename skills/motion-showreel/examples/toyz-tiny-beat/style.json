@@ -1,0 +1,36 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {"purpose": "launch", "audience": "people who want to make a small beat every day", "title": "Tiny Beat", "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository) and its captured screens. A black groovebox with chrome knobs, lime LED pads and a green LCD; the reel plays its sequencer in time with its own music, step by step.", "draft": false},
+  "source": [
+    {"path": "source/README.md", "kind": "readme", "notes": "a web groovebox: 16 steps, 4 drum and 2 melody tracks synthesized with Web Audio, a daily seeded beat in four genres, archive, share links, WAV export"},
+    {"path": "assets/captures/ui/app/", "kind": "images", "notes": "the real app (its production build, served locally, date pinned to 2026-10-12) captured by capture/app.json; pads.json holds the pad states read from those captures"},
+    {"path": "source/fonts/", "kind": "other", "notes": "Pretendard Variable (the app's face) and JetBrains Mono (its mono face, labels and LCD); SIL OFL 1.1"}
+  ],
+  "mood": ["nocturnal", "tactile", "groovy", "hardware", "playful"],
+  "rationale": {
+    "palette": "The app's device: near-black #060607 and #111113 panels, chrome for knobs and keys, text #F3F3F1 / #B9B9BF / #8F8F97, and the lime LED #C6F432 with its hot #E2FF7A and deep #5B7412 steps for lit pads, the LCD and anything that sounds.",
+    "type": "Pretendard Variable for headlines, heavy and tight, white with the second line lime; the app's chrome wordmark ('Tiny Beat.' with a lime dot) is used as captured; JetBrains Mono capitals for labels and readouts, as on the device ('WEB AUDIO GROOVEBOX', 'BPM 073').",
+    "motion": "Clocked: a playhead sweeps the 16 steps once per bar in time with the reel's music, and every lit pad it passes flashes; LED rows count the beats; panels drop in with a short damped spring like hardware being set down. Between hits the device breathes with the beat.",
+    "sound": "Lo-fi in A minor at 80 BPM (5 bars in 15 s, 10 in 30 s): today's beat in the app is a lo-fi in A minor, so the reel's music is the same genre in the same key, with organic SFX (taps on pads, a soft click for the dice).",
+    "visuals": "Four scenes in the 15 s cut: the chrome wordmark lands over a row of LEDs counting the steps; the real sequencer plays today's lo-fi beat, each pad flashing as the playhead passes; the daily seed rolls through lo-fi, house, break and ambient, the real sequencer changing pattern with it; the end card. The 30 s cut adds the mixer and WAV export.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {"bg": "#060607", "bg2": "#0B0B0D", "surface": "#111113", "ink": "#F3F3F1", "ink2": "#B9B9BF", "muted": "#8F8F97",
+    "accent": "#C6F432", "accent2": "#E2FF7A", "accent3": "#D4D4D8", "ok": "#9EC424", "warn": "#E2FF7A", "deny": "#FF7A6B",
+    "accentInk": "#0D1100", "onAccent": "#0D1100", "line": "#1E1E22", "highlight": "#5B7412"},
+  "fonts": {"display": "\"Pretendard Variable\", sans-serif", "sans": "\"Pretendard Variable\", sans-serif", "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace", "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [{"family": "Pretendard Variable", "path": "source/fonts/PretendardVariable.woff2", "weight": "45 920", "style": "normal"},
+              {"family": "JetBrains Mono", "path": "source/fonts/JetBrainsMono-latin-wght.woff2", "weight": "100 800", "style": "normal"}]},
+  "type": {"scale": [18, 22, 28, 36, 48, 64, 84, 112, 150, 200], "displayWeight": 850, "bodyWeight": 500, "tracking": -0.04, "trackingLabel": 0.15},
+  "layout": {"theme": "dark", "margin": 120, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": {"enabled": false, "font": "sans", "size": 40, "fg": "#F3F3F1", "bg": "none", "y": 960}, "radius": 12},
+  "motion": {"pace": "medium", "spring": {"f": 2.8, "z": 0.5}, "overshoot": 0.06, "ease": "outC", "transitions": ["cut", "whip", "impact"],
+    "characters": false, "dataViz": true, "visualSources": ["vector", "app-ui"], "typeReveal": ["kinetic"]},
+  "post": {"grain": 0.04, "vignette": {"a": 0.4, "color": "#000000"}, "bloom": 0.18},
+  "sound": {"bpm": 80, "key": "A", "mode": "minor", "preset": "lofi", "instruments": ["epiano", "bass", "kick", "snare", "hats", "crackle"],
+    "drums": "full", "sfx": "organic", "energy": {"intro": 0.35, "groove": 0.65, "breakdown": 0.4, "drop": 0.85, "outro": 0.4}},
+  "narration": {"recommended": false, "voice": "Kore", "styleTag": "[warm, relaxed]", "lang": "ko-KR"},
+  "review": []
+}

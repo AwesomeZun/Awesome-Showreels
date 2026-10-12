@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": "#m svg",
+ "file": "mock_landing_v1.png",
+ "kind": "element",
+ "px": [
+  1440,
+  1024
+ ],
+ "dpr": 1,
+ "sha1": "75e847babd38",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 1440,
+  "h": 1024
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 1440,
+  "h": 1024
+ },
+ "page": {
+  "x": 0,
+  "y": 0,
+  "w": 1440,
+  "h": 1024
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1440,
+  "h": 1024
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(0, 0, 0)",
+ "font": "400 16px/normal Times",
+ "text": "",
+ "alpha": false,
+ "url": "(served)/landing-v1.html",
+ "capturedAt": "2026-10-12T12:37:55.870Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

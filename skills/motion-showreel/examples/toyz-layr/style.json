@@ -1,0 +1,199 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "people whose ideas live in scattered notes and who want them to become projects",
+  "title": "LAYR",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository), its sample notes and its captured screens. Near-black #0B0B0C with slate and steel metal (#2A2F3A to #9FB0C8), lime #D9F55B only as a point; five layer tones from #E6EBF2 to #434D5E; the glass layer stack and the brand mark drawn from the app's own SVG code.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "scattered notes become projects: on-device TF-IDF bundles, five layers (배경·문제, 아이디어, 할 일, 참고, 질문), a one-page brief; nothing leaves the browser"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/app.json: the heads of the three bundles it proposes, the one-page brief it writes, and its state after 모두 수락 (state_*.txt: which note went to which project and layer)"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "calm",
+  "structured",
+  "metallic",
+  "precise",
+  "quiet"
+ ],
+ "rationale": {
+  "palette": "The app's tokens: near-black #0B0B0C / #0E0F11 with surfaces #121317 / #17191E, text #F3F5F8 / #B7BFCB / #8D96A5, steel #9FB0C8 / #C9D3E3 and its metal gradient (#14171D, #2A2F3A, #56637A, #9FB0C8), lime #D9F55B only for the one thing that matters; the project colours #9FB0C8, #E2C69A, #8CCFDB; the five layers from light to dark.",
+  "type": "Pretendard Variable at 800 for headlines (the app's hero: 흩어진 메모를 / 층으로 쌓아 프로젝트로.), white on near-black; JetBrains Mono capitals for the app's numbered labels (01 / INBOX, BUNDLE / 01).",
+  "motion": "Calm and exact: things settle rather than bounce. Notes drift, then glide into place; the glass plates drop in from the bottom up the way the app's hero does; a low camera and slow parallax. Springs are well damped.",
+  "sound": "Dark synth in E minor at 112 BPM (7 bars in 15 s, 14 in 30 s): a soft pulse and plucks under the steel and glass, digital SFX for the drops.",
+  "visuals": "Four scenes in the 15 s cut: the name and the app's line beside its glass layer stack, scattered notes falling into it; the sample notes gliding into the three bundles the app proposes (their real heads); one project's ten notes sorted onto five exploded layers; the end card. The 30 s cut adds the one-page brief the app writes.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#0B0B0C",
+  "bg2": "#0E0F11",
+  "surface": "#121317",
+  "ink": "#F3F5F8",
+  "ink2": "#B7BFCB",
+  "muted": "#8D96A5",
+  "accent": "#D9F55B",
+  "accent2": "#9FB0C8",
+  "accent3": "#C9D3E3",
+  "ok": "#A7D4B4",
+  "warn": "#E2C69A",
+  "deny": "#FF9A8A",
+  "accentInk": "#11140A",
+  "onAccent": "#11140A",
+  "line": "#2A2F3A",
+  "highlight": "#D9F55B"
+ },
+ "paletteAlt": {
+  "bg": "#EEF2F8",
+  "bg2": "#F6F8FB",
+  "surface": "#FFFFFF",
+  "ink": "#0B0B0C",
+  "ink2": "#2A2F3A",
+  "muted": "#56637A",
+  "accent": "#11140A",
+  "accent2": "#56637A",
+  "accent3": "#9FB0C8",
+  "ok": "#2F6B45",
+  "warn": "#8A5A12",
+  "deny": "#B3261E",
+  "accentInk": "#D9F55B",
+  "onAccent": "#D9F55B",
+  "line": "#D5DAE3",
+  "highlight": "#D9F55B",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.03,
+  "trackingLabel": 0.14
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#F3F5F8",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 12
+ },
+ "motion": {
+  "pace": "medium",
+  "spring": {
+   "f": 2.0,
+   "z": 0.72
+  },
+  "overshoot": 0.04,
+  "ease": "outC",
+  "transitions": [
+   "cut",
+   "zoomInto",
+   "whip"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic"
+  ]
+ },
+ "post": {
+  "grain": 0.035,
+  "vignette": {
+   "a": 0.35,
+   "color": "#000000"
+  },
+  "bloom": 0.06
+ },
+ "sound": {
+  "bpm": 112,
+  "key": "E",
+  "mode": "minor",
+  "preset": "dark-synth",
+  "drums": "full",
+  "sfx": "digital",
+  "energy": {
+   "intro": 0.35,
+   "groove": 0.65,
+   "breakdown": 0.4,
+   "drop": 0.9,
+   "outro": 0.45
+  },
+  "instruments": [
+   "pad",
+   "saw-pluck",
+   "saw-bass",
+   "stab",
+   "lead",
+   "kick",
+   "clap",
+   "hats"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[calm, clear]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}

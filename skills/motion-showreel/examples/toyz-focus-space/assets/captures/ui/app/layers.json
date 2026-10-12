@@ -1,0 +1,572 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:54:59.546Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "arch_ready": {
+   "step": "layer",
+   "note": "the room, ready (ring and clock drawn by the reel)",
+   "selector": ".arch",
+   "file": "arch_ready.png",
+   "kind": "element",
+   "px": [
+    1104,
+    1592
+   ],
+   "dpr": 2,
+   "sha1": "653bb8cf5272",
+   "rect": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "screen": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "page": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "element": {
+    "x": 40,
+    "y": 40,
+    "w": 472,
+    "h": 715.77
+   },
+   "pad": 40,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "FOCUS\n/\nREADY\n\n모래섬 스튜디오 제안서 다듬기\n3/4\n시작\n+5\n긴 휴식까지 4회\n집중\n짧은 휴식\n긴 휴식\n생각 서랍\n집중 모드",
+   "alpha": true
+  },
+  "arch_run": {
+   "step": "layer",
+   "note": "the room, running",
+   "selector": ".arch",
+   "file": "arch_run.png",
+   "kind": "element",
+   "px": [
+    1104,
+    1592
+   ],
+   "dpr": 2,
+   "sha1": "187ed56c7496",
+   "rect": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "screen": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "page": {
+    "x": 484,
+    "y": 60,
+    "w": 552,
+    "h": 795.77
+   },
+   "element": {
+    "x": 40,
+    "y": 40,
+    "w": 472,
+    "h": 715.77
+   },
+   "pad": 40,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "FOCUS\n/\nRUNNING\n\n모래섬 스튜디오 제안서 다듬기\n3/4\n일시정지\n+5\n긴 휴식까지 4회\n집중\n짧은 휴식\n긴 휴식\n생각 서랍\n집중 모드",
+   "alpha": true
+  },
+  "mixer_0": {
+   "step": "layer",
+   "note": "the ambient mixer, off",
+   "selector": ".mixer",
+   "file": "mixer_0.png",
+   "kind": "element",
+   "px": [
+    600,
+    744
+   ],
+   "dpr": 2,
+   "sha1": "b61165e93c61",
+   "rect": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "screen": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "page": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 371.75
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "AMBIENT / 배경 소리\n\n꺼짐\n\n켜면 부드럽게 소리가 들어와요.\n\n빗소리\nRAIN\n45\n브라운 노이즈\nBROWN\n0\n바람\nWIND\n0\n모닥불\nFIRE\n25\n카페\nCAFE\n0\n집중 중에만 재생",
+   "alpha": true
+  },
+  "mixer_1": {
+   "step": "layer",
+   "note": "on: rain 45, fire 25",
+   "selector": ".mixer",
+   "file": "mixer_1.png",
+   "kind": "element",
+   "px": [
+    600,
+    744
+   ],
+   "dpr": 2,
+   "sha1": "87e9920bcb20",
+   "rect": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "screen": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "page": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 371.75
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "AMBIENT / 배경 소리\n\n켜짐\n\n집중을 시작하면 소리가 들어와요.\n\n빗소리\nRAIN\n45\n브라운 노이즈\nBROWN\n0\n바람\nWIND\n0\n모닥불\nFIRE\n25\n카페\nCAFE\n0\n집중 중에만 재생",
+   "alpha": true
+  },
+  "mixer_2": {
+   "step": "layer",
+   "note": "rain 70, wind 30, fire 25, cafe 40",
+   "selector": ".mixer",
+   "file": "mixer_2.png",
+   "kind": "element",
+   "px": [
+    600,
+    744
+   ],
+   "dpr": 2,
+   "sha1": "463a8a9e96fe",
+   "rect": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "screen": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "page": {
+    "x": 100,
+    "y": 520.94,
+    "w": 300,
+    "h": 371.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 371.75
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "AMBIENT / 배경 소리\n\n켜짐\n\n집중을 시작하면 소리가 들어와요.\n\n빗소리\nRAIN\n70\n브라운 노이즈\nBROWN\n0\n바람\nWIND\n30\n모닥불\nFIRE\n25\n카페\nCAFE\n40\n집중 중에만 재생",
+   "alpha": true
+  },
+  "logcards_0": {
+   "step": "layer",
+   "note": "the log",
+   "file": "logcards_0.png",
+   "kind": "element",
+   "px": [
+    1380,
+    907
+   ],
+   "dpr": 2,
+   "sha1": "ba57e6c76593",
+   "rect": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "screen": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "page": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 690,
+    "h": 453.38
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "최근 7일\n\nMINUTES / DAY\n\n0분\n60분\n120분\n목표 120분\n100분\n화\n수\n목\n금\n토\n일\n64분\n오늘\n표로 보기",
+   "alpha": true
+  },
+  "logcards_1": {
+   "step": "layer",
+   "note": "the log",
+   "file": "logcards_1.png",
+   "kind": "element",
+   "px": [
+    1380,
+    907
+   ],
+   "dpr": 2,
+   "sha1": "8dfb7ddf3a72",
+   "rect": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "screen": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "page": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 690,
+    "h": 453.38
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "최근 12주\n\nHEATMAP\n\n7월\n8월\n9월\n10월\n월\n수\n금\n일\n적음\n목표 달성",
+   "alpha": true
+  },
+  "logcards_2": {
+   "step": "layer",
+   "note": "the log",
+   "file": "logcards_2.png",
+   "kind": "element",
+   "px": [
+    1656,
+    1999
+   ],
+   "dpr": 2,
+   "sha1": "af0a52fada53",
+   "rect": {
+    "x": 100,
+    "y": 0.39,
+    "w": 828,
+    "h": 999.61
+   },
+   "screen": {
+    "x": 100,
+    "y": 0.39,
+    "w": 828,
+    "h": 999.61
+   },
+   "page": {
+    "x": 100,
+    "y": 875.39,
+    "w": 828,
+    "h": 999.61
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 828,
+    "h": 1727.5
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "세션 로그\n\n178 SESSIONS\n\n오늘\n1시간 4분\n\n10:20–10:34\n디자인 리뷰 피드백 정리\n중단\n14분\n09:40–10:05\n모래섬 스튜디오 제안서 다듬기\n25분\n09:10–09:35\n모래섬 스튜디오 제안서 다듬기\n25분\n\n10월 11일 (일)\n1시간 40분\n\n16:00–16:25\n대상 없이 집중\n25분\n10:40–11:05\n대상 없이 집중\n25분\n09:50–10:15\n영어 원서 20쪽 읽기\n25분\n09:20–09:45\n디자인 리뷰 피드백 정리\n25분\n\n10월 10일 (토)\n1시간 27분\n\n15:00–15:12\n대상 없이 집중\n중단\n12분\n10:00–10:25\n대상 없이 집중\n25분\n09:30–09:55\n대상 없이 집중\n25분\n23:48–00:13\n모래섬 스튜디오 제안서 다듬기\n자정 넘김\n25분",
+   "alpha": true
+  },
+  "logcards_3": {
+   "step": "layer",
+   "note": "the log",
+   "file": "logcards_3.png",
+   "kind": "element",
+   "px": [
+    1104,
+    1672
+   ],
+   "dpr": 2,
+   "sha1": "98da099608c0",
+   "rect": {
+    "x": 948,
+    "y": 0.39,
+    "w": 552,
+    "h": 836
+   },
+   "screen": {
+    "x": 948,
+    "y": 0.39,
+    "w": 552,
+    "h": 836
+   },
+   "page": {
+    "x": 948,
+    "y": 875.39,
+    "w": 552,
+    "h": 836
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 552,
+    "h": 836
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "할 일별 누적\n\nALL TIME\n\n대상 없이 집중\n17시간 11분\n\n완료 40회\n\n북클럽 발제문 쓰기 · 지난 할 일\n12시간 14분\n\n완료 27회\n\n포트폴리오 사이트 문구 · 지난 할 일\n10시간 32분\n\n완료 24회\n\n3분기 사업 보고서 초안 · 지난 할 일\n10시간 26분\n\n완료 23회\n\n이사 체크리스트 만들기 · 지난 할 일\n9시간 19분\n\n완료 21회\n\n모래섬 로고 시안 검토 · 지난 할 일\n4시간 32분\n\n완료 10회\n\n발표 슬라이드 다듬기 · 지난 할 일\n3시간 34분\n\n완료 8회\n\n모래섬 스튜디오 제안서 다듬기\n1시간 15분\n\n완료 3회\n\n디자인 리뷰 피드백 정리\n39분\n\n완료 1회\n\n주간 회고 쓰기\n25분\n\n완료 1회\n\n영어 원서 20쪽 읽기\n25분\n\n완료 1회",
+   "alpha": true
+  },
+  "logcards": {
+   "step": "layer",
+   "all": true,
+   "layers": [
+    {
+     "file": "logcards_0.png",
+     "kind": "element",
+     "px": [
+      1380,
+      907
+     ],
+     "dpr": 2,
+     "sha1": "ba57e6c76593",
+     "rect": {
+      "x": 100,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "screen": {
+      "x": 100,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "page": {
+      "x": 100,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 690,
+      "h": 453.38
+     },
+     "pad": 0,
+     "radius": [
+      18,
+      18,
+      18,
+      18
+     ],
+     "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+     "color": "rgb(233, 237, 227)",
+     "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "최근 7일\n\nMINUTES / DAY\n\n0분\n60분\n120분\n목표 120분\n100분\n화\n수\n목\n금\n토\n일\n64분\n오늘\n표로 보기",
+     "alpha": true
+    },
+    {
+     "file": "logcards_1.png",
+     "kind": "element",
+     "px": [
+      1380,
+      907
+     ],
+     "dpr": 2,
+     "sha1": "8dfb7ddf3a72",
+     "rect": {
+      "x": 810,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "screen": {
+      "x": 810,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "page": {
+      "x": 810,
+      "y": 398.02,
+      "w": 690,
+      "h": 453.38
+     },
+     "element": {
+      "x": 0,
+      "y": 0,
+      "w": 690,
+      "h": 453.38
+     },
+     "pad": 0,
+     "radius": [
+      18,
+      18,
+      18,
+      18
+     ],
+     "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+     "color": "rgb(233, 237, 227)",
+     "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+     "text": "최근 12주\n\nHEATMAP\n\n7월\n8월\n9월\n10월\n월\n수\n금\n일\n적음\n목표 달성",
+     "alpha": true
+    }
+   ],
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T12:54:59.546Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "selector": "main .card"
+  }
+ },
+ "warnings": [
+  "logcards_2: element taller than the viewport; clipped (use a full-page shot)"
+ ]
+}

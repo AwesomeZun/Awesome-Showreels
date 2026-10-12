@@ -1,0 +1,238 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T11:51:59.953Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1800
+  ]
+ },
+ "viewport": [
+  1600,
+  1800
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "dark",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "brief": {
+   "step": "layer",
+   "note": "the one-page brief the app writes for the first project",
+   "selector": ".brief-sheet",
+   "file": "brief.png",
+   "kind": "element",
+   "px": [
+    1760,
+    1236
+   ],
+   "dpr": 2,
+   "sha1": "cf1e5f7646a8",
+   "rect": {
+    "x": 308,
+    "y": 408.45,
+    "w": 880,
+    "h": 617.97
+   },
+   "screen": {
+    "x": 308,
+    "y": 408.45,
+    "w": 880,
+    "h": 617.97
+   },
+   "page": {
+    "x": 308,
+    "y": 408.45,
+    "w": 880,
+    "h": 617.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 880,
+    "h": 617.97
+   },
+   "pad": 0,
+   "radius": [
+    6,
+    6,
+    6,
+    6
+   ],
+   "bg": "rgb(243, 245, 248)",
+   "color": "rgb(18, 20, 25)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "ONE-PAGE BRIEF · 2026-10-12\n러닝 · 크루 · 페이스\n메모 10개 · 로컬 분석 초안\n01\n목표 요약\n\n동네에서 같이 달릴 러닝 크루를 찾기가 어렵다는 게 문제. 크루 소개에 페이스 대신 분위기를 먼저 보여 주자.\n↗\n↗\n\n02\n핵심 아이디어\n러닝 크루 매칭 아이디어: 출발 장소, 요일, 페이스(km당 분)를 기준으로 근처 크루를 추천\n↗\n러닝 후 함께 가는 카페나 브런치 장소를 크루 페이지에 남기면 모임이 더 이어질 듯.\n↗\n러닝 크루 출석 체크와 누적 거리 기록 기능.\n↗\n03\n다음 할 일\n동네 러닝 모임 첫 공지 문구 작성하기.\n↗\n러닝 코스를 지도에 표시하기 (GPX 파일 업로드)\n↗\n첫 모임 날짜 정하기\n↗\n04\n열린 질문\n주말 아침 한강 코스 5km, 페이스 6분대 크루 모집",
+   "alpha": true
+  },
+  "head_0": {
+   "file": "head_0.png",
+   "kind": "element",
+   "px": [
+    2480,
+    1927
+   ],
+   "dpr": 2,
+   "sha1": "5928ab3b97e5",
+   "rect": {
+    "x": 308,
+    "y": 353.55,
+    "w": 328,
+    "h": 205
+   },
+   "screen": {
+    "x": 308,
+    "y": 353.55,
+    "w": 1240,
+    "h": 963.5
+   },
+   "page": {
+    "x": 308,
+    "y": 353.55,
+    "w": 1240,
+    "h": 963.5
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1240,
+    "h": 963.5
+   },
+   "pad": 0,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(18, 19, 23)",
+   "color": "rgb(243, 245, 248)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "BUNDLE / 01\n메모 10\n묶음 이름\n러닝 · 크루 · 페이스\n응집도\n0.28\n묶인 근거\n러닝\n크루\n러닝크루\n페이스\n장소\n혼자 달리면 꾸준히 못 한다. 동네에서 같이 달릴 러닝 크루를 찾기가 어렵다는 게 문제 #러닝크루\n러닝크루\n크루\n러닝\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n러닝 크루 매칭 아이디어: 출발 장소, 요일, 페이스(km당 분)를 기준으로 근처 크루를 추천 #러닝크루\n러닝크루\n크루\n페이스\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n러닝 크루 매칭: 출발 장소, 요일, 페이스 기준으로 근처 크루 추천하기 #러닝크루\n러닝크루\n크루\n페이스\n옮기기…\n→ 물주기 · 식물 · 플랜티\n→ 팟캐스트 · 에피소드 · 편집\n동네 러닝 모임 첫",
+   "alpha": true,
+   "cropped": [
+    0,
+    0,
+    328,
+    205
+   ],
+   "note": "the head of the bundle the app proposes (name, cohesion, the words that tied it), cut from the bundle row"
+  },
+  "head_1": {
+   "file": "head_1.png",
+   "kind": "element",
+   "px": [
+    2480,
+    1750
+   ],
+   "dpr": 2,
+   "sha1": "8be053645179",
+   "rect": {
+    "x": 308,
+    "y": 925.05,
+    "w": 328,
+    "h": 205
+   },
+   "screen": {
+    "x": 308,
+    "y": 925.05,
+    "w": 1240,
+    "h": 874.75
+   },
+   "page": {
+    "x": 308,
+    "y": 1337.05,
+    "w": 1240,
+    "h": 874.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1240,
+    "h": 874.75
+   },
+   "pad": 0,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(18, 19, 23)",
+   "color": "rgb(243, 245, 248)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "BUNDLE / 02\n메모 9\n묶음 이름\n물주기 · 식물 · 플랜티\n응집도\n0.27\n묶인 근거\n물주기\n식물\n플랜티\n알림\n반려식물 물주기를 자꾸 까먹는다. 지난달에만 몬스테라 잎이 두 장 노래졌다. 물주기 알림 앱이 필요한 이유. #플랜티\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드 · 편집\n식물 종류별 기본 물주기 주기 데이터 정리 (몬스테라 7일, 스투키 30일, 산세베리아 21일)\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드 · 편집\n플랜티 핵심 기능: 식물마다 물주기 주기를 다르게 설정하고, 마지막으로 물 준 날짜를 기준으로 알림을 보내기 #플랜티\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드",
+   "alpha": true,
+   "cropped": [
+    0,
+    0,
+    328,
+    205
+   ],
+   "note": "the head of the bundle the app proposes (name, cohesion, the words that tied it), cut from the bundle row"
+  },
+  "head_2": {
+   "file": "head_2.png",
+   "kind": "element",
+   "px": [
+    2480,
+    1572
+   ],
+   "dpr": 2,
+   "sha1": "efd7c2ed61f4",
+   "rect": {
+    "x": 308,
+    "y": 619.8,
+    "w": 328,
+    "h": 205
+   },
+   "screen": {
+    "x": 308,
+    "y": 619.8,
+    "w": 1240,
+    "h": 786
+   },
+   "page": {
+    "x": 308,
+    "y": 2231.8,
+    "w": 1240,
+    "h": 786
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1240,
+    "h": 786
+   },
+   "pad": 0,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgb(18, 19, 23)",
+   "color": "rgb(243, 245, 248)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "BUNDLE / 03\n메모 8\n묶음 이름\n팟캐스트 · 에피소드 · 편집\n응집도\n0.35\n묶인 근거\n팟캐스트\n에피소드\n편집\n녹음\n사이드 프로젝트 이야기를 나누는 팟캐스트를 시작해 보고 싶다. 에피소드마다 게스트 한 명씩 초대하는 형식 #팟캐스트\n팟캐스트\n에피소드\n프로젝트\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 물주기 · 식물 · 플랜티\n첫 에피소드 게스트 섭외 (지인 중 사이드 프로젝트 경험자)\n팟캐스트\n에피소드\n프로젝트\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 물주기 · 식물 · 플랜티\n팟캐스트 이름 후보: 옆자리 프로젝트, 퇴근 후 빌드, 작은 시작 #팟캐스트\n팟캐스트\n프로젝트\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 물주기 · 식물 · 플랜티\n녹음 장비는 USB 마이크 하나로 시작. 편집은 무료 오디오",
+   "alpha": true,
+   "cropped": [
+    0,
+    0,
+    328,
+    205
+   ],
+   "note": "the head of the bundle the app proposes (name, cohesion, the words that tied it), cut from the bundle row"
+  }
+ },
+ "warnings": []
+}

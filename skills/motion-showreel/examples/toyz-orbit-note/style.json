@@ -1,0 +1,180 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "launch",
+    "audience": "people whose ideas live in scattered notes",
+    "title": "Orbit Note",
+    "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository) and its captured screens. An electric-blue infinite canvas, glass cards in silver and holographic pastels, white curved links (dashed for wiki links) and the app's holographic trefoil knot.",
+    "draft": false
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "an infinite-canvas note app: cards, links, [[wiki links]] that link by themselves, backlinks, search that flies the camera, force-directed layout"
+    },
+    {
+      "path": "assets/captures/ui/app/",
+      "kind": "images",
+      "notes": "the real app (its production build, served locally) captured by capture/app.json, with the link paths and card boxes read from its DOM (geo.txt); the sample space is the app's own fictional data"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+    }
+  ],
+  "mood": [
+    "spacious",
+    "luminous",
+    "curious",
+    "fluid",
+    "holographic"
+  ],
+  "rationale": {
+    "palette": "The app's canvas: electric blue #0B2FE6 deepening to #0720B0 and #030B4A, white for text and links, silver #F0F2F7 for panels, and its holographic gradient (#9FE9FF, #B9C4FF, #E2B9FF, #FFC6E6, #FFF1B8, #B2F7DD) as the accent, used for the second line of each headline and for glows.",
+    "type": "Pretendard Variable bold to heavy, white on blue with tight tracking; the second line of each headline runs through the holographic gradient glyph by glyph; monospaced capitals for labels like the app's 'N°01' and 'CARD / N°09'.",
+    "motion": "Fluid, orbital: cards revolve before they settle, the camera glides and zooms like the app's own search flight, links draw on along their real curves with a light pulse running ahead, the knot turns slowly. Nothing snaps; everything eases.",
+    "sound": "Cinematic lite in D minor at 96 BPM (6 bars in 15 s, 12 in 30 s): spacious strings and a steady ostinato for an orbit, with glassy SFX (chimes as links land, swells into the drop).",
+    "visuals": "Four scenes in the 15 s cut: cards orbiting the holographic knot as the name lands, then settling into the app's own layout; [[ typed in the real inspector, the app's suggestion chosen and a dashed wiki link drawing itself on the canvas; every link of the sample space drawing on along its real path; the end card. The 30 s cut adds search, where the camera flies to the card.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {
+    "bg": "#0B2FE6",
+    "bg2": "#0720B0",
+    "surface": "#F0F2F7",
+    "ink": "#FFFFFF",
+    "ink2": "#DCE2FF",
+    "muted": "#C9D2FF",
+    "accent": "#9FE9FF",
+    "accent2": "#E2B9FF",
+    "accent3": "#FFC6E6",
+    "ok": "#72F0C6",
+    "warn": "#FFCB66",
+    "deny": "#FF94C2",
+    "accentInk": "#030B4A",
+    "onAccent": "#030B4A",
+    "line": "#5470F0",
+    "highlight": "#FFF1B8"
+  },
+  "fonts": {
+    "display": "\"Pretendard Variable\", sans-serif",
+    "sans": "\"Pretendard Variable\", sans-serif",
+    "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+    "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [
+      {
+        "family": "Pretendard Variable",
+        "path": "source/fonts/PretendardVariable.woff2",
+        "weight": "45 920",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      84,
+      112,
+      150,
+      200
+    ],
+    "displayWeight": 850,
+    "bodyWeight": 500,
+    "tracking": -0.04,
+    "trackingLabel": 0.15
+  },
+  "layout": {
+    "theme": "dark",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#FFFFFF",
+      "bg": "none",
+      "y": 960
+    },
+    "radius": 14
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 1.6,
+      "z": 0.78
+    },
+    "overshoot": 0.02,
+    "ease": "ioC",
+    "transitions": [
+      "match",
+      "zoomInto",
+      "cut"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.03,
+    "vignette": {
+      "a": 0.28,
+      "color": "#030B4A"
+    },
+    "bloom": 0.14
+  },
+  "sound": {
+    "bpm": 96,
+    "key": "D",
+    "mode": "minor",
+    "preset": "cinematic-lite",
+    "instruments": [
+      "strings",
+      "pluck",
+      "sub",
+      "bell",
+      "piano",
+      "kick",
+      "toms",
+      "snare"
+    ],
+    "drums": "light",
+    "sfx": "glassy",
+    "energy": {
+      "intro": 0.35,
+      "groove": 0.6,
+      "breakdown": 0.4,
+      "drop": 1.0,
+      "outro": 0.5
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[calm, curious]",
+    "lang": "ko-KR"
+  },
+  "review": []
+}

@@ -1,0 +1,149 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "kitcards_0.png",
+   "kind": "element",
+   "px": [
+    600,
+    189
+   ],
+   "dpr": 2,
+   "sha1": "4a03c6df8bb1",
+   "rect": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "screen": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "page": {
+    "x": 564,
+    "y": 274.53,
+    "w": 300,
+    "h": 94.39
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 94.39
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(17, 16, 19)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "모래알 베이커리\n고운바탕 / Pretendard",
+   "alpha": true
+  },
+  {
+   "file": "kitcards_1.png",
+   "kind": "element",
+   "px": [
+    600,
+    197
+   ],
+   "dpr": 2,
+   "sha1": "befd591dd048",
+   "rect": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "screen": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "page": {
+    "x": 564,
+    "y": 378.92,
+    "w": 300,
+    "h": 98.64
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 98.64
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(23, 21, 26)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "숨결 요가 스튜디오\n사용 중\nPretendard / Pretendard",
+   "alpha": true
+  },
+  {
+   "file": "kitcards_2.png",
+   "kind": "element",
+   "px": [
+    600,
+    205
+   ],
+   "dpr": 2,
+   "sha1": "d462c9f23e94",
+   "rect": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "screen": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "page": {
+    "x": 564,
+    "y": 487.56,
+    "w": 300,
+    "h": 102.25
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 300,
+    "h": 102.25
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgb(17, 16, 19)",
+   "color": "rgb(243, 239, 244)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "PADO Coffee Roasters\nPretendard / 시스템 고딕\n대비 1",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T13:03:20.894Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".kit-list > *, [class*='kit-card']"
+}

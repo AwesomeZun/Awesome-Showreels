@@ -1,0 +1,149 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "label_0.png",
+   "kind": "element",
+   "px": [
+    139,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "0a6710edf729",
+   "rect": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "page": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 61.37,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "집중하기",
+   "alpha": true
+  },
+  {
+   "file": "label_1.png",
+   "kind": "element",
+   "px": [
+    99,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "3f9b2c1539ac",
+   "rect": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "page": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 41.41,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "찾기",
+   "alpha": true
+  },
+  {
+   "file": "label_2.png",
+   "kind": "element",
+   "px": [
+    144,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "eb79522007be",
+   "rect": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "page": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 64.03,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "반대 방향",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:13:17.865Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".link-label"
+}

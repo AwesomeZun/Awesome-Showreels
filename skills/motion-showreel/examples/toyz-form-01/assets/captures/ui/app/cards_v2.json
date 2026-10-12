@@ -1,0 +1,149 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "cards_v2_0.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "034da472dc29",
+   "rect": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "5\n준서\n23시간 전\n열림\n5번 코멘트:\n메탈 카드가 히어로 텍스트와 폭을 다투고 있어요. 카드를 조금 줄이거나 아래로 내려 보면 좋겠어요.\n레이아웃\n보통\n영역\n가져옴",
+   "alpha": true
+  },
+  {
+   "file": "cards_v2_1.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "14743c1b39ad",
+   "rect": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "6\n하은\n23시간 전\n열림\n6번 코멘트:\n고객사 로고 회색이 배경과 대비가 낮아요. #5C5D62 → #8E9096 정도로 올려 주세요.\n색\n낮음\n가져옴",
+   "alpha": true
+  },
+  {
+   "file": "cards_v2_2.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "c05b48cb3207",
+   "rect": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "7\n민지\n23시간 전\n열림\n7번 코멘트:\n로그인 버튼까지 라임이면 CTA와 경쟁해요. 로그인은 고스트 버튼으로 가는 게 어떨까요?\n인터랙션\n높음\n답글 1",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:39.155Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".comment-list > li"
+}

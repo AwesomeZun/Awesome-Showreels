@@ -1,0 +1,104 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-layr); it is not committed. The same screens are live at https://layr.toyz.kr. The app keeps its sample notes in localStorage; the reel's notes, bundles and layers are the app's own result after 모두 수락 on the first run (dumped as state_*.txt). The layer stack and the brand mark are drawn from the app's own SVG code (LayerStack.tsx, Brand.tsx). After capture, the three bundle rows are cut to their heads (head_0..2, CSS [0, 0, 328, 205]) and every PNG is stored as WebP.",
+ "device": {
+  "screen": [
+   1600,
+   1800
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1500
+ },
+ "css": ".toast, .toasts, [class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "eval",
+   "js": "(() => { const s = JSON.parse(localStorage.getItem('toyz-layr:state') || '{}');\n const out = { projects: (s.projects || []).map(p => { const q = { ...p }; return q; }), notes: (s.notes || []).map(n => ({ id: n.id, text: n.text, projectId: n.projectId, layer: n.layer, order: n.order, pinned: n.pinned })) };\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify(out); })()"
+  },
+  {
+   "do": "text",
+   "name": "state_inbox",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/organize'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "bundles",
+   "selector": ".bundle",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the three bundles the app proposes"
+  },
+  {
+   "do": "click",
+   "text": "모두 수락"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const s = JSON.parse(localStorage.getItem('toyz-layr:state') || '{}');\n const out = { projects: (s.projects || []).map(p => { const q = { ...p }; return q; }), notes: (s.notes || []).map(n => ({ id: n.id, text: n.text, projectId: n.projectId, layer: n.layer, order: n.order, pinned: n.pinned })) };\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify(out); })()"
+  },
+  {
+   "do": "text",
+   "name": "state_projects",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "eval",
+   "js": "document.querySelector('.side-project').click()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "click",
+   "text": "브리프"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "layer",
+   "name": "brief",
+   "selector": ".brief-sheet",
+   "alpha": true,
+   "pad": 0,
+   "note": "the one-page brief the app writes for the first project"
+  }
+ ]
+}

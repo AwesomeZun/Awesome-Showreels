@@ -1,0 +1,199 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "launch",
+    "audience": "front-end makers who want small delights on their buttons and cards",
+    "title": "Motion Kit",
+    "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/styles in the app repository), its snippets and its captured screens. Electric blue #0B2FE6 hero, paper #EEF0F7 gallery, ink #0A0D1F, lilac and orange accents; the reel is made of the app's own animations, stepped frame by frame, and of its own confetti recipe.",
+    "draft": false
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "27 vanilla micro-interactions to touch, tune and copy; the code you see is the code that runs; an easing lab"
+    },
+    {
+      "path": "assets/captures/ui/app/",
+      "kind": "images",
+      "notes": "the real app (its production build, served locally) captured by capture/app.json; the confetti, ripple and heart frames are its own snippet animations paused and stepped in the demo iframe"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Pretendard Variable (the app's face) and JetBrains Mono (code, labels); SIL OFL 1.1"
+    }
+  ],
+  "mood": [
+    "playful",
+    "crisp",
+    "bouncy",
+    "delightful",
+    "precise"
+  ],
+  "rationale": {
+    "palette": "The app's tokens: electric blue #0B2FE6 (the hero, primary buttons) with #0925C4 / #050F52, paper #EEF0F7 / #F6F7FB, ink #0A0D1F / #353B5C, and the confetti colours its code uses (#0B2FE6, #C9B8FF, #FF6A2B, #FFFFFF, #7FE7FF): lilac and orange as accents.",
+    "type": "Pretendard Variable at 900 for headlines (the app's '클릭 한 번에 작은 즐거움을.' with its orange period), white on the blue stage and ink on paper; JetBrains Mono for code and labels.",
+    "motion": "Bouncy and exact: springs with a little overshoot (the app's own favourite curve, cubic-bezier(0.34, 1.56, 0.64, 1), drives the reel's entrances), a cursor that taps, and the app's animations played back frame by frame at their own timing.",
+    "sound": "Bright pop in F major at 128 BPM (8 bars in 15 s, 16 in 30 s): light and cheerful for a kit of small delights, with glassy SFX (a pop for every tap, sparkles for confetti).",
+    "visuals": "Four scenes in the 15 s cut: the name and the app's line over the blue stage as a tap bursts confetti made with the app's own recipe; the real demo stage playing the app's confetti, ripple and heart animations; the real code panel changing as its slider moves (count: 36 to 72); the end card. The 30 s cut adds the easing lab's bezier editor.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {
+    "bg": "#EEF0F7",
+    "bg2": "#F6F7FB",
+    "surface": "#FFFFFF",
+    "ink": "#0A0D1F",
+    "ink2": "#353B5C",
+    "muted": "#555B7C",
+    "accent": "#0B2FE6",
+    "accent2": "#C9B8FF",
+    "accent3": "#FF6A2B",
+    "ok": "#15803D",
+    "warn": "#C2410C",
+    "deny": "#C4282D",
+    "accentInk": "#050F52",
+    "onAccent": "#FFFFFF",
+    "line": "#D8DBE8",
+    "highlight": "#E4E9FF"
+  },
+  "paletteAlt": {
+    "bg": "#0B2FE6",
+    "bg2": "#0619A6",
+    "surface": "#0925C4",
+    "ink": "#FFFFFF",
+    "ink2": "#E4E9FF",
+    "muted": "#C9D2FF",
+    "accent": "#FF6A2B",
+    "accent2": "#C9B8FF",
+    "accent3": "#7FE7FF",
+    "ok": "#7FE7FF",
+    "warn": "#FF6A2B",
+    "deny": "#FF8A8A",
+    "accentInk": "#FFFFFF",
+    "onAccent": "#0A0D1F",
+    "line": "#3552F0",
+    "highlight": "#7FE7FF",
+    "theme": "dark"
+  },
+  "fonts": {
+    "display": "\"Pretendard Variable\", sans-serif",
+    "sans": "\"Pretendard Variable\", sans-serif",
+    "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+    "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [
+      {
+        "family": "Pretendard Variable",
+        "path": "source/fonts/PretendardVariable.woff2",
+        "weight": "45 920",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      84,
+      112,
+      150,
+      200
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 500,
+    "tracking": -0.04,
+    "trackingLabel": 0.15
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#0A0D1F",
+      "bg": "none",
+      "y": 960
+    },
+    "radius": 18
+  },
+  "motion": {
+    "pace": "energetic",
+    "spring": {
+      "f": 2.8,
+      "z": 0.45
+    },
+    "overshoot": 0.12,
+    "ease": "outBack",
+    "transitions": [
+      "cut",
+      "whip",
+      "impact"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kineticPop"
+    ]
+  },
+  "post": {
+    "grain": 0.02,
+    "vignette": {
+      "a": 0.1,
+      "color": "#353B5C"
+    },
+    "bloom": 0.05
+  },
+  "sound": {
+    "bpm": 128,
+    "key": "F",
+    "mode": "major",
+    "preset": "bright-pop",
+    "instruments": [
+      "pad",
+      "marimba",
+      "bell",
+      "bass",
+      "kick",
+      "clap",
+      "hats",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "glassy",
+    "energy": {
+      "intro": 0.4,
+      "groove": 0.7,
+      "breakdown": 0.4,
+      "drop": 1.0,
+      "outro": 0.5
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[bright, playful]",
+    "lang": "ko-KR"
+  },
+  "review": []
+}

@@ -1,0 +1,103 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "logcards_0.png",
+   "kind": "element",
+   "px": [
+    1380,
+    907
+   ],
+   "dpr": 2,
+   "sha1": "ba57e6c76593",
+   "rect": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "screen": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "page": {
+    "x": 100,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 690,
+    "h": 453.38
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "최근 7일\n\nMINUTES / DAY\n\n0분\n60분\n120분\n목표 120분\n100분\n화\n수\n목\n금\n토\n일\n64분\n오늘\n표로 보기",
+   "alpha": true
+  },
+  {
+   "file": "logcards_1.png",
+   "kind": "element",
+   "px": [
+    1380,
+    907
+   ],
+   "dpr": 2,
+   "sha1": "8dfb7ddf3a72",
+   "rect": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "screen": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "page": {
+    "x": 810,
+    "y": 398.02,
+    "w": 690,
+    "h": 453.38
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 690,
+    "h": 453.38
+   },
+   "pad": 0,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "color(srgb 0.101961 0.180392 0.12549 / 0.55)",
+   "color": "rgb(233, 237, 227)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "최근 12주\n\nHEATMAP\n\n7월\n8월\n9월\n10월\n월\n수\n금\n일\n적음\n목표 달성",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:54:59.546Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": "main .card"
+}

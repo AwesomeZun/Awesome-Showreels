@@ -1,0 +1,181 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "launch",
+    "audience": "makers juggling several side projects",
+    "title": "Pulse",
+    "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository) and its captured screens. Light brushed-aluminium panels, near-black ink, one hot orange; numbers and level meters like an instrument panel; the chrome X is the app's own ChromeBlob SVG, captured.",
+    "draft": false
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "a small, sharp dashboard for makers: gauges, due radar, heatmap, rings, release log, quick-add syntax, command palette"
+    },
+    {
+      "path": "assets/captures/ui/app/",
+      "kind": "images",
+      "notes": "the real app (its production build, served locally) captured by capture/app.json; projects, to-dos and releases are the app's own fictional sample data"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"
+    }
+  ],
+  "mood": [
+    "precise",
+    "mechanical",
+    "bright",
+    "metallic",
+    "confident"
+  ],
+  "rationale": {
+    "palette": "The app's light tokens: aluminium bg #E9EAEE / #DFE1E6, panels #F4F5F7, ink #0D0E11 / #30333A / #555963, and the single hot orange #F05A28 it uses for what needs attention (overdue counts, the add button, the live dot). Its status colours stay where status is meant: ok green #0E9F6E, info blue #1A44C4, warn #D9A400, danger #D12F2F.",
+    "type": "Pretendard Variable at 900 for the big numbers and headlines with tight tracking, as the app sets '오늘의 계기판'; monospaced capitals for the labels the app stamps everywhere ('PULSE · 2026.10.12 MON · W42', 'QUICK ADD', 'DUE RADAR').",
+    "motion": "Mechanical and exact: parts snap into slots with a short overshoot, needles and level meters jump to their value and settle, a tick ruler runs along the panel. The meters pulse on the beat, so the reel itself has a pulse; holds keep a scanning line and meter flicker alive.",
+    "sound": "Bright pop at 112 BPM in G major (7 bars in 15 s, 14 in 30 s): a clean, confident groove for a light, orderly tool, with digital SFX (ticks for typed tokens, blips for parsed chips, counts for the numbers).",
+    "visuals": "Four scenes in the 15 s cut: the chrome X spins in as the name lands; one typed line split into title, priority, project and due date by the app's own parser; the real gauges and panels assembling into today's instrument panel; the end card. The 30 s cut adds the command palette and the release log with its next-version suggestion.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {
+    "bg": "#E9EAEE",
+    "bg2": "#DFE1E6",
+    "surface": "#F4F5F7",
+    "ink": "#0D0E11",
+    "ink2": "#30333A",
+    "muted": "#555963",
+    "accent": "#F05A28",
+    "accent2": "#1A44C4",
+    "accent3": "#0E9F6E",
+    "ok": "#0E9F6E",
+    "warn": "#D9A400",
+    "deny": "#D12F2F",
+    "accentInk": "#A8350C",
+    "onAccent": "#FFFFFF",
+    "line": "#D3D6DC",
+    "highlight": "#FDE2D6"
+  },
+  "fonts": {
+    "display": "\"Pretendard Variable\", sans-serif",
+    "sans": "\"Pretendard Variable\", sans-serif",
+    "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+    "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [
+      {
+        "family": "Pretendard Variable",
+        "path": "source/fonts/PretendardVariable.woff2",
+        "weight": "45 920",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      84,
+      112,
+      150,
+      200
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 500,
+    "tracking": -0.04,
+    "trackingLabel": 0.15
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#0D0E11",
+      "bg": "none",
+      "y": 960
+    },
+    "radius": 12
+  },
+  "motion": {
+    "pace": "medium",
+    "spring": {
+      "f": 2.6,
+      "z": 0.5
+    },
+    "overshoot": 0.08,
+    "ease": "outC",
+    "transitions": [
+      "cut",
+      "whip",
+      "impact"
+    ],
+    "characters": false,
+    "dataViz": true,
+    "visualSources": [
+      "vector",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.02,
+    "vignette": {
+      "a": 0.12,
+      "color": "#30333A"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 112,
+    "key": "G",
+    "mode": "major",
+    "preset": "bright-pop",
+    "instruments": [
+      "pad",
+      "pulse",
+      "marimba",
+      "bass",
+      "bell",
+      "kick",
+      "clap",
+      "hats",
+      "shaker"
+    ],
+    "drums": "full",
+    "sfx": "digital",
+    "energy": {
+      "intro": 0.35,
+      "groove": 0.7,
+      "breakdown": 0.4,
+      "drop": 1.0,
+      "outro": 0.5
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[crisp, confident]",
+    "lang": "ko-KR"
+  },
+  "review": []
+}

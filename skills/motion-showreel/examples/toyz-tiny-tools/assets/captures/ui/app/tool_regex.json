@@ -1,0 +1,58 @@
+{
+ "step": "layer",
+ "selector": ".tool-page",
+ "file": "tool_regex.png",
+ "kind": "element",
+ "px": [
+  2520,
+  2000
+ ],
+ "dpr": 2,
+ "sha1": "7283577ab4e5",
+ "rect": {
+  "x": 296.0,
+  "y": 0.0,
+  "w": 1260.0,
+  "h": 760.0
+ },
+ "screen": {
+  "x": 296,
+  "y": 0,
+  "w": 1260,
+  "h": 1000
+ },
+ "page": {
+  "x": 296,
+  "y": 130,
+  "w": 1260,
+  "h": 1000
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1260,
+  "h": 1363.88
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "08 / TEXT — REGEX\n\n정규식\n\n정규식을 별도 스레드에서 안전하게 실행해 일치를 강조하고, 캡처 그룹 표와 치환 결과를 보여 줘요.\n\n이 브라우저에 저장됨\n고정하기\n패턴\nWorker에서 실행 · 1초 제한\n/\n/g\ng\n전체\ni\n대소문자 무시\nm\n여러 줄\ns\n줄바꿈 포함\nu\n유니코드\ny\n고정 위치\n자주 쓰는 패턴\n이메일\nURL\n한글 단어\n휴대폰 번호\n날짜\nHEX 색\n일치 4개 · 캡처 그룹 2개 · 1ms 미만\n테스트 텍스트\n231 B\n일치 강조\n4개\n연락처 목록 (가상의 주소입니다)\n김하늘 <haneul.kim@moonlight.example> — 디자인\n박도윤 <doyun@pixel-harbor.example> — 개발\n이서아 <seoa_lee@moonlight.example> — 기획\n문의: ",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:24:11.717Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "cropped": [
+  0.0,
+  0.0,
+  1260.0,
+  760.0
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "name": "ui",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-mood-fm); it is not committed. The same screens are live at https://mood-fm.toyz.kr. The app seeds six weeks of sample diary entries relative to the day it runs; the archive is captured on September 2026, a month full of them. The on-air stage, the tuner, the mood pad and the logo are drawn in the reel from the app's own code (domain/mood.ts, domain/color.ts, domain/music.ts, app.css, Icons.tsx), not captured.",
+ "device": {
+  "screen": [
+   1600,
+   1400
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 1500
+ },
+ "css": "[class*='toast']{display:none!important} .mini, .miniplayer, [class*='mini-player']{display:none!important}",
+ "steps": [
+  {
+   "do": "eval",
+   "js": "location.hash = '#/archive'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = document.querySelector('.calendar__nav button'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const s = document.querySelector('.calendar__cell.is-selected'); if (s) s.classList.remove('is-selected'); document.activeElement && document.activeElement.blur(); })()"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const p = document.querySelector('.panel.calendar').getBoundingClientRect();\n const cells = [...document.querySelectorAll('.calendar__grid > *')].map(c => { const r = c.getBoundingClientRect(); return { x: r.x - p.x, y: r.y - p.y, w: r.width, h: r.height, entry: c.classList.contains('has-entry'), blank: c.classList.contains('calendar__blank'), day: (c.textContent || '').trim().match(/^\\d+/)?.[0] || '' }; });\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({ month: document.querySelector('.calendar__head')?.textContent?.trim().slice(0, 20), cells }); })()"
+  },
+  {
+   "do": "text",
+   "name": "cal_geo",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "layer",
+   "name": "calendar",
+   "selector": ".panel.calendar",
+   "alpha": true,
+   "pad": 0,
+   "note": "the archive calendar for September 2026: each day painted with that day's mood"
+  },
+  {
+   "do": "layer",
+   "name": "pixels",
+   "selector": ".panel.pixels",
+   "alpha": true,
+   "pad": 0,
+   "note": "the year in pixels: a row per month"
+  }
+ ]
+}

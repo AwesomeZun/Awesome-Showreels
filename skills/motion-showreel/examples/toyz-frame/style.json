@@ -1,0 +1,36 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {"purpose": "launch", "audience": "designers and makers who need a portfolio today", "title": "Frame", "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/index.css in the app repository) and its captured screens. A light grey studio, white panels with a chrome bezel, near-black type, one hot orange (#FF5A1F) and monospaced labels; the reel frames everything in orange viewfinder corners, as the name says.", "draft": false},
+  "source": [
+    {"path": "source/README.md", "kind": "readme", "notes": "the fastest portfolio: editor left, live preview right, three templates, export as one self-contained HTML file"},
+    {"path": "assets/captures/ui/app/", "kind": "images", "notes": "the real app (its production build, served locally) captured by capture/app.json; the portfolio of 이로아 and its six works are the app's own fictional sample data"},
+    {"path": "source/fonts/", "kind": "other", "notes": "Pretendard Variable (the app's face) and JetBrains Mono (labels); SIL OFL 1.1"}
+  ],
+  "mood": ["crisp", "editorial", "quick", "studio-bright", "confident"],
+  "rationale": {
+    "palette": "The app's tokens: studio grey #E6E7EA and #F5F5F6, white surfaces, ink #0B0B0D / #3F4047 / #62636B, and its hot orange #FF5A1F (the period in 'Frame.', the live dot, the selected template). The portfolio's own blue (#2B3BFF in the sample work) only appears inside the captured preview.",
+    "type": "Pretendard Variable at 900 for the wordmark and headlines (the app sets '프로필', '내보내기' and the portfolio name heavy and tight); monospaced capitals for its labels ('PORTFOLIO BUILDER', 'ESTIMATED SIZE', 'GRID / EDITORIAL / MONO').",
+    "motion": "Quick and exact, like framing a shot: orange viewfinder corners snap onto what matters, windows slide in on a spring with little overshoot, the preview changes the instant a letter is typed, template faces wipe one into the next on the beat. Holds keep a slow camera drift and a blinking live dot.",
+    "sound": "Corporate in G major at 112 BPM (7 bars in 15 s, 14 in 30 s): warm piano and strings for a tidy, professional tool, with glassy SFX (key taps, a click on export, a pop as the file lands).",
+    "visuals": "Four scenes in the 15 s cut: viewfinder corners frame the name; a name typed in the real editor appears letter by letter in the real live preview; the real export card (2.02 MB, HTML 1, 12 images, 0 external references) sends out one HTML file that opens as the finished portfolio; the end card. The 30 s cut adds the three templates of the same portfolio.",
+    "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+  },
+  "palette": {"bg": "#E6E7EA", "bg2": "#F5F5F6", "surface": "#FFFFFF", "ink": "#0B0B0D", "ink2": "#3F4047", "muted": "#5A5B63",
+    "accent": "#FF5A1F", "accent2": "#2B3BFF", "accent3": "#17704A", "ok": "#17704A", "warn": "#B8400F", "deny": "#BF2419",
+    "accentInk": "#B8400F", "onAccent": "#FFFFFF", "line": "#D4D5DA", "highlight": "#FFF1EA"},
+  "fonts": {"display": "\"Pretendard Variable\", sans-serif", "sans": "\"Pretendard Variable\", sans-serif", "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace", "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [{"family": "Pretendard Variable", "path": "source/fonts/PretendardVariable.woff2", "weight": "45 920", "style": "normal"},
+              {"family": "JetBrains Mono", "path": "source/fonts/JetBrainsMono-latin-wght.woff2", "weight": "100 800", "style": "normal"}]},
+  "type": {"scale": [18, 22, 28, 36, 48, 64, 84, 112, 150, 200], "displayWeight": 900, "bodyWeight": 500, "tracking": -0.04, "trackingLabel": 0.15},
+  "layout": {"theme": "light", "margin": 120, "grid": 12, "gutter": 24, "baseline": 8, "hud": false,
+    "captions": {"enabled": false, "font": "sans", "size": 40, "fg": "#0B0B0D", "bg": "none", "y": 960}, "radius": 6},
+  "motion": {"pace": "medium", "spring": {"f": 2.4, "z": 0.62}, "overshoot": 0.05, "ease": "outC", "transitions": ["cut", "whip", "impact"],
+    "characters": false, "dataViz": false, "visualSources": ["vector", "app-ui"], "typeReveal": ["kinetic"]},
+  "post": {"grain": 0.02, "vignette": {"a": 0.1, "color": "#3F4047"}, "bloom": 0},
+  "sound": {"bpm": 112, "key": "G", "mode": "major", "preset": "corporate", "instruments": ["strings", "piano", "marimba", "bass", "bell", "kick", "clap", "hats"],
+    "drums": "light", "sfx": "glassy", "energy": {"intro": 0.35, "groove": 0.65, "breakdown": 0.4, "drop": 1.0, "outro": 0.5}},
+  "narration": {"recommended": false, "voice": "Kore", "styleTag": "[crisp, friendly]", "lang": "ko-KR"},
+  "review": []
+}

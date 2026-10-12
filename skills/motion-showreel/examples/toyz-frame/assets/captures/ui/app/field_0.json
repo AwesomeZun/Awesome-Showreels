@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".panel .field",
+ "file": "field_0.png",
+ "kind": "element",
+ "px": [
+  918,
+  212
+ ],
+ "dpr": 2,
+ "sha1": "ca4c1c1ff4b2",
+ "rect": {
+  "x": 20,
+  "y": 296.08,
+  "w": 459,
+  "h": 106.14
+ },
+ "screen": {
+  "x": 20,
+  "y": 296.08,
+  "w": 459,
+  "h": 106.14
+ },
+ "page": {
+  "x": 20,
+  "y": 296.08,
+  "w": 459,
+  "h": 106.14
+ },
+ "element": {
+  "x": 8,
+  "y": 8,
+  "w": 443,
+  "h": 90.14
+ },
+ "pad": 8,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(11, 11, 13)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "이름\n\n이름은 첫 화면의 가장 큰 제목이에요.",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:22:35.107Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

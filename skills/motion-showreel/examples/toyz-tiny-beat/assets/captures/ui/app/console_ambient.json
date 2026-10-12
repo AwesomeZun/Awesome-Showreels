@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".console",
+ "file": "console_ambient.png",
+ "kind": "element",
+ "px": [
+  2612,
+  553
+ ],
+ "dpr": 2,
+ "sha1": "0c7543882f02",
+ "rect": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "screen": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "page": {
+  "x": 147,
+  "y": 443.47,
+  "w": 1306,
+  "h": 276.55
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 1274,
+  "h": 244.55
+ },
+ "pad": 16,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "64\nBPM\n템포\n−\n+\nSONG\n10월 12일의 앰비언트\n저장 안 됨\nBPM\n064\nSWING\n00%\nPAT\nA\nSTEP\n--/16\nKEY D major\nCHAIN AB\n앰비언트\n● AUDIO ON\n강세 ACC\n스윙\n0%\n새 곡\n저장\n공유\nWAV",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:30:18.446Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".panel-stats",
+ "file": "stats.png",
+ "kind": "element",
+ "px": [
+  678,
+  140
+ ],
+ "dpr": 2,
+ "sha1": "0163cd1e41ca",
+ "rect": {
+  "x": 1245,
+  "y": 112,
+  "w": 339,
+  "h": 69.94
+ },
+ "screen": {
+  "x": 1245,
+  "y": 112,
+  "w": 339,
+  "h": 69.94
+ },
+ "page": {
+  "x": 1245,
+  "y": 112,
+  "w": 339,
+  "h": 69.94
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 339,
+  "h": 69.94
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(237, 237, 239)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "OPEN\n02\nRESOLVED\n02\nBOARD RESOLUTION · 3D\n20%",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:37.436Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

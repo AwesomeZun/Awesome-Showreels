@@ -1,0 +1,901 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:22:51.472Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "brand": {
+   "step": "layer",
+   "selector": ".topbar",
+   "file": "brand.png",
+   "kind": "element",
+   "px": [
+    3200,
+    134
+   ],
+   "dpr": 2,
+   "sha1": "49aa08309448",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 67
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 67
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 67
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 61
+   },
+   "pad": 6,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "Frame.\nPORTFOLIO BUILDER\n자동 저장됨\n내보내기\n2.02 MB",
+   "alpha": true
+  },
+  "panel_profile": {
+   "step": "layer",
+   "selector": ".panel",
+   "file": "panel_profile.png",
+   "kind": "element",
+   "px": [
+    998,
+    1878
+   ],
+   "dpr": 2,
+   "sha1": "9a84ce04022d",
+   "rect": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "screen": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "page": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 499,
+    "h": 1100.88
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "01\nPROFILE\n\n프로필\n\n포트폴리오 첫 화면에 크게 나오는 정보입니다. 입력하는 즉시 미리보기에 반영돼요.\n\n기본 정보\n이름\n직함\n소개\n92자\n위치\n이메일\n프로필 이미지\n선택\n대체 텍스트\n바꾸기\n빼기\n링크\n2\n링크 추가\n01\n라벨\n주소\n02\n라벨\n주소",
+   "alpha": true
+  },
+  "view_0": {
+   "step": "layer",
+   "note": "live preview with the name ''",
+   "selector": ".viewport",
+   "file": "view_0.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "3155505d7c74",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "field_0": {
+   "step": "layer",
+   "selector": ".panel .field",
+   "file": "field_0.png",
+   "kind": "element",
+   "px": [
+    918,
+    212
+   ],
+   "dpr": 2,
+   "sha1": "ca4c1c1ff4b2",
+   "rect": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 106.14
+   },
+   "screen": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 106.14
+   },
+   "page": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 106.14
+   },
+   "element": {
+    "x": 8,
+    "y": 8,
+    "w": 443,
+    "h": 90.14
+   },
+   "pad": 8,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "이름\n\n이름은 첫 화면의 가장 큰 제목이에요.",
+   "alpha": true
+  },
+  "view_1": {
+   "step": "layer",
+   "note": "live preview with the name '이'",
+   "selector": ".viewport",
+   "file": "view_1.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "277bbf4806ab",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "field_1": {
+   "step": "layer",
+   "selector": ".panel .field",
+   "file": "field_1.png",
+   "kind": "element",
+   "px": [
+    918,
+    166
+   ],
+   "dpr": 2,
+   "sha1": "df0ba0b954d5",
+   "rect": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "screen": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "page": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "element": {
+    "x": 8,
+    "y": 8,
+    "w": 443,
+    "h": 66.75
+   },
+   "pad": 8,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "이름",
+   "alpha": true
+  },
+  "view_2": {
+   "step": "layer",
+   "note": "live preview with the name '이로'",
+   "selector": ".viewport",
+   "file": "view_2.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "3330bcb41451",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "field_2": {
+   "step": "layer",
+   "selector": ".panel .field",
+   "file": "field_2.png",
+   "kind": "element",
+   "px": [
+    918,
+    166
+   ],
+   "dpr": 2,
+   "sha1": "dd43d0fc61e1",
+   "rect": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "screen": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "page": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "element": {
+    "x": 8,
+    "y": 8,
+    "w": 443,
+    "h": 66.75
+   },
+   "pad": 8,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "이름",
+   "alpha": true
+  },
+  "view_3": {
+   "step": "layer",
+   "note": "live preview with the name '이로아'",
+   "selector": ".viewport",
+   "file": "view_3.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "a367233e0bcb",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "field_3": {
+   "step": "layer",
+   "selector": ".panel .field",
+   "file": "field_3.png",
+   "kind": "element",
+   "px": [
+    918,
+    166
+   ],
+   "dpr": 2,
+   "sha1": "b79ae56586c3",
+   "rect": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "screen": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "page": {
+    "x": 20,
+    "y": 296.08,
+    "w": 459,
+    "h": 82.75
+   },
+   "element": {
+    "x": 8,
+    "y": 8,
+    "w": 443,
+    "h": 66.75
+   },
+   "pad": 8,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "이름",
+   "alpha": true
+  },
+  "panel_design": {
+   "step": "layer",
+   "selector": ".panel",
+   "file": "panel_design.png",
+   "kind": "element",
+   "px": [
+    998,
+    1878
+   ],
+   "dpr": 2,
+   "sha1": "7494f5e356a2",
+   "rect": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "screen": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "page": {
+    "x": 0,
+    "y": 61.25,
+    "w": 499,
+    "h": 938.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 499,
+    "h": 1131.05
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "03\nDESIGN\n\n디자인\n\n템플릿을 바꾸면 레이아웃이 통째로 바뀝니다. 내용은 그대로 유지돼요.\n\n템플릿\nGRID\n갤러리형 · 이미지 격자\n01\n02\nEDITORIAL\n매거진형 · 큰 제목과 번호\nMONO\n목록형 · 표처럼 촘촘하게\n포인트 색\n주황\n검정\n코발트\n라임\n로즈\n틸\n직접\nHEX\n#rrggbb 형식\n배경 톤\n밝게\n실버 화이트\n어둡게\n그래파이트\n제목 서체\nAa 가\n굵은 산세리프\n힘 있고 현대적\nAa 가\n세리프\n잡지처럼 우아하게\nAa 가\n모노\n코드처럼 정밀하게",
+   "alpha": true
+  },
+  "tpl_grid": {
+   "step": "layer",
+   "selector": ".viewport",
+   "file": "tpl_grid.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "ae2df3369541",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_editorial": {
+   "step": "layer",
+   "selector": ".viewport",
+   "file": "tpl_editorial.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "6816e4ef8562",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_mono": {
+   "step": "layer",
+   "selector": ".viewport",
+   "file": "tpl_mono.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "2db563dc1037",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_mono_dark": {
+   "step": "layer",
+   "selector": ".viewport",
+   "file": "tpl_mono_dark.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "813bc14bfee3",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "tpl_editorial_dark": {
+   "step": "layer",
+   "selector": ".viewport",
+   "file": "tpl_editorial_dark.png",
+   "kind": "element",
+   "px": [
+    2168,
+    1668
+   ],
+   "dpr": 2,
+   "sha1": "6fd9e79725ad",
+   "rect": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "screen": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "page": {
+    "x": 508,
+    "y": 158,
+    "w": 1084,
+    "h": 834
+   },
+   "element": {
+    "x": 20,
+    "y": 20,
+    "w": 1044,
+    "h": 794
+   },
+   "pad": 20,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "panel_export": {
+   "step": "layer",
+   "selector": ".panel",
+   "file": "panel_export.png",
+   "kind": "element",
+   "px": [
+    998,
+    1568
+   ],
+   "dpr": 2,
+   "sha1": "a1a5563e6385",
+   "rect": {
+    "x": 0,
+    "y": 114.25,
+    "w": 499,
+    "h": 783.86
+   },
+   "screen": {
+    "x": 0,
+    "y": 114.25,
+    "w": 499,
+    "h": 783.86
+   },
+   "page": {
+    "x": 0,
+    "y": 114.25,
+    "w": 499,
+    "h": 783.86
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 499,
+    "h": 783.86
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "04\nEXPORT\n\n내보내기\n\n미리보기에 보이는 그대로, CSS와 이미지를 모두 담은 HTML 파일 하나로 내려받습니다. 인터넷이 없어도 열려요.\n\n예상 파일 크기\nESTIMATED SIZE\n예상 파일 크기\n2.02 MB\nHTML 1 · 이미지 12장 (985 KB) · 외부 참조 0\nHTML 파일 내려받기\n\n이로아-portfolio.html\n\n내보내기 전 점검\n준비 완료\n\n이름, 이미지, 대체 텍스트까지 모두 채워졌어요.\n\n프로젝트 파일\n.frame.json\n\n나중에 이어서 편집하거나 다른 기기로 옮길 때 씁니다. 이미지까지 파일 하나에 들어갑니다.\n\n프로젝트 저장\n프로젝트 불러오기",
+   "alpha": true
+  },
+  "export_card": {
+   "step": "layer",
+   "selector": ".panel section, .panel .card, .panel [class*='export']",
+   "file": "export_card.png",
+   "kind": "element",
+   "px": [
+    926,
+    551
+   ],
+   "dpr": 2,
+   "sha1": "5c9343867688",
+   "rect": {
+    "x": 18,
+    "y": 287.28,
+    "w": 463,
+    "h": 275.25
+   },
+   "screen": {
+    "x": 18,
+    "y": 287.28,
+    "w": 463,
+    "h": 275.25
+   },
+   "page": {
+    "x": 18,
+    "y": 287.28,
+    "w": 463,
+    "h": 275.25
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 443,
+    "h": 255.25
+   },
+   "pad": 10,
+   "radius": [
+    6,
+    6,
+    6,
+    6
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(11, 11, 13)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "예상 파일 크기\nESTIMATED SIZE\n예상 파일 크기\n2.02 MB\nHTML 1 · 이미지 12장 (985 KB) · 외부 참조 0\nHTML 파일 내려받기\n\n이로아-portfolio.html",
+   "alpha": true
+  }
+ },
+ "warnings": [
+  "panel_profile: element taller than the viewport; clipped (use a full-page shot)",
+  "panel_design: element taller than the viewport; clipped (use a full-page shot)"
+ ]
+}

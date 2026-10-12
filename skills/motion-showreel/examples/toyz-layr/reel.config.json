@@ -1,0 +1,44 @@
+{
+  "title": "LAYR",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "LAYR", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "thud x5 gap=0.25b"},
+      {"beat": 2.75, "from": "start", "sfx": "tick x10 gap=0.25b"},
+      {"beat": 0, "from": "outStart", "sfx": "whoosh"}
+    ]},
+    {"id": "organize", "label": "비슷한 메모끼리", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "zoomInto", "music": "groove", "cues": [
+      {"beat": 1, "from": "start", "sfx": "swish"},
+      {"beat": 2.5, "from": "start", "sfx": "blip x3 gap=0.5b"},
+      {"beat": 0, "from": "holdBar", "sfx": "click"},
+      {"beat": 0, "from": "holdBar", "sfx": "confirm"}
+    ]},
+    {"id": "layers", "label": "다섯 레이어", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 1, "from": "start", "sfx": "swell"},
+      {"beat": 2, "from": "start", "sfx": "blip x10 gap=0.25b"},
+      {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=2b"}
+    ]},
+    {"id": "brief", "label": "한 장짜리 브리프", "minBars": 3, "maxBars": 3, "priority": 3, "optional": true, "inBeats": 9, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "breakdown", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 3, "from": "start", "sfx": "tick"},
+      {"beat": 4.5, "from": "start", "sfx": "tick"},
+      {"beat": 6, "from": "start", "sfx": "tick"},
+      {"beat": 7.5, "from": "start", "sfx": "tick"},
+      {"beat": 0, "from": "outStart", "sfx": "whoosh"}
+    ]},
+    {"id": "end", "label": "LAYR", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 1, "from": "start", "sfx": "shimmer dur=2b"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["brief"], "scenes": {"hook": {"bars": 2}, "organize": {"bars": 2}, "layers": {"bars": 2}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "organize": {"bars": 3}, "layers": {"bars": 3}, "brief": {"bars": 3}, "end": {"bars": 3}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

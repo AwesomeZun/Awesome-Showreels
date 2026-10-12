@@ -1,0 +1,4571 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:57:14.068Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "cards_0": {
+   "step": "layer",
+   "file": "cards_0.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "70311df7af8a",
+   "rect": {
+    "x": 114,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 114,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "01\n\nMAGNETIC BUTTON\n4 PARAMS\n\n마그네틱 버튼\n\n커서가 가까워지면 버튼이 살짝 끌려와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_1": {
+   "step": "layer",
+   "file": "cards_1.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "8d60de028781",
+   "rect": {
+    "x": 456.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\n\nRIPPLE\n3 PARAMS\n\n리플 버튼\n\n누른 자리에서 물결이 퍼져 나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_2": {
+   "step": "layer",
+   "file": "cards_2.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "18d139a04ee9",
+   "rect": {
+    "x": 799,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 799,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 799,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "03\n\nCONFETTI BURST\n4 PARAMS\n\n컨페티 버스트\n\n누르면 종이 조각이 팡 터져 흩날려요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_3": {
+   "step": "layer",
+   "file": "cards_3.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "6de6bf3773da",
+   "rect": {
+    "x": 1141.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 553.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 1132.88,
+    "w": 344.5,
+    "h": 446.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "04\n\nHOLD TO CONFIRM\n3 PARAMS\n\n길게 눌러 확인\n\n실수로 누르지 않게, 꾹 눌러야 실행돼요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_4": {
+   "step": "layer",
+   "file": "cards_4.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "013c2f40212a",
+   "rect": {
+    "x": 114,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "05\n\nJELLY PRESS\n3 PARAMS\n\n젤리 프레스\n\n누르면 말랑하게 눌렸다가 탱글하게 튀어나와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_5": {
+   "step": "layer",
+   "file": "cards_5.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "241153b7b299",
+   "rect": {
+    "x": 456.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "06\n\nSHINE SWEEP\n4 PARAMS\n\n샤인 스윕\n\n빛줄기가 버튼 표면을 쓱 훑고 지나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_6": {
+   "step": "layer",
+   "file": "cards_6.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "9bc8989d01d9",
+   "rect": {
+    "x": 799,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 799,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 799,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "07\n\nLOADING TO SUCCESS\n4 PARAMS\n\n로딩 → 성공 모핑\n\n버튼이 동그랗게 말려 로딩하다가 체크로 바뀌어요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_7": {
+   "step": "layer",
+   "file": "cards_7.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "a8d4b6474ea0",
+   "rect": {
+    "x": 1141.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 314,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 1587,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "08\n\nHEART BURST\n4 PARAMS\n\n좋아요 하트 파티클\n\n하트가 톡 튀어 오르며 작은 입자가 퍼져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_8": {
+   "step": "layer",
+   "file": "cards_8.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "e34212c0287b",
+   "rect": {
+    "x": 114,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 114,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 114,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "09\n\n3D TILT + GLARE\n4 PARAMS\n\n3D 틸트와 글레어\n\n커서를 따라 카드가 기울고 빛이 미끄러져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_9": {
+   "step": "layer",
+   "file": "cards_9.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "2a6e026eebb0",
+   "rect": {
+    "x": 456.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 456.5,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "10\n\nHOLOGRAPHIC FOIL\n4 PARAMS\n\n홀로그래픽 포일\n\n보는 각도에 따라 무지갯빛 포일이 흘러요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_10": {
+   "step": "layer",
+   "file": "cards_10.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "49fe2541ccf0",
+   "rect": {
+    "x": 799,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 799,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 799,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "11\n\nFLIP CARD\n4 PARAMS\n\n플립 카드\n\n누르면 카드가 빙글 돌아 뒷면을 보여 줘요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_11": {
+   "step": "layer",
+   "file": "cards_11.png",
+   "kind": "element",
+   "px": [
+    689,
+    892
+   ],
+   "dpr": 2,
+   "sha1": "b0677b6bc6a9",
+   "rect": {
+    "x": 1141.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 554.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 2154.13,
+    "w": 344.5,
+    "h": 445.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "12\n\nSTACK SWIPE\n3 PARAMS\n\n스택 스와이프\n\n카드 더미를 옆으로 밀어 한 장씩 넘겨요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_12": {
+   "step": "layer",
+   "file": "cards_12.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "45ef48525ef5",
+   "rect": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 2608.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "13\n\nSPOTLIGHT BORDER\n3 PARAMS\n\n스포트라이트 테두리\n\n커서 근처의 테두리만 은은하게 빛나요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_13": {
+   "step": "layer",
+   "file": "cards_13.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "baddad634dc7",
+   "rect": {
+    "x": 456.5,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 456.5,
+    "y": 2608.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "14\n\nSPRING DRAG\n3 PARAMS\n\n스프링 드래그\n\n끌었다 놓으면 고무줄처럼 튕겨 제자리로 와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_14": {
+   "step": "layer",
+   "file": "cards_14.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "f74c9f27a4b9",
+   "rect": {
+    "x": 114,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 114,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 114,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "15\n\nTOGGLE MORPH\n4 PARAMS\n\n토글 모핑\n\n손잡이가 늘어났다 줄어들며 반대편으로 건너가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_15": {
+   "step": "layer",
+   "file": "cards_15.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "c1cbf2a4d82d",
+   "rect": {
+    "x": 456.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 456.5,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "16\n\nCHECK DRAW\n3 PARAMS\n\n체크 그리기\n\n체크 표시가 펜으로 긋듯 그려지고 할 일에 줄이 그어져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_16": {
+   "step": "layer",
+   "file": "cards_16.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "a5a183d10655",
+   "rect": {
+    "x": 799,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 799,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 799,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "17\n\nFLOATING LABEL\n3 PARAMS\n\n플로팅 라벨\n\n입력을 시작하면 라벨이 위로 떠올라 자리를 비켜요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_17": {
+   "step": "layer",
+   "file": "cards_17.png",
+   "kind": "element",
+   "px": [
+    689,
+    935
+   ],
+   "dpr": 2,
+   "sha1": "7821d908d171",
+   "rect": {
+    "x": 1141.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 532.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 3175.38,
+    "w": 344.5,
+    "h": 467.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "18\n\nERROR SHAKE\n4 PARAMS\n\n오류 흔들림\n\n잘못 입력하면 칸이 도리도리 고개를 저어요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_18": {
+   "step": "layer",
+   "file": "cards_18.png",
+   "kind": "element",
+   "px": [
+    689,
+    912
+   ],
+   "dpr": 2,
+   "sha1": "d3c498f51198",
+   "rect": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "screen": {
+    "x": 114,
+    "y": 314.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "page": {
+    "x": 114,
+    "y": 3651.25,
+    "w": 344.5,
+    "h": 456.13
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "19\n\nSEGMENTED CONTROL\n3 PARAMS\n\n세그먼트 슬라이드\n\n고른 항목 뒤로 알약 배경이 미끄러져 따라와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_19": {
+   "step": "layer",
+   "file": "cards_19.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "dc6dd8f631a6",
+   "rect": {
+    "x": 114,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 114,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 114,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "20\n\nTEXT SCRAMBLE\n3 PARAMS\n\n텍스트 스크램블\n\n뒤섞인 기호가 한 글자씩 제자리를 찾아가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_20": {
+   "step": "layer",
+   "file": "cards_20.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "ea6d975695a8",
+   "rect": {
+    "x": 456.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 456.5,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "21\n\nCOUNTER ROLL\n3 PARAMS\n\n카운터 롤\n\n숫자가 자리마다 주르륵 굴러 새 값에 멈춰요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_21": {
+   "step": "layer",
+   "file": "cards_21.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "59aeaf97b482",
+   "rect": {
+    "x": 799,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 799,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 799,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "22\n\nLETTER REVEAL\n4 PARAMS\n\n글자별 등장\n\n제목이 한 글자씩 흐릿하게 떠올라 또렷해져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_22": {
+   "step": "layer",
+   "file": "cards_22.png",
+   "kind": "element",
+   "px": [
+    689,
+    893
+   ],
+   "dpr": 2,
+   "sha1": "3b756ba5f0a9",
+   "rect": {
+    "x": 1141.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 553.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 4218.38,
+    "w": 344.5,
+    "h": 446.63
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 436.13
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "23\n\nTYPEWRITER\n4 PARAMS\n\n타자기\n\n문구를 또각또각 쳤다가 지우고 다음 문구를 쳐요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_23": {
+   "step": "layer",
+   "file": "cards_23.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "cf8ed6ead164",
+   "rect": {
+    "x": 114,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 114,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 114,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "24\n\nTOAST STACK\n3 PARAMS\n\n토스트 스택\n\n알림이 겹겹이 쌓이고, 가리키면 부채처럼 펼쳐져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_24": {
+   "step": "layer",
+   "file": "cards_24.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "5bb7fc68f1f7",
+   "rect": {
+    "x": 456.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 456.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 456.5,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "25\n\nSKELETON SHIMMER\n3 PARAMS\n\n스켈레톤 시머\n\n불러오는 동안 뼈대 위로 은빛 물결이 지나가요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_25": {
+   "step": "layer",
+   "file": "cards_25.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "18ac2dba53e4",
+   "rect": {
+    "x": 799,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 799,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 799,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "26\n\nTOOLTIP POP\n4 PARAMS\n\n툴팁 팝\n\n아이콘 위에 말풍선이 톡 튀어나와요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "cards_26": {
+   "step": "layer",
+   "file": "cards_26.png",
+   "kind": "element",
+   "px": [
+    689,
+    956
+   ],
+   "dpr": 2,
+   "sha1": "a3aaf1bc62b3",
+   "rect": {
+    "x": 1141.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "screen": {
+    "x": 1141.5,
+    "y": 303.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "page": {
+    "x": 1141.5,
+    "y": 4785.5,
+    "w": 344.5,
+    "h": 477.88
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 324.5,
+    "h": 457.88
+   },
+   "pad": 10,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "27\n\nBELL + BADGE\n3 PARAMS\n\n벨 흔들림 배지\n\n알림이 오면 종이 딸랑 흔들리고 숫자가 톡 커져요.\n\n조절·코드 보기",
+   "alpha": true
+  },
+  "confetti_still": {
+   "step": "layer",
+   "note": "confetti burst: before",
+   "selector": ".frame",
+   "file": "confetti_still.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a599d413fb7d",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_0": {
+   "step": "layer",
+   "note": "confetti burst: 0 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_0.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "5d46928e1c2e",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_1": {
+   "step": "layer",
+   "note": "confetti burst: 50 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_1.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a2d1bee93a6e",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_2": {
+   "step": "layer",
+   "note": "confetti burst: 100 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_2.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "acb0c7a17ff5",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_3": {
+   "step": "layer",
+   "note": "confetti burst: 150 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_3.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "38c28548bb4d",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_4": {
+   "step": "layer",
+   "note": "confetti burst: 200 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_4.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "0ca940999438",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_5": {
+   "step": "layer",
+   "note": "confetti burst: 250 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_5.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "10e3ef92ae0b",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_6": {
+   "step": "layer",
+   "note": "confetti burst: 300 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_6.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "82b399d00b9d",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_7": {
+   "step": "layer",
+   "note": "confetti burst: 350 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_7.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "80ff4edc46d0",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_8": {
+   "step": "layer",
+   "note": "confetti burst: 400 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_8.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "6c4033a027b8",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_9": {
+   "step": "layer",
+   "note": "confetti burst: 450 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_9.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "e1563827386c",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_10": {
+   "step": "layer",
+   "note": "confetti burst: 500 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_10.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "11df688286ba",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_11": {
+   "step": "layer",
+   "note": "confetti burst: 550 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_11.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "c72372c41d6a",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_12": {
+   "step": "layer",
+   "note": "confetti burst: 600 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_12.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "65d773828eb9",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_13": {
+   "step": "layer",
+   "note": "confetti burst: 650 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_13.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "49122060cfcf",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_14": {
+   "step": "layer",
+   "note": "confetti burst: 700 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_14.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "e9b890c7dac6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_15": {
+   "step": "layer",
+   "note": "confetti burst: 750 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_15.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "32e9e99af1d8",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_16": {
+   "step": "layer",
+   "note": "confetti burst: 800 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_16.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "4f81b478ae0e",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_17": {
+   "step": "layer",
+   "note": "confetti burst: 850 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_17.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "c810dc238811",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_18": {
+   "step": "layer",
+   "note": "confetti burst: 900 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_18.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "6034c641f758",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_19": {
+   "step": "layer",
+   "note": "confetti burst: 950 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_19.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "1a5baa81dd65",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_20": {
+   "step": "layer",
+   "note": "confetti burst: 1000 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_20.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "5c3f61e787c5",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_21": {
+   "step": "layer",
+   "note": "confetti burst: 1050 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_21.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "caa73cf9db59",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_22": {
+   "step": "layer",
+   "note": "confetti burst: 1100 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_22.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "737a9382edfc",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_23": {
+   "step": "layer",
+   "note": "confetti burst: 1150 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_23.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "8348519f29f3",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "confetti_24": {
+   "step": "layer",
+   "note": "confetti burst: 1200 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "confetti_24.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "01945d85ade9",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_still": {
+   "step": "layer",
+   "note": "ripple: before",
+   "selector": ".frame",
+   "file": "ripple_still.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "7bcce28a76b1",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_0": {
+   "step": "layer",
+   "note": "ripple: 0 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_0.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "7bcce28a76b1",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_1": {
+   "step": "layer",
+   "note": "ripple: 50 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_1.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "c0b420a44efb",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_2": {
+   "step": "layer",
+   "note": "ripple: 100 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_2.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "260f6176a4e2",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_3": {
+   "step": "layer",
+   "note": "ripple: 150 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_3.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "dc049a9d072d",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_4": {
+   "step": "layer",
+   "note": "ripple: 200 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_4.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "086c4954204e",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_5": {
+   "step": "layer",
+   "note": "ripple: 250 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_5.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "3cef765d552e",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_6": {
+   "step": "layer",
+   "note": "ripple: 300 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_6.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "b58555b12793",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_7": {
+   "step": "layer",
+   "note": "ripple: 350 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_7.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "d6dc0a65d2f6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_8": {
+   "step": "layer",
+   "note": "ripple: 400 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_8.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "fa8f3dc0ccb6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_9": {
+   "step": "layer",
+   "note": "ripple: 450 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_9.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "77400bbf1d85",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_10": {
+   "step": "layer",
+   "note": "ripple: 500 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_10.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "92f3ca362aa6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_11": {
+   "step": "layer",
+   "note": "ripple: 550 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_11.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "920b321617e6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_12": {
+   "step": "layer",
+   "note": "ripple: 600 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_12.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "5b640f1b1f65",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_13": {
+   "step": "layer",
+   "note": "ripple: 650 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_13.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "7bcce28a76b1",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "ripple_14": {
+   "step": "layer",
+   "note": "ripple: 700 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "ripple_14.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "7bcce28a76b1",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_still": {
+   "step": "layer",
+   "note": "like heart particles: before",
+   "selector": ".frame",
+   "file": "heart_still.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "b39f754531a2",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_0": {
+   "step": "layer",
+   "note": "like heart particles: 0 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_0.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "3ad411afd4e0",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_1": {
+   "step": "layer",
+   "note": "like heart particles: 50 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_1.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "8651fa1f35cc",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_2": {
+   "step": "layer",
+   "note": "like heart particles: 100 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_2.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "d1a6c0385f61",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_3": {
+   "step": "layer",
+   "note": "like heart particles: 150 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_3.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "d2ba3ad5c2d3",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_4": {
+   "step": "layer",
+   "note": "like heart particles: 200 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_4.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "43a525e040ae",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_5": {
+   "step": "layer",
+   "note": "like heart particles: 250 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_5.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "8c1a04b13b85",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_6": {
+   "step": "layer",
+   "note": "like heart particles: 300 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_6.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "47e314023ec4",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_7": {
+   "step": "layer",
+   "note": "like heart particles: 350 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_7.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "86210230c3e6",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_8": {
+   "step": "layer",
+   "note": "like heart particles: 400 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_8.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a0f92034d250",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_9": {
+   "step": "layer",
+   "note": "like heart particles: 450 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_9.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "be2a36c99889",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_10": {
+   "step": "layer",
+   "note": "like heart particles: 500 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_10.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "d67cb8e7ff46",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_11": {
+   "step": "layer",
+   "note": "like heart particles: 550 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_11.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a0bc5f7a3907",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_12": {
+   "step": "layer",
+   "note": "like heart particles: 600 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_12.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "94b37171fdd1",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_13": {
+   "step": "layer",
+   "note": "like heart particles: 650 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_13.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_14": {
+   "step": "layer",
+   "note": "like heart particles: 700 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_14.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_15": {
+   "step": "layer",
+   "note": "like heart particles: 750 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_15.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_16": {
+   "step": "layer",
+   "note": "like heart particles: 800 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_16.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_17": {
+   "step": "layer",
+   "note": "like heart particles: 850 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_17.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "heart_18": {
+   "step": "layer",
+   "note": "like heart particles: 900 ms (the app's own animation, paused and stepped)",
+   "selector": ".frame",
+   "file": "heart_18.png",
+   "kind": "element",
+   "px": [
+    1904,
+    1156
+   ],
+   "dpr": 2,
+   "sha1": "a3abd186b970",
+   "rect": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "screen": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "page": {
+    "x": 125,
+    "y": 314.61,
+    "w": 952,
+    "h": 578
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 952,
+    "h": 578
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "controls_36": {
+   "step": "layer",
+   "selector": ".panel",
+   "file": "controls_36.png",
+   "kind": "element",
+   "px": [
+    808,
+    1397
+   ],
+   "dpr": 2,
+   "sha1": "d912da537133",
+   "rect": {
+    "x": 1084,
+    "y": 301.61,
+    "w": 404,
+    "h": 262
+   },
+   "screen": {
+    "x": 1084,
+    "y": 301.61,
+    "w": 404,
+    "h": 698.39
+   },
+   "page": {
+    "x": 1084,
+    "y": 301.61,
+    "w": 404,
+    "h": 698.39
+   },
+   "element": {
+    "x": 12,
+    "y": 12,
+    "w": 380,
+    "h": 684.67
+   },
+   "pad": 12,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "조절\n기본값으로\n조각 수\n36\n퍼지는 각도\n150°\n날아가는 거리\n150px\n색 조합\n토이즈\n홀로그램\n블루 모노\n접근성\nclick 이벤트를 쓰므로 키보드로도 똑같이 터져요. 조각은 pointer-events: none이라 다른 요소를 가리지 않고, 끝나면 DOM에서 지워요. 모션 줄이기에서는 조각 대신 버튼 색만 바뀝니다.\n터치 기기\n탭 한 번으로 동작해요. 조각은 화면 기준(fixed)으로 날아가서 스크롤 위치와 상관없이 버튼에서 터집니다.",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T08:57:05.828Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "trimmed": [
+    0,
+    0,
+    404,
+    262
+   ]
+  },
+  "code_36": {
+   "step": "layer",
+   "selector": ".code",
+   "file": "code_36.png",
+   "kind": "element",
+   "px": [
+    2752,
+    1266
+   ],
+   "dpr": 2,
+   "sha1": "f72c4aebe6e2",
+   "rect": {
+    "x": 112,
+    "y": 366.97,
+    "w": 640,
+    "h": 330
+   },
+   "screen": {
+    "x": 112,
+    "y": 366.97,
+    "w": 1376,
+    "h": 633.03
+   },
+   "page": {
+    "x": 112,
+    "y": 1099.97,
+    "w": 1376,
+    "h": 633.03
+   },
+   "element": {
+    "x": 12,
+    "y": 12,
+    "w": 1352,
+    "h": 621
+   },
+   "pad": 12,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(10, 13, 36)",
+   "color": "rgb(230, 233, 248)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "HTML\nCSS\nJS\n전체 파일\n48줄\n복사\n(() => {\n  const CONFETTI = {\n    count: 36,\n    spread: 150,\n    distance: 150,\n    duration: 1200,\n    colors: [\"#0B2FE6\", \"#C9B8FF\", \"#FF6A2B\", \"#FFFFFF\", \"#7FE7FF\"],\n  };\n  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');\n\n  function burst(button) {\n    button.classList.add('is-done');\n    setTimeout(() => button.classList.remove('is-done'), 700);\n ",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T08:57:06.872Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "trimmed": [
+    0,
+    0,
+    640,
+    330
+   ]
+  },
+  "controls_72": {
+   "step": "layer",
+   "note": "조각 수 set to 72",
+   "selector": ".panel",
+   "file": "controls_72.png",
+   "kind": "element",
+   "px": [
+    808,
+    1417
+   ],
+   "dpr": 2,
+   "sha1": "826bd4522120",
+   "rect": {
+    "x": 1084,
+    "y": 71.61,
+    "w": 404,
+    "h": 262
+   },
+   "screen": {
+    "x": 1084,
+    "y": 71.61,
+    "w": 404,
+    "h": 708.67
+   },
+   "page": {
+    "x": 1084,
+    "y": 301.61,
+    "w": 404,
+    "h": 708.67
+   },
+   "element": {
+    "x": 12,
+    "y": 12,
+    "w": 380,
+    "h": 684.67
+   },
+   "pad": 12,
+   "radius": [
+    24,
+    24,
+    24,
+    24
+   ],
+   "bg": "rgb(255, 255, 255)",
+   "color": "rgb(10, 13, 31)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "조절\n기본값으로\n조각 수\n72\n퍼지는 각도\n150°\n날아가는 거리\n150px\n색 조합\n토이즈\n홀로그램\n블루 모노\n접근성\nclick 이벤트를 쓰므로 키보드로도 똑같이 터져요. 조각은 pointer-events: none이라 다른 요소를 가리지 않고, 끝나면 DOM에서 지워요. 모션 줄이기에서는 조각 대신 버튼 색만 바뀝니다.\n터치 기기\n탭 한 번으로 동작해요. 조각은 화면 기준(fixed)으로 날아가서 스크롤 위치와 상관없이 버튼에서 터집니다.",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T08:57:07.878Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "trimmed": [
+    0,
+    0,
+    404,
+    262
+   ]
+  },
+  "code_72": {
+   "step": "layer",
+   "note": "the code shows count: 72",
+   "selector": ".code",
+   "file": "code_72.png",
+   "kind": "element",
+   "px": [
+    2752,
+    1266
+   ],
+   "dpr": 2,
+   "sha1": "1c85c2c458b2",
+   "rect": {
+    "x": 112,
+    "y": 366.97,
+    "w": 640,
+    "h": 330
+   },
+   "screen": {
+    "x": 112,
+    "y": 366.97,
+    "w": 1376,
+    "h": 633.03
+   },
+   "page": {
+    "x": 112,
+    "y": 1099.97,
+    "w": 1376,
+    "h": 633.03
+   },
+   "element": {
+    "x": 12,
+    "y": 12,
+    "w": 1352,
+    "h": 621
+   },
+   "pad": 12,
+   "radius": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "bg": "rgb(10, 13, 36)",
+   "color": "rgb(230, 233, 248)",
+   "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "HTML\nCSS\nJS\n전체 파일\n48줄\n복사\n(() => {\n  const CONFETTI = {\n    count: 72,\n    spread: 150,\n    distance: 150,\n    duration: 1200,\n    colors: [\"#0B2FE6\", \"#C9B8FF\", \"#FF6A2B\", \"#FFFFFF\", \"#7FE7FF\"],\n  };\n  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');\n\n  function burst(button) {\n    button.classList.add('is-done');\n    setTimeout(() => button.classList.remove('is-done'), 700);\n ",
+   "alpha": true,
+   "url": "(served)/index.html",
+   "capturedAt": "2026-10-12T08:57:08.168Z",
+   "tool": "capture_ui.mjs",
+   "toolVersion": "1.0.0",
+   "trimmed": [
+    0,
+    0,
+    640,
+    330
+   ]
+  }
+ },
+ "warnings": []
+}

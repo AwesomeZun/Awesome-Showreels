@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the neighbourhood bar",
+ "selector": ".hoods",
+ "file": "hoods.png",
+ "kind": "element",
+ "px": [
+  1276,
+  92
+ ],
+ "dpr": 2,
+ "sha1": "7bc5edc1bbb8",
+ "rect": {
+  "x": 428,
+  "y": 16,
+  "w": 638.16,
+  "h": 46
+ },
+ "screen": {
+  "x": 428,
+  "y": 16,
+  "w": 638.16,
+  "h": 46
+ },
+ "page": {
+  "x": 428,
+  "y": 16,
+  "w": 638.16,
+  "h": 46
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 638.16,
+  "h": 46
+ },
+ "pad": 0,
+ "radius": [
+  12,
+  12,
+  12,
+  12
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 238)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "01\nSEONGSU\n성수\n02\nYEONNAM\n연남\n03\nEULJIRO\n을지로\n04\nSEOCHON\n서촌\nALL\n전체 보기",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:40.047Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

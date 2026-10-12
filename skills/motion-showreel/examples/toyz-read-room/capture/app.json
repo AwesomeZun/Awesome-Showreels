@@ -1,0 +1,126 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-read-room); it is not committed. The same screens are live at https://read-room.toyz.kr.",
+ "device": {
+  "screen": [
+   1600,
+   2200
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1600
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "shot",
+   "name": "home"
+  },
+  {
+   "do": "click",
+   "selector": "a[href*='#/r/'], .room-card, article"
+  },
+  {
+   "do": "wait",
+   "ms": 1400
+  },
+  {
+   "do": "layer",
+   "name": "paper",
+   "selector": ".sheet",
+   "alpha": true,
+   "pad": 24,
+   "note": "the essay with the sample readers' highlights"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const sh = document.querySelector('.sheet'), sr = sh.getBoundingClientRect(); const marks = [];\n document.querySelectorAll('.sheet mark.hl').forEach(m => { const cls = [...m.classList].find(c => /^hl-(blue|orange|yellow|green)$/.test(c)) || '';\n   [...m.getClientRects()].forEach(r => marks.push({hl: m.dataset.hl, color: cls.slice(3), x: r.x - sr.x, y: r.y - sr.y, w: r.width, h: r.height})); });\n const cards = []; document.querySelectorAll('.margin-card, .margin-summary').forEach(c => { const r = c.getBoundingClientRect(); cards.push({cls: c.className, x: r.x, y: r.y, w: r.width, h: r.height, text: c.innerText.slice(0, 80)}); });\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({sheet: {x: sr.x, y: sr.y, w: sr.width, h: sr.height}, marks, cards}); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "layer",
+   "name": "card",
+   "selector": ".margin-card",
+   "all": true,
+   "alpha": true,
+   "pad": 14,
+   "note": "the margin memo cards (paragraphs 04 and 11)"
+  },
+  {
+   "do": "css",
+   "id": "plain",
+   "css": ".sheet mark.hl { background: transparent !important; box-shadow: none !important; text-decoration: none !important; border-color: transparent !important; } .sheet mark.hl::before, .sheet mark.hl::after { display: none !important; } .para-tools { visibility: hidden !important; }"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "paper_plain",
+   "selector": ".sheet",
+   "alpha": true,
+   "pad": 24,
+   "note": "the same sheet with the highlights and tools hidden (the sweep reveals the real ones)"
+  },
+  {
+   "do": "uncss",
+   "id": "plain"
+  },
+  {
+   "do": "click",
+   "text": "질문",
+   "optional": true
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "shot",
+   "name": "questions"
+  },
+  {
+   "do": "press",
+   "key": "Escape"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "click",
+   "text": "함께 읽기",
+   "optional": true
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "shot",
+   "name": "together"
+  }
+ ]
+}

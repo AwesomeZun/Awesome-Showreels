@@ -1,0 +1,157 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-pulse); it is not committed. The same screens are live at https://pulse.toyz.kr.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 1400
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "blob",
+   "selector": ".hero__blob",
+   "alpha": true,
+   "pad": 30,
+   "note": "the app's chrome X (its ChromeBlob SVG)"
+  },
+  {
+   "do": "layer",
+   "name": "kpi",
+   "selector": ".kpis > *",
+   "all": true,
+   "alpha": true,
+   "note": "the six gauges: number + level meter"
+  },
+  {
+   "do": "scroll",
+   "y": 420
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "panel",
+   "selector": ".panel",
+   "all": true,
+   "alpha": true,
+   "pad": 20,
+   "note": "due radar, heatmap, status, rings, recent releases; the scenes use panel_1 (heatmap), panel_3 (rings) and panel_4 (releases)"
+  },
+  {
+   "do": "scroll",
+   "y": 0
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "click",
+   "selector": ".qa__input"
+  },
+  {
+   "do": "fill",
+   "selector": ".qa__input",
+   "value": "로그인 버그 고치기"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "fill",
+   "selector": ".qa__input",
+   "value": "로그인 버그 고치기 !높음"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "fill",
+   "selector": ".qa__input",
+   "value": "로그인 버그 고치기 !높음 @Loopdeck"
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "fill",
+   "selector": ".qa__input",
+   "value": "로그인 버그 고치기 !높음 @Loopdeck 내일"
+  },
+  {
+   "do": "wait",
+   "ms": 400
+  },
+  {
+   "do": "layer",
+   "name": "qa_3",
+   "selector": ".hero .qa",
+   "alpha": true,
+   "pad": 16,
+   "rows": true
+  },
+  {
+   "do": "fill",
+   "selector": ".qa__input",
+   "value": ""
+  },
+  {
+   "do": "wait",
+   "ms": 300
+  },
+  {
+   "do": "layer",
+   "name": "qa_empty",
+   "selector": ".hero .qa",
+   "alpha": true,
+   "pad": 16
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/'"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "press",
+   "key": "Meta+k"
+  },
+  {
+   "do": "wait",
+   "ms": 500
+  },
+  {
+   "do": "layer",
+   "name": "palette",
+   "selector": ".palette__panel",
+   "alpha": true,
+   "pad": 30
+  }
+ ]
+}

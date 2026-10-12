@@ -1,0 +1,62 @@
+{
+  "title": "Trove",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Trove", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 5, "outBeats": 2, "in": "cut", "music": "intro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "drone dur=2b"},
+      {"beat": 0.25, "from": "start", "sfx": "tick x10 gap=0.08"},
+      {"beat": 1, "from": "start", "sfx": "swell"},
+      {"beat": 1, "from": "start", "sfx": "chime"},
+      {"beat": 1.5, "from": "start", "sfx": "reveal"},
+      {"beat": 0, "from": "outStart", "sfx": "zoom dur=2b"}
+    ]},
+    {"id": "paste", "label": "붙여넣기", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "zoomInto", "inFallback": "whip", "music": "groove", "dark": true, "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 1.5, "from": "start", "sfx": "keytap dur=1b fast"},
+      {"beat": 2.5, "from": "start", "sfx": "scan dur=1b"},
+      {"beat": 3, "from": "start", "sfx": "blip x3 gap=0.5b"},
+      {"beat": 4.5, "from": "start", "sfx": "pop x3 gap=0.25b"},
+      {"beat": 6, "from": "start", "sfx": "click"},
+      {"beat": 0, "from": "holdBar", "sfx": "blip"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "tags", "label": "자동 태그와 요약", "minBars": 3, "maxBars": 3, "priority": 3, "optional": true, "inBeats": 8, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "groove", "dark": true, "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 2, "from": "start", "sfx": "drawon dur=1b"},
+      {"beat": 3.5, "from": "start", "sfx": "blips dur=1.5b"},
+      {"beat": 5, "from": "start", "sfx": "pop x6 gap=0.25b"},
+      {"beat": 0, "from": "holdBar", "sfx": "tick"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "connect", "label": "링크가 이어지면 지식이 돼요", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "impact", "inParams": {"zoom": 0.04, "shake": 6, "flash": 0.12, "color": "#C6F432"}, "music": "drop", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 0.5, "from": "start", "sfx": "swish x2 gap=0.5b"},
+      {"beat": 2, "from": "start", "sfx": "drawon dur=2b"},
+      {"beat": 2, "from": "start", "sfx": "blip x5 gap=0.5b"},
+      {"beat": 4.5, "from": "start", "sfx": "lock"},
+      {"beat": 0, "from": "holdBar", "sfx": "zap"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "find", "label": "검색", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "breakdown", "dark": true, "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "keytap dur=0.75b"},
+      {"beat": 1.5, "from": "start", "sfx": "scan dur=1b"},
+      {"beat": 2.5, "from": "start", "sfx": "ding x3 gap=0.25b"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "end", "label": "Trove", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "flash", "inParams": {"color": "#C6F432", "amount": 0.16}, "music": "outro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 2, "from": "start", "sfx": "chime"},
+      {"beat": 3, "from": "start", "sfx": "tick x8 gap=0.06"},
+      {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=1b", "every": 4}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["tags", "find"], "scenes": {"hook": {"bars": 2}, "paste": {"bars": 2}, "connect": {"bars": 2}, "end": {"bars": 2}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "paste": {"bars": 3}, "tags": {"bars": 3}, "connect": {"bars": 3}, "find": {"bars": 2}, "end": {"bars": 3}}}
+  },
+  "poster": 3.0,
+  "captions": {"enabled": false}
+}

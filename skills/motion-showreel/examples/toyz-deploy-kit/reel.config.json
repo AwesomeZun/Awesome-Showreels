@@ -1,0 +1,57 @@
+{
+  "title": "Deploy Kit",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Deploy Kit", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 4, "outBeats": 1, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "riser dur=1b"},
+      {"beat": 1, "from": "start", "sfx": "impact"},
+      {"beat": 1, "from": "start", "sfx": "blips dur=4b fast"},
+      {"beat": 2, "from": "start", "sfx": "reveal"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "live", "label": "적는 대로", "minBars": 3, "maxBars": 4, "priority": 1, "inBeats": 10, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "groove", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 2, "from": "start", "sfx": "keytap dur=1b fast"},
+      {"beat": 3, "from": "start", "sfx": "blip x4 gap=0.25b"},
+      {"beat": 4, "from": "start", "sfx": "keytap dur=2b fast"},
+      {"beat": 6.5, "from": "start", "sfx": "blips dur=2b"},
+      {"beat": 8.5, "from": "start", "sfx": "ding"},
+      {"beat": 0, "from": "holdBar", "sfx": "blip x2 gap=0.5b"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "og", "label": "OG 이미지 · 파비콘", "minBars": 4, "maxBars": 4, "priority": 3, "optional": true, "inBeats": 12, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "groove", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 4, "from": "start", "sfx": "flip x4 gap=1b"},
+      {"beat": 9, "from": "start", "sfx": "pop x5 gap=0.5b"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "ship", "label": "ZIP 하나로", "minBars": 4, "maxBars": 5, "priority": 1, "inBeats": 13, "outBeats": 1, "in": "impact", "inParams": {"zoom": 0.04, "shake": 6, "flash": 0.1, "color": "#FFFFFF"}, "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 1, "from": "start", "sfx": "zap dur=6b"},
+      {"beat": 1, "from": "start", "sfx": "count dur=6b"},
+      {"beat": 8, "from": "start", "sfx": "stamp"},
+      {"beat": 10, "from": "start", "sfx": "confirm"},
+      {"beat": 0, "from": "holdBar", "sfx": "blip"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "check", "label": "출시 체크리스트", "minBars": 3, "maxBars": 3, "priority": 3, "optional": true, "inBeats": 9, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "breakdown", "cues": [
+      {"beat": 1, "from": "start", "sfx": "scan dur=2b"},
+      {"beat": 5, "from": "start", "sfx": "count dur=2b"},
+      {"beat": 0, "from": "holdBar", "sfx": "blip"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "end", "label": "Deploy Kit", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 2, "from": "start", "sfx": "bloop"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["og", "check"], "scenes": {"hook": {"bars": 2}, "live": {"bars": 3}, "ship": {"bars": 4}, "end": {"bars": 2}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 3}, "live": {"bars": 4}, "og": {"bars": 4}, "ship": {"bars": 5}, "check": {"bars": 3}, "end": {"bars": 3}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

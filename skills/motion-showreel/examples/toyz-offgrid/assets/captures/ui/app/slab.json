@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the app's lime title slab",
+ "selector": ".slab",
+ "file": "slab.png",
+ "kind": "element",
+ "px": [
+  788,
+  433
+ ],
+ "dpr": 2,
+ "sha1": "99621a2022e9",
+ "rect": {
+  "x": 17,
+  "y": 17,
+  "w": 394,
+  "h": 216.33
+ },
+ "screen": {
+  "x": 17,
+  "y": 17,
+  "w": 394,
+  "h": 216.33
+ },
+ "page": {
+  "x": 17,
+  "y": 17,
+  "w": 394,
+  "h": 216.33
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 394,
+  "h": 216.33
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgb(215, 247, 91)",
+ "color": "rgb(11, 11, 12)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "LOCAL MAP / SEOUL\nOFF THE TOURIST GRID\nOFFGRID\n\n관광지 밖에서 찾는 나만의 로컬 지도.\n\n장소 추가\n코스 그리기",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:39.838Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

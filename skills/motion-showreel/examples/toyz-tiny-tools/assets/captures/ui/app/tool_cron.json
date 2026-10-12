@@ -1,0 +1,58 @@
+{
+ "step": "layer",
+ "selector": ".tool-page",
+ "file": "tool_cron.png",
+ "kind": "element",
+ "px": [
+  2520,
+  1553
+ ],
+ "dpr": 2,
+ "sha1": "ea099bc12ad2",
+ "rect": {
+  "x": 296.0,
+  "y": 130.0,
+  "w": 1260.0,
+  "h": 760.0
+ },
+ "screen": {
+  "x": 296,
+  "y": 130,
+  "w": 1260,
+  "h": 776.66
+ },
+ "page": {
+  "x": 296,
+  "y": 130,
+  "w": 1260,
+  "h": 776.66
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1260,
+  "h": 776.66
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "12 / TIME — CRON\n\ncron 설명\n\ncron 식(분 시 일 월 요일)을 한국어 문장으로 풀어 주고, 다음 실행 시각을 계산해요.\n\n이 브라우저에 저장됨\n고정하기\nCRON 식\n분 시 일 월 요일\n0\n분\n9\n시\n*\n일\n*\n월\n1-5\n요일\n예시\n*/5 * * * *\n5분마다\n0 9 * * 1-5\n평일 아침 9시\n30 18 * * 5\n금요일 18:30\n0 0 1 * *\n매월 1일 자정\n0 */6 * * *\n6시간마다\n@daily\n매일 자정\n한국어 설명\n\n평일(월~금) 09:00에 실행해요.\n\n다음 실행\nAsia/Seoul 기준\n2026-10-13 09:00\n(화)\n12시간 후\n2026-10-14 09:00\n(수)\n내일\n2026-10-15 09:00\n(목)\n모레\n2026-10-16 09:00\n(금)\n3일",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:24:13.316Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "cropped": [
+  0.0,
+  0.0,
+  1260.0,
+  760.0
+ ]
+}

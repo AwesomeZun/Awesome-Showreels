@@ -1,0 +1,353 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:48:35.513Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   2200
+  ]
+ },
+ "viewport": [
+  1600,
+  2200
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "home": {
+   "step": "shot",
+   "file": "home.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    4400
+   ],
+   "dpr": 2,
+   "sha1": "0db4f544183b",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "head": {
+   "step": "layer",
+   "selector": ".reader-head",
+   "file": "head.png",
+   "kind": "element",
+   "px": [
+    3200,
+    130
+   ],
+   "dpr": 2,
+   "sha1": "4f5bf53eb92e",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 65
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 65
+   },
+   "page": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 65
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 65
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "color(srgb 0.862745 0.862745 0.85098 / 0.94)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "READ ROOM · 100% · 다 읽었어요\n느리게 읽는 방\n낭독\nAa\n질문\n2\n밑줄\n4\n진행\n함께 읽기",
+   "alpha": true
+  },
+  "paper": {
+   "step": "layer",
+   "note": "the essay with the sample readers' highlights",
+   "selector": ".sheet",
+   "file": "paper.png",
+   "kind": "element",
+   "px": [
+    1696,
+    4109
+   ],
+   "dpr": 2,
+   "sha1": "bbae354ed527",
+   "rect": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "screen": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "page": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 800,
+    "h": 2006.28
+   },
+   "pad": 24,
+   "radius": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "bg": "rgb(247, 241, 229)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "D-3\n10월 15일 (목) 오후 8:00\n\n느리게 읽는 방\n+\n\n한서윤, 「느리게 읽는 방」 (가상의 필자가 쓴 창작 에세이)\n\n약 2분\n885자\n문단 15\n민\n태\n\n드래그해서 밑줄을 긋고, 문단 옆  로 메모를 나눠요.\n\n02\n같은 페이지에 머무는 시간\n+\n03\n\n혼자 읽을 때 저는 자주 빨라집니다. 눈이 문장을 앞질러 가고, 마음은 벌써 다음 장을 넘기고 있어요. 그런데 누군가와 같은 글을 같은 시간에 읽기로 약속하면, 이상하게도 속도가 느려집니다. 상대가 어디쯤 읽고 있을지 상상하게 되고, 그 상상이 저를 문장 앞에 붙들어 둡니다.\n\n+\n04\n\n읽기 모임을 처음 시작했을 때 우리는 규칙을 하나만 정했습니다. 한 번에 한 편만 읽고, 그 글에 대해서만 이야기하기. 짧은 글이면 충분했습니다. 길이가 짧을",
+   "alpha": true
+  },
+  "card_0": {
+   "step": "layer",
+   "note": "the margin memo cards (paragraphs 04 and 11)",
+   "file": "card_0.png",
+   "kind": "element",
+   "px": [
+    716,
+    234
+   ],
+   "dpr": 2,
+   "sha1": "3898cff6f8b5",
+   "rect": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "screen": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "page": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "element": {
+    "x": 14,
+    "y": 14,
+    "w": 330,
+    "h": 89
+   },
+   "pad": 14,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "민\n태\n¶ 04\n메모 2\n민지 규칙을 하나만 정했다는 부분이 인상적이에요. 우리도 규칙이 너무 많았던 것 같아요.",
+   "alpha": true
+  },
+  "card_1": {
+   "step": "layer",
+   "note": "the margin memo cards (paragraphs 04 and 11)",
+   "file": "card_1.png",
+   "kind": "element",
+   "px": [
+    716,
+    234
+   ],
+   "dpr": 2,
+   "sha1": "0f0e31809303",
+   "rect": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "screen": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "page": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "element": {
+    "x": 14,
+    "y": 14,
+    "w": 330,
+    "h": 89
+   },
+   "pad": 14,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "태\n¶ 11\n메모 1\n태오 긴 감상문을 서로 읽느라 정작 글 이야기를 못 했다는 대목, 우리 얘기 같아요.",
+   "alpha": true
+  },
+  "paper_plain": {
+   "step": "layer",
+   "note": "the same sheet with the highlights and tools hidden (the sweep reveals the real ones)",
+   "selector": ".sheet",
+   "file": "paper_plain.png",
+   "kind": "element",
+   "px": [
+    1696,
+    4109
+   ],
+   "dpr": 2,
+   "sha1": "d3b77422b383",
+   "rect": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "screen": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "page": {
+    "x": 187,
+    "y": 73,
+    "w": 848,
+    "h": 2054.28
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 800,
+    "h": 2006.28
+   },
+   "pad": 24,
+   "radius": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "bg": "rgb(247, 241, 229)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "D-3\n10월 15일 (목) 오후 8:00\n\n느리게 읽는 방\n\n한서윤, 「느리게 읽는 방」 (가상의 필자가 쓴 창작 에세이)\n\n약 2분\n885자\n문단 15\n민\n태\n\n드래그해서 밑줄을 긋고, 문단 옆  로 메모를 나눠요.\n\n02\n같은 페이지에 머무는 시간\n03\n\n혼자 읽을 때 저는 자주 빨라집니다. 눈이 문장을 앞질러 가고, 마음은 벌써 다음 장을 넘기고 있어요. 그런데 누군가와 같은 글을 같은 시간에 읽기로 약속하면, 이상하게도 속도가 느려집니다. 상대가 어디쯤 읽고 있을지 상상하게 되고, 그 상상이 저를 문장 앞에 붙들어 둡니다.\n\n04\n\n읽기 모임을 처음 시작했을 때 우리는 규칙을 하나만 정했습니다. 한 번에 한 편만 읽고, 그 글에 대해서만 이야기하기. 짧은 글이면 충분했습니다. 길이가 짧을수록 우리는",
+   "alpha": true
+  },
+  "questions": {
+   "step": "shot",
+   "file": "questions.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    4400
+   ],
+   "dpr": 2,
+   "sha1": "e17771c7105e",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "together": {
+   "step": "shot",
+   "file": "together.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    4400
+   ],
+   "dpr": 2,
+   "sha1": "d34831cf6691",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 2200
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  }
+ },
+ "warnings": []
+}

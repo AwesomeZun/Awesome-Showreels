@@ -1,0 +1,58 @@
+{
+ "step": "layer",
+ "selector": ".tool-page",
+ "file": "tool_color.png",
+ "kind": "element",
+ "px": [
+  2520,
+  2000
+ ],
+ "dpr": 2,
+ "sha1": "26c4212b842b",
+ "rect": {
+  "x": 296.0,
+  "y": 0.0,
+  "w": 1260.0,
+  "h": 760.0
+ },
+ "screen": {
+  "x": 296,
+  "y": 0,
+  "w": 1260,
+  "h": 1000
+ },
+ "page": {
+  "x": 296,
+  "y": 130,
+  "w": 1260,
+  "h": 1000
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1260,
+  "h": 1414.19
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "02 / CORE — COLOR\n\n컬러\n\n색 표현을 서로 바꾸고, WCAG 대비를 검사하고, 50~950 명도 단계와 조화 색을 만들어요.\n\n⌘\n↵\n현재 색을 최근 색에 기록해요\n이 브라우저에 저장됨\n고정하기\n#5B45F0\noklch(52.78% 0.2417 279.98)\n색 입력\n시스템 색 선택기\n\nHEX · rgb() · hsl() · hwb() · oklch() · CSS 색 이름을 알아봐요.\n\n최근 색\n\n색을 잠시 머물러 두면 여기에 기록돼요.\n\n선택기\nHSV\n색상\n248°\n알파\n100%\n변환\n직접 계산\nCSS 변수 복사\nHEX\n#5b45f0\nRGB\nrgb(91 69 240)\nHSL\nhsl(247.7 85.1% 60.6%)\nHWB\nhwb(247.7 27.1% 5.9%)\nOKLCH\noklch(52.78",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:24:07.934Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "cropped": [
+  0.0,
+  0.0,
+  1260.0,
+  760.0
+ ]
+}

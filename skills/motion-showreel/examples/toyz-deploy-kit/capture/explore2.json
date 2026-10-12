@@ -1,0 +1,10 @@
+{"name": "explore2", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+ "device": {"screen": [1600, 1000], "statusBar": 0, "homeIndicator": 0, "dpr": 1, "mobile": false, "touch": false},
+ "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "light", "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {"until": "load", "settle": 1500},
+ "steps": [
+  {"do": "click", "text": "파일"}, {"do": "wait", "ms": 800}, {"do": "shot", "name": "files"},
+  {"do": "click", "text": "OG 이미지"}, {"do": "wait", "ms": 800}, {"do": "shot", "name": "og"},
+  {"do": "click", "text": "파비콘"}, {"do": "wait", "ms": 800}, {"do": "shot", "name": "fav"},
+  {"do": "click", "text": "출시 체크리스트"}, {"do": "wait", "ms": 800}, {"do": "shot", "name": "check"}
+ ]}

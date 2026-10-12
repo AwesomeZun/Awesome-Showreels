@@ -1,0 +1,61 @@
+{
+  "title": "Pulse",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Pulse", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 1, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "charge"},
+      {"beat": 0.25, "from": "start", "sfx": "thud"},
+      {"beat": 0.5, "from": "start", "sfx": "tick x10 gap=0.03"},
+      {"beat": 1, "from": "start", "sfx": "reveal"},
+      {"beat": 0, "from": "holdBar", "sfx": "blips dur=1b"},
+      {"beat": 0, "from": "outStart", "sfx": "swish"}
+    ]},
+    {"id": "quick", "label": "한 줄로 적으면", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "push", "inParams": {"dir": "left"}, "music": "groove", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "keytap dur=2.5b"},
+      {"beat": 1.25, "from": "start", "sfx": "blip step=0"},
+      {"beat": 1.75, "from": "start", "sfx": "blip step=2"},
+      {"beat": 2.5, "from": "start", "sfx": "blip step=4"},
+      {"beat": 3, "from": "start", "sfx": "blip step=6"},
+      {"beat": 4, "from": "start", "sfx": "drawon dur=1b"},
+      {"beat": 5.5, "from": "start", "sfx": "enter"},
+      {"beat": 0, "from": "holdBar", "sfx": "tick x4 gap=0.06"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "palette", "label": "⌘K", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "whip", "inParams": {"dir": "left"}, "music": "groove", "cues": [
+      {"beat": 0.25, "from": "start", "sfx": "click"},
+      {"beat": 0.5, "from": "start", "sfx": "click"},
+      {"beat": 0.75, "from": "start", "sfx": "swish"},
+      {"beat": 2, "from": "start", "sfx": "tick x6 gap=0.25b"},
+      {"beat": 0, "from": "outStart", "sfx": "whip"}
+    ]},
+    {"id": "gauge", "label": "할 일과 배포가 계기판 하나에", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "impact", "inParams": {"zoom": 0.035, "shake": 5, "flash": 0.1, "color": "#FFFFFF"}, "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 0.5, "from": "start", "sfx": "thud x6 gap=0.25b"},
+      {"beat": 2, "from": "start", "sfx": "count dur=2b"},
+      {"beat": 3.5, "from": "start", "sfx": "swish x3 gap=0.5b"},
+      {"beat": 4, "from": "start", "sfx": "drawon dur=1.5b"},
+      {"beat": 0, "from": "holdBar", "sfx": "pulse"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "releases", "label": "배포 메모", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "breakdown", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish x5 gap=0.25b"},
+      {"beat": 2.5, "from": "start", "sfx": "count dur=1b"},
+      {"beat": 3.5, "from": "start", "sfx": "confirm"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "end", "label": "Pulse", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 0, "in": "push", "inParams": {"dir": "up"}, "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 1.5, "from": "start", "sfx": "tick x10 gap=0.03"},
+      {"beat": 3, "from": "start", "sfx": "chime"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["palette", "releases"], "scenes": {"hook": {"bars": 1}, "quick": {"bars": 2}, "gauge": {"bars": 2}, "end": {"bars": 2}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "quick": {"bars": 3}, "palette": {"bars": 2}, "gauge": {"bars": 3}, "releases": {"bars": 2}, "end": {"bars": 2}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

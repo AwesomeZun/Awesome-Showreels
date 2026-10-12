@@ -1,0 +1,36 @@
+{
+  "title": "OFFGRID",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "OFFGRID", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "thud"},
+      {"beat": 1.5, "from": "start", "sfx": "whoosh"},
+      {"beat": 0, "from": "outStart", "sfx": "swish"}
+    ]},
+    {"id": "places", "label": "골목 가게", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0.5, "in": "cut", "music": "groove", "cues": [
+      {"beat": 0.25, "from": "start", "sfx": "pop x7 gap=0.25b"}
+    ]},
+    {"id": "route", "label": "산책 코스", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "zoom"},
+      {"beat": 1.5, "from": "start", "sfx": "drawon dur=4b"}
+    ]},
+    {"id": "share", "label": "링크 하나로", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 5, "outBeats": 1, "in": "whip", "inParams": {"dir": "up"}, "music": "breakdown", "cues": [
+      {"beat": 0.25, "from": "start", "sfx": "swish"},
+      {"beat": 1.5, "from": "start", "sfx": "scan"},
+      {"beat": 4, "from": "start", "sfx": "click"},
+      {"beat": 4, "from": "start", "sfx": "confirm"}
+    ]},
+    {"id": "end", "label": "OFFGRID", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["share"], "scenes": {"hook": {"bars": 2}, "places": {"bars": 1}, "route": {"bars": 2}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "places": {"bars": 2}, "route": {"bars": 3}, "share": {"bars": 2}, "end": {"bars": 3}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

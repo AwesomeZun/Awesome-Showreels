@@ -1,0 +1,53 @@
+{
+ "file": "head_1.png",
+ "kind": "element",
+ "px": [
+  2480,
+  1750
+ ],
+ "dpr": 2,
+ "sha1": "8be053645179",
+ "rect": {
+  "x": 308,
+  "y": 925.05,
+  "w": 328,
+  "h": 205
+ },
+ "screen": {
+  "x": 308,
+  "y": 925.05,
+  "w": 1240,
+  "h": 874.75
+ },
+ "page": {
+  "x": 308,
+  "y": 1337.05,
+  "w": 1240,
+  "h": 874.75
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1240,
+  "h": 874.75
+ },
+ "pad": 0,
+ "radius": [
+  14,
+  14,
+  14,
+  14
+ ],
+ "bg": "rgb(18, 19, 23)",
+ "color": "rgb(243, 245, 248)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "BUNDLE / 02\n메모 9\n묶음 이름\n물주기 · 식물 · 플랜티\n응집도\n0.27\n묶인 근거\n물주기\n식물\n플랜티\n알림\n반려식물 물주기를 자꾸 까먹는다. 지난달에만 몬스테라 잎이 두 장 노래졌다. 물주기 알림 앱이 필요한 이유. #플랜티\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드 · 편집\n식물 종류별 기본 물주기 주기 데이터 정리 (몬스테라 7일, 스투키 30일, 산세베리아 21일)\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드 · 편집\n플랜티 핵심 기능: 식물마다 물주기 주기를 다르게 설정하고, 마지막으로 물 준 날짜를 기준으로 알림을 보내기 #플랜티\n플랜티\n물주기\n알림\n옮기기…\n→ 러닝 · 크루 · 페이스\n→ 팟캐스트 · 에피소드",
+ "alpha": true,
+ "cropped": [
+  0,
+  0,
+  328,
+  205
+ ],
+ "note": "the head of the bundle the app proposes (name, cohesion, the words that tied it), cut from the bundle row"
+}

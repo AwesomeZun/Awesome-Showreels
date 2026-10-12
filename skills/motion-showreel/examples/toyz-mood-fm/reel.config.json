@@ -1,0 +1,37 @@
+{
+  "title": "MOOD FM",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "MOOD FM", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 0.5, "in": "cut", "music": "intro", "cues": [
+      {"beat": 1, "from": "start", "sfx": "pulse"},
+      {"beat": 1, "from": "start", "sfx": "scan"}
+    ]},
+    {"id": "tune", "label": "주파수", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "groove", "cues": [
+      {"beat": 1, "from": "start", "sfx": "scan"},
+      {"beat": 2.5, "from": "start", "sfx": "plink"},
+      {"beat": 4.5, "from": "start", "sfx": "scan"},
+      {"beat": 6, "from": "start", "sfx": "plink"},
+      {"beat": 0, "from": "holdBar", "sfx": "scan"}
+    ]},
+    {"id": "pad", "label": "무드 패드", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "flash", "music": "breakdown", "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 4, "from": "start", "sfx": "air"}
+    ]},
+    {"id": "diary", "label": "감정 일기", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0.5, "in": "cut", "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "reveal"},
+      {"beat": 0.25, "from": "start", "sfx": "sparkle dur=2b"}
+    ]},
+    {"id": "end", "label": "MOOD FM", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["pad"], "scenes": {"hook": {"bars": 2}, "tune": {"bars": 2}, "diary": {"bars": 1}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "tune": {"bars": 3}, "pad": {"bars": 2}, "diary": {"bars": 2}, "end": {"bars": 3}}}
+  },
+  "poster": 2.4,
+  "captions": {"enabled": false}
+}

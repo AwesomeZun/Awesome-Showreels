@@ -1,0 +1,59 @@
+{
+ "step": "layer",
+ "note": "the code shows count: 72",
+ "selector": ".code",
+ "file": "code_72.png",
+ "kind": "element",
+ "px": [
+  2752,
+  1266
+ ],
+ "dpr": 2,
+ "sha1": "1c85c2c458b2",
+ "rect": {
+  "x": 112,
+  "y": 366.97,
+  "w": 640,
+  "h": 330
+ },
+ "screen": {
+  "x": 112,
+  "y": 366.97,
+  "w": 1376,
+  "h": 633.03
+ },
+ "page": {
+  "x": 112,
+  "y": 1099.97,
+  "w": 1376,
+  "h": 633.03
+ },
+ "element": {
+  "x": 12,
+  "y": 12,
+  "w": 1352,
+  "h": 621
+ },
+ "pad": 12,
+ "radius": [
+  20,
+  20,
+  20,
+  20
+ ],
+ "bg": "rgb(10, 13, 36)",
+ "color": "rgb(230, 233, 248)",
+ "font": "400 16px/24.8px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "HTML\nCSS\nJS\n\uc804\uccb4 \ud30c\uc77c\n48\uc904\n\ubcf5\uc0ac\n(() => {\n  const CONFETTI = {\n    count: 72,\n    spread: 150,\n    distance: 150,\n    duration: 1200,\n    colors: [\"#0B2FE6\", \"#C9B8FF\", \"#FF6A2B\", \"#FFFFFF\", \"#7FE7FF\"],\n  };\n  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');\n\n  function burst(button) {\n    button.classList.add('is-done');\n    setTimeout(() => button.classList.remove('is-done'), 700);\n ",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:57:08.168Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "trimmed": [
+  0,
+  0,
+  640,
+  330
+ ]
+}

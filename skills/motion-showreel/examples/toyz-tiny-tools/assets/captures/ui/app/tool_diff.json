@@ -1,0 +1,58 @@
+{
+ "step": "layer",
+ "selector": ".tool-page",
+ "file": "tool_diff.png",
+ "kind": "element",
+ "px": [
+  2520,
+  1896
+ ],
+ "dpr": 2,
+ "sha1": "ec4994a1a759",
+ "rect": {
+  "x": 296.0,
+  "y": 52.0,
+  "w": 1260.0,
+  "h": 760.0
+ },
+ "screen": {
+  "x": 296,
+  "y": 52,
+  "w": 1260,
+  "h": 947.91
+ },
+ "page": {
+  "x": 296,
+  "y": 130,
+  "w": 1260,
+  "h": 947.91
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1260,
+  "h": 947.91
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "03 / CORE — DIFF\n\n텍스트 비교\n\n두 텍스트를 줄 단위로 비교하고 바뀐 단어·글자를 강조해요. 나란히 보기와 통합 보기, unified patch를 지원해요.\n\n⌘\n↵\n원본과 변경본을 서로 바꿔요\n이 브라우저에 저장됨\n고정하기\n원본\n319 B\n변경본\n441 B\n나란히\n통합\n단어\n글자\n공백 무시\n대소문자 무시\n비교 결과\n+6\n−5\n5줄 같음\n1ms\n1\t\n삭제:\n// 결제 요청을 보냅니다.\t1\t\n추가:\n// 결제 요청을 보냅니다. 수량과 쿠폰을 반영해요.\n2\t\n삭제:\nexport async function checkout(cart, user) {\t2\t\n추가:\nexport async function checkout(cart, user, coupon) {\n3\t\n삭제:\n  const total = car",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:24:09.690Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "cropped": [
+  0.0,
+  0.0,
+  1260.0,
+  760.0
+ ]
+}

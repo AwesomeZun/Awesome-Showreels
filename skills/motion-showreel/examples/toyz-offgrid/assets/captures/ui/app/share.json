@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the share dialog: one link carries the walk",
+ "selector": "dialog[open]",
+ "file": "share.png",
+ "kind": "element",
+ "px": [
+  1120,
+  829
+ ],
+ "dpr": 2,
+ "sha1": "623570dadd9b",
+ "rect": {
+  "x": 520,
+  "y": 292.8,
+  "w": 560,
+  "h": 414.41
+ },
+ "screen": {
+  "x": 520,
+  "y": 292.8,
+  "w": 560,
+  "h": 414.41
+ },
+ "page": {
+  "x": 520,
+  "y": 292.8,
+  "w": 560,
+  "h": 414.41
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 560,
+  "h": 414.41
+ },
+ "pad": 0,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 238)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "SHARE /\n성수 붉은벽돌 골목 한 바퀴\n\n공유 링크\n\n코스 1개 · 장소 5곳을 링크 하나에 담았어요. 받은 사람은 미리 본 뒤 자기 지도에 추가할 수 있어요.\n\n링크\n2,046자\n\n서버에 올리지 않고 링크 주소 안에 데이터를 담아요. 링크를 가진 사람은 누구나 내용을 볼 수 있어요.\n\n링크 복사\n닫기",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:08:50.451Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

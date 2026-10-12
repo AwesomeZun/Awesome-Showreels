@@ -1,0 +1,701 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "card_0.png",
+   "kind": "element",
+   "px": [
+    536,
+    459
+   ],
+   "dpr": 2,
+   "sha1": "abe1f9bd17c3",
+   "rect": {
+    "x": 286,
+    "y": 55.66,
+    "w": 268,
+    "h": 229.66
+   },
+   "screen": {
+    "x": 286,
+    "y": 55.66,
+    "w": 268,
+    "h": 229.66
+   },
+   "page": {
+    "x": 286,
+    "y": 543.66,
+    "w": 268,
+    "h": 229.66
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 229.66
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "G\ngithub.com\npado-labs/looplens: 링크 사이 관계를 그래프로 그리는 실험\n\n요약링크끼리의 관계를 그래프로 시각화하는 오픈소스예요.\n\n#\n개발\n#\n그래프\n#\n시각화\n열람 14회 · 5시간 전",
+   "alpha": true
+  },
+  {
+   "file": "card_1.png",
+   "kind": "element",
+   "px": [
+    536,
+    459
+   ],
+   "dpr": 2,
+   "sha1": "45a2e32ec97d",
+   "rect": {
+    "x": 286,
+    "y": 295.31,
+    "w": 268,
+    "h": 229.66
+   },
+   "screen": {
+    "x": 286,
+    "y": 295.31,
+    "w": 268,
+    "h": 229.66
+   },
+   "page": {
+    "x": 286,
+    "y": 783.31,
+    "w": 268,
+    "h": 229.66
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 229.66
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "NM\nnotes.mireu.dev\n리액트 상태 관리, 2026년에는 무엇을 쓸까\n\n요약전역 상태 라이브러리를 세 갈래로 나눠 비교한 글이에요.\n\n#\n리액트\n#\n상태관리\n#\n프런트엔드\n열람 3회 · 2시간 전",
+   "alpha": true
+  },
+  {
+   "file": "card_2.png",
+   "kind": "element",
+   "px": [
+    536,
+    458
+   ],
+   "dpr": 2,
+   "sha1": "5d7ec9c231a3",
+   "rect": {
+    "x": 286,
+    "y": 534.97,
+    "w": 268,
+    "h": 229.11
+   },
+   "screen": {
+    "x": 286,
+    "y": 534.97,
+    "w": 268,
+    "h": 229.11
+   },
+   "page": {
+    "x": 286,
+    "y": 1022.97,
+    "w": 268,
+    "h": 229.11
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 229.11
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "BP\nblog.pado.kr\n타입스크립트 제네릭을 그림으로 이해하기\n\n제네릭을 함수의 매개변수처럼 설명하는 그림이 인상적이에요. 조건부 타입 부분은 다시 읽어야 해요.\n\n#\n타입스크립트\n#\n제네릭\n#\n프런트엔드\n열람 6회 · 1일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_3.png",
+   "kind": "element",
+   "px": [
+    536,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "7825ae6068bb",
+   "rect": {
+    "x": 286,
+    "y": 774.08,
+    "w": 268,
+    "h": 208.97
+   },
+   "screen": {
+    "x": 286,
+    "y": 774.08,
+    "w": 268,
+    "h": 208.97
+   },
+   "page": {
+    "x": 286,
+    "y": 1262.08,
+    "w": 268,
+    "h": 208.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "BP\nblog.pado.kr\n형태소 분석기 없이 한국어 키워드 뽑기\n\n요약조사와 어미를 잘라 내는 규칙만으로도 꽤 쓸 만한 키워드를 얻을 수 있다는 글이에요.\n\n#\n한국어\n#\n키워드\n#\n검색\n열람 9회 · 3일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_4.png",
+   "kind": "element",
+   "px": [
+    536,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "d1b2ea311cc5",
+   "rect": {
+    "x": 286,
+    "y": 991.05,
+    "w": 268,
+    "h": 208.95
+   },
+   "screen": {
+    "x": 286,
+    "y": 991.05,
+    "w": 268,
+    "h": 208.95
+   },
+   "page": {
+    "x": 286,
+    "y": 1481.05,
+    "w": 268,
+    "h": 208.95
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "DP\ndocs.pado.kr\nTrove 북마크 교환 형식 명세 v1\n\n브라우저 북마크 HTML과 JSON을 오가는 규칙을 정리한 문서예요.\n\n#\n문서\n#\n북마크\n#\n형식\n열람 1회 · 1주 전",
+   "alpha": true
+  },
+  {
+   "file": "card_5.png",
+   "kind": "element",
+   "px": [
+    536,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "36d7185770d1",
+   "rect": {
+    "x": 572,
+    "y": 53.66,
+    "w": 268,
+    "h": 208.97
+   },
+   "screen": {
+    "x": 572,
+    "y": 53.66,
+    "w": 268,
+    "h": 208.97
+   },
+   "page": {
+    "x": 572,
+    "y": 543.66,
+    "w": 268,
+    "h": 208.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "O\norbit-ui.design\n크롬 질감 버튼을 CSS만으로 만드는 법\n\n요약conic-gradient 두 겹과 안쪽 그림자로 금속 느낌을 내는 방법이에요.\n\n#\ncss\n#\n크롬\n#\n버튼\n열람 11회 · 1일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_6.png",
+   "kind": "element",
+   "px": [
+    536,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "eb44e7b70312",
+   "rect": {
+    "x": 572,
+    "y": 272.63,
+    "w": 268,
+    "h": 208.97
+   },
+   "screen": {
+    "x": 572,
+    "y": 272.63,
+    "w": 268,
+    "h": 208.97
+   },
+   "page": {
+    "x": 572,
+    "y": 762.63,
+    "w": 268,
+    "h": 208.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "FO\nfield.ondo.co.kr\n에디토리얼 그리드 12가지 사례\n\n잡지 레이아웃을 웹으로 옮긴 사례 모음이에요. 얇은 구분선과 강한 제목 위계가 공통점이에요.\n\n#\n그리드\n#\n타이포그래피\n#\n레이아웃\n열람 2회 · 6일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_7.png",
+   "kind": "element",
+   "px": [
+    536,
+    500
+   ],
+   "dpr": 2,
+   "sha1": "0da3c4e6cccc",
+   "rect": {
+    "x": 572,
+    "y": 491.59,
+    "w": 268,
+    "h": 249.8
+   },
+   "screen": {
+    "x": 572,
+    "y": 491.59,
+    "w": 268,
+    "h": 249.8
+   },
+   "page": {
+    "x": 572,
+    "y": 981.59,
+    "w": 268,
+    "h": 249.8
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 249.8
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "H\nhanui.dev\nPretendard를 웹에서 가볍게 쓰는 다섯 가지 방법\n\n다이내믹 서브셋을 쓰면 첫 로딩이 확 가벼워져요. 가변 폰트 한 파일로 굵기를 다 처리할 수 있어요.\n\n#\n폰트\n#\n타이포그래피\n#\n웹\n열람 4회 · 1주 전",
+   "alpha": true
+  },
+  {
+   "file": "card_8.png",
+   "kind": "element",
+   "px": [
+    536,
+    458
+   ],
+   "dpr": 2,
+   "sha1": "472a8c964e7f",
+   "rect": {
+    "x": 858,
+    "y": 53.66,
+    "w": 268,
+    "h": 229.11
+   },
+   "screen": {
+    "x": 858,
+    "y": 53.66,
+    "w": 268,
+    "h": 229.11
+   },
+   "page": {
+    "x": 858,
+    "y": 543.66,
+    "w": 268,
+    "h": 229.11
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 229.11
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "R\nreadroom.pub\n천천히 읽기의 기술\n\n요약읽은 글을 오래 기억하려면 속도를 늦추라는 글이에요. 저자는 하루에 한 편만 깊게 읽는 방식을 3년째 이어 오고 있대요.\n\n#\n독서\n#\n습관\n#\n집중\n아직 안 열어 봄 · 8시간 전",
+   "alpha": true
+  },
+  {
+   "file": "card_9.png",
+   "kind": "element",
+   "px": [
+    536,
+    500
+   ],
+   "dpr": 2,
+   "sha1": "1b16fa82766d",
+   "rect": {
+    "x": 858,
+    "y": 292.77,
+    "w": 268,
+    "h": 249.8
+   },
+   "screen": {
+    "x": 858,
+    "y": 292.77,
+    "w": 268,
+    "h": 249.8
+   },
+   "page": {
+    "x": 858,
+    "y": 782.77,
+    "w": 268,
+    "h": 249.8
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 249.8
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "PL\npaper.lumen.ac\n희소 어텐션으로 긴 문맥 처리하기 (논문 요약)\n\n긴 문맥에서 어텐션 비용을 줄이는 방법을 정리한 요약이에요. 실험 표만 봐도 흐름이 잡혀요.\n\n#\n논문\n#\n머신러닝\n#\n어텐션\n열람 5회 · 2주 전",
+   "alpha": true
+  },
+  {
+   "file": "card_10.png",
+   "kind": "element",
+   "px": [
+    536,
+    500
+   ],
+   "dpr": 2,
+   "sha1": "9f85393b0498",
+   "rect": {
+    "x": 1144,
+    "y": 53.66,
+    "w": 268,
+    "h": 249.8
+   },
+   "screen": {
+    "x": 1144,
+    "y": 53.66,
+    "w": 268,
+    "h": 249.8
+   },
+   "page": {
+    "x": 1144,
+    "y": 543.66,
+    "w": 268,
+    "h": 249.8
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 249.8
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "H\nhexa.tools\nHexa Palette — 대비를 자동으로 맞춰 주는 팔레트 도구\n\n배경색을 넣으면 WCAG AA를 만족하는 글자색을 바로 골라 줘요. 어두운 UI 작업에 특히 유용해요.\n\n#\n색상\n#\n접근성\n#\n도구\n열람 8회 · 4일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_11.png",
+   "kind": "element",
+   "px": [
+    536,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "dab7553ef422",
+   "rect": {
+    "x": 1144,
+    "y": 313.45,
+    "w": 268,
+    "h": 208.97
+   },
+   "screen": {
+    "x": 1144,
+    "y": 313.45,
+    "w": 268,
+    "h": 208.97
+   },
+   "page": {
+    "x": 1144,
+    "y": 803.45,
+    "w": 268,
+    "h": 208.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "KS\nkit.solvo.app\n정규식 놀이터 Solvo Regex\n\n한글 범위를 미리 정의해 둔 정규식 놀이터예요. URL 추출 패턴을 여기서 검증했어요.\n\n#\n정규식\n#\n도구\n#\n검색\n열람 7회 · 2주 전",
+   "alpha": true
+  },
+  {
+   "file": "card_12.png",
+   "kind": "element",
+   "px": [
+    340,
+    500
+   ],
+   "dpr": 2,
+   "sha1": "d77e683ce61e",
+   "rect": {
+    "x": 1430,
+    "y": 53.66,
+    "w": 170,
+    "h": 249.8
+   },
+   "screen": {
+    "x": 1430,
+    "y": 53.66,
+    "w": 170,
+    "h": 249.8
+   },
+   "page": {
+    "x": 1430,
+    "y": 543.66,
+    "w": 170,
+    "h": 249.8
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 249.8
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "S\nsori.fm\n소리FM 41화: 사이드 프로젝트를 끝까지 만드는 법\n\n작게 시작해서 매주 하나씩 완성하라는 이야기예요. 마감을 공개하면 끝낼 확률이 올라간대요.\n\n#\n팟캐스트\n#\n사이드프로젝트\n#\n습관\n열람 1회 · 2일 전",
+   "alpha": true
+  },
+  {
+   "file": "card_13.png",
+   "kind": "element",
+   "px": [
+    340,
+    418
+   ],
+   "dpr": 2,
+   "sha1": "b9aebc872ddd",
+   "rect": {
+    "x": 1430,
+    "y": 313.45,
+    "w": 170,
+    "h": 208.97
+   },
+   "screen": {
+    "x": 1430,
+    "y": 313.45,
+    "w": 170,
+    "h": 208.97
+   },
+   "page": {
+    "x": 1430,
+    "y": 803.45,
+    "w": 170,
+    "h": 208.97
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 208.97
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N\nnabi.studio\n나비 스튜디오 — 토러스 연작\n\n검은 배경 위 크롬 도넛 연작이에요. 라임빛 반사가 Trove의 로고와 닮았어요.\n\n#\n3d\n#\n크롬\n#\n아트\n열람 3회 · 3주 전",
+   "alpha": true
+  },
+  {
+   "file": "card_14.png",
+   "kind": "element",
+   "px": [
+    536,
+    319
+   ],
+   "dpr": 2,
+   "sha1": "fc4323b8bf12",
+   "rect": {
+    "x": 1302,
+    "y": 53.66,
+    "w": 268,
+    "h": 159.69
+   },
+   "screen": {
+    "x": 1302,
+    "y": 53.66,
+    "w": 268,
+    "h": 159.69
+   },
+   "page": {
+    "x": 1302,
+    "y": 543.66,
+    "w": 268,
+    "h": 159.69
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 268,
+    "h": 159.69
+   },
+   "pad": 0,
+   "radius": [
+    10,
+    10,
+    10,
+    10
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(238, 239, 241)",
+   "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "MO\nmeetup.ondo.co.kr\n온도 밋업 2026 가을 — 발표 신청\n#\n행사\n아직 안 열어 봄 · 1시간 전",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:00:04.722Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".card"
+}

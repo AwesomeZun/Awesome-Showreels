@@ -1,0 +1,33 @@
+{
+  "name": "app", "serve": "../source/app", "url": "/index.html", "out": "../assets/captures/ui/app",
+  "note": "source/app is the app's own production build (npm run build in toyz-trove, commit f04f26f); it is not committed. The same screens are live at https://trove.toyz.kr.",
+  "device": {"screen": [1600, 1200], "statusBar": 0, "homeIndicator": 0, "dpr": 2, "mobile": false, "touch": false},
+  "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "dark",
+  "fixedTime": "2026-10-12T10:00:00+09:00", "wait": {"until": "load", "settle": 1200},
+  "css": ".toast, .toasts, [class*='toast'] { display: none !important; }",
+  "steps": [
+    {"do": "scroll", "to": ".board"},
+    {"do": "wait", "ms": 400},
+    {"do": "layer", "name": "card", "selector": ".card", "all": true, "alpha": true, "note": "every visible card of the sample board (fictional data), real shadow as alpha"},
+    {"do": "scroll", "y": 0},
+    {"do": "wait", "ms": 300},
+    {"do": "click", "selector": ".btn--add"},
+    {"do": "wait", "ms": 700},
+    {"do": "fill", "selector": ".link-form input", "value": "https://notes.ondo.kr/link-graph-notes"},
+    {"do": "wait", "ms": 300},
+    {"do": "fill", "selector": ".link-form textarea", "value": "지식 그래프 입문 글이에요. 태그와 키워드로 링크 사이 관계를 정리한 예시가 많아요. 북마크 관리 습관에 관한 팁도 있어요."},
+    {"do": "wait", "ms": 700},
+    {"do": "layer", "name": "form", "selector": ".modal__inner", "alpha": true, "note": "single link form: the app's title draft, its one-sentence summary and its tag suggestions for this memo"},
+    {"do": "click", "text": "여러 개 붙여넣기"},
+    {"do": "wait", "ms": 500},
+    {"do": "fill", "selector": ".bulk textarea", "value": "리액트 문서 https://react.dev/learn\n- [디자인 참고](https://field.ondo.co.kr/grid)\n노션에서 봤던 글 https://paper.lumen.ac/reading-notes?utm_source=x 나중에 읽기"},
+    {"do": "wait", "ms": 700},
+    {"do": "layer", "name": "bulk", "selector": ".modal__inner", "alpha": true, "note": "bulk paste: the URLs the app found, its count line and its new-link badges"},
+    {"do": "press", "key": "Escape"},
+    {"do": "wait", "ms": 500},
+    {"do": "click", "selector": ".search input, input[type=search]"},
+    {"do": "type", "selector": ".search input, input[type=search]", "value": "시각화", "delay": 40},
+    {"do": "wait", "ms": 700},
+    {"do": "shot", "name": "search", "note": "the board filtered by a search, with the app's highlight marks"}
+  ]
+}

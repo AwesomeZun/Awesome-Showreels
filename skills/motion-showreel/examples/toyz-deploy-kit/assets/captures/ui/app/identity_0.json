@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".setup__form fieldset.group",
+ "file": "identity_0.png",
+ "kind": "element",
+ "px": [
+  1664,
+  797
+ ],
+ "dpr": 2,
+ "sha1": "d8b5f3939852",
+ "rect": {
+  "x": 368,
+  "y": 104.11,
+  "w": 832,
+  "h": 398.31
+ },
+ "screen": {
+  "x": 368,
+  "y": 104.11,
+  "w": 832,
+  "h": 398.31
+ },
+ "page": {
+  "x": 368,
+  "y": 308.11,
+  "w": 832,
+  "h": 398.31
+ },
+ "element": {
+  "x": 12,
+  "y": 12,
+  "w": 808,
+  "h": 374.31
+ },
+ "pad": 12,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgb(255, 255, 255)",
+ "color": "rgb(10, 11, 16)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "A\n정체성\nIDENTITY\n프로젝트 이름\n\nREADME 제목, 매니페스트, OG 이미지에 들어가요.\n\n한 줄 소개\n\n메타 설명과 OG 부제로 쓰여요.\n\n설명\n\nREADME 본문 첫 단락이 되고, 첫 줄은 description 메타 태그에 들어가요.",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:40:06.118Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

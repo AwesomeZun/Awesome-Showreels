@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "Seoul at zoom 14 (the app's first view at this window size)",
+ "file": "map_z14.png",
+ "kind": "screen",
+ "px": [
+  2600,
+  1500
+ ],
+ "dpr": 1,
+ "sha1": "b6dae4ad710c",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 2600,
+  "h": 1500
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 2600,
+  "h": 1500
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:06:08.009Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

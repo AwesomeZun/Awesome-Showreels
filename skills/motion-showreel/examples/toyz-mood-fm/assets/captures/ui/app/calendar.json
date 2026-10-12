@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the archive calendar for September 2026: each day painted with that day's mood",
+ "selector": ".panel.calendar",
+ "file": "calendar.png",
+ "kind": "element",
+ "px": [
+  1424,
+  1092
+ ],
+ "dpr": 2,
+ "sha1": "8ac99d370898",
+ "rect": {
+  "x": 160,
+  "y": 313.17,
+  "w": 712.17,
+  "h": 546.19
+ },
+ "screen": {
+  "x": 160,
+  "y": 313.17,
+  "w": 712.17,
+  "h": 546.19
+ },
+ "page": {
+  "x": 160,
+  "y": 313.17,
+  "w": 712.17,
+  "h": 546.19
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 712.17,
+  "h": 546.19
+ },
+ "pad": 0,
+ "radius": [
+  22,
+  22,
+  22,
+  22
+ ],
+ "bg": "rgb(20, 20, 22)",
+ "color": "rgb(243, 239, 234)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "2026년 9월\n27 / 30 DAYS\n오늘\n일\n월\n화\n수\n목\n금\n토\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:30:44.145Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

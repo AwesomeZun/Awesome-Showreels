@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the JSON tool with the minified input; the tree already reads it",
+ "selector": ".tool-grid",
+ "file": "json_before.png",
+ "kind": "element",
+ "px": [
+  2520,
+  1405
+ ],
+ "dpr": 2,
+ "sha1": "73a04e076d98",
+ "rect": {
+  "x": 296,
+  "y": 293.22,
+  "w": 1260,
+  "h": 702.59
+ },
+ "screen": {
+  "x": 296,
+  "y": 293.22,
+  "w": 1260,
+  "h": 702.59
+ },
+ "page": {
+  "x": 296,
+  "y": 293.22,
+  "w": 1260,
+  "h": 702.59
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1260,
+  "h": 702.59
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "JSON 입력\n유효한 JSON · 객체 · 키 6개 · 1ms 미만\n497 B\n2칸\n4칸\n탭\n키 정렬\n압축\n정리하기\n정리\n압축\n트리\nTypeScript\nCSV\n모두 접기\n1단계\n3단계까지 펼치기\n키를 누르면 경로 조회에 넣어요\nroot\n:\nObject{6}\nstudio\n:\n\"달빛 공방\"\nproject\n:\n\"tiny.tools\"\nversion\n:\n\"1.0.0\"\nreleased\n:\ntrue\nmembers\n:\nArray(3)\n0\n:\nObject{5}\n1\n:\nObject{6}\n2\n:\nObject{5}\nsettings\n:\nObject{3}\ntheme\n:\n\"dark\"\naccent color\n:\n\"#5B45F0\"\nlimits\n:\nObject{2}\n경로 조회\na.b[0].c 형식\n문자열\n\"haneul@moonlight.e",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:24:04.445Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,52 @@
+{
+ "step": "layer",
+ "selector": ".palette__panel",
+ "file": "palette.png",
+ "kind": "element",
+ "px": [
+  1440,
+  1640
+ ],
+ "dpr": 2,
+ "sha1": "82ba0098750b",
+ "rect": {
+  "x": 440,
+  "y": 80,
+  "w": 720,
+  "h": 820
+ },
+ "screen": {
+  "x": 440,
+  "y": 80,
+  "w": 720,
+  "h": 820
+ },
+ "page": {
+  "x": 440,
+  "y": 80,
+  "w": 720,
+  "h": 820
+ },
+ "element": {
+  "x": 30,
+  "y": 30,
+  "w": 660,
+  "h": 760
+ },
+ "pad": 30,
+ "radius": [
+  16,
+  16,
+  16,
+  16
+ ],
+ "bg": "rgba(250, 250, 251, 0.97)",
+ "color": "rgb(0, 0, 0)",
+ "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "Esc\n이동\n대시보드\n↵\n프로젝트 목록\n전체 할 일\n배포 타임라인\n설정과 데이터\n프로젝트\nLoopdeck\n개발 중\nMoss Timer\n출시\nPapercut\n아이디어\nSignal Bay\n보류\nKite Forms\n개발 중\n만들기\n새 할 일\n배포 메모 추가 · Loopdeck\n새 프로젝트\n보기\n칸반 보기로 전환\n현재\n목록 보기로 전환\n완료 항목 숨기기\n보관한 프로젝트 보이기\n데이터\nJSON으로 내보내기\n이번 주 리포트 복사\n↑↓ 이동\n↵ 실행\n!높음 @프로젝트 내일 9/30",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:03:21.986Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

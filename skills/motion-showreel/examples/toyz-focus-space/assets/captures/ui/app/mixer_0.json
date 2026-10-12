@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the ambient mixer, off",
+ "selector": ".mixer",
+ "file": "mixer_0.png",
+ "kind": "element",
+ "px": [
+  600,
+  744
+ ],
+ "dpr": 2,
+ "sha1": "b61165e93c61",
+ "rect": {
+  "x": 100,
+  "y": 520.94,
+  "w": 300,
+  "h": 371.75
+ },
+ "screen": {
+  "x": 100,
+  "y": 520.94,
+  "w": 300,
+  "h": 371.75
+ },
+ "page": {
+  "x": 100,
+  "y": 520.94,
+  "w": 300,
+  "h": 371.75
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 300,
+  "h": 371.75
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(233, 237, 227)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "AMBIENT / 배경 소리\n\n꺼짐\n\n켜면 부드럽게 소리가 들어와요.\n\n빗소리\nRAIN\n45\n브라운 노이즈\nBROWN\n0\n바람\nWIND\n0\n모닥불\nFIRE\n25\n카페\nCAFE\n0\n집중 중에만 재생",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:54:54.005Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,38 @@
+{
+  "title": "FOCUS SPACE",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "FOCUS SPACE", "minBars": 2, "maxBars": 2, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "intro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "air"},
+      {"beat": 1, "from": "start", "sfx": "reveal"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "focus", "label": "지금 하나", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 6, "outBeats": 1, "in": "zoomInto", "music": "groove", "cues": [
+      {"beat": 1, "from": "start", "sfx": "click"},
+      {"beat": 1, "from": "start", "sfx": "chime"},
+      {"beat": 2, "from": "start", "sfx": "drawon dur=4b"}
+    ]},
+    {"id": "sound", "label": "배경 소리", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "cut", "music": "breakdown", "cues": [
+      {"beat": 1, "from": "start", "sfx": "click"},
+      {"beat": 2, "from": "start", "sfx": "air"},
+      {"beat": 3, "from": "start", "sfx": "air"},
+      {"beat": 4, "from": "start", "sfx": "air"}
+    ]},
+    {"id": "log", "label": "기록", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0.5, "in": "cut", "music": "drop", "cues": [
+      {"beat": 0, "from": "start", "sfx": "reveal"}
+    ]},
+    {"id": "end", "label": "FOCUS SPACE", "minBars": 1, "maxBars": 3, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "cut", "music": "outro", "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["sound"], "scenes": {"hook": {"bars": 2}, "focus": {"bars": 2}, "log": {"bars": 1}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "focus": {"bars": 3}, "sound": {"bars": 2}, "log": {"bars": 2}, "end": {"bars": 3}}}
+  },
+  "poster": 2.4,
+  "captions": {"enabled": false},
+  "audio": {"tweaks": {"motionPattern": "broken8"}}
+}

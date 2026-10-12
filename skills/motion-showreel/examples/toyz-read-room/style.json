@@ -1,0 +1,179 @@
+{
+  "$schema": "../../templates/style.schema.json",
+  "meta": {
+    "purpose": "launch",
+    "audience": "small reading groups",
+    "title": "Read Room",
+    "lang": "ko",
+    "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/styles/*.css in the app repository) and its captured screens. A quiet grey desk with one sheet of paper, ink type (Pretendard, as the app sets it), and the readers' highlighter colours; the reel moves like reading: slow camera, pen-speed sweeps.",
+    "draft": false
+  },
+  "source": [
+    {
+      "path": "source/README.md",
+      "kind": "readme",
+      "notes": "a small online reading room: one text, everyone's highlights and margin notes, discussion questions, shared by link or file without a server"
+    },
+    {
+      "path": "assets/captures/ui/app/",
+      "kind": "images",
+      "notes": "the real app (its production build, served locally) captured by capture/app.json, the essay with and without its highlights; the essay, its author and the readers are the app's own fictional sample data"
+    },
+    {
+      "path": "source/fonts/",
+      "kind": "other",
+      "notes": "Pretendard Variable (the app's interface and default reading face) and JetBrains Mono (labels); SIL OFL 1.1"
+    }
+  ],
+  "mood": [
+    "quiet",
+    "warm",
+    "literary",
+    "unhurried",
+    "together"
+  ],
+  "rationale": {
+    "palette": "The app's desk and paper: desk #E3E4E7 / #D6D8DC, paper #FBFBFA, ink #17191D / #4B4F57, and the readers' highlighter colours (orange #FF9A3D, yellow #FFD23F, green #45D08B, blue #6FB2FF). The orange highlighter is the accent, swept behind a line as the app's own hero does; text never sits in a light colour.",
+    "type": "Pretendard Variable at 900 for headlines, ink on the desk, the key line marked with an orange highlighter sweep like the app's '함께 읽을 사람과.'; the essay itself is the captured page in the app's own reading type; JetBrains Mono capitals for labels ('A QUIET READING ROOM').",
+    "motion": "The pace of reading: the camera moves down the page slowly, highlights draw on at pen speed along the real line boxes, margin notes slide in from the right and settle. Nothing jumps.",
+    "sound": "Ambient in E major at 96 BPM (6 bars in 15 s, 12 in 30 s): a quiet room with soft pads and sparse bells, light drums, minimal SFX (a soft pen stroke for each highlight, a page swish).",
+    "visuals": "Four scenes in the 15 s cut: the name and the room's one-liner over the desk; real highlights drawn on in the real essay by two readers and their margin notes; the whole page with every reader's highlights beside the app's read-together panel (link, file, participants); the end card with the app's own line. The 30 s cut adds the discussion questions.",
+    "narration": "Not recommended: a short, muted launch reel; the reading happens on screen."
+  },
+  "palette": {
+    "bg": "#E3E4E7",
+    "bg2": "#D6D8DC",
+    "surface": "#FBFBFA",
+    "ink": "#17191D",
+    "ink2": "#4B4F57",
+    "muted": "#585D66",
+    "accent": "#C2410C",
+    "accent2": "#2563EB",
+    "accent3": "#15803D",
+    "ok": "#15803D",
+    "warn": "#A16207",
+    "deny": "#B91C1C",
+    "accentInk": "#C2410C",
+    "onAccent": "#FFFFFF",
+    "line": "#C9CBD0",
+    "highlight": "#FF9A3D"
+  },
+  "fonts": {
+    "display": "\"Pretendard Variable\", sans-serif",
+    "sans": "\"Pretendard Variable\", sans-serif",
+    "serif": "\"Pretendard Variable\", sans-serif",
+    "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+    "cjk": "\"Pretendard Variable\", sans-serif",
+    "files": [
+      {
+        "family": "Pretendard Variable",
+        "path": "source/fonts/PretendardVariable.woff2",
+        "weight": "45 920",
+        "style": "normal"
+      },
+      {
+        "family": "JetBrains Mono",
+        "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+        "weight": "100 800",
+        "style": "normal"
+      }
+    ]
+  },
+  "type": {
+    "scale": [
+      18,
+      22,
+      28,
+      36,
+      48,
+      64,
+      84,
+      112,
+      150,
+      200
+    ],
+    "displayWeight": 900,
+    "bodyWeight": 500,
+    "tracking": -0.04,
+    "trackingLabel": 0.15
+  },
+  "layout": {
+    "theme": "light",
+    "margin": 120,
+    "grid": 12,
+    "gutter": 24,
+    "baseline": 8,
+    "hud": false,
+    "captions": {
+      "enabled": false,
+      "font": "sans",
+      "size": 40,
+      "fg": "#17191D",
+      "bg": "none",
+      "y": 960
+    },
+    "radius": 14
+  },
+  "motion": {
+    "pace": "calm",
+    "spring": {
+      "f": 1.6,
+      "z": 0.8
+    },
+    "overshoot": 0.02,
+    "ease": "ioC",
+    "transitions": [
+      "match",
+      "cut",
+      "flash"
+    ],
+    "characters": false,
+    "dataViz": false,
+    "visualSources": [
+      "vector",
+      "app-ui"
+    ],
+    "typeReveal": [
+      "kinetic"
+    ]
+  },
+  "post": {
+    "grain": 0.03,
+    "vignette": {
+      "a": 0.12,
+      "color": "#4B4F57"
+    },
+    "bloom": 0
+  },
+  "sound": {
+    "bpm": 96,
+    "key": "E",
+    "mode": "major",
+    "preset": "ambient",
+    "instruments": [
+      "pad",
+      "bell",
+      "piano",
+      "sub",
+      "kick",
+      "rim",
+      "shaker"
+    ],
+    "drums": "light",
+    "sfx": "minimal",
+    "energy": {
+      "intro": 0.3,
+      "groove": 0.5,
+      "breakdown": 0.35,
+      "drop": 0.75,
+      "outro": 0.35
+    }
+  },
+  "narration": {
+    "recommended": false,
+    "voice": "Kore",
+    "styleTag": "[soft, warm]",
+    "lang": "ko-KR"
+  },
+  "review": []
+}

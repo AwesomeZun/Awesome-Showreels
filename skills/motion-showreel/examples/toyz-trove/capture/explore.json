@@ -1,0 +1,22 @@
+{
+  "name": "explore", "serve": "../source/app", "url": "/index.html", "out": "../build/explore",
+  "device": "desktop", "locale": "ko-KR", "timezone": "Asia/Seoul", "colorScheme": "dark",
+  "fixedTime": "2026-10-12T10:00:00+09:00", "wait": {"until": "load", "settle": 1200},
+  "steps": [
+    {"do": "shot", "name": "home"},
+    {"do": "shot", "name": "home_full", "full": true},
+    {"do": "click", "selector": ".btn--add"},
+    {"do": "wait", "ms": 600},
+    {"do": "shot", "name": "add"},
+    {"do": "click", "text": "여러 개 붙여넣기"},
+    {"do": "wait", "ms": 400},
+    {"do": "fill", "selector": "textarea", "value": "리액트 문서 https://react.dev/learn\n- [디자인 참고](https://field.ondo.co.kr/grid)\nexample.com/article?utm_source=x 나중에 읽기"},
+    {"do": "wait", "ms": 600},
+    {"do": "shot", "name": "bulk"},
+    {"do": "press", "key": "Escape"},
+    {"do": "wait", "ms": 500},
+    {"do": "click", "selector": ".card", "optional": true},
+    {"do": "wait", "ms": 700},
+    {"do": "shot", "name": "detail"}
+  ]
+}

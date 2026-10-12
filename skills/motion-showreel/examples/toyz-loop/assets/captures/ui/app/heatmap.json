@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the last sixteen weeks",
+ "selector": "#__heat",
+ "file": "heatmap.png",
+ "kind": "element",
+ "px": [
+  2320,
+  1045
+ ],
+ "dpr": 2,
+ "sha1": "c9b826e5e60c",
+ "rect": {
+  "x": 220,
+  "y": 477.25,
+  "w": 1160,
+  "h": 522.5
+ },
+ "screen": {
+  "x": 220,
+  "y": 477.25,
+  "w": 1160,
+  "h": 522.5
+ },
+ "page": {
+  "x": 220,
+  "y": 548.25,
+  "w": 1160,
+  "h": 522.5
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1160,
+  "h": 522.5
+ },
+ "pad": 0,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(247, 249, 253, 0.86)",
+ "color": "rgb(22, 38, 74)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "최근 16주\n6.29 – 10.18\n6월\n7월\n8월\n9월\n10월\n월\n수\n금\n최근 16주 동안 기록이 있는 35일 중 20일을 모두 채웠어요.\n적음\n모두\n쉼",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:46:02.583Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

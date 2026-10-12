@@ -1,0 +1,162 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-loop); it is not committed. The same screens are live at https://loop.toyz.kr. The app's first-run sample (four routines, the example crew 새벽 루프 with three fictional members) is used; today's check-in list is captured at three moments: as it opens (1 of 3 done), after 물 8잔 is counted up to 8 (2 of 3), and after 책 20쪽 is checked (3 of 3). The chrome ring, the date and the wordmark are drawn in the reel from the app's own code (Rings.tsx, App.tsx, app.css).",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "reducedMotion": "reduce",
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "wait": {
+  "until": "load",
+  "settle": 2000
+ },
+ "css": "[class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "layer",
+   "name": "list_1",
+   "selector": ".today-list",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /물 8잔/.test(r.textContent)); const b = r && [...r.querySelectorAll('.stepper button')].pop(); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 150
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /물 8잔/.test(r.textContent)); const b = r && [...r.querySelectorAll('.stepper button')].pop(); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 150
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /물 8잔/.test(r.textContent)); const b = r && [...r.querySelectorAll('.stepper button')].pop(); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 150
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /물 8잔/.test(r.textContent)); const b = r && [...r.querySelectorAll('.stepper button')].pop(); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 150
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /물 8잔/.test(r.textContent)); const b = r && [...r.querySelectorAll('.stepper button')].pop(); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 150
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "layer",
+   "name": "list_2",
+   "selector": ".today-list",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const r = [...document.querySelectorAll('.routine-row')].find(r => /책 20쪽/.test(r.textContent)); const b = r && r.querySelector('button'); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "list_3",
+   "selector": ".today-list",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "layer",
+   "name": "cheer",
+   "selector": ".side-card--cheer",
+   "alpha": true,
+   "pad": 0,
+   "note": "a cheer from the example crew"
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/crew'"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const a = [...document.querySelectorAll('a,button')].find(b => /새벽 루프/.test(b.textContent || '')); if (a) a.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "layer",
+   "name": "members",
+   "selector": ".board > li",
+   "all": true,
+   "alpha": true,
+   "pad": 0,
+   "note": "the crew board: me and the three example members, this week"
+  },
+  {
+   "do": "layer",
+   "name": "crew_head",
+   "selector": ".page-head--board",
+   "alpha": true,
+   "pad": 0
+  },
+  {
+   "do": "eval",
+   "js": "location.hash = '#/stats'"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const h = [...document.querySelectorAll('h2,h3')].find(h => /최근 16주/.test(h.textContent)); const s = h && (h.closest('section') || h.parentElement.parentElement); if (s) s.id = '__heat'; })()"
+  },
+  {
+   "do": "layer",
+   "name": "heatmap",
+   "selector": "#__heat",
+   "alpha": true,
+   "pad": 0,
+   "note": "the last sixteen weeks"
+  }
+ ]
+}

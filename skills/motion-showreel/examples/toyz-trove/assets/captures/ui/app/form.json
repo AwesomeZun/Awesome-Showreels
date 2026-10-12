@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "single link form: the app's title draft, its one-sentence summary and its tag suggestions for this memo",
+ "selector": ".modal__inner",
+ "file": "form.png",
+ "kind": "element",
+ "px": [
+  1436,
+  1555
+ ],
+ "dpr": 2,
+ "sha1": "3b47031cbfac",
+ "rect": {
+  "x": 441,
+  "y": 211.3,
+  "w": 718,
+  "h": 777.39
+ },
+ "screen": {
+  "x": 441,
+  "y": 211.3,
+  "w": 718,
+  "h": 777.39
+ },
+ "page": {
+  "x": 441,
+  "y": 211.3,
+  "w": 718,
+  "h": 777.39
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 718,
+  "h": 777.39
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(238, 239, 241)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "NEW LINK\n\n링크 추가\n링크 하나\n여러 개 붙여넣기\n주소\n필수\nNO\n\nnotes.ondo.kr\nnotes.ondo.kr/link-graph-notes\n\n제목\n주소에서 만든 초안이에요\n메모\n세 문장 이상이면 핵심을 자동으로 요약해요\n\n요약지식 그래프 입문 글이에요.\n\n주제\n주제 없음\n개발\n디자인\n읽을거리\n도구\n영감\n태그\n제안\n그래프\n지식\n입문\n키워드\n태그\n관계\nnotes.ondo.kr/link-graph-notes\n취소\n링크 저장",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:00:07.522Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

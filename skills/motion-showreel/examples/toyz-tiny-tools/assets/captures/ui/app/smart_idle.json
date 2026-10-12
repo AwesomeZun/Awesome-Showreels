@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the smart paste pad, waiting",
+ "selector": ".smart",
+ "file": "smart_idle.png",
+ "kind": "element",
+ "px": [
+  1182,
+  954
+ ],
+ "dpr": 2,
+ "sha1": "ff5f4920531f",
+ "rect": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 477.17
+ },
+ "screen": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 477.17
+ },
+ "page": {
+  "x": 964.77,
+  "y": 142,
+  "w": 591.23,
+  "h": 477.17
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 591.23,
+  "h": 477.17
+ },
+ "pad": 0,
+ "radius": [
+  20,
+  20,
+  20,
+  20
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(244, 243, 255)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "SMART PASTE\n입력 대기\n붙여넣으면, 알맞은 도구를 골라 드려요.\n스마트 붙여넣기 입력\n아무 곳에서나\n⌘\nV\n예시로 해 보기\nJWT\n색\n타임스탬프\nURL\nBase64\n\n알아보는 형식\n\nJSON\n01 정리·검증\nJWT\n06 토큰 해석\nURL\n05 파라미터 표\nBASE64\n04 디코딩\nEPOCH\n11 날짜 변환\nCOLOR\n02 색 변환\nUUID\n13 버전 해석\nTEXT\n10 글자 수",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:23:57.328Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

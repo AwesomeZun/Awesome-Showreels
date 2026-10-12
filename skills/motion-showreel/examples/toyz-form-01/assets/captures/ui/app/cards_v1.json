@@ -1,0 +1,195 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "cards_v1_0.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "e99b4beaced1",
+   "rect": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 233.94,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "하은\n2일 전\n해결됨\n1번 코멘트:\n헤드라인 두 줄이 너무 무겁게 느껴져요. 첫 줄을 조금 가볍게 가면 어떨까요? @준서 의견 주세요.\n타이포\n높음\n답글 1",
+   "alpha": true
+  },
+  {
+   "file": "cards_v1_1.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "10eef6ffa6c9",
+   "rect": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 357.69,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "민지\n2일 전\n해결됨\n2번 코멘트:\nCTA 문구를 \"무료로 시작하기\"보다 체험 기간이 보이게 바꾸면 전환에 도움이 될 것 같아요.\n카피\n보통",
+   "alpha": true
+  },
+  {
+   "file": "cards_v1_2.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "c4bc6b608974",
+   "rect": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 481.44,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "3\n준서\n2일 전\n열림\n3번 코멘트:\n메탈 카드가 히어로 텍스트와 폭을 다투고 있어요. 카드를 조금 줄이거나 아래로 내려 보면 좋겠어요.\n레이아웃\n보통\n영역",
+   "alpha": true
+  },
+  {
+   "file": "cards_v1_3.png",
+   "kind": "element",
+   "px": [
+    702,
+    244
+   ],
+   "dpr": 2,
+   "sha1": "3f3012867107",
+   "rect": {
+    "x": 1239,
+    "y": 605.19,
+    "w": 351,
+    "h": 121.75
+   },
+   "screen": {
+    "x": 1239,
+    "y": 605.19,
+    "w": 351,
+    "h": 121.75
+   },
+   "page": {
+    "x": 1239,
+    "y": 605.19,
+    "w": 351,
+    "h": 121.75
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 351,
+    "h": 121.75
+   },
+   "pad": 0,
+   "radius": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(237, 237, 239)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "4\n하은\n2일 전\n열림\n4번 코멘트:\n고객사 로고 회색이 배경과 대비가 낮아요. #5C5D62 → #8E9096 정도로 올려 주세요.\n색\n낮음",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:38:37.305Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".comment-list > li"
+}

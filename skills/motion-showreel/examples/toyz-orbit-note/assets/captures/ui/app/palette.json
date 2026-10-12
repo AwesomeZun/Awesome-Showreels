@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "search: the app's own results for 정렬",
+ "selector": ".palette",
+ "file": "palette.png",
+ "kind": "element",
+ "px": [
+  1376,
+  454
+ ],
+ "dpr": 2,
+ "sha1": "bc7c62c93a6b",
+ "rect": {
+  "x": 456,
+  "y": 96,
+  "w": 688,
+  "h": 227
+ },
+ "screen": {
+  "x": 456,
+  "y": 96,
+  "w": 688,
+  "h": 227
+ },
+ "page": {
+  "x": 456,
+  "y": 96,
+  "w": 688,
+  "h": 227
+ },
+ "element": {
+  "x": 24,
+  "y": 24,
+  "w": 640,
+  "h": 179
+ },
+ "pad": 24,
+ "radius": [
+  18,
+  18,
+  18,
+  18
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(10, 15, 46)",
+ "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "Esc\n결과 1\n↑↓ 이동 · Enter 열기\n자동 정렬\n…요. 연결된 카드는 가까이, 나머지는 멀리. 아래 도구 막대의 \"정렬\" 버튼(L)을 눌러 보세요.",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:13:26.825Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

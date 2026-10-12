@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the year in pixels: a row per month",
+ "selector": ".panel.pixels",
+ "file": "pixels.png",
+ "kind": "element",
+ "px": [
+  2560,
+  1261
+ ],
+ "dpr": 2,
+ "sha1": "da4d514a934c",
+ "rect": {
+  "x": 160,
+  "y": 769.36,
+  "w": 1280,
+  "h": 630.31
+ },
+ "screen": {
+  "x": 160,
+  "y": 769.36,
+  "w": 1280,
+  "h": 630.31
+ },
+ "page": {
+  "x": 160,
+  "y": 879.36,
+  "w": 1280,
+  "h": 630.31
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 1280,
+  "h": 630.31
+ },
+ "pad": 0,
+ "radius": [
+  22,
+  22,
+  22,
+  22
+ ],
+ "bg": "rgb(20, 20, 22)",
+ "color": "rgb(243, 239, 234)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "YEAR IN PIXELS\n\n2026년 · 기록한 날 36일\n1\n5\n10\n15\n20\n25\n30\n1월\n2월\n3월\n4월\n5월\n6월\n7월\n8월\n9월\n10월\n11월\n12월\n\n칸 하나가 하루예요. 색은 그날 기록들의 평균 무드 색이고, 누르면 위 달력에서 그날을 열어요.",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:30:44.441Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

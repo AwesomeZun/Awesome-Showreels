@@ -1,0 +1,158 @@
+{
+ "name": "map",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-offgrid); it is not committed. The same screens are live at https://offgrid.toyz.kr. Map tiles are OpenStreetMap's (© OpenStreetMap contributors, ODbL), shown through the app's own dark mono filter; the captures hide the app's markers, lines and panels (the reel draws its markers and lines itself from the app's styles) and dump where the app placed each marker (geo_*.txt) so the reel can register its drawing to the map. Reduced motion is on so the app jumps to each view instead of flying.",
+ "device": {
+  "screen": [
+   2600,
+   1500
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 1,
+  "mobile": false,
+  "touch": false
+ },
+ "reducedMotion": "reduce",
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "dark",
+ "wait": {
+  "until": "load",
+  "settle": 3000
+ },
+ "css": ".leaflet-tile{opacity:1!important} [class*='toast']{display:none!important}",
+ "steps": [
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const pins = [...document.querySelectorAll('.leaflet-marker-icon')].map(m => { const r = m.getBoundingClientRect(), lab = m.querySelector('.og-pin__label'), hood = m.classList.contains('og-hood-marker');\n   return { name: lab ? lab.textContent : (m.textContent || '').trim().slice(0, 40), hood, pin: !!m.querySelector('.og-pin'), x: r.x, y: r.y, w: r.width, h: r.height }; });\n const z = (document.body.innerText.match(/Z(\\d+)/) || [])[1]; const ll = (document.body.innerText.match(/([\\d.]+)°N\\s+([\\d.]+)°E/) || []);\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({ zoom: +z, center: [+ll[1], +ll[2]], viewport: [innerWidth, innerHeight], pins }); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo_z14",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "css",
+   "id": "maponly",
+   "css": "body *{visibility:hidden!important} .map-wrap,.map,.leaflet-map-pane,.leaflet-tile-pane,.leaflet-tile-pane *{visibility:visible!important} .leaflet-pane:not(.leaflet-map-pane):not(.leaflet-tile-pane){display:none!important} .map-vignette{display:none!important}"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "shot",
+   "name": "map_z14",
+   "note": "Seoul at zoom 14 (the app's first view at this window size)"
+  },
+  {
+   "do": "uncss",
+   "id": "maponly"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('button')].find(b => /SEONGSU/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('button')].find(b => /확대/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 3000
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const pins = [...document.querySelectorAll('.leaflet-marker-icon')].map(m => { const r = m.getBoundingClientRect(), lab = m.querySelector('.og-pin__label'), hood = m.classList.contains('og-hood-marker');\n   return { name: lab ? lab.textContent : (m.textContent || '').trim().slice(0, 40), hood, pin: !!m.querySelector('.og-pin'), x: r.x, y: r.y, w: r.width, h: r.height }; });\n const z = (document.body.innerText.match(/Z(\\d+)/) || [])[1]; const ll = (document.body.innerText.match(/([\\d.]+)°N\\s+([\\d.]+)°E/) || []);\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({ zoom: +z, center: [+ll[1], +ll[2]], viewport: [innerWidth, innerHeight], pins }); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo_z16",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "css",
+   "id": "maponly",
+   "css": "body *{visibility:hidden!important} .map-wrap,.map,.leaflet-map-pane,.leaflet-tile-pane,.leaflet-tile-pane *{visibility:visible!important} .leaflet-pane:not(.leaflet-map-pane):not(.leaflet-tile-pane){display:none!important} .map-vignette{display:none!important}"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "shot",
+   "name": "map_z16",
+   "note": "Seongsu at zoom 16"
+  },
+  {
+   "do": "uncss",
+   "id": "maponly"
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('button,[role=tab]')].find(b => /^\\s*코스\\s*\\d/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const b = [...document.querySelectorAll('.item--route .item__main')].find(b => /붉은벽돌 골목 한 바퀴/.test(b.textContent || b.getAttribute('aria-label') || '')); if (b) b.click(); })()"
+  },
+  {
+   "do": "wait",
+   "ms": 3500
+  },
+  {
+   "do": "eval",
+   "js": "(() => { const pins = [...document.querySelectorAll('.leaflet-marker-icon')].map(m => { const r = m.getBoundingClientRect(), lab = m.querySelector('.og-pin__label'), hood = m.classList.contains('og-hood-marker');\n   return { name: lab ? lab.textContent : (m.textContent || '').trim().slice(0, 40), hood, pin: !!m.querySelector('.og-pin'), x: r.x, y: r.y, w: r.width, h: r.height }; });\n const z = (document.body.innerText.match(/Z(\\d+)/) || [])[1]; const ll = (document.body.innerText.match(/([\\d.]+)°N\\s+([\\d.]+)°E/) || []);\n let pre = document.getElementById('__dump'); if (!pre) { pre = document.createElement('pre'); pre.id = '__dump'; pre.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;opacity:0;white-space:pre;'; document.body.appendChild(pre); }\n pre.textContent = JSON.stringify({ zoom: +z, center: [+ll[1], +ll[2]], viewport: [innerWidth, innerHeight], pins }); })()"
+  },
+  {
+   "do": "text",
+   "name": "geo_route",
+   "selector": "#__dump"
+  },
+  {
+   "do": "eval",
+   "js": "document.getElementById('__dump').remove()"
+  },
+  {
+   "do": "css",
+   "id": "maponly",
+   "css": "body *{visibility:hidden!important} .map-wrap,.map,.leaflet-map-pane,.leaflet-tile-pane,.leaflet-tile-pane *{visibility:visible!important} .leaflet-pane:not(.leaflet-map-pane):not(.leaflet-tile-pane){display:none!important} .map-vignette{display:none!important}"
+  },
+  {
+   "do": "wait",
+   "ms": 600
+  },
+  {
+   "do": "shot",
+   "name": "map_route",
+   "note": "the Seongsu walk 성수 붉은벽돌 골목 한 바퀴, framed by the app"
+  },
+  {
+   "do": "uncss",
+   "id": "maponly"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "bulk paste: the URLs the app found, its count line and its new-link badges",
+ "selector": ".modal__inner",
+ "file": "bulk.png",
+ "kind": "element",
+ "px": [
+  1436,
+  1653
+ ],
+ "dpr": 2,
+ "sha1": "e43fa6d6c17b",
+ "rect": {
+  "x": 441,
+  "y": 186.84,
+  "w": 718,
+  "h": 826.31
+ },
+ "screen": {
+  "x": 441,
+  "y": 186.84,
+  "w": 718,
+  "h": 826.31
+ },
+ "page": {
+  "x": 441,
+  "y": 186.84,
+  "w": 718,
+  "h": 826.31
+ },
+ "element": {
+  "x": 0,
+  "y": 0,
+  "w": 718,
+  "h": 826.31
+ },
+ "pad": 0,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(238, 239, 241)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "NEW LINK\n\n링크 추가\n링크 하나\n여러 개 붙여넣기\n붙여넣기\n메모, 메신저 대화, 마크다운 목록 무엇이든 괜찮아요\n\nURL 3개를 찾았어요 · 새 링크 3개\n\nR\n리액트 문서\nreact.dev/learn\n새 링크\nFO\n디자인 참고\nfield.ondo.co.kr/grid\n새 링크\nPL\n노션에서 봤던 글\npaper.lumen.ac/reading-notes?utm_source=x\n새 링크\n넣을 주제\n주제 없음\n개발\n디자인\n읽을거리\n도구\n영감\n모두에 붙일 태그\n도메인 규칙 태그도 붙이기 (예: github.com → 개발, youtube.com → 영상)\n취소\n새 링크 3개 추가",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:00:09.257Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

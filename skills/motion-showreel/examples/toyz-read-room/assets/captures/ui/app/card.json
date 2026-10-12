@@ -1,0 +1,103 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "card_0.png",
+   "kind": "element",
+   "px": [
+    716,
+    234
+   ],
+   "dpr": 2,
+   "sha1": "3898cff6f8b5",
+   "rect": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "screen": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "page": {
+    "x": 1045,
+    "y": 607,
+    "w": 358,
+    "h": 117
+   },
+   "element": {
+    "x": 14,
+    "y": 14,
+    "w": 330,
+    "h": 89
+   },
+   "pad": 14,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "민\n태\n¶ 04\n메모 2\n민지 규칙을 하나만 정했다는 부분이 인상적이에요. 우리도 규칙이 너무 많았던 것 같아요.",
+   "alpha": true
+  },
+  {
+   "file": "card_1.png",
+   "kind": "element",
+   "px": [
+    716,
+    234
+   ],
+   "dpr": 2,
+   "sha1": "0f0e31809303",
+   "rect": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "screen": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "page": {
+    "x": 1045,
+    "y": 1350,
+    "w": 358,
+    "h": 117
+   },
+   "element": {
+    "x": 14,
+    "y": 14,
+    "w": 330,
+    "h": 89
+   },
+   "pad": 14,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(40, 35, 27)",
+   "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "태\n¶ 11\n메모 1\n태오 긴 감상문을 서로 읽느라 정작 글 이야기를 못 했다는 대목, 우리 얘기 같아요.",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:48:30.806Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".margin-card"
+}

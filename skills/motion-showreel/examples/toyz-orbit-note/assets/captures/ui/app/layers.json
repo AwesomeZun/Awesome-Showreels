@@ -1,0 +1,1075 @@
+{
+ "name": "app",
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:13:26.826Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "device": {
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false,
+  "screen": [
+   1600,
+   1000
+  ]
+ },
+ "viewport": [
+  1600,
+  1000
+ ],
+ "statusBar": 0,
+ "dpr": 2,
+ "locale": "ko-KR",
+ "colorScheme": "light",
+ "placement": "screen rect = position inside the device screen in CSS px (y includes the status bar the reel draws); draw at 1 CSS px = 1 reel px, image px = CSS px * dpr",
+ "layers": {
+  "card_0": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_0.png",
+   "kind": "element",
+   "px": [
+    555,
+    491
+   ],
+   "dpr": 2,
+   "sha1": "cb2446d39bbf",
+   "rect": {
+    "x": 466.35,
+    "y": 245.3,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "screen": {
+    "x": 466.35,
+    "y": 245.3,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "page": {
+    "x": 466.35,
+    "y": 245.3,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 201.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°01\n3\n여기서 시작해요\n\n이 공간은 예시예요. 카드를 끌어 옮기고, 빈 곳을 두 번 눌러 새 카드를 만들어 보세요.\n\n카드 가장자리의 점을 끌어 다른 카드에 놓으면 연결돼요. 본문에 위키 링크처럼 쓰면 자동으로 이어져요.",
+   "alpha": true
+  },
+  "card_1": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_1.png",
+   "kind": "element",
+   "px": [
+    555,
+    491
+   ],
+   "dpr": 2,
+   "sha1": "6229fc3c1c17",
+   "rect": {
+    "x": 875.39,
+    "y": 89.48,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "screen": {
+    "x": 875.39,
+    "y": 89.48,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "page": {
+    "x": 875.39,
+    "y": 89.48,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 201.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°02\n2\n위키 링크\n\n카드 제목 문법으로 카드를 잇는 기능이에요. 없는 제목을 쓰면 새 카드를 만들자고 제안해요.\n\n이 카드를 가리키는 카드는 백링크 목록에서 확인해요.",
+   "alpha": true
+  },
+  "card_2": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_2.png",
+   "kind": "element",
+   "px": [
+    555,
+    371
+   ],
+   "dpr": 2,
+   "sha1": "8822f48713a3",
+   "rect": {
+    "x": 1264.96,
+    "y": 128.43,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "screen": {
+    "x": 1264.96,
+    "y": 128.43,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "page": {
+    "x": 1264.96,
+    "y": 128.43,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 141.31
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°03\n1\n백링크\n\n다른 카드가 이 카드를 가리키면 여기에 모여요. 카드를 고르면 상세 패널의 \"백링크\" 목록에서 볼 수 있어요.",
+   "alpha": true
+  },
+  "card_3": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_3.png",
+   "kind": "element",
+   "px": [
+    555,
+    411
+   ],
+   "dpr": 2,
+   "sha1": "2425c64a9eef",
+   "rect": {
+    "x": 875.39,
+    "y": 420.61,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "screen": {
+    "x": 875.39,
+    "y": 420.61,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "page": {
+    "x": 875.39,
+    "y": 420.61,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 161.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°04\n2\n포커스 모드\n\n카드를 고르고 F 키나 아래 \"포커스\" 버튼을 누르면 직접 연결된 카드만 또렷하게 남고 나머지는 흐려져요. 생각의 궤도 하나에 집중할 때 좋아요.",
+   "alpha": true
+  },
+  "card_4": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_4.png",
+   "kind": "element",
+   "px": [
+    555,
+    411
+   ],
+   "dpr": 2,
+   "sha1": "a5d2603da8b6",
+   "rect": {
+    "x": 1264.96,
+    "y": 459.57,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "screen": {
+    "x": 1264.96,
+    "y": 459.57,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "page": {
+    "x": 1264.96,
+    "y": 459.57,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 161.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°05\n1\n자동 정렬\n\n카드가 서로를 밀고 당기며 자리를 잡아요. 연결된 카드는 가까이, 나머지는 멀리. 아래 도구 막대의 \"정렬\" 버튼(L)을 눌러 보세요.",
+   "alpha": true
+  },
+  "card_5": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_5.png",
+   "kind": "element",
+   "px": [
+    555,
+    371
+   ],
+   "dpr": 2,
+   "sha1": "ff20458c5def",
+   "rect": {
+    "x": 57.3,
+    "y": 70,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "screen": {
+    "x": 57.3,
+    "y": 70,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "page": {
+    "x": 57.3,
+    "y": 70,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 141.31
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°06\n2\n검색\n\n/ 또는 ⌘K로 제목과 본문을 찾아요. 결과를 고르면 카메라가 그 카드로 날아가요.",
+   "alpha": true
+  },
+  "card_6": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_6.png",
+   "kind": "element",
+   "px": [
+    555,
+    411
+   ],
+   "dpr": 2,
+   "sha1": "e3b75040ffb8",
+   "rect": {
+    "x": 57.3,
+    "y": 401.13,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "screen": {
+    "x": 57.3,
+    "y": 401.13,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "page": {
+    "x": 57.3,
+    "y": 401.13,
+    "w": 277.74,
+    "h": 205.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 161.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°07\n2\n단축키\n\nN 새 카드 · / 검색 · Delete 삭제 · ⌘D 복제 · ⌘Z 실행 취소 · F 포커스 · Shift+1 전체 보기 · Shift+드래그 사각형 선택 · ? 전체 목록",
+   "alpha": true
+  },
+  "card_7": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_7.png",
+   "kind": "element",
+   "px": [
+    555,
+    491
+   ],
+   "dpr": 2,
+   "sha1": "ac39cc465059",
+   "rect": {
+    "x": 407.91,
+    "y": 556.96,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "screen": {
+    "x": 407.91,
+    "y": 556.96,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "page": {
+    "x": 407.91,
+    "y": 556.96,
+    "w": 277.74,
+    "h": 245.3
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 201.3
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°08\n1\n저장과 내보내기\n\n바꾼 내용은 이 브라우저의 IndexedDB에 저절로 저장돼요. 오른쪽 위 메뉴(⋯)에서 JSON·마크다운·PNG로 내보내고, JSON은 다시 가져올 수 있어요. 단축키는 단축키 카드에 모아 두었어요.",
+   "alpha": true
+  },
+  "card_8": {
+   "step": "layer",
+   "note": "every card of the sample space '생각의 궤도' (fictional)",
+   "file": "card_8.png",
+   "kind": "element",
+   "px": [
+    555,
+    371
+   ],
+   "dpr": 2,
+   "sha1": "cbbbd9e06e9a",
+   "rect": {
+    "x": 758.52,
+    "y": 712.78,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "screen": {
+    "x": 758.52,
+    "y": 712.78,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "page": {
+    "x": 758.52,
+    "y": 712.78,
+    "w": 277.74,
+    "h": 185.31
+   },
+   "element": {
+    "x": 22,
+    "y": 22,
+    "w": 233.74,
+    "h": 141.31
+   },
+   "pad": 22,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(12, 36, 196, 0.82)",
+   "color": "rgb(255, 255, 255)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "N°09\n다음 아이디어\n\n궤도를 도는 생각들: 달의 정원 프로젝트 — 아직 없는 제목이라 상세 패널에서 새 카드를 만들자고 제안해요.",
+   "alpha": true
+  },
+  "label_0": {
+   "step": "layer",
+   "file": "label_0.png",
+   "kind": "element",
+   "px": [
+    139,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "0a6710edf729",
+   "rect": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "page": {
+    "x": 771.64,
+    "y": 428.63,
+    "w": 69.37,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 61.37,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "집중하기",
+   "alpha": true
+  },
+  "label_1": {
+   "step": "layer",
+   "file": "label_1.png",
+   "kind": "element",
+   "px": [
+    99,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "3f9b2c1539ac",
+   "rect": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "page": {
+    "x": 379.4,
+    "y": 248.21,
+    "w": 49.41,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 41.41,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "찾기",
+   "alpha": true
+  },
+  "label_2": {
+   "step": "layer",
+   "file": "label_2.png",
+   "kind": "element",
+   "px": [
+    144,
+    69
+   ],
+   "dpr": 2,
+   "sha1": "eb79522007be",
+   "rect": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "screen": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "page": {
+    "x": 1169.62,
+    "y": 199.51,
+    "w": 72.03,
+    "h": 34.3
+   },
+   "element": {
+    "x": 4,
+    "y": 4,
+    "w": 64.03,
+    "h": 26.3
+   },
+   "pad": 4,
+   "radius": [
+    999,
+    999,
+    999,
+    999
+   ],
+   "bg": "rgba(3, 11, 74, 0.9)",
+   "color": "rgb(255, 255, 255)",
+   "font": "600 12px/18px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "반대 방향",
+   "alpha": true
+  },
+  "knot": {
+   "step": "layer",
+   "note": "the app's holographic trefoil knot (HoloKnot SVG)",
+   "selector": ".ambient-knot",
+   "file": "knot.png",
+   "kind": "element",
+   "px": [
+    875,
+    845
+   ],
+   "dpr": 2,
+   "sha1": "9a7a752454fb",
+   "rect": {
+    "x": 0,
+    "y": 577.38,
+    "w": 437.62,
+    "h": 422.62
+   },
+   "screen": {
+    "x": 0,
+    "y": 577.38,
+    "w": 437.62,
+    "h": 422.62
+   },
+   "page": {
+    "x": 0,
+    "y": 577.38,
+    "w": 437.62,
+    "h": 422.62
+   },
+   "element": {
+    "x": -217.62,
+    "y": 0,
+    "w": 655.24,
+    "h": 655.24
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "",
+   "alpha": true
+  },
+  "topbar": {
+   "step": "layer",
+   "selector": ".topbar",
+   "file": "topbar.png",
+   "kind": "element",
+   "px": [
+    3176,
+    144
+   ],
+   "dpr": 2,
+   "sha1": "443dd22e4483",
+   "rect": {
+    "x": 6,
+    "y": 4,
+    "w": 1588,
+    "h": 72
+   },
+   "screen": {
+    "x": 6,
+    "y": 4,
+    "w": 1588,
+    "h": 72
+   },
+   "page": {
+    "x": 6,
+    "y": 4,
+    "w": 1588,
+    "h": 72
+   },
+   "element": {
+    "x": 10,
+    "y": 10,
+    "w": 1568,
+    "h": 52
+   },
+   "pad": 10,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "Orbit Note\nTOYZ\n01\n생각의 궤도\n저장됨\n10:00\n카드 검색\n/",
+   "alpha": true
+  },
+  "dock": {
+   "step": "layer",
+   "selector": ".dock",
+   "file": "dock.png",
+   "kind": "element",
+   "px": [
+    1202,
+    184
+   ],
+   "dpr": 2,
+   "sha1": "260de411a757",
+   "rect": {
+    "x": 499.39,
+    "y": 880,
+    "w": 601.22,
+    "h": 92
+   },
+   "screen": {
+    "x": 499.39,
+    "y": 880,
+    "w": 601.22,
+    "h": 92
+   },
+   "page": {
+    "x": 499.39,
+    "y": 880,
+    "w": 601.22,
+    "h": 92
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 569.22,
+    "h": 60
+   },
+   "pad": 16,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "새 카드\n연결\n정렬\n포커스",
+   "alpha": true
+  },
+  "minimap": {
+   "step": "layer",
+   "selector": ".minimap",
+   "file": "minimap.png",
+   "kind": "element",
+   "px": [
+    516,
+    414
+   ],
+   "dpr": 2,
+   "sha1": "f6ca1c3f3cf4",
+   "rect": {
+    "x": 1342,
+    "y": 765,
+    "w": 258,
+    "h": 207
+   },
+   "screen": {
+    "x": 1342,
+    "y": 765,
+    "w": 258,
+    "h": 207
+   },
+   "page": {
+    "x": 1342,
+    "y": 765,
+    "w": 258,
+    "h": 207
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 226,
+    "h": 175
+   },
+   "pad": 16,
+   "radius": [
+    14,
+    14,
+    14,
+    14
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "MAP\n09 CARDS",
+   "alpha": true
+  },
+  "full": {
+   "step": "shot",
+   "note": "the first screen as the app shows it",
+   "file": "full.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    2000
+   ],
+   "dpr": 2,
+   "sha1": "32b3c688cd16",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "space": {
+   "step": "shot",
+   "note": "the empty space: blue grid and orbit ribbons",
+   "file": "space.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    2000
+   ],
+   "dpr": 2,
+   "sha1": "786ef990b89a",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "insp": {
+   "step": "layer",
+   "note": "card N°09 in the inspector",
+   "selector": ".inspector",
+   "file": "insp.png",
+   "kind": "element",
+   "px": [
+    824,
+    1808
+   ],
+   "dpr": 2,
+   "sha1": "54700bce1355",
+   "rect": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "screen": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "page": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 380,
+    "h": 872
+   },
+   "pad": 16,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CARD / N°09\n카드 제목\n카드 본문\n아직 없는 카드\n[[달의 정원 프로젝트]]\n카드 만들기\n색\n백링크\n0\n\n아직 이 카드를 가리키는 카드가 없어요.\n\n나가는 연결\n0\n\n가장자리 점을 끌어 다른 카드에 놓거나 아래에서 골라 이어요.\n\n연결 추가\n이을 카드 고르기\n검색\n단축키\n백링크\n여기서 시작해요\n위키 링크\n자동 정렬\n저장과 내보내기\n포커스 모드\n잇기\n\n만든 날 10월 12일 오전 09:59 · 고친 날 10월 12일 오전 09:59",
+   "alpha": true
+  },
+  "insp_suggest": {
+   "step": "layer",
+   "note": "[[ typed: the app suggests card titles",
+   "selector": ".inspector",
+   "file": "insp_suggest.png",
+   "kind": "element",
+   "px": [
+    824,
+    1808
+   ],
+   "dpr": 2,
+   "sha1": "2a2804f14dd3",
+   "rect": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "screen": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "page": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 380,
+    "h": 872
+   },
+   "pad": 16,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CARD / N°09\n카드 제목\n카드 본문\n이을 카드 · ↑↓ 고르기 · Enter 넣기\n포커스 모드\n아직 없는 카드\n[[달의 정원 프로젝트]]\n카드 만들기\n색\n백링크\n0\n\n아직 이 카드를 가리키는 카드가 없어요.\n\n나가는 연결\n0\n\n가장자리 점을 끌어 다른 카드에 놓거나 아래에서 골라 이어요.\n\n연결 추가\n이을 카드 고르기\n검색\n단축키\n백링크\n여기서 시작해요\n위키 링크\n자동 정렬\n저장과 내보내기\n포커스 모드\n잇기\n\n만든 날 10월 12일 오전 09:59 · 고친 날 10월 12일 오전 10:00",
+   "alpha": true
+  },
+  "insp_linked": {
+   "step": "layer",
+   "note": "after choosing 포커스 모드: the wiki link is in the outgoing list",
+   "selector": ".inspector",
+   "file": "insp_linked.png",
+   "kind": "element",
+   "px": [
+    824,
+    1808
+   ],
+   "dpr": 2,
+   "sha1": "bceb3deee679",
+   "rect": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "screen": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "page": {
+    "x": 1188,
+    "y": 68,
+    "w": 412,
+    "h": 904
+   },
+   "element": {
+    "x": 16,
+    "y": 16,
+    "w": 380,
+    "h": 872
+   },
+   "pad": 16,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "CARD / N°09\n카드 제목\n카드 본문\n아직 없는 카드\n[[달의 정원 프로젝트]]\n카드 만들기\n색\n백링크\n0\n\n아직 이 카드를 가리키는 카드가 없어요.\n\n나가는 연결\n1\n포커스 모드\n위키\n연결 추가\n이을 카드 고르기\n검색\n단축키\n백링크\n여기서 시작해요\n위키 링크\n자동 정렬\n저장과 내보내기\n포커스 모드\n잇기\n\n만든 날 10월 12일 오전 09:59 · 고친 날 10월 12일 오전 10:00",
+   "alpha": true
+  },
+  "linked": {
+   "step": "shot",
+   "file": "linked.png",
+   "kind": "screen",
+   "px": [
+    3200,
+    2000
+   ],
+   "dpr": 2,
+   "sha1": "a67041dea22e",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "screen": {
+    "x": 0,
+    "y": 0,
+    "w": 1600,
+    "h": 1000
+   },
+   "scroll": [
+    0,
+    0
+   ]
+  },
+  "palette": {
+   "step": "layer",
+   "note": "search: the app's own results for 정렬",
+   "selector": ".palette",
+   "file": "palette.png",
+   "kind": "element",
+   "px": [
+    1376,
+    454
+   ],
+   "dpr": 2,
+   "sha1": "bc7c62c93a6b",
+   "rect": {
+    "x": 456,
+    "y": 96,
+    "w": 688,
+    "h": 227
+   },
+   "screen": {
+    "x": 456,
+    "y": 96,
+    "w": 688,
+    "h": 227
+   },
+   "page": {
+    "x": 456,
+    "y": 96,
+    "w": 688,
+    "h": 227
+   },
+   "element": {
+    "x": 24,
+    "y": 24,
+    "w": 640,
+    "h": 179
+   },
+   "pad": 24,
+   "radius": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(10, 15, 46)",
+   "font": "400 16px/24px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "Esc\n결과 1\n↑↓ 이동 · Enter 열기\n자동 정렬\n…요. 연결된 카드는 가까이, 나머지는 멀리. 아래 도구 막대의 \"정렬\" 버튼(L)을 눌러 보세요.",
+   "alpha": true
+  }
+ },
+ "warnings": []
+}

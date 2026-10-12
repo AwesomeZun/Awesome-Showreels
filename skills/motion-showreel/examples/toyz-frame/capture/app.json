@@ -1,0 +1,231 @@
+{
+ "name": "app",
+ "serve": "../source/app",
+ "url": "/index.html",
+ "out": "../assets/captures/ui/app",
+ "note": "source/app is the app's own production build (npm run build in toyz-frame); it is not committed. The same screens are live at https://frame.toyz.kr.",
+ "device": {
+  "screen": [
+   1600,
+   1000
+  ],
+  "statusBar": 0,
+  "homeIndicator": 0,
+  "dpr": 2,
+  "mobile": false,
+  "touch": false
+ },
+ "locale": "ko-KR",
+ "timezone": "Asia/Seoul",
+ "colorScheme": "light",
+ "fixedTime": "2026-10-12T10:00:00+09:00",
+ "wait": {
+  "until": "load",
+  "settle": 2000
+ },
+ "css": "[class*='toast'] { display: none !important; }",
+ "steps": [
+  {
+   "do": "fill",
+   "selector": ".panel input.input",
+   "value": ""
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "view_0",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20,
+   "note": "live preview with the name ''"
+  },
+  {
+   "do": "layer",
+   "name": "field_0",
+   "selector": ".panel .field",
+   "alpha": true,
+   "pad": 8
+  },
+  {
+   "do": "fill",
+   "selector": ".panel input.input",
+   "value": "이"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "view_1",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20,
+   "note": "live preview with the name '이'"
+  },
+  {
+   "do": "layer",
+   "name": "field_1",
+   "selector": ".panel .field",
+   "alpha": true,
+   "pad": 8
+  },
+  {
+   "do": "fill",
+   "selector": ".panel input.input",
+   "value": "이로"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "view_2",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20,
+   "note": "live preview with the name '이로'"
+  },
+  {
+   "do": "layer",
+   "name": "field_2",
+   "selector": ".panel .field",
+   "alpha": true,
+   "pad": 8
+  },
+  {
+   "do": "fill",
+   "selector": ".panel input.input",
+   "value": "이로아"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "view_3",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20,
+   "note": "live preview with the name '이로아'"
+  },
+  {
+   "do": "layer",
+   "name": "field_3",
+   "selector": ".panel .field",
+   "alpha": true,
+   "pad": 8
+  },
+  {
+   "do": "click",
+   "text": "디자인"
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "tpl_grid",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20
+  },
+  {
+   "do": "click",
+   "text": "EDITORIAL"
+  },
+  {
+   "do": "wait",
+   "ms": 1300
+  },
+  {
+   "do": "layer",
+   "name": "tpl_editorial",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20
+  },
+  {
+   "do": "click",
+   "text": "MONO"
+  },
+  {
+   "do": "wait",
+   "ms": 1300
+  },
+  {
+   "do": "layer",
+   "name": "tpl_mono",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20
+  },
+  {
+   "do": "click",
+   "text": "어둡게",
+   "optional": true
+  },
+  {
+   "do": "wait",
+   "ms": 1300
+  },
+  {
+   "do": "layer",
+   "name": "tpl_mono_dark",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20
+  },
+  {
+   "do": "click",
+   "text": "EDITORIAL"
+  },
+  {
+   "do": "wait",
+   "ms": 1300
+  },
+  {
+   "do": "layer",
+   "name": "tpl_editorial_dark",
+   "selector": ".viewport",
+   "alpha": true,
+   "pad": 20
+  },
+  {
+   "do": "click",
+   "text": "밝게",
+   "optional": true
+  },
+  {
+   "do": "click",
+   "text": "GRID"
+  },
+  {
+   "do": "wait",
+   "ms": 1200
+  },
+  {
+   "do": "click",
+   "text": "내보내기",
+   "nth": 0
+  },
+  {
+   "do": "wait",
+   "ms": 900
+  },
+  {
+   "do": "layer",
+   "name": "export_card",
+   "selector": ".panel section, .panel .card, .panel [class*='export']",
+   "alpha": true,
+   "pad": 10,
+   "optional": true
+  }
+ ]
+}

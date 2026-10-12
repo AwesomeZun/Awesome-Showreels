@@ -1,0 +1,287 @@
+{
+ "step": "layer",
+ "all": true,
+ "layers": [
+  {
+   "file": "kpi_0.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "feafae253bc2",
+   "rect": {
+    "x": 281,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "screen": {
+    "x": 281,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "page": {
+    "x": 281,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.33,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "01\n지난 마감\n3\n가장 오래된 건 5일 지남",
+   "alpha": true
+  },
+  {
+   "file": "kpi_1.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "bb5cbd63158f",
+   "rect": {
+    "x": 495.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "screen": {
+    "x": 495.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "page": {
+    "x": 495.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.33,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "02\n오늘 마감\n2\n10월 12일 (월)",
+   "alpha": true
+  },
+  {
+   "file": "kpi_2.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "184dab437977",
+   "rect": {
+    "x": 709.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "screen": {
+    "x": 709.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "page": {
+    "x": 709.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.33,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "03\n이번 주 마감\n7\n10.12 – 10.18",
+   "alpha": true
+  },
+  {
+   "file": "kpi_3.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "32965b4f9601",
+   "rect": {
+    "x": 923.98,
+    "y": 429.05,
+    "w": 214.34,
+    "h": 132
+   },
+   "screen": {
+    "x": 923.98,
+    "y": 429.05,
+    "w": 214.34,
+    "h": 132
+   },
+   "page": {
+    "x": 923.98,
+    "y": 429.05,
+    "w": 214.34,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.34,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "04\n진행 중\n3\n프로젝트 3곳",
+   "alpha": true
+  },
+  {
+   "file": "kpi_4.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "a024ef150762",
+   "rect": {
+    "x": 1138.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "screen": {
+    "x": 1138.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "page": {
+    "x": 1138.33,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.33,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "05\n이번 주 완료\n1\n지난주 6건 대비 -5",
+   "alpha": true
+  },
+  {
+   "file": "kpi_5.png",
+   "kind": "element",
+   "px": [
+    429,
+    264
+   ],
+   "dpr": 2,
+   "sha1": "72fb1ae73944",
+   "rect": {
+    "x": 1352.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "screen": {
+    "x": 1352.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "page": {
+    "x": 1352.66,
+    "y": 429.05,
+    "w": 214.33,
+    "h": 132
+   },
+   "element": {
+    "x": 0,
+    "y": 0,
+    "w": 214.33,
+    "h": 132
+   },
+   "pad": 0,
+   "radius": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(13, 14, 17)",
+   "font": "400 14px/21px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+   "text": "06\n배포 · 30일\n9\n롤백 1건",
+   "alpha": true
+  }
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:03:12.582Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0",
+ "selector": ".kpis > *"
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "cropped to the wordmark band (CSS 0,40 to 545,158 of the captured title)",
+ "selector": ".intro__title",
+ "file": "title.png",
+ "kind": "element",
+ "px": [
+  1422,
+  585
+ ],
+ "dpr": 2,
+ "sha1": "115b9d92824d",
+ "rect": {
+  "x": 124,
+  "y": 176.05,
+  "w": 545,
+  "h": 118
+ },
+ "screen": {
+  "x": 124,
+  "y": 136.05,
+  "w": 710.84,
+  "h": 292.42
+ },
+ "page": {
+  "x": 124,
+  "y": 136.05,
+  "w": 710.84,
+  "h": 292.42
+ },
+ "element": {
+  "x": 16,
+  "y": 16,
+  "w": 678.84,
+  "h": 260.42
+ },
+ "pad": 16,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(243, 243, 241)",
+ "font": "400 15px/23.25px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "TOYZ \u2014 WEB AUDIO GROOVEBOX\n\nTiny Beat.\n\n\ub9e4\uc77c \ud55c \uace1, \ub098\ub9cc\uc758 \ub9ac\ub4ec.\n\n\uc5f0\uc18d \uae30\ub85d\n3\uc77c\n\ubcf4\uad00\ud568\n4\uace1\n\ub2e8\ucd95\ud0a4\nSPACE \u00b7 1\u20134",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T08:29:15.909Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

@@ -1,0 +1,53 @@
+{
+ "step": "layer",
+ "note": "the room, ready (ring and clock drawn by the reel)",
+ "selector": ".arch",
+ "file": "arch_ready.png",
+ "kind": "element",
+ "px": [
+  1104,
+  1592
+ ],
+ "dpr": 2,
+ "sha1": "653bb8cf5272",
+ "rect": {
+  "x": 484,
+  "y": 60,
+  "w": 552,
+  "h": 795.77
+ },
+ "screen": {
+  "x": 484,
+  "y": 60,
+  "w": 552,
+  "h": 795.77
+ },
+ "page": {
+  "x": 484,
+  "y": 60,
+  "w": 552,
+  "h": 795.77
+ },
+ "element": {
+  "x": 40,
+  "y": 40,
+  "w": 472,
+  "h": 715.77
+ },
+ "pad": 40,
+ "radius": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "bg": "rgba(0, 0, 0, 0)",
+ "color": "rgb(233, 237, 227)",
+ "font": "400 15px/22.5px \"Pretendard Variable\", Pretendard, -apple-system, \"system-ui\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", system-ui, sans-serif",
+ "text": "FOCUS\n/\nREADY\n\n모래섬 스튜디오 제안서 다듬기\n3/4\n시작\n+5\n긴 휴식까지 4회\n집중\n짧은 휴식\n긴 휴식\n생각 서랍\n집중 모드",
+ "alpha": true,
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:54:51.059Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

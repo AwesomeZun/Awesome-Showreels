@@ -1,0 +1,32 @@
+{
+ "step": "shot",
+ "note": "the Seongsu walk 성수 붉은벽돌 골목 한 바퀴, framed by the app",
+ "file": "map_route.png",
+ "kind": "screen",
+ "px": [
+  2600,
+  1500
+ ],
+ "dpr": 1,
+ "sha1": "7c0411b957e7",
+ "rect": {
+  "x": 0,
+  "y": 0,
+  "w": 2600,
+  "h": 1500
+ },
+ "screen": {
+  "x": 0,
+  "y": 0,
+  "w": 2600,
+  "h": 1500
+ },
+ "scroll": [
+  0,
+  0
+ ],
+ "url": "(served)/index.html",
+ "capturedAt": "2026-10-12T12:06:20.437Z",
+ "tool": "capture_ui.mjs",
+ "toolVersion": "1.0.0"
+}

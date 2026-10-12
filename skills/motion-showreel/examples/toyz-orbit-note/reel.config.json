@@ -1,0 +1,53 @@
+{
+  "title": "Orbit Note",
+  "style": "style.json",
+  "size": [1920, 1080],
+  "fps": 60,
+  "beatsPerBar": 4,
+  "scenes": [
+    {"id": "hook", "label": "Orbit Note", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 2, "outBeats": 1.5, "in": "cut", "music": "intro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "swell"},
+      {"beat": 0, "from": "start", "sfx": "shimmer"},
+      {"beat": 0.5, "from": "start", "sfx": "chime"},
+      {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=2b"},
+      {"beat": 0, "from": "outStart", "sfx": "whoosh dur=1.5b"}
+    ]},
+    {"id": "wiki", "label": "[[ ]]", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "match", "music": "groove", "dark": true, "cues": [
+      {"beat": 0.5, "from": "start", "sfx": "swish"},
+      {"beat": 1.5, "from": "start", "sfx": "keytap dur=1b"},
+      {"beat": 2.5, "from": "start", "sfx": "pop"},
+      {"beat": 4, "from": "start", "sfx": "enter"},
+      {"beat": 4.25, "from": "start", "sfx": "drawon dur=1.5b"},
+      {"beat": 5.75, "from": "start", "sfx": "chime"},
+      {"beat": 0, "from": "holdBar", "sfx": "ding"},
+      {"beat": 0, "from": "outStart", "sfx": "whoosh"}
+    ]},
+    {"id": "search", "label": "검색", "minBars": 2, "maxBars": 2, "priority": 3, "optional": true, "inBeats": 6, "outBeats": 1, "in": "dissolve", "music": "breakdown", "dark": true, "cues": [
+      {"beat": 0.25, "from": "start", "sfx": "click"},
+      {"beat": 0.75, "from": "start", "sfx": "keytap dur=0.75b"},
+      {"beat": 2.5, "from": "start", "sfx": "enter"},
+      {"beat": 2.75, "from": "start", "sfx": "zoom dur=1.5b"},
+      {"beat": 4.25, "from": "start", "sfx": "reveal"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "graph", "label": "생각과 생각이 궤도로", "minBars": 2, "maxBars": 3, "priority": 1, "inBeats": 7, "outBeats": 1, "in": "flash", "inParams": {"color": "#9FE9FF", "amount": 0.25}, "music": "drop", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "impact"},
+      {"beat": 0.75, "from": "start", "sfx": "drawon dur=3b"},
+      {"beat": 0.75, "from": "start", "sfx": "ding x8 gap=0.375b"},
+      {"beat": 4.25, "from": "start", "sfx": "pop x3 gap=0.25b"},
+      {"beat": 0, "from": "holdBar", "sfx": "zap"},
+      {"beat": 0, "from": "outStart", "sfx": "swell"}
+    ]},
+    {"id": "end", "label": "Orbit Note", "minBars": 1, "maxBars": 2, "priority": 1, "inBeats": 3, "outBeats": 0, "in": "dissolve", "music": "outro", "dark": true, "cues": [
+      {"beat": 0, "from": "start", "sfx": "sting"},
+      {"beat": 1.5, "from": "start", "sfx": "bloop"},
+      {"beat": 0, "from": "holdBar", "sfx": "sparkle dur=2b"}
+    ]}
+  ],
+  "cuts": {
+    "short": {"seconds": 15, "label": "15 s", "narration": false, "exclude": ["search"], "scenes": {"hook": {"bars": 1}, "wiki": {"bars": 2}, "graph": {"bars": 2}, "end": {"bars": 1}}},
+    "30": {"seconds": 30, "label": "30 s", "scenes": {"hook": {"bars": 2}, "wiki": {"bars": 3}, "search": {"bars": 2}, "graph": {"bars": 3}, "end": {"bars": 2}}}
+  },
+  "poster": 2.0,
+  "captions": {"enabled": false}
+}

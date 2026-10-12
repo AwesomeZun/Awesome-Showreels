@@ -1,0 +1,198 @@
+{
+ "$schema": "../../templates/style.schema.json",
+ "meta": {
+  "purpose": "launch",
+  "audience": "developers who reach for a small tool many times a day",
+  "title": "tiny.tools",
+  "lang": "ko",
+  "reviewed": "Written by hand from the app: source/README.md, its design tokens (src/styles/base.css in the app repository), its logo SVG, its sample inputs and its captured screens. Near-black violet #07070B, violet #5B45F0 to lilac #A89BFF, text #F4F3FF / #BDB9DC, mint #58E3A6 for valid; the smart paste pad and the JSON tool are the real app at 2x.",
+  "draft": false
+ },
+ "source": [
+  {
+   "path": "source/README.md",
+   "kind": "readme",
+   "notes": "14 small developer tools in one place, all in the browser; smart paste recognises JSON, JWT, URL, Base64, timestamps, colours and UUIDs and opens the right tool"
+  },
+  {
+   "path": "assets/captures/ui/app/",
+   "kind": "images",
+   "notes": "the real app (its production build, served locally) captured by capture/app.json: the smart paste pad answering four pastes, the JSON tool before and after 정리하기, four more tools"
+  },
+  {
+   "path": "source/fonts/",
+   "kind": "other",
+   "notes": "Pretendard Variable (the app's face) and JetBrains Mono (code, labels); SIL OFL 1.1"
+  }
+ ],
+ "mood": [
+  "crisp",
+  "nimble",
+  "nerdy",
+  "compact",
+  "friendly"
+ ],
+ "rationale": {
+  "palette": "The app's tokens: #07070B / #0E0E15 grounds, text #F4F3FF / #BDB9DC / #908CB1, violet #5B45F0 and #7A66FF, lilac #A89BFF / #CFC7FF (its gradient and its caret), mint #58E3A6 for a valid result.",
+  "type": "Pretendard Variable at 800 with -0.055em for headlines (the app's hero: 필요한 만큼만, / 매일 쓰는 도구. with its lilac caret), JetBrains Mono for code, numbers and labels.",
+  "motion": "Quick and exact, like a good tool: tiles snap into a grid on the beat, a paste lands and the pad answers at once, a minified line unfolds into formatted JSON under a scan line.",
+  "sound": "Chiptune in D major at 128 BPM (8 bars in 15 s, 16 in 30 s): tiny square-wave bleeps for a box of tiny tools, digital SFX for pastes and key presses.",
+  "visuals": "Four scenes in the 15 s cut: the name and the app's line beside the fourteen tools snapping into place; the real smart paste pad recognising a JSON, a JWT and a colour; the JSON tool formatting a minified line in the browser; the end card. The 30 s cut adds four more tools.",
+  "narration": "Not recommended: a short, muted launch reel with slogan-length Korean copy shown as type."
+ },
+ "palette": {
+  "bg": "#07070B",
+  "bg2": "#0E0E15",
+  "surface": "#13131C",
+  "ink": "#F4F3FF",
+  "ink2": "#BDB9DC",
+  "muted": "#908CB1",
+  "accent": "#A89BFF",
+  "accent2": "#5B45F0",
+  "accent3": "#58E3A6",
+  "ok": "#58E3A6",
+  "warn": "#FFCF70",
+  "deny": "#FF7A96",
+  "accentInk": "#07070B",
+  "onAccent": "#FFFFFF",
+  "line": "#24233A",
+  "highlight": "#A89BFF"
+ },
+ "paletteAlt": {
+  "bg": "#F4F3FF",
+  "bg2": "#E9E6FF",
+  "surface": "#FFFFFF",
+  "ink": "#07070B",
+  "ink2": "#2C2950",
+  "muted": "#5B5880",
+  "accent": "#5B45F0",
+  "accent2": "#7A66FF",
+  "accent3": "#1F9E6A",
+  "ok": "#1F9E6A",
+  "warn": "#9A6400",
+  "deny": "#C2244A",
+  "accentInk": "#FFFFFF",
+  "onAccent": "#FFFFFF",
+  "line": "#D8D3FF",
+  "highlight": "#5B45F0",
+  "theme": "light"
+ },
+ "fonts": {
+  "display": "\"Pretendard Variable\", sans-serif",
+  "sans": "\"Pretendard Variable\", sans-serif",
+  "serif": "\"Pretendard Variable\", sans-serif",
+  "mono": "\"JetBrains Mono\", ui-monospace, monospace",
+  "cjk": "\"Pretendard Variable\", sans-serif",
+  "files": [
+   {
+    "family": "Pretendard Variable",
+    "path": "source/fonts/PretendardVariable.woff2",
+    "weight": "45 920",
+    "style": "normal"
+   },
+   {
+    "family": "JetBrains Mono",
+    "path": "source/fonts/JetBrainsMono-latin-wght.woff2",
+    "weight": "100 800",
+    "style": "normal"
+   }
+  ]
+ },
+ "type": {
+  "scale": [
+   18,
+   22,
+   28,
+   36,
+   48,
+   64,
+   84,
+   112,
+   150,
+   200
+  ],
+  "displayWeight": 800,
+  "bodyWeight": 500,
+  "tracking": -0.04,
+  "trackingLabel": 0.14
+ },
+ "layout": {
+  "theme": "dark",
+  "margin": 120,
+  "grid": 12,
+  "gutter": 24,
+  "baseline": 8,
+  "hud": false,
+  "captions": {
+   "enabled": false,
+   "font": "sans",
+   "size": 40,
+   "fg": "#F4F3FF",
+   "bg": "none",
+   "y": 960
+  },
+  "radius": 12
+ },
+ "motion": {
+  "pace": "energetic",
+  "spring": {
+   "f": 2.6,
+   "z": 0.55
+  },
+  "overshoot": 0.08,
+  "ease": "outQuint",
+  "transitions": [
+   "cut",
+   "whip",
+   "glitch"
+  ],
+  "characters": false,
+  "dataViz": false,
+  "visualSources": [
+   "vector",
+   "app-ui"
+  ],
+  "typeReveal": [
+   "kinetic",
+   "typing"
+  ]
+ },
+ "post": {
+  "grain": 0.03,
+  "vignette": {
+   "a": 0.3,
+   "color": "#000000"
+  },
+  "bloom": 0.1
+ },
+ "sound": {
+  "bpm": 128,
+  "key": "D",
+  "mode": "major",
+  "preset": "chiptune",
+  "drums": "full",
+  "sfx": "digital",
+  "energy": {
+   "intro": 0.4,
+   "groove": 0.7,
+   "breakdown": 0.45,
+   "drop": 0.95,
+   "outro": 0.5
+  },
+  "instruments": [
+   "pulse",
+   "tri-bass",
+   "pulse-lead",
+   "kick",
+   "snare",
+   "hats"
+  ]
+ },
+ "narration": {
+  "recommended": false,
+  "voice": "Kore",
+  "styleTag": "[bright, quick]",
+  "lang": "ko-KR"
+ },
+ "review": []
+}
