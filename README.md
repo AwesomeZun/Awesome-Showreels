@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://gitreels.com/AwesomeZun/Awesome-Showreels"><img src="https://gitreels.com/AwesomeZun/Awesome-Showreels.webp" alt="AwesomeZun/Awesome-Showreels in 15 seconds" width="100%"></a>
   <br>
-  <a href="https://gitreels.com"><img src="https://gitreels.com/badge.svg" alt="Made with GitReels" height="24"></a>
+  <a href="https://gitreels.com"><img src="https://gitreels.com/badge.svg" alt="Made with GitReels" height="24"></a> <a href="https://gitreels.com/AwesomeZun/Awesome-Showreels"><img src="https://gitreels.com/api/badges/rotw/AwesomeZun/Awesome-Showreels.svg" alt="Reel of the Week #3 on GitReels" height="24"></a>
 </p>
-<a href="https://gitreels.com/AwesomeZun/Awesome-Showreels"><img src="https://gitreels.com/api/badges/rotw/AwesomeZun/Awesome-Showreels.svg" alt="Reel of the Week #3 on GitReels" height="24"></a>
+
 
 <div align="center">
 
